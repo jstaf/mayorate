@@ -1,0 +1,92 @@
+{
+  "bounds": [
+    -20.5,
+    -7.5,
+    -4.5,
+    -16,
+    18.5,
+    -12.5,
+    16,
+    -6,
+    2,
+    -6,
+    2,
+    6,
+    16,
+    6,
+    18.5,
+    12.5,
+    -4.5,
+    16,
+    -20.5,
+    7.5
+  ],
+  "center": [
+    22.5,
+    22.5
+  ],
+  "collisionRadius": 33.900589,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 29.5,
+      "location": [
+        -15.5,
+        2
+      ],
+      "style": "ILK_ENGINE",
+      "width": 8
+    },
+    {
+      "angle": -180,
+      "contrailSize": 8,
+      "length": 29.5,
+      "location": [
+        -15.5,
+        -2
+      ],
+      "style": "ILK_ENGINE",
+      "width": 8
+    }
+  ],
+  "height": 45,
+  "hullId": "ilk_raad",
+  "hullName": "Raad",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 29.908194,
+  "spriteName": "graphics/ilk/ships/ilk_raad.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 33.398487,
+      "id": "WS0001",
+      "locations": [
+        -6,
+        5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -0,
+      "arc": 33.398487,
+      "id": "WS0002",
+      "locations": [
+        -6,
+        -5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 45
+}

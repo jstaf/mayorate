@@ -1,0 +1,102 @@
+{
+  "bounds": [
+    -12.5,
+    -9,
+    4,
+    -22,
+    3,
+    -12.5,
+    15,
+    -4,
+    15,
+    4,
+    3,
+    12.5,
+    4,
+    22,
+    -12.5,
+    9
+  ],
+  "center": [
+    30,
+    27
+  ],
+  "collisionRadius": 33.723137,
+  "engineSlots": [
+    {
+      "angle": 168.111343,
+      "contrailSize": 4.274718,
+      "length": 11.691094,
+      "location": [
+        -10,
+        11.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 4.274718
+    },
+    {
+      "angle": -168.111343,
+      "contrailSize": 4.274718,
+      "length": 11.691094,
+      "location": [
+        -10,
+        -11.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 4.274718
+    },
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 24.5,
+      "location": [
+        -13.5,
+        3.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 5,
+      "length": 24.5,
+      "location": [
+        -13.5,
+        -3.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 5
+    }
+  ],
+  "height": 60,
+  "hullId": "ilk_angha",
+  "hullName": "Angha",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 28.84441,
+  "spriteName": "graphics/ilk/ships/ilk_angha.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 28.072487,
+      "id": "WS0003",
+      "locations": [
+        0,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 60
+}

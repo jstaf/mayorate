@@ -1,0 +1,422 @@
+{
+  "bounds": [
+    -174,
+    -11.5,
+    -184.5,
+    -23.5,
+    -181,
+    -48.5,
+    -112,
+    -56.5,
+    -86.5,
+    -81.5,
+    -82.5,
+    -56,
+    -71.5,
+    -55.5,
+    -70.5,
+    -34,
+    -45,
+    -32,
+    -25,
+    -69.5,
+    20,
+    -72.5,
+    25,
+    -66,
+    64,
+    -64,
+    62,
+    -52.5,
+    28.5,
+    -47.5,
+    27.5,
+    -33.5,
+    37,
+    -26.5,
+    74,
+    -21,
+    87,
+    -25,
+    103,
+    -34.5,
+    142,
+    -34.5,
+    184,
+    -16.5,
+    184,
+    -8.5,
+    165.5,
+    -5.5,
+    165.5,
+    5.5,
+    184,
+    8.5,
+    184,
+    16.5,
+    142,
+    34.5,
+    103,
+    34.5,
+    87,
+    25,
+    74,
+    21,
+    37,
+    26.5,
+    27.5,
+    33.5,
+    28.5,
+    47.5,
+    62,
+    52.5,
+    64,
+    64,
+    25,
+    66,
+    20,
+    72.5,
+    -25,
+    69.5,
+    -45,
+    32,
+    -70.5,
+    34,
+    -71.5,
+    55.5,
+    -82.5,
+    56,
+    -86.5,
+    81.5,
+    -112,
+    56.5,
+    -181,
+    48.5,
+    -184.5,
+    23.5,
+    -174,
+    11.5
+  ],
+  "center": [
+    146,
+    253.5
+  ],
+  "collisionRadius": 249.01857,
+  "engineSlots": [
+    {
+      "angle": -175.971741,
+      "contrailSize": 17,
+      "length": 43,
+      "location": [
+        -168,
+        25.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 17
+    },
+    {
+      "angle": 175.45195,
+      "contrailSize": 17.184343,
+      "length": 43.317718,
+      "location": [
+        -168,
+        -25.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 17.184343
+    },
+    {
+      "angle": 179.068451,
+      "contrailSize": 21,
+      "length": 67.5,
+      "location": [
+        -184.5,
+        29.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 21
+    },
+    {
+      "angle": -179.068451,
+      "contrailSize": 21,
+      "length": 67.5,
+      "location": [
+        -184.5,
+        -29.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 21
+    },
+    {
+      "angle": 174.160507,
+      "contrailSize": 10,
+      "length": 44,
+      "location": [
+        -182.5,
+        43.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 10
+    },
+    {
+      "angle": -174.160507,
+      "contrailSize": 10,
+      "length": 44,
+      "location": [
+        -182.5,
+        -43.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 69,
+      "location": [
+        -175.5,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 30
+    },
+    {
+      "angle": 180,
+      "contrailSize": 15,
+      "length": 35.5,
+      "location": [
+        -148,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 15
+    }
+  ],
+  "height": 526,
+  "hullId": "ilk_ravana",
+  "hullName": "Ravana",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    6.5,
+    -0
+  ],
+  "shieldRadius": 229,
+  "spriteName": "graphics/ilk/ships/ilk_ravana.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 52.815292,
+      "arc": 243.215012,
+      "id": "WS0001",
+      "locations": [
+        114.5,
+        22
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -52.815292,
+      "arc": 243.215012,
+      "id": "WS0002",
+      "locations": [
+        114.5,
+        -22
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 15,
+      "id": "WS0003",
+      "locations": [
+        27.5,
+        44
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": -0,
+      "arc": 15,
+      "id": "WS0004",
+      "locations": [
+        27.5,
+        -44
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": 67.750977,
+      "arc": 233.991684,
+      "id": "WS0005",
+      "locations": [
+        2,
+        42
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -67.750977,
+      "arc": 233.991684,
+      "id": "WS0006",
+      "locations": [
+        2,
+        -42
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 70.709953,
+      "arc": 229.911774,
+      "id": "WS0007",
+      "locations": [
+        -25.5,
+        48
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -70.709953,
+      "arc": 229.911774,
+      "id": "WS0008",
+      "locations": [
+        -25.5,
+        -48
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 77.195732,
+      "arc": 224.739456,
+      "id": "WS0009",
+      "locations": [
+        -30.5,
+        36
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -77.195732,
+      "arc": 224.739456,
+      "id": "WS0010",
+      "locations": [
+        -30.5,
+        -36
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 116.565048,
+      "arc": 246.638504,
+      "id": "WS0011",
+      "locations": [
+        -104.5,
+        49
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -116.565048,
+      "arc": 246.638504,
+      "id": "WS0012",
+      "locations": [
+        -104.5,
+        -49
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 180,
+      "arc": 286.260193,
+      "id": "WS0013",
+      "locations": [
+        -124,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS0014",
+      "locations": [
+        -8.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 15,
+      "id": "WS0015",
+      "locations": [
+        17.5,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": 90,
+      "arc": 22.619865,
+      "id": "WS0016",
+      "locations": [
+        -51.5,
+        31
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -90,
+      "arc": 22.619865,
+      "id": "WS0017",
+      "locations": [
+        -51.5,
+        -31
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 292
+}

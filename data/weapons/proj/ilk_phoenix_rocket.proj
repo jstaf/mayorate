@@ -1,0 +1,22 @@
+{
+	"id":"ilk_phoenix_rocket",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/ilk/weapons/phoenix_rocket.png",
+	"size":[6,18],	
+	"center":[4,14],
+	"collisionRadius":16,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,174,82,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":30, # purely visual
+	"engineSpec":{"turnAcc":135,
+				  "turnRate":25,
+				  "acc":300,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-14, 0],
+				    "style":"ILK_ENGINE_SMALL",
+				    "width":12.0,
+				    "length":60.0,
+				    "angle":180.0}],
+}

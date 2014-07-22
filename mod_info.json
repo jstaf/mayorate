@@ -1,0 +1,9 @@
+{
+  "id":"ilkhannae_mayorate", # internal id
+	"name":"The Mayorate", # displayed to the player
+	"author":"kazi",
+	"version":"0.7",
+	"description":"<< Requires LazyLib AND ShaderLib >> Adds a new faction to the sector. The Mayorate is a smaller star nation in decline. This update features the most realistic and up-to-date lighting effects currently available (along with several new ships and weapons, of course). Enjoy!",
+    "gameVersion":"0.6.2a",
+	"modPlugin":"data.scripts.MayorateModPlugin"
+}

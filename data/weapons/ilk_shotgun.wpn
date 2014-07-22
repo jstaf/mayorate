@@ -1,0 +1,28 @@
+{
+	"id":"ilk_shotgun",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"displayArcRadius":600,
+	"turretSprite":"graphics/ilk/weapons/belial.png",
+	"turretGlowSprite":"graphics/ilk/weapons/belial_glow.png",
+	"hardpointSprite":"graphics/ilk/weapons/belial.png",
+	"hardpointGlowSprite":"graphics/ilk/weapons/belial_glow.png",
+	"glowColor":[255,121,117,255],
+	"turretOffsets":[14, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[14, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":45.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":20.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.3,
+					   "particleCount":20,
+					   "particleColor":[255,125,75,255]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"ilk_shotgun_shot",  # projectile that will be fired
+	"fireSoundTwo":"ilk_shotgun_fire",
+}

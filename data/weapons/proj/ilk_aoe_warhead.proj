@@ -1,0 +1,37 @@
+{
+	"id":"ilk_aoe_warhead",
+	"specClass":"missile",	
+	"missileType":"PHASE_CHARGE",
+	"sprite":"graphics/missiles/phase_charge_base.png",
+	"glowSprite":"graphics/missiles/phase_charge_glow.png",
+	"glowColor":[190,60,255,255],
+	"size":[8,8],	
+	"center":[4,4],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[255,121,117,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":300, # purely visual	
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":150,
+				  "acc":100,
+				  "dec":100},
+	#"engineSlots":[{"id":"ES1",
+	#				"loc":[-8, 0],
+	#			    "style":"HIGH_TECH",
+	#			    "width":4.0,
+	#			    "length":10.0,
+	#			    "angle":180.0}],
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":250,
+					"explosionSpec":{"duration":0.5f,
+									 "radius":600,
+									 "coreRadius":300, # full damage within core radius
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":50,
+									 "particleColor":[255,223,216,255]},
+					}	
+}

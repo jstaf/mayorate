@@ -1,0 +1,42 @@
+{
+	"star_red_dwarf":{
+		"name":"Red Dwarf",
+		"tilt":10, # left-right (>0 tilts to the left)
+		"pitch":0, # towards-away from the viewer (>0 pitches towards)
+		"rotation":-3, # degrees/second
+		"planetColor":[255,255,255,255],
+		#"cloudTexture":"graphics/planets/clouds_banded01.png", # omit for no cloud layer
+		#"cloudColor":[255,180,170,255],
+		#"cloudRotation":-10, # degrees/second, optional		
+		"atmosphereThickness":0.5, # as fraction of radius.  Set to 0 for no atmosphere
+		"atmosphereThicknessMin":10, #  minimum thickness in pixels
+		#"atmosphereColor":[255,171,171,212],
+		"atmosphereColor":[255,50,0,212],
+		"texture":"graphics/planets/star_red.jpg",
+		"icon":"graphics/warroom/icon_star.png",
+		"iconColor":[255,0,0,255],
+		"isStar":true,
+		"lightPosition":[0,0,8], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
+		"starCoronaSprite":"graphics/fx/star_halo.png", # optional, defaults to really bright particle
+		"starCoronaColor":[255,0,0,100], # optional, defaults to white
+		"starCoronaSizeMult":5.12, # required, multiplier for star's radius
+	},
+	"ilk_ilkhanna":{
+		"name":"Arid",
+		"tilt":30, # left-right (>0 tilts to the left)
+		"pitch":30, # towards-away from the viewer (>0 pitches towards)
+		"rotation":-2, # degrees/second
+		"planetColor":[255,255,255,255],
+		"atmosphereThickness":0.1, # as fraction of radius.  Set to 0 for no atmosphere
+		"atmosphereThicknessMin":30, #  minimum thickness in pixels
+		"atmosphereColor":[140,150,165,80],
+		"texture":"graphics/ilk/planets/ilkhanna.jpg",
+		"icon":"graphics/warroom/icon_planet.png",
+		"iconColor":[200,170,145,255],
+		"isStar":false,
+		"lightPosition":[1,-3,8], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
+		"cloudTexture":"graphics/planets/clouds_banded01.png", # omit for no cloud layer
+		"cloudColor":[190,180,170,100],
+		"cloudRotation":-10, # degrees/second, optional
+	},
+}

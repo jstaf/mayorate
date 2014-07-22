@@ -1,0 +1,4 @@
+id,variant,fleet pts,hyperdrive,formation,num,role,refit,base value,number
+ilk_inanna_wing,ilk_inanna_interceptor,6,,V,4,INTERCEPTOR,8,10000,2
+ilk_raad_wing,ilk_raad_fighter,8,,V,2,ASSAULT,15,12000,3
+ilk_angha_wing,ilk_angha_bomber,5,,V,3,BOMBER,10,6000,4

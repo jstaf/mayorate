@@ -1,0 +1,17 @@
+{
+  "displayName": "Interceptor",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "hullId": "ilk_inanna",
+  "hullMods": [],
+  "variantId": "ilk_inanna_interceptor",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_graser_light"
+      }
+    }
+  ]
+}

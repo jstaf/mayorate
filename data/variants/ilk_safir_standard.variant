@@ -1,0 +1,20 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "hullId": "ilk_safir",
+  "hullMods": [
+    "blast_doors"
+  ],
+  "variantId": "ilk_safir_standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ilk_graser_pd",
+        "WS0004": "ilk_graser_pd"
+      }
+    }
+  ]
+}

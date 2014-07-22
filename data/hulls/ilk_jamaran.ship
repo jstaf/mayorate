@@ -1,0 +1,274 @@
+{
+  "bounds": [
+    -120,
+    -2.5,
+    -130.5,
+    -9.5,
+    -125.5,
+    -25.5,
+    -90,
+    -26.5,
+    -113.5,
+    -39.5,
+    -101.5,
+    -55,
+    -59,
+    -49,
+    -55.5,
+    -75,
+    -36.5,
+    -75.5,
+    -28,
+    -56.5,
+    -12,
+    -54,
+    -15.5,
+    -41,
+    13.5,
+    -39,
+    15,
+    -43.5,
+    96,
+    -39.5,
+    99.5,
+    -26,
+    121,
+    -24,
+    123.5,
+    -15.5,
+    117,
+    -10,
+    83.5,
+    -9.5,
+    83.5,
+    9.5,
+    117,
+    10,
+    123.5,
+    15.5,
+    121,
+    24,
+    99.5,
+    26,
+    96,
+    39.5,
+    15,
+    43.5,
+    13.5,
+    39,
+    -15.5,
+    41,
+    -12,
+    54,
+    -28,
+    56.5,
+    -36.5,
+    75.5,
+    -55.5,
+    75,
+    -59,
+    49,
+    -101.5,
+    55,
+    -113.5,
+    39.5,
+    -90,
+    26.5,
+    -125.5,
+    25.5,
+    -130.5,
+    9.5,
+    -120,
+    2.5
+  ],
+  "center": [
+    87,
+    168
+  ],
+  "collisionRadius": 171.330093,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 33,
+      "length": 100,
+      "location": [
+        -130.5,
+        16
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 33
+    },
+    {
+      "angle": -180,
+      "contrailSize": 33,
+      "length": 100,
+      "location": [
+        -130.5,
+        -16
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 33
+    },
+    {
+      "angle": 172.793945,
+      "contrailSize": 21.49793,
+      "length": 62.200962,
+      "location": [
+        -109.5,
+        47
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 21.49793
+    },
+    {
+      "angle": -172.793945,
+      "contrailSize": 21.49793,
+      "length": 62.200962,
+      "location": [
+        -109.5,
+        -47
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 21.49793
+    }
+  ],
+  "height": 348,
+  "hullId": "ilk_jamaran",
+  "hullName": "Jamaran",
+  "hullSize": "CRUISER",
+  "shieldCenter": [
+    0.5,
+    -0
+  ],
+  "shieldRadius": 151.156372,
+  "spriteName": "graphics/ilk/ships/ilk_jamaran.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "LB 1",
+      "locations": [
+        46,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 86.633537,
+      "arc": 235.068787,
+      "id": "WS0003",
+      "locations": [
+        -55,
+        35
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -86.633537,
+      "arc": 235.068787,
+      "id": "WS0004",
+      "locations": [
+        -55,
+        -35
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 74.054604,
+      "arc": 213.174683,
+      "id": "WS0005",
+      "locations": [
+        -46,
+        64
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -74.054604,
+      "arc": 213.174683,
+      "id": "WS0006",
+      "locations": [
+        -46,
+        -64
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 75.256439,
+      "arc": 25.057608,
+      "id": "WS0007",
+      "locations": [
+        -23,
+        44
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -75.256439,
+      "arc": 25.057608,
+      "id": "WS0008",
+      "locations": [
+        -23,
+        -44
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 281.055084,
+      "id": "WS0009",
+      "locations": [
+        7,
+        -0.5
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 38.290165,
+      "arc": 360,
+      "id": "WS0001",
+      "locations": [
+        59,
+        31
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -38.290165,
+      "arc": 360,
+      "id": "WS0002",
+      "locations": [
+        59,
+        -31
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 174
+}

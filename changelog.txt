@@ -1,0 +1,45 @@
+kazi - Mayorate mod changelog
+
+v0.7
+-Added Foraker-class destroyer. The Foraker is a light carrier with enough ordanance to not be a complete bore to fly, but is very poor defensively. 
+-Added Safir-class freighter and conversion (destroyer escort). The Safir is quite an average shipping solution, but it still beats using Buffaloes, right? The conversion makes an okay missile support platform. Just don't try to actually take it into heavy combat. 
+-Added Raad-class heavy fighter wing. Mounting a pair of PPCs, this craft is a credible threat to destroyers, frigates and fighters. Replaces the Reaver Gunship.
+-Added Angha light bomber wing. Unlike other bombers, the Angha will decimate destroyers and light cruisers but is weak versus capitals. Mounts the special Tracer Rocket Launcher (8x400 damage, ultra-fast, bad tracking).
+-Added the PPC weapon (small energy). It's essentially an IR pulse laser without the suck.
+-Added Graser PD. A short-ranged PD laser that fires constant, discrete shots. Very comparable to LR PD lasers, but with different pros and cons (more power, less range). All Mayorate energy flak mounts now use Graser PD.
+-Added normal maps for ALL SHIP SPRITES AND WEAPONS! (much purple was had!)
+-Added ShaderLib lighting information for all Mayorate weapons.
+-Added custom planet graphics for Ilkhanna. Kudos go out to Russian/European/American taxpayers for the base image for this. 
+-Added custom background graphics for the Rasht star system. Again, thanks to Russian/European/American taxpayers for funding the telescopes that generated the base starfield. 
+-Added improved Onslaught sprite.
+-Added improved Condor sprite.
+-Added improved Apogee sprite.
+-Added improved Venture sprite.
+-Added improved Mule sprite. 
+-Phoenix missiles now track, which is a pretty significant buff. 
+-Light Graser fire rate increased, damage decreased. Feels much more responsive when under player control now, although it's a little less bursty.
+-Kashef Sensor Suite now gives +5% range, +10% weapon tracking, +50% sensor range. 
+-Lilith hit with all-around nerf bat. It's still quite potent, but lost a lot of flux capacity, hull points, and weapon range.
+-Inanna wing size decreased to 4. 
+-Removed Reaver Gunship. It didn't look very cool and didn't feel particularly useful.
+-Removed Esfahan-class destroyer. It was really OP and the art was bad.
+-Removed Impactor Missiles. No one uses them, including me. 
+-Removed the "Battle1" music track. I got tired of it. 
+-Changes to Mayorate base hullstyle (more picturesque venting).
+-Changes to Mayorate engine styles. Engines appear much hotter, and contrails are more prominent. All Mayorate ships/fighters/missiles now use custom Mayorate engines. Added "small" engine style for better graphics and performance for missiles/fighters.
+-Mayorate faction color is now yellow. No more confusing their fleets with the Diktat! (happened to me all the time...)
+-Various performance improvements (although implementation of ShaderLib will pretty much erase those gains in performance).
+-Miscellaneous balance changes and other fixes not worth mentioning.
+
+NOTE: Mod now requires ShaderLib.
+
+v0.6
+-Improved Del Azarchel, Cimeterre, and Lilith sprites.
+-Improved Graser weapon sprite.
+-Added 2 new portraits (old portrait has been removed).
+-Added the Jamaran-class cruiser. The Jamaran is a slow, heavily armored carrier that can hold its own against enemy cruisers and destroyers. The Jamaran excels in the fire support role and lets you repair/deploy fighters much closer to the center of battle (meaning you will have less fighters "wasted" as they taxi back and forth to your carrier). Replaces the Esfahan.
+-Removed the Esfahan from most Mayorate fleets. It's going to disappear altogether once I add a light carrier.
+-Added the Flux Torpedo, a heavy energy weapon that devastates enemies at range (if you can manage to hit them with it...). Kudos go to Mesotronik for the wonderful "shockwave" effect. Comes as part of the Jamaran's standard loadout.
+-Added the Laserhead LRM, a medium AOE missile. Upon reaching its detonation radius, the laserhead fires a spread of 20 laser bolts in random directions. Generally does more damage to larger foes, and tears apart tightly packed groups of frigates/destroyers INCLUDING your own (be careful!). Comes as part of the Jamaran's standard loadout.
+-Added the Kashef Sensor Suite hullmod. Grants 50 percent bonus to sensor range and 10 percent bonus to weapon range. It's extremely useful for figuring out where the enemy is sending the bulk of their forces, giving you a much longer time to give orders/respond to threats. Comes as part of the Jamaran's standard loadout and has no skill requirements.
+-Added "The Expanse" ambient music track.

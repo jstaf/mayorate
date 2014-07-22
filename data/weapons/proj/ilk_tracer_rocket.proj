@@ -1,0 +1,22 @@
+{
+	"id":"ilk_tracer_rocket",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/ilk/weapons/tracer_rocket.png",
+	"size":[5,11],	
+	"center":[2.5,6],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,107,62,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":50, # purely visual	
+	"engineSpec":{"turnAcc":200,
+				  "turnRate":100,
+				  "acc":1000,
+				  "dec":500},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-3, 0],
+				    "style":"ILK_ENGINE_SMALL",
+				    "width":6.0,
+				    "length":30.0,
+				    "angle":180.0}],
+}

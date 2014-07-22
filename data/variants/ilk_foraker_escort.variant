@@ -1,0 +1,41 @@
+{
+  "displayName": "Escort",
+  "fluxCapacitors": 7,
+  "fluxVents": 0,
+  "hullId": "ilk_foraker",
+  "hullMods": [
+    "stabilizedshieldemitter"
+  ],
+  "variantId": "ilk_foraker_escort",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ilk_laserhead"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_graser_light",
+        "WS0002": "ilk_graser_light"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "ilk_graser_pd"
+      }
+    }
+  ]
+}

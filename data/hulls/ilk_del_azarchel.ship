@@ -1,0 +1,293 @@
+{
+  "bounds": [
+    -127.5,
+    -11,
+    -120,
+    -16,
+    -145.5,
+    -24,
+    -142.5,
+    -35,
+    -107,
+    -44,
+    -145,
+    -58.5,
+    -71,
+    -74,
+    -64.5,
+    -66.5,
+    -72,
+    -49.5,
+    -59,
+    -44.5,
+    -59,
+    -31.5,
+    -26.5,
+    -28.5,
+    -32,
+    -55.5,
+    18,
+    -59,
+    5.5,
+    -49.5,
+    8.5,
+    -27.5,
+    33.5,
+    -33,
+    119,
+    -24,
+    138,
+    -13.5,
+    157.5,
+    -5.5,
+    150,
+    -3.5,
+    150,
+    3.5,
+    157.5,
+    5.5,
+    138,
+    13.5,
+    119,
+    24,
+    33.5,
+    33,
+    8.5,
+    27.5,
+    5.5,
+    49.5,
+    18,
+    59,
+    -32,
+    55.5,
+    -26.5,
+    28.5,
+    -59,
+    31.5,
+    -59,
+    44.5,
+    -72,
+    49.5,
+    -64.5,
+    66.5,
+    -71,
+    74,
+    -145,
+    58.5,
+    -107,
+    44,
+    -142.5,
+    35,
+    -145.5,
+    24,
+    -120,
+    16,
+    -127.5,
+    11
+  ],
+  "builtInWeapons": {
+    "WS0012": "ilk_driver"
+  },
+  "center": [
+    100,
+    191.5
+  ],
+  "collisionRadius": 197.157928,
+  "engineSlots": [
+    {
+      "angle": -180,
+      "contrailSize": 40,
+      "length": 110,
+      "location": [
+        -125,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 40
+    },
+    {
+      "angle": 165.699722,
+      "contrailSize": 14.364215,
+      "length": 46.721699,
+      "location": [
+        -124.5,
+        37
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 14.364215
+    },
+    {
+      "angle": -165.699722,
+      "contrailSize": 14.364215,
+      "length": 46.721699,
+      "location": [
+        -124.5,
+        -37
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 14.364215
+    }
+  ],
+  "height": 400,
+  "hullId": "ilk_del_azarchel",
+  "hullName": "Del Azarchel",
+  "hullSize": "CRUISER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 185.788193,
+  "spriteName": "graphics/ilk/ships/ilk_del_azarchel.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 90,
+      "arc": 10,
+      "id": "WS0001",
+      "locations": [
+        -45.5,
+        33
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -90,
+      "arc": 10,
+      "id": "WS0002",
+      "locations": [
+        -45.5,
+        -33
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 54.782406,
+      "arc": 234.649796,
+      "id": "WS0003",
+      "locations": [
+        -6,
+        41
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -54.782406,
+      "arc": 234.649796,
+      "id": "WS0004",
+      "locations": [
+        -6,
+        -41
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 20.609693,
+      "id": "WS0005",
+      "locations": [
+        10,
+        35
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 20.609693,
+      "id": "WS0006",
+      "locations": [
+        10,
+        -35
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 66.801407,
+      "arc": 223.602814,
+      "id": "WS0007",
+      "locations": [
+        39.5,
+        26
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -66.801407,
+      "arc": 223.602814,
+      "id": "WS0008",
+      "locations": [
+        39.5,
+        -26
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 180,
+      "arc": 263.974426,
+      "id": "WS0009",
+      "locations": [
+        -90.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 249.984039,
+      "id": "WS0010",
+      "locations": [
+        -65.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 247.380142,
+      "id": "WS0011",
+      "locations": [
+        11,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0012",
+      "locations": [
+        84,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "BUILT_IN"
+    }
+  ],
+  "width": 200
+}

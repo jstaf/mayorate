@@ -1,0 +1,55 @@
+{
+  "displayName": "Close Support",
+  "fluxCapacitors": 10,
+  "fluxVents": 5,
+  "hullId": "ilk_del_azarchel",
+  "hullMods": [
+    "missleracks",
+    "stabilizedshieldemitter"
+  ],
+  "variantId": "ilk_del_azarchel_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "ilk_driver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hurricane",
+        "WS0002": "hurricane"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ilk_windstalker",
+        "WS0006": "ilk_windstalker",
+        "WS0011": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "chaingun",
+        "WS0004": "chaingun",
+        "WS0007": "ilk_graser_light",
+        "WS0008": "ilk_graser_light"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "lrpdlaser",
+        "WS0010": "lrpdlaser"
+      }
+    }
+  ]
+}

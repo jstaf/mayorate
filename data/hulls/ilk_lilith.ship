@@ -1,0 +1,185 @@
+{
+  "bounds": [
+    -43.5,
+    -4.5,
+    -63,
+    -4.5,
+    -47,
+    -17.5,
+    -30.5,
+    -17.5,
+    -20,
+    -26.5,
+    -5,
+    -24,
+    -4.5,
+    -31.5,
+    9.5,
+    -15.5,
+    39.5,
+    -15.5,
+    65,
+    -7.5,
+    64.5,
+    -4,
+    57.5,
+    -3.5,
+    57.5,
+    3.5,
+    64.5,
+    4,
+    65,
+    7.5,
+    39.5,
+    15.5,
+    9.5,
+    15.5,
+    -4.5,
+    31.5,
+    -5,
+    24,
+    -20,
+    26.5,
+    -30.5,
+    17.5,
+    -47,
+    17.5,
+    -63,
+    4.5,
+    -43.5,
+    4.5
+  ],
+  "builtInWeapons": {
+    "WS0004": "ilk_repeater"
+  },
+  "center": [
+    42,
+    75
+  ],
+  "collisionRadius": 86.627075,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 14,
+      "length": 47.5,
+      "location": [
+        -45,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 14
+    },
+    {
+      "angle": 168.503433,
+      "contrailSize": 9,
+      "length": 31.5,
+      "location": [
+        -52,
+        10.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 9
+    },
+    {
+      "angle": -168.503433,
+      "contrailSize": 9,
+      "length": 31.5,
+      "location": [
+        -52,
+        -10.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 9
+    },
+    {
+      "angle": 150.255112,
+      "contrailSize": 6.296286,
+      "length": 15.299974,
+      "location": [
+        -31,
+        17
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 6.296286
+    },
+    {
+      "angle": -150.255112,
+      "contrailSize": 6.296286,
+      "length": 15.299974,
+      "location": [
+        -31,
+        -17
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 6.296286
+    }
+  ],
+  "height": 150,
+  "hullId": "ilk_lilith",
+  "hullName": "Lilith",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0.5,
+    -0
+  ],
+  "shieldRadius": 78.476112,
+  "spriteName": "graphics/ilk/ships/ilk_lilith.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 90,
+      "arc": 235,
+      "id": "WS0001",
+      "locations": [
+        -9,
+        16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -90,
+      "arc": 230,
+      "id": "WS0002",
+      "locations": [
+        -9,
+        -16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS0003",
+      "locations": [
+        24.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS0004",
+      "locations": [
+        52,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BUILT_IN"
+    }
+  ],
+  "width": 84
+}

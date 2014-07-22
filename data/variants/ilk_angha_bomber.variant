@@ -1,0 +1,17 @@
+{
+  "displayName": "Bomber",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "hullId": "ilk_angha",
+  "hullMods": [],
+  "variantId": "ilk_angha_bomber",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ilk_tracer_angha"
+      }
+    }
+  ]
+}

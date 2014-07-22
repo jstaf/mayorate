@@ -1,0 +1,28 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 8,
+  "fluxVents": 6,
+  "hullId": "ilk_safir_converted",
+  "hullMods": [
+    "pointdefenseai"
+  ],
+  "variantId": "ilk_safir_converted_support",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "ilk_laserhead",
+        "WS0002": "ilk_laserhead"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ilk_graser_light",
+        "WS0004": "ilk_graser_light"
+      }
+    }
+  ]
+}

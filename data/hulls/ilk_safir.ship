@@ -1,0 +1,166 @@
+{
+  "bounds": [
+    -79.5,
+    -5.5,
+    -75.5,
+    -14,
+    -66,
+    -15,
+    -60.5,
+    -22.5,
+    -62,
+    -41,
+    -54,
+    -49.5,
+    -34,
+    -52,
+    13.5,
+    -47,
+    12.5,
+    -37,
+    31.5,
+    -38.5,
+    62,
+    -38.5,
+    86.5,
+    -37.5,
+    86.5,
+    -27,
+    84,
+    -21.5,
+    63.5,
+    -18.5,
+    64,
+    -13.5,
+    76.5,
+    -3.5,
+    76.5,
+    3.5,
+    64,
+    13.5,
+    63.5,
+    18.5,
+    84,
+    21.5,
+    86.5,
+    27,
+    86.5,
+    37.5,
+    62,
+    38.5,
+    31.5,
+    38.5,
+    12.5,
+    37,
+    13.5,
+    47,
+    -34,
+    52,
+    -54,
+    49.5,
+    -62,
+    41,
+    -60.5,
+    22.5,
+    -66,
+    15,
+    -75.5,
+    14,
+    -79.5,
+    5.5
+  ],
+  "center": [
+    65,
+    95.5
+  ],
+  "collisionRadius": 121.944656,
+  "engineSlots": [
+    {
+      "angle": -176.797974,
+      "contrailSize": 12.1209,
+      "length": 34.892994,
+      "location": [
+        -64.5,
+        -27
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 12.1209
+    },
+    {
+      "angle": 176.797974,
+      "contrailSize": 12.1209,
+      "length": 34.892994,
+      "location": [
+        -64.5,
+        27
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 12.1209
+    },
+    {
+      "angle": 180,
+      "contrailSize": 19,
+      "length": 51.5,
+      "location": [
+        -79.5,
+        8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 19
+    },
+    {
+      "angle": -180,
+      "contrailSize": 19,
+      "length": 51.5,
+      "location": [
+        -79.5,
+        -8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 19
+    }
+  ],
+  "height": 184,
+  "hullId": "ilk_safir",
+  "hullName": "Safir",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    4.5,
+    -0
+  ],
+  "shieldRadius": 106.557495,
+  "spriteName": "graphics/ilk/ships/ilk_safir.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS0003",
+      "locations": [
+        25,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 180,
+      "arc": 360,
+      "id": "WS0004",
+      "locations": [
+        -32,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 130
+}
