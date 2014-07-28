@@ -125,5 +125,8 @@
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":0.9,"volume":0.10},
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.1,"volume":0.10},
 	],
-
+	
+	"ilk_needler_fire":[
+		{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20},
+	],
 }
