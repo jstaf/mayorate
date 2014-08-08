@@ -129,4 +129,8 @@
 	"ilk_needler_fire":[
 		{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20},
 	],
+	
+	"damage_warning":[
+		{"file":"sounds/ilk/fx/bettyhull.ogg","pitch":1,"volume":0.5},
+	],
 }

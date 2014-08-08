@@ -6,6 +6,7 @@ import data.scripts.world.rasht;
 
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.light.LightData;
+import org.dark.shaders.util.TextureData;
 
 
 public class MayorateModPlugin extends BaseModPlugin
@@ -24,7 +25,8 @@ public class MayorateModPlugin extends BaseModPlugin
     @Override  
     public void onApplicationLoad() {  
         ShaderLib.init();  
-        LightData.readLightDataCSV("data/lights/ilk_light_data.csv");  
+        LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
+        TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
     }  
 	
     @Override

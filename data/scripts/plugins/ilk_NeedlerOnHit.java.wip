@@ -1,0 +1,24 @@
+package data.scripts.plugins;
+
+import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.DamagingProjectileAPI;
+import com.fs.starfarer.api.combat.OnHitEffectPlugin;
+import org.lwjgl.util.vector.Vector2f;
+import com.fs.starfarer.api.combat.ShipAPI;
+
+public class ilk_NeedlerOnHit implements OnHitEffectPlugin {
+
+    @Override
+    public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
+            Vector2f point, boolean shieldHit, CombatEngineAPI engine) {
+        
+        if (target instanceof ShipAPI) {
+            ShipAPI hit_ship = (ShipAPI) target;
+            ilk_NeedleCounter counter = new ilk_NeedleCounter();
+            //engine.applyDamage(target, point, projectile.getDamageAmount(), projectile.getDamageType(), projectile.getEmpAmount(), false, true, projectile.getSource());  
+            ilk_NeedleCounter.TestSound();
+        }
+
+    }
+}
