@@ -10,14 +10,14 @@ import java.util.List;
 import java.util.Iterator;
 
 public class ilk_CombatVoice implements EveryFrameCombatPlugin {
-    
+
     //define combat voice sounds and booleans for whether it's already warned you or not
     private static final String DAMAGE_WARN = "damage_warning";
     private static boolean damage_warn_bool = false;
 
     private static final String DAMAGE_CRITICAL = "damage_critical";
     private static boolean damage_critical_bool = false;
-    
+
     private static final String ENGINES_OFFLINE = "engines_offline";
     private static boolean engine_failure_bool = false;
 
@@ -47,27 +47,23 @@ public class ilk_CombatVoice implements EveryFrameCombatPlugin {
             }
 
             //play DAMAGE_WARN sound if player health drops to 50%
-            if ( (player.getHitpoints() / player.getMaxHitpoints() < 0.4) && (damage_warn_bool == false)) {
+            if ((player.getHitpoints() / player.getMaxHitpoints() < 0.4) && (damage_warn_bool == false)) {
                 Global.getSoundPlayer().playSound(DAMAGE_WARN, 1f, 1f, player.getLocation(), player.getVelocity());
                 damage_warn_bool = true;
             }
 
             //play ENGINES_DISABLED sound if all player engines are disabled
-            java.util.List<ShipEngineControllerAPI.ShipEngineAPI> engines_list = player.getEngineController().getShipEngines();
-            ShipEngineControllerAPI.ShipEngineAPI an_engine;
-            
-            //iterate through player engines
-            for (Iterator iter = engines_list.iterator(); iter.hasNext();) {
-                an_engine = (ShipEngineControllerAPI.ShipEngineAPI) iter.next();
-                //break if an engine is active
+            for (Iterator engines = player.getEngineController().getShipEngines().iterator(); engines.hasNext(); ) {  
+            ShipEngineControllerAPI.ShipEngineAPI an_engine = (ShipEngineControllerAPI.ShipEngineAPI) engines.next();  
                 if (!an_engine.isDisabled()) {
+                    //break if an engine is active
                     engine_failure_bool = false;
                     break;
-                //break if its told you about your engines being disabled already
                 } else if (engine_failure_bool) {
+                    //break if its told you about your engines being disabled already
                     break;
-                //ok, so everything's disabled... now play the sound...
                 } else {
+                    //ok, so everything's disabled... now play the sound...
                     Global.getSoundPlayer().playSound(ENGINES_OFFLINE, 1f, 1f, player.getLocation(), player.getVelocity());
                     engine_failure_bool = true;
                 }

@@ -131,19 +131,11 @@
 	],
 
 #VOICE SAMPLES
-	"damage_warning":[
-		{"file":"sounds/ilk/voice/bettyhull.ogg","pitch":1,"volume":0.4},
-	],
+	"damage_warning":[{"file":"sounds/ilk/voice/bettyhull.ogg","pitch":1,"volume":0.35},],
 	
-	"damage_critical":[
-		{"file":"sounds/ilk/voice/bettyeject.ogg","pitch":1,"volume":0.4},
-	],
+	"damage_critical":[{"file":"sounds/ilk/voice/bettyeject.ogg","pitch":1,"volume":0.35},],
 	
-	"engines_offline":[
-		{"file":"sounds/ilk/voice/bettyengine.ogg","pitch":1,"volume":0.4},
-	],
+	"engines_offline":[{"file":"sounds/ilk/voice/bettyengine.ogg","pitch":1,"volume":0.35},],
 	
-	"weapons_offline":[
-		{"file":"sounds/ilk/voice/bettyweapons.ogg","pitch":1,"volume":0.4},
-	],
+	"weapons_offline":[{"file":"sounds/ilk/voice/bettyweapons.ogg","pitch":1,"volume":0.35},],
 }

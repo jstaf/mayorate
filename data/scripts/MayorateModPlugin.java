@@ -3,7 +3,6 @@ package data.scripts;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import data.scripts.world.rasht;
-
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.TextureData;
