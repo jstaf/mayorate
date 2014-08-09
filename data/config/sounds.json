@@ -129,8 +129,21 @@
 	"ilk_needler_fire":[
 		{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20},
 	],
-	
+
+#VOICE SAMPLES
 	"damage_warning":[
-		{"file":"sounds/ilk/fx/bettyhull.ogg","pitch":1,"volume":0.5},
+		{"file":"sounds/ilk/voice/bettyhull.ogg","pitch":1,"volume":0.4},
+	],
+	
+	"damage_critical":[
+		{"file":"sounds/ilk/voice/bettyeject.ogg","pitch":1,"volume":0.4},
+	],
+	
+	"engines_offline":[
+		{"file":"sounds/ilk/voice/bettyengine.ogg","pitch":1,"volume":0.4},
+	],
+	
+	"weapons_offline":[
+		{"file":"sounds/ilk/voice/bettyweapons.ogg","pitch":1,"volume":0.4},
 	],
 }
