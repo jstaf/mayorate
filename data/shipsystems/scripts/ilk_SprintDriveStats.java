@@ -2,12 +2,10 @@ package data.shipsystems.scripts;
 
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
-import com.fs.starfarer.api.combat.WeaponAPI;
 
 public class ilk_SprintDriveStats implements ShipSystemStatsScript {
-        
-        //public void setAmmo(getAmmo() - 1);
-        
+               
+        @Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		if (state == ShipSystemStatsScript.State.OUT) {
 			//stats.getMaxSpeed().unmodify(id); // to slow down ship to its regular top speed while powering drive down
@@ -15,13 +13,15 @@ public class ilk_SprintDriveStats implements ShipSystemStatsScript {
 			//stats.getDeceleration().modifyPercent(id, 2000f * effectLevel);
 			
 		} else {
-			stats.getMaxSpeed().modifyFlat(id, 400f * effectLevel);
-			stats.getAcceleration().modifyFlat(id, 2000f * effectLevel);
-			stats.getDeceleration().modifyFlat(id, 2000f * effectLevel);
+			stats.getMaxSpeed().modifyFlat(id, 2400f * effectLevel);
+			stats.getAcceleration().modifyFlat(id, 20000f * effectLevel);
+			stats.getDeceleration().modifyFlat(id, 20000f * effectLevel);
 
 			//stats.getAcceleration().modifyPercent(id, 200f * effectLevel);
 		}
 	}
+        
+        @Override
 	public void unapply(MutableShipStatsAPI stats, String id) {
 		stats.getMaxSpeed().unmodify(id);
 		stats.getMaxTurnRate().unmodify(id);
@@ -30,6 +30,7 @@ public class ilk_SprintDriveStats implements ShipSystemStatsScript {
 		stats.getDeceleration().unmodify(id);
 	}
 	
+        @Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
 			return new StatusData("increased engine power", false);
