@@ -146,7 +146,7 @@
   "weaponSlots": [
     {
       "angle": 90,
-      "arc": 10,
+      "arc": 5,
       "id": "WS0001",
       "locations": [
         -45.5,
@@ -158,7 +158,7 @@
     },
     {
       "angle": -90,
-      "arc": 10,
+      "arc": 5,
       "id": "WS0002",
       "locations": [
         -45.5,
@@ -169,8 +169,8 @@
       "type": "MISSILE"
     },
     {
-      "angle": 54.782406,
-      "arc": 234.649796,
+      "angle": 55,
+      "arc": 235,
       "id": "WS0003",
       "locations": [
         -6,
@@ -181,8 +181,8 @@
       "type": "BALLISTIC"
     },
     {
-      "angle": -54.782406,
-      "arc": 234.649796,
+      "angle": -55,
+      "arc": 235,
       "id": "WS0004",
       "locations": [
         -6,
@@ -194,7 +194,7 @@
     },
     {
       "angle": 0,
-      "arc": 20.609693,
+      "arc": 5,
       "id": "WS0005",
       "locations": [
         10,
@@ -206,7 +206,7 @@
     },
     {
       "angle": -0,
-      "arc": 20.609693,
+      "arc": 5,
       "id": "WS0006",
       "locations": [
         10,
@@ -217,8 +217,8 @@
       "type": "MISSILE"
     },
     {
-      "angle": 66.801407,
-      "arc": 223.602814,
+      "angle": 65,
+      "arc": 225,
       "id": "WS0007",
       "locations": [
         39.5,
@@ -229,8 +229,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -66.801407,
-      "arc": 223.602814,
+      "angle": -65,
+      "arc": 225,
       "id": "WS0008",
       "locations": [
         39.5,
@@ -242,7 +242,7 @@
     },
     {
       "angle": 180,
-      "arc": 263.974426,
+      "arc": 265,
       "id": "WS0009",
       "locations": [
         -90.5,
@@ -254,7 +254,7 @@
     },
     {
       "angle": 0,
-      "arc": 249.984039,
+      "arc": 250,
       "id": "WS0010",
       "locations": [
         -65.5,
@@ -266,7 +266,7 @@
     },
     {
       "angle": 0,
-      "arc": 247.380142,
+      "arc": 250,
       "id": "WS0011",
       "locations": [
         11,
@@ -278,7 +278,7 @@
     },
     {
       "angle": 0,
-      "arc": 10,
+      "arc": 0,
       "id": "WS0012",
       "locations": [
         84,

@@ -13,6 +13,6 @@
 				  "turnRate":35,
 				  "acc":1000,
 				  "dec":500},
-	#"onHitEffect":"data.scripts.plugins.ilk_NeedlerOnHit",
+	#"onHitEffect":"data.scripts.weapons.ilk_NeedlerOnHit",
 
 }

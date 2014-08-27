@@ -1,0 +1,15 @@
+{
+	"id":"ilk_nuke_damage_dummy",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":75.0,
+	"width":75.0,
+	"fadeTime":1.5,
+	"fringeColor":[0,0,0,0],
+	"coreColor":[0,0,0,0],
+	"textureType":"SMOOTH",
+	"textureScrollSpeed":-256,
+	"pixelsPerTexel":1.0,
+}

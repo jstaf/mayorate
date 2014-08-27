@@ -1,19 +1,22 @@
 name,id,tier,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,hints,number
-Thermal Lance,ilk_thermal_lance,2,0,600,1100,,,,0,0,,,HIGH_EXPLOSIVE,,1000,,0.2,2,5,0,0,0,0,24000,,,,,SYSTEM,7700
-Phoenix II Rocket Launcher,ilk_phoenix,1,350,800,,350,,,,5,16,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,600,200,3.5,100,GUIDED_POOR,7702
-Light TPC,ilk_repeater,0,0,600,,150,,0,0,,10,1,ENERGY,100,,,0.25,1,,0,10,2,5,,1300,,,,SYSTEM,7703
-Tornado AM,ilk_nuke,1,2000,2000,,,500,1000,10,10,2,,HIGH_EXPLOSIVE,,,0.5,15,1,,0,0,0,0,,500,75,8,500,DO_NOT_AIM,7705
-Tornado AM Battery,ilk_nuke_large,1,10000,2000,,,500,1000,10,23,5,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,7706
-Graser,ilk_graser,3,7000,650,1700,,,,15,23,,,ENERGY,,2100,,0.4,0.6,4,0,0,0,0,24000,,,,,,7707
-Light Graser,ilk_graser_light,3,800,600,250,,,,15,7,,,ENERGY,,500,,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7708
-Grav Cannon,ilk_driver,2,0,900,,500,,,0,0,45,,KINETIC,650,,1,8,3,0.6,2,10,2,5,,3000,,,,SYSTEM,7709
+Phoenix II Rocket Launcher,ilk_phoenix,1,350,800,,350,,,,4,16,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,600,200,3.5,100,GUIDED_POOR,7702
+Tornado AM,ilk_nuke,1,2000,2000,,1500,500,1000,10,10,2,,HIGH_EXPLOSIVE,,,0.5,15,1,,0,0,0,0,,500,75,8,500,DO_NOT_AIM,7705
+Tornado AM Battery,ilk_nuke_large,1,10000,2000,,1500,500,1000,10,23,5,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,7706
+Graser,ilk_graser,3,7000,700,1000,,,,15,20,,,ENERGY,,1750,0,0.4,0.6,4,0,0,0,0,24000,,,,,,7707
+Light Graser,ilk_graser_light,3,800,600,250,,,,15,7,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7708
 Windstalker MRM,ilk_windstalker,1,250,1100,,100,,50,10,5,40,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,400,200,5,25,DO_NOT_AIM,7710
-Belial PPC,ilk_shotgun,2,1500,550,,1200,,,15,10,50,,ENERGY,800,,,3,1,,10,25,10,30,,800,,,,,7711
-belial_helper,ilk_shotgun_shot_clone,2,0,550,,60,,,15,0,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,800,,,,SYSTEM,7712
-Laserhead LRM Launcher,ilk_laserhead,3,900,10000,,500,,75,10,12,30,,ENERGY,0,,0,15,2,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7713
-laserhead_helper,ilk_laserhead_shot_clone,2,0,550,,250,,,15,0,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,2200,,,,SYSTEM,7714
-Flux Torpedo,ilk_fluxtorp,3,15000,1100,,3000,1000,2000,5,25,,,ENERGY,2000,,,8,,,5,15,10,30,,250,,,,,7715
+Belial PPC,ilk_shotgun,2,1500,550,,1080,,,15,10,50,,ENERGY,800,,,3,1,,10,25,10,30,,800,,,,,7711
+Laserhead LRM Launcher,ilk_laserhead,3,900,10000,,500,,75,10,12,20,,ENERGY,0,,0,15,2,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7713
+Flux Torpedo,ilk_fluxtorp,3,15000,900,,2250,1000,2000,5,25,,,ENERGY,3250,,,8,,,5,15,10,30,,300,,,,,7715
 PPC,ilk_ppc,2,800,450,,45,,0,50,6,,,ENERGY,60,,,0.3,1,,0,10,1,10,,800,,,,,7716
-Graser PD,ilk_graser_pd,3,300,325,180,,,,100,6,,,ENERGY,,200,,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7717
-Tracer Rocket Launcher,ilk_tracer_angha,1,0,1200,,400,,,0,0,8,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,5,100,"GUIDED_POOR, STRIKE, SYSTEM",7718
+Graser PD,ilk_graser_pd,3,300,325,180,,,,100,6,,,ENERGY,,300,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7717
 Needler,ilk_needler,3,3000,800,,50,,,15,10,20,2,FRAGMENTATION,100,,,0.13,1,,10,40,2,20,,400,400,2,10,GUIDED_POOR,7719
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Thermal Lance,ilk_thermal_lance,3,0,600,1100,,,,0,25,,,HIGH_EXPLOSIVE,,1000,,0.2,2,5,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7700
+Thermal Pulse Repeater,ilk_repeater,1,0,600,,150,,0,0,15,10,1,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7703
+Grav Cannon,ilk_driver,2,0,900,,500,,,0,19,45,,KINETIC,650,,1,8,3,0.6,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",7709
+Tracer Rocket Launcher,ilk_tracer_angha,1,0,1200,,400,,,0,7,8,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,5,100,"SYSTEM, GUIDED_POOR, STRIKE",7718
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+belial_helper,ilk_shotgun_shot_clone,2,0,550,,60,,,15,0,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,800,,,,SYSTEM,7712
+laserhead_helper,ilk_laserhead_shot_clone,2,0,550,,250,,,15,0,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,2200,,,,SYSTEM,7714
+nuke_damage,ilk_nuke_damage,1,0,400,,300,100,,15,0,,,HIGH_EXPLOSIVE,0,,,3,1,0.1,0,0,0,30,,500,,,,SYSTEM,7720

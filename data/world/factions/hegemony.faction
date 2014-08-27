@@ -1,6 +1,6 @@
 {
 	"fleetCompositions":{
-		"heg_scout":{
+		"scout":{
 			"displayName":"Reconnaissance Craft",
 			"maxFleetPoints":0,
 			"daysWorthOfSupplies":[30, 40],
@@ -14,7 +14,7 @@
 				"broadsword_wing":[0, 1],
 			},
 		},
-		"heg_flotilla":{
+		"skirmish":{
 			"displayName":"Flotilla",
 			"maxFleetPoints":25,
 			"daysWorthOfSupplies":[30, 30],
@@ -34,8 +34,7 @@
 				"talon_wing":[0, 2],
 			},
 		},
-		
-		"heg_patrol2":{
+		"attack":{
 			"displayName":"Patrol",
 			"maxFleetPoints":50,
 			"daysWorthOfSupplies":[30, 50],
@@ -55,8 +54,7 @@
 				"talon_wing":[0, 2],
 			},
 		},
-		
-		"invasion":{
+		"war":{
 			"displayName":"Invasion Fleet",
 			"maxFleetPoints":110,
 			"daysWorthOfSupplies":[30, 40],

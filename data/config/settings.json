@@ -1,4 +1,9 @@
 {
+	"plugins":{
+		"ilk_LaserheadSpecialBehavior":"data.scripts.plugins.ilk_LaserheadSpecialBehavior",
+		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
+	},
+
 	"graphics":{
 		"shipNormal":{
 			"ilk_cimeterre":"graphics/ilk/normals/ilk_cimeterre_normal.png",
@@ -28,5 +33,15 @@
 			"ilk_windstalker_hardpoint":"graphics/ilk/normals/weapons/windstalker_NRM.png",
 			"ilk_phoenix_missile":"graphics/ilk/normals/weapons/phoenix_rocket_NRM.png",
 		},
+		"shipMaterial":{
+			"ilk_cimeterre":"graphics/ilk/materials/ilk_cimeterre_MAT.png",
+			"ilk_jamaran":"graphics/ilk/materials/ilk_jamaran_MAT.png",
+			"ilk_ravana":"graphics/ilk/materials/ilk_ravana_MAT_alt.png",
+			"ilk_del_azarchel":"graphics/ilk/materials/ilk_del_azarchel_MAT.png",
+			"ilk_lilith":"graphics/ilk/materials/ilk_lilith_MAT.png",
+			"ilk_foraker":"graphics/ilk/materials/ilk_foraker_MAT.png",
+			"ilk_safir":"graphics/ilk/materials/ilk_safir_MAT.png",
+			"ilk_safir_converted":"graphics/ilk/materials/ilk_safirB_MAT.png",
+		}
 	},
 }
