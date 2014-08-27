@@ -1,0 +1,29 @@
+{
+	"id":"ilk_phase_leap",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	"statsScript":"data.shipsystems.scripts.ilk_PhaseLeap",
+
+	"jitterColor":[166,50,91,155],
+	"jitterCopies":10,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.5,
+
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+
+	"engineGlowColor":[100,165,255,125],
+
+	"range":600,
+	"randomRange":0,
+
+	"renderCopyDuringTeleport":true,
+
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+
+	"aiHints":{
+		"averageSpeedIncrease":65,
+	}
+}

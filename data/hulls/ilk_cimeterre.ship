@@ -182,7 +182,7 @@
   "weaponSlots": [
     {
       "angle": 0,
-      "arc": 15,
+      "arc": 0,
       "id": "WS0001",
       "locations": [
         50,
@@ -202,7 +202,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "ENERGY"
+      "type": "UNIVERSAL"
     },
     {
       "angle": -45,
@@ -214,7 +214,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "ENERGY"
+      "type": "UNIVERSAL"
     },
     {
       "angle": 180,
@@ -230,7 +230,7 @@
     },
     {
       "angle": 0,
-      "arc": 20,
+      "arc": 5,
       "id": "WS0006",
       "locations": [
         -4,

@@ -214,8 +214,8 @@
   "viewOffset": 0,
   "weaponSlots": [
     {
-      "angle": 52.815292,
-      "arc": 243.215012,
+      "angle": 52.5,
+      "arc": 245,
       "id": "WS0001",
       "locations": [
         114.5,
@@ -226,8 +226,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -52.815292,
-      "arc": 243.215012,
+      "angle": -52.5,
+      "arc": 245,
       "id": "WS0002",
       "locations": [
         114.5,
@@ -239,7 +239,7 @@
     },
     {
       "angle": 0,
-      "arc": 15,
+      "arc": 5,
       "id": "WS0003",
       "locations": [
         27.5,
@@ -251,7 +251,7 @@
     },
     {
       "angle": -0,
-      "arc": 15,
+      "arc": 5,
       "id": "WS0004",
       "locations": [
         27.5,
@@ -262,8 +262,8 @@
       "type": "UNIVERSAL"
     },
     {
-      "angle": 67.750977,
-      "arc": 233.991684,
+      "angle": 70,
+      "arc": 235,
       "id": "WS0005",
       "locations": [
         2,
@@ -274,8 +274,8 @@
       "type": "BALLISTIC"
     },
     {
-      "angle": -67.750977,
-      "arc": 233.991684,
+      "angle": -70,
+      "arc": 235,
       "id": "WS0006",
       "locations": [
         2,
@@ -286,8 +286,8 @@
       "type": "BALLISTIC"
     },
     {
-      "angle": 70.709953,
-      "arc": 229.911774,
+      "angle": 70,
+      "arc": 230,
       "id": "WS0007",
       "locations": [
         -25.5,
@@ -298,8 +298,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -70.709953,
-      "arc": 229.911774,
+      "angle": -70,
+      "arc": 230,
       "id": "WS0008",
       "locations": [
         -25.5,
@@ -310,8 +310,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 77.195732,
-      "arc": 224.739456,
+      "angle": 75,
+      "arc": 225,
       "id": "WS0009",
       "locations": [
         -30.5,
@@ -322,8 +322,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -77.195732,
-      "arc": 224.739456,
+      "angle": -75,
+      "arc": 225,
       "id": "WS0010",
       "locations": [
         -30.5,
@@ -334,8 +334,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 116.565048,
-      "arc": 246.638504,
+      "angle": 115,
+      "arc": 245,
       "id": "WS0011",
       "locations": [
         -104.5,
@@ -346,8 +346,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -116.565048,
-      "arc": 246.638504,
+      "angle": -115,
+      "arc": 245,
       "id": "WS0012",
       "locations": [
         -104.5,
@@ -359,7 +359,7 @@
     },
     {
       "angle": 180,
-      "arc": 286.260193,
+      "arc": 285,
       "id": "WS0013",
       "locations": [
         -124,
@@ -383,7 +383,7 @@
     },
     {
       "angle": 0,
-      "arc": 15,
+      "arc": 5.01,
       "id": "WS0015",
       "locations": [
         17.5,
@@ -395,7 +395,7 @@
     },
     {
       "angle": 90,
-      "arc": 22.619865,
+      "arc": 5,
       "id": "WS0016",
       "locations": [
         -51.5,
@@ -407,7 +407,7 @@
     },
     {
       "angle": -90,
-      "arc": 22.619865,
+      "arc": 5,
       "id": "WS0017",
       "locations": [
         -51.5,

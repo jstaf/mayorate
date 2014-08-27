@@ -1,2 +1,2 @@
 name,id,unlocked,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,sprite
-Kashef Sensor Suite,ilk_SensorSuite,TRUE,4,8,12,20,data.hullmods.ilk_SensorSuite,"A widely available piece of Mayorate military hardware, the Kashef Sensor Suite increases sensor range by %s percent and effective weapon range by %s percent.",graphics/ilk/hullmods/ilk_sensorsuite.png
+Kashef Sensor Suite,ilk_SensorSuite,TRUE,4,8,12,20,data.hullmods.ilk_SensorSuite,"A widely-available piece of Mayorate military hardware, the Kashef Sensor Suite increases sensor range by %s percent and effective weapon range by %s percent.",graphics/ilk/hullmods/ilk_sensorsuite.png

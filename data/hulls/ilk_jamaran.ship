@@ -162,8 +162,8 @@
       "type": "LAUNCH_BAY"
     },
     {
-      "angle": 86.633537,
-      "arc": 235.068787,
+      "angle": 85,
+      "arc": 235,
       "id": "WS0003",
       "locations": [
         -55,
@@ -174,8 +174,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -86.633537,
-      "arc": 235.068787,
+      "angle": -85,
+      "arc": 235,
       "id": "WS0004",
       "locations": [
         -55,
@@ -186,8 +186,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 74.054604,
-      "arc": 213.174683,
+      "angle": 75,
+      "arc": 215,
       "id": "WS0005",
       "locations": [
         -46,
@@ -198,8 +198,8 @@
       "type": "BALLISTIC"
     },
     {
-      "angle": -74.054604,
-      "arc": 213.174683,
+      "angle": -75,
+      "arc": 215,
       "id": "WS0006",
       "locations": [
         -46,
@@ -210,8 +210,8 @@
       "type": "BALLISTIC"
     },
     {
-      "angle": 75.256439,
-      "arc": 25.057608,
+      "angle": 75,
+      "arc": 5,
       "id": "WS0007",
       "locations": [
         -23,
@@ -222,8 +222,8 @@
       "type": "MISSILE"
     },
     {
-      "angle": -75.256439,
-      "arc": 25.057608,
+      "angle": -75,
+      "arc": 5,
       "id": "WS0008",
       "locations": [
         -23,
@@ -235,7 +235,7 @@
     },
     {
       "angle": 0,
-      "arc": 281.055084,
+      "arc": 280,
       "id": "WS0009",
       "locations": [
         7,
@@ -246,7 +246,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": 38.290165,
+      "angle": 40,
       "arc": 360,
       "id": "WS0001",
       "locations": [
@@ -258,7 +258,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": -38.290165,
+      "angle": -40,
       "arc": 360,
       "id": "WS0002",
       "locations": [

@@ -1,0 +1,28 @@
+{
+	"id":"ilk_needler",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/ilk/weapons/needler.png",
+	"turretGlowSprite":"",
+	"hardpointSprite":"graphics/ilk/weapons/needler.png",
+	"hardpointGlowSprite":"",
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[5, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"glowColor":[255,100,100,255],
+	"muzzleFlashSpec":{"length":30.0,
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[255,100,100,255]},		
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"interruptibleBurst":true,
+	"projectileSpecId":"ilk_needle_shot",  # projectile that will be fired
+	"fireSoundTwo":"ilk_needler_fire",
+}

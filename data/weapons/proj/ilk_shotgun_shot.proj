@@ -6,7 +6,7 @@
 	"collisionClassByFighter":"RAY_FIGHTER",
 	"length":100.0,
 	"width":20,
-	"fadeTime":0.3,
+	"fadeTime":0.15,
 	"fringeColor":[0,255,0,255],
 	"coreColor":[255,255,255,255],
 	"textureType":"SMOOTH",  # now also used for "BALLISTIC_AS_BEAM", if specified

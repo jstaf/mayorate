@@ -1,0 +1,18 @@
+{
+	"id":"ilk_needle_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/missile_annihilator.png",
+	"size":[4,18],	
+	"center":[2,9],
+	"collisionRadius":15,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[255,131,217,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":20, # purely visual	
+	"engineSpec":{"turnAcc":140,
+				  "turnRate":35,
+				  "acc":1000,
+				  "dec":500},
+	#"onHitEffect":"data.scripts.weapons.ilk_NeedlerOnHit",
+
+}

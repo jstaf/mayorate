@@ -1,18 +1,13 @@
 {
-# MUSIC
-	
 	"music":{
-		
 		"music_campaign":[
 			{"file":"ambient.ogg","source":"sounds/ilk/music/"},
 			{"file":"ambient2.ogg","source":"sounds/ilk/music/"},
 			{"file":"StianStark-Starfarer-Exploration_Alpha.ogg","source":"sounds/music/music.bin"} 
 		],
-		
 		"music_title":[
 			{"file":"ambient.ogg","source":"sounds/ilk/music/"}, 
 		],
-		
 		"music_combat":[
 			#{"file":"battle1.ogg","source":"sounds/ilk/music/"},
 			{"file":"battle2.ogg","source":"sounds/ilk/music/"},
@@ -20,104 +15,108 @@
 			#{"file":"battle5.ogg","source":"sounds/ilk/music/"},
 		],
 	},
-	
+
 #ambient2 - The Expanse + Into the Black - Both written by me, feel free to use.
 #battle2 - Steel Rain - Also me. Again, use away.
-	
-# SOUND
-	
+
+
 	"ilk_thermal_lance_short":[
 		{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":0.55},
 	],
-	
+
 	"ilk_thermal_lance_loop":[
 		{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":0.55},
 	],
-	
+
 	"ilk_phoenix_launch":[
 		{"file":"sounds/ilk/fx/phoenix_launch1.ogg","pitch":1,"volume":0.2},
 		{"file":"sounds/ilk/fx/phoenix_launch2.ogg","pitch":1,"volume":0.2},
 	],
-	
+
 	"ilk_lock":[
 		{"file":"sounds/ilk/fx/lock.wav","pitch":1,"volume":0.10},
 	],
-	
+
 	"ilk_repeater":[
 		{"file":"sounds/ilk/fx/l_kayser.wav","pitch":1,"volume":0.22},
 	],
-	
+
 	"ilk_impactor":[
 		{"file":"sounds/ilk/fx/impactor.wav","pitch":1,"volume":0.2},
 		{"file":"sounds/ilk/fx/impactor.wav","pitch":1.02,"volume":0.25},
 		{"file":"sounds/ilk/fx/impactor.wav","pitch":0.98,"volume":0.22},
 	],
-	
+
 	"ilk_nuke_launch":[
 		{"file":"sounds/ilk/fx/impactor.wav","pitch":0.95,"volume":0.4},
 	],
-	
+
+	"ilk_nuke_detonate":[
+		{"file":"sounds/sfx_impacts/explosion_01.ogg","pitch":1.15,"volume":0.8},
+		{"file":"sounds/sfx_impacts/explosion_02.ogg","pitch":1.15,"volume":0.8},
+		{"file":"sounds/sfx_impacts/explosion_04.ogg","pitch":1.15,"volume":0.8},
+	],
+
 	"ilk_graser_fire":[
 		{"file":"sounds/ilk/fx/graser.ogg","pitch":1,"volume":0.9},
 	],
-	
 
 	"ilk_light_graser_fire":[
 		{"file":"sounds/ilk/fx/l_military_02.wav","pitch":1,"volume":0.25},
 	],
-	
+
 	"ilk_driver_scream":[
 		{"file":"sounds/ilk/fx/driver_scream.wav","pitch":1,"volume":0.85},
 	],
-	
+
 	"ilk_driver_fire":[
 		{"file":"sounds/ilk/fx/driver_fire.wav","pitch":1,"volume":1},
 	],
-	
+
 	"ilk_shotgun_fire":[
 		{"file":"sounds/ilk/fx/shotgun.ogg","pitch":1,"volume":0.25},
 	],
-	
+
 	"ilk_windstalker_fire":[
 		{"file":"sounds/ilk/fx/windstalker.ogg","pitch":1,"volume":0.13},
 	],
-	
+
 	"ilk_sprint_up":[
 		{"file":"sounds/ilk/fx/sprint_up.ogg","pitch":1,"volume":0.5},
 	],
-	
+
 	"ilk_sprint_loop":[
 		{"file":"sounds/ilk/fx/sprint_loop.ogg","pitch":1,"volume":0.5},
 	],
-	
+
 	"ilk_sprint_end":[
 		{"file":"sounds/ilk/fx/sprint_end.ogg","pitch":1,"volume":0.5},
 	],
-	
+
 	"ilk_laserhead_fire":[
 		{"file":"sounds/ilk/fx/laserhead.ogg","pitch":1,"volume":0.25},
 	],
-	
+
 	"ilk_laserhead_detonate":[
 		{"file":"sounds/sfx_impacts/beam_hit_02.ogg","pitch":1,"volume":0.9},
 	],
-	
+
 	"ilk_ionbomb_fire":[
 		{"file":"sounds/ilk/fx/ionbomb_fire.wav","pitch":1,"volume":0.9},
 	],
-	
+
 	"ilk_ionbomb_detonate":[
 		{"file":"sounds/ilk/fx/ionbomb_detonate.wav","pitch":1,"volume":0.9},
 	],
-	
+
 	"ilk_ppc_fire":[
 		{"file":"sounds/ilk/fx/Turret_V1.wav","pitch":1,"volume":0.15},
 	],
-	
+
 	"ilk_graser_pd_fire":[
 		{"file":"sounds/ilk/fx/graser_pd.wav","pitch":1,"volume":0.25},
 	],
-	
+
 	"ilk_tracer_fire":[
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1,"volume":0.10},
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":0.95,"volume":0.10},
@@ -126,4 +125,82 @@
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.1,"volume":0.10},
 	],
 
+	"ilk_needler_fire":[
+		{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20},
+	],
+
+
+	"damage_warning":[{"file":"sounds/ilk/voice/bettyhull.ogg","pitch":1,"volume":0.35},],
+
+	"damage_critical":[{"file":"sounds/ilk/voice/bettyeject.ogg","pitch":1,"volume":0.35},],
+
+	"engines_offline":[{"file":"sounds/ilk/voice/bettyengine.ogg","pitch":1,"volume":0.35},],
+
+	"weapons_offline":[{"file":"sounds/ilk/voice/bettyweapons.ogg","pitch":1,"volume":0.35},],
+
+
+	"engine_loop":{
+		"ilk_hull":{"sounds":[5,6,7,8,9], "pitch":1, "volume":0.5},
+		"FIGHTER":{"sounds":[5], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[6], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[7], "pitch":1, "volume":0.7},
+		"CRUISER":{"sounds":[8], "pitch":1, "volume":0.7},
+		"CAPITAL_SHIP":{"sounds":[9], "pitch":1, "volume":1},
+	},
+	"engine_accelerate":{
+		"ilk_hull":{"sounds":[0], "pitch":0.9, "volume":1},
+		"FIGHTER":{"sounds":[0], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[0], "pitch":1, "volume":0.6},
+		"DESTROYER":{"sounds":[0], "pitch":1, "volume":0.7},
+		"CRUISER":{"sounds":[0], "pitch":1, "volume":0.8},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"shield_burnout":{
+		"ilk_hull":{"sounds":[0], "pitch":0.85, "volume":1},
+		"FIGHTER":{"sounds":[0], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[0], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[0], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[0], "pitch":1, "volume":0.9},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"emp_loop":{
+		"ilk_hull":{"sounds":[0], "pitch":0.85, "volume":1},
+		"FIGHTER":{"sounds":[0], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[0], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[0], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[0], "pitch":1, "volume":0.9},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"flux_loop":{
+		"ilk_hull":{"sounds":[0], "pitch":0.85, "volume":1},
+		"FIGHTER":{"sounds":[0], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[0], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[0], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[0], "pitch":1, "volume":0.9},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"vent_flux":{
+		"ilk_hull":{"sounds":[0], "pitch":0.85, "volume":1},
+		"FIGHTER":{"sounds":[0], "pitch":1, "volume":0.4},
+		"FRIGATE":{"sounds":[0], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[0], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[0], "pitch":1, "volume":0.9},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"shield_lower":{
+		"ilk_hull":{"sounds":[0,1,2], "pitch":1, "volume":1},
+		"FIGHTER":{"sounds":[2], "pitch":1, "volume":0.6},
+		"FRIGATE":{"sounds":[1], "pitch":1, "volume":0.7},
+		"DESTROYER":{"sounds":[1], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[1], "pitch":1, "volume":0.8},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
+	"shield_raise":{
+		"ilk_hull":{"sounds":[0,1,2], "pitch":1, "volume":1},
+		"FIGHTER":{"sounds":[2], "pitch":1, "volume":0.5},
+		"FRIGATE":{"sounds":[2], "pitch":1, "volume":0.6},
+		"DESTROYER":{"sounds":[1], "pitch":1, "volume":0.7},
+		"CRUISER":{"sounds":[1], "pitch":1, "volume":0.8},
+		"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+	},
 }
