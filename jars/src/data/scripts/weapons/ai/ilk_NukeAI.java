@@ -16,6 +16,10 @@ import java.awt.Color;
 import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
+import org.dark.shaders.distortion.DistortionShader;
+import org.dark.shaders.distortion.RippleDistortion;
+import org.dark.shaders.light.LightShader;
+import org.dark.shaders.light.StandardLight;
 import org.lwjgl.util.vector.Vector2f;
 
 import org.lazywizard.lazylib.CollectionUtils;
@@ -29,7 +33,7 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
     private final MissileAPI missile;
     private CombatEntityAPI target;
 
-    private final static float DETONATE_DISTANCE = 100f;
+    private final static float DETONATE_DISTANCE = 150f;
     private final static float VELOCITY_DAMPING_FACTOR = 0.15f;
 
     private float timeLive = 0f;
@@ -87,13 +91,33 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
         if (missile.getSource() != null) {
             ilk_AnamorphicFlare.createFlare(missile.getSource(), new Vector2f(missile.getLocation()), Global.getCombatEngine(), 1f, 0.01f, (float) Math.random() * 5f - 2.5f, 4f, 2f, new Color(255, 165, 0, 255), new Color(255, 225, 150, 255));
         }
-
-        Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 1500f, 1f, 2f, new Color(255, 165, 0, 255));
-        Global.getCombatEngine().spawnExplosion(missile.getLocation(), new Vector2f(), new Color(255, 225, 150, 255), 1750f, 0.15f);
-        Global.getCombatEngine().spawnExplosion(missile.getLocation(), new Vector2f(), new Color(255, 180, 60, 255), 1250f, 1.5f);
+        
+        Global.getCombatEngine().spawnExplosion(missile.getLocation(), new Vector2f(), new Color(255, 121, 117, 255), 500f, 0.5f);
+        Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 400f, 1f, 2f, new Color(255, 255, 255, 200));
+        Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 1000f, 1f, 2f, new Color(255, 121, 117, 255));
+        
+        RippleDistortion shockwave = new RippleDistortion();
+        shockwave.setLocation(missile.getLocation());
+        shockwave.setIntensity(8f);
+        shockwave.setLifetime(1.5f);
+        shockwave.setSize(500f);
+        shockwave.setFrameRate(84f);
+        shockwave.setCurrentFrame(10);
+        shockwave.fadeOutIntensity(1f);
+        DistortionShader.addDistortion(shockwave);
+        
+        StandardLight light = new StandardLight();
+        light.setLocation(missile.getLocation());
+        light.setColor(new Color(255, 121, 117, 255));
+        light.setSize(1500f);
+        light.setIntensity(2f);
+        light.fadeOut(0.5f);
+        LightShader.addLight(light);
 
         Global.getSoundPlayer().playSound("ilk_nuke_detonate", 1f, 1f, missile.getLocation(), new Vector2f());
-
+        
+        //spawn stuff to cause damage
+        Global.getCombatEngine().spawnProjectile(missile.getSource(), missile.getWeapon(), "ilk_nuke_primaryDet", missile.getLocation(), 0f, null);
         Global.getCombatEngine().applyDamage(missile, missile.getLocation(), missile.getHitpoints() * 100f, DamageType.FRAGMENTATION, 0f, false, false, missile);
         for (int i = 0; i < 60; i++) {
             float angle = (float) (i - 1) * 6f;
