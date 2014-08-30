@@ -1,0 +1,26 @@
+{
+	"id":"ilk_PhaseJump",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+	"statsScript":"data.shipsystems.scripts.ilk_PhaseJump",
+
+	"jitterColor":[166,50,91,155],
+	"jitterCopies":5,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.25,
+
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+
+	"alwaysAccelerate":true,
+	"engineGlowColor":[100,165,255,125],
+
+	"useSound":"system_burn_drive_activate",
+	"loopSound":"system_burn_drive_loop",
+	"deactivateSound":"system_burn_drive_deactivate",
+	"outOfUsesSound":"gun_out_of_ammo",
+
+	"aiHints":{
+		"averageSpeedIncrease":65,
+	}
+}
