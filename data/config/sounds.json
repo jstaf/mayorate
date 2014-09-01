@@ -129,16 +129,10 @@
 		{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20},
 	],
 
-
-	"damage_warning":[{"file":"sounds/ilk/voice/bettyhull.ogg","pitch":1,"volume":0.35},],
-
-	"damage_critical":[{"file":"sounds/ilk/voice/bettyeject.ogg","pitch":1,"volume":0.35},],
-
-	"engines_offline":[{"file":"sounds/ilk/voice/bettyengine.ogg","pitch":1,"volume":0.35},],
-
-	"weapons_offline":[{"file":"sounds/ilk/voice/bettyweapons.ogg","pitch":1,"volume":0.35},],
-
-
+	"ilk_system_phase_leap":[
+		{"file":"sounds/ilk/fx/phaseLeap.ogg","pitch":1,"volume":0.35},
+	],
+	
 	"engine_loop":{
 		"ilk_hull":{"sounds":[5,6,7,8,9], "pitch":1, "volume":0.5},
 		"FIGHTER":{"sounds":[5], "pitch":1, "volume":0.4},

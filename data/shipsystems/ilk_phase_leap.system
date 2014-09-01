@@ -1,7 +1,7 @@
 {
 	"id":"ilk_phase_leap",
 	"type":"ENGINE_MOD",
-	"aiType":"PHASE_DISPLACER",
+	"aiType":"BURN_DRIVE",
 	"statsScript":"data.shipsystems.scripts.ilk_PhaseLeap",
 
 	"jitterColor":[166,50,91,155],
@@ -20,7 +20,7 @@
 	"renderCopyDuringTeleport":true,
 
 	"fadeActivationSoundOnChargedown":false,
-	"useSound":"system_phase_skimmer",
+	"useSound":"ilk_system_phase_leap",
 	"outOfUsesSound":"gun_out_of_ammo",
 
 	"aiHints":{
