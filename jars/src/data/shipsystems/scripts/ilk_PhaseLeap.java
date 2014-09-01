@@ -7,7 +7,9 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import java.awt.Color;
+import org.apache.log4j.Level;
 import org.lazywizard.lazylib.CollisionUtils;
+import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -27,7 +29,6 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
     //don't touch these
     private boolean isActive = false;
     public Vector2f startLoc;
-    public Vector2f endLoc;
 
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -42,17 +43,49 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                 isActive = true;
                 //find ship location before teleport
                 startLoc = new Vector2f(ship.getLocation());
-                if (ship.getVelocity().lengthSquared() <= 0f) {
+                /*if (ship.getVelocity().lengthSquared() <= 0f) {
                     for (int i = 0; i < 75; i++) {
                         Global.getCombatEngine().addSmoothParticle(MathUtils.getRandomPointInCircle(startLoc, 1.2f * ship.getCollisionRadius()), (Vector2f) (new Vector2f(ship.getVelocity())).normalise().scale(LEAP_DISTANCE * 5f * (float) Math.random()), (float) Math.random() * 10f + 10f, (float) Math.random() * 0.2f + 0.8f, (float) Math.random() * 0.1f + 0.35f, EXPLOSION_COLOR);
                     }
-                }
+                }*/
             }
         }
         if (state == State.OUT) {
             if (isActive) {
+                //this ridiculous conversion is needed to make .getfacing() meaningful
+                float direction = (float) Math.toRadians(450 - ship.getFacing());
+                if (direction > Math.PI * 2) {
+                    direction -= Math.PI *2;
+                }
+                //Global.getLogger(ilk_PhaseLeap.class).log(Level.DEBUG, "direction = " + direction); //old debugging script for direction            
+                float endLocX = ship.getLocation().getX(); 
+                float endLocY = ship.getLocation().getY();
+                
+                //calculate jump coordinates
+                endLocX += (float) FastTrig.sin(direction) * LEAP_DISTANCE;
+                endLocY += (float) FastTrig.cos(direction) * LEAP_DISTANCE;
+                Vector2f endLoc = new Vector2f(endLocX, endLocY);
+                
+                //check to see if we end up inside anything... BECAUSE THAT WOULD BE BAD. 
+                for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, LEAP_DISTANCE)) {
+                    if (inRangeObject == ship) {
+                        //don't do anything if its the ship activating the system
+                        continue;
+                    }
+                    
+                    if (CollisionUtils.isPointWithinCollisionCircle(endLoc, inRangeObject)) {
+                        
+                    }
+                }
+                
+                //old debugging script for coordinates
+                //Global.getLogger(ilk_PhaseLeap.class).log(Level.DEBUG, "startx = " + startLoc.getX() + ", starty = " + startLoc.getY());
+                //Global.getLogger(ilk_PhaseLeap.class).log(Level.DEBUG, "endx = " + endLocX + ", endy = " + endLocY);
+                
+                //TELEPORT!!!!
+                ship.getLocation().set(endLoc);
+                
                 //find ship location after teleport
-                endLoc = new Vector2f(ship.getLocation());
                 for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {
                     if (inRangeObject == ship) {
                         //don't do anything if its the ship activating the system

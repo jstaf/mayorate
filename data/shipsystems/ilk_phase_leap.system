@@ -1,6 +1,6 @@
 {
 	"id":"ilk_phase_leap",
-	"type":"DISPLACER",
+	"type":"ENGINE_MOD",
 	"aiType":"PHASE_DISPLACER",
 	"statsScript":"data.shipsystems.scripts.ilk_PhaseLeap",
 
@@ -12,7 +12,7 @@
 	"weaponGlowColor":[100,165,255,0],
 	"weaponTypes":[ENERGY],
 
-	"engineGlowColor":[100,165,255,125],
+	#"engineGlowColor":[100,165,255,125],
 
 	"range":600,
 	"randomRange":0,

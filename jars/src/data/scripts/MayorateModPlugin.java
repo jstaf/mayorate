@@ -7,15 +7,12 @@ import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-//import data.scripts.plugins.ilk_CombatVoice;
 import data.scripts.weapons.ai.ilk_NukeAI;
 import data.scripts.world.rasht.ilk_RashtGen;
-import java.io.IOException;
 import org.apache.log4j.Level;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
-import org.json.JSONException;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
