@@ -29,16 +29,10 @@ public class MayorateModPlugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() {
         Global.getLogger(MayorateModPlugin.class).setLevel(Level.ERROR);
-
+        
         ShaderLib.init();
         LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
         TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
-
-        /*try {
-            ilk_CombatVoice.reloadSettings();
-        } catch (IOException | JSONException e) {
-            Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "Combat Voice Loading Failed! " + e.getMessage());
-        }*/
     }
 
     @Override

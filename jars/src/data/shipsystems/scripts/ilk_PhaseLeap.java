@@ -7,8 +7,6 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import java.awt.Color;
-import org.dark.shaders.distortion.DistortionShader;
-import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
 import org.lazywizard.lazylib.CollisionUtils;
@@ -22,7 +20,7 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
     //balance constants
     private static final float LEAP_DISTANCE = 600f;
     private static final float FAIL_DISTANCE = 400f;
-    private static final float IMPACT_DAMAGE = 700f;
+    private static final float IMPACT_DAMAGE = 500f;
     private static final DamageType IMPACT_DAMAGE_TYPE = DamageType.ENERGY;
 
     //visual constants
@@ -77,7 +75,7 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                 Vector2f endLoc = new Vector2f(endLocX, endLocY);
 
                 within = false;
-                //check to see if we end up inside anything... BECAUSE THAT WOULD BE BAD. 
+                //check to see if we end up inside anything... 
                 for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, LEAP_DISTANCE)) {
                     if (inRangeObject == ship) {
                         //don't do anything if its the ship activating the system
@@ -94,12 +92,12 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                     endLocY = startLocY + (float) FastTrig.cos(direction) * (LEAP_DISTANCE + FAIL_DISTANCE);
                     endLoc.set(endLocX, endLocY);
                 }
-
-                //teleport and face to target
+                
                 ship.getLocation().set(endLoc);
-
+                                
+                //teleport and face to target
                 ShipAPI target = ship.getShipTarget();
-                if (target != null) {
+                if ((target != null) && (!target.isHulk())) {
                     Vector2f difference = Vector2f.sub(target.getLocation(), endLoc, null);
                     double newDirection = Math.atan2(difference.getY(), difference.getX());
                     newDirection = Math.toDegrees(newDirection);
@@ -108,27 +106,15 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                     }
                     ship.setFacing((float) newDirection);
                 }
-
-                if (endLoc instanceof Vector2f) {
-                    RippleDistortion shockwave = new RippleDistortion();
-                    shockwave.setLocation(endLoc);
-                    shockwave.setIntensity(20f);
-                    shockwave.setLifetime(1f);
-                    shockwave.setSize(300f);
-                    shockwave.setFrameRate(90f);
-                    shockwave.setCurrentFrame(10);
-                    shockwave.fadeOutIntensity(1f);
-                    DistortionShader.addDistortion(shockwave);
-
-                    StandardLight light = new StandardLight();
-                    light.setLocation(endLoc);
-                    light.setColor(new Color(255, 121, 117, 255));
-                    light.setSize(500f);
-                    light.setIntensity(2f);
-                    light.fadeOut(0.5f);
-                    LightShader.addLight(light);
-                }
                 
+                StandardLight light = new StandardLight();
+                light.setLocation(ship.getLocation());
+                light.setColor(new Color(255, 121, 117, 255));
+                light.setSize(500f);
+                light.setIntensity(2f);
+                light.fadeOut(0.5f);
+                LightShader.addLight(light);
+
                 //find ship location after teleport
                 for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {
                     if (inRangeObject == ship) {
@@ -172,8 +158,6 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
     public StatusData getStatusData(int index, State state, float effectLevel) {
         if (index == 0) {
             return new StatusData("ripping through space", false);
-        } else if (index == 1) {
-            return new StatusData("weapons and shields disabled", false);
         }
         return null;
     }

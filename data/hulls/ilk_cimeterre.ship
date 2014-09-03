@@ -193,8 +193,8 @@
       "type": "BUILT_IN"
     },
     {
-      "angle": 45,
-      "arc": 235,
+      "angle": 21.250505,
+      "arc": 222.306366,
       "id": "WS0002",
       "locations": [
         6.5,
@@ -205,8 +205,8 @@
       "type": "UNIVERSAL"
     },
     {
-      "angle": -45,
-      "arc": 235,
+      "angle": -21.250505,
+      "arc": 222.306366,
       "id": "WS0003",
       "locations": [
         6.5,

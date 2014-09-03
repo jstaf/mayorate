@@ -1,5 +1,39 @@
 kazi - Mayorate mod changelog
 
+v0.7.1
+Giving credit where it's due, the overwhelming majority of the changes this patch are by Dark.Revenant. I made the material maps and the majority of the "phase leap" system. Most, if not all, balance and code changes are by Dark.Revenant.
+
+-Now compatible with LazyWizard's "Version checker" mod.
+-Nukes revamped to not be a complete game ender. Although they still retain a small amount of instant AOE (200 frag damage), the majority of the damage is now based on arrival of a blast "shockwave." The AI now understands that AOE damage exists and will shield itself appropriately.
+-Normal maps actually work now. My bad on the last update.
+-Added material maps for all ships. 
+-Added new "phase leap" ship system (mounted by the Cimeterre). I completely recreated the teleport code to make it so that this system teleports you in whichever direction you're facing, as opposed to direction you're traveling/where your mouse pointer is (how the vanilla teleports work). Anything you teleport through takes 500 energy damage. Very satisfying to use. 
+-Rasht background image quality increased (it was a little grainy before because I was trying to skimp on mod size).
+-All weapon sounds are now mono to better cooperate with the Starsector sound player. This should make everything quite a bit more immersive.
+-Massive code overhaul and jar-ification.
+-Weapon arcs cleaned up.
+-Decreased OP of Phoenix IIs to 4.
+-Laserhead ammo decreased to 20.
+-Graser PD flux per second increased to 100.
+-Light graser flux per second decreased to 126.
+-Belial PPC OP increased to 13, spread decreased.
+-Flux torpedo: moves faster, range lower, damage decreased.
+-Graser: DPS decreased to 733, OP reduced to 20, flux reduced to 210, range boosted to 700.
+-Light TPC (lilith main gun): increased flux/sec to 150.
+-Lilith: repair cost increased to 70, CR recovery/day increased to 10%. Default variant loses 3 capacitors. 
+-Cimeterre: supplies/day increased to 5, repair increased to 180 (from 80), default variant loses insulated engine assembly (HINT: SHOOT ITS ENGINES!!!!!!)
+-Foraker: supplies/day increased to 5, repair increased to 150
+-Safir/Safir B: supplies/day increased to 1.5/2, repair cost increased to 100/120, crew cost increased.
+-Del Azarchel: supplies/day increased to 10, repair cost increased to 500, CR recovery decreased to 3%/day
+-Jamaran: Increased the repair cost to 450 from 275.
+-Ravana: supplies/day increased to 18, repair cost increased to 1200.
+-Inanna wings now us 0.75/day
+-Raad wing: supplies/day decreased to 1.5, deployment cost increased to 7%
+-Angha wing: deployment cost increased to 6%, now targets frigates
+-Other changes I probably forgot to mention. 
+
+There is now a public Github repository at [url]https://github.com/kazi11/mayorate[/url]. Feel free to submit a pull request if you feel you have something clever to add. 
+
 v0.7
 -Added Foraker-class destroyer. The Foraker is a light carrier with enough ordanance to not be a complete bore to fly, but is very poor defensively. 
 -Added Safir-class freighter and conversion (destroyer escort). The Safir is quite an average shipping solution, but it still beats using Buffaloes, right? The conversion makes an okay missile support platform. Just don't try to actually take it into heavy combat. 

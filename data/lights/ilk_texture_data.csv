@@ -19,6 +19,9 @@ ilk_jamaran,ship,,1,material,shipMaterial,ilk_jamaran
 ilk_foraker,ship,,1,material,shipMaterial,ilk_foraker
 ilk_safir,ship,,1,material,shipMaterial,ilk_safir
 ilk_safir_converted,ship,,1,material,shipMaterial,ilk_safir_converted
+ilk_raad,ship,,1,material,shipMaterial,ilk_raad
+ilk_angha,ship,,1,material,shipMaterial,ilk_angha
+ilk_inanna,ship,,1,material,shipMaterial,ilk_inanna
 ,,,,,,
 ilk_graser,hardpoint,,1,normal,weaponNormal,ilk_graser
 ilk_graser_light,hardpoint,,1,normal,weaponNormal,ilk_graser_light

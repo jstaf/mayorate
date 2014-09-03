@@ -4,8 +4,7 @@
   "fluxVents": 7,
   "hullId": "ilk_cimeterre",
   "hullMods": [
-    "stabilizedshieldemitter",
-    "insulatedengine"
+    "stabilizedshieldemitter"
   ],
   "variantId": "ilk_cimeterre_strike",
   "weaponGroups": [

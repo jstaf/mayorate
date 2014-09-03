@@ -10,7 +10,7 @@ Laserhead LRM Launcher,ilk_laserhead,2,900,10000,,500,,75,10,12,20,,ENERGY,0,,0,
 Flux Torpedo,ilk_fluxtorp,3,15000,900,,2250,1000,2000,5,25,,,ENERGY,3250,,,8,,,5,15,10,30,,300,,,,,7715
 PPC,ilk_ppc,2,800,450,,45,,0,50,6,,,ENERGY,60,,,0.3,1,,0,10,1,10,,800,,,,,7716
 Graser PD,ilk_graser_pd,1,300,325,180,,,,100,6,,,ENERGY,,300,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7717
-Needler,ilk_needler,3,3000,800,,50,,,15,10,20,2,FRAGMENTATION,100,,,0.13,1,,10,40,2,20,,400,400,2,10,GUIDED_POOR,7719
+Needler,ilk_needler,3,3000,800,,50,,,15,10,20,2,FRAGMENTATION,100,,,0.13,1,,10,40,2,20,,400,400,2,10,"GUIDED_POOR, SYSTEM",7719
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Thermal Lance,ilk_thermal_lance,3,0,600,1100,,,,0,25,,,HIGH_EXPLOSIVE,,1000,,0.2,2,5,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7700
 Thermal Pulse Repeater,ilk_repeater,1,0,600,,150,,0,0,15,10,1,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7703

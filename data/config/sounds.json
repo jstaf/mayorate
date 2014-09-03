@@ -42,9 +42,9 @@
 	],
 
 	"ilk_impactor":[
-		{"file":"sounds/ilk/fx/impactor.wav","pitch":1,"volume":0.2},
-		{"file":"sounds/ilk/fx/impactor.wav","pitch":1.02,"volume":0.25},
-		{"file":"sounds/ilk/fx/impactor.wav","pitch":0.98,"volume":0.22},
+		{"file":"sounds/ilk/fx/impactor.ogg","pitch":1,"volume":0.2},
+		{"file":"sounds/ilk/fx/impactor.ogg","pitch":1.02,"volume":0.25},
+		{"file":"sounds/ilk/fx/impactor.ogg","pitch":0.98,"volume":0.22},
 	],
 
 	"ilk_nuke_launch":[
@@ -121,7 +121,6 @@
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1,"volume":0.10},
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":0.95,"volume":0.10},
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.05,"volume":0.10},
-		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":0.9,"volume":0.10},
 		{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.1,"volume":0.10},
 	],
 

@@ -42,6 +42,9 @@
 			"ilk_foraker":"graphics/ilk/materials/ilk_foraker_MAT.png",
 			"ilk_safir":"graphics/ilk/materials/ilk_safir_MAT.png",
 			"ilk_safir_converted":"graphics/ilk/materials/ilk_safirB_MAT.png",
+			"ilk_raad":"graphics/ilk/materials/ilk_raad_MAT.png",
+			"ilk_angha":"graphics/ilk/materials/ilk_angha_MAT.png",
+			"ilk_inanna":"graphics/ilk/materials/ilk_inanna_MAT.png",
 		}
 	},
 }
