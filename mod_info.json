@@ -2,9 +2,9 @@
   "id":"mayorate", # internal id
 	"name":"The Mayorate", # displayed to the player
 	"author":"kazi",
-	"version":"0.7.1",
-	"description":"<< Requires LazyLib AND ShaderLib >> Adds a new faction to the sector. The Mayorate is a smaller star nation in decline. Major shout out goes to DarkRevenant for the massive code and balance overhaul in this patch! (this patch would literally have never happened without him)",
-    "gameVersion":"0.6.2a",
+	"version":"0.7.2",
+	"description":"<< Requires LazyLib >> Adds a new faction to the sector. The Mayorate is a smaller star nation in decline. Now compatible with 0.65a!",
+    "gameVersion":"0.65a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
 	"jars": ["jars/Mayorate.jar"]
 }

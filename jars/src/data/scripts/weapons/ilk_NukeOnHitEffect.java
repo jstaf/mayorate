@@ -8,12 +8,12 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import data.scripts.util.ilk_AnamorphicFlare;
 import java.awt.Color;
-import org.dark.shaders.distortion.DistortionShader;
+//import org.dark.shaders.distortion.DistortionShader;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
-import org.dark.shaders.distortion.RippleDistortion;
-import org.dark.shaders.light.LightShader;
-import org.dark.shaders.light.StandardLight;
+//import org.dark.shaders.distortion.RippleDistortion;
+//import org.dark.shaders.light.LightShader;
+//import org.dark.shaders.light.StandardLight;
  
 
 public class ilk_NukeOnHitEffect implements OnHitEffectPlugin {
@@ -28,6 +28,7 @@ public class ilk_NukeOnHitEffect implements OnHitEffectPlugin {
         Global.getCombatEngine().addHitParticle(point, new Vector2f(), 400f, 1f, 2f, new Color(255, 255, 255, 200));
         Global.getCombatEngine().addHitParticle(point, new Vector2f(), 1000f, 1f, 2f, new Color(255, 121, 117, 255));
         
+        /* Commented out for now until shaderlib is 0.65a compatible.
         RippleDistortion shockwave = new RippleDistortion();
         shockwave.setLocation(point);
         shockwave.setIntensity(8f);
@@ -45,6 +46,7 @@ public class ilk_NukeOnHitEffect implements OnHitEffectPlugin {
         light.setIntensity(2f);
         light.fadeOut(0.5f);
         LightShader.addLight(light);
+                */
 
         Global.getSoundPlayer().playSound("ilk_nuke_detonate", 1.1f, 0.8f, point, new Vector2f());
         

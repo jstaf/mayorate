@@ -5,14 +5,10 @@
 			{"file":"ambient2.ogg","source":"sounds/ilk/music/"},
 			{"file":"StianStark-Starfarer-Exploration_Alpha.ogg","source":"sounds/music/music.bin"} 
 		],
-		"music_title":[
-			{"file":"ambient.ogg","source":"sounds/ilk/music/"}, 
-		],
+
 		"music_combat":[
-			#{"file":"battle1.ogg","source":"sounds/ilk/music/"},
 			{"file":"battle2.ogg","source":"sounds/ilk/music/"},
 			{"file":"battle3.ogg","source":"sounds/ilk/music/"},
-			#{"file":"battle5.ogg","source":"sounds/ilk/music/"},
 		],
 	},
 

@@ -1,10 +1,9 @@
 package data.missions.hegemony_sdf;
 
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
-import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
@@ -89,18 +88,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Add an asteroid field
         api.addAsteroidField(minX + width / 2f, minY + height / 2f, 0, 8000f, 20f, 70f, 100);
 
-        api.addPlugin(new Plugin());
+        api.addPlugin(new BaseEveryFrameCombatPlugin() {
+                        @Override
+			public void advance(float amount, List events) {
+			}
+                        @Override
+			public void init(CombatEngineAPI engine) {
+				engine.getContext().setStandoffRange(10000f);
+			}
+		});
     }
-
-    private final static class Plugin implements EveryFrameCombatPlugin {
-
-        @Override
-        public void init(CombatEngineAPI engine) {
-            engine.getContext().setStandoffRange(6000f);
-        }
-
-        @Override
-        public void advance(float amount, List<InputEventAPI> events) {
-        }
-    };
 }

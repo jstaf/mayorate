@@ -25,7 +25,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         // create the star and generate the hyperspace anchor for this system
-        PlanetAPI star = system.initStar("star_red_dwarf", 400f, -2200, -3500);
+        PlanetAPI star = system.initStar("rasht", "star_red_dwarf", 400f);
 
         system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
@@ -39,10 +39,28 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
          * 6. Orbit radius, pixels at default zoom
          * 7. Days it takes to complete an orbit. 1 day = 10 seconds.
          */
-        PlanetAPI ilk1 = system.addPlanet(star, "Ilkhanna", "ilk_ilkhanna", 180, 175, 3800, 200);
-        PlanetAPI ilk1_1 = system.addPlanet(ilk1, "Mun", "barren", 150, 80, 1200, 42);
-        PlanetAPI ilk2 = system.addPlanet(star, "Inir", "rocky_metallic", 330, 120, 1000, 30);
-        PlanetAPI ilk3 = system.addPlanet(star, "Sindral", "rocky_ice", 20, 75, 9500, 450);
+        PlanetAPI ilk1 = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 180, 175, 3800, 200);
+        ilk1.setCustomDescriptionId("planet_Ilkhanna");
+        ilk1.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
+        ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
+	ilk1.getSpec().setUseReverseLightForGlow(true);
+	ilk1.applySpecChanges();
+                
+        PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
+        ilk1_1.setCustomDescriptionId("planet_Mun");
+        
+        PlanetAPI ilk2 = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330, 120, 1000, 30);
+        ilk2.setCustomDescriptionId("planet_Inir");
+        
+        PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 9500, 450);
+        ilk3.setCustomDescriptionId("planet_Sindral");
+        
+        SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
+				 "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "comm_relay", // type of object, defined in custom_entities.json
+				 "mayorate"); // faction
+                //orbits ilkhanna
+                relay.setCircularOrbit( system.getEntityById("ilkhanna"), 150, 1600, 100);
 
         /*
          * addAsteroidBelt() parameters:
@@ -78,12 +96,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 6900, 110f);
 
-        ilk1.setCustomDescriptionId("planet_Ilkhanna");
-        ilk1_1.setCustomDescriptionId("planet_Mun");
-        ilk2.setCustomDescriptionId("planet_Inir");
-        ilk3.setCustomDescriptionId("planet_Sindral");
-
-        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("L2 Jump Point");
+        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna Jump Point");
         OrbitAPI orbit = Global.getFactory().createCircularOrbit(ilk1, 135, 600, 30);
         jumpPoint.setOrbit(orbit);
         jumpPoint.setRelatedPlanet(ilk1);
@@ -93,14 +106,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.autogenerateHyperspaceJumpPoints(true, true);
 
         //add stations and cargo
-        SectorEntityToken ilk_station = system.addOrbitalStation(ilk1, 45, 300, 50, "Port Authority", "mayorate");
+        SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Port Authority", "mayorate");
         initIlk_StationCargo(ilk_station);
 
-        SectorEntityToken ras_PirateStation = system.addOrbitalStation(ilk3, 180, 300, 30, "Freeport", "pirates");
-        ras_PirateStationCargo(ras_PirateStation);
+        //SectorEntityToken ras_PirateStation = system.addOrbitalStation(ilk3, 180, 300, 30, "Freeport", "pirates");
+        //ras_PirateStationCargo(ras_PirateStation);
 
         //spawns fleets
-        ilk_MayorateSpawnPoint mayorateSpawn = new ilk_MayorateSpawnPoint(sector, system, 2, 20, ilk1);
+        /*ilk_MayorateSpawnPoint mayorateSpawn = new ilk_MayorateSpawnPoint(sector, system, 2, 20, ilk1);
         system.addScript(mayorateSpawn);
         for (int i = 0; i < 3; i++) {
             mayorateSpawn.spawnFleet();
@@ -122,9 +135,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk_MayorateSupportFleetSpawnPoint mayorate_supply_fleet = new ilk_MayorateSupportFleetSpawnPoint(sector, hyper, 17, 1, hyper.createToken(-4000, -6500), ilk_station);
         system.addScript(mayorate_supply_fleet);
 
-        ilk_PiratePlunderFleetSpawnPoint ras_plunder_fleet = new ilk_PiratePlunderFleetSpawnPoint(sector, hyper, 20, 1, hyper.createToken(3000, -2000), ras_PirateStation);
-        system.addScript(ras_plunder_fleet);
-
+        //ilk_PiratePlunderFleetSpawnPoint ras_plunder_fleet = new ilk_PiratePlunderFleetSpawnPoint(sector, hyper, 20, 1, hyper.createToken(3000, -2000), ras_PirateStation);
+        //system.addScript(ras_plunder_fleet);
+*/
         //gives relationship advice
         FactionAPI mayorate = sector.getFaction("mayorate");
         mayorate.setRelationship("player", 0);
@@ -206,9 +219,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_jamaran_Hull"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_raad_wing"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_angha_wing"));
+        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_angha_wing"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_inanna_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_inanna_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "crig_Hull"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "crig_Hull"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ox_Hull"));
         cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ox_Hull"));

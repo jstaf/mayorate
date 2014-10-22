@@ -16,10 +16,10 @@ import java.awt.Color;
 import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
-import org.dark.shaders.distortion.DistortionShader;
+/*import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.light.LightShader;
-import org.dark.shaders.light.StandardLight;
+import org.dark.shaders.light.StandardLight;*/
 import org.lwjgl.util.vector.Vector2f;
 
 import org.lazywizard.lazylib.CollectionUtils;
@@ -96,6 +96,7 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
         Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 400f, 1f, 2f, new Color(255, 255, 255, 200));
         Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 1000f, 1f, 2f, new Color(255, 121, 117, 255));
         
+        /* Commented out for now until shaderlib is 0.65a compatible.
         RippleDistortion shockwave = new RippleDistortion();
         shockwave.setLocation(missile.getLocation());
         shockwave.setIntensity(8f);
@@ -113,6 +114,7 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
         light.setIntensity(2f);
         light.fadeOut(0.5f);
         LightShader.addLight(light);
+        */
 
         Global.getSoundPlayer().playSound("ilk_nuke_detonate", 1f, 1f, missile.getLocation(), new Vector2f());
         

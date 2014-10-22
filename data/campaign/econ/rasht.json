@@ -1,0 +1,42 @@
+{
+	"starSystem":"rasht",
+	"markets":[
+		{
+			"entities":["ilkhanna", "ilk_port"],
+			"faction":"mayorate",
+			"size":6,
+			"startingConditions":[
+				"headquarters",
+				"military_base",
+				"orbital_station",
+				"autofac_heavy_industry",
+				"ore_refining_complex",
+				"vice_demand",
+				"arid",
+				"population_6",
+			],
+		},
+	{
+		"entities":["inir"],
+		"faction":"tri_tachyon",
+		"size":6,
+		"startingConditions":[
+			"antimatter_fuel_production",
+			"antimatter_fuel_production",
+			"ore_complex",
+			"uninhabitable",
+			"population_4",
+		],
+	},
+	{
+		"entities":["sindral"],
+		"faction":"pirates",
+		"size":3,
+		"startingConditions":[
+			"organized_crime",
+			"free_market",
+			"ice",
+			"population_3",
+		],
+	},
+}

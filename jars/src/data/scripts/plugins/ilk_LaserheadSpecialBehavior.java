@@ -1,9 +1,10 @@
 package data.scripts.plugins;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
+import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import java.awt.Color;
 import java.util.HashSet;
@@ -12,7 +13,7 @@ import java.util.Set;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-public class ilk_LaserheadSpecialBehavior implements EveryFrameCombatPlugin {
+public class ilk_LaserheadSpecialBehavior extends BaseEveryFrameCombatPlugin {
 
     private static final String SOUND_ID = "ilk_laserhead_detonate";
 
@@ -25,7 +26,6 @@ public class ilk_LaserheadSpecialBehavior implements EveryFrameCombatPlugin {
 
     private CombatEngineAPI engine;
 
-    @Override
     public void advance(float amount, List<InputEventAPI> events) {
         if (engine.isPaused()) {
             return;
@@ -55,8 +55,15 @@ public class ilk_LaserheadSpecialBehavior implements EveryFrameCombatPlugin {
         }
     }
 
-    @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
+    }
+    
+    public void renderInUICoords(ViewportAPI viewport) {
+        //???
+    }
+    
+    public void renderInWorldCoords(ViewportAPI viewport) {
+        //???
     }
 }

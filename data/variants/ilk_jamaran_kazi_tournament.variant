@@ -1,0 +1,49 @@
+{
+    "displayName": "tournament",
+    "fluxCapacitors": 11,
+    "fluxVents": 10,
+    "hullId": "ilk_jamaran",
+    "hullMods": [
+        "stabilizedshieldemitter",
+        "targetingunit"
+    ],
+    "variantId": "ilk_jamaran_kazi_tournament",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "ilk_graser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "ilk_laserhead",
+                "WS0008": "ilk_laserhead"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ilk_graser_pd",
+                "WS0002": "ilk_graser_pd",
+                "WS0003": "ilk_graser_pd",
+                "WS0004": "ilk_graser_pd"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "heavyneedler",
+                "WS0006": "heavymauler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {}
+        }
+    ]
+}
