@@ -1,18 +1,14 @@
 package data.scripts.world.rasht;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OrbitAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CrewXPLevel;
-import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import java.awt.Color;
 
 public class ilk_RashtGen implements SectorGeneratorPlugin {
@@ -107,7 +103,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         //add stations and cargo
         SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Port Authority", "mayorate");
-        initIlk_StationCargo(ilk_station);
+        //initIlk_StationCargo(ilk_station);
 
         //SectorEntityToken ras_PirateStation = system.addOrbitalStation(ilk3, 180, 300, 30, "Freeport", "pirates");
         //ras_PirateStationCargo(ras_PirateStation);
@@ -139,156 +135,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         //system.addScript(ras_plunder_fleet);
 */
         //gives relationship advice
-        FactionAPI mayorate = sector.getFaction("mayorate");
-        mayorate.setRelationship("player", 0);
+        /*mayorate.setRelationship("player", 0);
         mayorate.setRelationship("tritachyon", 1);
         mayorate.setRelationship("hegemony", -1);
         mayorate.setRelationship("pirates", 0);
         mayorate.setRelationship("independent", 0);
 
         FactionAPI player = sector.getFaction("player");
-        player.setRelationship("pirates", 0);
-    }
-
-    //defines cargo for mayorate station
-    private void initIlk_StationCargo(SectorEntityToken station) {
-        CargoAPI cargo = station.getCargo();
-
-        //resources
-        cargo.addCrew(CrewXPLevel.REGULAR, 50);
-        cargo.addCrew(CrewXPLevel.GREEN, 500);
-        cargo.addMarines(100);
-        cargo.addSupplies(1300);
-        cargo.addFuel(1600);
-
-        //strike
-        cargo.addWeapons("bomb", 25);
-        cargo.addWeapons("reaper", 11);
-        cargo.addWeapons("typhoon", 4);
-        cargo.addWeapons("ilk_graser", 3);
-        cargo.addWeapons("ilk_graser_light", 10);
-        cargo.addWeapons("ilk_graser_pd", 30);
-        cargo.addWeapons("ilk_ppc", 7);
-
-        //Support
-        cargo.addWeapons("lightac", 25);
-        cargo.addWeapons("lightmg", 30);
-        cargo.addWeapons("lightneedler", 7);
-        cargo.addWeapons("annihilator", 10);
-        cargo.addWeapons("harpoon_single", 12); //medium
-        cargo.addWeapons("ilk_laserhead", 4);
-        cargo.addWeapons("ilk_nuke", 1);
-        cargo.addWeapons("ilk_nuke_large", 3);
-
-        //assault
-        cargo.addWeapons("ilk_fluxtorp", 1);
-        cargo.addWeapons("lightmortar", 20);
-        cargo.addWeapons("miningblaster", 2);
-        cargo.addWeapons("hephag", 3);
-        cargo.addWeapons("ilk_shotgun", 3);
-
-        //PD
-        cargo.addWeapons("flak", 2);
-        cargo.addWeapons("swarmer", 5);
-        cargo.addWeapons("lrpdlaser", 7);
-        cargo.addWeapons("pdlaser", 15);
-
-        cargo.addWeapons("annihilatorpod", 2); //medium
-        cargo.addWeapons("pilum", 2); //medium
-        cargo.addWeapons("mark9", 2); //large
-
-        cargo.addWeapons("sabot", 5);
-        cargo.addWeapons("ilk_windstalker", 5);
-        cargo.addWeapons("lightdualmg", 10);
-        cargo.addWeapons("heavyac", 10);
-        cargo.addWeapons("ilk_phoenix", 20);
-
-        //ships
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_lilith_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_lilith_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_lilith_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_lilith_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_safir_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_safir_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_safir_converted_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_foraker_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_cimeterre_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_del_azarchel_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_ravana_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_jamaran_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ilk_jamaran_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_raad_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_angha_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_angha_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_inanna_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "crig_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ox_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "ox_Hull"));
-    }
-
-    private void ras_PirateStationCargo(SectorEntityToken station) {
-        CargoAPI cargo = station.getCargo();
-
-        // cargo.addCrew(CrewXPLevel.ELITE, 25);
-        cargo.addCrew(CrewXPLevel.VETERAN, 50);
-        cargo.addCrew(CrewXPLevel.REGULAR, 100);
-        cargo.addCrew(CrewXPLevel.GREEN, 100);
-        cargo.addMarines(100);
-        cargo.addSupplies(1000);
-        cargo.addFuel(100);
-
-        //strike
-        cargo.addWeapons("bomb", 15);
-        cargo.addWeapons("typhoon", 5);
-
-        //PD
-        cargo.addWeapons("clusterbomb", 10);
-        cargo.addWeapons("flak", 10);
-        cargo.addWeapons("irpulse", 10);
-        cargo.addWeapons("swarmer", 10);
-
-        //support
-        cargo.addWeapons("fragbomb", 10);
-        cargo.addWeapons("heatseeker", 5);
-        cargo.addWeapons("harpoon", 5);
-
-        cargo.addWeapons("sabot", 5);
-        cargo.addWeapons("annihilator", 5);
-        cargo.addWeapons("lightdualmg", 10);
-        cargo.addWeapons("lightdualac", 10);
-        cargo.addWeapons("lightneedler", 10);
-        cargo.addWeapons("heavymg", 10);
-        cargo.addWeapons("heavymauler", 5);
-        cargo.addWeapons("salamanderpod", 5);
-
-        cargo.addWeapons("hveldriver", 5);
-
-        //assault
-        cargo.addWeapons("lightag", 10);
-        cargo.addWeapons("chaingun", 5);
-
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "wolf_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "broadsword_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "broadsword_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "piranha_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "piranha_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "talon_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "talon_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "thunder_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "thunder_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "gladius_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "warthog_wing"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "warthog_wing"));
-
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "buffalo2_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "buffalo2_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "condor_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "tarsus_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "tarsus_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "gemini_Hull"));
-
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "venture_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "dominator_Hull"));
-        cargo.getMothballedShips().addFleetMember(Global.getFactory().createFleetMember(FleetMemberType.SHIP, "conquest_Hull"));
+        player.setRelationship("pirates", 0);*/
+        
     }
 }

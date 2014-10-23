@@ -1,5 +1,6 @@
 package data.scripts.plugins;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
@@ -20,9 +21,15 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
         SHOTGUNPROJ_IDS.add("ilk_shotgun_shot");
     }
 
-    private CombatEngineAPI engine;
 
+    @Override
+    public void init(CombatEngineAPI engine) {
+    }
+    
+    @Override
     public void advance(float amount, List<InputEventAPI> events) {
+        CombatEngineAPI engine = Global.getCombatEngine();
+        
         if (engine.isPaused()) {
             return;
         }
@@ -45,14 +52,14 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
         }
     }
 
-    public void init(CombatEngineAPI engine) {
-        this.engine = engine;
-    }
+
     
+    @Override
     public void renderInUICoords(ViewportAPI viewport) {
         //???
     }
     
+    @Override
     public void renderInWorldCoords(ViewportAPI viewport) {
         //???
     }

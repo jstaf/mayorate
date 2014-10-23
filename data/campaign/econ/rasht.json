@@ -13,20 +13,20 @@
 				"ore_refining_complex",
 				"vice_demand",
 				"arid",
-				"population_6",
-			],
+				"population_6"
+			]
 		},
 	{
 		"entities":["inir"],
-		"faction":"tri_tachyon",
+		"faction":"mayorate",
 		"size":6,
 		"startingConditions":[
 			"antimatter_fuel_production",
 			"antimatter_fuel_production",
 			"ore_complex",
 			"uninhabitable",
-			"population_4",
-		],
+			"population_4"
+		]
 	},
 	{
 		"entities":["sindral"],
@@ -36,7 +36,7 @@
 			"organized_crime",
 			"free_market",
 			"ice",
-			"population_3",
-		],
-	},
+			"population_3"
+		]
+	}]
 }

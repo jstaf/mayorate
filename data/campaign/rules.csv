@@ -1,0 +1,19 @@
+id,trigger,conditions,script,text,options,notes
+,,,,,,
+# SHI fleet greeting lines,,,,,,
+greetingSHIFriendly,OpenCommLink,"$faction.id == mayorate
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions",“We've got your signal recognition looks good.  Looks like things are going well on your end $playerName.  Clear skies.”,,
+greetingSHIHostileWeaker,OpenCommLink,"$faction.id == mayorate
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""Whatever happens next, just know we won't forget it.""",cutCommLink:Cut the comm link,
+greetingSHIHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"The Shadowyards Security force $personRank meets your gaze levelly for a few moments, before simply nodding curtly in acknowledgement and signaling $hisOrHer crew to their stations.  The comms signal cuts out a moment later.",cutCommLink:Cut the comm link,
+greetingSHIHostileStronger,OpenCommLink,"$faction.id == mayorate
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""Surrender. Or don't. Either way is fine by me.""",cutCommLink:Cut the comm link,
+greetingSHINeutral,OpenCommLink,"$faction.id == mayorate
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Got you on scan, Captain and are monitoring you.  Keep your distance.""",,

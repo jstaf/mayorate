@@ -8,7 +8,7 @@ import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import data.scripts.weapons.ai.ilk_NukeAI;
-import data.scripts.world.rasht.ilk_RashtGen;
+import data.scripts.world.mayorateGen;
 import org.apache.log4j.Level;
 //import org.dark.shaders.light.LightData;
 //import org.dark.shaders.util.ShaderLib;
@@ -22,7 +22,7 @@ public class MayorateModPlugin extends BaseModPlugin {
             //Got Exerelin, so just Exerelin
         } catch (ClassNotFoundException ex) {
             // Exerelin not found so continue and run normal generation code
-            new ilk_RashtGen().generate(Global.getSector());
+            new mayorateGen().generate(Global.getSector());
         }
     }
 

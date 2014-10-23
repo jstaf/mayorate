@@ -1,5 +1,21 @@
 {
+	"version":2.0,
+	
+	"initialStepsToRun":500,
+	"maxExoticUtilityAtRange":14000,
+	"defaultConnectionMult":1,
+	"defaultConnectionFlat":1,
+	"defaultTariff":0.3,
+	
 	"starSystems":[
 		"rasht.json",
+		"askonia.json",
+		"corvus.json",
+		"valhalla.json",
+		"arcadia.json",
+		"magec.json",
+		"eos.json"
 	],
+	
+	"map":"../starmap.json"
 }

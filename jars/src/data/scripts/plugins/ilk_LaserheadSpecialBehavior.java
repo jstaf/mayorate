@@ -23,10 +23,15 @@ public class ilk_LaserheadSpecialBehavior extends BaseEveryFrameCombatPlugin {
         //add Projectile IDs here.
         LASERHEADPROJ_IDS.add("ilk_laserhead_shot");
     }
+ 
+    @Override
+    public void init(CombatEngineAPI engine) {
+    }
 
-    private CombatEngineAPI engine;
-
+    @Override
     public void advance(float amount, List<InputEventAPI> events) {
+        CombatEngineAPI engine = Global.getCombatEngine();
+        
         if (engine.isPaused()) {
             return;
         }
@@ -54,15 +59,13 @@ public class ilk_LaserheadSpecialBehavior extends BaseEveryFrameCombatPlugin {
             }
         }
     }
-
-    public void init(CombatEngineAPI engine) {
-        this.engine = engine;
-    }
     
+    @Override
     public void renderInUICoords(ViewportAPI viewport) {
         //???
     }
     
+    @Override
     public void renderInWorldCoords(ViewportAPI viewport) {
         //???
     }
