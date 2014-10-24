@@ -35,6 +35,8 @@
 		"faction":"pirates",
 		"size":3,
 		"startingConditions":[
+			"outpost",
+			"volatiles_complex",
 			"organized_crime",
 			"free_market",
 			"ice",

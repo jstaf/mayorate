@@ -14,8 +14,9 @@
         "FARSI": 1
     },
     "illegalCommodities": [
+		"hand_weapons,"
     ],
-    "internalComms": "tritachyon_internal",
+    "internalComms": "mayorate_internal",
     "names": {
         "modern": 1
     },

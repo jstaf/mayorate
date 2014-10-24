@@ -1,0 +1,11 @@
+{
+	"mayorate_internal":{
+		"name":"Mayorate Intelligence",
+		"logo":"graphics/icons/intel/secure_comms.png",
+		"icon":"graphics/icons/intel/secure_comms.png",
+		"image":"graphics/factions/player_flag.png",
+		"sound":"ui_channel_comm_secure",
+		"type":"Intelligence Report",
+		"shortType":"Intel",
+	}
+}
