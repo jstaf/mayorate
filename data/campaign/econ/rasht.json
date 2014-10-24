@@ -6,6 +6,7 @@
 			"faction":"mayorate",
 			"size":6,
 			"startingConditions":[
+				"indoctrination",
 				"headquarters",
 				"military_base",
 				"orbital_station",
@@ -21,6 +22,7 @@
 		"faction":"mayorate",
 		"size":6,
 		"startingConditions":[
+			"indoctrination",
 			"antimatter_fuel_production",
 			"antimatter_fuel_production",
 			"ore_complex",

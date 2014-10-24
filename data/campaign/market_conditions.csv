@@ -1,0 +1,4 @@
+name,id,script,desc,icon,order
+Indoctrination,indoctrination,data.scripts.economy.Indoctrination,"The minds of felons and dissidents are routinely suppressed with the aid of cybernetic shackles, their bodies used as shunts for higher intelligences to act through. 
+
+Increases market stability and industrial output. Those who do not survive the installation of shackles serve as a useful supply of harvested organs.",graphics/icons/markets/urbanized_polity.png,30

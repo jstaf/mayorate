@@ -37,15 +37,16 @@ public class mayorateGen implements SectorGeneratorPlugin {
 	FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
         
         FactionAPI mayorate = sector.getFaction("mayorate");
-        player.setRelationship(mayorate.getId(), 0);
+        
+        player.setRelationship(mayorate.getId(), RepLevel.COOPERATIVE);
         
         mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
         mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(pirates.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(diktat.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(church.getId(), RepLevel.INHOSPITABLE);
-        mayorate.setRelationship(kol.getId(), RepLevel.SUSPICIOUS);
-        mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
-        mayorate.setRelationship(independent.getId(), RepLevel.FAVORABLE);
+        mayorate.setRelationship(pirates.getId(), RepLevel.WELCOMING);
+        mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
+        mayorate.setRelationship(church.getId(), RepLevel.VENGEFUL);
+        mayorate.setRelationship(kol.getId(), RepLevel.NEUTRAL);
+        mayorate.setRelationship(tritachyon.getId(), RepLevel.COOPERATIVE);
+        mayorate.setRelationship(independent.getId(), RepLevel.SUSPICIOUS);
     }
 }

@@ -21,7 +21,6 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
         SHOTGUNPROJ_IDS.add("ilk_shotgun_shot");
     }
 
-
     @Override
     public void init(CombatEngineAPI engine) {
     }
@@ -51,8 +50,6 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
             }
         }
     }
-
-
     
     @Override
     public void renderInUICoords(ViewportAPI viewport) {
