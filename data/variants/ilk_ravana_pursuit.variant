@@ -1,10 +1,9 @@
 {
   "displayName": "Pursuit",
-  "fluxCapacitors": 25,
+  "fluxCapacitors": 40,
   "fluxVents": 16,
   "hullId": "ilk_ravana",
   "hullMods": [
-    "stabilizedshieldemitter",
     "insulatedengine"
   ],
   "variantId": "ilk_ravana_pursuit",

@@ -26,7 +26,7 @@
 						"contrailMinSeg":5, # min segment length, in pixels
 						"contrailMaxSpeedMult":0.5f,
 						"contrailAngularVelocityMult":0.5f,
-						"contrailColor":[51,45,41,70],
+						"contrailColor":[51,45,41,170],
 						"type":"SMOKE"
 					},
 				    "width":10.0,

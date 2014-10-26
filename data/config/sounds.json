@@ -7,13 +7,17 @@
 		],
  
 		"music_combat":[
-				{"file":"battle2.ogg","source":"sounds/ilk/music/"},
-				{"file":"battle3.ogg","source":"sounds/ilk/music/"}
+			{"file":"battle2.ogg","source":"sounds/ilk/music/"},
+			{"file":"battle3.ogg","source":"sounds/ilk/music/"}
 		]
 	},	
+	
+	"ilk_thermal_lance_short":[
+			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":0.55}
+	],
  
 	"ilk_thermal_lance_loop":[
-			{"file":"sounds/ilk/fx/lance_loop_new.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":0.55}
 	],
 	
 	"ilk_pulse_gun":[

@@ -10,8 +10,8 @@
 	"explosionColor":[255,174,82,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":100, # purely visual
 	"engineSpec":{"turnAcc":135,
-				  "turnRate":25,
-				  "acc":300,
+				  "turnRate":50,
+				  "acc":600,
 				  "dec":0},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-14, 0],
@@ -25,10 +25,10 @@
 						"contrailMinSeg":5, # min segment length, in pixels
 						"contrailMaxSpeedMult":0.5f,
 						"contrailAngularVelocityMult":0.5f,
-						"contrailColor":[51,45,41,70],
+						"contrailColor":[51,45,41,170],
 						"type":"SMOKE"
 					},
-				    "width":12.0,
+				    "width":8.0,
 				    "length":60.0,
 				    "angle":180.0}],
 }

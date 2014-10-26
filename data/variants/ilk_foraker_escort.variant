@@ -1,10 +1,9 @@
 {
   "displayName": "Escort",
   "fluxCapacitors": 7,
-  "fluxVents": 0,
+  "fluxVents": 6,
   "hullId": "ilk_foraker",
   "hullMods": [
-    "stabilizedshieldemitter"
   ],
   "variantId": "ilk_foraker_escort",
   "weaponGroups": [

@@ -1,10 +1,9 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 16,
+  "fluxCapacitors": 25,
   "fluxVents": 10,
   "hullId": "ilk_jamaran",
   "hullMods": [
-    "stabilizedshieldemitter",
     "ilk_SensorSuite"
   ],
   "variantId": "ilk_jamaran_support",

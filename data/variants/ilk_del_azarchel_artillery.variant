@@ -1,11 +1,10 @@
 {
   "displayName": "Artillery",
-  "fluxCapacitors": 9,
+  "fluxCapacitors": 8,
   "fluxVents": 10,
   "hullId": "ilk_del_azarchel",
   "hullMods": [
     "missleracks",
-    "stabilizedshieldemitter"
   ],
   "variantId": "ilk_del_azarchel_artillery",
   "weaponGroups": [

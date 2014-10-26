@@ -81,7 +81,6 @@
         },
         "combatLarge": {
             "ilk_del_azarchel_artillery": 10,
-            "ilk_del_azarchel_CS": 5,
             "ilk_jamaran_kazi_tournament": 5,
             "fallback": {
                 "combatMedium": 2

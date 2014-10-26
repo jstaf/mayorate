@@ -1,10 +1,9 @@
 {
     "displayName": "tournament",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 20,
     "fluxVents": 10,
     "hullId": "ilk_jamaran",
     "hullMods": [
-        "stabilizedshieldemitter",
         "targetingunit"
     ],
     "variantId": "ilk_jamaran_kazi_tournament",

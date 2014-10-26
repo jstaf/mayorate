@@ -1,10 +1,9 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 7,
+  "fluxCapacitors": 10,
   "fluxVents": 0,
   "hullId": "ilk_lilith",
   "hullMods": [
-    "stabilizedshieldemitter"
   ],
   "variantId": "ilk_lilith_assault",
   "weaponGroups": [

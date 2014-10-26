@@ -17,16 +17,16 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "ilk_ppc",
-        "WS0004": "ilk_ppc"
+        "WS0001": "ilk_phoenix",
+        "WS0002": "ilk_phoenix"
       }
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "ilk_phoenix",
-        "WS0002": "ilk_phoenix"
+        "WS0003": "ilk_ppc",
+        "WS0004": "ilk_ppc"
       }
     },
     {
