@@ -49,6 +49,9 @@
     -43.5,
     4.5
   ],
+  "builtInMods": [
+    "stabilizedshieldemitter"
+  ],
   "builtInWeapons": {
     "WS0004": "ilk_repeater"
   },

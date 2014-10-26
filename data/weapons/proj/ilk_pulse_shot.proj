@@ -1,0 +1,11 @@
+{
+	"id":"ilk_pulse_shot",
+	"specClass":"projectile",
+	"spawnType":"PLASMA",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"width":25.0,
+	"fadeTime":0.5,
+	"fringeColor":[188,239,84,200],
+	"coreColor":[214,234,84,255],
+}

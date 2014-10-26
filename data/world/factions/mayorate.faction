@@ -14,7 +14,7 @@
         "FARSI": 1
     },
     "illegalCommodities": [
-		"hand_weapons"
+        "hand_weapons"
     ],
     "internalComms": "mayorate_internal",
     "names": {
@@ -52,20 +52,20 @@
         },
         "escortSmall": {
             "ilk_lilith_kazi_tournament": 5,
-            "ilk_tiamta_assault": 10,
+            "ilk_tiamat_assault": 10,
             "fallback": {
                 "combatSmall": 1
             }
         },
         "escortMedium": {
             "ilk_cimeterre_strike": 5,
-            "ilk_safir_converted_support": 5
+            "ilk_safir_converted_support": 5,
             "fallback": {
                 "combatMedium": 1
             }
         },
         "combatSmall": {
-			"ilk_tiamat_assault":10,
+            "ilk_tiamat_assault": 10,
             "ilk_lilith_kazi_tournament": 6,
             "ilk_lilith_assault": 6,
             "fallback": {
@@ -223,5 +223,5 @@
             "suicidal": 1,
             "fearless": 1
         }
-    },
+    }
 }

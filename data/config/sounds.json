@@ -12,12 +12,12 @@
 		]
 	},	
  
-	"ilk_thermal_lance_short":[
-			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":0.55}
-	],
-
 	"ilk_thermal_lance_loop":[
-			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/lance_loop_new.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_pulse_gun":[
+			{"file":"sounds/ilk/fx/pulse_gun.ogg","pitch":1,"volume":0.35}
 	],
 
 	"ilk_phoenix_launch":[

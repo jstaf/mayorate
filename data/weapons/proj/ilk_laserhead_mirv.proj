@@ -15,7 +15,19 @@
 				  "dec":50},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-15, 0],
-				    "style":"ILK_ENGINE_SMALL",
+					"style":"CUSTOM",
+				    "styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,208,177,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailColor":[51,45,41,70],
+						"type":"SMOKE"
+					},
 				    "width":10.0,
 				    "length":50.0,
 				    "angle":180.0}],

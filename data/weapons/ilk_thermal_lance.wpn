@@ -27,7 +27,5 @@
 					   "particleColor":[235,55,0,200]},		
 	"glowColor":[235,55,0,205],
 	"interruptibleBurst":true,
-	"fireSoundOne":"ilk_thermal_lance_short",
-	"fireSoundTwo":"ilk_thermal_lance_loop",
-	
+	"fireSoundTwo":"ilk_thermal_lance_loop"	
 }

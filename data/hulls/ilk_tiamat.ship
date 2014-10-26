@@ -44,6 +44,9 @@
   "builtInMods": [
     "stabilizedshieldemitter"
   ],
+  "builtInWeapons": {
+    "WS0007": "ilk_pulse_gun"
+  },
   "center": [
     56.5,
     72
@@ -51,49 +54,62 @@
   "collisionRadius": 99.076988,
   "engineSlots": [
     {
-      "angle": 170.706696,
-      "contrailSize": 12.81143,
-      "length": 25.874056,
+      "angle": 176.05481,
+      "contrailSize": 8,
+      "length": 21.5,
       "location": [
-        -56.5,
-        26
+        -51.5,
+        9.5
       ],
       "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 12.81143
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 8
     },
     {
-      "angle": -170.706696,
-      "contrailSize": 12.81143,
-      "length": 25.874056,
+      "angle": -176.05481,
+      "contrailSize": 8,
+      "length": 21.5,
       "location": [
-        -56.5,
-        -26
+        -51.5,
+        -9.5
       ],
-      "style": "ILK_ENGINE",
-      "width": 12.81143
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 8
     },
     {
       "angle": 180,
-      "contrailSize": 15,
-      "length": 53.5,
+      "contrailSize": 17,
+      "length": 47.5,
       "location": [
-        -53.5,
-        7
+        -54,
+        -0
       ],
-      "style": "ILK_ENGINE",
-      "width": 15
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 17
     },
     {
-      "angle": -180,
-      "contrailSize": 15,
-      "length": 53.5,
+      "angle": 160.709961,
+      "contrailSize": 6.992136,
+      "length": 20.353807,
       "location": [
-        -53.5,
-        -7
+        -56,
+        26
       ],
       "style": "ILK_ENGINE",
-      "width": 15
+      "width": 6.992136
+    },
+    {
+      "angle": -160.709961,
+      "contrailSize": 6.992136,
+      "length": 20.353807,
+      "location": [
+        -56,
+        -26
+      ],
+      "style": "ILK_ENGINE",
+      "width": 6.992136
     }
   ],
   "height": 150,
@@ -191,7 +207,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "ENERGY"
+      "type": "BUILT_IN"
     }
   ],
   "width": 113

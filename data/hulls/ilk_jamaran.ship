@@ -81,6 +81,9 @@
     -120,
     2.5
   ],
+  "builtInMods": [
+    "stabilizedshieldemitter"
+  ],
   "center": [
     87,
     168

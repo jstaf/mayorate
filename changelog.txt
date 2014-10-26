@@ -9,6 +9,8 @@ v0.8
 -Added the "Indoctrination" market condition and custom art. Mayorate planets really need it to stay functional while being friendly with the pirates (otherwise it's food shortage/trade disruption ALL THE TIME). 
 -Removed anamorphic flare effect on nukes. I was never super happy with it.
 -Added flag/crest. Although I'm not super in love with it, this is the flag until I redo it again.
+-All ships now have the Stabilized Shields hullmod built-in.
+-PPC flux cost, cooldown, and damage decreased.
 -Graser PD range increased.
 -Lilith's weapon arcs adjusted to give it better PD capabilities.
 -Lilith main gun range increased to 650.
