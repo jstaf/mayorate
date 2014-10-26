@@ -1,0 +1,198 @@
+{
+  "bounds": [
+    -52.5,
+    -11,
+    -66.5,
+    -16.5,
+    -66.5,
+    -22,
+    -19.5,
+    -45,
+    -6,
+    -27.5,
+    19.5,
+    -25.5,
+    30,
+    -16,
+    60,
+    -11,
+    61,
+    -4.5,
+    68,
+    -3.5,
+    68,
+    3.5,
+    61,
+    4.5,
+    60,
+    11,
+    30,
+    16,
+    19.5,
+    25.5,
+    -6,
+    27.5,
+    -19.5,
+    45,
+    -66.5,
+    22,
+    -66.5,
+    16.5,
+    -52.5,
+    11
+  ],
+  "builtInMods": [
+    "stabilizedshieldemitter"
+  ],
+  "center": [
+    56.5,
+    72
+  ],
+  "collisionRadius": 99.076988,
+  "engineSlots": [
+    {
+      "angle": 170.706696,
+      "contrailSize": 12.81143,
+      "length": 25.874056,
+      "location": [
+        -56.5,
+        26
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 12.81143
+    },
+    {
+      "angle": -170.706696,
+      "contrailSize": 12.81143,
+      "length": 25.874056,
+      "location": [
+        -56.5,
+        -26
+      ],
+      "style": "ILK_ENGINE",
+      "width": 12.81143
+    },
+    {
+      "angle": 180,
+      "contrailSize": 15,
+      "length": 53.5,
+      "location": [
+        -53.5,
+        7
+      ],
+      "style": "ILK_ENGINE",
+      "width": 15
+    },
+    {
+      "angle": -180,
+      "contrailSize": 15,
+      "length": 53.5,
+      "location": [
+        -53.5,
+        -7
+      ],
+      "style": "ILK_ENGINE",
+      "width": 15
+    }
+  ],
+  "height": 150,
+  "hullId": "ilk_tiamat",
+  "hullName": "Tiamat",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 84.118965,
+  "spriteName": "graphics/ilk/ships/tiamat_sprite10.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 13.419674,
+      "id": "WS0001",
+      "locations": [
+        -26.5,
+        30.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 13.419674,
+      "id": "WS0002",
+      "locations": [
+        -26.5,
+        -30.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 40.601295,
+      "arc": 237.685318,
+      "id": "WS0003",
+      "locations": [
+        1,
+        19.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": -40.601295,
+      "arc": 237.685318,
+      "id": "WS0004",
+      "locations": [
+        1,
+        -19.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": 180,
+      "arc": 249.984039,
+      "id": "WS0005",
+      "locations": [
+        -27,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS0006",
+      "locations": [
+        -8,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0007",
+      "locations": [
+        38.5,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 113
+}

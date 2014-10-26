@@ -8,13 +8,13 @@
     ],
     "displayName": "Mayorate",
     "displayNameWithArticle": "the Mayorate",
-    "logo": "graphics/factions/persean_league.png",
+    "logo": "graphics/ilk/factions/mayorate_flag.png",
     "shipNamePrefix": "MNS",
     "shipNameSources": {
         "FARSI": 1
     },
     "illegalCommodities": [
-		"hand_weapons,"
+		"hand_weapons"
     ],
     "internalComms": "mayorate_internal",
     "names": {
@@ -51,27 +51,23 @@
             }
         },
         "escortSmall": {
-            "ilk_lilith_kazi_tournament": 10,
-            "ilk_lilith_assault": 2,
+            "ilk_lilith_kazi_tournament": 5,
+            "ilk_tiamta_assault": 10,
             "fallback": {
                 "combatSmall": 1
             }
         },
         "escortMedium": {
-            "enforcer_Assault": 10,
-            "enforcer_Balanced": 10,
-            "enforcer_Outdated": 10,
-            "enforcer_CS": 10,
-            "hammerhead_Balanced": 10,
-            "enforcer_Elite": 10,
-            "hammerhead_Elite": 10,
+            "ilk_cimeterre_strike": 5,
+            "ilk_safir_converted_support": 5
             "fallback": {
                 "combatMedium": 1
             }
         },
         "combatSmall": {
-            "ilk_lilith_kazi_tournament": 10,
-            "ilk_lilith_assault": 10,
+			"ilk_tiamat_assault":10,
+            "ilk_lilith_kazi_tournament": 6,
+            "ilk_lilith_assault": 6,
             "fallback": {
                 "escortSmall": 1
             }

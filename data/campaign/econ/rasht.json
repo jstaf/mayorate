@@ -20,10 +20,9 @@
 	{
 		"entities":["inir"],
 		"faction":"mayorate",
-		"size":6,
+		"size":3,
 		"startingConditions":[
 			"indoctrination",
-			"antimatter_fuel_production",
 			"antimatter_fuel_production",
 			"ore_complex",
 			"uninhabitable",
@@ -33,7 +32,7 @@
 	{
 		"entities":["sindral"],
 		"faction":"pirates",
-		"size":3,
+		"size":4,
 		"startingConditions":[
 			"outpost",
 			"volatiles_complex",
@@ -41,6 +40,19 @@
 			"free_market",
 			"ice",
 			"population_3"
+		]
+	},
+	{
+		"entities":["iolanthe"],
+		"faction":"luddic_church",
+		"size":3,
+		"startingConditions":[
+			"military_base",
+			"large_refugee_population",
+			"luddic_majority",
+			"organics_complex",
+			"uninhabitable",
+			"population_4"
 		]
 	}]
 }

@@ -1,5 +1,21 @@
 kazi - Mayorate mod changelog
 
+v0.8
+-Added compatibility for 0.65a, which was a HUGE amount of effort to get working. Requires the latest versions of ShaderLib (0.9 Beta) and LazyLib (2.0), so make sure you have those!
+-Added the Tiamat Destroyer Escort. It's a bit slow for a frigate, but much more tanky. Use it to really put the hurt on other frigates or escort your larger ships.
+-Added Iolanthe, a new planet/market controlled by the Luddic Church. You can beat up on them to make the Mayorate/Pirates like you more. Or vice versa.
+-Reshuffled the rest of the planets a bit.
+-Lore rewritten. Not a carbon-copy of the Hegemony anymore!
+-Added the "Indoctrination" market condition and custom art. Mayorate planets really need it to stay functional while being friendly with the pirates (otherwise it's food shortage/trade disruption ALL THE TIME). 
+-Removed anamorphic flare effect on nukes. I was never super happy with it.
+-Added flag/crest. Although I'm not super in love with it, this is the flag until I redo it again.
+-Graser PD range increased.
+-Lilith's weapon arcs adjusted to give it better PD capabilities.
+-Lilith main gun range increased to 650.
+-Graser damage increased 20%.
+-Laserhead explosion range decreased, damage increased.
+-Tornado AM ammo increased to 5/10 depending on mount size.
+
 v0.7.1
 Giving credit where it's due, the overwhelming majority of the changes this patch are by Dark.Revenant. I made the material maps and the majority of the "phase leap" system. Most, if not all, balance and code changes are by Dark.Revenant.
 

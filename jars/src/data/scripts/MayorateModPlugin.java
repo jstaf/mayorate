@@ -10,9 +10,9 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import data.scripts.weapons.ai.ilk_NukeAI;
 import data.scripts.world.mayorateGen;
 import org.apache.log4j.Level;
-//import org.dark.shaders.light.LightData;
-//import org.dark.shaders.util.ShaderLib;
-//import org.dark.shaders.util.TextureData;
+import org.dark.shaders.light.LightData;
+import org.dark.shaders.util.ShaderLib;
+import org.dark.shaders.util.TextureData;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
@@ -30,11 +30,9 @@ public class MayorateModPlugin extends BaseModPlugin {
     public void onApplicationLoad() {
         Global.getLogger(MayorateModPlugin.class).setLevel(Level.ERROR);
         
-        /* Commented out for now until shaderlib is compatible
         ShaderLib.init();
         LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
         TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
-                */
     }
 
     @Override

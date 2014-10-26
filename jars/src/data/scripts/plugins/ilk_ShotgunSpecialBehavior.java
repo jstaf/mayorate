@@ -44,7 +44,7 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                     randomVel.x += vel.x;
                     randomVel.y += vel.y;
                     //spec + "_clone" means is, if its got the same name in its name (except the "_clone" part) then it must be that weapon.
-                    engine.spawnProjectile(proj.getSource(), null, spec + "_clone", loc, proj.getFacing(), randomVel);
+                    engine.spawnProjectile(proj.getSource(), proj.getWeapon(), spec + "_clone", loc, proj.getFacing(), randomVel);
                 }
                 engine.removeEntity(proj);
             }

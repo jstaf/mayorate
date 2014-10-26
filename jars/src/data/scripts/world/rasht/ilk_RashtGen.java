@@ -41,22 +41,29 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
 	ilk1.getSpec().setUseReverseLightForGlow(true);
 	ilk1.applySpecChanges();
+        ilk1.setInteractionImage("illustrations", "industrial_megafacility");
                 
         PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
         ilk1_1.setCustomDescriptionId("planet_Mun");
-        
+                
         PlanetAPI ilk2 = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330, 120, 1000, 30);
         ilk2.setCustomDescriptionId("planet_Inir");
+        ilk2.setInteractionImage("illustrations", "hound_hangar");
         
-        PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 9500, 450);
+        PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 10500, 250);
         ilk3.setCustomDescriptionId("planet_Sindral");
+        ilk3.setInteractionImage("illustrations", "pirate_station");
+        
+        PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 330, 200, 8500, 150);
+        ilk4.setCustomDescriptionId("planet_Iolanthe");
+        ilk4.setInteractionImage("illustrations", "space_bar");
         
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
 				 "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "mayorate"); // faction
                 //orbits ilkhanna
-                relay.setCircularOrbit( system.getEntityById("ilkhanna"), 150, 1600, 100);
+                relay.setCircularOrbit( system.getEntityById("ilkhanna"), 150, 1450, 100);
 
         /*
          * addAsteroidBelt() parameters:
@@ -103,46 +110,5 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         //add stations and cargo
         SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Port Authority", "mayorate");
-        //initIlk_StationCargo(ilk_station);
-
-        //SectorEntityToken ras_PirateStation = system.addOrbitalStation(ilk3, 180, 300, 30, "Freeport", "pirates");
-        //ras_PirateStationCargo(ras_PirateStation);
-
-        //spawns fleets
-        /*ilk_MayorateSpawnPoint mayorateSpawn = new ilk_MayorateSpawnPoint(sector, system, 2, 20, ilk1);
-        system.addScript(mayorateSpawn);
-        for (int i = 0; i < 3; i++) {
-            mayorateSpawn.spawnFleet();
-        }
-
-        ilk_RashtPirateSpawnPoint ras_PirateSpawn = new ilk_RashtPirateSpawnPoint(sector, system, 5, 20, ilk3);
-        system.addScript(ras_PirateSpawn);
-        for (int i = 0; i < 3; i++) {
-            ras_PirateSpawn.spawnFleet();
-        }
-
-        SectorEntityToken hegemony_raider_token = system.createToken(8000, 9000);
-        ilk_RashtHegemonySpawnPoint ras_HegemonySpawn = new ilk_RashtHegemonySpawnPoint(sector, system, 4, 10, hegemony_raider_token);
-        system.addScript(ras_HegemonySpawn);
-        for (int i = 0; i < 4; i++) {
-            ras_HegemonySpawn.spawnFleet();
-        }
-
-        ilk_MayorateSupportFleetSpawnPoint mayorate_supply_fleet = new ilk_MayorateSupportFleetSpawnPoint(sector, hyper, 17, 1, hyper.createToken(-4000, -6500), ilk_station);
-        system.addScript(mayorate_supply_fleet);
-
-        //ilk_PiratePlunderFleetSpawnPoint ras_plunder_fleet = new ilk_PiratePlunderFleetSpawnPoint(sector, hyper, 20, 1, hyper.createToken(3000, -2000), ras_PirateStation);
-        //system.addScript(ras_plunder_fleet);
-*/
-        //gives relationship advice
-        /*mayorate.setRelationship("player", 0);
-        mayorate.setRelationship("tritachyon", 1);
-        mayorate.setRelationship("hegemony", -1);
-        mayorate.setRelationship("pirates", 0);
-        mayorate.setRelationship("independent", 0);
-
-        FactionAPI player = sector.getFaction("player");
-        player.setRelationship("pirates", 0);*/
-        
     }
 }

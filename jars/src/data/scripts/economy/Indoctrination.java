@@ -7,7 +7,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 public class Indoctrination extends BaseMarketConditionPlugin {
     
     public static final float INDOCTRINATION_PRODUCTION_MULT = 1.5f;
-    public static final float STABILITY_INDOCTRINATION = 1f;
+    public static final float STABILITY_INDOCTRINATION = 2f;
     public static final float INDOCTRINATION_ORGANS_MULT = 5f;
     
     private static final String[] tags = new String[] {

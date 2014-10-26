@@ -7,8 +7,8 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import java.awt.Color;
-//import org.dark.shaders.light.LightShader;
-//import org.dark.shaders.light.StandardLight;
+import org.dark.shaders.light.LightShader;
+import org.dark.shaders.light.StandardLight;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
@@ -107,7 +107,6 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                     ship.setFacing((float) newDirection);
                 }
                 
-                /* Commented out for now until shaderlib is 0.65a compatible.
                 StandardLight light = new StandardLight();
                 light.setLocation(ship.getLocation());
                 light.setColor(new Color(255, 121, 117, 255));
@@ -115,7 +114,6 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                 light.setIntensity(2f);
                 light.fadeOut(0.5f);
                 LightShader.addLight(light);
-                        */
 
                 //find ship location after teleport
                 for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {

@@ -134,7 +134,7 @@
   "weaponSlots": [
     {
       "angle": 90,
-      "arc": 235,
+      "arc": 360,
       "id": "WS0001",
       "locations": [
         -9,
@@ -146,7 +146,7 @@
     },
     {
       "angle": -90,
-      "arc": 235,
+      "arc": 360,
       "id": "WS0002",
       "locations": [
         -9,
@@ -158,7 +158,7 @@
     },
     {
       "angle": 0,
-      "arc": 360,
+      "arc": 270,
       "id": "WS0003",
       "locations": [
         24.5,

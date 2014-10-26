@@ -40,7 +40,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_safir_standard", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
+        api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
+        api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
 
         api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);

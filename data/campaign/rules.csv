@@ -1,18 +1,18 @@
 id,trigger,conditions,script,text,options,notes
 #Mayorate fleet interaction dialogue,,,,,,
-greetingSHIFriendly,OpenCommLink,"$faction.id == mayorate
+greetingIlkFriendly,OpenCommLink,"$faction.id == mayorate
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""placeholder""",,
-greetingSHIHostileWeaker,OpenCommLink,"$faction.id == mayorate
+FireAll PopulateOptions","""Heard about that skirmish near Eos. Glad you're on our side.""",,
+greetingIlkHostileWeaker,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""placeholder""",cutCommLink:Cut the comm link,
-greetingSHIHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""<< The Mayorate commander does not respond to your hail. >>""",cutCommLink:Cut the comm link,
+greetingIlkHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
-$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,<< The Mayorate commander does not respond to your hail. >>,cutCommLink:Cut the comm link,
-greetingSHIHostileStronger,OpenCommLink,"$faction.id == mayorate
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""",cutCommLink:Cut the comm link,
+greetingIlkHostileStronger,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""We know what you've done. I'm going to enjoy watching you die.""",cutCommLink:Cut the comm link,
-greetingSHINeutral,OpenCommLink,"$faction.id == mayorate
+greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Although it's good to see someone else out here, I get the feeling that you didn't just stop by to chat.""",,
+FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",,

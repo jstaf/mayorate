@@ -1,16 +1,17 @@
 name,id,designation,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,supplies/day,cr %/day,CR to deploy,peak CR sec,CR loss/sec,c,c/fp,c/l,hints,number
-Inanna,ilk_inanna,Fighter,,,400,100,500,,100,0,150,200,100,120,240,25,NONE,,0,0,0,,,0,0,,,,,6,,0.75,4,3,,,,,,,7606
-Raad,ilk_raad,Fighter,,,750,125,1500,,300,0,125,120,50,90,180,60,NONE,,0,0,0,,,2,2,,,,,6,,1.5,3,7,,,,,,,7611
-Angha,ilk_angha,Bomber,,,600,100,250,,40,0,180,150,100,100,200,30,NONE,,0,0,0,,,1,1,,,,,7,,1,3,6,,,,,,,7612
+Inanna,ilk_inanna,Fighter,,,400,100,500,,100,0,150,200,100,120,240,25,NONE,,0,0,0,,,0,0,,,,,6,,0.75,4,3,,,,,,,7601
+Raad,ilk_raad,Fighter,,,750,125,1500,,300,0,125,120,50,90,180,60,NONE,,0,0,0,,,2,2,,,,,6,,1.5,3,7,,,,,,,7602
+Angha,ilk_angha,Bomber,,,600,100,250,,40,0,180,150,100,100,200,30,NONE,,0,0,0,,,1,1,,,,,7,,1,3,6,,,,,,,7603
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Lilith,ilk_lilith,Frigate,highenergyfocus,6,1700,200,2100,1875,150,35,140,80,60,45,100,250,OMNI,,100,0.8,0.7,,,10,30,60,50,1,50,6,9000,2,10,15,,,,,,,7602
+Lilith,ilk_lilith,Frigate,highenergyfocus,6,1700,200,2100,1875,150,35,140,80,60,45,100,150,OMNI,,100,0.8,0.7,,,10,30,60,50,1,50,6,15000,2,10,15,180,0.25,,,,,7604
+Tiamat,ilk_tiamat,Destroyer Escort,ilk_phase_leap,7,2500,300,2500,,100,40,110,120,100,60,120,250,FRONT,,220,0.8,0.7,,,25,40,50,40,1,40,5,20000,2.5,8,20,,,,,,,7605
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Cimeterre,ilk_cimeterre,Destroyer,ilk_phase_leap,9,4500,550,6000,4167,250,60,70,50,30,30,45,400,OMNI,,120,0.8,0.6,,,40,80,100,120,2.5,48,4,20000,5,5,12,,,,,,,7607
-Foraker,ilk_foraker,Carrier,flarelauncher,10,4000,500,3500,3333,200,55,50,35,20,20,25,400,OMNI,,100,0.7,0.8,,,50,110,120,110,2,55,4,13500,5,4,10,,,,,,CARRIER,7609
-Safir,ilk_safir,Freighter,flarelauncher,3,3500,150,1500,1167,70,30,75,25,20,15,7,400,OMNI,,120,0.5,0.8,,,20,30,300,100,2,50,4,7000,1.5,5,10,,,,,,CIVILIAN,7613
-Safir B,ilk_safir_converted,Destroyer Escort,flarelauncher,8,3500,175,3000,2500,150,60,75,40,20,20,10,400,OMNI,,120,0.5,0.8,,,25,40,120,90,2,45,4,8500,2,5,15,,,,,,,7614
+Cimeterre,ilk_cimeterre,Destroyer,ilk_phase_leap,9,4500,550,6000,4167,250,60,70,50,30,30,45,450,OMNI,,120,0.8,0.6,,,40,80,100,120,2.5,48,4,40000,5,5,12,,,,,,,7606
+Foraker,ilk_foraker,Carrier,flarelauncher,10,4000,500,3500,3333,200,55,50,35,20,20,25,500,OMNI,,100,0.7,0.8,,,50,110,120,110,2,55,4,27000,5,4,10,,,,,,CARRIER,7607
+Safir,ilk_safir,Freighter,flarelauncher,3,3500,150,1500,1167,70,30,75,25,20,15,7,350,OMNI,,120,0.5,0.8,,,20,30,300,100,2,50,4,14000,1.5,5,10,,,,,,CIVILIAN,7608
+Safir B,ilk_safir_converted,Destroyer Escort,flarelauncher_active,8,3500,175,3000,2500,150,60,75,40,20,20,10,350,OMNI,,120,0.5,0.8,,,25,40,120,90,2,45,4,17000,2,5,15,,,,,,,7609
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Del Azarchel,ilk_del_azarchel,Cruiser,fastmissileracks,17,8500,800,8000,10000,500,150,55,20,10,12,7,1800,FRONT,,220,1,0.7,,,120,190,160,220,6,37,3,38000,10,3,12,,,,,,,7601
-Jamaran,ilk_jamaran,Cruiser,drone_pd_x2,14,9000,1050,10000,9000,450,140,40,20,10,10,6,1700,OMNI,,100,0.8,0.7,,,175,275,450,300,5,60,4,30000,8,3,10,,,,,,,7608
+Del Azarchel,ilk_del_azarchel,Cruiser,fastmissileracks,17,8500,800,8000,10000,500,150,55,20,10,12,7,1800,FRONT,,220,1,0.7,,,120,190,160,220,6,37,3,76000,10,3,12,,,,,,,7610
+Jamaran,ilk_jamaran,Cruiser,drone_pd_x2,14,9000,1050,10000,9000,450,140,40,20,10,10,6,1700,OMNI,,100,0.8,0.7,,,175,275,450,300,5,60,4,60000,8,3,10,,,,,,,7611
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Ravana,ilk_ravana,Battlecruiser,maneuveringjets,25,11000,1200,17000,22500,900,250,50,20,15,8,7,2500,FRONT,,150,0.9,0.5,,,300,400,400,600,20,30,3,90000,18,2,15,,,,,,,7605
+Ravana,ilk_ravana,Battlecruiser,maneuveringjets,25,11000,1200,17000,22500,900,250,50,20,15,8,7,2500,FRONT,,150,0.9,0.5,,,300,400,400,600,20,30,3,180000,18,2,15,,,,,,,7612

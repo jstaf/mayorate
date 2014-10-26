@@ -20,7 +20,7 @@
 				    "length":50.0,
 				    "angle":180.0}],
 	"behaviorSpec":{"behavior":"MIRV",
-					"splitRange":200,
+					"splitRange":150,
 					"minTimeToSplit":1,
 					"numShots":1,
 					"damage":100,
