@@ -4,7 +4,7 @@
 	"spawnType":"PLASMA",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
-	"width":25.0,
+	"width":30.0,
 	"fadeTime":0.1,
 	"fringeColor":[217,21,3,200],
 	"coreColor":[245,27,84,255],

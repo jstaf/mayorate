@@ -4,10 +4,6 @@ import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
-import com.fs.starfarer.api.impl.campaign.CoreCampaignPluginImpl;
-import com.fs.starfarer.api.impl.campaign.CoreScript;
-import com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetManager;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import data.scripts.world.rasht.ilk_RashtGen;
 
@@ -19,10 +15,6 @@ public class mayorateGen implements SectorGeneratorPlugin {
         
         new ilk_RashtGen().generate(sector);
         
-        sector.registerPlugin(new CoreCampaignPluginImpl());
-	sector.addScript(new CoreScript());
-	sector.addScript(new CoreEventProbabilityManager());
-	sector.addScript(new EconomyFleetManager());
     }
     
     public static void initFactionRelationships(SectorAPI sector) {    
@@ -38,7 +30,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         
         FactionAPI mayorate = sector.getFaction("mayorate");
         
-        player.setRelationship(mayorate.getId(), RepLevel.SUSPICIOUS);
+        player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
         
         mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
         mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);

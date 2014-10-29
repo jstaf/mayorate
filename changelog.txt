@@ -11,9 +11,10 @@ v0.8
 -Added flag/crest. Although I'm not super in love with it, this is the flag until I redo it again.
 -All ships now have the Stabilized Shields hullmod built-in.
 -PPC flux cost, cooldown, and damage decreased.
+-Phoenix II rocket launcher damage/tracking/speed buffed. Think of it as a harpoon with worse tracking but more shots.
 -Graser PD range increased.
 -Lilith's weapon arcs adjusted to give it better PD capabilities.
--Lilith main gun range increased to 650.
+-Lilith's main gun range increased to 650.
 -Graser damage increased 20%.
 -Laserhead explosion range decreased, damage increased.
 -Tornado AM ammo increased to 5/10 depending on mount size.
