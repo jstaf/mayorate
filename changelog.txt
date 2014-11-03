@@ -1,5 +1,11 @@
 kazi - Mayorate mod changelog
 
+v0.8.1
+-The Mayorate no longer requires editing files to install. Just activate the mod and play.
+-Fixed an economy bug that was causing markets to be a bit more intense than they should have been.
+-Doubled Windstalker projectile health.
+-Increased Tiamat built-in weapon range by 100. 
+
 v0.8
 -Added compatibility for 0.65a, which was a HUGE amount of effort to get working. Requires the latest versions of ShaderLib (0.9 Beta) and LazyLib (2.0), so make sure you have those!
 -Added the Tiamat Destroyer Escort. It's a bit slow for a frigate, but much more tanky. Use it to really put the hurt on other frigates or escort your larger ships.
