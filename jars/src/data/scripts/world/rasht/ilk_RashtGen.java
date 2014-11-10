@@ -56,7 +56,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 
         PlanetAPI ilk2 = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330, 120, 1000, 30);
         ilk2.setCustomDescriptionId("planet_Inir");
-        ilk2.setInteractionImage("illustrations", "hound_hangar");
+        ilk2.setInteractionImage("illustrations", "inir_surface");
         
         PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 10500, 250);
         ilk3.setCustomDescriptionId("planet_Sindral");

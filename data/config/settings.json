@@ -1,6 +1,11 @@
 {
+	"graphics":{
+		"illustrations":{
+			"inir_surface":"graphics/ilk/illustrations/inir_surface.png"
+		}
+	},
 	"plugins":{
 		"ilk_LaserheadSpecialBehavior":"data.scripts.plugins.ilk_LaserheadSpecialBehavior",
-		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
+		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior"
 	}
 }
