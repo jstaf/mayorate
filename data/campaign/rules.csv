@@ -2,10 +2,10 @@ id,trigger,conditions,script,text,options,notes
 #Mayorate fleet interaction dialogue,,,,,,
 greetingIlkFriendly,OpenCommLink,"$faction.id == mayorate
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Heard about that skirmish near Eos. Glad you're on our side.""",,
+FireAll PopulateOptions","""Glad you're on our side.""",,
 greetingIlkHostileWeaker,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""<< The Mayorate commander does not respond to your hail. >>""",cutCommLink:Cut the comm link,
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,The Mayorate commander does not respond to your hail. ,cutCommLink:Cut the comm link,
 greetingIlkHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
@@ -16,3 +16,42 @@ $relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""We know what you'v
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",,
+,,,,,,
+#Mayorate market interaction dialogue,,,,,,
+flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == mayorate","AddText ""market dialog1"" textGrayColor
+AddText ""market dialog2"" textGrayColor",,,
+,,,,,,
+"# ""Heir to the Throne"" Mayorate mission 1",,,,,,
+HTTTm1,OpenInteractionDialog,"$repCheckResult > 0.5
+$market.id:ilkhanna == true",,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
+HTTTm2,DialogOptionSelected,,,“Greetings captain. I’m glad you were able to meet with me today. I was hoping you could assist me with a matter of some importance.”,0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
+HTTTm3,DialogOptionSelected,,,“They have offered me some amount discretion in this matter. You might say that I am having family troubles.”,"0:HTTT3:“And why is that?” 
+1:HTTT3:“Surely you didn’t invite me here to discuss family gossip…”",
+HTTTm4,DialogOptionSelected,,,"“My name is Yekaterina Ivanovna Sintasha, Mayorate citizen and rightful heir to the Grand Duchy of Opel. I was hoping you could assist with me with a matter of succession.”","0:HTTT4:“Rightful heir? I am beginning to see where this is going…”
+1:HTTT4:“So how does this affect me, exactly?”",
+HTTTm5,DialogOptionSelected,,,"“My father, the Duke of Opel, is dying. He won’t publicly admit it, but he has perhaps two months to live. I am the only remaining heir capable of maintaining order. And yet he steadfastly refuses to recognise me as his daughter.” <There is no small amount of anguish on her face as she speaks the last sentence.>","0:HTTT5-1:“Why not hold elections?”
+1:HTTT5-2:“Why would your father turn his back on his own daughter?”
+2:HTTT5.3:""Just tell me what I need to do.”",
+HTTTm5-1,DialogOptionSelected,,,"“Although I am ashamed to admit it, Opel is a weak nation. Our military is outnumbered and obsolete. Aside from limited exports of food and domestic goods, the planetary economy cannot support itself. We need a strong leader. More importantly, we need allies.”","0:HTTT5-1-1:“What do you intend to do?”
+1:HTTT5-1-1:""Besides replacing one despot with another, how do you plan to actually change anything?”",
+HTTTm5-1,DialogOptionSelected,,,"“As both a Mayorate citizen and the rightful heir to the throne, I have been offered a unique opportunity to save my world. I have a rather formidable fleet of Mayorate warships at my command. In addition to my military forces, the Mayorate has promised to modernize Opel’s industrial base and invest heavily into the local economy. In return, I answer to the authorities here and Opel becomes a Mayorate protectorate. I feel that this is a fair trade.","0:HTTT5-1-1-1:“Can you really make that decision for your people?""
+1:HTTT5-1-1-2:""Let's talk about something else.""",
+HTTTm5-1-1,DialogOptionSelected,,,“You do not know the planet as I do. This is our only option. You simply have to trust me when I say that the people of Opel are unable to provide the same level of stability and protection that I can.”,"0:HTTT5:""Let's talk about something else.""",
+HTTTm5-2,DialogOptionSelected,,,"“I am what you would call an alpha-level artificial intelligence. I am sentient, and am entirely capable of happiness and emotion. I am also a human being. My father refuses to see this.”","0:HTTT5-2:“So what’s his problem?”
+1:HTTT5-2-2:""Humanity and AI are two entirely separate things.”",
+HTTTm5-2-1,DialogOptionSelected,,,"“The process of uploading oneself at the highest resolution is a fully destructive scan. In order to read one’s mind, one must take it apart, imaging and recording neurons piece by painstaking piece.”","0:HTTT5-2-1:""So you killed yourself. To live forever. Or something like that.” ",
+HTTTm5-2-1-1,DialogOptionSelected,,,"“Although it pains me to admit it, the ducal family is rather… inbred. Due to the way that the genetics work out, my family is rather prone to developing a severe and untreatable form of pancreatic cancer. This is the same condition that is about to kill my father. As soon as I began to develop symptoms of the disease, I knew I had nothing to lose.”","0:HTTT5-2-2:""Humanity and AI are two entirely separate things.”
+1:HTTT5:“There are other things I wanted to discuss.”",
+HTTTm5-2-2,DialogOptionSelected,,,"“No, they are not. And you sound like a Luddite.”",0:HTTT5:“There are other things I wanted to discuss.”,
+HTTTm6,DialogOptionSelected,,,"“Well, we have two options: negotiate with my father or take the planet by force. Either should solidify my position politically.”","0:HTTT6-1:“How should I go about negotiating with your father?”
+1:HTTT6-2:“Tell me about the military option.”
+2:HTTT6-3:“Okay, I think I know what I need to do.”
+3:HTTT6-4:“I’m not sure I should get involved in this.”",
+HTTTm6-1,DialogOptionSelected,,,“He is old and stuck in his ways. You will need to convince him that I am truly his daughter and fit to rule. You should also mention the economic and military aid that only I am able to provide. Just don't mention my brother”,0:HTTT6-1-1:“Your brother?”,
+HTTTm6-1-1,DialogOptionSelected,,,"“A Path of Ludd terrorist. Completely lost his marbles. Even tried to kill me once. He currently rotting in a political prison on Inir. He’s alive and well, but I refuse to see him released under any circumstances. Did I already mention he’s a terrorist?”",0:HTTT6:“I see.”,
+HTTTm6-2,DialogOptionSelected,,,"“I have at my disposal a powerful fleet and several divisions of elite troops. If you can distract and pacify what passes for the ducal fleet, I should be able to wrest control of the planet from my infirm father.”","0:HTTT6-2-1:“So what ‘passes for the ducal fleet,’ exactly?""",
+HTTTm6-2-1,DialogOptionSelected,,,"“Although Opel no longer has enough ships to hold and police territory outside its immediate surroundings, you will have to contend with the family’s last heirloom: a true Domain Paragon. One of the last produced before the Collapse, it is much more lethal than others you may have encountered in the sector. The rest of the fleet has been frittered away in skirmishes and battles on the system’s frontier- should be nothing more than a couple frigates and destroyers.”",0:HTTT6:“Let’s discuss something else.”,
+HTTTm6-3,DialogOptionSelected,,,"“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the military invasion. I also can provide you with either military reinforcements or political concessions should you need them.”",0:HTTTend:Leave.,
+HTTTm6-4,DialogOptionSelected,,,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon. The Duke is not going to live forever.”",0:HTTTend:Leave.,
+HTTTmend,,$option == HTTTend,DismissDialog,,,
