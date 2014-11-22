@@ -142,6 +142,10 @@ marketAddOptionTradeShips,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE
 !$faction.isNeutralFaction","SetShortcut marketTradeShips ""F"" true",,1:marketTradeShips:Buy or sell ships,
+markettest,PopulateOptions,"$hasMarket
+$menuState == main
+$tradeMode != NONE
+!$faction.isNeutralFaction","SetShortcut marketTradeShips ""F"" true",,3:marketTradeShips:test test,
 marketAddOptionTradeRefit,PopulateOptions,"$hasMarket
 $menuState == main
 $tradeMode != NONE

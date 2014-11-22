@@ -1,7 +1,8 @@
 {
 	"graphics":{
 		"illustrations":{
-			"inir_surface":"graphics/ilk/illustrations/inir_surface.png"
+			"inir_surface":"graphics/ilk/illustrations/inir_surface.png",
+			"karimova":"graphics/ilk/illustrations/karimova.png"
 		}
 	},
 	"plugins":{
