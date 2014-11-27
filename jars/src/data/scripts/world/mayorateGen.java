@@ -14,7 +14,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         initFactionRelationships(sector);
         
         new ilk_RashtGen().generate(sector);
-        
+        sector.addScript(new MissionTriggers());
     }
     
     public static void initFactionRelationships(SectorAPI sector) {    
