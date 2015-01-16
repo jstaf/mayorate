@@ -6,11 +6,13 @@ Graser,ilk_graser,3,7000,700,1200,,,,15,20,,,ENERGY,,1750,0,0.4,0.6,4,0,0,0,0,24
 Light Graser,ilk_graser_light,1,800,600,250,,,,15,7,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7705
 Windstalker MRM,ilk_windstalker,1,250,1100,,100,,50,10,5,40,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,400,200,5,50,DO_NOT_AIM,7706
 Belial PPC,ilk_shotgun,2,1500,550,,1080,,,15,13,50,,ENERGY,800,,,3,1,,0,0,0,0,,800,,,,,7707
-Laserhead LRM Launcher,ilk_laserhead,2,900,10000,,500,,75,10,12,20,,ENERGY,0,,0,15,2,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
+Laserhead LRM Launcher,ilk_laserhead,2,2000,10000,,500,,75,10,12,20,,ENERGY,0,,0,15,2,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
 Flux Torpedo,ilk_fluxtorp,3,15000,900,,2250,2000,2000,5,25,,,ENERGY,3250,,,8,,,5,15,10,30,,300,,,,,7709
 PPC,ilk_ppc,1,800,500,,35,,0,50,6,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,7710
 Graser PD,ilk_graser_pd,1,300,375,180,,,,100,6,,,ENERGY,,300,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7711
 Needler,ilk_needler,3,3000,800,,50,,,15,10,20,2,FRAGMENTATION,100,,,0.13,1,,10,40,2,20,,400,400,2,10,"GUIDED_POOR, SYSTEM",7712
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cutting Beam,ilk_heavy_lance_left,3,0,700,1500,,,,30,0,,,HIGH_EXPLOSIVE,,500,3.9,3,2,5,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7722
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Thermal Lance,ilk_thermal_lance,3,0,600,1100,,,,0,0,,,HIGH_EXPLOSIVE,,1000,,0.2,2,5,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7713
 Light TPC,ilk_repeater,1,0,600,,150,,0,0,0,10,1,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7714

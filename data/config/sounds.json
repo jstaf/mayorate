@@ -12,10 +12,34 @@
 		]
 	},	
 	
+	"ilk_lanceL_full":[
+			{"file":"sounds/ilk/fx/lance_light_full.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_lanceL_start":[
+			{"file":"sounds/ilk/fx/lance_light_start.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_lanceL_fire":[
+			{"file":"sounds/ilk/fx/lance_light_fire.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_lanceH_full":[
+			{"file":"sounds/ilk/fx/lance_heavy_full.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_lanceH_start":[
+			{"file":"sounds/ilk/fx/lance_heavy_start.ogg","pitch":1,"volume":0.55}
+	],
+	
+	"ilk_lanceH_fire":[
+			{"file":"sounds/ilk/fx/lance_heavy_fire.ogg","pitch":1,"volume":0.55}
+	],
+	
 	"ilk_thermal_lance_short":[
 			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":0.55}
 	],
- 
+	
 	"ilk_thermal_lance_loop":[
 			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":0.55}
 	],

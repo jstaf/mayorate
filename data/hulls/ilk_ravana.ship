@@ -100,6 +100,9 @@
   "builtInMods": [
     "stabilizedshieldemitter"
   ],
+  "builtInWeapons": {
+    "WS0003": "ilk_heavy_lance_left"
+  },
   "center": [
     146,
     253.5
@@ -242,7 +245,7 @@
     },
     {
       "angle": 0,
-      "arc": 5,
+      "arc": 59.489761,
       "id": "WS0003",
       "locations": [
         27.5,
@@ -250,11 +253,11 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "UNIVERSAL"
+      "type": "BUILT_IN"
     },
     {
       "angle": -0,
-      "arc": 5,
+      "arc": 59.489761,
       "id": "WS0004",
       "locations": [
         27.5,
@@ -307,30 +310,6 @@
       "locations": [
         -25.5,
         -48
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "ENERGY"
-    },
-    {
-      "angle": 75,
-      "arc": 225,
-      "id": "WS0009",
-      "locations": [
-        -30.5,
-        36
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "ENERGY"
-    },
-    {
-      "angle": -75,
-      "arc": 225,
-      "id": "WS0010",
-      "locations": [
-        -30.5,
-        -36
       ],
       "mount": "TURRET",
       "size": "SMALL",
