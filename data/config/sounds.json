@@ -12,28 +12,21 @@
 		]
 	},	
 	
-	"ilk_lanceL_full":[
-			{"file":"sounds/ilk/fx/lance_light_full.ogg","pitch":1,"volume":0.55}
-	],
-	
 	"ilk_lanceL_start":[
-			{"file":"sounds/ilk/fx/lance_light_start.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/lance_light_start.ogg","pitch":1,"volume":0.75}
 	],
 	
 	"ilk_lanceL_fire":[
-			{"file":"sounds/ilk/fx/lance_light_fire.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/lance_light_fire.ogg","pitch":1,"volume":0.85}
 	],
 	
-	"ilk_lanceH_full":[
-			{"file":"sounds/ilk/fx/lance_heavy_full.ogg","pitch":1,"volume":0.55}
-	],
 	
 	"ilk_lanceH_start":[
-			{"file":"sounds/ilk/fx/lance_heavy_start.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/lance_heavy_start.ogg","pitch":1,"volume":0.75}
 	],
 	
 	"ilk_lanceH_fire":[
-			{"file":"sounds/ilk/fx/lance_heavy_fire.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/lance_heavy_fire.ogg","pitch":1,"volume":0.8}
 	],
 	
 	"ilk_thermal_lance_short":[
@@ -122,7 +115,7 @@
 	],
 
 	"ilk_ionbomb_fire":[
-			{"file":"sounds/ilk/fx/ionbomb_fire.wav","pitch":1,"volume":0.9}
+			{"file":"sounds/ilk/fx/ionbomb_fire.ogg","pitch":1,"volume":0.9}
 	],
 
 	"ilk_ionbomb_detonate":[

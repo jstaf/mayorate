@@ -101,7 +101,8 @@
     "stabilizedshieldemitter"
   ],
   "builtInWeapons": {
-    "WS0003": "ilk_heavy_lance_left"
+    "WS0003": "ilk_heavy_lance_left",
+    "WS0004": "ilk_heavy_lance_right"
   },
   "center": [
     146,
@@ -265,7 +266,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "UNIVERSAL"
+      "type": "BUILT_IN"
     },
     {
       "angle": 70,

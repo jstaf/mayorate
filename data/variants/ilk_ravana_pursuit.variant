@@ -13,7 +13,7 @@
       "mode": "LINKED",
       "weapons": {
         "WS0003": "ilk_heavy_lance_left",
-        "WS0004": "ilk_graser",
+        "WS0004": "ilk_heavy_lance_right",
         "WS0015": "ilk_graser"
       }
     },

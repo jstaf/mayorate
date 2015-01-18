@@ -1,4 +1,6 @@
 id,type,size,intensity,fadeout,color,offset,hit size,hit intensity,hit fadeout,hit color,flash size,flash intensity,flash fadeout,flash color,flash offset,chance
+ilk_heavy_lance_left,beam,100,1,,"[254,228,122]",,200,0.3,,"[254,228,122]",,,,,,
+ilk_heavy_lance_right,beam,100,1,,"[254,228,122]",,200,0.3,,"[254,228,122]",,,,,,
 ilk_thermal_lance,beam,100,0.8,,"[235,55,0]",,150,0.2,,"[235,55,0]",,,,,,
 ilk_phoenix_rocket,projectile,75,0.3,0.5,"[255,145,75]",9,,,,,,,,,,
 ilk_repeater_shot,projectile,125,0.3,0.4,"[235,55,0]",,100,0.5,0.7,"[235,55,0]",100,0.3,0.5,"[255,0,0]",,
