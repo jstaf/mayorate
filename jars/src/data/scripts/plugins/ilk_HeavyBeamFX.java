@@ -35,6 +35,7 @@ public class ilk_HeavyBeamFX extends BaseEveryFrameCombatPlugin {
         // Set to Level.DEBUG if you need to track down a problem in the system
         Global.getLogger(ilk_HeavyBeamFX.class).setLevel(Level.ERROR);
     }
+    float lastCharge;
 
     @Override
     public void init(CombatEngineAPI engine) {
@@ -76,7 +77,7 @@ public class ilk_HeavyBeamFX extends BaseEveryFrameCombatPlugin {
             float charge = weapon.getChargeLevel();
             int index = weaponsMonitor.indexOf(weapon);
 
-            if ((charge > 0)) {
+            if (charge > lastCharge) {
                 double direction = weapon.getCurrAngle();
                 Vector2f weaponLoc = weapon.getLocation();
                 //spawn peripheral charge particles
@@ -109,7 +110,9 @@ public class ilk_HeavyBeamFX extends BaseEveryFrameCombatPlugin {
                 }
             } else {
                 wepIsCharging[index] = false;
+                
             }
+            lastCharge = charge;
         }
     }
 
