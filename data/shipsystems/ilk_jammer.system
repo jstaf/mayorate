@@ -1,0 +1,24 @@
+{
+	"id":"ilk_jammer",
+	"type":"STAT_MOD",
+	"aiType":"EMP",
+	"statsScript":"data.shipsystems.scripts.ilk_Jammer",
+	
+	"range":600,
+
+	"effectColor1":[255,150,255,200],
+	"effectColor2":[255,175,255,255],
+
+
+	"useSound":"system_emp_emitter_activate",
+	"loopSound":"system_emp_emitter_loop",
+	"impactSound":"system_emp_emitter_impact",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"threatRange":600,
+		"threatAmount":4,
+		"threatAngle":0,
+		"threatArc":360,
+	}
+}
