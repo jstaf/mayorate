@@ -60,7 +60,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         
         PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 10500, 250);
         ilk3.setCustomDescriptionId("planet_Sindral");
-        ilk3.setInteractionImage("illustrations", "pirate_station");
+        ilk3.setInteractionImage("illustrations", "geothermal");
         
         PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 330, 200, 8500, 150);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
@@ -127,7 +127,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 new ArrayList<>(Arrays.asList(ilk_station)),
                 "Ilkhanna",
                 6,
-                new ArrayList<>(Arrays.asList("indoctrination", Conditions.HEADQUARTERS, Conditions.MILITARY_BASE, Conditions.ORBITAL_STATION, Conditions.AUTOFAC_HEAVY_INDUSTRY, Conditions.ORE_REFINING_COMPLEX, Conditions.ORE_REFINING_COMPLEX, Conditions.VICE_DEMAND, Conditions.ARID, Conditions.POPULATION_6)),
+                new ArrayList<>(Arrays.asList("ai_core", Conditions.HEADQUARTERS, Conditions.MILITARY_BASE, Conditions.ORBITAL_STATION, Conditions.AUTOFAC_HEAVY_INDUSTRY, Conditions.ORE_REFINING_COMPLEX, Conditions.ORE_REFINING_COMPLEX, Conditions.VICE_DEMAND, Conditions.ARID, Conditions.POPULATION_6)),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -137,7 +137,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Inir",
                 3,
-                new ArrayList<>(Arrays.asList("indoctrination", Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
+                new ArrayList<>(Arrays.asList("ai_core", "indoctrination", Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -147,7 +147,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Sindral",
                 4,
-                new ArrayList<>(Arrays.asList(Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX, Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
+                new ArrayList<>(Arrays.asList("indoctrination", Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX, Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
