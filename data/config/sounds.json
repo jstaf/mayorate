@@ -12,6 +12,14 @@
 		]
 	},	
 	
+	"ilk_hvy_driver_scream":[
+			{"file":"sounds/ilk/fx/hvy_driver_scream.ogg","pitch":1,"volume":0.75}
+	],
+	
+	"ilk_hvy_driver_fire":[
+			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":1,"volume":0.75}
+	],
+	
 	"ilk_lanceL_start":[
 			{"file":"sounds/ilk/fx/lance_light_start.ogg","pitch":1,"volume":0.75}
 	],

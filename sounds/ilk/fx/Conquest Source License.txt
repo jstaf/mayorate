@@ -1,0 +1,133 @@
+                 Public License for Conquest: Frontier Wars Program and Source Code
+
+                        Copyright © December 2013, Fever Pitch Studios
+
+
+TERMS AND CONDITIONS OF USE
+
+I. Definitions
+
+“The Program” refers to any copyrightable work licensed under this License, in particular, the Program 
+source code and any and all accompanying assets, files, and data including, but not limited to, 
+executables, compiled code, object code, machine-readable derivations, libraries and utilities within or 
+relating to Conquest: Frontier Wars. The Licensee, whether an individual or organization in receipt of 
+the Program under this License, is denoted by “you”.
+
+“convey” and “conveying” mean to share, transmit, distribute, or otherwise make available to one or 
+more other parties, whether individuals or organizations.
+
+“Program Derivative” means the Program, in whole or in part, bearing modifications made by you or 
+others, and/or derivative works created with use of the Program in whole or in part.
+
+2. Permitted Uses
+
+This agreement grants you a revocable, non-exclusive license to run, modify, convey, and make 
+derivative works and/or Program Derivatives using the accompanying Program subject to the conditions 
+of this License. 
+
+This License permits only non-commercial use of the Program. No exchange or compensation of 
+any kind, whether monetary, material, or otherwise, including but not limited to payment, royalties, 
+expenses, donations, gratuities, usage or transmission fees, or any other legal consideration whatsoever 
+may be given or received in exchange for the use or conveying of the Program or any Program 
+Derivative, or for any warranty or support created or provided by you or others with the use of the 
+Program, whether in part or in whole, under this License.
+
+3. Distribution and Notice
+
+As one of your rights under this License, you may convey copies of the code and other assets of the 
+Program as you receive them, in any medium, provided that you conspicuously and appropriately 
+publish on or attach to each copy the full text and intact terms of this License, including notice of the 
+absence of any warranty and waiver of liability, and an appropriate copyright notice. 
+
+If you convey a Program Derivative, it must be subject to all the aforementioned notice conditions as 
+well as these additional requirements:
+
+a) The Program Derivative must carry prominent notices stating that the relevant date and author of any 
+such modifications
+
+b) The Program Derivative must carry prominent notices stating that it is released under this License
+
+c) You must indicate that the entire Program Derivative, as a whole, and its recipient(s) are subject to 
+the exact same terms of this License 
+
+4. Termination.
+
+You may not convey the Program, whether in whole or in part, except as expressly provided under 
+this License. You may not convey the Program or any of its constituent parts as part of a collective or 
+derivative work (Program Derivative), except as expressly provided under this revocable License. 
+
+Any attempt to modify the terms of this License in conveying the Program in whole, in part, or as part of 
+a collective or derivative work will result in immediate termination of the rights granted to you by this 
+revocable License.
+
+Any attempt to use the Program or Program Derivative in whole or in part for commercial purposes or 
+profit will result in immediate termination of the rights granted to you by this License.
+
+Fever Pitch Studios may, at its option, revoke this license at any time and for any reason by providing 
+written notice.
+
+If your rights under this License are terminated, you do not qualify to receive new Licenses for the 
+Program and may not convey the Program or Program Derivatives unless and until those rights have 
+been reinstated by Fever Pitch Studios.
+
+5. Automatic Attachment of License to Downstream Recipients.
+
+Each time you convey the Program or a Program Derivative pursuant to the rights granted to you under 
+the License, the recipient automatically receives a License identical to this one, associated with such 
+copy of the Program or Program Derivative. The terms of the License must remain as the original 
+License, without modification or addendum by you or the recipient.
+
+6. Conflicts
+
+If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the 
+conditions of this License, they do not excuse you from the conditions of this License. If you cannot use , 
+modify, convey the Program (and Program Derivative, where involved) so as to satisfy simultaneously 
+your obligations under this License and any other pertinent obligations, then you may not use, modify, 
+or convey the Program or Program Derivative in question. For example, if you agree to terms that 
+obligate you to collect a royalty or fee for any further downstream conveyances of the Program or a 
+Program Derivative, you must refrain from conveying the Program or Program Derivative under those 
+
+7. Disclaimer of Warranty
+
+FEVER PITCH STUDIOS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY 
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. AS A CONDITION
+OF THIS LICENSE, YOU ASSUME ANY AND ALL RISKS AS TO THE QUALITY OR PERFORMANCE OF THE 
+PROGRAM. FEVER PITCH STUDIOS NEITHER PROVIDES NOR IS OBLIGATED TO PROVIDE ANY SUPPORT, 
+UPDATES, PATCHES, OR OTHER SERVICES OR ASSISTANCE FOR THE PROGRAM IN CONJUNCTION WITH
+THIS LICENSE.
+
+8. Limitation of Liability
+
+IN NO EVENT WILL FEVER PITCH STUDIOS BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, 
+SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF THE USE OR INABILITY 
+TO USE THE PROGRAM OR PROGRAM DERIVATIVES (INCLUDING, BUT NOT LIMITED TO, LOSS OR 
+CORRUPTION OF DATA, SYSTEMS OR HARDWARE MALFUNCTION, OTHER LOSSES SUSTAINED BY YOU 
+OR THIRD PARTIES, OR THE RESULT OF ANY FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER 
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+9. Governing Law
+
+This License and all the Terms and Conditions herein are governed by the laws of the state of Texas –
+where Fever Pitch Studios is located.
+
+10. Severability
+
+Any invalidity or unenforceability found of any of the terms and conditions or other provisions of
+this License shall not affect the continued validity or enforceability of any other terms, conditions,
+or other provisions of this License, which shall remain in full force and effect. Terms found invalid or 
+unenforceable may be modified to the slighted degree necessary to restore validity or enforceability, 
+remaining as close as possible to the original intent of Fever Pitch Studios.
+
+11. Contact Information
+
+As per section 2, this License limits use of the Program and Program Derivatives to non-commercial uses 
+only. If you are interested in obtaining a commercial license for further use, modification, or conveying 
+of the Program, please contact Fever Pitch Studios at:
+
+Fever Pitch Studios 5360 Austral Loop, Austin, Texas 78739
+
+Receipt of the Program or any Program Derivatives under this public License for non-commercial use 
+does not preclude or revoke permissions you may receive by obtaining a commercial license from Fever 
+Pitch Studios.
