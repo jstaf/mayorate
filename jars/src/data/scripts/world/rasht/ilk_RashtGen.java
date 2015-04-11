@@ -49,7 +49,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
 	ilk1.getSpec().setUseReverseLightForGlow(true);
 	ilk1.applySpecChanges();
-        ilk1.setInteractionImage("illustrations", "industrial_megafacility");
+        ilk1.setInteractionImage("illustrations", "marine");
                 
         PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
         ilk1_1.setCustomDescriptionId("planet_Mun");
@@ -64,7 +64,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         
         PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 330, 200, 8500, 150);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
-        ilk4.setInteractionImage("illustrations", "space_bar");
+        ilk4.setInteractionImage("illustrations", "cloud_city");
         
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
 				 "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used

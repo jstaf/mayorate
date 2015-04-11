@@ -23,8 +23,7 @@ $faction.id == mayorate","AddText ""The concourse seems oddly subdued for a port
 AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a low-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
 ,,,,,,
 "# ""Heir to the Throne"" Mayorate mission 1",,,,,,
-HTTTstart,PopulateOptions,"$global.tradePanelMode == MARKET
-$faction.id == mayorate",,,3:HTTT0:Mission briefing - Heir to the Throne,
+HTTTstart,,,,,3:HTTT0:Mission briefing - Heir to the Throne,
 HTTTm1,DialogOptionSelected,$option == HTTT0,,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
 HTTTm2,DialogOptionSelected,$option  == HTTT1,,"""Greetings, captain. I was hoping you could assist me with a matter of some importance.""",0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
 HTTTm3,DialogOptionSelected,$option  == HTTT2,,“They have offered me some amount of discretion in this matter. You might say that I am having family troubles.”,"0:HTTT4:“And why is that?” 
@@ -63,3 +62,29 @@ HTTTm6-2-2,DialogOptionSelected,$option == HTTT6-2-2,,"“A true Domain Paragon.
 HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
+,,,,,,
+,,,,,,
+embassyStart,PopulateOptions,$faction.id == mayorate,,,3:embMain:Contact the Mayorate consulate.,
+embassy,DialogOptionSelected,$option == embMain,,A wayfinding station directs you to the Mayorate diplomatic compound. ,"1:embFactions:”Tell me about the other factions in the sector.”
+2:embAssistance:”I was hoping you could give me some assistance.”
+3:embHuman:”I almost expected you to be another AI.”
+4:mpoContinue:Leave",
+embassyHuman,DialogOptionSelected,$option == embHuman,,"“To be honest, most people find AIs rather, ah... intimidating. In an effort to avoid any misunderstandings, the majority of our diplomatic staff and comm officers are baseline humans with no modifications or any of that”.",1:embMain:”Ah. I can see how that would make sense.”,
+embassyFactions,DialogOptionSelected,$option == embFactions,,“Which factions would you like to hear about?”,"1:eHeg:The Hegemony
+2:eTach:The Tri-Tachyon Corporation
+3:ePir:The friendly neighborhood pirates
+4:eInd:Independent worlds and traders
+5:eCch:The Luddic Church
+6:eDik:The Sindrian Diktat
+7:embMain:”Nevermind.”",
+embassyFactionsQuiet,DialogOptionSelected,$option == embFactionsQuiet,,,,
+,,,,,,
+#vanilla factions,,,,,,
+eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
+eTriTachyon,DialogOptionSelected,$option == eTach,,"“It's true. We have indeed been known to cooperate with them from time to time. Scandalous, right?”",1:embFactionsQuiet:”Let's talk about something else.”,
+ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
+eIndependent,DialogOptionSelected,$option == eInd,,"“Although they may not know it, the Independents are truly the lifeblood of the sector. If only more of them signed on with us... lets just say we could accomplish some truly great things!” *chuckles ominously*","1:embFactionsQuiet:”Careful, you're making me nervous.”",
+eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being persecuted! What about my religious freedoms?' or whatever. Truly, they have no class.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
+eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”Let's talk about something else.”,
+,,,,,,
+# mod factions,,,,,,

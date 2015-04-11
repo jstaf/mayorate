@@ -24,7 +24,7 @@ public class GraserCharge implements BeamEffectPlugin {
             float fluxMult = beam.getSource().getFluxTracker().getFluxLevel();
             
             //for debugging
-            Global.getCombatEngine().addFloatingDamageText(point, damage*fluxMult, Color.BLUE, beam.getDamageTarget(), beam.getSource());
+            //Global.getCombatEngine().addFloatingDamageText(point, damage*fluxMult, Color.ORANGE, beam.getDamageTarget(), beam.getSource());
             
             Global.getCombatEngine().applyDamage(beam.getDamageTarget(), point, damage*fluxMult, type, 0, false, false, beam.getSource());
         }
