@@ -254,7 +254,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "BUILT_IN"
+      "type": "ENERGY"
     },
     {
       "angle": -0,
@@ -266,7 +266,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "BUILT_IN"
+      "type": "ENERGY"
     },
     {
       "angle": 70,
@@ -373,8 +373,8 @@
         -0
       ],
       "mount": "HARDPOINT",
-      "size": "LARGE",
-      "type": "UNIVERSAL"
+      "size": "MEDIUM",
+      "type": "MISSILE"
     },
     {
       "angle": 90,

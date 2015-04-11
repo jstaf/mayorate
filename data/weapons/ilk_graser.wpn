@@ -28,4 +28,5 @@
 	"textureScrollSpeed":292,
 	"width":27,
 	"fireSoundTwo":"ilk_graser_fire",
+	"beamEffect":"data.scripts.weapons.GraserCharge",
 }

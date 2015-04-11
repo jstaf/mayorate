@@ -1,0 +1,32 @@
+package data.scripts.weapons;
+
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.BeamAPI;
+import com.fs.starfarer.api.combat.BeamEffectPlugin;
+import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.DamageType;
+import java.awt.Color;
+import org.lwjgl.util.vector.Vector2f;
+
+/**
+ *
+ * @author Jeff
+ */
+public class GraserCharge implements BeamEffectPlugin {    
+
+    @Override
+    public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
+        if (beam.didDamageThisFrame()) {
+            Vector2f point = beam.getTo();
+            float damage = beam.getWeapon().getDamage().getDamage() * amount * 5f;
+            
+            DamageType type = beam.getWeapon().getDamageType();
+            float fluxMult = beam.getSource().getFluxTracker().getFluxLevel();
+            
+            //for debugging
+            Global.getCombatEngine().addFloatingDamageText(point, damage*fluxMult, Color.BLUE, beam.getDamageTarget(), beam.getSource());
+            
+            Global.getCombatEngine().applyDamage(beam.getDamageTarget(), point, damage*fluxMult, type, 0, false, false, beam.getSource());
+        }
+    }
+}
