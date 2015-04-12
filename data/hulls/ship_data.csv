@@ -1,7 +1,8 @@
 name,id,designation,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,supplies/day,cr %/day,CR to deploy,peak CR sec,CR loss/sec,c,c/fp,c/l,hints,number
 Inanna,ilk_inanna,Fighter,,,400,100,500,,100,0,150,200,100,120,240,25,NONE,,0,0,0,,,0,0,,,,,6,,0.75,4,3,,,,,,,7601
-Raad,ilk_raad,Fighter,,,750,125,1500,,300,0,125,120,50,90,180,60,NONE,,0,0,0,,,2,2,,,,,6,,1.5,3,7,,,,,,,7602
+Raad,ilk_raad,Fighter,,,750,125,1500,,300,0,125,120,50,90,180,60,NONE,,0,0,0,,,2,2,,,,,6,,1.5,3,6,,,,,,,7602
 Angha,ilk_angha,Bomber,,,600,100,250,,40,0,180,150,100,100,200,30,NONE,,0,0,0,,,1,1,,,,,7,,1,3,6,,,,,,,7603
+Shrike,ilk_hk_drone,Drone,ilk_afterburner,,550,100,800,,200,0,175,150,100,180,180,20,NONE,,160,0.3,0.7,,,0,1,,,,,7,,1.5,4,7,,,,,,,7613
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Lilith,ilk_lilith,Frigate,highenergyfocus,6,1700,200,2100,1875,150,35,140,80,60,45,100,150,OMNI,,100,0.8,0.7,,,10,30,60,50,1,50,6,15000,2,10,15,180,0.25,,,,,7604
 Tiamat,ilk_tiamat,Destroyer Escort,ilk_phase_leap,6,2500,300,2900,,250,40,100,110,90,55,80,250,FRONT,,220,0.7,0.7,,,25,40,50,40,1,40,5,20000,2.5,8,20,,,,,,,7605

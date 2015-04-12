@@ -1,0 +1,110 @@
+{
+  "bounds": [
+    -5.5,
+    -5.5,
+    -13.5,
+    -8.5,
+    -11.5,
+    -12.5,
+    -4,
+    -11.5,
+    1,
+    -17,
+    6.5,
+    -10,
+    6.5,
+    10,
+    1,
+    17,
+    -4,
+    11.5,
+    -11.5,
+    12.5,
+    -13.5,
+    8.5,
+    -5.5,
+    5.5
+  ],
+  "center": [
+    19,
+    17
+  ],
+  "collisionRadius": 24.19194,
+  "engineSlots": [
+    {
+      "angle": 176.905945,
+      "contrailSize": 7.354344,
+      "length": 17.824938,
+      "location": [
+        -5.5,
+        4.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 7.354344
+    },
+    {
+      "angle": -176.905945,
+      "contrailSize": 7.354344,
+      "length": 17.824938,
+      "location": [
+        -5.5,
+        -4.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE_SMALL",
+      "width": 7.354344
+    }
+  ],
+  "height": 28,
+  "hullId": "ilk_hk_drone",
+  "hullName": "Harrier",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    -2,
+    -0
+  ],
+  "shieldRadius": 20.814659,
+  "spriteName": "graphics/ilk/ships/ilk_hk_drone.png",
+  "style": "ilk_hull",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 41.112091,
+      "id": "WS0001",
+      "locations": [
+        4.5,
+        11.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -0,
+      "arc": 41.112091,
+      "id": "WS0002",
+      "locations": [
+        4.5,
+        -11.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0003",
+      "locations": [
+        6,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 38
+}

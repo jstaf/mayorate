@@ -1,0 +1,19 @@
+{
+  "displayName": "Hunter-Killer",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "hullId": "ilk_hk_drone",
+  "hullMods": [],
+  "variantId": "ilk_hk_drone_hunter_killer",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_graser_pd",
+        "WS0002": "ilk_graser_pd",
+        "WS0003": "ilk_ppc"
+      }
+    }
+  ]
+}

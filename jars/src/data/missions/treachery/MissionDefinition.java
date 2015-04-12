@@ -48,8 +48,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         //api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
+        api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
+        api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
 	//api.addToFleet(FleetSide.PLAYER, "broadsword_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
 
         // Set up the enemy fleet.

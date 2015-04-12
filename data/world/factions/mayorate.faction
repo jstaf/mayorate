@@ -32,13 +32,15 @@
     },
     "shipRoles": {
         "interceptor": {
-            "ilk_inanna_wing": 10,
+			"ilk_hk_wing": 10,
+            "ilk_inanna_wing": 4,
             "fallback": {
                 "fighter": 1
             }
         },
         "fighter": {
             "ilk_raad_wing": 10,
+			"ilk_hk_wing": 3,
             "fallback": {
                 "interceptor": 1
             }
