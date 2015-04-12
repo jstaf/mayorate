@@ -1,5 +1,28 @@
 kazi - Mayorate mod changelog
 
+v8.whatever
+-Added two new portraits.
+-Portraits are available for player use again.
+-Added four unique interaction images (one for every market in Rahst). They kind of suck, but whatever. 
+-Improved Ravana sprite.
+-New mount setup for Ravana.
+-Changed some sfx
+-Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand (basically much of the population are AI's, so no need for food, right?). If you're clever, you may be able to make money off of metals for once.
+-Shuffled around Rasht market conditions.
+-Added Shrike Hunter-Killer Drone wing.
+-Added Afterburner ship system for Shrike wings. Grants temporary speed boost (it's a bit of a shameless copy from SRA's Neriad, I must admit).
+-Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield bypassing weapons still work fine.
+-Added Graser beam buff. Grasers now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast (esp. in light mounts). Should encourage more brinksmanship. ;)
+-Integrated relationships for other mod factions. 
+-Added a consulate to Mayorate worlds. You can now chat with them about other factions and stuff. (mostly just for your own amusement)
+-New Mayorate flag and logo graphics.
+-All Rasht markets now have a significant amount of flavor text.
+-Improved writing for most descriptions.
+-Laserheads now deal directed damage (they fire in a cone pattern now... reduces friendly fire/improves killing power).
+-Balancing stuffs.
+-Probably a lot of stuff I forgot to mention.
+
+
 v0.8.1
 -The Mayorate no longer requires editing files to install. Just activate the mod and play.
 -Fixed an economy bug that was causing markets to be a bit more intense than they should have been.
