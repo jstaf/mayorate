@@ -2,9 +2,9 @@
 	"id":"ilk_aoe_mirv",
 	"specClass":"missile",
 	"missileType":"MISSILE",
-	"sprite":"graphics/ilk/weapons/nuke.png",
-	"size":[21,30],
-	"center":[10.5,16],
+	"sprite":"graphics/ilk/weapons/nuke_mkii_missile.png",
+	"size":[13,34],
+	"center":[6.5,17],
 	"collisionRadius":16,
 	"collisionClass":"MISSILE_NO_FF",
 	#"explosionColor":[255,165,0,255],  # old, before onhitplugin
@@ -20,7 +20,7 @@
 				    "styleSpec":{
 						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
 						"engineColor":[255,208,177,255],
-						"contrailDuration":1,
+						"contrailDuration":1.5,
 						"contrailWidthMult":1,
 						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
 						"contrailMinSeg":5, # min segment length, in pixels
@@ -29,7 +29,7 @@
 						"contrailColor":[51,45,41,170],
 						"type":"SMOKE"
 					},
-				    "width":10.0,
+				    "width":9.0,
 				    "length":50.0,
 				    "angle":180.0}],
 	"onHitEffect":"data.scripts.weapons.ilk_NukeOnHitEffect",		    

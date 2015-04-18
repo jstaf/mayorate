@@ -6,7 +6,8 @@ v8.whatever
 -Added four unique interaction images (one for every market in Rahst). They kind of suck, but whatever. 
 -Improved Ravana sprite.
 -New mount setup for Ravana.
--Changed some sfx
+-Changed many sfx
+-New nuke sprites (mount and launcher)
 -Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand (basically much of the population are AI's, so no need for food, right?). If you're clever, you may be able to make money off of metals for once.
 -Shuffled around Rasht market conditions.
 -Added Shrike Hunter-Killer Drone wing.

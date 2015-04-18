@@ -19,6 +19,7 @@ public class BubbleShieldStats implements ShipSystemStatsScript {
 
     private boolean start = false;
     private float orig;
+    ShieldAPI shield;
     
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -27,7 +28,7 @@ public class BubbleShieldStats implements ShipSystemStatsScript {
         }
         ShipAPI ship = (ShipAPI) stats.getEntity();
         
-        ShieldAPI shield = ship.getShield();
+        shield = ship.getShield();
         
         if (!start) {
             orig = shield.getArc();
@@ -38,7 +39,7 @@ public class BubbleShieldStats implements ShipSystemStatsScript {
         if (state == State.IN) {
             shield.setArc(effectLevel * (360 - orig) + orig);
             stats.getShieldDamageTakenMult().modifyMult(id, 1-effectLevel);
-            stats.getShieldUnfoldRateMult().modifyMult(id, 2f);
+            stats.getShieldUnfoldRateMult().modifyMult(id, 3f);
         }
         
         if (state == State.ACTIVE) {
@@ -51,7 +52,7 @@ public class BubbleShieldStats implements ShipSystemStatsScript {
             shield.setArc(effectLevel * (360 - orig) + orig);
             stats.getShieldDamageTakenMult().modifyMult(id, 1-effectLevel);
         }
-        
+                
         if ((effectLevel == 0) && (start)) {
             start = false;
         }
@@ -61,6 +62,9 @@ public class BubbleShieldStats implements ShipSystemStatsScript {
     public void unapply(MutableShipStatsAPI stats, String id) {
         stats.getShieldDamageTakenMult().unmodify(id);
         stats.getShieldUnfoldRateMult().unmodify(id);
+        if (shield != null) {
+            shield.setArc(orig);
+        }
     }
 
     @Override

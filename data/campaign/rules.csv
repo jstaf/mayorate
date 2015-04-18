@@ -106,7 +106,7 @@ embassyMods,DialogOptionSelected,$option == eMods,,,"0:eSc:Scy
 eScy,DialogOptionSelected,$option == eSc,,“Who?”,"0:eScy2:”You know, top secret pirates and masters of disguise?”",
 eScy22,DialogOptionSelected,$option == eScy2,,“I'm not sure what you're talking about.”,0:eMods:”Wow. So you actually have no idea who's been killing your ships. Smooth.”,
 eBlackrock,DialogOptionSelected,$option == eBrdy,,,,
-eExigency,DialogOptionSelected,$option == eExi,,"“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of them ships and bring back the hulls for analysis. You know, for science and stuff.”",0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
+eExigency,DialogOptionSelected,$option == eExi,,“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of their ships and bring back the hulls for analysis. For science... and stuff.”,0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
 eShadow,DialogOptionSelected,,,,,
 eTemplar,DialogOptionSelected,,,,,
 eImperium,DialogOptionSelected,,,,,

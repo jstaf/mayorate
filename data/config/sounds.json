@@ -4,13 +4,17 @@
 		"music_campaign":[
 			{"file":"ambient.ogg","source":"sounds/ilk/music/"},
 			{"file":"ambient2.ogg","source":"sounds/ilk/music/"}
-		],
+		]#,
  
-		"music_combat":[
-			{"file":"battle2.ogg","source":"sounds/ilk/music/"},
-			{"file":"battle3.ogg","source":"sounds/ilk/music/"}
-		]
-	},	
+		#"music_combat":[
+			#{"file":"battle2.ogg","source":"sounds/ilk/music/"},
+			#{"file":"battle3.ogg","source":"sounds/ilk/music/"}
+		#]
+	},
+
+	"bubble_shield_loop":[
+		{"file":"sounds/ilk/fx/bubble_shield_loop.ogg","pitch":1,"volume":0.65}
+	],
 	
 	"ilk_hvy_driver_scream":[
 			{"file":"sounds/ilk/fx/hvy_driver_scream.ogg","pitch":1,"volume":0.75}
@@ -38,11 +42,11 @@
 	],
 	
 	"ilk_thermal_lance_short":[
-			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":1}
 	],
 	
 	"ilk_thermal_lance_loop":[
-			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":0.55}
+			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":1}
 	],
 	
 	"ilk_pulse_gun":[
