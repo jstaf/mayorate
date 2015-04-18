@@ -64,30 +64,32 @@ FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either nego
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
 ,,,,,,
 ,,,,,,
-embassyStart,PopulateOptions,$faction.id == mayorate,,,3:embMain:Contact the Mayorate consulate.,
-embassy,DialogOptionSelected,$option == embMain,,A wayfinding station directs you to the Mayorate diplomatic compound. ,"1:embFactions:”Tell me about the other factions in the sector.”
+embassyStart,PopulateOptions,$faction.id == mayorate,,,3:embMainStart:Contact the Mayorate consulate.,
+embassy,DialogOptionSelected,$option == embMainStart,,A wayfinding station directs you to the Mayorate diplomatic compound. ,"1:embFactions:”Tell me about the other factions in the sector.”
+2:embAssistance:”I was hoping you could give me some assistance.”
+3:embHuman:”I almost expected you to be another AI.”
+4:mpoContinue:Leave",
+embassyQuiet,DialogOptionSelected,$option == embMain,,“Did you need anything else?”,"1:embFactions:”Tell me about the other factions in the sector.”
 2:embAssistance:”I was hoping you could give me some assistance.”
 3:embHuman:”I almost expected you to be another AI.”
 4:mpoContinue:Leave",
 embassyHuman,DialogOptionSelected,$option == embHuman,,"“To be honest, most people find AIs rather, ah... intimidating. In an effort to avoid any misunderstandings, the majority of our diplomatic staff and comm officers are human.”",1:embMain:”Ah. I can see how that would make sense.”,
-embassyFactions,DialogOptionSelected,$option == embFactions,,“Which factions would you like to hear about?”,"1:eHeg:The Hegemony
-2:eTach:The Tri-Tachyon Corporation
-3:ePir:The friendly neighborhood pirates
-4:eInd:Independent worlds and traders
-5:eCch:The Luddic Church
-6:eDik:The Sindrian Diktat
-7:eMods:Other factions
-8:embMain:”Nevermind.”",
-embassyFactionsQuiet,DialogOptionSelected,$option == embFactionsQuiet,,,"1:eHeg:The Hegemony
-2:eTach:The Tri-Tachyon Corporation
-3:ePir:The friendly neighborhood pirates
-4:eInd:Independent worlds and traders
-5:eCch:The Luddic Church
-6:eDik:The Sindrian Diktat
-
-8:embMain:”Nevermind.”",
 ,,,,,,
-#vanilla factions,,,,,,
+#################### Discuss faction reps,,,,,,
+embassyFactions,DialogOptionSelected,$option == embFactions,FireAll PopulateFactions,“Which factions would you like to hear about?”,,
+embassyFactionsQuiet,DialogOptionSelected,$option == embFactionsQuiet,FireAll PopulateFactions,,,
+,,,,,,
+#add options for vanilla factions,,,,,,
+eHegemony1,PopulateFactions,,,,1:eHeg:The Hegemony,
+eTriTachyon1,PopulateFactions,,,,1:eTach:The Tri-Tachyon Corporation,
+ePirates1,PopulateFactions,,,,1:ePir:The friendly neighborhood pirates,
+eIndependent1,PopulateFactions,,,,1:eInd:Independent worlds and traders,
+eChurch1,PopulateFactions,,,,1:eCch:The Luddic Church,
+eDiktat1,PopulateFactions,,,,1:eDik:The Sindrian Diktat,
+eModded1,PopulateFactions,,,,9:eMods:Other factions,
+embFactionsLeave,PopulateFactions,,,,10:embMain:”Nevermind.”,
+,,,,,,
+#discuss the vanilla factions,,,,,,
 eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
 eTriTachyon,DialogOptionSelected,$option == eTach,,"“It's true. We have indeed been known to cooperate with them from time to time. Scandalous, right?”",1:embFactionsQuiet:”Let's talk about something else.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
@@ -95,18 +97,72 @@ eIndependent,DialogOptionSelected,$option == eInd,,"“Although they may not kno
 eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being persecuted! What about my religious freedoms?' or whatever. Truly, they have no class.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
 eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”Sounds like you're already becoming the best of friends.”,
 ,,,,,,
-# mod factions,,,,,,
-embassyMods,DialogOptionSelected,$option == eMods,,,"0:eSc:Scy
-1:eBrdy:Blackrock Driveyards
-2:eExi:Exigency Corporation
-3:eSHI:Shadowyards Reconstruction Authority
-4:eTem:The Knights Templar
-5:eIm:The Interstellar Imperium
-6:eCit:Citadel",
+# add options for mod factions,,,,,,
+embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
+Scy1,PopulateModFactions,,,,1:eSc:Scy,
+Blackrock1,PopulateModFactions,,,,1:eBrdy:Blackrock Driveyards,
+Exigency1,PopulateModFactions,,,,1:eExi:Exigency Corporation,
+Shadowyards1,PopulateModFactions,,,,1:eSHI:Shadowyards Reconstruction Authority,
+Templar1,PopulateModFactions,,,,1:eTem:The Knights Templar,
+Imperium1,PopulateModFactions,,,,1:eIm:The Interstellar Imperium,
+embModFactionsLeave,PopulateModFactions,,,,10:embFactionsQuiet:”Let's talk about those other factions again.”,
+,,,,,,
+#discuss mod factions,,,,,,
 eScy,DialogOptionSelected,$option == eSc,,“Who?”,"0:eScy2:”You know, top secret pirates and masters of disguise?”",
-eScy22,DialogOptionSelected,$option == eScy2,,“I'm not sure what you're talking about.”,0:eMods:”Wow. So you actually have no idea who's been killing your ships. Smooth.”,
+eScy22,DialogOptionSelected,$option == eScy2,,“I'm not sure what you're talking about.”,0:eMods:”Wow. So you actually have no idea they're out there.”,
 eBlackrock,DialogOptionSelected,$option == eBrdy,,,,
 eExigency,DialogOptionSelected,$option == eExi,,“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of their ships and bring back the hulls for analysis. For science... and stuff.”,0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
 eShadow,DialogOptionSelected,,,,,
 eTemplar,DialogOptionSelected,,,,,
 eImperium,DialogOptionSelected,,,,,
+,,,,,,
+#################### Ask for help,,,,,,
+embassyFavors,DialogOptionSelected,"$option == embAssistance
+RepIsAtWorst $faction.id FAVORABLE",,“You've certainly helped us. I hope we can return the favor.”,"0:eRep:”Can you improve my reputation with another faction?”
+1:eShips:”I need military support.”
+10:embMain:”Nevermind.”",
+DENIED,DialogOptionSelected,"$option == embAssistance
+RepIsAtBest $faction.id NEUTRAL",,“You need to improve your reputation with us before we will help you.”,"0:embMain:”Fine, be that way.”",
+,,,,,,
+# Get ships,,,,,,
+eGiveShips,DialogOptionSelected,$option == eShips,FireAll PopulateShips,“What did you have in mind?”,,
+askFrigate,PopulateShips,,,,1:frig:A frigate,
+askFreighter,PopulateShips,,,,1:freight:A freighter,
+askDestroyer,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:dest:A destroyer,
+askBig,PopulateShips,RepIsAtWorst $faction.id COOPERATIVE,,,1:big:A flagship,
+askStrikeGroup,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:strike:A strike group,
+dontAsk,PopulateShips,,,,10:embAssistance:”Nevermind.”,
+,,,,,,
+ughFrig,DialogOptionSelected,$option == frig,FireBest GiveFrigate,,,
+ughFreighter,DialogOptionSelected,$option == freight,FireBest GiveFreighter,,,
+ughDestroyer,DialogOptionSelected,$option == dest,FireBest GiveDestroyer,,,
+ughBig,DialogOptionSelected,$option == big,FireBest GiveHeavy,,,
+ughStrike,DialogOptionSelected,$option == strike,FireBest GiveStrikeGroup,,,
+giveFrigateLilith,GiveFrigate,,"AddText ""Added Lilith Assault frigate"" textFriendColor
+AddText “You have spent 10 points of reputation” textEnemyColor",,1:eShips:”Thanks.”,
+giveFrigateTiamat,GiveFrigate,,"AddText ""Added Tiamat frigate"" textFriendColor
+AddText “You have spent 10 points of reputation” textEnemyColor",,1:eShips:”Thanks.”,
+giveFreighter,GiveFreighter,,,,1:eShips:”Thanks.”,
+giveDestroyerCimeterre,GiveDestroyer,,,,1:eShips:”Thanks.”,
+giveDestroyerSafirB,GiveDestroyer,,,,1:eShips:”Thanks.”,
+giveDestroyerForaker,GiveDestroyer,,,,1:eShips:”Thanks.”,
+giveDelAzarchel,GiveHeavy,,,,1:eShips:”Thanks.”,
+giveJamaran,GiveHeavy,,,,1:eShips:”Thanks.”,
+giveRavana,GiveHeavy,,,,1:eShips:”Thanks.”,
+giveStrikeGroupSmall,GiveStrikeGroup,,,,1:eShips:”Thanks.”,
+giveStrikeGroupMedium,GiveStrikeGroup,,,,1:eShips:”Thanks.”,
+,,,,,,
+# Improve relations,,,,,,
+whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which factions would you like us to talk to on your behalf?”,,
+improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = tritach 0
+FireBest RepAdjuster",,1:adjustFactionRep:The Tri-Tachyon Corporation,
+improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = independent 0
+FireBest RepAdjuster",,1:adjustFactionRep:The Independents,
+improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = pirates 0
+FireBest RepAdjuster",,1:adjustFactionRep:Pirates,
+improveNothing,Allies,,,,10:embAssistance:”Nevermind.”,
+repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"AdjustRep $toImprove 0.1
+AddText ""Reputation with $toImprove increased by 5"" textFriendColor
+AdjustRep $faction.id -0.05
+AddText ""Reputation with $faction.id decreased by 10"" textFriendColor",,1:eRep:”Thanks.”,
+repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
