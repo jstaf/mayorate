@@ -119,15 +119,15 @@ eImperium,DialogOptionSelected,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
 RepIsAtWorst $faction.id FAVORABLE",,“You've certainly helped us. I hope we can return the favor.”,"0:eRep:”Can you improve my reputation with another faction?”
-1:eShips:”I need military support.”
-10:embMain:”Nevermind.”",
+1:eShips:""""I need military support.""",
+"10:embMain:”Nevermind.”""",,,,,,
 DENIED,DialogOptionSelected,"$option == embAssistance
 RepIsAtBest $faction.id NEUTRAL",,“You need to improve your reputation with us before we will help you.”,"0:embMain:”Fine, be that way.”",
 ,,,,,,
 # Get ships,,,,,,
 eGiveShips,DialogOptionSelected,$option == eShips,FireAll PopulateShips,“What did you have in mind?”,,
-askFrigate,PopulateShips,,,,1:frig:A frigate,
-askFreighter,PopulateShips,,,,1:freight:A freighter,
+askFrigate,PopulateShips,RepIsAtWorst $faction.id FAVORABLE,,,1:frig:A frigate,
+askFreighter,PopulateShips,RepIsAtWorst $faction.id FAVORABLE,,,1:freight:A freighter,
 askDestroyer,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:dest:A destroyer,
 askBig,PopulateShips,RepIsAtWorst $faction.id COOPERATIVE,,,1:big:A flagship,
 askStrikeGroup,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:strike:A strike group,
@@ -139,9 +139,11 @@ ughDestroyer,DialogOptionSelected,$option == dest,FireBest GiveDestroyer,,,
 ughBig,DialogOptionSelected,$option == big,FireBest GiveHeavy,,,
 ughStrike,DialogOptionSelected,$option == strike,FireBest GiveStrikeGroup,,,
 giveFrigateLilith,GiveFrigate,,"AddText ""Added Lilith Assault frigate"" textFriendColor
-AddText “You have spent 10 points of reputation” textEnemyColor",,1:eShips:”Thanks.”,
+AddText ""You have spent 10 points of reputation"" textEnemyColor
+AddShip ""ilk_lilith_assault""
+BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
 giveFrigateTiamat,GiveFrigate,,"AddText ""Added Tiamat frigate"" textFriendColor
-AddText “You have spent 10 points of reputation” textEnemyColor",,1:eShips:”Thanks.”,
+AddText ""You have spent 10 points of reputation"" textEnemyColor",,1:eShips:”Thanks.”,
 giveFreighter,GiveFreighter,,,,1:eShips:”Thanks.”,
 giveDestroyerCimeterre,GiveDestroyer,,,,1:eShips:”Thanks.”,
 giveDestroyerSafirB,GiveDestroyer,,,,1:eShips:”Thanks.”,
@@ -161,8 +163,8 @@ FireBest RepAdjuster",,1:adjustFactionRep:The Independents,
 improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = pirates 0
 FireBest RepAdjuster",,1:adjustFactionRep:Pirates,
 improveNothing,Allies,,,,10:embAssistance:”Nevermind.”,
-repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"AdjustRep $toImprove 0.1
+repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImprove 0.05
 AddText ""Reputation with $toImprove increased by 5"" textFriendColor
-AdjustRep $faction.id -0.05
+BumpRep $faction.id -0.1
 AddText ""Reputation with $faction.id decreased by 10"" textFriendColor",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",

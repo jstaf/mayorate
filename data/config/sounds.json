@@ -42,11 +42,11 @@
 	],
 	
 	"ilk_thermal_lance_short":[
-			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":1}
+			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":1.2}
 	],
 	
 	"ilk_thermal_lance_loop":[
-			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":1}
+			{"file":"sounds/ilk/fx/thermal_lance_loop.ogg","pitch":1,"volume":1.2}
 	],
 	
 	"ilk_pulse_gun":[
