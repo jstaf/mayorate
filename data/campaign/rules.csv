@@ -119,7 +119,8 @@ eImperium,DialogOptionSelected,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
 RepIsAtWorst $faction.id FAVORABLE",,“You've certainly helped us. I hope we can return the favor.”,"0:eRep:”Can you improve my reputation with another faction?”
-1:eShips:""""I need military support.""",
+1:eShips:""I need military support.""
+2:embMain:”Nevermind.”",
 "10:embMain:”Nevermind.”""",,,,,,
 DENIED,DialogOptionSelected,"$option == embAssistance
 RepIsAtBest $faction.id NEUTRAL",,“You need to improve your reputation with us before we will help you.”,"0:embMain:”Fine, be that way.”",
@@ -134,35 +135,76 @@ askStrikeGroup,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:strike:A str
 dontAsk,PopulateShips,,,,10:embAssistance:”Nevermind.”,
 ,,,,,,
 ughFrig,DialogOptionSelected,$option == frig,FireBest GiveFrigate,,,
-ughFreighter,DialogOptionSelected,$option == freight,FireBest GiveFreighter,,,
 ughDestroyer,DialogOptionSelected,$option == dest,FireBest GiveDestroyer,,,
 ughBig,DialogOptionSelected,$option == big,FireBest GiveHeavy,,,
 ughStrike,DialogOptionSelected,$option == strike,FireBest GiveStrikeGroup,,,
-giveFrigateLilith,GiveFrigate,,"AddText ""Added Lilith Assault frigate"" textFriendColor
+giveFrigateLilith,GiveFrigate,,"AddText ""Added Lilith Assault Frigate"" textFriendColor
 AddText ""You have spent 10 points of reputation"" textEnemyColor
 AddShip ""ilk_lilith_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveFrigateTiamat,GiveFrigate,,"AddText ""Added Tiamat frigate"" textFriendColor
-AddText ""You have spent 10 points of reputation"" textEnemyColor",,1:eShips:”Thanks.”,
-giveFreighter,GiveFreighter,,,,1:eShips:”Thanks.”,
-giveDestroyerCimeterre,GiveDestroyer,,,,1:eShips:”Thanks.”,
-giveDestroyerSafirB,GiveDestroyer,,,,1:eShips:”Thanks.”,
-giveDestroyerForaker,GiveDestroyer,,,,1:eShips:”Thanks.”,
-giveDelAzarchel,GiveHeavy,,,,1:eShips:”Thanks.”,
-giveJamaran,GiveHeavy,,,,1:eShips:”Thanks.”,
-giveRavana,GiveHeavy,,,,1:eShips:”Thanks.”,
-giveStrikeGroupSmall,GiveStrikeGroup,,,,1:eShips:”Thanks.”,
-giveStrikeGroupMedium,GiveStrikeGroup,,,,1:eShips:”Thanks.”,
+giveFrigateTiamat,GiveFrigate,,"AddText ""Added Tiamat Destroyer Escort"" textFriendColor
+AddText ""You have spent 10 points of reputation"" textEnemyColor
+AddShip ""ilk_tiamat_assault""
+BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
+giveDestroyerCimeterre,GiveDestroyer,,"AddText ""Added Cimeterre Special Weapons Destroyer"" textFriendColor
+AddText ""You have spent 15 points of reputation"" textEnemyColor
+AddShip ""ilk_cimeterre_strike""
+BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDestroyerSafirB,GiveDestroyer,,"AddText ""Added Safir B Guided Missile Destroyer"" textFriendColor
+AddText ""You have spent 15 points of reputation"" textEnemyColor
+AddShip ""ilk_safir_converted_support""
+BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDestroyerForaker,GiveDestroyer,,"AddText ""Added Foraker Escort Carrier"" textFriendColor
+AddText ""You have spent 15 points of reputation"" textEnemyColor
+AddShip ""ilk_foraker_escort""
+BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDelAzarchel,GiveHeavy,,"AddText ""Added Del Azarchel Heavy Missile Cruiser"" textFriendColor
+AddText ""You have spent 20 points of reputation"" textEnemyColor
+AddShip ""ilk_del_azarchel_artillery""
+BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveJamaran,GiveHeavy,,"AddText ""Added Jamaran Command Cruiser"" textFriendColor
+AddText ""You have spent 20 points of reputation"" textEnemyColor
+AddShip ""ilk_jamaran_support""
+BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveRavana,GiveHeavy,,"AddText ""Added Ravana Pursuit Battlecruiser"" textFriendColor
+AddText ""You have spent 20 points of reputation"" textEnemyColor
+AddShip ""ilk_ravana_pursuit""
+BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
+AddText ""You have spent 20 points of reputation"" textEnemyColor
+BumpRep $faction.id -0.2
+AddShip ""ilk_lilith_assault""
+AddShip ""ilk_lilith_assault""
+AddShip ""ilk_tiamat_assault""
+AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
+giveStrikeGroupSmallCarrier,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small carrier group has been placed under your command"" textFriendColor
+AddText ""You have spent 20 points of reputation"" textEnemyColor
+BumpRep $faction.id -0.2
+AddShip ""ilk_lilith_assault""
+AddShip ""ilk_foraker_escort""
+AddShip ""ilk_raad_wing""
+AddShip ""ilk_angha_wing""
+AddShip ""ilk_angha_wing""",,1:eShips:”Thanks.”,
+giveStrikeGroupMedium,GiveStrikeGroup,RepIsAtWorst $faction.id COOPERATIVE,"AddText ""A heavy strike group has been placed under your command"" textFriendColor
+AddText ""You have spent 30 points of reputation"" textEnemyColor
+BumpRep $faction.id -0.3
+AddShip ""ilk_del_azarchel_artillery""
+AddShip ""ilk_safir_standard""
+AddShip ""ilk_tiamat_assault""
+AddShip ""ilk_tiamat_assault""
+AddShip ""ilk_foraker_escort""
+AddShip ""ilk_angha_wing""
+AddShip ""ilk_hk_wing""",,1:eShips:”Thanks.”,
 ,,,,,,
-# Improve relations,,,,,,
+############ Improve relations,,,,,,
 whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which factions would you like us to talk to on your behalf?”,,
-improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = tritach 0
-FireBest RepAdjuster",,1:adjustFactionRep:The Tri-Tachyon Corporation,
-improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = independent 0
-FireBest RepAdjuster",,1:adjustFactionRep:The Independents,
-improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,"$toImprove = pirates 0
-FireBest RepAdjuster",,1:adjustFactionRep:Pirates,
+improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:The Tri-Tachyon Corporation,
+improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:The Independents,
+improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:Pirates,
 improveNothing,Allies,,,,10:embAssistance:”Nevermind.”,
+,,,,,,
+dipFactionSelected,,$option == dipConfirmed,fireBest RepAdjuster,,,
+,,,,,,
 repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImprove 0.05
 AddText ""Reputation with $toImprove increased by 5"" textFriendColor
 BumpRep $faction.id -0.1

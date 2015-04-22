@@ -2,9 +2,10 @@ package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,9 @@ public class AddShip extends BaseCommandPlugin {
 	} else {
             type = FleetMemberType.SHIP;
         }
-        
-        Global.getSector().getPlayerFleet().getCargo().addMothballedShip(type, ship, ship);
+        FleetMemberAPI newMember = Global.getFactory().createFleetMember(type, ship);  
+        Global.getSector().getPlayerFleet().getFleetData().addFleetMember(newMember);  
+        //Global.getSector().getPlayerFleet().getCargo().addMothballedShip(type, ship, ship);
         
         return true;
     }
