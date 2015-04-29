@@ -203,7 +203,7 @@ improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:Th
 improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:Pirates,
 improveNothing,Allies,,,,10:embAssistance:”Nevermind.”,
 ,,,,,,
-dipFactionSelected,,$option == dipConfirmed,fireBest RepAdjuster,,,
+dipFactionSelected,,$option == dipConfirmed,FireBest RepAdjuster,,,
 ,,,,,,
 repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImprove 0.05
 AddText ""Reputation with $toImprove increased by 5"" textFriendColor

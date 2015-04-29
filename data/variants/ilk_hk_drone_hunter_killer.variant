@@ -11,8 +11,7 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "ilk_graser_pd",
-        "WS0002": "ilk_graser_pd",
-        "WS0003": "ilk_ppc"
+        "WS0002": "ilk_graser_pd"
       }
     }
   ]

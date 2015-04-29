@@ -16,7 +16,7 @@ Gravitic Driver,ilk_hvy_driver,2,12000,1000,,1000,,3000,10,25,,,KINETIC,2000,,0.
 Cutting Beam,ilk_heavy_lance_left,3,0,700,1500,,,,50,0,,,ENERGY,,1500,3.9,3,2,10,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7722
 Cutting Beam,ilk_heavy_lance_right,3,0,700,1500,,,,50,0,,,ENERGY,,1500,3.9,3,2,10,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7723
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Thermal Lance,ilk_thermal_lance,3,0,600,900,,,,0,0,,,HIGH_EXPLOSIVE,,1000,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7713
+Thermal Lance,ilk_thermal_lance,3,0,600,375,,,,0,0,,,HIGH_EXPLOSIVE,,500,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7713
 Light TPC,ilk_repeater,1,0,600,,150,,0,0,0,10,1,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7714
 Grav Cannon,ilk_driver,2,0,900,,500,,,0,0,45,,KINETIC,650,,1,8,3,0.6,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",7715
 Tracer Rocket Launcher,ilk_tracer_angha,1,0,1200,,350,,,0,0,8,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,5,100,"SYSTEM, GUIDED_POOR, STRIKE, USE_VS_FRIGATES",7716

@@ -127,7 +127,7 @@
 	],
 
 	"ilk_ionbomb_fire":[
-			{"file":"sounds/ilk/fx/ionbomb_fire.ogg","pitch":1,"volume":0.9}
+			{"file":"sounds/ilk/fx/ionbomb_fire.ogg","pitch":1,"volume":0.7}
 	],
 
 	"ilk_ionbomb_detonate":[

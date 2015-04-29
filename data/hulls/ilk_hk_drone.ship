@@ -92,18 +92,6 @@
       "mount": "HIDDEN",
       "size": "SMALL",
       "type": "ENERGY"
-    },
-    {
-      "angle": 0,
-      "arc": 0,
-      "id": "WS0003",
-      "locations": [
-        6,
-        -0
-      ],
-      "mount": "HIDDEN",
-      "size": "SMALL",
-      "type": "ENERGY"
     }
   ],
   "width": 38
