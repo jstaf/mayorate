@@ -1,4 +1,7 @@
 id,trigger,conditions,script,text,options,notes
+,,,,,,
+# CMON PEOPLE THERE ARE SPOILERS HERE...,,,,,,
+,,,,,,
 #Mayorate fleet interaction dialogue,,,,,,
 greetingIlkFriendly,OpenCommLink,"$faction.id == mayorate
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
@@ -22,54 +25,16 @@ flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == mayorate","AddText ""The concourse seems oddly subdued for a port of this size. The decor is spartan, and most surfaces have been polished to a dull shine. If it weren't for the boistrous presence of visiting crews and starcaptains, the area would seem almost lifeless."" textGrayColor
 AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a low-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
 ,,,,,,
-"# ""Heir to the Throne"" Mayorate mission 1",,,,,,
-HTTTstart,,,,,3:HTTT0:Mission briefing - Heir to the Throne,
-HTTTm1,DialogOptionSelected,$option == HTTT0,,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
-HTTTm2,DialogOptionSelected,$option  == HTTT1,,"""Greetings, captain. I was hoping you could assist me with a matter of some importance.""",0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
-HTTTm3,DialogOptionSelected,$option  == HTTT2,,“They have offered me some amount of discretion in this matter. You might say that I am having family troubles.”,"0:HTTT4:“And why is that?” 
-1:HTTT4:“Surely you didn’t invite me here to discuss family gossip…”",
-HTTTm4,DialogOptionSelected,$option  == HTTT4,,"“My name is Yekaterina Karimova, Mayorate Ayatollah and rightful heir to the Duchy of Opel. My father- the Duke, is dying. I am the only true heir and yet he steadfastly refuses to recognise me as his daughter.”","0:HTTT5-1:“Why not hold elections?”
-1:HTTT5-2:“Why would your father turn his back on his own daughter?”
-2:HTTT6:""Just tell me what I need to do.”",
-HTTTm4q,DialogOptionSelected,$option  == HTTT4q,,,"0:HTTT5-1:“Why not hold elections?”
-1:HTTT5-2:“Why would your father turn his back on his own daughter?”
-2:HTTT6:""Just tell me what I need to do.”",
-HTTTm5-1,DialogOptionSelected,$option == HTTT5-1,,"“Although I am ashamed to admit it, the Duchy is a weak nation. Our military is outnumbered and obsolete. The planetary economy cannot support itself. We need a strong leader. More importantly, we need allies.”","0:HTTT5-1-1:“What do you intend to do?”
-1:HTTT5-1-1:""Besides replacing one despot with another, how do you plan to actually change anything?”",
-HTTTm5-1-1,DialogOptionSelected,$option == HTTT5-1-1,,"“I have a rather... formidable fleet at my disposal. In addition, the Mayorate has promised to modernize Opel’s industrial base and invest heavily into the local economy. In return, I answer to the authorities here and Opel becomes a Mayorate protectorate. This is a fair trade.”","0:HTTT5-1-1-1:“Can you really make that decision for your people?""
-1:HTTT4q:""Let's talk about something else.""",
-HTTTm5-1-1-1,DialogOptionSelected,$option == HTTT5-1-1-1,,“You do not know the planet as I do. You simply have to trust me when I say that an independent government would be unable to provide the same level of stability and protection that I can.”,"0:HTTT4q:""Let's talk about something else.""",
-HTTTm5-2,DialogOptionSelected,$option == HTTT5-2,,"“I am what you would call an alpha-level artificial intelligence. I am sentient, and am entirely capable of emotion and reason. I am also a human being. My father refuses to see this.”","0:HTTT5-2-1:“So what’s his problem?”
-1:HTTT5-2-2:""Humanity and AI are two entirely separate things.”",
-HTTTm5-2-1,DialogOptionSelected,$option == HTTT5-2-1,,"“The process of uploading oneself at the proper resolution is a fully destructive scan. In his mind, I died that day.”","0:HTTT5-2-1-1:""So you killed yourself. To live forever. Or something like that.” ",
-HTTTm5-2-1-1,DialogOptionSelected,$option == HTTT5-2-1-1,,"“Although it pains me to admit it, the ducal family is rather… inbred. Due to the way that the genetics work out, my family is rather prone to developing a severe and untreatable form of pancreatic cancer. As soon as I began to develop symptoms of the disease, I knew I had nothing to lose.”","0:HTTT5-2-2:""Humanity and AI are two entirely separate things.”
-1:HTTT4q:“There are other things I wanted to discuss.”",
-HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
-HTTTm6,DialogOptionSelected,$option == HTTT6,,"“Well, we have two options: negotiate with my father or take the planet by force.”","0:HTTT6-1:“How should I go about negotiating with your father?”
-1:HTTT6-2:“Tell me about the military option.”
-2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
-3:HTTT6-4:“I’m not sure I should get involved in this.” <<DECLINE MISSION>>",
-HTTTm6quiet,DialogOptionSelected,$option == HTTT6quiet,,,"0:HTTT6-1:“How should I go about negotiating with your father?”
-1:HTTT6-2:“Tell me about the military option.”
-2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
-3:HTTT6-4:“I’m not sure I should get involved in this.” <<DECLINE MISSION>>",
-HTTTm6-1,DialogOptionSelected,$option == HTTT6-1,,“He is old and stuck in his ways. You will need to convince him that I am truly his daughter and fit to rule. You should also mention the economic and military aid that only I am able to provide. Just don't mention my brother”,0:HTTT6-1-1:“Your brother?”,
-HTTTm6-1-1,DialogOptionSelected,$option == HTTT6-1-1,,"“A Path of Ludd terrorist. Completely lost his marbles. He currently rotting in a political prison on Inir. He’s alive and well, but I refuse to see him released under any circumstances. Did I already mention he’s a terrorist?”",0:HTTT6quiet:“I see.”,
-HTTTm6-2,DialogOptionSelected,$option == HTTT6-2,,"“I have at my disposal a powerful fleet and several divisions of elite troops. If you can distract and pacify what passes for the ducal fleet, I should be able to wrest control of the planet.”","0:HTTT6-2-1:“So what ‘passes for the ducal fleet,’ exactly?""",
-HTTTm6-2-1,DialogOptionSelected,$option == HTTT6-2-1,,"“Although Opel no longer has enough ships to hold and police territory outside its immediate surroundings, the ducal flagship is nothing to sneer at.”","0:HTTT6-2-2:”The flagship?”
-1:HTTT6quiet:“Let’s discuss something else.”",
-HTTTm6-2-2,DialogOptionSelected,$option == HTTT6-2-2,,"“A true Domain Paragon. Produced only two years before the Collapse, it has a number of bleeding-edge modifications. Under no circumstances should you underestimate it.”",0:HTTT6quiet:“Let’s discuss something else.”,
-HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
-FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
-HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
-,,,,,,
-,,,,,,
-embassyStart,PopulateOptions,$faction.id == mayorate,,,3:embMainStart:Contact the Mayorate consulate.,
+##########start of custom market dialogs,,,,,,
+embassyStart,PopulateOptions,"$faction.id == mayorate
+$hasMarket",,,3:embMainStart:Contact the Mayorate consulate.,
 embassy,DialogOptionSelected,$option == embMainStart,,A wayfinding station directs you to the Mayorate diplomatic compound. ,"1:embFactions:”Tell me about the other factions in the sector.”
+1:embMayorate:”I'd like to know a little bit more about your faction.”
 2:embAssistance:”I was hoping you could give me some assistance.”
 3:embHuman:”I almost expected you to be another AI.”
 4:mpoContinue:Leave",
 embassyQuiet,DialogOptionSelected,$option == embMain,,“Did you need anything else?”,"1:embFactions:”Tell me about the other factions in the sector.”
+1:embMayorate:”I'd like to know a little bit more about your faction.”
 2:embAssistance:”I was hoping you could give me some assistance.”
 3:embHuman:”I almost expected you to be another AI.”
 4:mpoContinue:Leave",
@@ -112,9 +77,9 @@ eScy,DialogOptionSelected,$option == eSc,,“Who?”,"0:eScy2:”You know, top s
 eScy22,DialogOptionSelected,$option == eScy2,,“I'm not sure what you're talking about.”,0:eMods:”Wow. So you actually have no idea they're out there.”,
 eBlackrock,DialogOptionSelected,$option == eBrdy,,,,
 eExigency,DialogOptionSelected,$option == eExi,,“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of their ships and bring back the hulls for analysis. For science... and stuff.”,0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
-eShadow,DialogOptionSelected,,,,,
-eTemplar,DialogOptionSelected,,,,,
-eImperium,DialogOptionSelected,,,,,
+eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,0:eMods:”Eh. Whatever.”,
+eTemplar,DialogOptionSelected,$option == eTem,,,,
+eImperium,DialogOptionSelected,$option == eIm,,“I thought we already killed Caesar in New Vegas. I guess we'll have to try a little harder this time around.”,0:eMods:”Eh. Whatever.”,
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
@@ -128,7 +93,6 @@ RepIsAtBest $faction.id NEUTRAL",,“You need to improve your reputation with us
 # Get ships,,,,,,
 eGiveShips,DialogOptionSelected,$option == eShips,FireAll PopulateShips,“What did you have in mind?”,,
 askFrigate,PopulateShips,RepIsAtWorst $faction.id FAVORABLE,,,1:frig:A frigate,
-askFreighter,PopulateShips,RepIsAtWorst $faction.id FAVORABLE,,,1:freight:A freighter,
 askDestroyer,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:dest:A destroyer,
 askBig,PopulateShips,RepIsAtWorst $faction.id COOPERATIVE,,,1:big:A flagship,
 askStrikeGroup,PopulateShips,RepIsAtWorst $faction.id WELCOMING,,,1:strike:A strike group,
@@ -210,3 +174,81 @@ AddText ""Reputation with $toImprove increased by 5"" textFriendColor
 BumpRep $faction.id -0.1
 AddText ""Reputation with $faction.id decreased by 10"" textFriendColor",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
+,,,,,,
+############ discuss faction lore,,,,,,
+discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you want to know?”,"3:origins:”How was the Mayorate founded?”
+3:currentSector:”Any thoughts on the current state of the sector?”
+3:goals:”What are your long term goals in the sector?”
+3:name:”What's up with the name 'Mayorate'?”
+10:embMain:”Nevermind.”",
+discussOrigins,DialogOptionSelected,$option == origins,,"“We didn't choose to live here, you know. Rasht was only meant to be a temporary sanctuary.”",1:sanctuary:”Sanctuary? From what?”,
+discussOrigins2,DialogOptionSelected,$option == sanctuary,,"“Let's just say that many of our core beliefs were... um, 'frowned upon' in the Domain. After reaching an agreement with the relevant authorities, we were allowed to continue our work here in exchange for our disappearance from Domain affairs.”","1:exiles:”So you were exiled.”
+2:beliefs:”Your beliefs?”",
+discussExile,DialogOptionSelected,$option == exiles,,"“In a manner of speaking. Many key figures still chose to remain in contact, right up until the end.”",1:exiles2:”That seems rather forgiving of them.”,
+discussExile2,DialogOptionSelected,$option == exiles2,,"“Our masters were pragmatic. If our work succeeded here, all would be forgiven and they would take the credit. If things were to go wrong, they figured we could be quietly erased from history. Either way, they won.”","1:beliefs:”So what were these beliefs you mentioned again?”
+10:embMayorate:”Huh.”",
+discussBeliefs,DialogOptionSelected,$option == beliefs,,“Artificial intelligence. Is it wrong to think we are capable of improving ourselves? Is it wrong to attempt immortality?”,1:beliefs2:”I'm not here to judge.”,
+discussBeliefs2,DialogOptionSelected,$option == beliefs2,,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”","1:exiles:”So you were exiled.”
+10:embMayorate:”True.”",
+discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is heading towards a very dark place. I know things seem bad now, but it's only going to get worse.”",1:overpopulation:”How can you possibly even pretend to know what will hapen?”,
+discussSector2,DialogOptionSelected,$option == overpopulation,,“The sector simply doesn't have the resources to support it's population. Have you ever noticed that most markets cannot meet economic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
+2:plan:”What do you plan to do about it?”
+10:embMayorate:”Well that sucks.”",
+discussPessimism,DialogOptionSelected,$option == pessimism,,“Many biospheres are already collapsing in an effort to produce enough food. Pushing the markets any more will only accelerate their collapse.”,1:pessimism2:”That seems pessimistic.”,
+discussPessimism2,DialogOptionSelected,$option == pessimism2,,“The mathematics are determinate.”,"1:plan:”What do you plan to do about it?”
+10:embMayorate:”I'll keep that in mind.”",
+discussPlan,DialogOptionSelected,$option == plan,,“Survive.”,"1:pessimism:”Why not attempt to rebuild the sector?”
+10:embMayorate:”Okay then.”",
+discussGoals,DialogOptionSelected,$option == goals,,“That's classified information. Let's just say that the Mayorate is currently focused on maintaining it's long-term survival and leave it at that.”,1:embMayorate:”Okay then.”,
+discussName,DialogOptionSelected,$option == name,,"“At the time of the collapse, the Mayorate was little more than a backwater research and terraforming colony on the surface of Ilkhanna. When contact was lost with the rest of the Domain, the colonial mayor was forced to assume control of our system.”","1:mayor:”Is that still the case?”
+10:embMayorate:”Huh, interesting.”",
+discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've moved past simple tyranny. The Mayor has largely taken a step back from affairs and council of Ayatollahs now rules the Mayorate.”,"1:mayor2:”'The' Mayor? There was only one?”
+2:ayatollah:”What's an Ayatollah?”
+10:embMayorate:”Good to know.”",
+discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh she's still around. Just not quite up to how she used to be. She felt it was in our mutual best interests to have someone else take the reins, so to speak.”",1:mayor3:”What happened to her?”,
+discussMayor3,DialogOptionSelected,$option == mayor3,,"“Unfortunately, I'm not at liberty to discose that. Serve us well, however, and she may grant you an audience.”","1:ayatollah:”What's an Ayatollah?”
+10:embMayorate:”I'll keep that in mind.”",
+discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
+discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But in the sector today, wouldn't you prefer a set of leaders who still understands how the universe is put together? The Ayatollahs govern because they know better. Who are we to question them?”","1:mayor2:”The Mayor? There was only one?”
+10:embMayorate:”Interesting.”",
+,,,,,,
+"########## ""Heir to the Throne"" Mayorate mission 1",,,,,,
+HTTTstart,,,,,3:HTTT0:Mission briefing - Heir to the Throne,
+HTTTm1,DialogOptionSelected,$option == HTTT0,,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
+HTTTm2,DialogOptionSelected,$option  == HTTT1,,"""Greetings, captain. I was hoping you could assist me with a matter of some importance.""",0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
+HTTTm3,DialogOptionSelected,$option  == HTTT2,,“They have offered me some amount of discretion in this matter. You might say that I am having family troubles.”,"0:HTTT4:“And why is that?” 
+1:HTTT4:“Surely you didn’t invite me here to discuss family gossip…”",
+HTTTm4,DialogOptionSelected,$option  == HTTT4,,"“My name is Yekaterina Karimova, Mayorate Ayatollah and rightful heir to the Duchy of Opel. My father- the Duke, is dying. I am the only true heir and yet he steadfastly refuses to recognise me as his daughter.”","0:HTTT5-1:“Why not hold elections?”
+1:HTTT5-2:“Why would your father turn his back on his own daughter?”
+2:HTTT6:""Just tell me what I need to do.”",
+HTTTm4q,DialogOptionSelected,$option  == HTTT4q,,,"0:HTTT5-1:“Why not hold elections?”
+1:HTTT5-2:“Why would your father turn his back on his own daughter?”
+2:HTTT6:""Just tell me what I need to do.”",
+HTTTm5-1,DialogOptionSelected,$option == HTTT5-1,,"“Although I am ashamed to admit it, the Duchy is a weak nation. Our military is outnumbered and obsolete. The planetary economy cannot support itself. We need a strong leader. More importantly, we need allies.”","0:HTTT5-1-1:“What do you intend to do?”
+1:HTTT5-1-1:""Besides replacing one despot with another, how do you plan to actually change anything?”",
+HTTTm5-1-1,DialogOptionSelected,$option == HTTT5-1-1,,"“I have a rather... formidable fleet at my disposal. In addition, the Mayorate has promised to modernize Opel’s industrial base and invest heavily into the local economy. In return, I answer to the authorities here and Opel becomes a Mayorate protectorate. This is a fair trade.”","0:HTTT5-1-1-1:“Can you really make that decision for your people?""
+1:HTTT4q:""Let's talk about something else.""",
+HTTTm5-1-1-1,DialogOptionSelected,$option == HTTT5-1-1-1,,“You do not know the planet as I do. You simply have to trust me when I say that an independent government would be unable to provide the same level of stability and protection that I can.”,"0:HTTT4q:""Let's talk about something else.""",
+HTTTm5-2,DialogOptionSelected,$option == HTTT5-2,,"“I am what you would call an alpha-level artificial intelligence. I am sentient, and am entirely capable of emotion and reason. I am also a human being. My father refuses to see this.”","0:HTTT5-2-1:“So what’s his problem?”
+1:HTTT5-2-2:""Humanity and AI are two entirely separate things.”",
+HTTTm5-2-1,DialogOptionSelected,$option == HTTT5-2-1,,"“The process of uploading oneself at the proper resolution is a fully destructive scan. In his mind, I died that day.”","0:HTTT5-2-1-1:""So you killed yourself. To live forever. Or something like that.” ",
+HTTTm5-2-1-1,DialogOptionSelected,$option == HTTT5-2-1-1,,"“Although it pains me to admit it, the ducal family is rather… inbred. Due to the way that the genetics work out, my family is rather prone to developing a severe and untreatable form of pancreatic cancer. As soon as I began to develop symptoms of the disease, I knew I had nothing to lose.”","0:HTTT5-2-2:""Humanity and AI are two entirely separate things.”
+1:HTTT4q:“There are other things I wanted to discuss.”",
+HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
+HTTTm6,DialogOptionSelected,$option == HTTT6,,"“Well, we have two options: negotiate with my father or take the planet by force.”","0:HTTT6-1:“How should I go about negotiating with your father?”
+1:HTTT6-2:“Tell me about the military option.”
+2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
+3:HTTT6-4:“I’m not sure I should get involved in this.” <<DECLINE MISSION>>",
+HTTTm6quiet,DialogOptionSelected,$option == HTTT6quiet,,,"0:HTTT6-1:“How should I go about negotiating with your father?”
+1:HTTT6-2:“Tell me about the military option.”
+2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
+3:HTTT6-4:“I’m not sure I should get involved in this.” <<DECLINE MISSION>>",
+HTTTm6-1,DialogOptionSelected,$option == HTTT6-1,,“He is old and stuck in his ways. You will need to convince him that I am truly his daughter and fit to rule. You should also mention the economic and military aid that only I am able to provide. Just don't mention my brother”,0:HTTT6-1-1:“Your brother?”,
+HTTTm6-1-1,DialogOptionSelected,$option == HTTT6-1-1,,"“A Path of Ludd terrorist. Completely lost his marbles. He currently rotting in a political prison on Inir. He’s alive and well, but I refuse to see him released under any circumstances. Did I already mention he’s a terrorist?”",0:HTTT6quiet:“I see.”,
+HTTTm6-2,DialogOptionSelected,$option == HTTT6-2,,"“I have at my disposal a powerful fleet and several divisions of elite troops. If you can distract and pacify what passes for the ducal fleet, I should be able to wrest control of the planet.”","0:HTTT6-2-1:“So what ‘passes for the ducal fleet,’ exactly?""",
+HTTTm6-2-1,DialogOptionSelected,$option == HTTT6-2-1,,"“Although Opel no longer has enough ships to hold and police territory outside its immediate surroundings, the ducal flagship is nothing to sneer at.”","0:HTTT6-2-2:”The flagship?”
+1:HTTT6quiet:“Let’s discuss something else.”",
+HTTTm6-2-2,DialogOptionSelected,$option == HTTT6-2-2,,"“A true Domain Paragon. Produced only two years before the Collapse, it has a number of bleeding-edge modifications. Under no circumstances should you underestimate it.”",0:HTTT6quiet:“Let’s discuss something else.”,
+HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
+FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
+HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
