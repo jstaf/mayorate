@@ -3,6 +3,7 @@ package data.scripts.plugins;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -11,6 +12,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.lazywizard.lazylib.MathUtils;
+import org.lazywizard.lazylib.combat.entities.SimpleEntity;
 import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
@@ -21,19 +23,22 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
     private static final float SPREAD = 20f;
     private static final Color LASER_COLOR = new Color(241, 139, 114, 5);
     
+    
     static {
         //add Projectile IDs here.
         SHOTGUNPROJ_IDS.add("ilk_shotgun_shot");
         SHOTGUNPROJ_IDS.add("ilk_laserhead_shot");
+        SHOTGUNPROJ_IDS.add("ilk_disruptor_shot");
     }
+    
+    CombatEngineAPI engine = Global.getCombatEngine();
 
     @Override
     public void init(CombatEngineAPI engine) {
     }
 
     @Override
-    public void advance(float amount, List<InputEventAPI> events) {
-        CombatEngineAPI engine = Global.getCombatEngine();
+    public void advance(float amount, List<InputEventAPI> events) {    
 
         if (engine.isPaused()) {
             return;
@@ -45,7 +50,13 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
             if (SHOTGUNPROJ_IDS.contains(spec)) {
                 Vector2f loc = proj.getLocation();
                 Vector2f vel = proj.getVelocity();
+                
                 switch (spec) {
+                    case "ilk_disruptor_shot":
+                        
+                        //create a new special projectile here with an external everyFrameEffect script...
+                        break;
+                    
                     case "ilk_shotgun_shot":
                         for (int i = 0; i < 18; i++) {
                             Vector2f randomVel = MathUtils.getRandomPointOnCircumference(null, MathUtils.getRandomNumberInRange(0f, 120f));

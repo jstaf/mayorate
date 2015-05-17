@@ -1,0 +1,17 @@
+{
+	"id":"ilk_disruptor_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":65.0,
+	"hitGlowRadius":50,
+	"width":13,
+	"fadeTime":0.5,
+	"fringeColor":[232,14,86,200],
+	"coreColor":[255,255,255,175],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/ilk/weapons/proj/disruptor_proj.png",
+	"onHitEffect":"data.scripts.weapons.ilk_DisruptorOnHitEffect"
+}
