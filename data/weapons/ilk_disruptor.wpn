@@ -1,5 +1,5 @@
 {
-	"id":"ilk_lightning",
+	"id":"ilk_disruptor",
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"MEDIUM",
@@ -18,7 +18,7 @@
 					   "spread":10.0,
 					   "particleSizeMin":5.0,
 					   "particleSizeRange":20.0,
-					   "particleDuration":0.6,
+					   "particleDuration":0.4,
 					   "particleCount":20,
 					   "particleColor":[232,14,86,255]},
 	"projectileSpecId":"ilk_disruptor_shot",

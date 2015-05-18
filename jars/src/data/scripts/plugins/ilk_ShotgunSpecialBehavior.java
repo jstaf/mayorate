@@ -3,7 +3,6 @@ package data.scripts.plugins;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -12,7 +11,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.lazywizard.lazylib.MathUtils;
-import org.lazywizard.lazylib.combat.entities.SimpleEntity;
 import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
@@ -55,6 +53,8 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                     case "ilk_disruptor_shot":
                         
                         //create a new special projectile here with an external everyFrameEffect script...
+                        new ilk_DisruptorSpecialProjectile(proj.getSource(), proj.getWeapon(), spec, loc, proj.getFacing(), vel);
+                        engine.removeEntity(proj);
                         break;
                     
                     case "ilk_shotgun_shot":
