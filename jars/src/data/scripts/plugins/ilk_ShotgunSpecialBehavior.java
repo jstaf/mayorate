@@ -29,10 +29,11 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
         SHOTGUNPROJ_IDS.add("ilk_disruptor_shot");
     }
     
-    CombatEngineAPI engine = Global.getCombatEngine();
+    CombatEngineAPI engine;
 
     @Override
     public void init(CombatEngineAPI engine) {
+        this.engine = engine;
     }
 
     @Override
@@ -49,14 +50,7 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                 Vector2f loc = proj.getLocation();
                 Vector2f vel = proj.getVelocity();
                 
-                switch (spec) {
-                    case "ilk_disruptor_shot":
-                        
-                        //create a new special projectile here with an external everyFrameEffect script...
-                        new ilk_DisruptorSpecialProjectile(proj.getSource(), proj.getWeapon(), spec, loc, proj.getFacing(), vel);
-                        engine.removeEntity(proj);
-                        break;
-                    
+                switch (spec) {                    
                     case "ilk_shotgun_shot":
                         for (int i = 0; i < 18; i++) {
                             Vector2f randomVel = MathUtils.getRandomPointOnCircumference(null, MathUtils.getRandomNumberInRange(0f, 120f));
