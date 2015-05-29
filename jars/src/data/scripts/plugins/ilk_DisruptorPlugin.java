@@ -15,6 +15,9 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_DisruptorPlugin extends BaseEveryFrameCombatPlugin {
 
+    private static final float ARC_DISTANCE = 60f;
+    private static final float HEAVY_ARC_DISTANCE = 100f;
+
     private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
     private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 150);
 
@@ -46,24 +49,38 @@ public class ilk_DisruptorPlugin extends BaseEveryFrameCombatPlugin {
                     return;
                 }
 
-                if (spec.contains("ilk_disruptor_shot")) {
-                    createFX(proj);
+                if (spec.contains("ilk_disruptor_shot") || spec.contains("ilk_heavy_disruptor_shot")) {
+                    createFX(proj, spec);
                 }
             }
         }
     }
 
-    private void createFX(DamagingProjectileAPI projectile) {
+    private void createFX(DamagingProjectileAPI projectile, String id) {
         //Vector2f randomPoint = MathUtils.getRandomPointOnCircumference(projectile.getLocation(), 50f);
         Vector2f loc = projectile.getLocation();
-        Vector2f vel = (Vector2f) new Vector2f(projectile.getVelocity()).normalise().scale(60f * (float) Math.random());
-        Vector2f point = Vector2f.sub(loc, vel, new Vector2f());
-        CombatEntityAPI anchor1 = new AnchoredEntity(projectile, MathUtils.getRandomPointOnCircumference(point, 5));
-        engine.spawnEmpArc(projectile.getSource(), loc, //source,  startLocation
-                anchor1, //anchor
-                anchor1, //target
-                DamageType.ENERGY, 0f, 0f, //damage stats
-                1000f, null, 5f, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
+        switch (id) {
+            case "ilk_disruptor_shot":
+                Vector2f vel = (Vector2f) new Vector2f(projectile.getVelocity()).normalise().scale(ARC_DISTANCE * (float) Math.random());
+                Vector2f point = Vector2f.sub(loc, vel, new Vector2f());
+                CombatEntityAPI anchor1 = new AnchoredEntity(projectile, MathUtils.getRandomPointOnCircumference(point, 5));
+                engine.spawnEmpArc(projectile.getSource(), loc, //source,  startLocation
+                        anchor1, //anchor
+                        anchor1, //target
+                        DamageType.ENERGY, 0f, 0f, //damage stats
+                        1000f, null, 5f, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
+                break;
+            case "ilk_heavy_disruptor_shot":
+                Vector2f vel2 = (Vector2f) new Vector2f(projectile.getVelocity()).normalise().scale(HEAVY_ARC_DISTANCE * (float) Math.random());
+                Vector2f point2 = Vector2f.sub(loc, vel2, new Vector2f());
+                CombatEntityAPI anchor2 = new AnchoredEntity(projectile, MathUtils.getRandomPointOnCircumference(point2, 5));
+                engine.spawnEmpArc(projectile.getSource(), loc, //source,  startLocation
+                        anchor2, //anchor
+                        anchor2, //target
+                        DamageType.ENERGY, 0f, 0f, //damage stats
+                        1000f, null, 5f, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
+                break;
+        }
     }
 
     @Override

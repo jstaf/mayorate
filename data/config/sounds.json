@@ -11,6 +11,10 @@
 			#{"file":"battle3.ogg","source":"sounds/ilk/music/"}
 		#]
 	},
+	
+	"ilk_heavy_disruptor_fire":[
+		{"file":"sounds/ilk/fx/heavy_disruptor.ogg","pitch":1,"volume":0.9}
+	],
 
 	"ilk_disruptor_fire":[
 		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.55}
