@@ -15,8 +15,8 @@ public class ilk_DisruptorOnHitEffect implements OnHitEffectPlugin {
     private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
     private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 200);
 
-    private static final float HEAVY_FLUX_DAMAGE = 800f;
-    private static final float FLUX_DAMAGE = 400f;
+    private static final float HEAVY_FLUX_DAMAGE = 1500f;
+    private static final float FLUX_DAMAGE = 600f;
 
     @Override
     public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, CombatEngineAPI engine) {

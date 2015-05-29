@@ -17,7 +17,7 @@
 	],
 
 	"ilk_disruptor_fire":[
-		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.55}
+		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.45}
 	],
 	
 	"bubble_shield_loop":[

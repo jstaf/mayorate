@@ -17,6 +17,9 @@ public class ilk_DisruptorPlugin extends BaseEveryFrameCombatPlugin {
 
     private static final float ARC_DISTANCE = 60f;
     private static final float HEAVY_ARC_DISTANCE = 100f;
+    
+    private static final float ARC_WIDTH = 5f;
+    private static final float HEAVY_ARC_WIDTH = 15f;
 
     private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
     private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 150);
@@ -68,17 +71,17 @@ public class ilk_DisruptorPlugin extends BaseEveryFrameCombatPlugin {
                         anchor1, //anchor
                         anchor1, //target
                         DamageType.ENERGY, 0f, 0f, //damage stats
-                        1000f, null, 5f, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
+                        1000f, null, ARC_WIDTH, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
                 break;
             case "ilk_heavy_disruptor_shot":
-                Vector2f vel2 = (Vector2f) new Vector2f(projectile.getVelocity()).normalise().scale(HEAVY_ARC_DISTANCE * (float) Math.random());
+                Vector2f vel2 = (Vector2f) new Vector2f(projectile.getVelocity()).normalise().scale(HEAVY_ARC_DISTANCE * (float) Math.random() * (float) Math.random());
                 Vector2f point2 = Vector2f.sub(loc, vel2, new Vector2f());
                 CombatEntityAPI anchor2 = new AnchoredEntity(projectile, MathUtils.getRandomPointOnCircumference(point2, 5));
                 engine.spawnEmpArc(projectile.getSource(), loc, //source,  startLocation
                         anchor2, //anchor
                         anchor2, //target
                         DamageType.ENERGY, 0f, 0f, //damage stats
-                        1000f, null, 5f, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
+                        1000f, null, HEAVY_ARC_WIDTH, EMP_FRINGE_COLOR, EMP_CORE_COLOR); //maxrange, sfx, width, fringe, core
                 break;
         }
     }

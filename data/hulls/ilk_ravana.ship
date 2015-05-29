@@ -101,8 +101,6 @@
     "stabilizedshieldemitter"
   ],
   "builtInWeapons": {
-    "WS0003": "ilk_heavy_lance_left",
-    "WS0004": "ilk_heavy_lance_right"
   },
   "center": [
     146,
