@@ -1,34 +1,51 @@
 kazi - Mayorate mod changelog
 
 v8.whatever
+
+GRAPHICS
 -Added two new portraits.
--Portraits are available for player use again.
--Added four unique interaction images (one for every market in Rahst). They kind of suck, but whatever. 
+-Mayorate portraits are available for player use again.
+-Added four unique interaction images (one for every market in Rasht). They kind of suck, but whatever. 
 -Improved Ravana sprite.
--New mount setup for Ravana.
--Changed many sfx
 -New nuke sprites (mount and launcher)
--Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand (basically much of the population are AI's, so no need for food, right?). If you're clever, you may be able to make money off of metals for once.
--Shuffled around Rasht market conditions.
+-New Mayorate flag and logo graphics.
+
+COMBAT ADDITIONS
+-Added Disruptor weapon class (2 weapons). Does moderate amounts of fragmentation damage and EMP damage. Although literally worthless vs. armor/shields, disruptor-type weapons deal hard flux damage directly to enemy ships (regardless of shield hits). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts.
 -Added Shrike Hunter-Killer Drone wing.
 -Added Afterburner ship system for Shrike wings. Grants temporary speed boost (it's a bit of a shameless copy from SRA's Neriad, I must admit).
 -Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield bypassing weapons still work fine.
--Added Graser beam buff. Grasers now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast (esp. in light mounts). Should encourage more brinksmanship. ;)
+
+CAMPAIGN ADDITIONS
 -Integrated relationships for other mod factions. 
 -Added a consulate to Mayorate worlds. You can now chat with them about other factions and stuff. (mostly just for your own amusement)
--New Mayorate flag and logo graphics.
+-Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go. The reputation "cost" is massive however. 
+-Mayorate reputation can be spent at a consulate in order to increase reputation with certain Mayorate allies/neutral factions (Mayorate reputation must be "favorable" or above". Cost is -10 Mayorate rep for +5 <other faction> rep.
+-Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand (basically much of the population are AI's, so no need for food, right?). If you're clever, you may be able to make money off of metals for once.
+-Shuffled around Rasht market conditions.
+
+BALANCE
+-Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast (esp. in light mounts). Should encourage more brinksmanship. ;)
+-Laserheads now deal directed damage (they fire in a cone pattern now... reduces friendly fire/improves killing power).
+-The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels. New fire/loop sounds as well (no more Reapers!).
+-New mount setup for Ravana. All the universal mounts are now energy mounts, center large mount is now a medium mount, two small mounts removed.
+-Other balancing stuffs that I'm forgetting about(I messed around with nearly everything, to be honest).
+
+OTHER
+-Changed many sfx to be better/more license friendly
 -All Rasht markets now have a significant amount of flavor text.
 -Improved writing for most descriptions.
--Laserheads now deal directed damage (they fire in a cone pattern now... reduces friendly fire/improves killing power).
--Balancing stuffs.
 -Probably a lot of stuff I forgot to mention.
 
+------------------------------------------------------------------------------------------------------------------------
 
 v0.8.1
 -The Mayorate no longer requires editing files to install. Just activate the mod and play.
 -Fixed an economy bug that was causing markets to be a bit more intense than they should have been.
 -Doubled Windstalker projectile health.
 -Increased Tiamat built-in weapon range by 100. 
+
+-------------------------------------------------------------------------------------------------------------------------
 
 v0.8
 -Added compatibility for 0.65a, which was a HUGE amount of effort to get working. Requires the latest versions of ShaderLib (0.9 Beta) and LazyLib (2.0), so make sure you have those!
@@ -48,6 +65,8 @@ v0.8
 -Graser damage increased 20%.
 -Laserhead explosion range decreased, damage increased.
 -Tornado AM ammo increased to 5/10 depending on mount size.
+
+-------------------------------------------------------------------------------------------------------------------------
 
 v0.7.1
 Giving credit where it's due, the overwhelming majority of the changes this patch are by Dark.Revenant. I made the material maps and the majority of the "phase leap" system. Most, if not all, balance and code changes are by Dark.Revenant.
@@ -83,6 +102,8 @@ Giving credit where it's due, the overwhelming majority of the changes this patc
 
 There is now a public Github repository at [url]https://github.com/kazi11/mayorate[/url]. Feel free to submit a pull request if you feel you have something clever to add. 
 
+-------------------------------------------------------------------------------------------------------------------------
+
 v0.7
 -Added Foraker-class destroyer. The Foraker is a light carrier with enough ordanance to not be a complete bore to fly, but is very poor defensively. 
 -Added Safir-class freighter and conversion (destroyer escort). The Safir is quite an average shipping solution, but it still beats using Buffaloes, right? The conversion makes an okay missile support platform. Just don't try to actually take it into heavy combat. 
@@ -115,6 +136,8 @@ v0.7
 -Miscellaneous balance changes and other fixes not worth mentioning.
 
 NOTE: Mod now requires ShaderLib.
+
+-------------------------------------------------------------------------------------------------------------------------
 
 v0.6
 -Improved Del Azarchel, Cimeterre, and Lilith sprites.

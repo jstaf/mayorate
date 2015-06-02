@@ -13,11 +13,11 @@
 	},
 	
 	"ilk_heavy_disruptor_fire":[
-		{"file":"sounds/ilk/fx/heavy_disruptor.ogg","pitch":1,"volume":0.9}
+		{"file":"sounds/ilk/fx/heavy_disruptor.ogg","pitch":1,"volume":0.75}
 	],
 
 	"ilk_disruptor_fire":[
-		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.45}
+		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.5}
 	],
 	
 	"bubble_shield_loop":[
@@ -25,11 +25,13 @@
 	],
 	
 	"ilk_hvy_driver_scream":[
-			{"file":"sounds/ilk/fx/hvy_driver_scream.ogg","pitch":1,"volume":0.75}
+			{"file":"sounds/ilk/fx/hvy_driver_scream.ogg","pitch":1,"volume":0.4}
 	],
 	
 	"ilk_hvy_driver_fire":[
-			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":1,"volume":0.75}
+			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":1,"volume":0.35},
+			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":1,"volume":0.37},
+			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":0.98,"volume":0.35}
 	],
 	
 	"ilk_lanceL_start":[

@@ -1,7 +1,7 @@
 {
 	"id":"ilk_hvy_driver",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
-	"type":"ENERGY", # Change to ballistic once done
+	"type":"BALLISTIC", # Change to ballistic once done
 	"size":"LARGE",
 	"displayArcRadius":800,
 	"turretSprite":"graphics/ilk/weapons/hvy_driver.png",
@@ -23,7 +23,8 @@
 					   "particleCount":25,
 					   "particleColor":[255,125,75,255]},	
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"interruptibleBurst":false,
 	"projectileSpecId":"ilk_driver_shot",  # projectile that will be fired
-	"fireSoundOne":"ilk_hvy_driver_scream",
+	#"fireSoundOne":"ilk_hvy_driver_scream",
 	"fireSoundTwo":"ilk_hvy_driver_fire",
 }

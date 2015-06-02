@@ -246,7 +246,7 @@
       ],
       "mount": "TURRET",
       "size": "LARGE",
-      "type": "ENERGY"
+      "type": "UNIVERSAL"
     },
     {
       "angle": 40,
