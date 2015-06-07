@@ -217,7 +217,7 @@ discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course 
 ,,,,,,
 "########## ""Heir to the Throne"" Mayorate mission 1",,,,,,
 HTTTstart,,,,,3:HTTT0:Mission briefing - Heir to the Throne,
-HTTTm1,DialogOptionSelected,$option == HTTT0,,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
+HTTTm1,DialogOptionSelected,$option == HTTT0,SetShortcut marketLeave null,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
 HTTTm2,DialogOptionSelected,$option  == HTTT1,,"""Greetings, captain. I was hoping you could assist me with a matter of some importance.""",0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
 HTTTm3,DialogOptionSelected,$option  == HTTT2,,“They have offered me some amount of discretion in this matter. You might say that I am having family troubles.”,"0:HTTT4:“And why is that?” 
 1:HTTT4:“Surely you didn’t invite me here to discuss family gossip…”",
@@ -256,5 +256,11 @@ HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
 ,,,,,,
-ilk_fleetSpawnTestCheck,PopulateOptions,$hasMarket,,,3:spawnTest:Spawn uber death fleet,
-ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet “encounter” “ilk_del_azarchel_artillery” “ilk_cimeterre_strike”,,,
+ilk_TestCheck,PopulateOptions,"$hasMarket
+$global.isDevMode",,,3:ruleTest:Test Custom Rules,
+ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
+1:spawnTest:SpawnHostileFleet
+1:addShipTest:AddShip",
+ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet encounter death_fleet,,0:mpoContinue:Leave,
+ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep “mayorate” -0.2,,0:mpoContinue:Leave,
+ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,,
