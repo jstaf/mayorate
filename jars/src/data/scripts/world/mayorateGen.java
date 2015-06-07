@@ -37,6 +37,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
 	FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
         
         player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
+        player.setRelationship("encounter", RepLevel.VENGEFUL);
         
         mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
         mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);

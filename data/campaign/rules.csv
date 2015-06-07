@@ -25,6 +25,9 @@ flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == mayorate","AddText ""The concourse seems oddly subdued for a port of this size. The decor is spartan, and most surfaces have been polished to a dull shine. If it weren't for the boistrous presence of visiting crews and starcaptains, the area would seem almost lifeless."" textGrayColor
 AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a low-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
 ,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
 ##########start of custom market dialogs,,,,,,
 embassyStart,PopulateOptions,"$faction.id == mayorate
 $hasMarket",,,3:embMainStart:Contact the Mayorate consulate.,
@@ -252,3 +255,6 @@ HTTTm6-2-2,DialogOptionSelected,$option == HTTT6-2-2,,"“A true Domain Paragon.
 HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
+,,,,,,
+ilk_fleetSpawnTestCheck,PopulateOptions,$hasMarket,,,3:spawnTest:Spawn uber death fleet,
+ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet “encounter” “ilk_del_azarchel_artillery” “ilk_cimeterre_strike”,,,

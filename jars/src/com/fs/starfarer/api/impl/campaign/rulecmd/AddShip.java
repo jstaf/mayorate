@@ -20,6 +20,7 @@ public class AddShip extends BaseCommandPlugin {
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
         
         String ship = params.get(0).getString(memoryMap);
+        
         FleetMemberType type;
 	if (ship.endsWith("_wing")) {
             type = FleetMemberType.FIGHTER_WING; 

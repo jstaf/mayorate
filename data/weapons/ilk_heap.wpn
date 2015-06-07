@@ -26,6 +26,6 @@
 					   "particleDuration":0.12,
 					   "particleCount":12,
 					   "particleColor":[255,185,215,215]},
-	"projectileSpecId":"mjolnir_shot",  # projectile that will be fired
+	"projectileSpecId":"ilk_heap_shot",  # projectile that will be fired
 	"fireSoundTwo":"mjolnir_fire",	
 }

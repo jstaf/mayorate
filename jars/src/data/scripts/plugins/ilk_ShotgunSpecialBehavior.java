@@ -39,7 +39,7 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
     @Override
     public void advance(float amount, List<InputEventAPI> events) {    
 
-        if (engine.isPaused()) {
+        if (engine == null || engine.isPaused()) {
             return;
         }
 
