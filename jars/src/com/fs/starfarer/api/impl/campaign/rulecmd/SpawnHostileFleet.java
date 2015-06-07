@@ -4,15 +4,11 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.combat.BattleCreationContext;
+import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.Misc.Token;
-import com.fs.starfarer.api.util.Misc.TokenType;
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -33,23 +29,26 @@ public class SpawnHostileFleet extends BaseCommandPlugin {
         CampaignFleetAPI fleet = Global.getSector().createFleet(faction, fleetCompType);
         CampaignFleetAPI player = Global.getSector().getPlayerFleet();
         player.getContainingLocation().spawnFleet(player, 0, 0, fleet);
-        fleet.addAssignment(FleetAssignment.INTERCEPT, player, 10f);
-        
-        // allow immediate attack
-        player.setNoEngaging(0f);       
-        
-        // make the other fleet want your blood
-        MemoryAPI mem = fleet.getMemoryWithoutUpdate();
-        mem.set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, true);
-        mem.set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
         
         // add new fleet's id to memory, so we can check to see if it's still alive later and do stuff
         String fleetID = fleet.getId();
         Global.getSector().getMemory().set("$SPAWNED_FLEET_ID", fleetID);
         
-        // start the fireworks     
-        //dialog.dismiss();
-        //Global.getSector().setPaused(false);
+        // allow immediate attack
+        player.setNoEngaging(0f);       
+        fleet.setNoEngaging(0f);
+        
+        // make the other fleet want your blood
+        MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+        mem.set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, true);
+        mem.set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
+        fleet.addAssignment(FleetAssignment.INTERCEPT, player, 10f);
+        
+        // start the fireworks         
+        dialog.dismiss();
+        Global.getSector().setPaused(false);
+        
+        //dialog.startBattle(new BattleCreationContext(player, FleetGoal.ATTACK, fleet, FleetGoal.ATTACK));
         
         return true;
     }

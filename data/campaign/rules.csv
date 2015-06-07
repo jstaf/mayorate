@@ -237,7 +237,7 @@ HTTTm5-2,DialogOptionSelected,$option == HTTT5-2,,"“I am what you would call a
 HTTTm5-2-1,DialogOptionSelected,$option == HTTT5-2-1,,"“The process of uploading oneself at the proper resolution is a fully destructive scan. In his mind, I died that day.”","0:HTTT5-2-1-1:""So you killed yourself. To live forever. Or something like that.” ",
 HTTTm5-2-1-1,DialogOptionSelected,$option == HTTT5-2-1-1,,"“Although it pains me to admit it, the ducal family is rather… inbred. Due to the way that the genetics work out, my family is rather prone to developing a severe and untreatable form of pancreatic cancer. As soon as I began to develop symptoms of the disease, I knew I had nothing to lose.”","0:HTTT5-2-2:""Humanity and AI are two entirely separate things.”
 1:HTTT4q:“There are other things I wanted to discuss.”",
-HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
+HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,BumpRep “mayorate” -0.02,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
 HTTTm6,DialogOptionSelected,$option == HTTT6,,"“Well, we have two options: negotiate with my father or take the planet by force.”","0:HTTT6-1:“How should I go about negotiating with your father?”
 1:HTTT6-2:“Tell me about the military option.”
 2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
@@ -256,11 +256,10 @@ HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
 ,,,,,,
-ilk_TestCheck,PopulateOptions,"$hasMarket
-$global.isDevMode",,,3:ruleTest:Test Custom Rules,
+ilk_TestCheck,PopulateOptions,$global.isDevMode,,,3:ruleTest:Test Custom Rules,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
 1:spawnTest:SpawnHostileFleet
 1:addShipTest:AddShip",
 ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet encounter death_fleet,,0:mpoContinue:Leave,
-ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep “mayorate” -0.2,,0:mpoContinue:Leave,
+ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id -0.2,,0:mpoContinue:Leave,
 ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,,
