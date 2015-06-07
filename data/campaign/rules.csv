@@ -105,47 +105,29 @@ ughFrig,DialogOptionSelected,$option == frig,FireBest GiveFrigate,,,
 ughDestroyer,DialogOptionSelected,$option == dest,FireBest GiveDestroyer,,,
 ughBig,DialogOptionSelected,$option == big,FireBest GiveHeavy,,,
 ughStrike,DialogOptionSelected,$option == strike,FireBest GiveStrikeGroup,,,
-giveFrigateLilith,GiveFrigate,,"AddText ""Added Lilith Assault Frigate"" textFriendColor
-AddText ""You have spent 10 points of reputation"" textEnemyColor
-AddShip ""ilk_lilith_assault""
+giveFrigateLilith,GiveFrigate,,"AddShip ""ilk_lilith_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveFrigateTiamat,GiveFrigate,,"AddText ""Added Tiamat Destroyer Escort"" textFriendColor
-AddText ""You have spent 10 points of reputation"" textEnemyColor
-AddShip ""ilk_tiamat_assault""
+giveFrigateTiamat,GiveFrigate,,"AddShip ""ilk_tiamat_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveDestroyerCimeterre,GiveDestroyer,,"AddText ""Added Cimeterre Special Weapons Destroyer"" textFriendColor
-AddText ""You have spent 15 points of reputation"" textEnemyColor
-AddShip ""ilk_cimeterre_strike""
+giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_strike""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDestroyerSafirB,GiveDestroyer,,"AddText ""Added Safir B Guided Missile Destroyer"" textFriendColor
-AddText ""You have spent 15 points of reputation"" textEnemyColor
-AddShip ""ilk_safir_converted_support""
+giveDestroyerSafirB,GiveDestroyer,,"AddShip ""ilk_safir_converted_support""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDestroyerForaker,GiveDestroyer,,"AddText ""Added Foraker Escort Carrier"" textFriendColor
-AddText ""You have spent 15 points of reputation"" textEnemyColor
-AddShip ""ilk_foraker_escort""
+giveDestroyerForaker,GiveDestroyer,,"AddShip ""ilk_foraker_escort""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDelAzarchel,GiveHeavy,,"AddText ""Added Del Azarchel Heavy Missile Cruiser"" textFriendColor
-AddText ""You have spent 20 points of reputation"" textEnemyColor
-AddShip ""ilk_del_azarchel_artillery""
+giveDelAzarchel,GiveHeavy,,"AddShip ""ilk_del_azarchel_artillery""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveJamaran,GiveHeavy,,"AddText ""Added Jamaran Command Cruiser"" textFriendColor
-AddText ""You have spent 20 points of reputation"" textEnemyColor
-AddShip ""ilk_jamaran_support""
+giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_support""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveRavana,GiveHeavy,,"AddText ""Added Ravana Pursuit Battlecruiser"" textFriendColor
-AddText ""You have spent 20 points of reputation"" textEnemyColor
-AddShip ""ilk_ravana_pursuit""
+giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_pursuit""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
 giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
-AddText ""You have spent 20 points of reputation"" textEnemyColor
 BumpRep $faction.id -0.2
 AddShip ""ilk_lilith_assault""
 AddShip ""ilk_lilith_assault""
 AddShip ""ilk_tiamat_assault""
 AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
 giveStrikeGroupSmallCarrier,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small carrier group has been placed under your command"" textFriendColor
-AddText ""You have spent 20 points of reputation"" textEnemyColor
 BumpRep $faction.id -0.2
 AddShip ""ilk_lilith_assault""
 AddShip ""ilk_foraker_escort""
@@ -153,7 +135,6 @@ AddShip ""ilk_raad_wing""
 AddShip ""ilk_angha_wing""
 AddShip ""ilk_angha_wing""",,1:eShips:”Thanks.”,
 giveStrikeGroupMedium,GiveStrikeGroup,RepIsAtWorst $faction.id COOPERATIVE,"AddText ""A heavy strike group has been placed under your command"" textFriendColor
-AddText ""You have spent 30 points of reputation"" textEnemyColor
 BumpRep $faction.id -0.3
 AddShip ""ilk_del_azarchel_artillery""
 AddShip ""ilk_safir_standard""
@@ -165,17 +146,19 @@ AddShip ""ilk_hk_wing""",,1:eShips:”Thanks.”,
 ,,,,,,
 ############ Improve relations,,,,,,
 whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which factions would you like us to talk to on your behalf?”,,
-improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:The Tri-Tachyon Corporation,
-improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:The Independents,
-improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipConfirmed:Pirates,
+improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipTriTach:The Tri-Tachyon Corporation,
+improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipIndependent:The Independents,
+improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipPirates:Pirates,
 improveNothing,Allies,,,,10:embAssistance:”Nevermind.”,
-,,,,,,
-dipFactionSelected,,$option == dipConfirmed,FireBest RepAdjuster,,,
+ttbump,DialogOptionSelected,$option == dipTriTach,"$toImprove = tritachyon
+FireBest RepAdjuster",,,
+pirbump,DialogOptionSelected,$option == dipIndependent,"$toImprove = independent
+FireBest RepAdjuster",,,
+indbump,DialogOptionSelected,$option == dipPirates,"$toImprove = pirates
+FireBest RepAdjuster",,,
 ,,,,,,
 repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImprove 0.05
-AddText ""Reputation with $toImprove increased by 5"" textFriendColor
-BumpRep $faction.id -0.1
-AddText ""Reputation with $faction.id decreased by 10"" textFriendColor",,1:eRep:”Thanks.”,
+BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
 ,,,,,,
 ############ discuss faction lore,,,,,,
@@ -259,7 +242,15 @@ HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Alt
 ilk_TestCheck,PopulateOptions,$global.isDevMode,,,3:ruleTest:Test Custom Rules,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
 1:spawnTest:SpawnHostileFleet
-1:addShipTest:AddShip",
+1:addShipTest:AddShip
+1:addConditionTest:AddMarketCondition
+1:removeConditionTest:RemoveMarketCondition
+1:setOwnerTest:SetEntityOwner
+1:setImageTest:SetInteractionImage",
 ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet encounter death_fleet,,0:mpoContinue:Leave,
-ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id -0.2,,0:mpoContinue:Leave,
-ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,,
+ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:mpoContinue:Leave,
+ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:mpoContinue:Leave,
+ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition indoctrination,,0:mpoContinue:Leave,
+ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition indoctrination,,0:mpoContinue:Leave,
+ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:mpoContinue:Leave,
+ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:mpoContinue:Leave,

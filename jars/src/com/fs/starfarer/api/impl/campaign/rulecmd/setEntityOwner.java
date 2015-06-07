@@ -7,7 +7,7 @@ import com.fs.starfarer.api.util.Misc;
 import java.util.List;
 import java.util.Map;
 
-public class setEntityOwner extends BaseCommandPlugin {
+public class SetEntityOwner extends BaseCommandPlugin {
 
     // param 1 is the faction youd like to designate as the current owner of what you're interacting with
     @Override
