@@ -1,7 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.rulecmd;
 
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.util.Misc;
 import java.util.List;
@@ -17,8 +21,13 @@ public class SetEntityOwner extends BaseCommandPlugin {
         String faction = params.get(0).getString(memoryMap);
         
         interactor.setFaction(faction);
-        if (interactor.getMarket() != null) {
-            interactor.getMarket().setFactionId(faction);
+        MarketAPI market = interactor.getMarket();
+        if (market != null) {
+            market.setFactionId(faction);
+            FactionAPI actualFaction = Global.getSector().getFaction(faction);
+            for (SubmarketAPI sub : market.getSubmarketsCopy()) {
+                sub.setFaction(actualFaction);
+            }
         }
         
         return true;
