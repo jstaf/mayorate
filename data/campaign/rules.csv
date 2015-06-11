@@ -62,8 +62,8 @@ eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were
 eTriTachyon,DialogOptionSelected,$option == eTach,,"“It's true. We have indeed been known to cooperate with them from time to time. Scandalous, right?”",1:embFactionsQuiet:”Let's talk about something else.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“Although they may not know it, the Independents are truly the lifeblood of the sector. If only more of them signed on with us... lets just say we could accomplish some truly great things!” *chuckles ominously*","1:embFactionsQuiet:”Careful, you're making me nervous.”",
-eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being persecuted! What about my religious freedoms?' or whatever. Truly, they have no class.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
-eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”Sounds like you're already becoming the best of friends.”,
+eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being persecuted! What about my religious freedoms?' or whatever. What a bunch of losers.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
+eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”Sounds like you're already fast friends.”,
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
@@ -79,7 +79,7 @@ embModFactionsLeave,PopulateModFactions,,,,10:embFactionsQuiet:”Let's talk abo
 eScy,DialogOptionSelected,$option == eSc,,“Who?”,"0:eScy2:”You know, top secret pirates and masters of disguise?”",
 eScy22,DialogOptionSelected,$option == eScy2,,“I'm not sure what you're talking about.”,0:eMods:”Wow. So you actually have no idea they're out there.”,
 eBlackrock,DialogOptionSelected,$option == eBrdy,,,,
-eExigency,DialogOptionSelected,$option == eExi,,“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of their ships and bring back the hulls for analysis. For science... and stuff.”,0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
+eExigency,DialogOptionSelected,$option == eExi,,"“We're still not entirely sure how their ships can be so... blue. We'll need you to shoot down a couple of their ships and bring back the hulls for uh, science.”",0:eMods:”Hmmm... this 'science' thing sounds slightly dangerous if you ask me.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,0:eMods:”Eh. Whatever.”,
 eTemplar,DialogOptionSelected,$option == eTem,,,,
 eImperium,DialogOptionSelected,$option == eIm,,“I thought we already killed Caesar in New Vegas. I guess we'll have to try a little harder this time around.”,0:eMods:”Eh. Whatever.”,
@@ -239,18 +239,33 @@ HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
 ,,,,,,
-ilk_TestCheck,PopulateOptions,$global.isDevMode,,,3:ruleTest:Test Custom Rules,
+,,,,,,
+ilk_TestCheck,PopulateOptions,$global.isDevMode,,,3:ruleTest:<<devmode>> Test custom commands,
+# page 2,,,,,,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
-1:spawnTest:SpawnHostileFleet
 1:addShipTest:AddShip
 1:addConditionTest:AddMarketCondition
 1:removeConditionTest:RemoveMarketCondition
 1:setOwnerTest:SetEntityOwner
-1:setImageTest:SetInteractionImage",
-ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet encounter death_fleet,,0:mpoContinue:Leave,
+1:setImageTest:SetInteractionImage
+10:testList2:<<Next page>>",
 ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:mpoContinue:Leave,
 ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:mpoContinue:Leave,
 ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition indoctrination,,0:mpoContinue:Leave,
 ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition indoctrination,,0:mpoContinue:Leave,
 ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:mpoContinue:Leave,
 ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:mpoContinue:Leave,
+,,,,,,
+# page 2,,,,,,
+ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:spawnTest:SpawnHostileFleet
+1:killFleetTest:KillFleet
+1:isFleetAliveTest:IsFleetAlive
+1:addTrackedShipToFleetTest:AddTrackedShipToFleet
+9:testList:<<Previous page>>
+10:mpoContinue:Leave",
+ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala $TEST_FLEET_ID,,0:mpoContinue:Leave,
+ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $TEST_FLEET_ID,,0:mpoContinue:Leave,
+ilk_isFleetAliveTest,DialogOptionSelected,$option == isFleetAliveTest,FireBest FleetAliveTest,,,
+ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $TEST_FLEET_ID,AddText “TRUE”,,0:mpoContinue:Leave,
+ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $TEST_FLEET_ID,AddText “FALSE”,,0:mpoContinue:Leave,
+ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet “ilk_tiamat_assault” $TEST_FLEET_ID $TEST_SHIP_ID,,0:mpoContinue:Leave,

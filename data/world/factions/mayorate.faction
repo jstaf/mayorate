@@ -226,5 +226,24 @@
             "suicidal": 1,
             "fearless": 1
         }
-    }
+    },
+	"fleetCompositions":{
+		"death_fleet":{
+			"displayName":"Fleet",
+			"maxFleetPoints":110,
+			"daysWorthOfSupplies":[50, 70],
+			"lyWorthOfFuel":[20, 40],
+			"extraCrewPercent":[80, 80],
+			"marinesPercent":[40, 40],
+			"ships":{
+				"ilk_ravana_pursuit":[1, 1],
+				"ilk_del_azarchel_artillery":[1, 2],
+				"ilk_foraker_escort":[1, 2],
+				"ilk_cimeterre_strike":[2, 3],
+				"ilk_lilith_assault":[3, 6],
+				"ilk_raad_wing":[1, 3],
+				"ilk_angha_wing":[1, 2]
+			}
+		}
+	}
 }
