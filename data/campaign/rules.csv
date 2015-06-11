@@ -4,23 +4,29 @@ id,trigger,conditions,script,text,options,notes
 ,,,,,,
 #Mayorate fleet interaction dialogue,,,,,,
 greetingIlkFriendly,OpenCommLink,"$faction.id == mayorate
-$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+$faction.friendlyToPlayer
+!$cfai_makeHostile","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Glad you're on our side.""",,
 greetingIlkHostileWeaker,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,The Mayorate commander does not respond to your hail. ,cutCommLink:Cut the comm link,
+$relativeStrength < 0
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,The Mayorate commander does not respond to your hail. ,cutCommLink:Cut the comm link,
 greetingIlkHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
-$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""",cutCommLink:Cut the comm link,
+$weakerThanPlayerButHolding
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""",cutCommLink:Cut the comm link,
 greetingIlkHostileStronger,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
-$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""We know what you've done. I'm going to enjoy watching you die.""",cutCommLink:Cut the comm link,
+$relativeStrength >= 0
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""We know what you've done. I'm going to enjoy watching you die.""",cutCommLink:Cut the comm link,
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
-$faction.neutralToPlayer","$menuState = fleetConvMain 0
+$faction.neutralToPlayer
+!$cfai_makeHostile","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",,
-#,,"$faction.id == mayorate
-",$ignorePlayerCommRequests = true 1,,,
+greetingIlkTargetedHostile,OpenCommLink,"$faction.id == mayorate
+$cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,"“Done running? It doesn't matter. I think it's safe to say you won't be getting out of this one.”","1:cutCommLink:”We'll see about that.”
+5:cutCommLink:Cut the comm link",
 ,,,,,,
 #Mayorate market interaction dialogue,,,,,,
 flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
