@@ -20,6 +20,8 @@ public class SetInteractionImage extends BaseCommandPlugin  {
         
         interactor.setInteractionImage(category, key);
         
+        dialog.getVisualPanel().showImageVisual(interactor.getCustomInteractionDialogImageVisual());
+        
         return true;
     }
 }
