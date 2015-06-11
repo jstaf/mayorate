@@ -19,6 +19,8 @@ $relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""We know what you'v
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",,
+#,,"$faction.id == mayorate
+",$ignorePlayerCommRequests = true 1,,,
 ,,,,,,
 #Mayorate market interaction dialogue,,,,,,
 flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
@@ -37,10 +39,10 @@ embassy,DialogOptionSelected,$option == embMainStart,,A wayfinding station direc
 3:embHuman:”I almost expected you to be another AI.”
 4:mpoContinue:Leave",
 embassyQuiet,DialogOptionSelected,$option == embMain,,“Did you need anything else?”,"1:embFactions:”Tell me about the other factions in the sector.”
-1:embMayorate:”I'd like to know a little bit more about your faction.”
-2:embAssistance:”I was hoping you could give me some assistance.”
-3:embHuman:”I almost expected you to be another AI.”
-4:mpoContinue:Leave",
+1:embMayorate:""”I'd like to know a little bit more about your faction.”",
+"2:embAssistance:""”I was hoping you could give me some assistance.”""",,,,,,
+3:embHuman:”I almost expected you to be another AI.”,,,,,,
+"4:mpoContinue:Leave""",,,,,,
 embassyHuman,DialogOptionSelected,$option == embHuman,,"“To be honest, most people find AIs rather, ah... intimidating. In an effort to avoid any misunderstandings, the majority of our diplomatic staff and comm officers are human.”",1:embMain:”Ah. I can see how that would make sense.”,
 ,,,,,,
 #################### Discuss faction reps,,,,,,
@@ -63,7 +65,7 @@ eTriTachyon,DialogOptionSelected,$option == eTach,,"“It's true. We have indeed
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“Although they may not know it, the Independents are truly the lifeblood of the sector. If only more of them signed on with us... lets just say we could accomplish some truly great things!” *chuckles ominously*","1:embFactionsQuiet:”Careful, you're making me nervous.”",
 eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being persecuted! What about my religious freedoms?' or whatever. What a bunch of losers.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
-eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”Sounds like you're already fast friends.”,
+eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting in their backyard, but we try to keep things friendly.”",1:embFactionsQuiet:”I see you're already becoming fast friends.”,
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
@@ -177,7 +179,7 @@ discussBeliefs,DialogOptionSelected,$option == beliefs,,“Artificial intelligen
 discussBeliefs2,DialogOptionSelected,$option == beliefs2,,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”","1:exiles:”So you were exiled.”
 10:embMayorate:”True.”",
 discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is heading towards a very dark place. I know things seem bad now, but it's only going to get worse.”",1:overpopulation:”How can you possibly even pretend to know what will hapen?”,
-discussSector2,DialogOptionSelected,$option == overpopulation,,“The sector simply doesn't have the resources to support it's population. Have you ever noticed that most markets cannot meet economic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
+discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer meet demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
 2:plan:”What do you plan to do about it?”
 10:embMayorate:”Well that sucks.”",
 discussPessimism,DialogOptionSelected,$option == pessimism,,“Many biospheres are already collapsing in an effort to produce enough food. Pushing the markets any more will only accelerate their collapse.”,1:pessimism2:”That seems pessimistic.”,
@@ -185,14 +187,14 @@ discussPessimism2,DialogOptionSelected,$option == pessimism2,,“The mathematics
 10:embMayorate:”I'll keep that in mind.”",
 discussPlan,DialogOptionSelected,$option == plan,,“Survive.”,"1:pessimism:”Why not attempt to rebuild the sector?”
 10:embMayorate:”Okay then.”",
-discussGoals,DialogOptionSelected,$option == goals,,“That's classified information. Let's just say that the Mayorate is currently focused on maintaining it's long-term survival and leave it at that.”,1:embMayorate:”Okay then.”,
+discussGoals,DialogOptionSelected,$option == goals,,“Let's just say that the Mayorate is currently focused on maintaining it's long-term survival and leave it at that.”,1:embMayorate:”Okay then.”,
 discussName,DialogOptionSelected,$option == name,,"“At the time of the collapse, the Mayorate was little more than a backwater research and terraforming colony on the surface of Ilkhanna. When contact was lost with the rest of the Domain, the colonial mayor was forced to assume control of our system.”","1:mayor:”Is that still the case?”
 10:embMayorate:”Huh, interesting.”",
 discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've moved past simple tyranny. The Mayor has largely taken a step back from affairs and council of Ayatollahs now rules the Mayorate.”,"1:mayor2:”'The' Mayor? There was only one?”
 2:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”Good to know.”",
 discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh she's still around. Just not quite up to how she used to be. She felt it was in our mutual best interests to have someone else take the reins, so to speak.”",1:mayor3:”What happened to her?”,
-discussMayor3,DialogOptionSelected,$option == mayor3,,"“Unfortunately, I'm not at liberty to discose that. Serve us well, however, and she may grant you an audience.”","1:ayatollah:”What's an Ayatollah?”
+discussMayor3,DialogOptionSelected,$option == mayor3,,"“Unfortunately, I'm not at liberty to discose that.”","1:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”I'll keep that in mind.”",
 discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
 discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But in the sector today, wouldn't you prefer a set of leaders who still understands how the universe is put together? The Ayatollahs govern because they know better. Who are we to question them?”","1:mayor2:”The Mayor? There was only one?”
@@ -220,7 +222,7 @@ HTTTm5-2,DialogOptionSelected,$option == HTTT5-2,,"“I am what you would call a
 HTTTm5-2-1,DialogOptionSelected,$option == HTTT5-2-1,,"“The process of uploading oneself at the proper resolution is a fully destructive scan. In his mind, I died that day.”","0:HTTT5-2-1-1:""So you killed yourself. To live forever. Or something like that.” ",
 HTTTm5-2-1-1,DialogOptionSelected,$option == HTTT5-2-1-1,,"“Although it pains me to admit it, the ducal family is rather… inbred. Due to the way that the genetics work out, my family is rather prone to developing a severe and untreatable form of pancreatic cancer. As soon as I began to develop symptoms of the disease, I knew I had nothing to lose.”","0:HTTT5-2-2:""Humanity and AI are two entirely separate things.”
 1:HTTT4q:“There are other things I wanted to discuss.”",
-HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,BumpRep “mayorate” -0.02,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
+HTTTm5-2-2,DialogOptionSelected,$option == HTTT5-2-2,BumpRep “mayorate” -0.03,"“No, they are not. And you sound like a Luddite.”",0:HTTT4q:“There are other things I wanted to discuss.”,
 HTTTm6,DialogOptionSelected,$option == HTTT6,,"“Well, we have two options: negotiate with my father or take the planet by force.”","0:HTTT6-1:“How should I go about negotiating with your father?”
 1:HTTT6-2:“Tell me about the military option.”
 2:HTTT6-3:“Okay, I think I know what I need to do.” <<ACCEPT MISSION>>
@@ -231,7 +233,7 @@ HTTTm6quiet,DialogOptionSelected,$option == HTTT6quiet,,,"0:HTTT6-1:“How shoul
 3:HTTT6-4:“I’m not sure I should get involved in this.” <<DECLINE MISSION>>",
 HTTTm6-1,DialogOptionSelected,$option == HTTT6-1,,“He is old and stuck in his ways. You will need to convince him that I am truly his daughter and fit to rule. You should also mention the economic and military aid that only I am able to provide. Just don't mention my brother”,0:HTTT6-1-1:“Your brother?”,
 HTTTm6-1-1,DialogOptionSelected,$option == HTTT6-1-1,,"“A Path of Ludd terrorist. Completely lost his marbles. He currently rotting in a political prison on Inir. He’s alive and well, but I refuse to see him released under any circumstances. Did I already mention he’s a terrorist?”",0:HTTT6quiet:“I see.”,
-HTTTm6-2,DialogOptionSelected,$option == HTTT6-2,,"“I have at my disposal a powerful fleet and several divisions of elite troops. If you can distract and pacify what passes for the ducal fleet, I should be able to wrest control of the planet.”","0:HTTT6-2-1:“So what ‘passes for the ducal fleet,’ exactly?""",
+HTTTm6-2,DialogOptionSelected,$option == HTTT6-2,,"“I have at my disposal a powerful fleet and several divisions of elite troops. If you can pacify what passes for the ducal fleet, I should be able to wrest control of the planet.”","0:HTTT6-2-1:“So what ‘passes for the ducal fleet,’ exactly?""",
 HTTTm6-2-1,DialogOptionSelected,$option == HTTT6-2-1,,"“Although Opel no longer has enough ships to hold and police territory outside its immediate surroundings, the ducal flagship is nothing to sneer at.”","0:HTTT6-2-2:”The flagship?”
 1:HTTT6quiet:“Let’s discuss something else.”",
 HTTTm6-2-2,DialogOptionSelected,$option == HTTT6-2-2,,"“A true Domain Paragon. Produced only two years before the Collapse, it has a number of bleeding-edge modifications. Under no circumstances should you underestimate it.”",0:HTTT6quiet:“Let’s discuss something else.”,
@@ -239,20 +241,18 @@ HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT.questStart 60
 FireBest MarketPostOpen","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,FireBest MarketPostOpen,"“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
 ,,,,,,
-,,,,,,
-ilk_TestCheck,PopulateOptions,$global.isDevMode,,,3:ruleTest:<<devmode>> Test custom commands,
+#######################TEST COMMANDS MENU,,,,,,
+ilk_TestCheck,PopulateOptions,$global.isDevMode,,,10:ruleTest:>>(dev) test custom commands,
 # page 2,,,,,,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
-1:addShipTest:AddShip
 1:addConditionTest:AddMarketCondition
 1:removeConditionTest:RemoveMarketCondition
 1:setOwnerTest:SetEntityOwner
 1:setImageTest:SetInteractionImage
-10:testList2:<<Next page>>",
+10:ruleTest2:<<Next page>>",
 ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:mpoContinue:Leave,
-ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:mpoContinue:Leave,
-ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition indoctrination,,0:mpoContinue:Leave,
-ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition indoctrination,,0:mpoContinue:Leave,
+ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition ai_core,,0:mpoContinue:Leave,
+ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition ai_core,,0:mpoContinue:Leave,
 ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:mpoContinue:Leave,
 ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:mpoContinue:Leave,
 ,,,,,,
@@ -260,12 +260,22 @@ ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage 
 ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:spawnTest:SpawnHostileFleet
 1:killFleetTest:KillFleet
 1:isFleetAliveTest:IsFleetAlive
+1:addShipTest:AddShip
 1:addTrackedShipToFleetTest:AddTrackedShipToFleet
+9:ruleTest:<<Previous page>>
+9:ruleTest3:<<Next page>>
+10:mpoContinue:Leave",
+ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala TEST_FLEET_ID,,0:mpoContinue:Leave,
+ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $global.TEST_FLEET_ID,,0:mpoContinue:Leave,
+ilk_isFleetAliveTest,DialogOptionSelected,$option == isFleetAliveTest,FireBest FleetAliveTest,,,
+ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $global.TEST_FLEET_ID,AddText “TRUE”,,0:mpoContinue:Leave,
+ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $global.TEST_FLEET_ID,AddText “FALSE”,,0:mpoContinue:Leave,
+ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet ilk_tiamat_assault $global.TEST_FLEET_ID TEST_SHIP_ID,,0:mpoContinue:Leave,
+ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:mpoContinue:Leave,
+,,,,,,
+# page 3,,,,,,
+ilk_testlist3,DialogOptionSelected,$option == ruleTest3,,,"1:playSoundTest:PlaySound
 9:testList:<<Previous page>>
 10:mpoContinue:Leave",
-ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala $TEST_FLEET_ID,,0:mpoContinue:Leave,
-ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $TEST_FLEET_ID,,0:mpoContinue:Leave,
-ilk_isFleetAliveTest,DialogOptionSelected,$option == isFleetAliveTest,FireBest FleetAliveTest,,,
-ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $TEST_FLEET_ID,AddText “TRUE”,,0:mpoContinue:Leave,
-ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $TEST_FLEET_ID,AddText “FALSE”,,0:mpoContinue:Leave,
-ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet “ilk_tiamat_assault” $TEST_FLEET_ID $TEST_SHIP_ID,,0:mpoContinue:Leave,
+ilk_playSoundTest,DialogOptionSelected,$option == playSoundTest,PlaySound ilk_pulse_gun,,"1:playSoundTest:PlaySound
+ 10:mpoContinue:Leave",

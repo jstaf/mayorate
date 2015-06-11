@@ -18,7 +18,7 @@ public class SpawnHostileFleet extends BaseCommandPlugin {
     param1 - a string faction name WITHOUT quotes
     param2 - a string matching one of the "fleet_compositions" in the .faction file WITHOUT quotes
     param3 - spawn location matching a sector entity id
-    param4 - global memory key to add fleet to. MUST BEGIN WITH $ (for consistency with rest of rules.csv)
+    param4 - global memory key to add fleet to. MUST NOT BEGIN WITH $ (or rules.csv thinks its a variable)
     */
     @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -26,7 +26,7 @@ public class SpawnHostileFleet extends BaseCommandPlugin {
         String faction = params.get(0).getString(memoryMap);
         String fleetCompType = params.get(1).getString(memoryMap);
         String location = params.get(2).getString(memoryMap);
-        String memKey = params.get(3).getString(memoryMap);
+        String memKey = "$" + params.get(3).getString(memoryMap);
         
         // create a new fleet of our faction of interest and spawn it RIGHT ON TOP OF THE PLAYER!!!
         CampaignFleetAPI fleet = Global.getSector().createFleet(faction, fleetCompType);

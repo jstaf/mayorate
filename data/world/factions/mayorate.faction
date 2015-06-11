@@ -241,8 +241,8 @@
 				"ilk_foraker_escort":[1, 2],
 				"ilk_cimeterre_strike":[2, 3],
 				"ilk_lilith_assault":[3, 6],
-				"ilk_raad_wing":[1, 3],
-				"ilk_angha_wing":[1, 2]
+				"ilk_raad_wing":[2, 3],
+				"ilk_angha_wing":[3, 5]
 			}
 		}
 	}

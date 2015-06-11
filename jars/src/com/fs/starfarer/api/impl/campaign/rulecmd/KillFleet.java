@@ -14,8 +14,7 @@ public class KillFleet extends BaseCommandPlugin {
     //param1 fleet mem key
     @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
-        String memKey = params.get(0).getString(memoryMap);
-        String fleetID = (String) Global.getSector().getMemory().get(memKey);
+        String fleetID = params.get(0).getString(memoryMap);
 
         if (Global.getSector().getEntityById(fleetID) instanceof CampaignFleetAPI) {
             CampaignFleetAPI fleet = (CampaignFleetAPI) Global.getSector().getEntityById(fleetID);

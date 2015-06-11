@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -24,7 +25,11 @@ public class AddShip extends BaseCommandPlugin {
             type = FleetMemberType.SHIP;
         }
         FleetMemberAPI newMember = Global.getFactory().createFleetMember(type, ship);  
-        Global.getSector().getPlayerFleet().getFleetData().addFleetMember(newMember);  
+        Global.getSector().getPlayerFleet().getFleetData().addFleetMember(newMember);
+        
+        // it needs crew too!
+        float minCrew = newMember.getMinCrew();
+        Global.getSector().getPlayerFleet().getCargo().addCrew(CargoAPI.CrewXPLevel.REGULAR, (int) minCrew);
         
         String text = "Added " + newMember.getVariant().getFullDesignationWithHullName();
         Color color = Global.getSettings().getColor("textFriendColor");
