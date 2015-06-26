@@ -31,7 +31,7 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
 
         PlanetAPI ker1 = system.addPlanet("opel", star, "Opel", "desert", 40, 100, 3300, 100);
         ker1.setCustomDescriptionId("planet_Opel");
-        ker1.setInteractionImage("illustrations", "urban03");
+        ker1.setInteractionImage("illustrations", "marine");
         ilk_RashtGen.addMarketplace(Factions.INDEPENDENT,
                 ker1,
                 null,
@@ -41,7 +41,10 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f);
 
-        PlanetAPI ker2 = system.addPlanet("", star, "", "radiated", 160, 140, 1500, 150);
-        ker1.setCustomDescriptionId("planet_");
+        PlanetAPI ker2 = system.addPlanet("Ashaak", star, "Ashaak", "radiated", 160, 140, 1500, 150);
+        ker1.setCustomDescriptionId("planet_Ashaak");
+
+        system.autogenerateHyperspaceJumpPoints(true, true);
+
     }
 }

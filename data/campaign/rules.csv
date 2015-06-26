@@ -256,7 +256,8 @@ ilk_SpawnFleetTest2,DialogOptionSelected,$option == SpawnFleetTest2,SpawnFleet m
 ################ MISSIONS #######################,,,,,,
 mission_list,DialogOptionSelected,$option == ilkMissions,FireAll MissionListEntry,,,
 mission null,MissionListEntry,,,,10:embMain:”Nevermind.”,
-HTTTstart,MissionListEntry,!$HTTT_START,,,3:HTTT0:Mission Briefing – Heir to the Throne,
+HTTTstart,MissionListEntry,"!$HTTT_START
+$market.id = ilkhanna",,,3:HTTT0:Mission Briefing – Heir to the Throne,
 ,,,,,,
 "########## ""Heir to the Throne"" Mayorate mission 1",,,,,,
 HTTTm1,DialogOptionSelected,$option == HTTT0,SetShortcut marketLeave null,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
@@ -298,4 +299,4 @@ HTTTm6-3,DialogOptionSelected,$option == HTTT6-3,"expire HTTT_START 60
 FireBest MarketPostOpen
 SetInteractionImage illustrations marine","“Excellent, I knew I could count on you. Either negotiate with my father on Opel or check back in with me here when you are ready to launch the invasion.”",0:mpoContinue:Leave,
 HTTTm6-4,DialogOptionSelected,$option == HTTT6-4,"FireBest MarketPostOpen
-SetInteractionImage illustrations marine","“Although I’m disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
+SetInteractionImage illustrations marine","“Although I’m a bit disappointed by this, I can understand if you need time to make a decision. Nevertheless, I may be forced to act alone if the situation is not settled soon.”",0:mpoContinue:Leave,
