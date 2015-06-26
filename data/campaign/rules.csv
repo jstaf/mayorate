@@ -246,10 +246,12 @@ ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilit
 ,,,,,,
 # page 3,,,,,,
 ilk_testlist3,DialogOptionSelected,$option == ruleTest3,,,"1:playSoundTest:PlaySound
+1:SpawnFleetTest2:SpawnFleet
 9:testList:<<Previous page>>
 10:mpoContinue:Leave",
 ilk_playSoundTest,DialogOptionSelected,$option == playSoundTest,PlaySound ilk_pulse_gun,,"1:playSoundTest:PlaySound
  10:mpoContinue:Leave",
+ilk_SpawnFleetTest2,DialogOptionSelected,$option == SpawnFleetTest2,SpawnFleet mayorate death_fleet jangala TEST_FLEET_ID2,,10:mpoContinue:Leave,
 ,,,,,,
 ################ MISSIONS #######################,,,,,,
 mission_list,DialogOptionSelected,$option == ilkMissions,FireAll MissionListEntry,,,

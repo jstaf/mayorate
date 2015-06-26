@@ -5,7 +5,7 @@ import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import data.scripts.world.rasht.ilk_RashtGen;
+import data.scripts.world.systems.ilk_RashtGen;
 import java.util.List;
 
 public class mayorateGen implements SectorGeneratorPlugin {

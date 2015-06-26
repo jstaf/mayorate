@@ -1,4 +1,4 @@
-package data.scripts.world.rasht;
+package data.scripts.world.systems;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
@@ -29,7 +29,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         // create the star and generate the hyperspace anchor for this system
-        PlanetAPI star = system.initStar("rasht", "star_red_dwarf", 400f);
+        PlanetAPI star = system.initStar("systems", "star_red_dwarf", 400f);
 
         system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
@@ -47,8 +47,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk1.setCustomDescriptionId("planet_Ilkhanna");
         ilk1.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
         ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
-	ilk1.getSpec().setUseReverseLightForGlow(true);
-	ilk1.applySpecChanges();
+	    ilk1.getSpec().setUseReverseLightForGlow(true);
+	    ilk1.applySpecChanges();
         ilk1.setInteractionImage("illustrations", "marine");
                 
         PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
@@ -163,7 +163,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         );
     }
  
-    private void addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name, int size, ArrayList<String> marketConditions, ArrayList<String> submarkets, float tarrif) {
+    static void addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name, int size, ArrayList<String> marketConditions, ArrayList<String> submarkets, float tarrif) {
         EconomyAPI globalEconomy = Global.getSector().getEconomy();
  
         String planetID = primaryEntity.getId();
