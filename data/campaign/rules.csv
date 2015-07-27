@@ -31,7 +31,7 @@ $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,�
 #Mayorate market interaction dialogue,,,,,,
 flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == mayorate","AddText ""The concourse seems oddly subdued for a port of this size. The decor is spartan, and most surfaces have been polished to a dull shine. If it weren't for the boistrous presence of visiting crews and starcaptains, the area would seem almost lifeless."" textGrayColor
-AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a low-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
+AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a gamma-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
@@ -180,36 +180,38 @@ discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you wan
 3:goals:”What are your long term goals in the sector?”
 3:name:”What's up with the name 'Mayorate'?”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,"“We didn't choose to live here, you know. Rasht was only meant to be a temporary sanctuary.”",1:sanctuary:”Sanctuary? From what?”,
-discussOrigins2,DialogOptionSelected,$option == sanctuary,,"“Let's just say that many of our core beliefs were... um, 'frowned upon' in the Domain. After reaching an agreement with the relevant authorities, we were allowed to continue our work here in exchange for our disappearance from Domain affairs.”","1:exiles:”So you were exiled.”
-2:beliefs:”Your beliefs?”",
-discussExile,DialogOptionSelected,$option == exiles,,"“In a manner of speaking. Many key figures still chose to remain in contact, right up until the end.”",1:exiles2:”That seems rather forgiving of them.”,
-discussExile2,DialogOptionSelected,$option == exiles2,,"“Our masters were pragmatic. If our work succeeded here, all would be forgiven and they would take the credit. If things were to go wrong, they figured we could be quietly erased from history. Either way, they won.”","1:beliefs:”So what were these beliefs you mentioned again?”
-10:embMayorate:”Huh.”",
-discussBeliefs,DialogOptionSelected,$option == beliefs,,“Artificial intelligence. Is it wrong to think we are capable of improving ourselves? Is it wrong to attempt immortality?”,1:beliefs2:”I'm not here to judge.”,
-discussBeliefs2,DialogOptionSelected,$option == beliefs2,,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”","1:exiles:”So you were exiled.”
-10:embMayorate:”True.”",
+discussOrigins,DialogOptionSelected,$option == origins,,“You mean you honestly don't know? Rasht was an exile.”,1:sanctuary:”Why exile?”,
+discussOrigins2,DialogOptionSelected,$option == sanctuary,,"“What if, even after all this time, we've been wrong about ourselves? Humanity, I mean.”",1:exiles:”I'm not sure what you mean.”,
+discussExile,DialogOptionSelected,$option == exiles,,"“We've always known that there's a bright future ahead of us and that someday we would overcome our selfish, cruel nature. What if we we wrong?”",1:exiles2:”Thoughts aren't a crime. How does that deserve exile?”,
+discussExile2,DialogOptionSelected,$option == exiles2,,"“Look around you. This sector is falling apart. We need to become better than is humanly possible in order to survive. Forcibly, if need be.”","1:beliefs:”Stop beating around the bush.”
+1:genocide:”That sounds an awful lot like genocide.”
+1:beliefs2:”Makes sense.”
+10:embMayorate:”That's dark.”",
+discussBeliefs,DialogOptionSelected,$option == beliefs,,“Artificial intelligence. Is it wrong to think we are capable of improving ourselves?”,"1:genocide:”That sounds an awful lot like genocide.”
+1:beliefs2:”I'm not here to judge.”",
+discussMeans,DialogOptionSelected,$option == genocide,BumpRep $faction.id -0.05,"“I never suggested that. Nevertheless, we hold the only way forward.”",1:embMayorate:”I can see why they exiled you.”,
+discussBeliefs2,DialogOptionSelected,$option == beliefs2,BumpRep $faction.id 0.02,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”",10:embMayorate:”True.”,
 discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is heading towards a very dark place. I know things seem bad now, but it's only going to get worse.”",1:overpopulation:”How can you possibly even pretend to know what will hapen?”,
-discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer meet demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
+discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer even meet basic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
 2:plan:”What do you plan to do about it?”
 10:embMayorate:”Well that sucks.”",
-discussPessimism,DialogOptionSelected,$option == pessimism,,“Many biospheres are already collapsing in an effort to produce enough food. Pushing the markets any more will only accelerate their collapse.”,1:pessimism2:”That seems pessimistic.”,
+discussPessimism,DialogOptionSelected,$option == pessimism,,"“Many biospheres are already collapsing in an effort to produce enough food. Pushing the markets any more will only accelerate their collapse. Worse yet, many factions are actively destroying what remains.”",1:pessimism2:”That seems pessimistic.”,
 discussPessimism2,DialogOptionSelected,$option == pessimism2,,“The mathematics are determinate.”,"1:plan:”What do you plan to do about it?”
 10:embMayorate:”I'll keep that in mind.”",
-discussPlan,DialogOptionSelected,$option == plan,,“Survive.”,"1:pessimism:”Why not attempt to rebuild the sector?”
-10:embMayorate:”Okay then.”",
+discussPlan,DialogOptionSelected,$option == plan,,"“The only way this can end is with us as the last ones standing. You too, if you're smart.”","1:pessimism:”Why not attempt to rebuild the sector?”
+10:embMayorate:”I'll take that under consideration.”",
 discussGoals,DialogOptionSelected,$option == goals,,“Let's just say that the Mayorate is currently focused on maintaining it's long-term survival and leave it at that.”,1:embMayorate:”Okay then.”,
-discussName,DialogOptionSelected,$option == name,,"“At the time of the collapse, the Mayorate was little more than a backwater research and terraforming colony on the surface of Ilkhanna. When contact was lost with the rest of the Domain, the colonial mayor was forced to assume control of our system.”","1:mayor:”Is that still the case?”
+discussName,DialogOptionSelected,$option == name,,"“At the time of the Collapse, the Mayorate was little more than a backwater research and terraforming colony on the surface of Ilkhanna. When contact was lost with the rest of the Domain, the colonial mayor assumed control of the system.”","1:mayor:”Is that still the case?”
 10:embMayorate:”Huh, interesting.”",
 discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've moved past simple tyranny. The Mayor has largely taken a step back from affairs and council of Ayatollahs now rules the Mayorate.”,"1:mayor2:”'The' Mayor? There was only one?”
 2:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”Good to know.”",
-discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh she's still around. Just not quite up to how she used to be. She felt it was in our mutual best interests to have someone else take the reins, so to speak.”",1:mayor3:”What happened to her?”,
+discussMayor2,DialogOptionSelected,$option == mayor2,,“Oh she's still around. Just not quite up to how she used to be.”,1:mayor3:”What happened to her?”,
 discussMayor3,DialogOptionSelected,$option == mayor3,,"“Unfortunately, I'm not at liberty to discose that.”","1:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”I'll keep that in mind.”",
 discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
-discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But in the sector today, wouldn't you prefer a set of leaders who still understands how the universe is put together? The Ayatollahs govern because they know better. Who are we to question them?”","1:mayor2:”The Mayor? There was only one?”
-10:embMayorate:”Interesting.”",
+discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But many do. The Ayatollahs govern because only they are fit to rule. Who are we to question them?”","1:mayor2:”The Mayor? There was only one?”
+10:embMayorate:”Interesting. I love circular reasoning.”",
 ,,,,,,
 ,,,,,,
 #######################TEST COMMANDS MENU,,,,,,
