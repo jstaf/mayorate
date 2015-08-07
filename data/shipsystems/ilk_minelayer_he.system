@@ -1,0 +1,12 @@
+{
+	"id":"ilk_minelayer_he",
+	"type":"WEAPON",
+	"aiType":"FLARE",
+	"weaponDataId":"ilk_minelayer",
+	
+	#"useSound":"system_flare_launcher_active",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}	
+}

@@ -1,0 +1,31 @@
+{
+	"id":"ilk_mine_warhead",
+	"specClass":"missile",	
+	"missileType":"PHASE_CHARGE",
+	"sprite":"graphics/missiles/bomblet0.png",
+	"glowSprite":"",
+	"glowColor":[0,0,0,0],
+	"size":[8,8],	
+	"center":[4,4],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[0,0,0,0],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":0, # purely visual
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":150,
+				  "acc":100,
+				  "dec":100},	
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":100,
+					"explosionSpec":{"duration":0.2f,
+							 "radius":200,
+							 "coreRadius":150, # full damage within core radius
+							 "collisionClass":PROJECTILE_FF,
+							 "collisionClassByFighter":PROJECTILE_FIGHTER,
+							 "particleSizeMin":3.0,
+							 "particleSizeRange":3.0,
+							 "particleDuration":1,
+							 "particleCount":0,
+							 "particleColor":[0,0,0,0]},
+					}	
+}
