@@ -29,10 +29,14 @@ public class MayorateModPlugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() {
         Global.getLogger(MayorateModPlugin.class).setLevel(Level.ERROR);
-        
-        ShaderLib.init();
-        LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
-        TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
+
+        try {
+            ShaderLib.init();
+            LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
+            TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
+        } catch (Exception e) {
+            //shaderlib not installed
+        }
     }
 
     @Override

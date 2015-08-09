@@ -1,14 +1,12 @@
 package data.scripts.plugins;
 
-import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.ViewportAPI;
+import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.input.InputEventAPI;
+import org.lazywizard.lazylib.combat.AIUtils;
 
 import java.util.List;
 
-/**
+/** This class manages deployed mines
  * Created by jeff on 07/08/15.
  */
 public class ilk_MineDecelerator extends BaseEveryFrameCombatPlugin {
@@ -18,7 +16,7 @@ public class ilk_MineDecelerator extends BaseEveryFrameCombatPlugin {
     private float interval = 0f;
     private static final float THRESHOLD = 0.1f;
     private static final float DECEL_CHANCE = 0.15f;
-    private static final float DECEL_AMT = 0.2f;
+    private static final float DECEL_AMT = 0.1f;
 
     @Override
     public void init(CombatEngineAPI engine) {
@@ -47,6 +45,11 @@ public class ilk_MineDecelerator extends BaseEveryFrameCombatPlugin {
                     if (Math.random() < DECEL_CHANCE) {
                         proj.getVelocity().scale(DECEL_AMT);
                     }
+
+                    // repick targets
+                    MissileAPI missile = (MissileAPI) proj;
+                    ShipAPI target = AIUtils.getNearestEnemy(missile);
+                    if (target != null) ((GuidedMissileAI) missile.getMissileAI()).setTarget(target);
                 }
             }
         }

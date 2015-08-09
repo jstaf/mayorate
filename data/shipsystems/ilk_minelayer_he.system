@@ -1,7 +1,9 @@
 {
 	"id":"ilk_minelayer_he",
 	"type":"WEAPON",
-	"aiType":"FLARE",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.ilk_MinelayerAI",
+	
 	"weaponDataId":"ilk_minelayer",
 	
 	#"useSound":"system_flare_launcher_active",

@@ -21,7 +21,7 @@
 				 "blowbackDuration":2.0,
 				 "blowbackLength":30.0,
 				 "blowbackSpread":10.0,
-				 "particleColor":[100,255,100,50]},
+				 "particleColor":[125,100,100,50]},
 	"projectileSpecId":"ilk_mine_mirv",
 	"fireSoundTwo":"system_flare_launcher_active",
 }
