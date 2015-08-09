@@ -66,6 +66,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
                 // evaluate nearby targets... we're looking for someone on an intercept vector
                 for (ShipAPI enemy : enemies) {
                     // are they targeting us?
+                    if (enemy.getShipTarget() == null) continue;
                     if (enemy.getShipTarget().equals(ship)) {
                         ship.useSystem();
                         break;

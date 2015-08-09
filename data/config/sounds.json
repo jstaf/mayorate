@@ -13,7 +13,7 @@
 	},
 	
 	"ilk_heavy_disruptor_fire":[
-		{"file":"sounds/ilk/fx/heavy_disruptor.ogg","pitch":1,"volume":0.75}
+		{"file":"sounds/ilk/fx/heavy_disruptor.ogg","pitch":1,"volume":0.68}
 	],
 
 	"ilk_disruptor_fire":[
