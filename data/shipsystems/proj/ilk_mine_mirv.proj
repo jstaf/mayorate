@@ -3,8 +3,8 @@
 	"specClass":"missile",	
 	"missileType":"MIRV",
 	"sprite":"graphics/missiles/bomblet0.png",
-	"size":[4,4],	
-	"center":[2,2],
+	"size":[10,10],	
+	"center":[5,5],
 	"collisionRadius":11,
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[100,255,100,255],  # purely visual, will get a white additively blended core on top of this color
@@ -44,16 +44,16 @@
 					"loc":[0, 0],
 				    "style":"CUSTOM",
 					"styleSpec":{
-						"engineColor":[100,255,100,255],
-						"contrailParticleSizeMult":15,
-						"contrailParticleDuration":2,
-						"contrailMaxSpeedMult":-0.1,
+						"engineColor":[0,0,0,0],
+						"contrailParticleSizeMult":0,
+						"contrailParticleDuration":0,
+						"contrailMaxSpeedMult":0,
 						"contrailAngularVelocityMult":0f,
-						"contrailColor":[55,255,55,35],
+						"contrailColor":[0,0,0,0],
 						"type":"GLOW" # GLOW or SMOKE
 					},
-				    "width":7.0,
-				    "length":1.0,
+				    "width":0,
+				    "length":0,
 				    "angle":180.0},
 				   ]
 }
