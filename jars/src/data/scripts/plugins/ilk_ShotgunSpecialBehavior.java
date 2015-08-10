@@ -62,9 +62,7 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                         
                     case "ilk_laserhead_shot":
                         // create a drone and spawn it
-                        FleetMemberAPI warhead = Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_laserhead_drone_wing");
-                        CombatFleetManagerAPI manager = engine.getFleetManager(proj.getOwner());
-                        manager.spawnFleetMember(warhead, proj.getLocation(), proj.getFacing(), 0f);
+                        engine.getFleetManager(proj.getOwner()).spawnShipOrWing("ilk_laserhead_drone_wing", proj.getLocation(), proj.getFacing());
                         engine.removeEntity(proj);
                         break;
                 }
@@ -83,16 +81,19 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                     WeaponAPI weapon = drone.getAllWeapons().get(0);
 
                     // remove drones that have fired from the engine
-                    if (weapon.getCooldownRemaining() > 0.5f && !weapon.isFiring()) {
-                        CombatFleetManagerAPI manager = engine.getFleetManager(drone.getOwner());
-                        manager.removeFromReserves(manager.getDeployedFleetMember(drone).getMember());
-                        engine.removeEntity(drone);
-                    }
+                    if (weapon.getCooldownRemaining() > 0.5f && !weapon.isFiring()) removeFromEngine(drone);
 
-                    // remove drones that got messed up by missile defenses from the engine
+                    // remove drones that got messed up or otherwise missed their target
+                    if (drone.getFullTimeDeployed() > 5f) removeFromEngine(drone);
                 }
             }
         }
+    }
+
+    public void removeFromEngine(ShipAPI drone) {
+        CombatFleetManagerAPI manager = engine.getFleetManager(drone.getOwner());
+        manager.removeFromReserves(manager.getDeployedFleetMember(drone).getMember());
+        engine.removeEntity(drone);
     }
 
     @Override
