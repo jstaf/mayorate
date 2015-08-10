@@ -92,9 +92,11 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
         enemies = AIUtils.getNearbyEnemies(ship, 900f);
         enemyCount = 0;
         for (ShipAPI enemy : enemies) {
-            if (enemy.getFluxTracker().isOverloadedOrVenting() && (MathUtils.getDistance(ship, enemy) < 500)) {
-                ship.useSystem();
-                break;
+            if (MathUtils.getDistance(ship, enemy) < 500) {
+                if (enemy.getFluxTracker().isOverloadedOrVenting() || (enemy.getShield() == null) || (enemy.getShield().isOff())) {
+                    ship.useSystem();
+                    break;
+                }
             }
             // are we getting swarmed?
             if (!enemy.isFighter() && !enemy.isDrone()) {
