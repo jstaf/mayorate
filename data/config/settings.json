@@ -8,13 +8,13 @@
 			"karimova":"graphics/ilk/illustrations/karimova.png"
 		},
 		"beams":{
-			"SCY_fakeBeamFX":"graphics/FAKEBEAM/fakeBeamFX.png",
+			"ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png",
 		}
 	},
 	"plugins":{
 		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
 		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
-		"ilk_FakeBeamPlugin":"data.scripts.plugins.ilk_FakeBeamPlugin"
+		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin"
 	}
 }
