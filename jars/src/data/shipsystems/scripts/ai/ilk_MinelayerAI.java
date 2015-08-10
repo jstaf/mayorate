@@ -15,6 +15,7 @@ import java.util.List;
 public class ilk_MinelayerAI implements ShipSystemAIScript {
 
     private List<ShipAPI> enemies;
+    private int enemyCount = 0;
     private boolean hasOrders = false;
     private CombatFleetManagerAPI manager;
     CombatFleetManagerAPI.AssignmentInfo orders;
@@ -63,7 +64,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
         if (aiFlags.hasFlag(ShipwideAIFlags.AIFlags.BACK_OFF) || aiFlags.hasFlag(ShipwideAIFlags.AIFlags.RUN_QUICKLY)) {
             enemies = AIUtils.getNearbyEnemies(ship, 800f);
             if (!enemies.isEmpty()) {
-                // evaluate nearby targets... we're looking for someone on an intercept vector
+                // evaluate nearby targets
                 for (ShipAPI enemy : enemies) {
                     // are they targeting us?
                     if (enemy.getShipTarget() == null) continue;
@@ -76,7 +77,6 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
         }
 
         // mine nearby objectives / order locations if they exist
-
         // are we defending something
         orders = manager.getAssignmentFor(ship);
         if (orders != null) {
@@ -88,10 +88,19 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
             staticObjectiveEval(AIUtils.getNearestObjective(ship).getLocation());
         }
 
-        // if there's a chance to absolutely gank someone
-        if (AIUtils.getNearestEnemy(ship) != null) {
-            if ((ship.getFluxTracker().getFluxLevel() < 0.5f) && (MathUtils.getDistance(AIUtils.getNearestEnemy(ship), ship) < 400f)) {
+        // if there's a chance to absolutely gank someone or we are under pressure
+        enemies = AIUtils.getNearbyEnemies(ship, 900f);
+        enemyCount = 0;
+        for (ShipAPI enemy : enemies) {
+            if (enemy.getFluxTracker().isOverloadedOrVenting() && (MathUtils.getDistance(ship, enemy) < 500)) {
                 ship.useSystem();
+                break;
+            }
+            // are we getting swarmed?
+            if (!enemy.isFighter() && !enemy.isDrone()) enemyCount++;
+            if (enemyCount >= 2 && (ship.getFluxTracker().getFluxLevel() > 0.5f)) {
+                ship.useSystem();
+                break;
             }
         }
     }
@@ -99,7 +108,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
     private void staticObjectiveEval(Vector2f objectiveLoc) {
         if (MathUtils.getDistance(ship, objectiveLoc) < 500f) {
             //have we mined this objective obsessively yet?
-            if ((system.getAmmo() > 1) && (CombatUtils.getMissilesWithinRange(objectiveLoc, 500f).size() < 60)) {
+            if ((system.getAmmo() > 1) && (CombatUtils.getMissilesWithinRange(objectiveLoc, 500f).size() < 50)) {
                 // NEEDS MORE MINES
                 ship.useSystem();
             }

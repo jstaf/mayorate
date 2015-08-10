@@ -10,7 +10,7 @@
 	"center":[7,7],
 	"collisionRadius":12,
 	"collisionClass":"MISSILE_FF",
-	"explosionColor":[255,48,5,100],  # purely visual, will get a white additively blended core on top of this color
+	"explosionColor":[250,91,49,100],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":100, # purely visual
 	"engineSpec":{"turnAcc":500,
 				  "turnRate":300,
@@ -37,13 +37,13 @@
 					"range":85,
 					"explosionSpec":{"duration":0.2f,
 							 "radius":100,
-							 "coreRadius":70, # full damage within core radius
+							 "coreRadius":60, # full damage within core radius
 							 "collisionClass":PROJECTILE_FF,
 							 "collisionClassByFighter":PROJECTILE_FIGHTER,
 							 "particleSizeMin":3.0,
 							 "particleSizeRange":3.0,
 							 "particleDuration":1,
-							 "particleCount":10,
-							 "particleColor":[255,48,5,100]},
+							 "particleCount":5,
+							 "particleColor":[250,91,49,100]},
 					}	
 }

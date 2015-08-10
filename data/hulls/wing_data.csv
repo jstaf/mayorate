@@ -3,3 +3,4 @@ ilk_inanna_wing,ilk_inanna_interceptor,6,,V,4,INTERCEPTOR,8,15000,2
 ilk_raad_wing,ilk_raad_fighter,7,,V,2,ASSAULT,15,10000,3
 ilk_angha_wing,ilk_angha_bomber,5,,V,3,BOMBER,10,12000,4
 ilk_hk_wing,ilk_hk_drone_hunter_killer,9,,CLAW,3,INTERCEPTOR,15,18000,5
+ilk_laserhead_drone_wing,ilk_laserhead_drone_graser,0,,V,1,ASSAULT,0,0,6

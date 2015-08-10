@@ -11,6 +11,6 @@
 	"plugins":{
 		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
-		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineDecelerator"
+		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager"
 	}
 }

@@ -1,34 +1,30 @@
 package data.scripts.plugins;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.ViewportAPI;
+import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.input.InputEventAPI;
 import java.awt.Color;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 import org.lazywizard.lazylib.MathUtils;
+import org.lazywizard.lazylib.combat.AIUtils;
+import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
 
     private static final Set<String> SHOTGUNPROJ_IDS = new HashSet<>();
     
-    private static final String SOUND_ID = "ilk_laserhead_detonate";
-    private static final float SPREAD = 20f;
-    private static final Color LASER_COLOR = new Color(241, 139, 114, 5);
-    
-    
     static {
         //add Projectile IDs here.
         SHOTGUNPROJ_IDS.add("ilk_shotgun_shot");
         SHOTGUNPROJ_IDS.add("ilk_laserhead_shot");
-        SHOTGUNPROJ_IDS.add("ilk_disruptor_shot");
     }
-    
+
+    private float interval = 0f;
+    private static final float THRESHOLD = 1f;
     CombatEngineAPI engine;
 
     @Override
@@ -42,6 +38,8 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
         if (engine == null || engine.isPaused()) {
             return;
         }
+
+        interval += amount;
 
         for (DamagingProjectileAPI proj : engine.getProjectiles()) {
             String spec = proj.getProjectileSpecId();
@@ -63,19 +61,35 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                         break;
                         
                     case "ilk_laserhead_shot":
-                        for (int i = 0; i < 6; i++) {
-                            Vector2f randomVel = MathUtils.getRandomPointOnCircumference(null, MathUtils.getRandomNumberInRange(60f, 200f));
-                            //randomVel.x += vel.x;
-                            randomVel.y += vel.y;
-                            engine.spawnProjectile(proj.getSource(), proj.getWeapon(), spec + "_clone", loc, 
-                                    proj.getFacing()+ MathUtils.getRandomNumberInRange(-SPREAD, SPREAD), randomVel);
-
-                            Global.getSoundPlayer().playSound(SOUND_ID, 1f, 1f, proj.getLocation(), proj.getVelocity());
-
-                            engine.spawnExplosion(loc, new Vector2f(0f, 0f), LASER_COLOR, 25, 0.5f);
-                        }
+                        // create a drone and spawn it
+                        FleetMemberAPI warhead = Global.getFactory().createFleetMember(FleetMemberType.FIGHTER_WING, "ilk_laserhead_drone_wing");
+                        CombatFleetManagerAPI manager = engine.getFleetManager(proj.getOwner());
+                        manager.spawnFleetMember(warhead, proj.getLocation(), proj.getFacing(), 0f);
                         engine.removeEntity(proj);
                         break;
+                }
+            }
+        }
+
+        // check for drones that have fired every second or so and remove them from the game engine
+        if (interval > THRESHOLD) {
+            interval = 0f;
+
+            for (ShipAPI drone : engine.getShips()) {
+                //ignore ships that aren't our drone types
+                if (drone.getHullSpec().getBaseHullId().equals("ilk_laserhead_drone")) {
+
+                    // get drone weapon
+                    WeaponAPI weapon = drone.getAllWeapons().get(0);
+
+                    // remove drones that have fired from the engine
+                    if (weapon.getCooldownRemaining() > 0.5f && !weapon.isFiring()) {
+                        CombatFleetManagerAPI manager = engine.getFleetManager(drone.getOwner());
+                        manager.removeFromReserves(manager.getDeployedFleetMember(drone).getMember());
+                        engine.removeEntity(drone);
+                    }
+
+                    // remove drones that got messed up by missile defenses from the engine
                 }
             }
         }
