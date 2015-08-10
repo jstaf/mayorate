@@ -6,11 +6,15 @@
 			"marine":"graphics/ilk/illustrations/marine.png",
 			"cloud_city":"graphics/ilk/illustrations/cloud_city.png",
 			"karimova":"graphics/ilk/illustrations/karimova.png"
+		},
+		"beams":{
+			"SCY_fakeBeamFX":"graphics/FAKEBEAM/fakeBeamFX.png",
 		}
 	},
 	"plugins":{
 		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
-		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager"
+		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
+		"ilk_FakeBeamPlugin":"data.scripts.plugins.ilk_FakeBeamPlugin"
 	}
 }

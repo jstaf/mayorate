@@ -15,7 +15,7 @@ import java.util.List;
 public class ilk_MinelayerAI implements ShipSystemAIScript {
 
     private List<ShipAPI> enemies;
-    private int enemyCount = 0;
+    private float enemyCount = 0;
     private boolean hasOrders = false;
     private CombatFleetManagerAPI manager;
     CombatFleetManagerAPI.AssignmentInfo orders;
@@ -97,8 +97,12 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
                 break;
             }
             // are we getting swarmed?
-            if (!enemy.isFighter() && !enemy.isDrone()) enemyCount++;
-            if (enemyCount >= 2 && (ship.getFluxTracker().getFluxLevel() > 0.5f)) {
+            if (!enemy.isFighter() && !enemy.isDrone()) {
+                enemyCount++;
+            } else {
+                enemyCount += 0.2;
+            }
+            if (enemyCount >= 3 && (ship.getFluxTracker().getFluxLevel() > 0.4f)) {
                 ship.useSystem();
                 break;
             }
