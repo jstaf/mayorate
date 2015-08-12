@@ -18,6 +18,8 @@ public class ilk_DisruptorOnHitEffect implements OnHitEffectPlugin {
     private static final float HEAVY_FLUX_DAMAGE = 1500f;
     private static final float FLUX_DAMAGE = 600f;
 
+    float fluxGenerated;
+
     @Override
     public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, CombatEngineAPI engine) {
 
@@ -33,12 +35,17 @@ public class ilk_DisruptorOnHitEffect implements OnHitEffectPlugin {
             String spec = projectile.getProjectileSpecId();
             switch (spec) {
                 case "ilk_disruptor_shot":
-                    ship.getFluxTracker().increaseFlux(FLUX_DAMAGE, true);
+                    fluxGenerated = FLUX_DAMAGE;
                     break;
                 case "ilk_heavy_disruptor_shot":
-                    ship.getFluxTracker().increaseFlux(HEAVY_FLUX_DAMAGE, true);
+                    fluxGenerated = HEAVY_FLUX_DAMAGE;
                     break;
             }
+            // be nicer to those unfortunate souls who take this shot on armor
+            if (!shieldHit) {
+                fluxGenerated *= 0.5;
+            }
+            ship.getFluxTracker().increaseFlux(fluxGenerated, true);
         }
     }
 
