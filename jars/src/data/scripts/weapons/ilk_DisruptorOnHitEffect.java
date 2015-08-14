@@ -15,8 +15,8 @@ public class ilk_DisruptorOnHitEffect implements OnHitEffectPlugin {
     private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
     private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 200);
 
-    private static final float HEAVY_FLUX_DAMAGE = 1500f;
-    private static final float FLUX_DAMAGE = 600f;
+    public static final float HEAVY_FLUX_DAMAGE = 1500f;
+    public static final float FLUX_DAMAGE = 600f;
 
     float fluxGenerated;
 

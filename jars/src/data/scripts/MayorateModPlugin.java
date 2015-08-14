@@ -4,9 +4,8 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.CampaignPlugin;
-import com.fs.starfarer.api.combat.MissileAIPlugin;
-import com.fs.starfarer.api.combat.MissileAPI;
-import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.*;
+import data.scripts.weapons.ai.DisruptorAI;
 import data.scripts.weapons.ai.ilk_NukeAI;
 import data.scripts.world.mayorateGen;
 import org.apache.log4j.Level;
@@ -51,6 +50,20 @@ public class MayorateModPlugin extends BaseModPlugin {
         switch (missile.getProjectileSpecId()) {
             case NUKE_ID:
                 return new PluginPick<MissileAIPlugin>(new ilk_NukeAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
+            default:
+                return null;
+        }
+    }
+
+    @Override
+    public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon)
+    {
+        switch (weapon.getId())
+        {
+            case "ilk_disruptor":
+                return new PluginPick<AutofireAIPlugin>(new DisruptorAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
+            case "ilk_disruptor_heavy":
+                return new PluginPick<AutofireAIPlugin>(new DisruptorAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
             default:
                 return null;
         }
