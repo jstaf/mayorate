@@ -2,6 +2,7 @@ package data.shipsystems.scripts;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
@@ -15,11 +16,16 @@ import java.util.List;
 
 public class ilk_GravPulse implements ShipSystemStatsScript {
 
-    public static final float PULSE_SIZE = 700f;
-    public static final float RING_SIZE = 200f;
-    public static final float PER_FRAME_DAMAGE = 100f;
+    static final float PULSE_SIZE = 700f;
+    static final float RING_SIZE = 200f;
+    static final float PER_FRAME_DAMAGE = 100f;
 
-    public static final float PULSE_SPEED = 350f;
+    static final float PULSE_SPEED = 350f;
+
+    static SpriteAPI indicator = Global.getSettings().getSprite("util", "indicator");
+    static {
+        indicator.setAdditiveBlend();
+    }
 
     Vector2f pulseLoc;
     float lastEffectLevel = 0f;
@@ -72,6 +78,12 @@ public class ilk_GravPulse implements ShipSystemStatsScript {
 
                 engine.applyDamage(entity, entity.getLocation(), damage, DamageType.ENERGY, 0f, false, true, ship);
             }
+
+            // test render of indicator sprites
+            indicator.setSize(currentRing, currentRing);
+            indicator.renderAtCenter(pulseLoc.x, pulseLoc.y);
+            indicator.setSize(currentSize, currentSize);
+            indicator.renderAtCenter(pulseLoc.x, pulseLoc.y);
         }
 
         lastEffectLevel = effectLevel;
