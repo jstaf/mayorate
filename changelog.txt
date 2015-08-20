@@ -32,7 +32,7 @@ CAMPAIGN ADDITIONS
 -All Rasht markets now have a significant amount of flavor text.
 
 MODDING TOOLS
--Custom renderer for spawning beams, a complete rewrite of Tartiflette/Deathfly's FakeBeam code. Beams can be spawned independently of weapons, and function identically to a normal Starsector beam (the old FakeBeam code was a one-shot affair, where damage and images were applied only once).
+-Custom renderer for spawning beams, a complete rewrite of Tartiflette/Deathfly's FakeBeam code. Beams can be spawned independently of weapons, and function identically to a normal Starsector beam (the old FakeBeam code was a one-shot affair, where damage and images were applied only once and did not move).
 -Custom rule commands for performing dynamic campaign-level scripting through rules.csv. Enable dev mode and dock with a market to try them out.
 
 OTHER
