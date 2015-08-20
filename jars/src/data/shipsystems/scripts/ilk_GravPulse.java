@@ -76,6 +76,10 @@ public class ilk_GravPulse implements ShipSystemStatsScript {
             for (CombatEntityAPI entity : inRing) {
                 if (entity.getOwner() == owner) continue;
 
+                Vector2f direction = new Vector2f();
+                Vector2f.sub(entity.getLocation(), ship.getLocation(), direction);
+                CombatUtils.applyForce(entity, direction, 1000f * (effectLevel - lastEffectLevel));
+
                 engine.applyDamage(entity, entity.getLocation(), damage, DamageType.ENERGY, 0f, false, true, ship);
             }
 
