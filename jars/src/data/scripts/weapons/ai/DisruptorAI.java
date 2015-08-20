@@ -1,7 +1,9 @@
 package data.scripts.weapons.ai;
 
 import com.fs.starfarer.api.combat.*;
+import data.scripts.util.AnchoredBoundsEntity;
 import data.scripts.weapons.ilk_DisruptorOnHitEffect;
+import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -25,6 +27,7 @@ public class DisruptorAI implements AutofireAIPlugin {
     // evidently the ship will open fire with the weapon if this is true
     private boolean shouldFire;
     private ShipAPI target;
+    private AnchoredBoundsEntity targetLead = null;
     private Vector2f loc;
 
     public DisruptorAI(WeaponAPI weaponAPI) {
@@ -61,7 +64,35 @@ public class DisruptorAI implements AutofireAIPlugin {
             target = evalThreats(AIUtils.getNearbyEnemies(myShip, range));
         }
 
+        // are we pointing at the right target?
+        loc = calcLead(target);
 
+        // reanchor targetLead with bounds
+        if (target != null) {
+            // create targetlead if it does not already exist, then update it
+            if (targetLead == null) targetLead = new AnchoredBoundsEntity(target, loc);
+
+            targetLead.reanchor(target, loc);
+        }
+
+        shouldFire = CollisionUtils.getCollisionPoint(
+                weapon.getLocation(),
+                MathUtils.getPointOnCircumference(weapon.getLocation(), range, weapon.getCurrAngle()),
+                targetLead) != null; // instead of target, needs lead loc with target bounds
+    }
+
+    private Vector2f calcLead(ShipAPI victim) {
+        Vector2f leadLoc = null;
+        float projSpeed = weapon.getProjectileSpeed();
+
+        if (target != null) {
+            float traversal = MathUtils.getDistance(myShip, victim) / projSpeed;
+            Vector2f targetLoc = target.getLocation();
+            Vector2f vel = target.getVelocity();
+            Vector2f.add(targetLoc, (Vector2f) new Vector2f(vel).scale(traversal), targetLoc);
+        }
+
+        return leadLoc;
     }
 
     private ShipAPI evalThreats(List<ShipAPI> threats) {
@@ -84,12 +115,12 @@ public class DisruptorAI implements AutofireAIPlugin {
             // can we overload someone?
             FluxTrackerAPI enemyFlux = threat.getFluxTracker();
             if (enemyFlux.getMaxFlux() - enemyFlux.getCurrFlux() < fluxDamage) {
-                return threat; // BREAK AND HIT THEM
+                return threat;
             }
 
             // do they have vulnerable/no shield?
             if (shieldIsVuln(threat, myShip)) {
-                return threat; // BREAK AND HIT THEM
+                return threat;
             }
 
             // they close by?

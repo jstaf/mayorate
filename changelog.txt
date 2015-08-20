@@ -1,39 +1,43 @@
 kazi - Mayorate mod changelog
 
-v8.whatever
+v0.9 (still being worked on)
 
 GRAPHICS
 -Added two new portraits.
 -Mayorate portraits are available for player use again.
--Added four unique interaction images (one for every market in Rasht). They kind of suck, but whatever. 
+-Added four unique interaction images (one for every market in Rasht). They're kind of scribble-y, but whatever. 
 -Improved Ravana sprite.
 -New nuke sprites (mount and launcher)
--New Mayorate flag and logo graphics.
+-New Mayorate faction logo graphics.
 
-COMBAT ADDITIONS
--Added Disruptor weapon class (2 weapons). Does moderate amounts of fragmentation damage and EMP damage. Although literally worthless vs. armor/shields, disruptor-type weapons deal hard flux damage directly to enemy ships (regardless of shield hits). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts.
--Added Shrike Hunter-Killer Drone wing.
+COMBAT ADDITIONS AND BALANCE
+-Added Disruptor weapon class. Does moderate amounts of fragmentation damage and EMP damage. Although worthless in terms of damage vs. enemy armor, disruptor-type weapons deal hard flux damage directly to enemy ships (regardless of shield hits). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts and sounds absolutely terrifying when fired. 
+-Added Shrike Hunter-Killer Drone wing. 
 -Added Afterburner ship system for Shrike wings. Grants temporary speed boost (it's a bit of a shameless copy from SRA's Neriad, I must admit).
--Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield bypassing weapons still work fine.
+-Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield-bypassing weapons will still work fine.
+-Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
+-Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast. One nice effect of this is that Graser PD becomes more effective the more exposed you become (which is a kinda unique mechanic for PD weapons). Should encourage more brinksmanship. ;)
+-Laserheads now fire a directed beam attack and launch in salvos of one. Yes, they dump a full power heavy graser into their target.
+-The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels (very high risk, very high reward). New fire/loop sounds as well (no more Reapers!).
+-New mount setup for Ravana. All the universal mounts are now energy mounts, center large mount is now a medium missile mount, two small energy mounts removed.
+-Other balancing stuffs that I'm forgetting about. I messed around with nearly everything, to be honest. Mayorate energy weapon DPS is now in line with the base game again.
 
 CAMPAIGN ADDITIONS
 -Integrated relationships for other mod factions. 
--Added a consulate to Mayorate worlds. You can now chat with them about other factions and stuff. (mostly just for your own amusement)
--Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go. The reputation "cost" is massive however. 
+-Added a consulate to Mayorate worlds. You can now chat with them about other factions and stuff (mostly just for your own amusement).
+-Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go with crew. The reputation "cost" is massive however. 
 -Mayorate reputation can be spent at a consulate in order to increase reputation with certain Mayorate allies/neutral factions (Mayorate reputation must be "favorable" or above". Cost is -10 Mayorate rep for +5 <other faction> rep.
--Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand (basically much of the population are AI's, so no need for food, right?). If you're clever, you may be able to make money off of metals for once.
+-Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand. If you're clever, you may be able to make money off of metals for once.
 -Shuffled around Rasht market conditions.
+-All Rasht markets now have a significant amount of flavor text.
 
-BALANCE
--Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast (esp. in light mounts). Should encourage more brinksmanship. ;)
--Laserheads now deal directed damage (they fire in a cone pattern now... reduces friendly fire/improves killing power).
--The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels. New fire/loop sounds as well (no more Reapers!).
--New mount setup for Ravana. All the universal mounts are now energy mounts, center large mount is now a medium mount, two small mounts removed.
--Other balancing stuffs that I'm forgetting about(I messed around with nearly everything, to be honest).
+MODDING TOOLS
+-Custom renderer for spawning beams, a complete rewrite of Tartiflette/Deathfly's FakeBeam code. Beams can be spawned independently of weapons, and function identically to a normal Starsector beam (the old FakeBeam code was a one-shot affair, where damage and images were applied only once).
+-Custom rule commands for performing dynamic campaign-level scripting through rules.csv. Enable dev mode and dock with a market to try them out.
 
 OTHER
--Changed many sfx to be better/more license friendly
--All Rasht markets now have a significant amount of flavor text.
+-Changed many sfx to be better/more license-friendly.
+-Removed battle music (it gets old after awhile). Don't worry, it may return as boss encounter music in a later update.
 -Improved writing for most descriptions.
 -Probably a lot of stuff I forgot to mention.
 
