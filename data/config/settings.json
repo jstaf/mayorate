@@ -8,7 +8,10 @@
 			"karimova":"graphics/ilk/illustrations/karimova.png"
 		},
 		"beams":{
-			"ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png",
+			"ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png"
+		},
+		"util":{
+			"indicator":"graphics/ilk/util/indicator.png"
 		}
 	},
 	"plugins":{

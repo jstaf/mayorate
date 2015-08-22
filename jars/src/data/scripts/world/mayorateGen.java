@@ -25,17 +25,17 @@ public class mayorateGen implements SectorGeneratorPlugin {
         {
             mayorate.setRelationship(f.getId(), RepLevel.INHOSPITABLE);
         }
-        
+
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
-	FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
-	FactionAPI pirates = sector.getFaction(Factions.PIRATES);
-	FactionAPI independent = sector.getFaction(Factions.INDEPENDENT);
-	FactionAPI kol = sector.getFaction(Factions.KOL);
-	FactionAPI church = sector.getFaction(Factions.LUDDIC_CHURCH);
-	FactionAPI path = sector.getFaction(Factions.LUDDIC_PATH);
-	FactionAPI player = sector.getFaction(Factions.PLAYER);
-	FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
-        
+        FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
+        FactionAPI pirates = sector.getFaction(Factions.PIRATES);
+        FactionAPI independent = sector.getFaction(Factions.INDEPENDENT);
+        FactionAPI kol = sector.getFaction(Factions.KOL);
+        FactionAPI church = sector.getFaction(Factions.LUDDIC_CHURCH);
+        FactionAPI path = sector.getFaction(Factions.LUDDIC_PATH);
+        FactionAPI player = sector.getFaction(Factions.PLAYER);
+        FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
+
         player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
         player.setRelationship("encounter", RepLevel.VENGEFUL);
         
@@ -63,6 +63,8 @@ public class mayorateGen implements SectorGeneratorPlugin {
         mayorate.setRelationship("syndicate_asp", RepLevel.WELCOMING);
         mayorate.setRelationship("junk_pirates", RepLevel.NEUTRAL);
         mayorate.setRelationship("pack", RepLevel.HOSTILE);
+        mayorate.setRelationship("exigency", RepLevel.HOSTILE);
+        mayorate.setRelationship("templars", RepLevel.VENGEFUL);
         
     }
 }
