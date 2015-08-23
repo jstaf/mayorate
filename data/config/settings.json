@@ -18,6 +18,7 @@
 		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
 		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
-		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin"
+		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin",
+		"ilk_PulseRendererPlugin":"data.scripts.plugins.pulseRenderer.ilk_GravPulseInjector"
 	}
 }

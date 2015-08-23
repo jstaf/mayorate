@@ -33,8 +33,10 @@ public class MayorateModPlugin extends BaseModPlugin {
             ShaderLib.init();
             LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
             TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
-        } catch (Exception e) {
+        } catch (NoClassDefFoundError e) {
             //shaderlib not installed
+            e.printStackTrace();
+            Global.getLogger(MayorateModPlugin.class).log(Level.FATAL, "ShaderLib not found.");
         }
     }
 
