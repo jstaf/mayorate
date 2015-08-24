@@ -1,4 +1,4 @@
-package data.scripts;
+package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
@@ -18,16 +18,21 @@ public class UseMarines extends BaseCommandPlugin {
         int numberUsed = Integer.parseInt(list.get(0).getString(map));
         numberUsed -= (int) (Math.random() * numberUsed);
 
-        // set a memory key just so we know how many marines got used
-        interactionDialogAPI.getInteractionTarget().getMemory().set("$MARINES_LOST", numberUsed);
 
         int starting = Global.getSector().getPlayerFleet().getCargo().getMarines();
+        // set a memory key just so we know how many marines got used
+
+        int actual;
+        boolean returned;
         if (numberUsed < starting) {
-            Global.getSector().getPlayerFleet().getCargo().removeMarines(numberUsed);
-            return true;
+            actual = numberUsed;
+            returned = true;
         } else {
-            Global.getSector().getPlayerFleet().getCargo().removeMarines(starting);
-            return false;
+            actual = starting;
+            returned = false;
         }
+        Global.getSector().getPlayerFleet().getCargo().removeMarines(actual);
+        interactionDialogAPI.getInteractionTarget().getMemory().set("$MARINES_LOST", actual);
+        return true;
     }
 }
