@@ -1,0 +1,10 @@
+{
+	"id":"ilk_grav_pulse",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+
+	"aiScript":"data.shipsystems.scripts.ai.ilk_GravPulseAI",
+	"statsScript":"data.shipsystems.scripts.ilk_GravPulseStats",
+
+	"outOfUsesSound":"gun_out_of_ammo",
+}

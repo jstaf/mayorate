@@ -18,10 +18,12 @@ public class MayorateModPlugin extends BaseModPlugin {
     private static void initMayorate() {
         try {
             Global.getSettings().getScriptClassLoader().loadClass("data.scripts.world.ExerelinGen");
+            Global.getSector().getMemory().set("$IS_EXERELIN", true);
             //Got Exerelin, so just Exerelin
         } catch (ClassNotFoundException ex) {
             // Exerelin not found so continue and run normal generation code
             new mayorateGen().generate(Global.getSector());
+            Global.getSector().getMemory().set("$IS_EXERELIN", false);
         }
     }
 

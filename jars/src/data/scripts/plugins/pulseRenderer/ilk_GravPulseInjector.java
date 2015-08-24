@@ -38,7 +38,7 @@ public class ilk_GravPulseInjector extends BaseEveryFrameCombatPlugin {
 
     @Override
     public void init(CombatEngineAPI combatEngineAPI) {
-        engine = combatEngineAPI;
+        engine = Global.getCombatEngine();
     }
 
     @Override
@@ -56,18 +56,6 @@ public class ilk_GravPulseInjector extends BaseEveryFrameCombatPlugin {
 
                 if (pulse.systemState == ShipSystemStatsScript.State.IN) {
                     Vector2f shipLoc = pulse.myShip.getLocation();
-
-                    for (int i = 0; i < 3; i++) {
-                        Vector2f point = MathUtils.getRandomPointInCircle(shipLoc, pulse.myShip.getCollisionRadius());
-                        //loc, vel, size, brightness, duration, color
-                        Global.getCombatEngine().addSmoothParticle(
-                                point,
-                                VectorUtils.getDirectionalVector(shipLoc, point),
-                                10f,
-                                0.5f,
-                                1f,
-                                new Color(1.0f, 0.1882353f, 0.0f, 0.0f));
-                    }
                 }
 
                 if (pulse.systemState == ShipSystemStatsScript.State.OUT) {

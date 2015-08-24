@@ -38,7 +38,8 @@ AddText ""Detecting your presence, a nearby terminal fires up its display. Weari
 ,,,,,,
 ##########start of custom market dialogs,,,,,,
 embassyStart,PopulateOptions,"$faction.id == mayorate
-$hasMarket",,,3:embMainStart:Contact the Mayorate consulate.,
+$hasMarket
+!$global.IS_EXERELIN",,,3:embMainStart:Contact the Mayorate consulate.,
 embassy,DialogOptionSelected,$option == embMainStart,,A wayfinding station directs you to the Mayorate diplomatic compound. ,"1:embFactions:”Tell me about the other factions in the sector.”
 1:embMayorate:”I'd like to know a little bit more about your faction.”
 2:embAssistance:”I was hoping you could give me some assistance.”
@@ -220,12 +221,13 @@ ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
 1:removeConditionTest:RemoveMarketCondition
 1:setOwnerTest:SetEntityOwner
 1:setImageTest:SetInteractionImage
-10:ruleTest2:<<Next page>>",
-ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:mpoContinue:Leave,
-ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition ai_core,,0:mpoContinue:Leave,
-ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition ai_core,,0:mpoContinue:Leave,
-ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:mpoContinue:Leave,
-ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:mpoContinue:Leave,
+10:ruleTest2:<<Next page>>
+10:mpoContinue:Leave",
+ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:ruleTest:Back,
+ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition ai_core,,0:ruleTest:Back,
+ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition ai_core,,0:ruleTest:Back,
+ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:ruleTest:Back,
+ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:ruleTest:Back,
 ,,,,,,
 # page 2,,,,,,
 ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:spawnTest:SpawnHostileFleet
@@ -236,23 +238,30 @@ ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:spawnTest:SpawnHost
 9:ruleTest:<<Previous page>>
 9:ruleTest3:<<Next page>>
 10:mpoContinue:Leave",
-ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala TEST_FLEET_ID,,0:mpoContinue:Leave,
-ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $global.TEST_FLEET_ID,,0:mpoContinue:Leave,
+ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala TEST_FLEET_ID,,0:ruleTest2:Back,
+ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $global.TEST_FLEET_ID,,0:ruleTest2:Back,
 ilk_isFleetAliveTest,DialogOptionSelected,$option == isFleetAliveTest,FireBest FleetAliveTest,,,
-ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $global.TEST_FLEET_ID,AddText “TRUE”,,0:mpoContinue:Leave,
-ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $global.TEST_FLEET_ID,AddText “FALSE”,,0:mpoContinue:Leave,
-ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet ilk_tiamat_assault $global.TEST_FLEET_ID TEST_SHIP_ID,,0:mpoContinue:Leave,
-ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:mpoContinue:Leave,
+ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $global.TEST_FLEET_ID,AddText “TRUE”,,0:ruleTest2:Back,
+ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $global.TEST_FLEET_ID,AddText “FALSE”,,0:ruleTest2:Back,
+ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet ilk_tiamat_assault $global.TEST_FLEET_ID TEST_SHIP_ID,,0:ruleTest2:Back,
+ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:ruleTest2:Back,
 ,,,,,,
 # page 3,,,,,,
 ilk_testlist3,DialogOptionSelected,$option == ruleTest3,,,"1:playSoundTest:PlaySound
 1:SpawnFleetTest2:SpawnFleet
+1:hasMarinesTest:HasMarines
+1:useMarinesTest:UseMarines
+1:getPlayerLevelTest1:IsPlayerLevelAbove 1
+1:getPlayerLevelTest2:IsPlayerLevelAbove 2
 9:testList:<<Previous page>>
 10:mpoContinue:Leave",
 ilk_playSoundTest,DialogOptionSelected,$option == playSoundTest,PlaySound ilk_pulse_gun,,"1:playSoundTest:PlaySound
- 10:mpoContinue:Leave",
-ilk_SpawnFleetTest2,DialogOptionSelected,$option == SpawnFleetTest2,SpawnFleet mayorate death_fleet jangala TEST_FLEET_ID2,,10:mpoContinue:Leave,
-,,,,,,
+0:ruleTest3:Back",
+ilk_SpawnFleetTest2,DialogOptionSelected,$option == SpawnFleetTest2,SpawnFleet mayorate death_fleet jangala TEST_FLEET_ID2,,0:ruleTest3:Back,
+ilk_HasMarinesTest,DialogOptionSelected,$option == hasMarinesTest,AddText HasMarines 10,,0:ruleTest3:Back,
+ilk_UseMarinesTest,DialogOptionSelected,$option == useMarinesTest,AddText UseMarines 10,,0:ruleTest3:Back,
+ilk_GetPlayerLevelTest1,DialogOptionSelected,$option == getPlayerLevelTest1,AddText IsPlayerLevelAbove 1,,0:ruleTest3:Back,
+ilk_GetPlayerLevelTest2,DialogOptionSelected,$option == getPlayerLevelTest2,AddText IsPlayerLevelAbove 2,,0:ruleTest3:Back,
 ,,,,,,
 ################ MISSIONS #######################,,,,,,
 mission_list,DialogOptionSelected,$option == ilkMissions,FireAll MissionListEntry,,,
