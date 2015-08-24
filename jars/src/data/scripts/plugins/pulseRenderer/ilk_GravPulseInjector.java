@@ -39,6 +39,7 @@ public class ilk_GravPulseInjector extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI combatEngineAPI) {
         engine = Global.getCombatEngine();
+        pulses.clear();
     }
 
     @Override

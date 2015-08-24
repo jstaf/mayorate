@@ -28,7 +28,7 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
         star.setCustomDescriptionId("planet_Kerajj");
         system.setLightColor(new Color(240, 238, 191)); // light color in entire system, affects all entities
 
-        PlanetAPI ker1 = system.addPlanet("opel", star, "Opel", "desert", 40, 100, 3300, 100);
+        PlanetAPI ker1 = system.addPlanet("Opel", star, "Opel", "desert", 40f, 100f, 3300f, 100f);
         ker1.setCustomDescriptionId("planet_Opel");
         ker1.setInteractionImage("illustrations", "marine");
         ilk_RashtGen.addMarketplace(Factions.INDEPENDENT,
@@ -41,10 +41,15 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f);
 
-        PlanetAPI ker2 = system.addPlanet("Ashaak", star, "Ashaak", "radiated", 160, 140, 1500, 150);
+        PlanetAPI ker2 = system.addPlanet("Ashaak", star, "Ashaak", "radiated", 160f, 140f, 1500f, 150f);
         ker2.setCustomDescriptionId("planet_Ashaak");
 
+        PlanetAPI ker3 = system.addPlanet("Voronoi", star, "Voronoi", "gas_giant", 247f, 225f, 3900f, 170f);
+        ker3.setCustomDescriptionId("planet_Voronoi");
+        SectorEntityToken ilk_station = system.addOrbitalStation("ilk_listeningPost", ker3, 45f, 200f, 50f, "Mahyar Listening Post", "mayorate");
 
+        PlanetAPI ker4 = system.addPlanet("Orinocco", star, "Orinocco", "lava_minor", 200f, 100f, 5700f, 320f);
+        ker4.setCustomDescriptionId("planet_Orinocco");
 
         system.autogenerateHyperspaceJumpPoints(true, true);
 

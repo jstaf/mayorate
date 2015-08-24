@@ -117,7 +117,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.autogenerateHyperspaceJumpPoints(true, true);
 
         //add stations and cargo
-        SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Port Authority", "mayorate");
+        SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Kushehr Orbital Yards", "mayorate");
         
         //adding markets
         //adding ilkhana market
