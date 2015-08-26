@@ -48,8 +48,8 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
         ker3.setCustomDescriptionId("planet_Voronoi");
         SectorEntityToken ilk_station = system.addOrbitalStation("ilk_listeningPost", ker3, 45f, 200f, 50f, "Mahyar Listening Post", "mayorate");
 
-        PlanetAPI ker4 = system.addPlanet("Orinocco", star, "Orinocco", "lava_minor", 200f, 100f, 5700f, 320f);
-        ker4.setCustomDescriptionId("planet_Orinocco");
+        PlanetAPI ker4 = system.addPlanet("Ocinna", star, "Ocinna", "lava_minor", 200f, 100f, 5700f, 320f);
+        ker4.setCustomDescriptionId("planet_Ocinna");
 
         system.autogenerateHyperspaceJumpPoints(true, true);
 
