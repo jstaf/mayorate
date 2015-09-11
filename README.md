@@ -1,10 +1,11 @@
 The Mayorate
 ===============================
-![](https://github.com/kazi11/mayorate/blob/master/graphics/ilk/illustrations/inir_surface.png?raw=true)
 
-Adds a new faction with a completely new set of sprites, music, sfx, and shaders. To install, simply extract and copy to your /mods subdirectory. Requires ShaderLib and LazyLib also to be present. It's generally safest to use the most up-to-date versions of those libraries if possible.
+This was a videogame mod I created to teach myself Java. Learning to program is a lot faster and more fun when you can literally play with the code you write.
 
-This mod represents an entire faction with a number of cutting-edge technical features not present in the base game. This includes, but is not limited to fancy stuff like dynamic lighting, normal/materials mapping, combat music, true campaign-level scripting, and AOE weapons.
+This repository adds a new faction with a completely new set of sprites, music, sfx, and shaders. To install, simply extract and copy to your /mods subdirectory. Requires ShaderLib and LazyLib also to be present. It's generally safest to use the most up-to-date versions of those libraries if possible.
+
+This mod represents an entire faction with a number of cutting-edge technical features not present in the base Starsector game. This includes, but is not limited to fancy stuff like dynamic lighting, normal/materials mapping, combat music, true campaign-level scripting, and AOE weapons.
 
 Useful links
 + [Forum thread](http://fractalsoftworks.com/forum/index.php?topic=7372.0)
@@ -17,7 +18,6 @@ Submit any bug reports to the forum thread (or PM me) and I'll do my best to iro
 
 Anyhow, enjoy!
 
-
-(and yes, I did all of the art/coding and most of the music)
+(And yes, I did all of the art/coding/music.)
 
 ![](http://i.imgur.com/am1Nt84.gif) ![](http://i.imgur.com/8b73Ury.gif) 
