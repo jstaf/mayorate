@@ -1,8 +1,10 @@
 package data.scripts.weapons.ai;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import data.scripts.util.AnchoredBoundsEntity;
 import data.scripts.weapons.ilk_DisruptorOnHitEffect;
+import org.apache.log4j.Priority;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
@@ -10,6 +12,7 @@ import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.util.List;
+import java.util.logging.Level;
 
 /**
  * Created by Jeff on 2015-08-13.
@@ -27,7 +30,6 @@ public class DisruptorAI implements AutofireAIPlugin {
     // evidently the ship will open fire with the weapon if this is true
     private boolean shouldFire;
     private ShipAPI target;
-    private AnchoredBoundsEntity targetLead = null;
     private Vector2f loc;
 
     public DisruptorAI(WeaponAPI weaponAPI) {
@@ -65,34 +67,17 @@ public class DisruptorAI implements AutofireAIPlugin {
         }
 
         // are we pointing at the right target?
-        loc = calcLead(target);
-
-        // reanchor targetLead with bounds
         if (target != null) {
-            // create targetlead if it does not already exist, then update it
-            if (targetLead == null) targetLead = new AnchoredBoundsEntity(target, loc);
+            loc = new Vector2f(target.getLocation());
 
-            targetLead.reanchor(target, loc);
+            // reanchor targetLead with bounds
+            if (loc != null) {
+                shouldFire = CollisionUtils.getCollisionPoint(
+                        weapon.getLocation(),
+                        MathUtils.getPointOnCircumference(weapon.getLocation(), range, weapon.getCurrAngle()),
+                        target) != null;
+            }
         }
-
-        shouldFire = CollisionUtils.getCollisionPoint(
-                weapon.getLocation(),
-                MathUtils.getPointOnCircumference(weapon.getLocation(), range, weapon.getCurrAngle()),
-                targetLead) != null; // instead of target, needs lead loc with target bounds
-    }
-
-    private Vector2f calcLead(ShipAPI victim) {
-        Vector2f leadLoc = null;
-        float projSpeed = weapon.getProjectileSpeed();
-
-        if (target != null) {
-            float traversal = MathUtils.getDistance(myShip, victim) / projSpeed;
-            Vector2f targetLoc = target.getLocation();
-            Vector2f vel = target.getVelocity();
-            Vector2f.add(targetLoc, (Vector2f) new Vector2f(vel).scale(traversal), targetLoc);
-        }
-
-        return leadLoc;
     }
 
     private ShipAPI evalThreats(List<ShipAPI> threats) {
