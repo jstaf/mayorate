@@ -1,18 +1,16 @@
-The Mayorate
+mayorate
 ===============================
 
 This was a videogame mod I created to teach myself Java. Learning to program is a lot faster and more fun when you can literally play with the code you write.
 
-This repository adds a new faction with a completely new set of sprites, music, sfx, and shaders. To install, simply extract and copy to your /mods subdirectory. Requires ShaderLib and LazyLib also to be present. It's generally safest to use the most up-to-date versions of those libraries if possible.
+This repository adds a new faction with a completely new set of sprites, music, sfx, and shaders. To install, simply extract and copy to your /mods subdirectory (use the download from the forum thread unless you want to compile things yourself). Requires ShaderLib and LazyLib also to be present. It's generally safest to use the most up-to-date versions of those libraries if possible.
 
-This mod represents an entire faction with a number of cutting-edge technical features not present in the base Starsector game. This includes, but is not limited to fancy stuff like dynamic lighting, normal/materials mapping, combat music, true campaign-level scripting, and AOE weapons.
+This mod adds a lot of cutting-edge technical features not present in the base game. This includes, but is not limited to fancy stuff like dynamic lighting, normal/materials mapping, music, true campaign-level scripting, and AOE weapons.
 
 Useful links
 + [Forum thread](http://fractalsoftworks.com/forum/index.php?topic=7372.0)
 + [ShaderLib](http://fractalsoftworks.com/forum/index.php?topic=7958.0)
 + [LazyLib](http://fractalsoftworks.com/forum/index.php?topic=5444.0)
-
-![](https://github.com/kazi11/mayorate/blob/master/graphics/ilk/portraits/ilk_portrait_3.png?raw=true) ![](https://github.com/kazi11/mayorate/blob/master/graphics/ilk/ships/ilk_cimeterre.png?raw=true) ![](https://github.com/kazi11/mayorate/blob/master/graphics/ilk/ships/ilk_safir.png?raw=true) ![](https://github.com/kazi11/mayorate/blob/master/graphics/ilk/ships/tiamat_sprite10.png?raw=true)
 
 Submit any bug reports to the forum thread (or PM me) and I'll do my best to iron them out. Feel free to submit a pull request if you feel you have something clever to add.
 
