@@ -5,7 +5,8 @@
 			"geothermal":"graphics/ilk/illustrations/geothermal.png",
 			"marine":"graphics/ilk/illustrations/marine.png",
 			"cloud_city":"graphics/ilk/illustrations/cloud_city.png",
-			"karimova":"graphics/ilk/illustrations/karimova.png"
+			"karimova":"graphics/ilk/illustrations/karimova.png",
+			"interdiction":"graphics/ilk/illustrations/interdiction.png"
 		},
 		"beams":{
 			"ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png"

@@ -2,8 +2,8 @@
 	"music":
 	{
 		"music_campaign":[
-			{"file":"ambient.ogg","source":"sounds/ilk/music/"},
-			{"file":"ambient2.ogg","source":"sounds/ilk/music/"}
+			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
+			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
 		]#,
  
 		#"music_combat":[

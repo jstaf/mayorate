@@ -56,10 +56,12 @@ public class ilk_GravPulseInjector extends BaseEveryFrameCombatPlugin {
                 if (pulse.done) continue;
 
                 if (pulse.systemState == ShipSystemStatsScript.State.IN) {
-                    Vector2f shipLoc = pulse.myShip.getLocation();
+
                 }
 
                 if (pulse.systemState == ShipSystemStatsScript.State.OUT) {
+                    if (pulse.pulseLoc == null) pulse.pulseLoc = pulse.myShip.getLocation();
+
                     List<CombatEntityAPI> inRing = CombatUtils.getEntitiesWithinRange(pulse.pulseLoc, pulse.currentRing);
                     inRing.removeAll(CombatUtils.getEntitiesWithinRange(pulse.pulseLoc, pulse.currentSize));
 
@@ -95,10 +97,9 @@ public class ilk_GravPulseInjector extends BaseEveryFrameCombatPlugin {
                 continue;
             }
 
-            if (pulse.systemState == ShipSystemStatsScript.State.ACTIVE) pulse.setLoc();
+            //if (pulse.systemState == ShipSystemStatsScript.State.ACTIVE) pulse.setLoc();
 
             if (pulse.systemState == ShipSystemStatsScript.State.OUT) {
-                pulse.setLoc();
                 indicator.setAlphaMult(1f);
                 // test render of indicator sprites
                 indicator.setSize(700f, 700f);

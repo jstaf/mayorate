@@ -37,8 +37,12 @@ MODDING TOOLS
 
 OTHER
 -Changed many sfx to be better/more license-friendly.
+-Removed music that wasn't written by me. (2 tracks)
 -Removed battle music (it gets old after awhile). Don't worry, it may return as boss encounter music in a later update.
+-Remastered "The Expanse" ambient music track.
+-Added "Nebula" ambient music track.
 -Improved writing for most descriptions.
+-Changed the faction lore a bit to be a bit more in line with what it was before.
 -Probably a lot of stuff I forgot to mention.
 
 ------------------------------------------------------------------------------------------------------------------------

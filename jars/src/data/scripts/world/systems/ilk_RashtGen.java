@@ -49,7 +49,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
 	    ilk1.getSpec().setUseReverseLightForGlow(true);
 	    ilk1.applySpecChanges();
-        ilk1.setInteractionImage("illustrations", "marine");
+        ilk1.setInteractionImage("illustrations", "interdiction");
                 
         PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
         ilk1_1.setCustomDescriptionId("planet_Mun");
