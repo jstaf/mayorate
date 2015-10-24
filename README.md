@@ -8,7 +8,6 @@ This repository adds a new faction with a completely new set of sprites, music, 
 This mod adds a lot of cutting-edge technical features not present in the base game. This includes, but is not limited to fancy stuff like dynamic lighting, normal/materials mapping, music, true campaign-level scripting, and AOE weapons.
 
 Useful links
-+ [Forum thread](http://fractalsoftworks.com/forum/index.php?topic=7372.0)
 + [ShaderLib](http://fractalsoftworks.com/forum/index.php?topic=7958.0)
 + [LazyLib](http://fractalsoftworks.com/forum/index.php?topic=5444.0)
 
