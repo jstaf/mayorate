@@ -17,7 +17,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
     private List<ShipAPI> enemies;
     private float enemyCount = 0;
     private boolean hasOrders = false;
-    private CombatFleetManagerAPI manager;
+    private CombatTaskManagerAPI manager;
     CombatFleetManagerAPI.AssignmentInfo orders;
 
     private float interval = 0f;
@@ -38,7 +38,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
         system = shipSystemAPI;
         aiFlags = shipwideAIFlags;
         objectivesExist = !engine.getObjectives().isEmpty();
-        manager = engine.getFleetManager(ship.getOwner());
+        manager = engine.getFleetManager(ship.getOwner()).getTaskManager(false); // wtf is the ally argument?
     }
 
     @Override

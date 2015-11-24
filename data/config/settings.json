@@ -11,6 +11,9 @@
 		"beams":{
 			"ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png"
 		},
+		"stations":{
+			"ilk_kushehr":"graphics/ilk/stations/kushehr.png"
+		},
 		"util":{
 			"indicator":"graphics/ilk/util/indicator.png"
 		}

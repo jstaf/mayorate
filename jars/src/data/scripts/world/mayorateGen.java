@@ -5,7 +5,7 @@ import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import data.scripts.world.systems.ilk_KerajjGen;
+//import data.scripts.world.systems.ilk_KerajjGen;
 import data.scripts.world.systems.ilk_RashtGen;
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         initFactionRelationships(sector);
         
         new ilk_RashtGen().generate(sector);
-        new ilk_KerajjGen().generate(sector);
+        //new ilk_KerajjGen().generate(sector);
     }
     
     public static void initFactionRelationships(SectorAPI sector) {

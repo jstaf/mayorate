@@ -5,7 +5,7 @@ v0.9 (still being worked on)
 GRAPHICS
 -Added two new portraits.
 -Mayorate portraits are available for player use again.
--Added four unique interaction images (one for every market in Rasht). They're kind of scribble-y, but whatever. 
+-Added a slew unique interaction images (one for every market in Rasht, plus a few extras that are currently unused). They're kind of scribble-y, but whatever. 
 -Improved Ravana sprite.
 -New nuke sprites (mount and launcher)
 -New Mayorate faction logo graphics.
@@ -27,6 +27,7 @@ CAMPAIGN ADDITIONS
 -Added a consulate to Mayorate worlds. You can now chat with them about other factions and stuff (mostly just for your own amusement).
 -Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go with crew. The reputation "cost" is massive however. 
 -Mayorate reputation can be spent at a consulate in order to increase reputation with certain Mayorate allies/neutral factions (Mayorate reputation must be "favorable" or above". Cost is -10 Mayorate rep for +5 <other faction> rep.
+-The bonus "Consulate" features auto-deactivate if you are playing Nexerelin.
 -Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand. If you're clever, you may be able to make money off of metals for once.
 -Shuffled around Rasht market conditions.
 -All Rasht markets now have a significant amount of flavor text.

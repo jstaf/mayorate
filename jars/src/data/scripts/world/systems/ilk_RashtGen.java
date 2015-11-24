@@ -29,7 +29,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         // create the star and generate the hyperspace anchor for this system
-        PlanetAPI star = system.initStar("systems", "star_red_dwarf", 400f);
+        PlanetAPI star = system.initStar("systems", "star_red_dwarf", 400f, 300f);
 
         system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
@@ -117,8 +117,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.autogenerateHyperspaceJumpPoints(true, true);
 
         //add stations and cargo
-        SectorEntityToken ilk_station = system.addOrbitalStation("ilk_port", ilk1, 45, 300, 50, "Kushehr Orbital Yards", "mayorate");
-        
+        SectorEntityToken ilk_station = system.addCustomEntity("ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr", "mayorate");
+        ilk_station.setCircularOrbitPointingDown(ilk1, 315f, 300f, 40f);
+
         //adding markets
         //adding ilkhana market
         String MAYORATE_FACTION = "mayorate";

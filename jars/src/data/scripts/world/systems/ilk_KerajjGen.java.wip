@@ -24,7 +24,7 @@ public class ilk_KerajjGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         //initialize the star
-        PlanetAPI star = system.initStar("Kerajj", "star_white", 350f);
+        PlanetAPI star = system.initStar("Kerajj", "star_white", 350f, 500f);
         star.setCustomDescriptionId("planet_Kerajj");
         system.setLightColor(new Color(240, 238, 191)); // light color in entire system, affects all entities
 
