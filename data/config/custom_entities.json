@@ -1,0 +1,22 @@
+{
+    "ilk_station_kushehr":{
+		"defaultName":"Kushehr Orbital Yards", # used if name=null in addCustomEntity()
+		"defaultRadius":80, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"ilk_station_kushehr",
+		"interactionImage":"graphics/ilk/illustrations/interdiction.png",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":24,
+		"iconHeight":24,
+		"sprite":"graphics/ilk/stations/kushehr.png",
+		"spriteWidth":192,
+		"spriteHeight":77.25,
+		"renderShadow":false,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"tags":["station"],
+		"layers":[STATIONS], 
+	}
+}
