@@ -27,7 +27,8 @@
         ],
         "standard_female": [
 			"graphics/ilk/portraits/ilk_portrait_3.png",
-            "graphics/ilk/portraits/ilk_portrait_1.png"
+            "graphics/ilk/portraits/ilk_portrait_1.png",
+			"graphics/ilk/portraits/ilk_portrait_5.png"
         ]
     },
     "shipRoles": {
@@ -219,12 +220,9 @@
     "traits": {
         "admiral": {},
         "captain": {
-            "cowardly": 1,
             "cautious": 1,
             "steady": 1,
-            "aggressive": 1,
-            "suicidal": 1,
-            "fearless": 1
+            "aggressive": 1
         }
     },
 	"fleetCompositions":{

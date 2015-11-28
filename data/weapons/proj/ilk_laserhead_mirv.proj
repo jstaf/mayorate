@@ -2,8 +2,8 @@
 	"id":"ilk_laserhead_mirv",
 	"specClass":"missile",	
 	"missileType":"MIRV",
-	"sprite":"graphics/ilk/weapons/laserhead_LRM.png",
-	"size":[14,36],	
+	"sprite":"graphics/ilk/weapons/laserhead_missile_v2.png",
+	"size":[15,36],	
 	"center":[7,17],
 	"collisionRadius":20,
 	"collisionClass":"MISSILE_NO_FF",
@@ -14,7 +14,7 @@
 				  "acc":50,
 				  "dec":50},
 	"engineSlots":[{"id":"ES1",
-					"loc":[-15, 0],
+					"loc":[-10, 0],
 					"style":"CUSTOM",
 				    "styleSpec":{
 						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
@@ -32,7 +32,7 @@
 				    "length":50.0,
 				    "angle":180.0}],
 	"behaviorSpec":{"behavior":"MIRV",
-					"splitRange":150,
+					"splitRange":200,
 					"minTimeToSplit":1,
 					"numShots":1,
 					"damage":100,
