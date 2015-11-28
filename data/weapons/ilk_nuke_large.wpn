@@ -6,7 +6,7 @@
 	"turretSprite":"graphics/ilk/weapons/nuke_mkii_mount.png",
 	"hardpointSprite":"graphics/ilk/weapons/nuke_mkii_mount.png",
 	"hardpointOffsets":[19.5, 0],
-	"turretOffsets":[19.5, 0],
+	"turretOffsets":[8.5, 0],
 	"hardpointAngleOffsets":[0],
 	"turretAngleOffsets":[0],
 	"barrelMode":"ALTERNATING",
