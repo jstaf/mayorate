@@ -188,7 +188,7 @@ discussExile2,DialogOptionSelected,$option == exiles2,,"“Look around you. This
 discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate AI is superior to a baseline human in every possible way.”","1:genocide:”That's wrong.”
 1:beliefs2:”I'm not here to judge.”",
 discussMeans,DialogOptionSelected,$option == genocide,BumpRep $faction.id -0.05,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”",1:embMayorate:”I suppose you have a point.”,
-discussBeliefs2,DialogOptionSelected,$option == beliefs2,BumpRep $faction.id 0.02,“A wise attitude.”,10:embMayorate:”Let me ask you about something else.”,
+discussBeliefs2,DialogOptionSelected,$option == beliefs2,,“A wise attitude.”,10:embMayorate:”Let me ask you about something else.”,
 discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is heading towards a very dark place. I know things seem bad now, but it's only going to get worse.”",1:overpopulation:”How can you possibly even know that?”,
 discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer even meet basic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
 2:plan:”What do you plan to do about it?”

@@ -243,6 +243,36 @@
             "ox_Standard": 10
         }
     },
+	"doctrine":{
+		# ship distribution
+		"interceptors":4,
+		"fighters":4,
+		"bombers":6,
+		"small":6,
+		"fast":4,
+		"medium":12,
+		"large":8,
+		"capital":2,
+		
+		# as fraction of combat ships of same size
+		"escortSmallFraction":1,
+		"escortMediumFraction":1,
+		
+		"combatFreighterProbability":0.1,
+		
+		"minPointsForCombatCapital":10,
+		"minPointsForLargeCarrier":30,
+		
+		"smallCarrierProbability":0.25,
+		"mediumCarrierProbability":0.30,
+		"largeCarrierProbability":0.25,
+		
+		# officers
+		"officersPerPoint":0.3,
+		"officerLevelPerPoint":0.3,
+		"officerLevelBase":6,
+		"officerLevelVariance":0.35,
+	},
     "traits": {
         "admiral": {},
         "captain": {
