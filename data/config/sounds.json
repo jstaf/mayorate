@@ -1,15 +1,15 @@
 {
-	"music":
-	{
+	"music":{
 		"music_campaign":[
 			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
 			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
-		]#,
- 
-		#"music_combat":[
-			#{"file":"battle2.ogg","source":"sounds/ilk/music/"},
-			#{"file":"battle3.ogg","source":"sounds/ilk/music/"}
-		#]
+		],
+		"mayorate_neutral":[
+			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.5}
+		],
+		"mayorate_friendly":[
+			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.5}
+		]
 	},
 	
 	"ilk_heavy_disruptor_fire":[

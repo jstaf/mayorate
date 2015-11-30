@@ -18,7 +18,8 @@
     ],
     "internalComms": "mayorate_internal",
     "names": {
-        "modern": 1
+        "Iranian": 5,
+		"Modern":1,
     },
     "portraits": {
         "standard_male": [
@@ -31,6 +32,29 @@
 			"graphics/ilk/portraits/ilk_portrait_5.png"
         ]
     },
+	"ranks":{
+		"ranks":{
+			"spaceCommander":{"name":"Archon"},
+		},
+		"posts":{
+			"patrolCommander":{"name":"Archon"},
+			"fleetCommander":{"name":"Imperator"},
+			"baseCommander":{"name":"Ayatollah"},
+		},
+	},
+	"custom":{
+		"investigatesPlayerForGoodRepWithOtherFactions":false, # be nice, why not?
+		"worthInvestigatingPlayerForGoodRepWith":true,
+	},
+	"music":{
+		"theme":"mayorate_friendly",
+		"market_neutral":"mayorate_neutral",
+		"market_hostile":"mayorate_neutral",
+		"market_friendly":"mayorate_friendly",
+		"encounter_neutral":"mayorate_neutral",
+		"encounter_hostile":"mayorate_neutral",
+		"encounter_friendly":"mayorate_friendly",
+	},
     "shipRoles": {
         "interceptor": {
 			"ilk_hk_wing": 10,
@@ -220,11 +244,13 @@
     "traits": {
         "admiral": {},
         "captain": {
-            "cautious": 1,
-            "steady": 1,
-            "aggressive": 1
+            "timid":3,
+			"cautious":10,
+			"steady":5,
+			"aggressive":10,
         }
     },
+	# only used by fleet spawn rules
 	"fleetCompositions":{
 		"death_fleet":{
 			"displayName":"Fleet",
