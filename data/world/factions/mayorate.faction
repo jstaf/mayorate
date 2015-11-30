@@ -34,9 +34,11 @@
     },
 	"ranks":{
 		"ranks":{
+			"delegate":{"name":"Delegate"},
 			"spaceCommander":{"name":"Archon"},
 		},
 		"posts":{
+			"consul":{"name":"Consul"},
 			"patrolCommander":{"name":"Archon"},
 			"fleetCommander":{"name":"Imperator"},
 			"baseCommander":{"name":"Ayatollah"},

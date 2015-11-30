@@ -9,8 +9,6 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.econ.EconomyAPI;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
@@ -23,7 +21,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     @Override
     public void generate(SectorAPI sector) {
         StarSystemAPI system = sector.createStarSystem("Rasht");
-        system.getLocation().set(-9000,-10000);
+        system.getLocation().set(15500,-4000);
         LocationAPI hyper = Global.getSector().getHyperspace();
 
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
@@ -46,11 +44,10 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         PlanetAPI ilk1 = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 180, 175, 3800, 200);
         ilk1.setCustomDescriptionId("planet_Ilkhanna");
         ilk1.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
-        ilk1.getSpec().setGlowColor(new Color(255,255,255,255));
+        ilk1.getSpec().setGlowColor(new Color(255, 255, 255, 255));
 	    ilk1.getSpec().setUseReverseLightForGlow(true);
 	    ilk1.applySpecChanges();
-        ilk1.setInteractionImage("illustrations", "interdiction");
-                
+
         PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
         ilk1_1.setCustomDescriptionId("planet_Mun");
                 
@@ -119,11 +116,11 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         //add stations and cargo
         SectorEntityToken ilk_station = system.addCustomEntity("ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr", "mayorate");
         ilk_station.setCircularOrbitPointingDown(ilk1, 315f, 300f, 40f);
+        ilk_station.setInteractionImage("illustrations", "interdiction");
 
         //adding markets
-        //adding ilkhana market
         String MAYORATE_FACTION = "mayorate";
-        addMarketplace(MAYORATE_FACTION,
+        SystemUtils.addMarketplace(MAYORATE_FACTION,
                 ilk1,
                 new ArrayList<>(Arrays.asList(ilk_station)),
                 "Ilkhanna",
@@ -133,92 +130,38 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 0.3f
         );
  
-        addMarketplace(MAYORATE_FACTION,
+        SystemUtils.addMarketplace(MAYORATE_FACTION,
                 ilk2,
                 null,
                 "Inir",
                 3,
                 new ArrayList<>(Arrays.asList("ai_core", "indoctrination", Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
-                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
  
-        addMarketplace(Factions.PIRATES,
+        SystemUtils.addMarketplace(Factions.PIRATES,
                 ilk3,
                 null,
                 "Sindral",
                 4,
                 new ArrayList<>(Arrays.asList("indoctrination", Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX, Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
-                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
  
-        addMarketplace(Factions.LUDDIC_CHURCH,
+        SystemUtils.addMarketplace(Factions.LUDDIC_CHURCH,
                 ilk4,
                 null,
                 "Iolanthe",
                 3,
                 new ArrayList<>(Arrays.asList(Conditions.MILITARY_BASE, Conditions.LARGE_REFUGEE_POPULATION, Conditions.LUDDIC_MAJORITY, Conditions.ORGANICS_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
-                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
-    }
- 
-    static void addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name, int size, ArrayList<String> marketConditions, ArrayList<String> submarkets, float tarrif) {
-        EconomyAPI globalEconomy = Global.getSector().getEconomy();
- 
-        String planetID = primaryEntity.getId();
- 
-        //generate the market ID
-        String marketID = planetID + "_market";
- 
-        //generate the market
-        MarketAPI newMarket = Global.getFactory().createMarket(marketID, name, size);
- 
-        //set the faction associated with the market
-        newMarket.setFactionId(factionID);
-        primaryEntity.setFaction(factionID);
- 
-        //set the primary entity related to the market
-        newMarket.setPrimaryEntity(primaryEntity);
- 
-        //set the base smuggling value (starting value)
-        newMarket.setBaseSmugglingStabilityValue(0);
- 
-        //set the starting tarrif, could also make this value an input
-        newMarket.getTariff().modifyFlat("generator", tarrif);
- 
-        //add each sub-market types to the mark
-        if (null != submarkets) {
-            for (String market : submarkets) {
-                newMarket.addSubmarket(market);
-            }
-        }
- 
-        //add each market conditions
-        for (String condition : marketConditions) {
-            newMarket.addCondition(condition);
-        }
- 
-        //add all connected entities to this marketplace, moons/stations etc.
-        if (null != connectedEntities) {
-            for (SectorEntityToken entity : connectedEntities) {
-                newMarket.getConnectedEntities().add(entity);
-            }
-        }
- 
-        //add the market to the global market place
-        globalEconomy.addMarket(newMarket);
- 
-        //get the primary entity and associate it back to the market that we've created
-        primaryEntity.setMarket(newMarket);
- 
-        //get all associated entities and associate it back to the market we've created
-        if (null != connectedEntities) {
-            for (SectorEntityToken entity : connectedEntities) {
-                entity.setMarket(newMarket);
-            }
-        }
-        
+
+        // add consuls to mayorate markets
+        SystemUtils.addConsul(ilk1.getMarket());
+        SystemUtils.addConsul(ilk2.getMarket());
     }
 }
