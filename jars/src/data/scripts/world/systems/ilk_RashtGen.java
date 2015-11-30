@@ -21,8 +21,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     @Override
     public void generate(SectorAPI sector) {
         StarSystemAPI system = sector.createStarSystem("Rasht");
-        system.getLocation().set(15500,-4000);
-        LocationAPI hyper = Global.getSector().getHyperspace();
+        system.getLocation().set(13000,-3500);
 
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
