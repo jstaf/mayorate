@@ -77,6 +77,5 @@ public class SystemUtils {
                 entity.setMarket(newMarket);
             }
         }
-
     }
 }

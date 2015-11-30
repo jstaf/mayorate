@@ -22,10 +22,8 @@ public class mayorateGen implements SectorGeneratorPlugin {
     public static void initFactionRelationships(SectorAPI sector) {
         FactionAPI mayorate = sector.getFaction("mayorate");
         
-        List <FactionAPI> allFactions = sector.getAllFactions();
-        for (FactionAPI f : allFactions)
-        {
-            mayorate.setRelationship(f.getId(), RepLevel.INHOSPITABLE);
+        for (FactionAPI faction : sector.getAllFactions()) {
+            mayorate.setRelationship(faction.getId(), RepLevel.INHOSPITABLE);
         }
 
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
@@ -46,7 +44,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
         mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
         mayorate.setRelationship(kol.getId(), RepLevel.NEUTRAL);
-        mayorate.setRelationship(tritachyon.getId(), RepLevel.WELCOMING);
+        mayorate.setRelationship(tritachyon.getId(), RepLevel.FRIENDLY);
         mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
         
         //mod factions

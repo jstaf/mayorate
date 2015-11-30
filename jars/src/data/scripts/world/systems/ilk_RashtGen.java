@@ -21,7 +21,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     @Override
     public void generate(SectorAPI sector) {
         StarSystemAPI system = sector.createStarSystem("Rasht");
-        system.getLocation().set(13000,-3500);
+        system.getLocation().set(13000,-4500);
 
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
@@ -149,12 +149,12 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 0.3f
         );
  
-        SystemUtils.addMarketplace(Factions.LUDDIC_CHURCH,
+        SystemUtils.addMarketplace(Factions.INDEPENDENT,
                 ilk4,
                 null,
                 "Iolanthe",
                 3,
-                new ArrayList<>(Arrays.asList(Conditions.MILITARY_BASE, Conditions.LARGE_REFUGEE_POPULATION, Conditions.LUDDIC_MAJORITY, Conditions.ORGANICS_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
+                new ArrayList<>(Arrays.asList(Conditions.LARGE_REFUGEE_POPULATION, Conditions.LUDDIC_MAJORITY, Conditions.ORGANICS_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
