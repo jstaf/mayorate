@@ -26,7 +26,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         // create the star and generate the hyperspace anchor for this system
-        PlanetAPI star = system.initStar("systems", "star_red_dwarf", 400f, 300f);
+        PlanetAPI star = system.initStar("rasht", "star_red_dwarf", 400f, 300f);
 
         system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
@@ -40,7 +40,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
          * 6. Orbit radius, pixels at default zoom
          * 7. Days it takes to complete an orbit. 1 day = 10 seconds.
          */
-        PlanetAPI ilk1 = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 180, 175, 3800, 200);
+        PlanetAPI ilk1 = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 185, 175, 3800, 200);
         ilk1.setCustomDescriptionId("planet_Ilkhanna");
         ilk1.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
         ilk1.getSpec().setGlowColor(new Color(255, 255, 255, 255));
@@ -61,13 +61,22 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 330, 200, 8500, 150);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
         ilk4.setInteractionImage("illustrations", "cloud_city");
-        
+
+        // create relay
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
-				 "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Rasht L5 Relay", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "mayorate"); // faction
-                //orbits ilkhanna
-                relay.setCircularOrbit( system.getEntityById("ilkhanna"), 150, 1450, 100);
+        //orbits rasht @ ilkhanna L5 point
+        relay.setCircularOrbit(system.getEntityById("rasht"), 125, 3800, 200);
+
+        // create jump point
+        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna L4 Jump Point");
+        jumpPoint.setCircularOrbit(system.getEntityById("rasht"), 245, 3800, 200);
+        jumpPoint.setRelatedPlanet(ilk1);
+        jumpPoint.setStandardWormholeToHyperspaceVisual();
+        system.addEntity(jumpPoint);
+        system.autogenerateHyperspaceJumpPoints(true, true);
 
         /*
          * addAsteroidBelt() parameters:
@@ -102,15 +111,6 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.addRingBand(star, "misc", "rings1", 256f, 0, Color.white, 280f, 6300, 160f);
 
         system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 6900, 110f);
-
-        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna Jump Point");
-        OrbitAPI orbit = Global.getFactory().createCircularOrbit(ilk1, 135, 600, 30);
-        jumpPoint.setOrbit(orbit);
-        jumpPoint.setRelatedPlanet(ilk1);
-        jumpPoint.setStandardWormholeToHyperspaceVisual();
-        system.addEntity(jumpPoint);
-
-        system.autogenerateHyperspaceJumpPoints(true, true);
 
         //add stations and cargo
         SectorEntityToken ilk_station = system.addCustomEntity("ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr", "mayorate");
