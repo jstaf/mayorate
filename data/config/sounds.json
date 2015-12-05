@@ -5,10 +5,10 @@
 			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
 		],
 		"mayorate_neutral":[
-			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.4}
+			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.35}
 		],
 		"mayorate_friendly":[
-			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.4}
+			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.35}
 		]
 	},
 	

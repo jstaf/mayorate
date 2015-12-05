@@ -1,304 +1,311 @@
 {
-    "id": "mayorate",
-    "color": [
-        224,
-        200,
-        35,
-        255
-    ],
-    "displayName": "Mayorate",
-    "displayNameWithArticle": "the Mayorate",
-    "logo": "graphics/ilk/factions/mayorate_flag.png",
-    "shipNamePrefix": "MNS",
-    "shipNameSources": {
-        "FARSI": 1
-    },
-    "illegalCommodities": [
-        "hand_weapons"
-    ],
-    "internalComms": "mayorate_internal",
-    "names": {
-        "Iranian": 5,
-		"Modern":1,
-    },
-    "portraits": {
-        "standard_male": [
-            "graphics/ilk/portraits/ilk_portrait_2.png",
+	"id": "mayorate",
+	"color": [
+		224,
+		200,
+		35,
+		255
+	],
+	"displayName": "Mayorate",
+	"displayNameWithArticle": "the Mayorate",
+	"logo": "graphics/ilk/factions/mayorate_flag.png",
+	"shipNamePrefix": "MNS",
+	"shipNameSources": {
+		"FARSI": 1
+	},
+	"illegalCommodities": [
+		"hand_weapons"
+	],
+	"internalComms": "mayorate_internal",
+	"names": {
+		"Iranian": 5,
+		"Modern": 1
+	},
+	"portraits": {
+		"standard_male": [
+			"graphics/ilk/portraits/ilk_portrait_2.png",
 			"graphics/ilk/portraits/ilk_portrait_4.png"
-        ],
-        "standard_female": [
+		],
+		"standard_female": [
 			"graphics/ilk/portraits/ilk_portrait_3.png",
-            "graphics/ilk/portraits/ilk_portrait_1.png",
+			"graphics/ilk/portraits/ilk_portrait_1.png",
 			"graphics/ilk/portraits/ilk_portrait_5.png"
-        ]
-    },
-	"ranks":{
-		"ranks":{
-			"delegate":{"name":"Delegate"},
-			"spaceCommander":{"name":"Archon"},
+		]
+	},
+	"ranks": {
+		"ranks": {
+			"delegate": {
+				"name": "Delegate"
+			},
+			"spaceCommander": {
+				"name": "Archon"
+			}
 		},
-		"posts":{
-			"consul":{"name":"Consul"},
-			"patrolCommander":{"name":"Archon"},
-			"fleetCommander":{"name":"Imperator"},
-			"baseCommander":{"name":"Ayatollah"},
-		},
+		"posts": {
+			"consul": {
+				"name": "Consul"
+			},
+			"patrolCommander": {
+				"name": "Archon"
+			},
+			"fleetCommander": {
+				"name": "Imperator"
+			},
+			"baseCommander": {
+				"name": "Ayatollah"
+			}
+		}
 	},
-	"custom":{
-		"offersCommissions":true,
-		"engagesInHostilities":true,
+	"custom": {
+		"offersCommissions": true,
+		"engagesInHostilities": true
 	},
-	"music":{
-		"theme":"mayorate_friendly",
-		"market_neutral":"mayorate_neutral",
-		"market_hostile":"mayorate_neutral",
-		"market_friendly":"mayorate_friendly",
-		"encounter_neutral":"mayorate_neutral",
-		"encounter_hostile":"mayorate_neutral",
-		"encounter_friendly":"mayorate_friendly",
+	"music": {
+		"theme": "mayorate_friendly",
+		"market_neutral": "mayorate_neutral",
+		"market_hostile": "mayorate_neutral",
+		"market_friendly": "mayorate_friendly",
+		"encounter_neutral": "mayorate_neutral",
+		"encounter_hostile": "mayorate_neutral",
+		"encounter_friendly": "mayorate_friendly"
 	},
-    "shipRoles": {
-        "interceptor": {
+	"shipRoles": {
+		"interceptor": {
 			"ilk_hk_wing": 10,
-            "ilk_inanna_wing": 4,
-            "fallback": {
-                "fighter": 1
-            }
-        },
-        "fighter": {
-            "ilk_raad_wing": 10,
+			"ilk_inanna_wing": 4,
+			"fallback": {
+				"fighter": 1
+			}
+		},
+		"fighter": {
+			"ilk_raad_wing": 10,
 			"ilk_hk_wing": 3,
-            "fallback": {
-                "interceptor": 1
-            }
-        },
-        "bomber": {
-            "ilk_angha_wing": 10
-        },
-        "fastAttack": {
-            "ilk_lilith_assault": 10,
-            "fallback": {
-                "combatSmall": 1
-            }
-        },
-        "escortSmall": {
-            "ilk_lilith_kazi_tournament": 5,
-            "ilk_tiamat_assault": 10,
-            "fallback": {
-                "combatSmall": 1
-            }
-        },
-        "escortMedium": {
-            "ilk_cimeterre_strike": 5,
-            "ilk_safir_converted_support": 5,
-            "fallback": {
-                "combatMedium": 1
-            }
-        },
-        "combatSmall": {
-            "ilk_tiamat_assault": 10,
-            "ilk_lilith_kazi_tournament": 6,
-            "ilk_lilith_assault": 6,
-            "fallback": {
-                "escortSmall": 1
-            }
-        },
-        "combatMedium": {
-            "ilk_cimeterre_strike": 10,
-            "ilk_safir_converted_support": 5,
-            "fallback": {
-                "combatSmall": 2
-            }
-        },
-        "combatLarge": {
-            "ilk_del_azarchel_artillery": 10,
-            "ilk_jamaran_kazi_tournament": 5,
-            "fallback": {
-                "combatMedium": 2
-            }
-        },
-        "combatCapital": {
-            "ilk_ravana_pursuit": 10,
-            "fallback": {
-                "combatLarge": 2
-            }
-        },
-        "combatFreighterSmall": {
-            "cerberus_d_pirates_Standard": 5,
-            "hound_d_pirates_Standard": 5,
-            "shepherd_Frontier": 10,
-            "cerberus_Standard": 10,
-            "fallback": {
-                "freighterSmall": 1
-            }
-        },
-        "combatFreighterMedium": {
-            "ilk_safir_converted_support": 10,
-            "fallback": {
-                "combatFreighterSmall": 2
-            }
-        },
-        "combatFreighterLarge": {
-            "ilk_jamaran_support": 10,
-            "fallback": {
-                "combatFreighterMedium": 2
-            }
-        },
-        "civilianRandom": {
-            "mercury_d_Standard": 10,
-            "hermes_d_Standard": 10,
-            "mercury_Standard": 10,
-            "hermes_Standard": 10,
-            "fallback": {
-                "freighterSmall": 1
-            }
-        },
-        "carrierSmall": {
-            "ilk_foraker_escort": 10,
-            "fallback": {
-                "carrierMedium": 1
-            }
-        },
-        "carrierMedium": {
-            "ilk_jamaran_support": 10,
-            "ilk_jamaran_kazi_tournament": 2,
-            "fallback": {
-                "carrierSmall": 2
-            }
-        },
-        "carrierLarge": {
-            "fallback": {
-                "carrierMedium": 2
-            }
-        },
-        "freighterSmall": {
-            "hermes_d_Standard": 10,
-            "hermes_Standard": 10,
-            "fallback": {
-                "freighterMedium": 1
-            }
-        },
-        "freighterMedium": {
-            "ilk_safir_standard": 10,
-            "fallback": {
-                "freighterSmall": 2
-            }
-        },
-        "freighterLarge": {
-            "atlas_Standard": 10,
-            "fallback": {
-                "freighterMedium": 2
-            }
-        },
-        "tankerSmall": {
-            "dram_Light": 10,
-            "fallback": {
-                "tankerMedium": 1
-            }
-        },
-        "tankerMedium": {
-            "phaeton_Standard": 10,
-            "fallback": {
-                "tankerSmall": 2
-            }
-        },
-        "tankerLarge": {
-            "prometheus_Super": 10,
-            "fallback": {
-                "tankerMedium": 2
-            }
-        },
-        "personnelSmall": {
-            "mercury_d_Standard": 10,
-            "mercury_Standard": 10,
-            "fallback": {
-                "personnelMedium": 1
-            }
-        },
-        "personnelMedium": {
-            "valkyrie_Elite": 10,
-            "fallback": {
-                "personnelSmall": 2
-            }
-        },
-        "personnelLarge": {
-            "fallback": {
-                "personnelMedium": 2
-            }
-        },
-        "tug": {
-            "ox_Standard": 10,
-            "fallback": {
-                "utility": 1
-            }
-        },
-        "crig": {
-            "crig_Standard": 10,
-            "fallback": {
-                "utility": 1
-            }
-        },
-        "utility": {
-            "crig_Standard": 10,
-            "ox_Standard": 10
-        }
-    },
-	"doctrine":{
-		# ship distribution
-		"interceptors":4,
-		"fighters":4,
-		"bombers":6,
-		"small":6,
-		"fast":4,
-		"medium":12,
-		"large":8,
-		"capital":2,
-		
-		# as fraction of combat ships of same size
-		"escortSmallFraction":1,
-		"escortMediumFraction":1,
-		
-		"combatFreighterProbability":0.1,
-		
-		"minPointsForCombatCapital":10,
-		"minPointsForLargeCarrier":30,
-		
-		"smallCarrierProbability":0.25,
-		"mediumCarrierProbability":0.30,
-		"largeCarrierProbability":0.25,
-		
-		# officers
-		"officersPerPoint":0.3,
-		"officerLevelPerPoint":0.3,
-		"officerLevelBase":6,
-		"officerLevelVariance":0.35,
+			"fallback": {
+				"interceptor": 1
+			}
+		},
+		"bomber": {
+			"ilk_angha_wing": 10
+		},
+		"fastAttack": {
+			"ilk_lilith_assault": 10,
+			"fallback": {
+				"combatSmall": 1
+			}
+		},
+		"escortSmall": {
+			"ilk_lilith_kazi_tournament": 5,
+			"ilk_tiamat_assault": 10,
+			"fallback": {
+				"combatSmall": 1
+			}
+		},
+		"escortMedium": {
+			"ilk_cimeterre_strike": 5,
+			"ilk_safir_converted_support": 5,
+			"fallback": {
+				"combatMedium": 1
+			}
+		},
+		"combatSmall": {
+			"ilk_tiamat_assault": 10,
+			"ilk_lilith_kazi_tournament": 6,
+			"ilk_lilith_assault": 6,
+			"fallback": {
+				"escortSmall": 1
+			}
+		},
+		"combatMedium": {
+			"ilk_cimeterre_strike": 10,
+			"ilk_safir_converted_support": 5,
+			"fallback": {
+				"combatSmall": 2
+			}
+		},
+		"combatLarge": {
+			"ilk_del_azarchel_artillery": 10,
+			"ilk_jamaran_kazi_tournament": 5,
+			"fallback": {
+				"combatMedium": 2
+			}
+		},
+		"combatCapital": {
+			"ilk_ravana_pursuit": 10,
+			"fallback": {
+				"combatLarge": 2
+			}
+		},
+		"combatFreighterSmall": {
+			"cerberus_d_pirates_Standard": 5,
+			"hound_d_pirates_Standard": 5,
+			"shepherd_Frontier": 10,
+			"cerberus_Standard": 10,
+			"fallback": {
+				"freighterSmall": 1
+			}
+		},
+		"combatFreighterMedium": {
+			"ilk_safir_converted_support": 10,
+			"fallback": {
+				"combatFreighterSmall": 2
+			}
+		},
+		"combatFreighterLarge": {
+			"ilk_jamaran_support": 10,
+			"fallback": {
+				"combatFreighterMedium": 2
+			}
+		},
+		"civilianRandom": {
+			"mercury_d_Standard": 10,
+			"hermes_d_Standard": 10,
+			"mercury_Standard": 10,
+			"hermes_Standard": 10,
+			"fallback": {
+				"freighterSmall": 1
+			}
+		},
+		"carrierSmall": {
+			"ilk_foraker_escort": 10,
+			"fallback": {
+				"carrierMedium": 1
+			}
+		},
+		"carrierMedium": {
+			"ilk_jamaran_support": 10,
+			"ilk_jamaran_kazi_tournament": 2,
+			"fallback": {
+				"carrierSmall": 2
+			}
+		},
+		"carrierLarge": {
+			"fallback": {
+				"carrierMedium": 2
+			}
+		},
+		"freighterSmall": {
+			"hermes_d_Standard": 10,
+			"hermes_Standard": 10,
+			"fallback": {
+				"freighterMedium": 1
+			}
+		},
+		"freighterMedium": {
+			"ilk_safir_standard": 10,
+			"fallback": {
+				"freighterSmall": 2
+			}
+		},
+		"freighterLarge": {
+			"atlas_Standard": 10,
+			"fallback": {
+				"freighterMedium": 2
+			}
+		},
+		"tankerSmall": {
+			"dram_Light": 10,
+			"fallback": {
+				"tankerMedium": 1
+			}
+		},
+		"tankerMedium": {
+			"phaeton_Standard": 10,
+			"fallback": {
+				"tankerSmall": 2
+			}
+		},
+		"tankerLarge": {
+			"prometheus_Super": 10,
+			"fallback": {
+				"tankerMedium": 2
+			}
+		},
+		"personnelSmall": {
+			"mercury_d_Standard": 10,
+			"mercury_Standard": 10,
+			"fallback": {
+				"personnelMedium": 1
+			}
+		},
+		"personnelMedium": {
+			"valkyrie_Elite": 10,
+			"fallback": {
+				"personnelSmall": 2
+			}
+		},
+		"personnelLarge": {
+			"fallback": {
+				"personnelMedium": 2
+			}
+		},
+		"tug": {
+			"ox_Standard": 10,
+			"fallback": {
+				"utility": 1
+			}
+		},
+		"crig": {
+			"crig_Standard": 10,
+			"fallback": {
+				"utility": 1
+			}
+		},
+		"utility": {
+			"crig_Standard": 10,
+			"ox_Standard": 10
+		}
 	},
-    "traits": {
-        "admiral": {},
-        "captain": {
-            "timid":3,
-			"cautious":10,
-			"steady":5,
-			"aggressive":10,
-        }
-    },
-	# only used by fleet spawn rules
-	"fleetCompositions":{
-		"death_fleet":{
-			"displayName":"Fleet",
-			"maxFleetPoints":110,
-			"daysWorthOfSupplies":[50, 70],
-			"lyWorthOfFuel":[20, 40],
-			"extraCrewPercent":[80, 80],
-			"marinesPercent":[40, 40],
-			"ships":{
-				"ilk_ravana_pursuit":[1, 1],
-				"ilk_del_azarchel_artillery":[1, 2],
-				"ilk_foraker_escort":[1, 2],
-				"ilk_cimeterre_strike":[2, 3],
-				"ilk_lilith_assault":[3, 6],
-				"ilk_raad_wing":[2, 3],
-				"ilk_angha_wing":[3, 5]
+	"doctrine": {
+		"interceptors": 4,
+		"fighters": 4,
+		"bombers": 6,
+		"small": 6,
+		"fast": 4,
+		"medium": 12,
+		"large": 8,
+		"capital": 2,
+
+		"escortMediumFraction": 1,
+
+		"combatFreighterProbability": 0.1,
+
+		"minPointsForCombatCapital": 10,
+		"minPointsForLargeCarrier": 30,
+
+		"smallCarrierProbability": 0.25,
+		"mediumCarrierProbability": 0.30,
+		"largeCarrierProbability": 0.25,
+
+		"officersPerPoint": 0.3,
+		"officerLevelPerPoint": 0.3,
+		"officerLevelBase": 6,
+		"officerLevelVariance": 0.35
+	},
+	"traits": {
+		"admiral": {},
+		"captain": {
+			"timid": 3,
+			"cautious": 5,
+			"steady": 5,
+			"aggressive": 10
+		}
+	},
+	"fleetCompositions": {
+		"death_fleet": {
+			"displayName": "Fleet",
+			"maxFleetPoints": 110,
+			"daysWorthOfSupplies": [50, 70],
+			"lyWorthOfFuel": [20, 40],
+			"extraCrewPercent": [80, 80],
+			"marinesPercent": [40, 40],
+			"ships": {
+				"ilk_ravana_pursuit": [1, 1],
+				"ilk_del_azarchel_artillery": [1, 2],
+				"ilk_foraker_escort": [1, 2],
+				"ilk_cimeterre_strike": [2, 3],
+				"ilk_lilith_assault": [3, 6],
+				"ilk_raad_wing": [2, 3],
+				"ilk_angha_wing": [3, 5]
 			}
 		}
 	}

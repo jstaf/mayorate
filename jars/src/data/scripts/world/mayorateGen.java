@@ -39,11 +39,11 @@ public class mayorateGen implements SectorGeneratorPlugin {
         player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
 
         mayorate.setRelationship(path.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(hegemony.getId(), RepLevel.INHOSPITABLE);
+        mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
         mayorate.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
-        mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
+        mayorate.setRelationship(diktat.getId(), RepLevel.SUSPICIOUS);
         mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(kol.getId(), RepLevel.NEUTRAL);
+        mayorate.setRelationship(kol.getId(), RepLevel.SUSPICIOUS);
         mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
         mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
         
@@ -57,7 +57,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         mayorate.setRelationship("crystanite", RepLevel.HOSTILE);
         mayorate.setRelationship("interstellarimperium", RepLevel.HOSTILE);
         mayorate.setRelationship("neutrinocorp", RepLevel.SUSPICIOUS);
-        mayorate.setRelationship("diableavionics", RepLevel.NEUTRAL);
+        mayorate.setRelationship("diableavionics", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("blackrock_driveyards", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("syndicate_asp", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("junk_pirates", RepLevel.NEUTRAL);
