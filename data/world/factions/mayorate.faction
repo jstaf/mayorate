@@ -45,8 +45,8 @@
 		},
 	},
 	"custom":{
-		"investigatesPlayerForGoodRepWithOtherFactions":false, # be nice, why not?
-		"worthInvestigatingPlayerForGoodRepWith":true,
+		"offersCommissions":true,
+		"engagesInHostilities":true,
 	},
 	"music":{
 		"theme":"mayorate_friendly",

@@ -39,12 +39,12 @@ public class mayorateGen implements SectorGeneratorPlugin {
         player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
 
         mayorate.setRelationship(path.getId(), RepLevel.HOSTILE);
-        mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
+        mayorate.setRelationship(hegemony.getId(), RepLevel.INHOSPITABLE);
         mayorate.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
         mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
         mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
         mayorate.setRelationship(kol.getId(), RepLevel.NEUTRAL);
-        mayorate.setRelationship(tritachyon.getId(), RepLevel.FRIENDLY);
+        mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
         mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
         
         //mod factions
@@ -58,8 +58,8 @@ public class mayorateGen implements SectorGeneratorPlugin {
         mayorate.setRelationship("interstellarimperium", RepLevel.HOSTILE);
         mayorate.setRelationship("neutrinocorp", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("diableavionics", RepLevel.NEUTRAL);
-        mayorate.setRelationship("blackrock_driveyards", RepLevel.HOSTILE);
-        mayorate.setRelationship("syndicate_asp", RepLevel.WELCOMING);
+        mayorate.setRelationship("blackrock_driveyards", RepLevel.SUSPICIOUS);
+        mayorate.setRelationship("syndicate_asp", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("junk_pirates", RepLevel.NEUTRAL);
         mayorate.setRelationship("pack", RepLevel.HOSTILE);
         mayorate.setRelationship("exigency", RepLevel.HOSTILE);

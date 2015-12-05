@@ -89,12 +89,12 @@ Imperium1,PopulateModFactions,IsFactionPresent interstellarimperium,,,1:eIm:The 
 embModFactionsLeave,PopulateModFactions,,,,10:embFactionsQuiet:”Let's talk about those other factions again.”,
 ,,,,,,
 #discuss mod factions,,,,,,
-eScy,DialogOptionSelected,$option == eSc,,“Teleporting star sysems are an affront to the laws of physics.”,0:eMods:”Are you kidding? Scavenger hunts are AWESOME!”,
+eScy,DialogOptionSelected,$option == eSc,,“An unknown factor. It remains to be seen whether they will be a help or hindrance when the time comes.”,"0:eMods:”Careful, you're making me nervous.”",
 eBlackrock,DialogOptionSelected,$option == eBrdy,,“Mmm... that Nevermore... sometimes we wish we came up with that ship.”,"0:eMods:”Yeah, it's pretty tough to be that fabulous all the time.”",
 eExigency,DialogOptionSelected,$option == eExi,,“Needs more blue and missiles.”,0:eMods:”Hmmm... I'm pretty sure they don't.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,"0:eMods:”First world problems, amirite?”",
-eTemplar,DialogOptionSelected,$option == eTem,,"“Cowards and deserters. They sold out their own kind so that they might never have to face judgement by the enemy. When the time comes, we will not hesitate to wipe them out.”",0:eMods:”The struggle is real.”,
-eImperium,DialogOptionSelected,$option == eIm,,"“Not sure if you've figured this out yet, but orange is my favorite color.”","0:eMods:”Yeah, you were kind of giving off that kind of vibe.”",
+eTemplar,DialogOptionSelected,$option == eTem,,"“Cowards and deserters. They sold out their own kind so that they might avoid the enemy's judgement. When the time comes, we will not hesitate to wipe them out.”",0:eMods:”The struggle is real.”,
+eImperium,DialogOptionSelected,$option == eIm,,“It's rumored that the Mayor and the first Caesar knew each other back in the day.”,0:eMods:”Interesting.”,
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
@@ -179,13 +179,13 @@ discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you wan
 3:goals:”What are your long term goals in the sector?”
 3:name:”What's up with the name 'Mayorate'?”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,"“There were several, ah... disagreements with the Domain's ruling elements. It was mutually agreed that our founders should relocate to a less developed region of the Domain and otherwise refrain from participation in galactic politics.“",1:exile:”That sounds like exile.”,
+discussOrigins,DialogOptionSelected,$option == origins,,"“There were several, ah... disagreements with the Domain's ruling elements. It was mutually agreed that our founders should relocate to a less developed region and otherwise refrain from participation in the internal politics of the Domain.“",1:exile:”That sounds like exile.”,
 discussOrigins2,DialogOptionSelected,$option == exile,,"“Indeed. Although we are still here and the Domain is not, so perhaps we did something right, after all.“","1:exiles2:”What did you do to get exiled?”
 10:embMayorate:”Interesting.”",
 discussExile2,DialogOptionSelected,$option == exiles2,,"“Look around you. This sector is falling apart. We need to become better than is humanly possible in order to survive. Forcibly, if need be.”","1:beliefs:”Stop beating around the bush.”
 1:beliefs2:”Makes sense.”
 10:embMayorate:”That's dark.”",
-discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate AI is superior to a baseline human in every possible way.”","1:genocide:”That's wrong.”
+discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate intelligence is superior to the baseline human in every possible way.”","1:genocide:”You're wrong.”
 1:beliefs2:”I'm not here to judge.”",
 discussMeans,DialogOptionSelected,$option == genocide,BumpRep $faction.id -0.05,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”",1:embMayorate:”I suppose you have a point.”,
 discussBeliefs2,DialogOptionSelected,$option == beliefs2,,“A wise attitude.”,10:embMayorate:”Let me ask you about something else.”,
@@ -205,7 +205,7 @@ discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've mo
 2:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”Good to know.”",
 discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh, she's still around. Just not quite up to how she used to be.”",1:mayor3:”What happened to her?”,
-discussMayor3,DialogOptionSelected,$option == mayor3,,“It was decided that she should take a back seat from affairs.”,"1:ayatollah:”What's an Ayatollah?”
+discussMayor3,DialogOptionSelected,$option == mayor3,,"“It was decided that she should recuse herself from faction affairs. I assure you, it was a mutual decision.”","1:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”I'll keep that in mind.”",
 discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
 discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But many do.”","1:mayor2:”The Mayor? There was only one?”

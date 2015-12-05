@@ -12,6 +12,10 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+import com.fs.starfarer.api.impl.campaign.ids.Terrain;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
+import com.fs.starfarer.api.util.Misc;
+
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,53 +68,43 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         // create relay
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
-				 "Rasht L5 Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Rasht Comm Relay", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "mayorate"); // faction
         //orbits rasht @ ilkhanna L5 point
-        relay.setCircularOrbit(system.getEntityById("rasht"), 125, 3800, 200);
+        relay.setCircularOrbit(system.getEntityById("rasht"), 245, 3800, 200);
 
         // create jump point
-        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna L4 Jump Point");
-        jumpPoint.setCircularOrbit(system.getEntityById("rasht"), 245, 3800, 200);
+        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna L5 Jump Point");
+        jumpPoint.setCircularOrbit(system.getEntityById("rasht"), 125, 3800, 200);
         jumpPoint.setRelatedPlanet(ilk1);
         jumpPoint.setStandardWormholeToHyperspaceVisual();
         system.addEntity(jumpPoint);
         system.autogenerateHyperspaceJumpPoints(true, true);
 
-        /*
-         * addAsteroidBelt() parameters:
-         * 1. What the belt orbits
-         * 2. Number of asteroids
-         * 3. Orbit radius
-         * 4. Belt width
-         * 6/7. Range of days to complete one orbit. Value picked randomly for each asteroid. 
-         */
-        system.addAsteroidBelt(star, 400, 6200, 300, 100, 200);
-        system.addAsteroidBelt(star, 100, 7100, 100, 60, 110);
+        // inner system band
         system.addAsteroidBelt(star, 200, 1850, 600, 100, 130);
-
-        /*
-         * addRingBand() parameters:
-         * 1. What it orbits
-         * 2. Category under "graphics" in settings.json
-         * 3. Key in category
-         * 4. Width of band within the texture
-         * 5. Index of band
-         * 6. Color to apply to band
-         * 7. Width of band (in the game)
-         * 8. Orbit radius (of the middle of the band)
-         * 9. Orbital period, in days
-         */
         system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 2050, 120f);
         system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 1800, 150f);
         system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 2100, 110f);
         system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300, 110f);
+        SectorEntityToken ring = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(500f, 2000, null, "Cinder Belt"));
+        ring.setCircularOrbit(star, 0, 0, 120f);
 
+        // outer system band
         system.addRingBand(star, "misc", "rings1", 256f, 1, Color.white, 256f, 6000, 200f);
         system.addRingBand(star, "misc", "rings1", 256f, 0, Color.white, 280f, 6300, 160f);
-
         system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 6900, 110f);
+        system.addAsteroidBelt(star, 400, 6200, 300, 100, 200);
+        system.addAsteroidBelt(star, 100, 7100, 100, 60, 110);
+        SectorEntityToken ringInner = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(450f, 6450, null, "Lanula's Arch"));
+        ringInner.setCircularOrbit(star, 0, 0, 165f);
+
+        // full system nebula
+        /*SectorEntityToken rashtNebula = Misc.addNebulaFromPNG("data/campaign/terrain/rashtNebula.png",
+                0f, 0f, //center
+                system,
+                "terrain", "nebula_amber", 4, 4);*/
 
         //add stations and cargo
         SectorEntityToken ilk_station = system.addCustomEntity("ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr", "mayorate");
@@ -124,7 +118,10 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 new ArrayList<>(Arrays.asList(ilk_station)),
                 "Ilkhanna",
                 6,
-                new ArrayList<>(Arrays.asList("ai_core", Conditions.HEADQUARTERS, Conditions.MILITARY_BASE, Conditions.ORBITAL_STATION, Conditions.AUTOFAC_HEAVY_INDUSTRY, Conditions.ORE_REFINING_COMPLEX, Conditions.ORE_REFINING_COMPLEX, Conditions.VICE_DEMAND, Conditions.ARID, Conditions.POPULATION_6)),
+                new ArrayList<>(Arrays.asList("ai_core",
+                        Conditions.HEADQUARTERS, Conditions.MILITARY_BASE, Conditions.ORBITAL_STATION,
+                        Conditions.AUTOFAC_HEAVY_INDUSTRY, Conditions.ORE_REFINING_COMPLEX, Conditions.ORE_REFINING_COMPLEX,
+                        Conditions.VICE_DEMAND, Conditions.ARID, Conditions.POPULATION_6)),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -134,7 +131,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Inir",
                 3,
-                new ArrayList<>(Arrays.asList("ai_core", "indoctrination", Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
+                new ArrayList<>(Arrays.asList("ai_core", "indoctrination",
+                        Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ANTIMATTER_FUEL_PRODUCTION,
+                        Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -144,7 +143,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Sindral",
                 4,
-                new ArrayList<>(Arrays.asList("indoctrination", Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX, Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
+                new ArrayList<>(Arrays.asList("indoctrination", Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX,
+                        Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -154,7 +154,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Iolanthe",
                 3,
-                new ArrayList<>(Arrays.asList(Conditions.LARGE_REFUGEE_POPULATION, Conditions.LUDDIC_MAJORITY, Conditions.ORGANICS_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
+                new ArrayList<>(Arrays.asList(Conditions.LARGE_REFUGEE_POPULATION, Conditions.LUDDIC_MAJORITY,
+                        Conditions.ORGANICS_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
