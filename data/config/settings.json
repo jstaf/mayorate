@@ -5,7 +5,6 @@
 			"geothermal":"graphics/ilk/illustrations/geothermal.png",
 			"marine":"graphics/ilk/illustrations/marine.png",
 			"cloud_city":"graphics/ilk/illustrations/cloud_city.png",
-			"karimova":"graphics/ilk/illustrations/karimova.png",
 			"interdiction":"graphics/ilk/illustrations/interdiction.png"
 		},
 		"beams":{
@@ -23,6 +22,5 @@
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
 		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
 		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin",
-		"ilk_PulseRendererPlugin":"data.scripts.plugins.pulseRenderer.ilk_GravPulseInjector"
 	}
 }
