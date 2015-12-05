@@ -28,7 +28,7 @@ public class SystemUtils {
         String planetID = primaryEntity.getId();
 
         //generate the market ID
-        String marketID = planetID + "_market";
+        String marketID = planetID;
 
         //generate the market
         MarketAPI newMarket = Global.getFactory().createMarket(marketID, name, size);
