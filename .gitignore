@@ -2,5 +2,6 @@
 *.jar
 .idea/
 *.iml
+*~
 out/
 jars/META-INF/MANIFEST.MF

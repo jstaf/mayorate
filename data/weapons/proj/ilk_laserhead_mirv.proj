@@ -11,7 +11,7 @@
 	"explosionRadius":125, # purely visual
 	"engineSpec":{"turnAcc":600,
 				  "turnRate":80,
-				  "acc":50,
+				  "acc":70,
 				  "dec":50},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-10, 0],
@@ -32,7 +32,7 @@
 				    "length":50.0,
 				    "angle":180.0}],
 	"behaviorSpec":{"behavior":"MIRV",
-					"splitRange":200,
+					"splitRange":250,
 					"minTimeToSplit":1,
 					"numShots":1,
 					"damage":100,
