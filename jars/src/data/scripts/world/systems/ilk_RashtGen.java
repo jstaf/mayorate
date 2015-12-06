@@ -2,20 +2,17 @@ package data.scripts.world.systems;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
-import com.fs.starfarer.api.campaign.LocationAPI;
-import com.fs.starfarer.api.campaign.OrbitAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Conditions;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
-import com.fs.starfarer.api.impl.campaign.ids.Terrain;
+import com.fs.starfarer.api.campaign.events.CampaignEventPlugin;
+import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
+import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
-import com.fs.starfarer.api.util.Misc;
-import data.scripts.world.ilk_PathSpawnPoint;
+import data.scripts.world.events.ilk_BountySpawner;
+import data.scripts.world.events.ilk_PathSpawnPoint;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -123,7 +120,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 new ArrayList<>(Arrays.asList("ai_core",
                         Conditions.HEADQUARTERS, Conditions.MILITARY_BASE, Conditions.ORBITAL_STATION,
                         Conditions.AUTOFAC_HEAVY_INDUSTRY, Conditions.ORE_REFINING_COMPLEX, Conditions.ORE_REFINING_COMPLEX,
-                        Conditions.VICE_DEMAND, Conditions.ARID, Conditions.POPULATION_6)),
+                        Conditions.ARID, Conditions.POPULATION_6)),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY, Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -144,8 +141,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Sindral",
                 4,
-                new ArrayList<>(Arrays.asList("indoctrination", Conditions.FRONTIER, Conditions.COTTAGE_INDUSTRY,
-                        Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
+                new ArrayList<>(Arrays.asList(Conditions.FRONTIER, Conditions.ORGANIZED_CRIME, Conditions.FREE_PORT, Conditions.ICE, Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -165,7 +161,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         SystemUtils.addConsul(ilk1.getMarket());
         SystemUtils.addConsul(ilk2.getMarket());
 
-        // make some luddites so players can level up their mayorate rep if they want
+        // make some luddites
         sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
+        // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
+        sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
     }
 }

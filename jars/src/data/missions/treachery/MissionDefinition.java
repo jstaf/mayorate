@@ -34,11 +34,11 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Set up the player's fleet.  Variant names come from the
         // files in data/variants and data/variants/fighters
         api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MNS Nazarin", true, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
+        //api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_safir_standard", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
+        ///api.addToFleet(FleetSide.PLAYER, "ilk_safir_standard", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
         api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
@@ -46,7 +46,6 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
         api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);

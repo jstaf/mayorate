@@ -1,11 +1,10 @@
-package data.scripts.world;
+package data.scripts.world.events;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import data.scripts.world.BaseSpawnPoint;
 import org.apache.log4j.Level;
-
-import java.util.Random;
 
 public class ilk_PathSpawnPoint extends BaseSpawnPoint {
 
