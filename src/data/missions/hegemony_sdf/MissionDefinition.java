@@ -24,14 +24,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         // Set a small blurb for each fleet that shows up on the mission detail and
         // mission results screens to identify each side.
-        api.setFleetTagline(FleetSide.PLAYER, "Mayorate 5th Fleet");
+        api.setFleetTagline(FleetSide.PLAYER, "Mayorate 1st Fleet");
         api.setFleetTagline(FleetSide.ENEMY, "Hegemony System Defense Fleet");
 
         // These show up as items in the bulleted list under 
         // "Tactical Objectives" on the mission detail screen
         api.addBriefingItem("Rout the enemy fleet and force a Hegemony surrender.");
-        api.addBriefingItem("The Del Azarchel's Tornado missiles can effectively suppress enemy missile fire.");
-        api.addBriefingItem("The Cimeterre will outflank and disable an Onslaught's engines rather easily.");
 
         // Set up the player's fleet.  Variant names come from the
         // files in data/variants and data/variants/fighters
@@ -95,7 +93,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             @Override
             public void advance(float amount, List events) {
                 interval += amount;
-                if (interval > (140f)) {
+                if (interval > (163f)) {
                     Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
                     interval = 0f;
                 }

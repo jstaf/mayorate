@@ -29,7 +29,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Set a small blurb for each fleet that shows up on the mission detail and
         // mission results screens to identify each side.
         api.setFleetTagline(FleetSide.PLAYER, "Mayorate insystem response elements");
-        api.setFleetTagline(FleetSide.ENEMY, "Hegemony 14th Battlegroup, Squadron 4");
+        api.setFleetTagline(FleetSide.ENEMY, "Hegemony 14th Battlegroup, Mazianni Squadron");
 
         // These show up as items in the bulleted list under 
         // "Tactical Objectives" on the mission detail screen
@@ -102,7 +102,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             @Override
 			public void advance(float amount, List events) {
                 interval += amount;
-                if (interval > (140f)) {
+                if (interval > (163f)) {
                     Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
                     interval = 0f;
                 }

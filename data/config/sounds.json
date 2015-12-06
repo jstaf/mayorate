@@ -11,9 +11,6 @@
 			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.35}
 		],
 		"ilk_mission1_music":[
-			{"file":"gravitation.ogg","source":"sounds/ilk/music/","volume":0.45}
-		],
-		"ilk_mission2_music":[
 			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.5}
 		]
 	},
