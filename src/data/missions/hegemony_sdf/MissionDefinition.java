@@ -1,5 +1,6 @@
 package data.missions.hegemony_sdf;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
@@ -10,6 +11,8 @@ import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 import java.util.List;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
+
+    private float interval;
 
     @Override
     public void defineMission(MissionDefinitionAPI api) {
@@ -87,14 +90,22 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Add an asteroid field
         api.addAsteroidField(minX + width / 2f, minY + height / 2f, 0, 8000f, 20f, 70f, 100);
 
-        api.addPlugin(new BaseEveryFrameCombatPlugin() {
-                        @Override
-			public void advance(float amount, List events) {
-			}
-                        @Override
-			public void init(CombatEngineAPI engine) {
-				engine.getContext().setStandoffRange(10000f);
-			}
-		});
+        api.addPlugin(new BaseEveryFrameCombatPlugin()
+        {
+            @Override
+            public void advance(float amount, List events) {
+                interval += amount;
+                if (interval > (140f)) {
+                    Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+                    interval = 0f;
+                }
+            }
+            @Override
+            public void init(CombatEngineAPI engine) {
+                Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+                engine.getContext().setStandoffRange(10000f);
+                interval = 0f;
+            }
+        });
     }
 }

@@ -1,0 +1,38 @@
+{
+  "displayName": "Close Support",
+  "fluxCapacitors": 6,
+  "fluxVents": 5,
+  "hullId": "ilk_lilith",
+  "hullMods": [
+  ],
+  "variantId": "ilk_lilith_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+		"WS0004": "ilk_repeater"
+	  }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ilk_disruptor"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_graser_pd",
+        "WS0002": "ilk_graser_pd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ]
+}

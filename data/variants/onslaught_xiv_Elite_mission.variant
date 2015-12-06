@@ -1,0 +1,69 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "hullId": "onslaught_xiv",
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons",
+        "targetingunit"
+    ],
+    "quality": 1,
+    "variantId": "onslaught_xiv_Elite_mission",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "tpc",
+                "WS 017": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 021": "annihilatorpod",
+                "WS 022": "annihilatorpod",
+                "WS 023": "annihilatorpod",
+                "WS 024": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "hellbore",
+                "WS 019": "multineedler",
+                "WS 020": "hellbore"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 002": "lightag",
+                "WS 003": "heavyac",
+                "WS 004": "lightag",
+                "WS 005": "lightag",
+                "WS 006": "lightag",
+                "WS 008": "lightdualac",
+                "WS 009": "lightdualac",
+                "WS 012": "heavyac",
+                "WS 013": "heavyac",
+                "WS 014": "heavyac",
+                "WS 015": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "dualflak",
+                "WS 010": "dualflak",
+                "WS 011": "dualflak"
+            }
+        }
+    ]
+}

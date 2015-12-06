@@ -205,7 +205,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "HYBRID"
     },
     {
       "angle": -0,
@@ -217,7 +217,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "HYBRID"
     },
     {
       "angle": 180,

@@ -9,6 +9,12 @@
 		],
 		"mayorate_friendly":[
 			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.35}
+		],
+		"ilk_mission1_music":[
+			{"file":"gravitation.ogg","source":"sounds/ilk/music/","volume":0.45}
+		],
+		"ilk_mission2_music":[
+			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.5}
 		]
 	},
 	
@@ -17,7 +23,7 @@
 	],
 
 	"ilk_disruptor_fire":[
-		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.5}
+		{"file":"sounds/ilk/fx/sfx_gauss_fire.wav","pitch":1,"volume":0.55}
 	],
 	
 	"bubble_shield_loop":[
