@@ -6,5 +6,5 @@
 	"description":"<< Requires LazyLib >> The Mayorate adds a new faction, system, music, ships, weapons, shipsystems, hullmods, etc... Now compatible with 0.7.1a!",
     "gameVersion":"0.7.1a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
-	"jars": ["jars/Mayorate.jar"]
+	"jars": ["mayorate.jar"]
 }
