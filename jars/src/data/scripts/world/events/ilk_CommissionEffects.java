@@ -29,12 +29,12 @@ public class ilk_CommissionEffects implements EveryFrameScript {
 
     @Override
     public boolean runWhilePaused() {
-        return false;
+        return true;
     }
 
     @Override
     public void advance(float amount) {
-        // fuck me
+        // fuck me... took absolutely forever to find the right memory keys
         /*Global.getLogger(ilk_CommissionEffects.class).log(Level.DEBUG, "====================================================");
         logKeys(Global.getSector().getPlayerFaction().getMemory().getKeys(), "playerFaction");
         logKeys(Global.getSector().getPlayerFleet().getMemory().getKeys(), "playerFleet");
@@ -46,11 +46,15 @@ public class ilk_CommissionEffects implements EveryFrameScript {
                 (Global.getSector().getCharacterData().getMemory().get("$fcm_faction").equals("mayorate"))) {
             // player has a mayorate commission
             FactionAPI pirates = Global.getSector().getFaction(Factions.PIRATES);
+
             if (player.getRelationshipLevel(pirates).isAtBest(RepLevel.HOSTILE)) {
                 // player is hostile to pirates, reset rep to inhospitable
+                float before = player.getRelationship(pirates.getId());
                 player.setRelationship(pirates.getId(), RepLevel.INHOSPITABLE);
+                float after = player.getRelationship(pirates.getId());
 
-                //Global.getSector().
+                Global.getSector().getCampaignUI().addMessage("The Mayorate has interceded with the Sector's pirates on your behalf.");
+                Global.getSector().getCampaignUI().addMessage("Your relationship with the pirates has been set to inhospitable.");
             }
 
             // target this script for cleanup and removal, only a one-time affair
@@ -58,6 +62,12 @@ public class ilk_CommissionEffects implements EveryFrameScript {
         }
     }
 
+    /**
+     * Debugging method to find out where memory keys are located
+     *
+     * @param toDump Set of memory keys to dump
+     * @param label What prefix to add when dumping keys (so you can tell where the key came from)
+     */
     private void logKeys(Collection<String> toDump, String label) {
         for (String key : toDump) {
             Global.getLogger(ilk_CommissionEffects.class).log(Level.DEBUG, label + "key: " + key);

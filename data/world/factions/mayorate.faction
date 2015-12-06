@@ -1,14 +1,10 @@
 {
 	"id": "mayorate",
-	"color": [
-		224,
-		200,
-		35,
-		255
-	],
+	"color": [224, 200, 35, 255],
 	"displayName": "Mayorate",
 	"displayNameWithArticle": "the Mayorate",
 	"logo": "graphics/ilk/factions/mayorate_flag.png",
+	"crest":"graphics/ilk/factions/mayorate_crest.png",
 	"shipNamePrefix": "MNS",
 	"shipNameSources": {
 		"FARSI": 1
