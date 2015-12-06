@@ -1,4 +1,4 @@
-package data.scripts.world.events;
+package data.scripts.world.utils;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;

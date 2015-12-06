@@ -17,6 +17,6 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"tags":["station"],
-		"layers":[STATIONS], 
+		"layers":[STATIONS]
 	}
 }

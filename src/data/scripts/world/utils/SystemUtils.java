@@ -1,4 +1,4 @@
-package data.scripts.world.systems;
+package data.scripts.world.utils;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class SystemUtils {
 
-    static void addConsul(MarketAPI market) {
+    public static void addConsul(MarketAPI market) {
         PersonAPI consul = market.getFaction().createRandomPerson();
         consul.setContactWeight(1000f);
         consul.setPostId("consul");
@@ -22,7 +22,7 @@ public class SystemUtils {
         market.getCommDirectory().addPerson(consul);
     }
 
-    static void addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name, int size, ArrayList<String> marketConditions, ArrayList<String> submarkets, float tarrif) {
+    public static void addMarketplace(String factionID, SectorEntityToken primaryEntity, ArrayList<SectorEntityToken> connectedEntities, String name, int size, ArrayList<String> marketConditions, ArrayList<String> submarkets, float tarrif) {
         EconomyAPI globalEconomy = Global.getSector().getEconomy();
 
         String planetID = primaryEntity.getId();

@@ -255,10 +255,10 @@
 		"interceptors": 4,
 		"fighters": 4,
 		"bombers": 6,
-		"small": 6,
+		"small": 8,
 		"fast": 4,
-		"medium": 12,
-		"large": 8,
+		"medium": 7,
+		"large": 10,
 		"capital": 2,
 
 		"escortMediumFraction": 1,
@@ -268,7 +268,7 @@
 		"minPointsForCombatCapital": 10,
 		"minPointsForLargeCarrier": 30,
 
-		"smallCarrierProbability": 0.25,
+		"smallCarrierProbability": 0.3,
 		"mediumCarrierProbability": 0.30,
 		"largeCarrierProbability": 0.25,
 

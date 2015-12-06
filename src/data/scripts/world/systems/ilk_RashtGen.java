@@ -7,13 +7,12 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.events.CampaignEventPlugin;
-import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
-import data.scripts.world.events.ilk_BountySpawner;
-import data.scripts.world.events.ilk_CommissionEffects;
-import data.scripts.world.events.ilk_PathSpawnPoint;
+import data.scripts.world.utils.SystemUtils;
+import data.scripts.world.utils.ilk_BountySpawner;
+import data.scripts.world.utils.ilk_CommissionEffects;
+import data.scripts.world.utils.ilk_PathSpawnPoint;
 
 import java.awt.Color;
 import java.util.ArrayList;

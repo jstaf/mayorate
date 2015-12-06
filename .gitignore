@@ -4,4 +4,4 @@
 *.iml
 *~
 out/
-jars/META-INF/MANIFEST.MF
+*/META-INF/MANIFEST.MF
