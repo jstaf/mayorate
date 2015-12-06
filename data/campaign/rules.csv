@@ -36,6 +36,7 @@ AddText ""Detecting your presence, a nearby terminal fires up its display. Weari
 ,,,,,,
 ,,,,,,
 ,,,,,,
+,,,,,,
 ##########start of custom market dialogs,,,,,,
 embassy,PickGreeting,"$isPerson
 $faction.id == mayorate
@@ -272,7 +273,7 @@ mission null,MissionListEntry,,,,10:embMain:”Nevermind.”,
 HTTTstart,MissionListEntry,"!$HTTT_START
 $market.id = ilkhanna",,,3:HTTT0:Mission Briefing – Heir to the Throne,
 ,,,,,,
-"########## ""Heir to the Throne"" Mayorate mission 1 – disabled for now ;)",,,,,,
+"########## ""Heir to the Throne"" Mayorate mission 1 – disabled for now ;) ... also crazy out of date with what I want the mission storyline to be, so please ignore haha...",,,,,,
 HTTTm1,DialogOptionSelected,$option == HTTT0,SetShortcut marketLeave null,"After being chauffeured through the city of Ilkhanna, you arrive at the meeting room. It is inexplicably empty. As you are about to leave, a small holodisplay flickers to life and a richly dressed female figure is projected above the boardroom table.",0:HTTT1:Continue,
 HTTTm2,DialogOptionSelected,$option  == HTTT1,SetInteractionImage illustrations karimova,"""Greetings, captain. I was hoping you could assist me with a matter of some importance.""",0:HTTT2:“I was told I would be meeting with the Mayorate high command. What’s going on?”,
 HTTTm3,DialogOptionSelected,$option  == HTTT2,,“They have offered me some amount of discretion in this matter. You might say that I am having family troubles.”,"0:HTTT4:“And why is that?” 

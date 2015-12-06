@@ -9,6 +9,7 @@ import org.apache.log4j.Level;
 public class ilk_PathSpawnPoint extends BaseSpawnPoint {
 
     FactionAPI path;
+    private static final float PATH_SPAWN_CHANCE = 0.7f;
 
     public ilk_PathSpawnPoint(SectorAPI sector, LocationAPI location,
                               float daysInterval, int maxFleets, SectorEntityToken anchor) {
@@ -23,7 +24,7 @@ public class ilk_PathSpawnPoint extends BaseSpawnPoint {
         CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet("luddic_path", "pathFleet", true);
 
         double rand = 0f;
-        while (rand < 0.8f) {
+        while (rand < PATH_SPAWN_CHANCE) {
             rand = Math.random();
             path.pickShipAndAddToFleet("combatSmall", 1f, fleet);
         }

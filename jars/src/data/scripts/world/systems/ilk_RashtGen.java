@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
 import data.scripts.world.events.ilk_BountySpawner;
+import data.scripts.world.events.ilk_CommissionEffects;
 import data.scripts.world.events.ilk_PathSpawnPoint;
 
 import java.awt.Color;
@@ -151,8 +152,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 null,
                 "Iolanthe",
                 2,
-                new ArrayList<>(Arrays.asList(Conditions.LARGE_REFUGEE_POPULATION, Conditions.OUTPOST,
-                        Conditions.VOLATILES_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_3)),
+                new ArrayList<>(Arrays.asList(Conditions.OUTPOST, Conditions.VOLATILES_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -165,5 +165,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
         // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
         sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
+
+        // add forgiveness script to avoid rep decay on mayorate commission from being hostile with pirates
+        sector.addScript(new ilk_CommissionEffects());
     }
 }
