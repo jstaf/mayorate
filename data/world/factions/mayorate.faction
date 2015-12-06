@@ -91,13 +91,15 @@
 		},
 		"escortSmall": {
 			"ilk_lilith_kazi_tournament": 5,
+			"ilk_lilith_CS": 5,
 			"ilk_tiamat_assault": 10,
 			"fallback": {
 				"combatSmall": 1
 			}
 		},
 		"escortMedium": {
-			"ilk_cimeterre_strike": 5,
+			"ilk_cimeterre_strike": 3,
+			"ilk_cimeterre_CS": 6,
 			"ilk_safir_converted_support": 5,
 			"fallback": {
 				"combatMedium": 1
@@ -105,6 +107,7 @@
 		},
 		"combatSmall": {
 			"ilk_tiamat_assault": 10,
+			"ilk_lilith_CS": 5,
 			"ilk_lilith_kazi_tournament": 6,
 			"ilk_lilith_assault": 6,
 			"fallback": {
@@ -113,6 +116,7 @@
 		},
 		"combatMedium": {
 			"ilk_cimeterre_strike": 10,
+			"ilk_cimeterre_CS": 7,
 			"ilk_safir_converted_support": 5,
 			"fallback": {
 				"combatSmall": 2

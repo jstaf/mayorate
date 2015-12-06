@@ -83,7 +83,7 @@ public class BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
                 //draw the beam
                 SpriteAPI sprite = beam.sprite;
                 sprite.setAlphaMult(beam.opacity);
-                sprite.setSize(MathUtils.getDistance(beam.startLoc, beam.hitLoc) + 25f, beam.width);
+                sprite.setSize(MathUtils.getDistance(beam.startLoc, beam.hitLoc) + 50f, beam.width);
                 sprite.setAngle(beam.aim);
                 Vector2f center = MathUtils.getMidpoint(beam.startLoc, beam.hitLoc);
                 sprite.renderAtCenter(center.x, center.y);

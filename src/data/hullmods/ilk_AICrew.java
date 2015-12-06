@@ -7,13 +7,13 @@ public class ilk_AICrew extends BaseHullMod {
 
     public static final float PERCENT_AI_CREW = 50f;
     public static final float AI_EFFICIENCY = 15f;
-    public static final float AI_PENALTY = 10f;
 
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
         //crew mods
         stats.getCrewLossMult().modifyPercent(id, PERCENT_AI_CREW);
         stats.getMinCrewMod().modifyPercent(id, PERCENT_AI_CREW);
+        stats.getMaxCrewMod().modifyPercent(id, PERCENT_AI_CREW);
 
         //weapon mods
         stats.getAutofireAimAccuracy().modifyFlat(id, AI_EFFICIENCY / 10);
@@ -25,7 +25,6 @@ public class ilk_AICrew extends BaseHullMod {
         stats.getMaxSpeed().modifyPercent(id, 100 + AI_EFFICIENCY);
 
         //logistical penalties
-        stats.getMaxCombatReadiness().modifyFlat(id, -AI_PENALTY / 10);
         stats.getRepairRatePercentPerDay().modifyPercent(id, PERCENT_AI_CREW);
     }
 
@@ -37,8 +36,6 @@ public class ilk_AICrew extends BaseHullMod {
             case 1:
                 return "" + (int) AI_EFFICIENCY;
             case 2:
-                return "" + (int) AI_PENALTY;
-            case 3:
                 return "" + (int) PERCENT_AI_CREW;
             default:
                 return null;
