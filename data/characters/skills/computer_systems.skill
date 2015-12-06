@@ -1,0 +1,23 @@
+{
+	"id":"computer_systems",
+	"governingAptitude":"technology",
+	"effectGroups":[
+		{
+			"effects":[
+				{
+					"type":"CHARACTER_STATS",
+					"script":"data.characters.skills.scripts.ComputerSystemsEffect1",
+				},
+				{
+					"type":"HULLMOD_UNLOCK",
+					"hullmods":{
+								"pointdefenseai":3,
+								"ilk_SensorSuite":5,
+								"targetingunit":7,
+								"ilk_AICrew":10
+					           }
+				}				
+			]
+		}
+	]	
+}

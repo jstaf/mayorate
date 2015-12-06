@@ -7,14 +7,14 @@ public class ilk_SensorSuite extends BaseHullMod {
 
     public static final float SENSOR_RANGE_PERCENT = 50f;
     public static final float WEAPON_RANGE_PERCENT = 5f;
-    public static final float AUTOAIM_PERCENT = 10f;
+    public static final float CAMPAIGN_SENSOR_BOOST = 2f;
 
     @Override
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getSightRadiusMod().modifyPercent(id, SENSOR_RANGE_PERCENT);
         stats.getBallisticWeaponRangeBonus().modifyPercent(id, WEAPON_RANGE_PERCENT);
         stats.getEnergyWeaponRangeBonus().modifyPercent(id, WEAPON_RANGE_PERCENT);
-        stats.getAutofireAimAccuracy().modifyPercent(id, AUTOAIM_PERCENT);
+        stats.getSensorStrength().modifyFlat(id, CAMPAIGN_SENSOR_BOOST);
     }
 
     @Override
@@ -24,6 +24,9 @@ public class ilk_SensorSuite extends BaseHullMod {
         }
         if (index == 1) {
             return "" + (int) WEAPON_RANGE_PERCENT;
+        }
+        if (index == 2) {
+            return "" + (int) CAMPAIGN_SENSOR_BOOST;
         }
         return null;
     }

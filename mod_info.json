@@ -1,9 +1,9 @@
 {
-  "id":"mayorate", # internal id
-	"name":"The Mayorate", # displayed to the player
+  "id":"mayorate",
+	"name":"The Mayorate",
 	"author":"kazi",
 	"version":"0.9.0",
-	"description":"<< Requires LazyLib >> Adds a new faction to the sector. The Mayorate is a smaller star nation in decline. Now compatible with 0.65a!",
+	"description":"<< Requires LazyLib >> The Mayorate adds a new faction, system, music, ships, weapons, shipsystems, hullmods, etc... Now compatible with 0.7.1a!",
     "gameVersion":"0.7.1a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
 	"jars": ["jars/Mayorate.jar"]
