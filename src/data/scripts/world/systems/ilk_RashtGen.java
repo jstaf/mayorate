@@ -72,14 +72,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         // create relay
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
-				 "Rasht Comm Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "mayorate"); // faction
         //orbits rasht @ ilkhanna L5 point
         relay.setCircularOrbit(system.getEntityById("rasht"), 245, 3800, 200);
 
         // create jump point
-        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna L5 Jump Point");
+        JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ilk_jump_alpha", "Ilkhanna Jump Point");
         jumpPoint.setCircularOrbit(system.getEntityById("rasht"), 125, 3800, 200);
         jumpPoint.setRelatedPlanet(ilk1);
         jumpPoint.setStandardWormholeToHyperspaceVisual();
