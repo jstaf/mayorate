@@ -12,6 +12,7 @@ import org.apache.log4j.Level;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
+import org.lazywizard.lazylib.LazyLib;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
@@ -27,9 +28,20 @@ public class MayorateModPlugin extends BaseModPlugin {
         }
     }
 
+    /**
+     * Initialize ShaderLib, crash game if player is missing dependencies.
+     */
     @Override
     public void onApplicationLoad() {
         Global.getLogger(MayorateModPlugin.class).setLevel(Level.ERROR);
+
+        try {
+            LazyLib.getVersion();
+        } catch (NoClassDefFoundError e) {
+            e.printStackTrace();
+            Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "LazyLib not found.");
+            throw e;
+        }
 
         try {
             ShaderLib.init();
@@ -39,6 +51,7 @@ public class MayorateModPlugin extends BaseModPlugin {
             //shaderlib not installed
             e.printStackTrace();
             Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "ShaderLib not found.");
+            throw e;
         }
     }
 
