@@ -38,7 +38,7 @@ public class MayorateModPlugin extends BaseModPlugin {
         } catch (NoClassDefFoundError e) {
             //shaderlib not installed
             e.printStackTrace();
-            Global.getLogger(MayorateModPlugin.class).log(Level.FATAL, "ShaderLib not found.");
+            Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "ShaderLib not found.");
         }
     }
 
