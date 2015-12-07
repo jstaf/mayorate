@@ -1,6 +1,10 @@
-Location: Skies above Corvus II
-Date: 216.04.15
+Location: Skies above Jangala
+Date: 0.06.15
 
-Intelligence suggests that Hegemony forces have been spread thin in an effort to put a stop to the rampant piracy throughout the sector. This provides us with an opportunity. The defense fleet above Corvus II is the only obstacle to a full-scale strike on the Hegemony capital. Executed properly, a concerted assault by our forces should be able to overwhelm the Hegemony's strategic reserve and wipe out the planet's orbital infrastructure. The loss of their autofactories and industrial base will give the Hegemony no choice but to sue for peace.
+The unknown force behind the incursions over the past several months now has a name: the Hegemony. Formerly of the Domain 14th Battlegroup, the Hegemony has begun to assert itself in the power vacuum left by the collapse of the gate network. In absence of contact with the greater Domain, we must begin to prepare ourself for the possibility that our isolation from the galaxy may be permanent. 
 
-In the event that the Hegemony leadership does not immediately capitulate, we are authorizing bombardment of the planetary surface. A list of possible targets has been uploaded to your tactical net, including the seat of government and various industrial complexes critical to the Hegemony war effort. Although we recognize that this is a clear violation of the Askonia Convention, this war has dragged on for far too long. Anything that will save lives in the long run is justified. Put an end to this, for all of us. 
+This so called "Hegemony" has begun to emerge as the dominant power in this region of the Sector. They have annexed or otherwise conquered the neighboring systems of Corvus, Samarra, and Aztlan- though reports from independent traders indicate that Vahalla may have fallen as well. It would seem the thwarted incursion four months ago was a failed attempt to subsume the Rasht star system into this new political order. 
+
+Intelligence suggests that the forces of the Hegemony 14th Battlegroup have begun to reassemble near Jangala in the Corvus system. It is the opinion of the Mayor and her advisors that this new "Hegemony" may make a renewed push into the Rasht system, this time in far greater numbers. This cannot be allowed to happen. We do not have the forces to repel a full-scale assault, and must strike now before the enemy reaches full strength. Our contacts with the Tri-Tachyon Corporation indicate that they have engaged the Hegemony on multiple fronts- with the destruction of the Hegemony strategic reserve above Jangala, the Hegemony's rampant expansion through the Sector will be brought to a grinding halt.
+
+You task is to ensure the complete and utter decimation of the Hegemony fleet above Jangala. Success here will ensure that our small mayorate retains its independence in the days to come. Put an end to this, Commander, for all of us. 

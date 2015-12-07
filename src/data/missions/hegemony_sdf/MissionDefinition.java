@@ -1,6 +1,8 @@
 package data.missions.hegemony_sdf;
 
+import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
@@ -25,7 +27,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Set a small blurb for each fleet that shows up on the mission detail and
         // mission results screens to identify each side.
         api.setFleetTagline(FleetSide.PLAYER, "Mayorate 1st Fleet");
-        api.setFleetTagline(FleetSide.ENEMY, "Hegemony System Defense Fleet");
+        api.setFleetTagline(FleetSide.ENEMY, "Hegemony strategic reserves");
 
         // These show up as items in the bulleted list under 
         // "Tactical Objectives" on the mission detail screen
@@ -50,19 +52,18 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false);
         //api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false);
 	//api.addToFleet(FleetSide.PLAYER, "broadsword_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
 
         // Set up the enemy fleet.
-        api.addToFleet(FleetSide.ENEMY, "onslaught_Standard", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "onslaught_Standard", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "onslaught_Standard", FleetMemberType.SHIP, false);
-
-        api.addToFleet(FleetSide.ENEMY, "dominator_Support", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "lasher_CS", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "condor_FS", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "condor_FS", FleetMemberType.SHIP, false);

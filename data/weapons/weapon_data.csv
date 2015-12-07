@@ -11,7 +11,7 @@ PPC,ilk_ppc,1,800,500,,60,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,7710
 Graser PD,ilk_graser_pd,1,300,375,160,,,,100,6,,,,ENERGY,,150,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7711
 Grav Driver,ilk_hvy_driver,2,12000,850,,250,,3000,10,25,8,0.8,4,KINETIC,250,,,0.8,2,0.12,0,10,2,20,,1500,,,100,,7713
 Disruptor,ilk_disruptor,3,2000,800,,400,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,,7715
-Heavy Disruptor,ilk_disruptor_heavy,3,6000,1000,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,15,10,20,,1200,,,500,,7716
+Heavy Disruptor,ilk_disruptor_heavy,3,6000,1000,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,,7716
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Thermal Lance,ilk_thermal_lance,3,0,600,375,,,,0,0,,,,HIGH_EXPLOSIVE,,500,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7719
 Light TPC,ilk_repeater,1,0,600,,150,,0,0,0,10,1,,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7720

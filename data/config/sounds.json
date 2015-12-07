@@ -4,6 +4,10 @@
 			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
 			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
 		],
+		"music_campaign_hyperspace":[
+			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
+			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
+		],
 		"mayorate_neutral":[
 			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.35}
 		],
@@ -11,7 +15,7 @@
 			{"file":"mayorate_friendly.ogg","source":"sounds/ilk/music/","volume":0.35}
 		],
 		"ilk_mission1_music":[
-			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.5}
+			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.45}
 		]
 	},
 	

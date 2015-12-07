@@ -1,11 +1,10 @@
 kazi - Mayorate mod changelog
 
-v0.9 (still being worked on)
+v0.9
 
 COMBAT ADDITIONS AND BALANCE
 -Added Disruptor weapon class. Does moderate amounts of fragmentation damage and EMP damage. Although worthless in terms of damage vs. enemy armor, disruptor-type weapons deal hard flux damage directly to enemy ships (flux increase is mitigated by half if you take the hit on hull/armor). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts and sounds absolutely terrifying when fired.
 -Added Shrike Hunter-Killer Drone wing. 
--Added Afterburner ship system for Shrike wings. Grants temporary speed boost (it's a bit of a shameless copy from SRA's Neriad, I must admit).
 -Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield-bypassing weapons will still work fine.
 -Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
 -Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast. One nice effect of this is that Graser PD becomes more effective the more exposed you become (which is a kinda unique mechanic for PD weapons). Should encourage more brinksmanship. ;)
@@ -27,7 +26,7 @@ CAMPAIGN ADDITIONS
 -Shuffled around Rasht market conditions.
 -All Rasht markets now have a significant amount of flavor text.
 
-GRAPHICS
+MISC GRAPHICS
 -Added three new portraits.
 -Mayorate portraits are available for player use again.
 -Added a slew of unique interaction images (one for every market in Rasht, plus a few extras that are currently unused). They're kind of scribble-y, but whatever (was learning to digital paint).

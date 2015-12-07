@@ -68,6 +68,9 @@ public class DisruptorAI implements AutofireAIPlugin {
 
         // are we pointing at the right target?
         if (target != null) {
+            // ignore the fighters whatver happens
+            if (target.isFighter()) return;
+
             loc = new Vector2f(target.getLocation());
 
             // reanchor targetLead with bounds
