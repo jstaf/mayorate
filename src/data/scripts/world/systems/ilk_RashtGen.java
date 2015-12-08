@@ -156,16 +156,21 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 0.3f
         );
 
-        // add consuls to mayorate markets
-        SystemUtils.addConsul(ilk1.getMarket());
-        SystemUtils.addConsul(ilk2.getMarket());
+        // only do the following if not in exerelin corvus mode
+        if (Global.getSector().getMemory().get("$IS_EXERELIN") != null && // just to be safe
+                !((boolean) Global.getSector().getMemory().get("$IS_EXERELIN"))) {
 
-        // make some luddites
-        sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
-        // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
-        sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
+            // add consuls to mayorate markets
+            SystemUtils.addConsul(ilk1.getMarket());
+            SystemUtils.addConsul(ilk2.getMarket());
 
-        // add forgiveness script to avoid rep decay on mayorate commission from being hostile with pirates
-        sector.addScript(new ilk_CommissionEffects());
+            // make some luddites
+            sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
+            // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
+            sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
+
+            // add forgiveness script to avoid rep decay on mayorate commission from being hostile with pirates
+            sector.addScript(new ilk_CommissionEffects());
+        }
     }
 }

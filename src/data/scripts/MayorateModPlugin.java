@@ -14,13 +14,28 @@ import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
 import org.lazywizard.lazylib.LazyLib;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class MayorateModPlugin extends BaseModPlugin {
 
     private static void initMayorate() {
         try {
-            Global.getSettings().getScriptClassLoader().loadClass("data.scripts.world.ExerelinGen");
+            // EXERELIN on
+            Class<?> def = Global.getSettings().getScriptClassLoader().loadClass("exerelin.campaign.SectorManager");
+            Method method;
+            try {
+                method = def.getMethod("getCorvusMode");
+                Object result = method.invoke(def);
+                if ((boolean) result) {
+                    // Exerelin running in Corvus mode, go ahead and generate our sector
+                    new mayorateGen().generate(Global.getSector());
+                }
+            } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException |
+                    InvocationTargetException ex) {
+                // check failed, do nothing
+            }
             Global.getSector().getMemory().set("$IS_EXERELIN", true);
-            //Got Exerelin, so just Exerelin
         } catch (ClassNotFoundException ex) {
             // Exerelin not found so continue and run normal generation code
             new mayorateGen().generate(Global.getSector());

@@ -58,7 +58,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         mayorate.setRelationship("interstellarimperium", RepLevel.HOSTILE);
         mayorate.setRelationship("neutrinocorp", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("diableavionics", RepLevel.SUSPICIOUS);
-        mayorate.setRelationship("blackrock_driveyards", RepLevel.SUSPICIOUS);
+        mayorate.setRelationship("blackrock_driveyards", RepLevel.HOSTILE);
         mayorate.setRelationship("syndicate_asp", RepLevel.SUSPICIOUS);
         mayorate.setRelationship("junk_pirates", RepLevel.NEUTRAL);
         mayorate.setRelationship("pack", RepLevel.HOSTILE);
