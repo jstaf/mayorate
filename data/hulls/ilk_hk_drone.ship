@@ -29,7 +29,7 @@
     19,
     17
   ],
-  "collisionRadius": 24.19194,
+  "collisionRadius": 27,
   "engineSlots": [
     {
       "angle": 176.905945,
@@ -64,7 +64,7 @@
     -2,
     -0
   ],
-  "shieldRadius": 20.814659,
+  "shieldRadius": 23,
   "spriteName": "graphics/ilk/ships/ilk_hk_drone.png",
   "style": "ilk_hull",
   "viewOffset": 0,

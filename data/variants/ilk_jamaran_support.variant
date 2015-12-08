@@ -12,7 +12,7 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0009": "ilk_fluxtorp"
+        "WS0009": "ilk_disruptor_heavy"
       }
     },
     {

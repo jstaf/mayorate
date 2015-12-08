@@ -16,6 +16,9 @@
 		],
 		"ilk_mission1_music":[
 			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.45}
+		],
+		"ilk_mission2_music":[
+			{"file":"gravitation.ogg","source":"sounds/ilk/music/","volume":0.48}
 		]
 	},
 	
@@ -100,7 +103,7 @@
 	],
 
 	"ilk_graser_fire":[
-			{"file":"sounds/ilk/fx/graser.ogg","pitch":1,"volume":0.9}
+			{"file":"sounds/ilk/fx/graser.ogg","pitch":1,"volume":1}
 	],
 
 	"ilk_light_graser_fire":[
@@ -144,7 +147,7 @@
 	],
 
 	"ilk_ionbomb_fire":[
-			{"file":"sounds/ilk/fx/ionbomb_fire.ogg","pitch":1,"volume":0.7}
+			{"file":"sounds/ilk/fx/ionbomb_fire.ogg","pitch":1,"volume":0.4}
 	],
 
 	"ilk_ionbomb_detonate":[

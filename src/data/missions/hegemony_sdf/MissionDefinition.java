@@ -1,8 +1,7 @@
 package data.missions.hegemony_sdf;
 
-import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CrewXPLevel;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
@@ -32,35 +31,31 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // These show up as items in the bulleted list under 
         // "Tactical Objectives" on the mission detail screen
         api.addBriefingItem("Rout the enemy fleet and force a Hegemony surrender.");
+        api.addBriefingItem("We recommend setting the max battle size to 500 (options menu) for maximum player death.");
 
         // Set up the player's fleet.  Variant names come from the
         // files in data/variants and data/variants/fighters
-        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_pursuit", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_pursuit", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_CS", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_CS", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, "MNS Azure Dream", true);
+        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_CS", FleetMemberType.SHIP, "MNS Azure Dream", true);
         api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
 
-        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_inanna_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_hk_wing", FleetMemberType.FIGHTER_WING, false);
-	//api.addToFleet(FleetSide.PLAYER, "broadsword_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
 
         // Set up the enemy fleet.
-        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
         api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
@@ -94,14 +89,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             @Override
             public void advance(float amount, List events) {
                 interval += amount;
-                if (interval > (163f)) {
-                    Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+                if (interval > (140)) {
+                    Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
                     interval = 0f;
                 }
             }
             @Override
             public void init(CombatEngineAPI engine) {
-                Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+                Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
                 engine.getContext().setStandoffRange(10000f);
                 interval = 0f;
             }

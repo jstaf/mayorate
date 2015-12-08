@@ -1,57 +1,54 @@
 {
-  "displayName": "Pursuit",
-  "fluxCapacitors": 40,
-  "fluxVents": 16,
-  "hullId": "ilk_ravana",
-  "hullMods": [
-    "insulatedengine"
-  ],
-  "variantId": "ilk_ravana_pursuit",
-  "weaponGroups": [
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0003": "ilk_graser",
-        "WS0004": "ilk_graser",
-        "WS0015": "annihilatorpod"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS0016": "ilk_windstalker",
-        "WS0017": "ilk_windstalker"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0001": "ilk_graser_light",
-        "WS0002": "ilk_graser_light",
-        "WS0007": "ilk_graser_light",
-        "WS0008": "ilk_graser_light"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0013": "heavyneedler",
-        "WS0014": "heavyneedler"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0005": "flak",
-        "WS0006": "flak",
-        "WS0011": "ilk_graser_pd",
-        "WS0012": "ilk_graser_pd"
-      }
-    }
-  ]
+    "displayName": "Pursuit",
+    "fluxCapacitors": 38,
+    "fluxVents": 16,
+    "hullId": "ilk_ravana",
+    "hullMods": ["insulatedengine"],
+    "quality": 0.5,
+    "variantId": "ilk_ravana_pursuit",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ilk_graser",
+                "WS0004": "ilk_graser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "ilk_windstalker",
+                "WS0017": "ilk_windstalker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0015": "annihilatorpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ilk_graser_light",
+                "WS0002": "ilk_graser_light",
+                "WS0007": "ilk_graser_light",
+                "WS0008": "ilk_graser_light",
+                "WS0013": "heavyneedler",
+                "WS0014": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "flak",
+                "WS0006": "flak",
+                "WS0011": "ilk_graser_pd",
+                "WS0012": "ilk_graser_pd"
+            }
+        }
+    ]
 }

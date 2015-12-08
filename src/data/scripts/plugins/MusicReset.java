@@ -11,11 +11,26 @@ import java.util.List;
 
 public class MusicReset implements EveryFrameCombatPlugin {
 
+    /**
+     * Unfortunately, this hack was necessary to prevent mission music from bleeding over into the title screen.
+     * @param amount
+     * @param events
+     */
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
         if (Global.getCurrentState().equals(GameState.TITLE) &&
                 !Global.getSoundPlayer().getCurrentMusicId().equals("miscallenous_main_menu.ogg")) {
+            // we're on the title screen, and the title music is not playing, oh no!
             Global.getSoundPlayer().playMusic(0, 0, "music_title");
+        } else if (Global.getCurrentState().equals(GameState.COMBAT)) {
+            // we are in combat
+            if (Global.getCombatEngine().getMissionId() != null ||
+                    Global.getCombatEngine().isSimulation()) {
+                // we're in a mission or mission simulator, check for title music and get rid of it
+                if (Global.getSoundPlayer().getCurrentMusicId().equals("miscallenous_main_menu.ogg")) {
+                    Global.getSoundPlayer().playMusic(0, 0, "music_combat");
+                }
+            }
         }
     }
 

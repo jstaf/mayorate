@@ -101,7 +101,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             @Override
 			public void advance(float amount, List events) {
                 interval += amount;
-                if (interval > (163f)) {
+                if (interval > (162f)) {
                     Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
                     interval = 0f;
                 }

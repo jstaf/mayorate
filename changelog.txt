@@ -6,7 +6,7 @@ COMBAT ADDITIONS AND BALANCE
 -Added Disruptor weapon class. Does moderate amounts of fragmentation damage and EMP damage. Although worthless in terms of damage vs. enemy armor, disruptor-type weapons deal hard flux damage directly to enemy ships (flux increase is mitigated by half if you take the hit on hull/armor). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts and sounds absolutely terrifying when fired.
 -Added Shrike Hunter-Killer Drone wing. 
 -Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield-bypassing weapons will still work fine.
--Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
+-Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious - AI is pretty good at clearing them too. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
 -Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast. One nice effect of this is that Graser PD becomes more effective the more exposed you become (which is a kinda unique mechanic for PD weapons). Should encourage more brinksmanship. ;)
 -Laserheads now fire a directed beam attack and launch in salvos of one. Yes, they dump a full power heavy graser into their target.
 -The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels (very high risk, very high reward). New fire/loop sounds as well (no more Reapers!).
@@ -16,7 +16,7 @@ COMBAT ADDITIONS AND BALANCE
 -Other balancing stuffs that I'm forgetting about. I messed around with nearly everything, to be honest. Mayorate energy weapon DPS is now in line with the base game again.
 
 CAMPAIGN ADDITIONS
--Integrated relationships for other mod factions. 
+-Integrated relationships for other mod factions. The Mayorate is very suspicious of the rest of the sector. 
 -Added a consul to Mayorate market comm directories. You can now chat with them about other factions and stuff (mostly just for your own amusement).
 -Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go with crew. The reputation "cost" is massive however. 
 -Mayorate reputation can be spent at a consulate in order to increase reputation with certain Mayorate allies/neutral factions (Mayorate reputation must be "favorable" or above". Cost is -10 Mayorate rep for +5 <other faction> rep.
@@ -25,6 +25,7 @@ CAMPAIGN ADDITIONS
 -Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand. If you're clever, you may be able to make money off of metals for once.
 -Shuffled around Rasht market conditions.
 -All Rasht markets now have a significant amount of flavor text.
+-Mayorate ships are now much cheaper- they used to cost 1.5-2x vanilla ship prices, now they are roughly comparable to vanilla midline/high-tech prices (so you can actually replace losses). 
 
 MISC GRAPHICS
 -Added three new portraits.
@@ -35,19 +36,20 @@ MISC GRAPHICS
 -New Mayorate faction flag/logo graphics.
 
 MISSIONS
--Completely rewrote the mission dialogs to be in line with vanilla/mod lore.
+-Completely rewrote the mission dialogs to be in line with vanilla/mod lore. They now occur several months post-Collapse, and you're up against a lot of genuine XIV ships (I tweaked the XIV Elite Onslaught to be a bit more brutal- have fun with that). 
 -Missions are now much harder.
 -Battle music plays during missions (but not campaign).
 
 OTHER
--Lots of new ship variants that appear throughout the campaign and missions.
+-Lots of new Mayorate ship variants that appear throughout the campaign and missions. One of the new Jamaran variants is absolutely disgusting. I apologize in advance if you are unfortunate enough to run into it in the campaign.
 -Changed many sfx to be better/more license-friendly.
 -Removed music that wasn't written by me. (2 tracks)
 -Removed battle music from campaign layer (it gets old after awhile). Don't worry, you can still jam to it in the missions.
--Remastered "The Expanse" ambient music track.
--Added "Nebula" ambient music track.
+-Remastered "expanse" ambient music track.
+-Added "nebula" ambient music track. Probably my most high-quality/cinematic track to date- really tried my hardest to keep the composition simple and not depend on drums so heavily. 
+-Added "mayorate_friendly" and "mayorate_neutral" music tracks for markets/interaction dialogs.
 -Improved writing for most descriptions.
--Completely rewrote faction lore.
+-Rewrote much of the faction lore- again.
 -Probably a lot of stuff I forgot to mention.
 
 ------------------------------------------------------------------------------------------------------------------------
