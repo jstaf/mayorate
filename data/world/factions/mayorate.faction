@@ -68,7 +68,6 @@
 	"shipRoles": {
 		"interceptor": {
 			"ilk_hk_wing": 10,
-			"ilk_inanna_wing": 4,
 			"fallback": {
 				"fighter": 1
 			}
@@ -107,8 +106,7 @@
 		},
 		"combatSmall": {
 			"ilk_tiamat_assault": 10,
-			"ilk_lilith_CS": 5,
-			"ilk_lilith_kazi_tournament": 6,
+			"ilk_lilith_CS": 7,
 			"ilk_lilith_assault": 6,
 			"fallback": {
 				"escortSmall": 1
@@ -124,13 +122,16 @@
 		},
 		"combatLarge": {
 			"ilk_del_azarchel_artillery": 10,
-			"ilk_jamaran_kazi_tournament": 5,
+			"ilk_del_azarchel_CS": 4,
+			"ilk_jamaran_strike": 3,
+			"ilk_jamaran_kazi_tournament": 2,
 			"fallback": {
 				"combatMedium": 2
 			}
 		},
 		"combatCapital": {
-			"ilk_ravana_pursuit": 10,
+			"ilk_ravana_pursuit": 5,
+			"ilk_ravana_CS": 10,
 			"fallback": {
 				"combatLarge": 2
 			}
@@ -173,6 +174,7 @@
 		},
 		"carrierMedium": {
 			"ilk_jamaran_support": 10,
+			"ilk_jamaran_patrol": 6,
 			"ilk_jamaran_kazi_tournament": 2,
 			"fallback": {
 				"carrierSmall": 2
@@ -221,19 +223,21 @@
 			}
 		},
 		"personnelSmall": {
-			"mercury_d_Standard": 10,
-			"mercury_Standard": 10,
+			"kite_Standard": 10,
+			"mudskipper_Standard": 4,
 			"fallback": {
 				"personnelMedium": 1
 			}
 		},
 		"personnelMedium": {
 			"valkyrie_Elite": 10,
+			"nebula_Standard": 5,
 			"fallback": {
 				"personnelSmall": 2
 			}
 		},
 		"personnelLarge": {
+			"starliner_Standard": 10,
 			"fallback": {
 				"personnelMedium": 2
 			}

@@ -4,13 +4,14 @@ v0.9
 
 COMBAT ADDITIONS AND BALANCE
 -Added Disruptor weapon class. Does moderate amounts of fragmentation damage and EMP damage. Although worthless in terms of damage vs. enemy armor, disruptor-type weapons deal hard flux damage directly to enemy ships (flux increase is mitigated by half if you take the hit on hull/armor). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts and sounds absolutely terrifying when fired.
--Added Shrike Hunter-Killer Drone wing. 
 -Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield-bypassing weapons will still work fine.
 -Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious - AI is pretty good at clearing them too. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
 -Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast. One nice effect of this is that Graser PD becomes more effective the more exposed you become (which is a kinda unique mechanic for PD weapons). Should encourage more brinksmanship. ;)
+-Added Shrike Hunter-Killer Drone wing. They carry 2 Graser PD lasers and a forward shield. They're pretty much your bros, and will shoot down incoming missiles for you. Note that shooting them will make their weapons hurt more (see Graser buff). 
+-Removed Inanna wing. They were kind of "meh" art-wise and gameplay-wise. 
 -Laserheads now fire a directed beam attack and launch in salvos of one. Yes, they dump a full power heavy graser into their target.
 -The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels (very high risk, very high reward). New fire/loop sounds as well (no more Reapers!).
--New mount setup for Ravana. All the universal mounts are now energy mounts, center large mount is now a medium missile mount, two small energy mounts removed.
+-Ravana overhaul. All the universal mounts are now energy mounts, center large mount is now a medium missile mount, two small energy mounts removed. The shield is now an omni-shield, with crappier efficiency and coverage. OP reduced to 215 (from 250).
 -Kashef Sensor Suite hullmod now boosts campaign sensor strength by 2, increases detection range on the combat map by 50%, and increases energy/ballistic range by 5%. Unlocked at Computer Skills rank 5.
 -Added AI Crew hullmod - decreases crew requirements and losses by 50%, increases weapon/energy performance by 15%, decreases combat readiness recharge rate by 50%. Unlocked at Computer Skills rank 10. 
 -Other balancing stuffs that I'm forgetting about. I messed around with nearly everything, to be honest. Mayorate energy weapon DPS is now in line with the base game again.
@@ -33,23 +34,26 @@ MISC GRAPHICS
 -Added a slew of unique interaction images (one for every market in Rasht, plus a few extras that are currently unused). They're kind of scribble-y, but whatever (was learning to digital paint).
 -Improved Ravana sprite.
 -New nuke sprites (mount and launcher)
+-New laserhead sprites (mount and launcher)
+-New Mayorate station sprite
 -New Mayorate faction flag/logo graphics.
 
 MISSIONS
--Completely rewrote the mission dialogs to be in line with vanilla/mod lore. They now occur several months post-Collapse, and you're up against a lot of genuine XIV ships (I tweaked the XIV Elite Onslaught to be a bit more brutal- have fun with that). 
+-Completely rewrote the mission dialogs to be in line with vanilla/mod lore. They now occur several months post-Collapse, and you're up against a lot of the original XIV ships with battle-hardened crews (I tweaked the XIV Elite Onslaught to be a bit more brutal- have fun with that). 
 -Missions are now much harder.
--Battle music plays during missions (but not campaign).
+-Battle music plays during Mayorate missions (but not campaign, simulator, or other missions).
 
 OTHER
--Lots of new Mayorate ship variants that appear throughout the campaign and missions. One of the new Jamaran variants is absolutely disgusting. I apologize in advance if you are unfortunate enough to run into it in the campaign.
+-Lots of new Mayorate ship variants that appear around the sector. One of the new Jamaran variants is absolutely disgusting. I apologize in advance if you are unfortunate enough to run into it in the campaign.
 -Changed many sfx to be better/more license-friendly.
 -Removed music that wasn't written by me. (2 tracks)
+-Added a track that wasn't written by me ("gravitation") to one of the missions in a moment of weakness.
 -Removed battle music from campaign layer (it gets old after awhile). Don't worry, you can still jam to it in the missions.
 -Remastered "expanse" ambient music track.
 -Added "nebula" ambient music track. Probably my most high-quality/cinematic track to date- really tried my hardest to keep the composition simple and not depend on drums so heavily. 
 -Added "mayorate_friendly" and "mayorate_neutral" music tracks for markets/interaction dialogs.
 -Improved writing for most descriptions.
--Rewrote much of the faction lore- again.
+-Rewrote a good portion of the faction lore- again.
 -Probably a lot of stuff I forgot to mention.
 
 ------------------------------------------------------------------------------------------------------------------------
