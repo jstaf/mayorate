@@ -18,6 +18,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
     MarketAPI market;
     float interval;
     private long lastSpawn;
+    private boolean isDone;
 
     boolean init = false;
     CampaignEventPlugin bounty;
@@ -27,6 +28,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
         this.system = system;
         this.market = market;
         this.interval = dayInterval;
+        isDone = false;
 
         lastSpawn = sector.getClock().getTimestamp();
     }
@@ -34,7 +36,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
     // run indefinitely
     @Override
     public boolean isDone() {
-        return false;
+        return isDone;
     }
 
     @Override
@@ -58,6 +60,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
 
         if (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) {
             sector.getEventManager().endEvent(bounty);
+            isDone = true;
         }
     }
 }
