@@ -70,8 +70,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 8500f, 350f);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
         ilk4.setInteractionImage("illustrations", "cloud_city");
-        ilk4.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "volturn"));
-        ilk4.getSpec().setGlowColor(new Color(188, 247, 255, 255));
+        ilk4.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "asharu"));
+        ilk4.getSpec().setGlowColor(new Color(118, 248, 255, 255));
         ilk4.getSpec().setUseReverseLightForGlow(true);
         ilk4.applySpecChanges();
         system.addRingBand(ilk4, "misc", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
