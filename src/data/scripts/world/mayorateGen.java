@@ -7,6 +7,8 @@ import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 //import data.scripts.world.systems.ilk_KerajjGen;
 import data.scripts.world.systems.ilk_RashtGen;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class mayorateGen implements SectorGeneratorPlugin {
@@ -21,8 +23,11 @@ public class mayorateGen implements SectorGeneratorPlugin {
     
     public static void initFactionRelationships(SectorAPI sector) {
         FactionAPI mayorate = sector.getFaction("mayorate");
-        
-        for (FactionAPI faction : sector.getAllFactions()) {
+
+        // if in doubt, make factions hostile to mayorate
+        List<FactionAPI> factionList = sector.getAllFactions();
+        factionList.remove(mayorate);
+        for (FactionAPI faction : factionList) {
             mayorate.setRelationship(faction.getId(), RepLevel.HOSTILE);
         }
 

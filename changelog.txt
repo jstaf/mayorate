@@ -2,34 +2,37 @@ kazi - Mayorate mod changelog
 
 v0.9
 
-COMBAT ADDITIONS AND BALANCE
+COMBAT AND BALANCE
 -Added Disruptor weapon class. Does moderate amounts of fragmentation damage and EMP damage. Although worthless in terms of damage vs. enemy armor, disruptor-type weapons deal hard flux damage directly to enemy ships (flux increase is mitigated by half if you take the hit on hull/armor). You can effectively lock down enemy craft with massed disruptors, although it comes at an extreme cost to DPS (the new particle FX are pretty though!). Comes in medium and large energy mounts and sounds absolutely terrifying when fired.
 -Added Bubble Shield system to Tiamat. Upon activation, shield rapidly expands to 360 and the ship becomes completely invunerable for a short period of time. Shield-bypassing weapons will still work fine.
--Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious - AI is pretty good at clearing them too. Also, protip: don't ever give an enemy minelayer a chance to fortify an objective - the longer you wait, the more mines it will deploy (saving a few charges to replenish the minefield or as a reserve if you try to attack the minelayer). 
+-Added Minelayer ship system to the Safir B and Jamaran. The minelayer deploys a spread of 12 high-explosive mines that lay dormant for up to 90 seconds or until an enemy gets near. Once triggered, the mines lunge towards their target and explode for AOE damage. The AI will intelligently deploy the mines when near objectives, ordered to defend or control a location, is under pressure, or thinks it has a chance to finish off a target in close range. The mines are quite lethal if your attention is elsewhere, but can be easily spotted/avoided/cleared with PD weapons if you're cautious - AI is pretty good at clearing them too.
 -Added Graser beam buff. Grasers (every type) now do bonus damage (up to about 100%-ish increase in damage) based on how much flux you have. They go from being "meh" to really potent fast. One nice effect of this is that Graser PD becomes more effective the more exposed you become (which is a kinda unique mechanic for PD weapons). Should encourage more brinksmanship. ;)
--Added Shrike Hunter-Killer Drone wing. They carry 2 Graser PD lasers and a forward shield. They're pretty much your bros, and will shoot down incoming missiles for you. Note that shooting them will make their weapons hurt more (see Graser buff). 
--Removed Inanna wing. They were kind of "meh" art-wise and gameplay-wise. 
+-Added Shrike Hunter-Killer Drone wing. They carry 2 Graser PD lasers and a forward shield. They're pretty much your bros, and will shoot down incoming missiles for you. Note that shooting them will make their weapons hurt more (see Graser buff).
+-Removed Inanna wing. They were kind of "meh" art-wise and gameplay-wise.
 -Laserheads now fire a directed beam attack and launch in salvos of one. Yes, they dump a full power heavy graser into their target.
 -The Cimeterre's Thermal Lance is no longer a burst beam. Lance DPS and flux cost dramatically reduced, chargeup/chargedown is now instant. Also benefits from the graser damage buff- the Thermal Lance deals extreme damage at high flux levels (very high risk, very high reward). New fire/loop sounds as well (no more Reapers!).
 -Ravana overhaul. All the universal mounts are now energy mounts, center large mount is now a medium missile mount, two small energy mounts removed. The shield is now an omni-shield, with crappier efficiency and coverage. OP reduced to 215 (from 250).
 -Kashef Sensor Suite hullmod now boosts campaign sensor strength by 2, increases detection range on the combat map by 50%, and increases energy/ballistic range by 5%. Unlocked at Computer Skills rank 5.
--Added AI Crew hullmod - decreases crew requirements and losses by 50%, increases weapon/energy performance by 15%, decreases combat readiness recharge rate by 50%. Unlocked at Computer Skills rank 10. 
+-Added AI Crew hullmod - decreases crew requirements and losses by 50%, increases weapon/energy performance by 15%, decreases combat readiness recharge rate by 50%. Unlocked at Computer Skills rank 10.
 -Other balancing stuffs that I'm forgetting about. I messed around with nearly everything, to be honest. Mayorate energy weapon DPS is now in line with the base game again.
 
-CAMPAIGN ADDITIONS
--Integrated relationships for other mod factions. The Mayorate is very suspicious of the rest of the sector. 
+CAMPAIGN
+-Integrated relationships for other mod factions. The Mayorate is very suspicious of the rest of the sector.
 -Added a consul to Mayorate market comm directories. You can now chat with them about other factions and stuff (mostly just for your own amusement).
--Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go with crew. The reputation "cost" is massive however. 
+-Mayorate reputation can be exchanged at the consulate for free ships/strike groups (Mayorate reputation must be "favorable" or above, additional options unlock at higher rep levels). Ships granted are randomized by ship class/type, but come fully equipped and ready to go with crew. The reputation "cost" is massive however.
 -Mayorate reputation can be spent at a consulate in order to increase reputation with certain Mayorate allies/neutral factions (Mayorate reputation must be "favorable" or above". Cost is -10 Mayorate rep for +5 <other faction> rep.
 -Accepting a commission with the Mayorate resets your relationship with the pirates to inhospitable (if you are hostile with them). This avoids the awful thing where you'd otherwise lose Mayorate rep over time for being hostile with the pirates.
 -The bonus "Consulate" features auto-deactivate if you are playing Nexerelin.
 -Added Planetary AI Core market condition. Dramatically reduces food/domestic goods consumption in return for a dramatic increase in Metals/Rare Metals/Fuel demand. If you're clever, you may be able to make money off of metals for once.
 -Shuffled around Rasht market conditions.
 -All Rasht markets now have a significant amount of flavor text.
--Mayorate ships are now much cheaper- they used to cost 1.5-2x vanilla ship prices, now they are roughly comparable to vanilla midline/high-tech prices (so you can actually replace losses). 
+-Rasht star system has been prettified and has a lot of extra terrain.
+-Mayorate ships are now much cheaper- they used to cost 1.5-2x vanilla ship prices, now they are roughly comparable to vanilla midline/high-tech prices (so you can actually replace losses).
+-Nexerelin compatibility restored.
+-Nexerelin Corvus-mode compatibility added.
 
 MISC GRAPHICS
--Added three new portraits.
+-Added three new portraits, redid one portrait, removed one portrait. Net gain: 2 portraits. Did my best to "David-ise" them.
 -Mayorate portraits are available for player use again.
 -Added a slew of unique interaction images (one for every market in Rasht, plus a few extras that are currently unused). They're kind of scribble-y, but whatever (was learning to digital paint).
 -Improved Ravana sprite.
@@ -39,8 +42,8 @@ MISC GRAPHICS
 -New Mayorate faction flag/logo graphics.
 
 MISSIONS
--Completely rewrote the mission dialogs to be in line with vanilla/mod lore. They now occur several months post-Collapse, and you're up against a lot of the original XIV ships with battle-hardened crews (I tweaked the XIV Elite Onslaught to be a bit more brutal- have fun with that). 
--Missions are now much harder.
+-Completely rewrote the mission dialogs to be in line with vanilla/mod lore. They now occur several months post-Collapse, and you're up against a lot of the original XIV ships with battle-hardened crews (I tweaked the XIV Elite Onslaught to be a bit more brutal- have fun with that).
+-Missions are now much, much harder. I've successfully beat each once.
 -Battle music plays during Mayorate missions (but not campaign, simulator, or other missions).
 
 OTHER
@@ -50,7 +53,7 @@ OTHER
 -Added a track that wasn't written by me ("gravitation") to one of the missions in a moment of weakness.
 -Removed battle music from campaign layer (it gets old after awhile). Don't worry, you can still jam to it in the missions.
 -Remastered "expanse" ambient music track.
--Added "nebula" ambient music track. Probably my most high-quality/cinematic track to date- really tried my hardest to keep the composition simple and not depend on drums so heavily. 
+-Added "nebula" ambient music track. Probably my most high-quality/cinematic track to date- really tried my hardest to keep the composition simple and not depend on drums so heavily.
 -Added "mayorate_friendly" and "mayorate_neutral" music tracks for markets/interaction dialogs.
 -Improved writing for most descriptions.
 -Rewrote a good portion of the faction lore- again.
@@ -62,7 +65,7 @@ v0.8.1
 -The Mayorate no longer requires editing files to install. Just activate the mod and play.
 -Fixed an economy bug that was causing markets to be a bit more intense than they should have been.
 -Doubled Windstalker projectile health.
--Increased Tiamat built-in weapon range by 100. 
+-Increased Tiamat built-in weapon range by 100.
 
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +75,7 @@ v0.8
 -Added Iolanthe, a new planet/market controlled by the Luddic Church. You can beat up on them to make the Mayorate/Pirates like you more. Or vice versa.
 -Reshuffled the rest of the planets a bit.
 -Lore rewritten. Not a carbon-copy of the Hegemony anymore!
--Added the "Indoctrination" market condition and custom art. Mayorate planets really need it to stay functional while being friendly with the pirates (otherwise it's food shortage/trade disruption ALL THE TIME). 
+-Added the "Indoctrination" market condition and custom art. Mayorate planets really need it to stay functional while being friendly with the pirates (otherwise it's food shortage/trade disruption ALL THE TIME).
 -Removed anamorphic flare effect on nukes. I was never super happy with it.
 -Added flag/crest. Although I'm not super in love with it, this is the flag until I redo it again.
 -All ships now have the Stabilized Shields hullmod built-in.
@@ -93,8 +96,8 @@ Giving credit where it's due, the overwhelming majority of the changes this patc
 -Now compatible with LazyWizard's "Version checker" mod.
 -Nukes revamped to not be a complete game ender. Although they still retain a small amount of instant AOE (200 frag damage), the majority of the damage is now based on arrival of a blast "shockwave." The AI now understands that AOE damage exists and will shield itself appropriately.
 -Normal maps actually work now. My bad on the last update.
--Added material maps for all ships. 
--Added new "phase leap" ship system (mounted by the Cimeterre). I completely recreated the teleport code to make it so that this system teleports you in whichever direction you're facing, as opposed to direction you're traveling/where your mouse pointer is (how the vanilla teleports work). Anything you teleport through takes 500 energy damage. Very satisfying to use. 
+-Added material maps for all ships.
+-Added new "phase leap" ship system (mounted by the Cimeterre). I completely recreated the teleport code to make it so that this system teleports you in whichever direction you're facing, as opposed to direction you're traveling/where your mouse pointer is (how the vanilla teleports work). Anything you teleport through takes 500 energy damage. Very satisfying to use.
 -Rasht background image quality increased (it was a little grainy before because I was trying to skimp on mod size).
 -All weapon sounds are now mono to better cooperate with the Starsector sound player. This should make everything quite a bit more immersive.
 -Massive code overhaul and jar-ification.
@@ -107,7 +110,7 @@ Giving credit where it's due, the overwhelming majority of the changes this patc
 -Flux torpedo: moves faster, range lower, damage decreased.
 -Graser: DPS decreased to 733, OP reduced to 20, flux reduced to 210, range boosted to 700.
 -Light TPC (lilith main gun): increased flux/sec to 150.
--Lilith: repair cost increased to 70, CR recovery/day increased to 10%. Default variant loses 3 capacitors. 
+-Lilith: repair cost increased to 70, CR recovery/day increased to 10%. Default variant loses 3 capacitors.
 -Cimeterre: supplies/day increased to 5, repair increased to 180 (from 80), default variant loses insulated engine assembly (HINT: SHOOT ITS ENGINES!!!!!!)
 -Foraker: supplies/day increased to 5, repair increased to 150
 -Safir/Safir B: supplies/day increased to 1.5/2, repair cost increased to 100/120, crew cost increased.
@@ -117,37 +120,37 @@ Giving credit where it's due, the overwhelming majority of the changes this patc
 -Inanna wings now us 0.75/day
 -Raad wing: supplies/day decreased to 1.5, deployment cost increased to 7%
 -Angha wing: deployment cost increased to 6%, now targets frigates
--Other changes I probably forgot to mention. 
+-Other changes I probably forgot to mention.
 
-There is now a public Github repository at [url]https://github.com/kazi11/mayorate[/url]. Feel free to submit a pull request if you feel you have something clever to add. 
+There is now a public Github repository at [url]https://github.com/kazi11/mayorate[/url]. Feel free to submit a pull request if you feel you have something clever to add.
 
 -------------------------------------------------------------------------------------------------------------------------
 
 v0.7
--Added Foraker-class destroyer. The Foraker is a light carrier with enough ordanance to not be a complete bore to fly, but is very poor defensively. 
--Added Safir-class freighter and conversion (destroyer escort). The Safir is quite an average shipping solution, but it still beats using Buffaloes, right? The conversion makes an okay missile support platform. Just don't try to actually take it into heavy combat. 
+-Added Foraker-class destroyer. The Foraker is a light carrier with enough ordanance to not be a complete bore to fly, but is very poor defensively.
+-Added Safir-class freighter and conversion (destroyer escort). The Safir is quite an average shipping solution, but it still beats using Buffaloes, right? The conversion makes an okay missile support platform. Just don't try to actually take it into heavy combat.
 -Added Raad-class heavy fighter wing. Mounting a pair of PPCs, this craft is a credible threat to destroyers, frigates and fighters. Replaces the Reaver Gunship.
 -Added Angha light bomber wing. Unlike other bombers, the Angha will decimate destroyers and light cruisers but is weak versus capitals. Mounts the special Tracer Rocket Launcher (8x400 damage, ultra-fast, bad tracking).
 -Added the PPC weapon (small energy). It's essentially an IR pulse laser without the suck.
 -Added Graser PD. A short-ranged PD laser that fires constant, discrete shots. Very comparable to LR PD lasers, but with different pros and cons (more power, less range). All Mayorate energy flak mounts now use Graser PD.
 -Added normal maps for ALL SHIP SPRITES AND WEAPONS! (much purple was had!)
 -Added ShaderLib lighting information for all Mayorate weapons.
--Added custom planet graphics for Ilkhanna. Kudos go out to Russian/European/American taxpayers for the base image for this. 
--Added custom background graphics for the Rasht star system. Again, thanks to Russian/European/American taxpayers for funding the telescopes that generated the base starfield. 
+-Added custom planet graphics for Ilkhanna. Kudos go out to Russian/European/American taxpayers for the base image for this.
+-Added custom background graphics for the Rasht star system. Again, thanks to Russian/European/American taxpayers for funding the telescopes that generated the base starfield.
 -Added improved Onslaught sprite.
 -Added improved Condor sprite.
 -Added improved Apogee sprite.
 -Added improved Venture sprite.
--Added improved Mule sprite. 
--Phoenix missiles now track, which is a pretty significant buff. 
+-Added improved Mule sprite.
+-Phoenix missiles now track, which is a pretty significant buff.
 -Light Graser fire rate increased, damage decreased. Feels much more responsive when under player control now, although it's a little less bursty.
--Kashef Sensor Suite now gives +5% range, +10% weapon tracking, +50% sensor range. 
+-Kashef Sensor Suite now gives +5% range, +10% weapon tracking, +50% sensor range.
 -Lilith hit with all-around nerf bat. It's still quite potent, but lost a lot of flux capacity, hull points, and weapon range.
--Inanna wing size decreased to 4. 
+-Inanna wing size decreased to 4.
 -Removed Reaver Gunship. It didn't look very cool and didn't feel particularly useful.
 -Removed Esfahan-class destroyer. It was really OP and the art was bad.
--Removed Impactor Missiles. No one uses them, including me. 
--Removed the "Battle1" music track. I got tired of it. 
+-Removed Impactor Missiles. No one uses them, including me.
+-Removed the "Battle1" music track. I got tired of it.
 -Changes to Mayorate base hullstyle (more picturesque venting).
 -Changes to Mayorate engine styles. Engines appear much hotter, and contrails are more prominent. All Mayorate ships/fighters/missiles now use custom Mayorate engines. Added "small" engine style for better graphics and performance for missiles/fighters.
 -Mayorate faction color is now yellow. No more confusing their fleets with the Diktat! (happened to me all the time...)

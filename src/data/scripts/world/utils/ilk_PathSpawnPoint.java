@@ -9,7 +9,7 @@ import org.apache.log4j.Level;
 public class ilk_PathSpawnPoint extends BaseSpawnPoint {
 
     FactionAPI path;
-    private static final float PATH_SPAWN_CHANCE = 0.7f;
+    private static final float PATH_SPAWN_CHANCE = 0.5f;
 
     public ilk_PathSpawnPoint(SectorAPI sector, LocationAPI location,
                               float daysInterval, int maxFleets, SectorEntityToken anchor) {

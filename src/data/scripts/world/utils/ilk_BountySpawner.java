@@ -20,6 +20,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
     private long lastSpawn;
 
     boolean init = false;
+    CampaignEventPlugin bounty;
 
     public ilk_BountySpawner(SectorAPI sector, LocationAPI system, MarketAPI market, float dayInterval) {
         this.sector = sector;
@@ -50,16 +51,13 @@ public class ilk_BountySpawner implements EveryFrameScript {
     public void advance(float amount) {
         if (!init) {
             // spawn an initial event
-            CampaignEventPlugin bounty = sector.getEventManager().primeEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
+            bounty = sector.getEventManager().primeEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
             bounty.startEvent();
             init = true;
         }
 
         if (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) {
-            CampaignEventPlugin bounty = sector.getEventManager().primeEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
-            bounty.startEvent();
-
-            lastSpawn = sector.getClock().getTimestamp();
+            sector.getEventManager().endEvent(bounty);
         }
     }
 }

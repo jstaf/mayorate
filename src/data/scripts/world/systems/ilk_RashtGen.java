@@ -145,7 +145,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 0.3f
         );
  
-        SystemUtils.addMarketplace(Factions.PIRATES,
+        SystemUtils.addMarketplace(Factions.LUDDIC_PATH,
                 ilk3,
                 null,
                 "Sindral",
@@ -173,9 +173,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
             SystemUtils.addConsul(ilk2.getMarket());
 
             // make some luddites
-            sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
+            //sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
             // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
-            sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
+            sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 45f));
 
             // add forgiveness script to avoid rep decay on mayorate commission from being hostile with pirates
             sector.addScript(new ilk_CommissionEffects());
