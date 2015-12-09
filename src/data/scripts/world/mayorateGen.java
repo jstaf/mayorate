@@ -23,7 +23,7 @@ public class mayorateGen implements SectorGeneratorPlugin {
         FactionAPI mayorate = sector.getFaction("mayorate");
         
         for (FactionAPI faction : sector.getAllFactions()) {
-            mayorate.setRelationship(faction.getId(), RepLevel.INHOSPITABLE);
+            mayorate.setRelationship(faction.getId(), RepLevel.HOSTILE);
         }
 
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);

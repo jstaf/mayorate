@@ -19,27 +19,36 @@ import java.lang.reflect.Method;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
+    private static boolean isExerelin;
+
+    public static boolean getIsExerelin() {
+        return isExerelin;
+    }
+
     private static void initMayorate() {
         try {
             // EXERELIN on
             Class<?> def = Global.getSettings().getScriptClassLoader().loadClass("exerelin.campaign.SectorManager");
             Method method;
+            boolean corvusMode = false;
             try {
                 method = def.getMethod("getCorvusMode");
                 Object result = method.invoke(def);
-                if ((boolean) result) {
-                    // Exerelin running in Corvus mode, go ahead and generate our sector
-                    new mayorateGen().generate(Global.getSector());
-                }
+                if ((boolean) result) corvusMode = true;
             } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException |
                     InvocationTargetException ex) {
                 // check failed, do nothing
             }
-            Global.getSector().getMemory().set("$IS_EXERELIN", true);
+
+            isExerelin = true;
+            if (corvusMode) {
+                // corvus mode generation...
+                new mayorateGen().generate(Global.getSector());
+            }
         } catch (ClassNotFoundException ex) {
             // Exerelin not found so continue and run normal generation code
+            isExerelin = false;
             new mayorateGen().generate(Global.getSector());
-            Global.getSector().getMemory().set("$IS_EXERELIN", false);
         }
     }
 

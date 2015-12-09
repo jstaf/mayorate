@@ -15,6 +15,9 @@
 		},
 		"util":{
 			"indicator":"graphics/ilk/util/indicator.png"
+		},
+		"terrain":{
+				"rings4":"graphics/planets/ring_textures4.png"
 		}
 	},
 	"plugins":{
@@ -22,6 +25,6 @@
 		"ilk_ShotgunSpecialBehavior":"data.scripts.plugins.ilk_ShotgunSpecialBehavior",
 		"ilk_DisruptorPlugin":"data.scripts.plugins.ilk_DisruptorPlugin",
 		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
-		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin",
+		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin"
 	}
 }

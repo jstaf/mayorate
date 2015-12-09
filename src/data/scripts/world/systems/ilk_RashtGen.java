@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
+import data.scripts.MayorateModPlugin;
 import data.scripts.world.utils.SystemUtils;
 import data.scripts.world.utils.ilk_BountySpawner;
 import data.scripts.world.utils.ilk_CommissionEffects;
@@ -49,7 +50,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 	    ilk1.getSpec().setUseReverseLightForGlow(true);
 	    ilk1.applySpecChanges();
 
-        PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 1200, 42);
+        PlanetAPI ilk1_1 = system.addPlanet("mun", ilk1, "Mun", "barren", 150, 80, 900, 42);
         ilk1_1.setCustomDescriptionId("planet_Mun");
 
         //add station
@@ -58,17 +59,24 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk_station.setInteractionImage("illustrations", "interdiction");
         ilk_station.setCustomDescriptionId("ilk_station_kushehr");
                 
-        PlanetAPI ilk2 = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330, 120, 1000, 30);
+        PlanetAPI ilk2 = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1000f, 30f);
         ilk2.setCustomDescriptionId("planet_Inir");
         ilk2.setInteractionImage("illustrations", "inir_surface");
         
-        PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20, 75, 10500, 250);
+        PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20f, 75f, 10500f, 275f);
         ilk3.setCustomDescriptionId("planet_Sindral");
         ilk3.setInteractionImage("illustrations", "geothermal");
         
-        PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 330, 200, 8500, 150);
+        PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 8500f, 350f);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
         ilk4.setInteractionImage("illustrations", "cloud_city");
+        ilk4.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "volturn"));
+        ilk4.getSpec().setGlowColor(new Color(188, 247, 255, 255));
+        ilk4.getSpec().setUseReverseLightForGlow(true);
+        ilk4.applySpecChanges();
+        system.addRingBand(ilk4, "misc", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
+
+        PlanetAPI ilk4_4 = system.addPlanet("amaru", ilk4, "Amaru", "cryovolcanic", 330f, 50f, 700f, 50f);
 
         // create relay
         SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
@@ -87,20 +95,21 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.autogenerateHyperspaceJumpPoints(true, true);
 
         // inner system band
-        system.addAsteroidBelt(star, 200, 1850, 600, 100, 130);
-        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 2050, 120f);
-        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 1800, 150f);
-        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 2100, 110f);
-        system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300, 110f);
-        SectorEntityToken ring = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(500f, 2000, null, "Cinder Field"));
+        system.addAsteroidBelt(star, 100, 2150, 300, 100, 180);
+        system.addRingBand(star, "terrain", "rings4", 512f, 2, new Color(65, 47, 42), 512f, 1750f, 280f);
+        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 2050, 170f);
+        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 1875, 220f);
+        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 2100, 140f);
+        //system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300, 110f);
+        SectorEntityToken ring = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(680f, 1850f, null, "Cinder Field"));
         ring.setCircularOrbit(star, 0, 0, 120f);
 
         // outer system band
-        system.addRingBand(star, "misc", "rings1", 256f, 1, Color.white, 256f, 6000, 200f);
-        system.addRingBand(star, "misc", "rings1", 256f, 0, Color.white, 280f, 6300, 160f);
-        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 6900, 110f);
-        system.addAsteroidBelt(star, 400, 6200, 300, 100, 200);
-        system.addAsteroidBelt(star, 100, 7100, 100, 60, 110);
+        system.addRingBand(star, "misc", "rings1", 256f, 1, Color.white, 256f, 6000, 300f);
+        system.addRingBand(star, "misc", "rings1", 256f, 0, Color.white, 280f, 6300, 260f);
+        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 6900, 210f);
+        system.addAsteroidBelt(star, 400, 6200, 300, 100, 280);
+        system.addAsteroidBelt(star, 100, 7100, 100, 60, 150);
         SectorEntityToken ringInner = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(600f, 6000, null, "Lanula's Arch"));
         ringInner.setCircularOrbit(star, 0, 0, 165f);
 
@@ -157,8 +166,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         );
 
         // only do the following if not in exerelin corvus mode
-        if (Global.getSector().getMemory().get("$IS_EXERELIN") != null && // just to be safe
-                !((boolean) Global.getSector().getMemory().get("$IS_EXERELIN"))) {
+        if (!MayorateModPlugin.getIsExerelin()) {
 
             // add consuls to mayorate markets
             SystemUtils.addConsul(ilk1.getMarket());
