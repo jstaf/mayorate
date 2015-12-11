@@ -23,7 +23,7 @@ $relativeStrength >= 0
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer
 !$cfai_makeHostile","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",,
+FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",cutCommLink:Cut the comm link,
 greetingIlkTargetedHostile,OpenCommLink,"$faction.id == mayorate
 $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,“Done running? It doesn't matter. I think it's safe to say you won't be getting out of this one.”,"1:cutCommLink:”We'll see about that.”
 5:cutCommLink:Cut the comm link",
@@ -73,10 +73,10 @@ embFactionsLeave,PopulateFactions,,,,10:embMain:”Nevermind.”,
 ,,,,,,
 #discuss the vanilla factions,,,,,,
 eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
-eTriTachyon,DialogOptionSelected,$option == eTach,,“It's true. We have indeed been known to cooperate with them from time to time. Scandalous.”,1:embFactionsQuiet:”Let's talk about something else.”,
+eTriTachyon,DialogOptionSelected,$option == eTach,,“It's true. We've been known to cooperate with them from time to time. Scandalous.”,1:embFactionsQuiet:”Let's talk about something else.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
-eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being oppressed! What about my religious freedoms?' or whatever. What a bunch of losers.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
+eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Help, help, I'm being oppressed! What about my religious freedoms?' or whatever. Their music is pretty 'meh', too.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
 eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting, but we try to keep things friendly.”",1:embFactionsQuiet:”I see you're already becoming fast friends.”,
 ,,,,,,
 # add options for mod factions,,,,,,
@@ -94,8 +94,8 @@ eScy,DialogOptionSelected,$option == eSc,,“An unknown factor. It remains to be
 eBlackrock,DialogOptionSelected,$option == eBrdy,,“Mmm... that Nevermore... sometimes we wish we came up with that ship.”,"0:eMods:”Yeah, it's pretty tough to be that fabulous all the time.”",
 eExigency,DialogOptionSelected,$option == eExi,,“Needs more blue and missiles.”,0:eMods:”Hmmm... I'm pretty sure they don't.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,"0:eMods:”First world problems, amirite?”",
-eTemplar,DialogOptionSelected,$option == eTem,,"“Cowards and deserters. They sold out their own kind so that they might avoid the enemy's judgement. When the time comes, we will not hesitate to wipe them out.”",0:eMods:”The struggle is real.”,
-eImperium,DialogOptionSelected,$option == eIm,,“It's rumored that the Mayor and the first Caesar knew each other back in the day.”,0:eMods:”Interesting.”,
+eTemplar,DialogOptionSelected,$option == eTem,,“Cowards and deserters. They sold out their own kind and abandoned the Domain when it needed them most.”,0:eMods:”The struggle is real.”,
+eImperium,DialogOptionSelected,$option == eIm,,“There's a rumor that the Mayor and the first Caesar used to drink together back in the day. A shame really- now it seems like we just kill each other on sight.”,0:eMods:”Interesting.”,
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance

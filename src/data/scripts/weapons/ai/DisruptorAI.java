@@ -6,11 +6,13 @@ import data.scripts.util.AnchoredBoundsEntity;
 import data.scripts.weapons.ilk_DisruptorOnHitEffect;
 import org.apache.log4j.Priority;
 import org.lazywizard.lazylib.CollisionUtils;
+import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -27,10 +29,9 @@ public class DisruptorAI implements AutofireAIPlugin {
 
     private float fluxCost;
 
-    // evidently the ship will open fire with the weapon if this is true
-    private boolean shouldFire;
-    private ShipAPI target;
-    private Vector2f loc;
+    private boolean shouldFire; // evidently the ship will open fire with the weapon if this is true
+    private ShipAPI target; // actual target
+    private Vector2f loc; // target lead
 
     public DisruptorAI(WeaponAPI weaponAPI) {
         weapon = weaponAPI;
@@ -67,23 +68,55 @@ public class DisruptorAI implements AutofireAIPlugin {
         }
 
         // are we pointing at the right target?
-        if (target != null) {
+        if (target != null && !target.isHulk()) {
             // ignore the fighters whatver happens
             if (target.isFighter()) return;
 
-            loc = new Vector2f(target.getLocation());
+            // lead target here
+            loc = Vector2f.add(target.getLocation(), target.getVelocity(), new Vector2f());
 
-            // reanchor targetLead with bounds
             if (loc != null) {
-                shouldFire = CollisionUtils.getCollisionPoint(
+                // projected hit location
+                Vector2f curLoc = Vector2f.add(
                         weapon.getLocation(),
-                        MathUtils.getPointOnCircumference(weapon.getLocation(), range, weapon.getCurrAngle()),
-                        target) != null;
+                        new Vector2f(
+                                (float) FastTrig.cos(weapon.getCurrAngle()) * (weapon.getRange() + 100f), // x
+                                (float) FastTrig.sin(weapon.getCurrAngle()) * (weapon.getRange() + 100f)), // y
+                        new Vector2f());
+                // true if projected to hit
+                shouldFire = CollisionUtils.getCollides(weapon.getLocation(), curLoc,
+                        loc, target.getCollisionRadius() / 2f);
             }
+        } else {
+            //reset aimpoint and to fire- nothing to shoot at
+            loc = null;
+            shouldFire = false;
         }
     }
 
     private ShipAPI evalThreats(List<ShipAPI> threats) {
+
+        // remove bogus stuff
+        List<ShipAPI> toRemove = new ArrayList<>();
+        for (ShipAPI threat: threats) {
+
+            // apparently asteroids got included somehow, which is dumb
+            if (threat instanceof CombatAsteroidAPI) {
+                toRemove.add(threat);
+                continue;
+            }
+            // ignore the small ships
+            if (threat.isDrone() || threat.isFighter()){
+                toRemove.add(threat);
+                continue;
+            }
+            // ignore phased ships
+            if (threat.isPhased()) {
+                toRemove.add(threat);
+                continue;
+            }
+        }
+        threats.removeAll(toRemove);
 
         // check for few nearby ships
         if (threats.isEmpty()) return null;
@@ -94,11 +127,6 @@ public class DisruptorAI implements AutofireAIPlugin {
         // determine "opportunity level"
         for (ShipAPI threat : threats) {
             int index = threats.indexOf(threat);
-
-            // ignore the small ships
-            if (threat.isDrone() || threat.isFighter()) {
-                continue;
-            }
 
             // can we overload someone?
             FluxTrackerAPI enemyFlux = threat.getFluxTracker();
