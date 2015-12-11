@@ -13,7 +13,7 @@ Grav Driver,ilk_hvy_driver,2,12000,850,,250,,3000,10,25,16,0.75,4,KINETIC,250,,,
 Disruptor,ilk_disruptor,3,2000,800,,400,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,,7715
 Heavy Disruptor,ilk_disruptor_heavy,3,6000,1000,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,,7716
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Thermal Lance,ilk_thermal_lance,3,0,600,375,,,,0,0,,,,HIGH_EXPLOSIVE,,500,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7719
+Thermal Lance,ilk_thermal_lance,3,0,600,375,,,,0,0,,,,HIGH_EXPLOSIVE,,475,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7719
 Light TPC,ilk_repeater,1,0,600,,150,,0,0,0,10,1,,ENERGY,150,,,0.25,1,,0,10,2,5,,1300,,,,"SYSTEM, SHOW_IN_CODEX",7720
 Grav Cannon,ilk_driver,2,0,900,,500,,,0,0,,,,KINETIC,650,,1,8,3,0.6,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",7721
 Tracer Rocket Launcher,ilk_tracer_angha,1,0,1200,,350,,,0,0,8,,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,5,100,"SYSTEM, GUIDED_POOR, STRIKE, USE_VS_FRIGATES",7722

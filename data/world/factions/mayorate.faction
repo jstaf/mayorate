@@ -262,7 +262,7 @@
 		"interceptors": 4,
 		"fighters": 4,
 		"bombers": 6,
-		"small": 8,
+		"small": 6,
 		"fast": 4,
 		"medium": 7,
 		"large": 10,

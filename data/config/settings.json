@@ -27,7 +27,7 @@
 		"ilk_MineDecelerator":"data.scripts.plugins.ilk_MineManager",
 		"ilk_BeamRendererPlugin":"data.scripts.plugins.beamRenderer.BeamRendererPlugin"
 	},
-	"campaignMusicVolumeMult":0.8,
+	"campaignMusicVolumeMult":0.7,
 	"campaignMusicFilterGain":1,
 	"campaignMusicFilterGainHF":1
 }

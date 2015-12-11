@@ -51,16 +51,14 @@ public class ilk_BountySpawner implements EveryFrameScript {
      */
     @Override
     public void advance(float amount) {
-        if (!init) {
+        if (!init && (sector.getClock().getElapsedDaysSince(lastSpawn) >= 95)) {
             // spawn an initial event
-            bounty = sector.getEventManager().primeEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
-            bounty.startEvent();
+            sector.getEventManager().startEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
+            lastSpawn = sector.getClock().getTimestamp();
             init = true;
-        }
-
-        if (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) {
-            sector.getEventManager().endEvent(bounty);
-            isDone = true;
+        } else if (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) {
+            sector.getEventManager().startEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
+            lastSpawn = sector.getClock().getTimestamp();
         }
     }
 }

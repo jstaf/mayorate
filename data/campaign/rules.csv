@@ -73,7 +73,7 @@ embFactionsLeave,PopulateFactions,,,,10:embMain:”Nevermind.”,
 ,,,,,,
 #discuss the vanilla factions,,,,,,
 eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
-eTriTachyon,DialogOptionSelected,$option == eTach,,"“It's true. We have indeed been known to cooperate with them from time to time. Scandalous, right?”",1:embFactionsQuiet:”Let's talk about something else.”,
+eTriTachyon,DialogOptionSelected,$option == eTach,,“It's true. We have indeed been known to cooperate with them from time to time. Scandalous.”,1:embFactionsQuiet:”Let's talk about something else.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
 eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Hey, you're an abomination!' or 'Help, help, I'm being oppressed! What about my religious freedoms?' or whatever. What a bunch of losers.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
@@ -180,13 +180,13 @@ discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you wan
 3:goals:”What are your long term goals in the sector?”
 3:name:”What's up with the name 'Mayorate'?”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,"“There were several, ah... disagreements with the Domain's ruling elements. It was mutually agreed that our founders should relocate to a less developed region and otherwise refrain from participation in the internal politics of the Domain.“",1:exile:”That sounds like exile.”,
+discussOrigins,DialogOptionSelected,$option == origins,,"“There were several, ah... disagreements with the Domain's ruling elements. It was mutually agreed that our founders should relocate to a less developed region and otherwise refrain from interference in Domain affairs.“",1:exile:”That sounds like exile.”,
 discussOrigins2,DialogOptionSelected,$option == exile,,"“Indeed. Although we are still here and the Domain is not, so perhaps we did something right, after all.“","1:exiles2:”What did you do to get exiled?”
 10:embMayorate:”Interesting.”",
 discussExile2,DialogOptionSelected,$option == exiles2,,"“Look around you. This sector is falling apart. We need to become better than is humanly possible in order to survive. Forcibly, if need be.”","1:beliefs:”Stop beating around the bush.”
 1:beliefs2:”Makes sense.”
 10:embMayorate:”That's dark.”",
-discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate intelligence is superior to the baseline human in every possible way.”","1:genocide:”You're wrong.”
+discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate intelligence is superior to a baseline human in every meaningful way.”","1:genocide:”You're wrong.”
 1:beliefs2:”I'm not here to judge.”",
 discussMeans,DialogOptionSelected,$option == genocide,BumpRep $faction.id -0.05,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”",1:embMayorate:”I suppose you have a point.”,
 discussBeliefs2,DialogOptionSelected,$option == beliefs2,,“A wise attitude.”,10:embMayorate:”Let me ask you about something else.”,
@@ -194,7 +194,7 @@ discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is h
 discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer even meet basic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
 2:plan:”What do you plan to do about it?”
 10:embMayorate:”Well that sucks.”",
-discussPessimism,DialogOptionSelected,$option == pessimism,,"“Pushing the markets any more will only accelerate the collapse of the sector's biospheres. Worse yet, many factions are actively destroying what remains.”",1:pessimism2:”That seems pessimistic.”,
+discussPessimism,DialogOptionSelected,$option == pessimism,,"“Pushing the markets any more will only accelerate their collapse. Worse yet, many factions are actively destroying what remains.”",1:pessimism2:”That seems pessimistic.”,
 discussPessimism2,DialogOptionSelected,$option == pessimism2,,“The mathematics are determinate.”,"1:plan:”What do you plan to do about it?”
 10:embMayorate:”I'll keep that in mind.”",
 discussPlan,DialogOptionSelected,$option == plan,,"“The only way this can end is with us as the last ones standing. You too, if you're smart.”","1:pessimism:”Why not attempt to rebuild the sector?”
@@ -206,7 +206,7 @@ discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've mo
 2:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”Good to know.”",
 discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh, she's still around. Just not quite up to how she used to be.”",1:mayor3:”What happened to her?”,
-discussMayor3,DialogOptionSelected,$option == mayor3,,"“It was decided that she should recuse herself from faction affairs. I assure you, it was a mutual decision.”","1:ayatollah:”What's an Ayatollah?”
+discussMayor3,DialogOptionSelected,$option == mayor3,,“It was decided that she should recuse herself from the day-to-day affairs of the Mayorate. The decision was made in her best interests.”,"1:ayatollah:”What's an Ayatollah?”
 10:embMayorate:”I'll keep that in mind.”",
 discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
 discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But many do.”","1:mayor2:”The Mayor? There was only one?”
