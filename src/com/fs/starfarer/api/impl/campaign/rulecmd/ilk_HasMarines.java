@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Created by jeff on 24/08/15.
  */
-public class HasMarines extends BaseCommandPlugin {
+public class ilk_HasMarines extends BaseCommandPlugin {
     @Override
     public boolean execute(String s, InteractionDialogAPI interactionDialogAPI, List<Misc.Token> list, Map<String, MemoryAPI> map) {
         int numberNeeded = Integer.parseInt(list.get(0).getString(map));

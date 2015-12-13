@@ -1,5 +1,12 @@
 kazi - Mayorate mod changelog
 
+v0.9.1
+
+-mod campaign music now integrates with vanilla campaign music
+-fixed the Nexerelin invasion bug
+-AI Crew performance bonuses reduced to 5%, otherwise fixed
+-fixed fighter supply usage
+
 v0.9
 
 COMBAT AND BALANCE
@@ -57,6 +64,7 @@ OTHER
 -Added "mayorate_friendly" and "mayorate_neutral" music tracks for markets/interaction dialogs.
 -Improved writing for most descriptions.
 -Rewrote a good portion of the faction lore- again.
+-Added a custom AI for disruptor-type weapons, it's a bit buggy, but hits more than the vanilla AI (its also punishing, with no built-in inaccuracy)
 -Probably a lot of stuff I forgot to mention.
 
 ------------------------------------------------------------------------------------------------------------------------
