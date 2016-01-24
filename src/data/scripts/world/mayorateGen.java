@@ -24,13 +24,6 @@ public class mayorateGen implements SectorGeneratorPlugin {
     public static void initFactionRelationships(SectorAPI sector) {
         FactionAPI mayorate = sector.getFaction("mayorate");
 
-        // if in doubt, make factions hostile to mayorate
-        List<FactionAPI> factionList = sector.getAllFactions();
-        factionList.remove(mayorate);
-        for (FactionAPI faction : factionList) {
-            mayorate.setRelationship(faction.getId(), RepLevel.HOSTILE);
-        }
-
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
         FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
         FactionAPI pirates = sector.getFaction(Factions.PIRATES);
