@@ -97,11 +97,6 @@
     -174,
     11.5
   ],
-  "builtInMods": [
-    "stabilizedshieldemitter"
-  ],
-  "builtInWeapons": {
-  },
   "center": [
     146,
     253.5
@@ -123,7 +118,7 @@
     {
       "angle": 175.45195,
       "contrailSize": 17.184343,
-      "length": 43.317718,
+      "length": 43.317719,
       "location": [
         -168,
         -25.5

@@ -97,9 +97,6 @@
     -80.5,
     13.5
   ],
-  "builtInMods": [
-    "stabilizedshieldemitter"
-  ],
   "builtInWeapons": {
     "WS0001": "ilk_thermal_lance"
   },

@@ -41,9 +41,6 @@
     -52.5,
     11
   ],
-  "builtInMods": [
-    "stabilizedshieldemitter"
-  ],
   "builtInWeapons": {
     "WS0007": "ilk_pulse_gun"
   },

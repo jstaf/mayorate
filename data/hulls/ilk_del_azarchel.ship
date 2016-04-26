@@ -85,9 +85,6 @@
     -127.5,
     11
   ],
-  "builtInMods": [
-    "stabilizedshieldemitter"
-  ],
   "builtInWeapons": {
     "WS0012": "ilk_driver"
   },
