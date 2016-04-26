@@ -3,7 +3,7 @@
 	"name":"The Mayorate",
 	"author":"kazi",
 	"version":"0.9.2",
-	"description":"<< Requires LazyLib >> The Mayorate adds a very substantial amount of gameplay content, including a new faction/ships/weapons/systems/markets/music/sfx/etc... Now compatible with 0.7.2a!",
+	"description":"<< Requires LazyLib >> The Mayorate adds... the Mayorate (and all of their associated stuff). Now compatible with 0.7.2a!",
     "gameVersion":"0.7.2a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
 	"jars": ["mayorate.jar"]

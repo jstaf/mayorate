@@ -4,8 +4,9 @@ v0.9.2
 
 -Mayorate fleets are no longer hostile to unlisted factions (so they won't jump on your bounties)
 -I *think* I've fixed the main menu crash bug. Let me know if this is a no.
--Light TPC flux cost decreased by 33% to 100/shot
--Removed built-in stabilized shields hullmod and decreased shield upkeep by half to compensate for most ships.
+-Light TPC flux cost decreased by 33%.
+-Removed built-in stabilized shields hullmod and decreased shield upkeep by half to compensate for all non-fighter ships.
+-Mayorate consul and related features now present in Nexerelin. They should expand automatically to the planets you conquer, and disappear if control of the planet is lost.
 -compiled against JDK7
 -0.7.2 compatibility
 
