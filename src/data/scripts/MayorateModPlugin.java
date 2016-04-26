@@ -45,6 +45,9 @@ public class MayorateModPlugin extends BaseModPlugin {
                 // corvus mode generation...
                 new mayorateGen().generate(Global.getSector());
             }
+
+            // add script to manage consuls for exerelin
+
         } catch (ClassNotFoundException ex) {
             // Exerelin not found so continue and run normal generation code
             isExerelin = false;
