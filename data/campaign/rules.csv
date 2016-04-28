@@ -35,7 +35,8 @@ AddText ""Detecting your presence, a nearby terminal fires up its display. Weari
 ,,,,,,
 ,,,,,,
 ### trigger spawn/despawn of mayorate consuls at markets in exerelin – silently fires whenever a player opens a market,,,,,,
-ilk_consulManager,PopulateOptions,ilk_IsExerelin,ManageConsul,,,
+ilk_consulManager,PopulateOptions,"ilk_IsExerelin
+$faction.id == mayorate",ManageConsul,,,
 ,,,,,,
 ##########start of custom market dialogs,,,,,,
 embassy,PickGreeting,"$isPerson
