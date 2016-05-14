@@ -16,5 +16,3 @@ Submit any bug reports to the forum thread (or PM me) and I'll do my best to iro
 Anyhow, enjoy!
 
 (And yes, I did all of the art/coding/music.)
-
-![](http://i.imgur.com/am1Nt84.gif) ![](http://i.imgur.com/8b73Ury.gif) 
