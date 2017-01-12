@@ -12,7 +12,7 @@ import org.lwjgl.util.vector.Vector2f;
  *
  * @author Jeff
  */
-public class GraserCharge implements BeamEffectPlugin {    
+public class ilk_GraserCharge implements BeamEffectPlugin {
 
     @Override
     public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {

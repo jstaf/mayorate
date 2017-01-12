@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Jeff on 2015-08-09.
  */
-public class BeamSpec {
+public class ilk_BeamSpec {
 
     // initialization variables
     CombatEngineAPI engine;
@@ -47,9 +47,9 @@ public class BeamSpec {
     float opacity;
     CombatEntityAPI target;
 
-    public BeamSpec(CombatEngineAPI combatEngineAPI, ShipAPI setSource, Vector2f startLocSet, float rangeSet, float aimSet, float damageAmt,
-                    DamageType damageType, float empDamageAmt, float time, float fadeInSet, float fadeOutSet,
-                    String spriteKey, String spriteName, float wide, Color colorSet) {
+    public ilk_BeamSpec(CombatEngineAPI combatEngineAPI, ShipAPI setSource, Vector2f startLocSet, float rangeSet, float aimSet, float damageAmt,
+                        DamageType damageType, float empDamageAmt, float time, float fadeInSet, float fadeOutSet,
+                        String spriteKey, String spriteName, float wide, Color colorSet) {
         engine = combatEngineAPI;
         source = setSource;
         startLoc = startLocSet;

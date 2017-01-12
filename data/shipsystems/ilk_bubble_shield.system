@@ -3,7 +3,7 @@
 	"type":"SHIELD_MOD",
 	"aiType":"FORTRESS_SHIELD",
 
-	"statsScript":"data.shipsystems.scripts.BubbleShieldStats",
+	"statsScript":"data.shipsystems.scripts.ilk_BubbleShieldStats",
 	
 	"shieldRingColor":[255,255,255,200],
 	"shieldInnerColor":[255,29,89,100],

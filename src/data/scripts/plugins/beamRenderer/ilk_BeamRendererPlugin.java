@@ -17,15 +17,15 @@ import org.lwjgl.util.vector.Vector2f;
 /** Draw arbitrary beam sprites wherever you need them and fade them out. Has none of the drawbacks of the old code (static beams, one-time damage).
  *  @author Tartiflette and Deathfly (complete and TOTAL rewrite by kazi)
  */
-public class BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
+public class ilk_BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
 
     private CombatEngineAPI engine;
 
-    private static ArrayList<BeamSpec> beamsToRender = new ArrayList<>();
-    private ArrayList<BeamSpec> toRemove = new ArrayList<>();
+    private static ArrayList<ilk_BeamSpec> beamsToRender = new ArrayList<>();
+    private ArrayList<ilk_BeamSpec> toRemove = new ArrayList<>();
 
     // add beams to the rendering/damage thread this way (by creating a NEW beamSpec object using the constructor)
-    public static void addBeam(BeamSpec newBeam) {
+    public static void addBeam(ilk_BeamSpec newBeam) {
         beamsToRender.add(newBeam);
         newBeam.calcImpactPoint();
 
@@ -61,7 +61,7 @@ public class BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
         }
 
         // recalculate render coords and apply damage
-        for (BeamSpec beam : beamsToRender) {
+        for (ilk_BeamSpec beam : beamsToRender) {
             beam.update(amount);
         }
     }
@@ -74,7 +74,7 @@ public class BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
 
         if (!beamsToRender.isEmpty()) {
             // iterate through the beams, rendering each in turn
-            for (BeamSpec beam : beamsToRender) {
+            for (ilk_BeamSpec beam : beamsToRender) {
                 if (beam.isDone) {
                     toRemove.add(beam);
                     continue;

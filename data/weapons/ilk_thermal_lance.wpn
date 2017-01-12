@@ -29,5 +29,5 @@
 	"interruptibleBurst":true,
 	"fireSoundOne":"ilk_thermal_lance_short",
 	"fireSoundTwo":"ilk_thermal_lance_loop",
-	"beamEffect":"data.scripts.weapons.GraserCharge"	
+	"beamEffect":"data.scripts.weapons.ilk_GraserCharge"
 }

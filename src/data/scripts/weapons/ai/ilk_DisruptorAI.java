@@ -19,7 +19,7 @@ import java.util.logging.Level;
 /**
  * Created by Jeff on 2015-08-13.
  */
-public class DisruptorAI implements AutofireAIPlugin {
+public class ilk_DisruptorAI implements AutofireAIPlugin {
 
     private WeaponAPI weapon;
     private ShipAPI myShip;
@@ -33,7 +33,7 @@ public class DisruptorAI implements AutofireAIPlugin {
     private ShipAPI target; // actual target
     private Vector2f loc; // target lead
 
-    public DisruptorAI(WeaponAPI weaponAPI) {
+    public ilk_DisruptorAI(WeaponAPI weaponAPI) {
         weapon = weaponAPI;
         myShip = weapon.getShip();
         myFlux = myShip.getFluxTracker();

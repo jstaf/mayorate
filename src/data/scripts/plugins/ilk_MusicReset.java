@@ -9,7 +9,7 @@ import com.fs.starfarer.api.input.InputEventAPI;
 
 import java.util.List;
 
-public class MusicReset implements EveryFrameCombatPlugin {
+public class ilk_MusicReset implements EveryFrameCombatPlugin {
 
     /**
      * Unfortunately, this hack was necessary to prevent mission music from bleeding over into the title screen.

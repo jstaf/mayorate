@@ -8,8 +8,8 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-import data.scripts.plugins.beamRenderer.BeamRendererPlugin;
-import data.scripts.plugins.beamRenderer.BeamSpec;
+import data.scripts.plugins.beamRenderer.ilk_BeamRendererPlugin;
+import data.scripts.plugins.beamRenderer.ilk_BeamSpec;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -57,7 +57,7 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                         
                     case "ilk_laserhead_shot":
                         Vector2f fireLoc = proj.getLocation();
-                        BeamRendererPlugin.addBeam(new BeamSpec(engine, proj.getSource(), fireLoc, 700f, proj.getFacing(),
+                        ilk_BeamRendererPlugin.addBeam(new ilk_BeamSpec(engine, proj.getSource(), fireLoc, 700f, proj.getFacing(),
                                 1000f, DamageType.ENERGY, 0f,
                                 0.7f, 0.1f, 0.2f, //duration, in, out
                                 "beams", "ilk_fakeBeamFX", 27, new Color(224,184,225,175)));

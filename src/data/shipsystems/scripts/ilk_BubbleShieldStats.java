@@ -15,7 +15,7 @@ import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
  *
  * @author Jeff
  */
-public class BubbleShieldStats implements ShipSystemStatsScript {
+public class ilk_BubbleShieldStats implements ShipSystemStatsScript {
 
     private boolean start = false;
     private float orig;
