@@ -30,6 +30,14 @@
 	"bubble_shield_loop":[
 		{"file":"sounds/ilk/fx/bubble_shield_loop.ogg","pitch":1,"volume":0.65}
 	],
+	
+	"ilk_uhvy_driver_scream":[
+			{"file":"sounds/ilk/fx/uhvy_driver_scream.ogg","pitch":1,"volume":0.4}
+	],
+	
+	"ilk_uhvy_driver_scream":[
+			{"file":"sounds/ilk/fx/uhvy_driver_fire.ogg","pitch":1,"volume":0.4}
+	],
 
 	"ilk_hvy_driver_scream":[
 			{"file":"sounds/ilk/fx/hvy_driver_scream.ogg","pitch":1,"volume":0.4}
