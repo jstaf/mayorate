@@ -5,14 +5,26 @@ sourceSets.main.java.srcDir 'src'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-// grabs lazylib and graphicslib
+// grab lazylib and graphicslib before compiling
 task fetchDeps(type: Exec) {
 	commandLine 'sh', 'util/fetch-deps.sh'
 }
+compileJava.dependsOn fetchDeps
 
-// creates mod jar
-jar {
-	dependsOn fetchDeps
+// copy mod jar to current directory
+task copyJar(type: Copy) {
+	from 'build/libs/'
+	include '*.jar'
+	into '.'
+}
+build.dependsOn copyJar
+
+task createRelease(type: Exec) {
+	commandLine 'sh', 'util/create-release.sh'
+}
+
+clean {
+	delete 'mayorate.jar'	
 }
 
 // create new gradle wrapper
