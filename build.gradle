@@ -24,7 +24,7 @@ task createRelease(type: Exec) {
 }
 
 clean {
-	delete 'mayorate.jar'	
+	delete fileTree('.') { include '*.jar' }	
 }
 
 // create new gradle wrapper
