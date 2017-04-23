@@ -9,5 +9,6 @@ mayorate-*/
 .idea/
 .gradle/
 out/
+build/
 todo.txt
 
