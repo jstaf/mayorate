@@ -14,8 +14,8 @@ cp -R . ../$RELEASE
 
 # now delete everything we don't want
 cd ../$RELEASE
-rm -rf .git .idea out
-rm -f .gitignore *.iml *.sh
+rm -rf .git .idea out util
+rm -f .gitignore *.iml 
 
 cd ..
 zip -r $RELEASE.zip $RELEASE

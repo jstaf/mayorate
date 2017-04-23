@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+// compile against jdk 7
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+// grabs lazylib and graphicslib
+task fetchDeps(type: Exec) {
+	commandLine 'sh', 'util/fetch-deps.sh'
+}
+
+// creates mod jar
+jar {
+	dependsOn fetchDeps
+}
+
+// create new gradle wrapper
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2.1' 
+}
+
+// compile time dependencies for your project
+dependencies {
+	compile files('../GraphicsLib/jars/Graphics.jar')
+	compile files('../LazyLib/jars/LazyLib.jar')
+	// everything in starsector main folder
+	compile fileTree(dir: '../../', include: ['*.jar'])
+}
+
