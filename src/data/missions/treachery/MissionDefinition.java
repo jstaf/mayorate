@@ -1,7 +1,6 @@
 package data.missions.treachery;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CargoAPI.CrewXPLevel;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
@@ -28,7 +27,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // Set a small blurb for each fleet that shows up on the mission detail and
         // mission results screens to identify each side.
         api.setFleetTagline(FleetSide.PLAYER, "Mayorate insystem response elements");
-        api.setFleetTagline(FleetSide.ENEMY, "Hegemony 14th Battlegroup, Mazianni Squadron");
+        api.setFleetTagline(FleetSide.ENEMY, "Hegemony 14th Battlegroup");
 
         // These show up as items in the bulleted list under 
         // "Tactical Objectives" on the mission detail screen
@@ -37,31 +36,25 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         // Set up the player's fleet.  Variant names come from the
         // files in data/variants and data/variants/fighters
-        api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MNS Nazarin", true, CrewXPLevel.REGULAR);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_CS", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        // api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false, CrewXPLevel.REGULAR);
-        // api.addToFleet(FleetSide.PLAYER, "ilk_safir_standard", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false, CrewXPLevel.GREEN);
-
-        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
-        //api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.REGULAR);
+        api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MNS Nazarin", true);
+        api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_CS", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_angha_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_raad_wing", FleetMemberType.FIGHTER_WING, false);
 
         // Set up the enemy fleet.
-        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false);
         //api.addToFleet(FleetSide.ENEMY, "falcon_xiv_Escort", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "wolf_hegemony_CS", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "condor_FS", FleetMemberType.SHIP, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "wolf_hegemony_CS", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.ENEMY, "condor_FS", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "buffalo2_FS", FleetMemberType.SHIP, false);
 
@@ -70,9 +63,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.addToFleet(FleetSide.ENEMY, "valkyrie_Elite", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.ENEMY, "valkyrie_Elite", FleetMemberType.SHIP, false);
 
-        api.addToFleet(FleetSide.ENEMY, "broadsword_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "talon_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.VETERAN);
-        api.addToFleet(FleetSide.ENEMY, "talon_wing", FleetMemberType.FIGHTER_WING, false, CrewXPLevel.VETERAN);
+        api.addToFleet(FleetSide.ENEMY, "broadsword_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.ENEMY, "talon_wing", FleetMemberType.FIGHTER_WING, false);
+        api.addToFleet(FleetSide.ENEMY, "talon_wing", FleetMemberType.FIGHTER_WING, false);
 
         // Set up the map.
         float width = 24000f;

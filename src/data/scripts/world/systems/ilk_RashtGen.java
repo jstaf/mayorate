@@ -126,7 +126,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 "Inir",
                 3,
                 new ArrayList<>(Arrays.asList("ai_core", "indoctrination",
-                        Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.UNINHABITABLE, Conditions.POPULATION_4)),
+                        Conditions.ANTIMATTER_FUEL_PRODUCTION, Conditions.ORE_COMPLEX, Conditions.POPULATION_4)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
@@ -148,7 +148,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 "Iolanthe",
                 3,
                 new ArrayList<>(Arrays.asList(Conditions.FRONTIER, Conditions.FREE_PORT, Conditions.VOLATILES_COMPLEX,
-                        Conditions.UNINHABITABLE, Conditions.POPULATION_3)),
+                        Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );

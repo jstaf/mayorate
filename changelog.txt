@@ -1,5 +1,16 @@
 Mayorate mod changelog - kazi
 
+v1.0.0
+
+-0.8a compatibility
+-Added Narayana Superdreadnaught.
+
+TODO bundle consul into basecommander
+TODO AICore produces AIs
+TODO AICrew allows AI crew
+TODO AI core collection event
+TODO rewrite text to be more vanilla friendly
+
 v0.9.2
 
 -Mayorate fleets are no longer hostile to unlisted factions (so they won't jump on your bounties)

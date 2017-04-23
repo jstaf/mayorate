@@ -29,7 +29,7 @@ public class AddShip extends BaseCommandPlugin {
         
         // it needs crew too!
         float minCrew = newMember.getMinCrew();
-        Global.getSector().getPlayerFleet().getCargo().addCrew(CargoAPI.CrewXPLevel.REGULAR, (int) minCrew);
+        Global.getSector().getPlayerFleet().getCargo().addCrew((int) minCrew);
         
         String text = "Added " + newMember.getVariant().getFullDesignationWithHullName();
         Color color = Global.getSettings().getColor("textFriendColor");

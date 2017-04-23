@@ -2,7 +2,6 @@ package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -38,8 +37,8 @@ public class AddTrackedShipToFleet extends BaseCommandPlugin {
             fleet.getFleetData().addFleetMember(newMember);
             // it needs crew too!
             float minCrew = newMember.getMinCrew();
-            fleet.getCargo().addCrew(CargoAPI.CrewXPLevel.REGULAR, (int) minCrew);
-            
+            fleet.getCargo().addCrew((int) minCrew);
+
             // add ship's id to global memory
             String memID = newMember.getId();
             Global.getSector().getMemory().set(shipMemKey, memID);

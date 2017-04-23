@@ -2,9 +2,9 @@
   "id":"mayorate",
 	"name":"The Mayorate",
 	"author":"kazi",
-	"version":"0.9.2",
-	"description":"<< Requires LazyLib >> The Mayorate adds... the Mayorate (and all of their associated stuff). Now compatible with 0.7.2a!",
-    "gameVersion":"0.7.2a",
+	"version":"1.0.0",
+	"description":"<< Requires LazyLib >> The Mayorate adds... the Mayorate (and all of their associated stuff). Now compatible with 0.8!",
+    "gameVersion":"0.8a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
 	"jars": ["mayorate.jar"]
 }
