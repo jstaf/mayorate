@@ -1,4 +1,4 @@
-id,variant,fleet pts,hyperdrive,formation,num,role,refit,base value,number
-ilk_raad_wing,ilk_raad_fighter,7,,V,2,ASSAULT,15,10000,3
-ilk_angha_wing,ilk_angha_bomber,5,,V,3,BOMBER,10,12000,4
-ilk_hk_wing,ilk_hk_drone_hunter_killer,9,,CLAW,3,INTERCEPTOR,15,18000,5
+id,variant,tags,tier,fleet pts,op cost,formation,range,attackRunRange,num,role,role desc,refit,base value
+ilk_raad_wing,ilk_raad_fighter,"fighter3, fighter, mid",1,7,12,V,4000,500,2,ASSAULT,Heavy Fighter,15,9000
+ilk_angha_wing,ilk_angha_bomber,"bomber4, bomber, high",1,5,12,V,4000,2000,3,BOMBER,Light Bomber,10,12000
+ilk_hk_wing,ilk_hk_drone_hunter_killer,"interceptor3, interceptor, high",2,9,13,CLAW,5000,500,3,INTERCEPTOR,Interceptor Drone,15,18000

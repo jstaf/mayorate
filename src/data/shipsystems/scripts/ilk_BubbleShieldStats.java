@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package data.shipsystems.scripts;
 
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -11,10 +5,6 @@ import com.fs.starfarer.api.combat.ShieldAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 
-/**
- *
- * @author Jeff
- */
 public class ilk_BubbleShieldStats implements ShipSystemStatsScript {
 
     private boolean start = false;

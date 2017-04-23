@@ -32,10 +32,6 @@
 	],
 	
 	"ilk_uhvy_driver_scream":[
-			{"file":"sounds/ilk/fx/uhvy_driver_scream.ogg","pitch":1,"volume":0.4}
-	],
-	
-	"ilk_uhvy_driver_scream":[
 			{"file":"sounds/ilk/fx/uhvy_driver_fire.ogg","pitch":1,"volume":0.4}
 	],
 
