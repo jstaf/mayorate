@@ -9,13 +9,17 @@ VERSION=$(grep version mod_info.json | grep -oP '\d+(\.\d+)*')
 RELEASE=$MOD-$VERSION
 
 # copy over mod to release folder
-cp -R . $RELEASE
-cd $RELEASE
+mkdir ../$RELEASE
+cp -R . ../$RELEASE
 
 # now delete everything we don't want
+cd ../$RELEASE
 rm -rf .git .idea out
 rm -f .gitignore *.iml *.sh
 
 cd ..
-zip $RELEASE.zip $RELEASE
+zip -r $RELEASE.zip $RELEASE
+if [ -d $RELEASE ]; then
+	rm -rf $RELEASE
+fi
 
