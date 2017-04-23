@@ -1,4 +1,4 @@
-package com.fs.starfarer.api.impl.campaign.rulecmd;
+package ilk.rulecmd;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
