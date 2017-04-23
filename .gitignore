@@ -1,8 +1,12 @@
-*.csv#
-*.jar
-.idea/
-*.iml
+*#
 *~
-out/
+*.swp
+*.jar
+*.zip
+mayorate-*/
 */META-INF/MANIFEST.MF
+*.iml
+.idea/
+out/
 todo.txt
+
