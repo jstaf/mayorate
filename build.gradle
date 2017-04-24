@@ -5,30 +5,39 @@ sourceSets.main.java.srcDir 'src'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-// grab lazylib and graphicslib before compiling
 task fetchDeps(type: Exec) {
+	description 'Fetch and install LazyLib and GraphicsLib before compilation.'
 	commandLine 'sh', 'util/fetch-deps.sh'
 }
 compileJava.dependsOn fetchDeps
 
-// copy mod jar to current directory
 task copyJar(type: Copy) {
+	description 'Copy compiled jar to current working directory.'
 	from 'build/libs/'
 	include '*.jar'
 	into '.'
 }
 build.dependsOn copyJar
 
-task createRelease(type: Exec) {
+task run(type: Exec) {
+	description 'Run Starsector'
+	dependsOn build
+	workingDir '../..' 
+	commandLine 'sh', 'starsector.sh'
+}
+
+task release(type: Exec) {
+	description 'Create releaseable zip file.'
 	commandLine 'sh', 'util/create-release.sh'
 }
 
+// nuke everything and start over
 clean {
-	delete fileTree('.') { include '*.jar' }	
+	delete fileTree('.') { include '*.jar' }
 }
 
-// create new gradle wrapper
 task wrapper(type: Wrapper) {
+	description 'Create a new Gradle wrapper.'
     gradleVersion = '3.2.1' 
 }
 

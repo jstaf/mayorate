@@ -2,7 +2,6 @@
 
 # just so nothing weird happens
 set -eu
-set -o pipefail
 
 MOD=$(basename $(pwd))
 VERSION=$(grep version mod_info.json | grep -oP '\d+(\.\d+)*')
