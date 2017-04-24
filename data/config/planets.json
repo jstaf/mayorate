@@ -1,5 +1,5 @@
 {
-	"star_red_dwarf":{
+	"ilk_star_rasht":{
 		"name":"Red Dwarf",
 		"tilt":10, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)

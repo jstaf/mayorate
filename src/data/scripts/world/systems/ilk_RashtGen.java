@@ -29,7 +29,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
         // create the star and generate the hyperspace anchor for this system
-        PlanetAPI star = system.initStar("rasht", "star_red_dwarf", 400f, 300f);
+        PlanetAPI star = system.initStar("rasht", "ilk_star_rasht", 400f, 300f);
         system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
         // SectorEntityToken creation goes from star -> fringe
@@ -48,7 +48,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ring.setCircularOrbit(star, 0, 0, 120f);
 
         PlanetAPI ilk1 = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 185, 175, 4200, 200);
-        ilk1.setCustomDescriptionId("planet_Ilkhanna");
+        ilk1.setCustomDescriptionId("planet_ilkhanna");
         ilk1.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "sindria"));
         ilk1.getSpec().setGlowColor(new Color(255, 255, 255, 255));
 	    ilk1.getSpec().setUseReverseLightForGlow(true);
