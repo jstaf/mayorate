@@ -40,9 +40,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         // inner system band
         system.addAsteroidBelt(star, 100, 2250, 300, 100, 180);
         system.addRingBand(star, "terrain", "rings4", 512f, 2, new Color(65, 47, 42), 512f, 1850f, 280f);
-        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 2150, 170f);
-        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 1975, 220f);
-        system.addRingBand(star, "misc", "rings1", 256f, 3, Color.white, 256f, 2200, 140f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 2150, 170f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 1975, 220f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 2200, 140f);
         //system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300, 110f);
         SectorEntityToken ring = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(680f, 1950f, null, "Cinder Field"));
         ring.setCircularOrbit(star, 0, 0, 120f);
@@ -83,9 +83,9 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk3.setInteractionImage("illustrations", "geothermal");
 
         // outer system band
-        system.addRingBand(star, "misc", "rings1", 256f, 1, Color.white, 256f, 6900, 300f);
-        system.addRingBand(star, "misc", "rings1", 256f, 0, Color.white, 280f, 7200, 260f);
-        system.addRingBand(star, "misc", "rings1", 256f, 2, Color.white, 256f, 7800, 210f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 1, Color.white, 256f, 6900, 300f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 0, Color.white, 280f, 7200, 260f);
+        system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 7800, 210f);
         system.addAsteroidBelt(star, 400, 7100, 300, 100, 280);
         system.addAsteroidBelt(star, 100, 8000, 100, 60, 150);
         SectorEntityToken ringInner = system.addTerrain(Terrain.RING, new BaseRingTerrain.RingParams(600f, 6900, null, "Lanula's Arch"));
@@ -98,7 +98,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         ilk4.getSpec().setGlowColor(new Color(118, 248, 255, 255));
         ilk4.getSpec().setUseReverseLightForGlow(true);
         ilk4.applySpecChanges();
-        system.addRingBand(ilk4, "misc", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
+        system.addRingBand(ilk4, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
 
         PlanetAPI ilk4_4 = system.addPlanet("amaru", ilk4, "Amaru", "cryovolcanic", 330f, 50f, 800f, 50f);
 
