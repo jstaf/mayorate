@@ -17,7 +17,7 @@
 			"indicator":"graphics/ilk/util/indicator.png"
 		},
 		"terrain":{
-				"rings4":"graphics/planets/ring_textures4.png"
+				"rings4":"graphics/ilk/planets/ring_textures4.png"
 		}
 	},
 	"ruleCommandPackages":[

@@ -1,7 +1,6 @@
 *#
 *~
 *.swp
-./*.jar
 *.zip
 mayorate-*/
 */META-INF/MANIFEST.MF
@@ -12,3 +11,4 @@ out/
 build/
 todo.txt
 
+/mayorate.jar
