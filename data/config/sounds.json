@@ -45,23 +45,6 @@
 			{"file":"sounds/ilk/fx/hvy_driver_fire.ogg","pitch":0.98,"volume":0.35}
 	],
 
-	"ilk_lanceL_start":[
-			{"file":"sounds/ilk/fx/lance_light_start.ogg","pitch":1,"volume":0.75}
-	],
-
-	"ilk_lanceL_fire":[
-			{"file":"sounds/ilk/fx/lance_light_fire.ogg","pitch":1,"volume":0.85}
-	],
-
-
-	"ilk_lanceH_start":[
-			{"file":"sounds/ilk/fx/lance_heavy_start.ogg","pitch":1,"volume":0.75}
-	],
-
-	"ilk_lanceH_fire":[
-			{"file":"sounds/ilk/fx/lance_heavy_fire.ogg","pitch":1,"volume":0.8}
-	],
-
 	"ilk_thermal_lance_short":[
 			{"file":"sounds/ilk/fx/thermal_lance_short.ogg","pitch":1,"volume":1.2}
 	],
@@ -168,10 +151,6 @@
 			{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":0.95,"volume":0.10},
 			{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.05,"volume":0.10},
 			{"file":"sounds/ilk/fx/tracer_fire.ogg","pitch":1.1,"volume":0.10}
-	],
-
-	"ilk_needler_fire":[
-			{"file":"sounds/ilk/fx/ilk_needler.ogg","pitch":1,"volume":0.20}
 	],
 
 	"ilk_system_phase_leap":[

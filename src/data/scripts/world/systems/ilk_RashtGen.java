@@ -157,8 +157,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         if (!MayorateModPlugin.getIsExerelin()) {
 
             // add consuls to mayorate markets
-            SystemUtils.addConsul(ilk1.getMarket());
-            SystemUtils.addConsul(ilk2.getMarket());
+            //SystemUtils.addConsul(ilk1.getMarket());
+            //SystemUtils.addConsul(ilk2.getMarket());
 
             // make some luddites
             //sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
