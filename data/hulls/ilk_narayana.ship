@@ -149,9 +149,6 @@
     7.5,
     -87
   ],
-  "builtInWeapons": {
-    "WS0021": "tachyonlance"
-  },
   "center": [
     150,
     190
@@ -281,25 +278,25 @@
     },
     {
       "angle": 150.101105,
-      "contrailSize": 10.294518,
+      "contrailSize": 10.294519,
       "length": 23.146397,
       "location": [
         -119,
         67.5
       ],
       "style": "ILK_ENGINE",
-      "width": 10.294518
+      "width": 10.294519
     },
     {
       "angle": -150.101105,
-      "contrailSize": 10.294518,
+      "contrailSize": 10.294519,
       "length": 23.146397,
       "location": [
         -119,
         -67.5
       ],
       "style": "ILK_ENGINE",
-      "width": 10.294518
+      "width": 10.294519
     }
   ],
   "height": 420,
@@ -400,7 +397,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": 73.855659,
+      "angle": 73.85566,
       "arc": 150.494461,
       "id": "WS0007",
       "locations": [
@@ -412,7 +409,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": -73.855659,
+      "angle": -73.85566,
       "arc": 150.494461,
       "id": "WS0008",
       "locations": [
@@ -556,7 +553,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": 61.699245,
+      "angle": 61.699246,
       "arc": 183.655945,
       "id": "WS0018",
       "locations": [
@@ -601,7 +598,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "BUILT_IN"
+      "type": "UNIVERSAL"
     }
   ],
   "width": 300
