@@ -5,7 +5,7 @@ cd ..
 
 if [ ! -d GraphicsLib ]; then
 	# graphicslib
-	wget https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib%201.1.0.7z
+	wget https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib%201.2.0.7z
 	7z x GraphicsLib*.7z
 fi
 
