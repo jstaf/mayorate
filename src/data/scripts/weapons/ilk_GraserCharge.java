@@ -11,10 +11,11 @@ import org.lwjgl.util.vector.Vector2f;
 /**
  * @author kazi
  */
-public class ilk_GraserCharge implements BeamEffectPlugin {
+public class ilk_GraserCharge extends ilk_BurstBeamEffect implements BeamEffectPlugin {
 
     @Override
     public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
+        super.advance(amount, engine, beam); // add beam spike and afterglow
         if (beam.didDamageThisFrame()) {
             Vector2f point = beam.getTo();
             float damage = beam.getWeapon().getDamage().getDamage() * amount * 5f;
