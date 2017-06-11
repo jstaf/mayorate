@@ -15,7 +15,11 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0021": "tachyonlance"
+        "WS0009": "ilk_disruptor",
+        "WS0010": "ilk_disruptor",
+        "WS0011": "ilk_disruptor",
+        "WS0012": "ilk_disruptor",
+        "WS0021": "ilk_ramdrive"
       }
     },
     {
@@ -29,18 +33,12 @@
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {
-        "WS0009": "annihilatorpod",
-        "WS0010": "annihilatorpod",
-        "WS0011": "annihilatorpod",
-        "WS0012": "annihilatorpod"
-      }
+      "weapons": {}
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "heavyneedler",
         "WS0006": "ilk_graser_light",
         "WS0013": "ilk_graser_light",
         "WS0014": "ilk_disruptor",

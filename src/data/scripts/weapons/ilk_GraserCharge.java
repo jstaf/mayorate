@@ -9,8 +9,7 @@ import java.awt.Color;
 import org.lwjgl.util.vector.Vector2f;
 
 /**
- *
- * @author Jeff
+ * @author kazi
  */
 public class ilk_GraserCharge implements BeamEffectPlugin {
 

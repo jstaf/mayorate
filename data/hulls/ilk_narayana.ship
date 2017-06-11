@@ -149,6 +149,9 @@
     7.5,
     -87
   ],
+  "builtInWeapons": {
+    "WS0021": "ilk_ramdrive"
+  },
   "center": [
     150,
     190
@@ -598,7 +601,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "LARGE",
-      "type": "UNIVERSAL"
+      "type": "BUILT_IN"
     }
   ],
   "width": 300
