@@ -54,11 +54,11 @@
 	],
 
 	"ilk_ramdrive_fire":[
-			{"file":"sounds/ilk/fx/ramdrive_fire.ogg","pitch":1,"volume":1}
+			{"file":"sounds/ilk/fx/ramdrive_fire.ogg","pitch":1,"volume":0.6}
 	],
 
 	"ilk_ramdrive_loop":[
-			{"file":"sounds/ilk/fx/ramdrive_loop.ogg","pitch":1,"volume":1}
+			{"file":"sounds/ilk/fx/ramdrive_loop.ogg","pitch":1,"volume":0.6}
 	],
 
 	"ilk_pulse_gun":[

@@ -2,6 +2,7 @@
   "displayName": "Escort",
   "fluxCapacitors": 7,
   "fluxVents": 6,
+  "goalVariant": True,
   "hullId": "ilk_foraker",
   "hullMods": [
   ],
@@ -36,5 +37,9 @@
         "WS0004": "ilk_graser_pd"
       }
     }
+  ],
+  "wings": [
+      "ilk_hk_wing",
+      "ilk_hk_wing"
   ]
 }

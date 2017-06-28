@@ -186,12 +186,26 @@
     {
       "angle": 0,
       "arc": 360,
-      "id": "LB 1",
+      "id": "WS0006",
       "locations": [
-        63.5,
-        -13.5,
-        7,
+        73,
+        -12,
+        2,
         -17
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS0007",
+      "locations": [
+        31,
+        -12.5,
+        53.5,
+        -13
       ],
       "mount": "HIDDEN",
       "size": "LARGE",
