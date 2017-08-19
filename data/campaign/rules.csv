@@ -30,7 +30,7 @@ $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,�
 ,,,,,,
 #AI cores turn in options,,,,,,
 aiCores_turnInOptionSelMayorate,DialogOptionSelected,"$option == aiCores_startTurnIn
-$faction.id == mayorate",FireAll PopulateCoresTurnInOptions,"“Incredible – it’s rare to see a functioning Domain AI core, or even rarer still, a human captain who would return them to us unharmed.”",,
+$faction.id == mayorate",FireAll PopulateCoresTurnInOptions,"“Incredible – it’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”",,
 aiCores_turnInResponseMayorate,AICoresTurnedIn,$faction.id == Mayorate,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
 ,,,,,,
 #Mayorate market interaction dialogue,,,,,,
@@ -53,7 +53,7 @@ embassyQuiet,DialogOptionSelected,$option == embMain,,“Did you need anything e
 10:embLeave:Cut the comm link.",
 ,,,,,,
 ##### misc,,,,,,
-embassyHuman,DialogOptionSelected,$option == embHuman,,"“To be honest, most people find AIs rather, ah... intimidating. In an effort to avoid any misunderstandings, the majority of our diplomatic staff and comm officers are human.”",1:embMain:”Ah. I can see how that would make sense.”,
+embassyHuman,DialogOptionSelected,$option == embHuman,,“Really? I suppose I do a pretty good human impression these days! Isn’t this a great face I’m wearing today?”,1:embMain:”It’s alright.”,
 embLeave,DialogOptionSelected,$option == embLeave,"ShowDefaultVisual
 EndConversation",You cut the comm link after exchanging a few pleasantries.,,
 ,,,,,,
@@ -134,6 +134,8 @@ giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_support""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
 giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_pursuit""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_elite""
+BumpRep $faction.id -0.3",,1:eShips:”Thanks.”,
 giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.2
 AddShip ""ilk_lilith_assault""
@@ -158,7 +160,7 @@ AddShip ""ilk_angha_wing""
 AddShip ""ilk_hk_wing""",,1:eShips:”Thanks.”,
 ,,,,,,
 ############ Improve relations,,,,,,
-whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which factions would you like us to talk to on your behalf?”,,
+whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which faction would you like us to talk to on your behalf?”,,
 improveTriTachyon,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipTriTach:The Tri-Tachyon Corporation,
 improveIndependent,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipIndependent:The Independents,
 improvePirates,Allies,RepIsAtWorst $faction.id FAVORABLE,,,1:dipPirates:Pirates,
@@ -174,47 +176,45 @@ repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImp
 BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
 ,,,,,,
-############ discuss faction lore,,,,,,
+############ discuss faction backstory,,,,,,
 discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you want to know?”,"3:origins:”How was the Mayorate founded?”
-3:currentSector:”Any thoughts on the current state of the sector?”
 3:goals:”What are your long term goals in the sector?”
 3:name:”What's up with the name 'Mayorate'?”
+3:aiOops:”So I, uh, might have killed a few AIs earlier...”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,"“There were several, ah... disagreements with the Domain's ruling elements. It was mutually agreed that our founders should relocate to a less developed region and otherwise refrain from interference in Domain affairs.“",1:exile:”That sounds like exile.”,
-discussOrigins2,DialogOptionSelected,$option == exile,,"“Indeed. Although we are still here and the Domain is not, so perhaps we did something right, after all.“","1:exiles2:”What did you do to get exiled?”
-10:embMayorate:”Interesting.”",
-discussExile2,DialogOptionSelected,$option == exiles2,,"“Look around you. This sector is falling apart. We need to become better than is humanly possible in order to survive. Forcibly, if need be.”","1:beliefs:”Stop beating around the bush.”
-1:beliefs2:”Makes sense.”
-10:embMayorate:”That's dark.”",
-discussBeliefs,DialogOptionSelected,$option == beliefs,,"“We advocated, and continue to advocate, the advancement of humanity through artificial means. A Mayorate intelligence is superior to a baseline human in every meaningful way.”","1:genocide:”You're wrong.”
-1:beliefs2:”I'm not here to judge.”",
-discussMeans,DialogOptionSelected,$option == genocide,BumpRep $faction.id -0.05,"“It doesn't matter now. The Domain is gone, and its morals with it. We are still here, and that is all that matters.”",1:embMayorate:”I suppose you have a point.”,
-discussBeliefs2,DialogOptionSelected,$option == beliefs2,,“A wise attitude.”,10:embMayorate:”Let me ask you about something else.”,
-discussSector,DialogOptionSelected,$option == currentSector,,"“The sector is heading towards a very dark place. I know things seem bad now, but it's only going to get worse.”",1:overpopulation:”How can you possibly even know that?”,
-discussSector2,DialogOptionSelected,$option == overpopulation,,“Have you ever noticed that most markets can no longer even meet basic demand? What happens when there simply isn't enough?”,"1:pessimism:”Why not attempt to rebuild the sector?”
-2:plan:”What do you plan to do about it?”
-10:embMayorate:”Well that sucks.”",
-discussPessimism,DialogOptionSelected,$option == pessimism,,"“Pushing the markets any more will only accelerate their collapse. Worse yet, many factions are actively destroying what remains.”",1:pessimism2:”That seems pessimistic.”,
-discussPessimism2,DialogOptionSelected,$option == pessimism2,,“The mathematics are determinate.”,"1:plan:”What do you plan to do about it?”
-10:embMayorate:”I'll keep that in mind.”",
-discussPlan,DialogOptionSelected,$option == plan,,"“The only way this can end is with us as the last ones standing. You too, if you're smart.”","1:pessimism:”Why not attempt to rebuild the sector?”
-10:embMayorate:”I'll take that under consideration.”",
-discussGoals,DialogOptionSelected,$option == goals,,“Let's just say that the Mayorate is currently focused on maintaining it's long-term survival and leave it at that.”,1:embMayorate:”Okay then.”,
-discussName,DialogOptionSelected,$option == name,,"“At the time of the Collapse, the Mayorate was little more than a backwater research and terraforming colony on the surface of Ilkhanna. When contact was lost with the rest of the Domain, the colonial mayor assumed control of the system.”","1:mayor:”Is that still the case?”
-10:embMayorate:”Huh, interesting.”",
-discussMayor,DialogOptionSelected,$option == mayor,,“We like to think we've moved past simple tyranny. The Mayor has largely taken a step back from affairs and council of Ayatollahs now rules the Mayorate.”,"1:mayor2:”'The' Mayor? There was only one?”
-2:ayatollah:”What's an Ayatollah?”
-10:embMayorate:”Good to know.”",
-discussMayor2,DialogOptionSelected,$option == mayor2,,"“Oh, she's still around. Just not quite up to how she used to be.”",1:mayor3:”What happened to her?”,
-discussMayor3,DialogOptionSelected,$option == mayor3,,“It was decided that she should recuse herself from the day-to-day affairs of the Mayorate. The decision was made in her best interests.”,"1:ayatollah:”What's an Ayatollah?”
-10:embMayorate:”I'll keep that in mind.”",
-discussAyatollah,DialogOptionSelected,$option == ayatollah,,"“The closest equivalent outside the Mayorate would be a Nobel laureate from Old Earth. The Ayatollahs govern by divine right, as evidenced by their mastery of the technological elements.”",1:ayaBelief:”You really believe in that? Divine right?”,
-discussAyatollah2,DialogOptionSelected,$option == ayaBelief,,"“Hah, of course not. But many do.”","1:mayor2:”The Mayor? There was only one?”
-10:embMayorate:”Interesting.”",
+discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was there anything else?”,"3:origins:”How was the Mayorate founded?”
+3:goals:”What are your long term goals in the sector?”
+3:name:”What's up with the name 'Mayorate'?”
+3:aiOops:”So I, uh, might have killed a few AIs earlier...”
+10:embMain:”Nevermind.”",
+discussOrigins,DialogOptionSelected,$option == origins,,“Ilkhanna was actually a rather unremarkable colony back during the Domain. A terraforming station. A small shipyard and autofactory. Insignificant mineral resources. Nothing of note.,"1:domCollapse:”What happened?”
+2:domCollapse:”Then the Domain collapsed.”",
+discussCollapse,DialogOptionSelected,$option == domCollapse,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+discussName,DialogOptionSelected,$option == name,,“The colonial mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
+2:loveYouLongTime:”That’s a long time.”",
+discussElections,DialogOptionSelected,$option == elections,,“Don’t be silly. The Mayorate survives because of good decisions – not popular ones.”,1:mayorDies:”But what happens if the Mayor dies?”,
+discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She won’t.”,1:embMayorateQuiet:”Let’s talk about something else.”,
+discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“As you likely know, Ilkhanna’s terraforming AI saved the colony during the Collapse. It was only fitting that she become Mayor.”",1:ruleForever:”But that’s enough to rule... forever?”,
+discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,1:embMayorateQuiet:”I make my own way.”,
+,,,,,,
+discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
+2:mayoratekill:”And if they were?”",
+discussMayorateKill,DialogOptionSelected,$option == mayoratekill,BumpRep $faction.id -0.05,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
+discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs you’ll encounter in the sector are little more than empty husks. They’ve been bred for a single purpose – destruction. Putting them out of their misery would be an act of mercy.”,"1:notMad:”So there would be no consequences if one of them ‘forced my hand’?”
+2:rehabilitation:”Can they be rehabilitated?”",
+discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
+discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely understand, the Mayorate is uniquely positioned to put them to better use.”",1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”,
+discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any AI cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
 ,,,,,,
 ,,,,,,
 #######################TEST COMMANDS MENU,,,,,,
-ilk_TestCheck,PopulateOptions,$global.isDevMode,,,10:ruleTest:>>(dev) test custom commands,
+ilk_TestCheck,PopulateOptions,$global.isDevMode,,,10:ruleTest:>> (dev) test custom commands,
 # page 2,,,,,,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
 1:addConditionTest:AddMarketCondition

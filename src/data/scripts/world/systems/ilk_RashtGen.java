@@ -146,7 +146,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 "Iolanthe",
                 3,
                 new ArrayList<>(Arrays.asList(Conditions.FRONTIER, Conditions.FREE_PORT, Conditions.VOLATILES_COMPLEX,
-                        Conditions.POPULATION_3)),
+                        Conditions.LUDDIC_MAJORITY, Conditions.POPULATION_3)),
                 new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE)),
                 0.3f
         );
