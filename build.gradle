@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 apply plugin: 'java'
 
 // project level config
@@ -5,25 +7,33 @@ sourceSets.main.java.srcDir 'src'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+/*
 task fetchDeps(type: Exec) {
 	description 'Fetch and install LazyLib and GraphicsLib before compilation.'
 	commandLine 'sh', 'util/fetch-deps.sh'
 }
 compileJava.dependsOn fetchDeps
+*/
 
-task copyJar(type: Copy) {
-	description 'Copy compiled jar to current working directory.'
-	from 'build/libs/'
-	include '*.jar'
-	into '.'
+build {
+    doLast {
+        copy {
+            from jar
+            into '.'
+        }
+    }
 }
-build.dependsOn copyJar
 
 task run(type: Exec) {
 	description 'Run Starsector'
 	dependsOn build
-	workingDir '../..' 
-	commandLine 'sh', 'starsector.sh'
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        workingDir '../../starsector-core'
+        commandLine 'cmd', '/c', 'start', 'starsector.bat'
+    } else {
+        workingDir '../..'
+        commandLine 'sh', 'starsector.sh'
+    }
 }
 
 task release(type: Exec) {
@@ -43,9 +53,12 @@ task wrapper(type: Wrapper) {
 
 // compile time dependencies for most mods 
 dependencies {
-	compile files('../GraphicsLib/jars/Graphics.jar')
-	compile files('../LazyLib/jars/LazyLib.jar')
-	// everything in starsector main folder
-	compile fileTree(dir: '../../', include: ['*.jar'])
+    compile files('../GraphicsLib/jars/Graphics.jar')
+    compile files('../LazyLib/jars/LazyLib.jar')
+    // everything in starsector main folder
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        compile fileTree(dir: '../../starsector-core/', include: '*.jar')
+    } else {
+        compile fileTree(dir: '../../', include: '*.jar')
+    }
 }
-
