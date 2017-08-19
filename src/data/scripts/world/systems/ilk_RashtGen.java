@@ -80,7 +80,6 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         PlanetAPI ilk3 = system.addPlanet("sindral", star, "Sindral", "rocky_ice", 20f, 90f, 6200f, 275f);
         ilk3.setCustomDescriptionId("planet_Sindral");
-        ilk3.setInteractionImage("illustrations", "geothermal");
 
         // outer system band
         system.addRingBand(star, "terrain", "rings1", 256f, 1, Color.white, 256f, 6900, 300f);
@@ -93,7 +92,6 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 9650f, 350f);
         ilk4.setCustomDescriptionId("planet_Iolanthe");
-        ilk4.setInteractionImage("illustrations", "cloud_city");
         ilk4.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "asharu"));
         ilk4.getSpec().setGlowColor(new Color(118, 248, 255, 255));
         ilk4.getSpec().setUseReverseLightForGlow(true);
@@ -131,7 +129,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
                 0.3f
         );
  
-        SystemUtils.addMarketplace(Factions.LUDDIC_CHURCH,
+        SystemUtils.addMarketplace(Factions.PIRATES,
                 ilk3,
                 null,
                 "Sindral",
@@ -155,13 +153,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
         // only do the following if not in exerelin corvus mode
         if (!MayorateModPlugin.getIsExerelin()) {
-
-            // add consuls to mayorate markets
-            //SystemUtils.addConsul(ilk1.getMarket());
-            //SystemUtils.addConsul(ilk2.getMarket());
-
             // make some luddites
-            //sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk3));
+            sector.addScript(new ilk_PathSpawnPoint(sector, system, 3, 7, ilk4));
             // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
             sector.addScript(new ilk_BountySpawner(sector, system, ilk1.getMarket(), 180f));
 

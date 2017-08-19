@@ -2,9 +2,6 @@
   "graphics":{
     "illustrations":{
       "inir_surface":"graphics/ilk/illustrations/inir_surface.png",
-      "geothermal":"graphics/ilk/illustrations/geothermal.png",
-      "marine":"graphics/ilk/illustrations/marine.png",
-      "cloud_city":"graphics/ilk/illustrations/cloud_city.png",
       "interdiction":"graphics/ilk/illustrations/interdiction.png"
     },
     "beams":{
