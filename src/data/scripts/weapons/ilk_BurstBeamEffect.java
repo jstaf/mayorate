@@ -51,6 +51,6 @@ public class ilk_BurstBeamEffect implements BeamEffectPlugin {
      * @param beamAPI
      */
     public void afterglow(BeamAPI beamAPI) {
-
+        //TODO implement
     }
 }
