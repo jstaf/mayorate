@@ -2,6 +2,7 @@
 *~
 *.swp
 *.zip
+*.7z
 mayorate-*/
 */META-INF/MANIFEST.MF
 *.iml
@@ -10,5 +11,7 @@ mayorate-*/
 out/
 build/
 todo.txt
+GraphicsLib/
+LazyLib/
 
 /mayorate.jar

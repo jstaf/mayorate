@@ -7,13 +7,11 @@ sourceSets.main.java.srcDir 'src'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-/*
 task fetchDeps(type: Exec) {
 	description 'Fetch and install LazyLib and GraphicsLib before compilation.'
 	commandLine 'sh', 'util/fetch-deps.sh'
 }
 compileJava.dependsOn fetchDeps
-*/
 
 build {
     doLast {

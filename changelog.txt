@@ -11,6 +11,9 @@ v1.0.0
 TODO AICore produces AIs
 TODO AICrew allows AI crew
 TODO AI core collection event
+TODO 0.8 changes for carriers/fighters
+TODO finish narayana main gun
+TODO add ramscoop hullmod
 
 v0.9.2
 
