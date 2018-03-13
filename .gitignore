@@ -7,11 +7,16 @@ mayorate-*/
 */META-INF/MANIFEST.MF
 *.iml
 .idea/
+.vscode/
+.settings/
 .gradle/
 out/
 build/
-todo.txt
 GraphicsLib/
 LazyLib/
+todo.txt
+.classpath
+.project
+bin/
 
 /mayorate.jar
