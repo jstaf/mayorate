@@ -1,45 +1,37 @@
 {
-    "displayName": "Strike",
-    "fluxCapacitors": 10,
-    "fluxVents": 5,
-    "hullId": "ilk_jamaran",
-    "hullMods": [
-        "missleracks",
-        "auxiliarythrusters"
-    ],
-    "quality": 0.5,
-    "variantId": "ilk_jamaran_strike",
-    "weaponGroups": [
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0009": "cyclone"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0007": "harpoonpod",
-                "WS0008": "harpoonpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0005": "heavyneedler",
-                "WS0006": "heavyneedler"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0001": "ilk_graser_pd",
-                "WS0002": "ilk_graser_pd",
-                "WS0003": "ilk_graser_pd",
-                "WS0004": "ilk_graser_pd"
-            }
-        }
-    ]
+  "displayName": "Strike",
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "ilk_jamaran",
+  "hullMods": [
+    "expanded_deck_crew",
+    "missleracks",
+    "eccm"
+  ],
+  "quality": 0.5,
+  "variantId": "ilk_jamaran_strike",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ilk_laserhead",
+        "WS0008": "ilk_laserhead",
+        "WS0009": "ilk_nuke_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_graser_pd",
+        "WS0002": "ilk_graser_pd"
+      }
+    }
+  ],
+  "wings": [
+    "ilk_angha_wing",
+    "ilk_angha_wing"
+  ]
 }

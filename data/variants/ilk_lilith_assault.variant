@@ -1,19 +1,14 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 10,
-  "fluxVents": 0,
+  "fluxCapacitors": 3,
+  "fluxVents": 10,
+  "goalVariant": true,
   "hullId": "ilk_lilith",
   "hullMods": [
+    "targetingunit"
   ],
   "variantId": "ilk_lilith_assault",
   "weaponGroups": [
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-		"WS0004": "ilk_repeater"
-	  }
-    },
     {
       "autofire": false,
       "mode": "LINKED",
@@ -25,14 +20,16 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
+		"WS0004": "ilk_repeater"
+	  }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0001": "ilk_graser_pd",
         "WS0002": "ilk_graser_pd"
       }
     },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {}
-    }
   ]
 }

@@ -20,7 +20,7 @@
 					   "particleDuration":0.12,
 					   "particleCount":12,
 					   "particleColor":[255,100,100,255]},
-	"requiresFullCharge":false,
+	"autocharge":true,
 	"projectileSpecId":"miningblaster_shot",
 	#"fireSoundOne":"ilk_ramdrive_charge",
 	"fireSoundTwo":"ilk_ramdrive_fire",

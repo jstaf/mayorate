@@ -65,22 +65,6 @@
 		"encounter_friendly": "mayorate_friendly"
 	},
 	"shipRoles": {
-		"interceptor": {
-			"ilk_hk_wing": 10,
-			"fallback": {
-				"fighter": 1
-			}
-		},
-		"fighter": {
-			"ilk_raad_wing": 10,
-			"ilk_hk_wing": 3,
-			"fallback": {
-				"interceptor": 1
-			}
-		},
-		"bomber": {
-			"ilk_angha_wing": 10
-		},
 		"fastAttack": {
 			"ilk_lilith_assault": 10,
 			"fallback": {
@@ -88,16 +72,15 @@
 			}
 		},
 		"escortSmall": {
-			"ilk_lilith_kazi_tournament": 5,
-			"ilk_lilith_CS": 5,
 			"ilk_tiamat_assault": 10,
+			"ilk_lilith_cs": 5,
 			"fallback": {
 				"combatSmall": 1
 			}
 		},
 		"escortMedium": {
 			"ilk_cimeterre_strike": 3,
-			"ilk_cimeterre_CS": 6,
+			"ilk_cimeterre_cs": 6,
 			"ilk_safir_converted_support": 5,
 			"fallback": {
 				"combatMedium": 1
@@ -105,7 +88,7 @@
 		},
 		"combatSmall": {
 			"ilk_tiamat_assault": 10,
-			"ilk_lilith_CS": 7,
+			"ilk_lilith_cs": 7,
 			"ilk_lilith_assault": 6,
 			"fallback": {
 				"escortSmall": 1
@@ -113,7 +96,7 @@
 		},
 		"combatMedium": {
 			"ilk_cimeterre_strike": 10,
-			"ilk_cimeterre_CS": 7,
+			"ilk_cimeterre_cs": 7,
 			"ilk_safir_converted_support": 5,
 			"fallback": {
 				"combatSmall": 2
@@ -121,16 +104,15 @@
 		},
 		"combatLarge": {
 			"ilk_del_azarchel_artillery": 10,
-			"ilk_del_azarchel_CS": 4,
-			"ilk_jamaran_strike": 3,
-			"ilk_jamaran_kazi_tournament": 2,
+			"ilk_jamaran_fs": 3,
 			"fallback": {
 				"combatMedium": 2
 			}
 		},
 		"combatCapital": {
-			"ilk_ravana_pursuit": 5,
-			"ilk_ravana_CS": 10,
+			"ilk_ravana_assault": 10,
+			"ilk_ravana_cs": 5,
+			"ilk_narayana_fs": 5,
 			"fallback": {
 				"combatLarge": 2
 			}
@@ -151,7 +133,7 @@
 			}
 		},
 		"combatFreighterLarge": {
-			"ilk_jamaran_support": 10,
+			"ilk_jamaran_fs": 10,
 			"fallback": {
 				"combatFreighterMedium": 2
 			}
@@ -172,9 +154,8 @@
 			}
 		},
 		"carrierMedium": {
-			"ilk_jamaran_support": 10,
-			"ilk_jamaran_patrol": 6,
-			"ilk_jamaran_kazi_tournament": 2,
+			"ilk_jamaran_strike": 10,
+			"ilk_jamaran_fs": 5,
 			"fallback": {
 				"carrierSmall": 2
 			}
@@ -259,9 +240,6 @@
 		}
 	},
 	"doctrine": {
-		"interceptors": 4,
-		"fighters": 4,
-		"bombers": 6,
 		"small": 6,
 		"fast": 4,
 		"medium": 7,
@@ -287,10 +265,11 @@
 	"traits": {
 		"admiral": {},
 		"captain": {
-			"timid": 3,
-			"cautious": 5,
+			"timid": 2,
+			"cautious": 3,
 			"steady": 5,
-			"aggressive": 10
+			"aggressive": 15,
+			"reckless": 5
 		}
 	},
 	"fleetCompositions": {
@@ -302,7 +281,7 @@
 			"extraCrewPercent": [80, 80],
 			"marinesPercent": [40, 40],
 			"ships": {
-				"ilk_ravana_pursuit": [1, 1],
+				"ilk_ravana_assault": [1, 1],
 				"ilk_del_azarchel_artillery": [1, 2],
 				"ilk_foraker_escort": [1, 2],
 				"ilk_cimeterre_strike": [2, 3],

@@ -1,9 +1,10 @@
 {
   "displayName": "Assault",
   "fluxCapacitors": 8,
-  "fluxVents": 0,
+  "fluxVents": 8,
+  "goalVariant": true,
   "hullId": "ilk_tiamat",
-  "hullMods": [],
+  "hullMods": ["targetingunit"],
   "variantId": "ilk_tiamat_assault",
   "weaponGroups": [
     {

@@ -122,7 +122,7 @@ giveFrigateLilith,GiveFrigate,,"AddShip ""ilk_lilith_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
 giveFrigateTiamat,GiveFrigate,,"AddShip ""ilk_tiamat_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_strike""
+giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_cs""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
 giveDestroyerSafirB,GiveDestroyer,,"AddShip ""ilk_safir_converted_support""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
@@ -130,7 +130,7 @@ giveDestroyerForaker,GiveDestroyer,,"AddShip ""ilk_foraker_escort""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
 giveDelAzarchel,GiveHeavy,,"AddShip ""ilk_del_azarchel_artillery""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_support""
+giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_fs""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
 giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_pursuit""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,

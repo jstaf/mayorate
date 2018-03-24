@@ -34,12 +34,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         // Set up the player's fleet.  Variant names come from the
         // files in data/variants and data/variants/fighters
-        api.addToFleet(FleetSide.PLAYER, "ilk_narayana_elite", FleetMemberType.SHIP, "MNS Moneta", true);
-        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_CS", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_narayana_fs", FleetMemberType.SHIP, "MNS Moneta", true);
+        api.addToFleet(FleetSide.PLAYER, "ilk_ravana_assault", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_support", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_CS", FleetMemberType.SHIP, "MNS Azure Dream", false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_fs", FleetMemberType.SHIP, false);
+        api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, "MNS Azure Dream", false);
         api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);

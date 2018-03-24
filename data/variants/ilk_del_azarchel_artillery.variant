@@ -1,10 +1,12 @@
 {
   "displayName": "Artillery",
-  "fluxCapacitors": 8,
-  "fluxVents": 10,
+  "fluxCapacitors": 0,
+  "fluxVents": 11,
+  "goalVariant": true,
   "hullId": "ilk_del_azarchel",
   "hullMods": [
     "missleracks",
+    "targetingunit"
   ],
   "variantId": "ilk_del_azarchel_artillery",
   "weaponGroups": [
@@ -12,23 +14,21 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0012": "ilk_driver"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
         "WS0001": "ilk_nuke_large",
         "WS0002": "ilk_nuke_large"
       }
     },
     {
       "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {"WS0012": "ilk_driver"}
+    },
+    {
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "annihilator",
-        "WS0006": "annihilator",
+        "WS0005": "ilk_windstalker",
+        "WS0006": "ilk_windstalker",
         "WS0011": "annihilatorpod"
       }
     },
@@ -36,8 +36,8 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "heavymauler",
-        "WS0004": "heavymauler"
+        "WS0003": "ilk_disruptor",
+        "WS0004": "ilk_disruptor"
       }
     },
     {
@@ -47,7 +47,6 @@
         "WS0007": "ilk_graser_pd",
         "WS0008": "ilk_graser_pd",
         "WS0009": "ilk_graser_pd",
-        "WS0010": "ilk_graser_pd"
       }
     }
   ]

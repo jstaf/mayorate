@@ -1,11 +1,11 @@
 {
-  "displayName": "Escort",
+  "displayName": "Strike",
   "fluxCapacitors": 0,
-  "fluxVents": 2,
+  "fluxVents": 3,
   "goalVariant": true,
   "hullId": "ilk_foraker",
   "hullMods": ["expanded_deck_crew"],
-  "variantId": "ilk_foraker_escort",
+  "variantId": "ilk_foraker_strike",
   "weaponGroups": [
     {
       "autofire": false,
@@ -32,7 +32,7 @@
     }
   ],
   "wings": [
-    "ilk_hk_wing",
-    "ilk_hk_wing"
+    "ilk_raad_wing",
+    "ilk_angha_wing"
   ]
 }

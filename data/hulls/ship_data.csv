@@ -1,18 +1,18 @@
 name,id,designation,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,hints,breakProb,,,number
 Raad,ilk_raad,,,,750,150,1500,,300,0,,200,250,200,90,170,40,NONE,,0,0,0,,,2,2,,,,,9,,,,,,,,,0,,,7602
 Angha,ilk_angha,,,,600,100,250,,40,0,,180,300,250,100,200,30,NONE,,0,0,0,,,0,0,,,,,10,,,,,,,,,0,,,7603
-Shrike,ilk_hk_drone,,,,550,100,1000,,200,0,,275,350,300,160,180,20,FRONT,,160,0.3,0.7,,,0,0,,,,,10,,,,,,,,,0,,,7613
+Shrike,ilk_hk_drone,,,,550,75,1000,,200,0,,275,350,300,160,180,20,FRONT,,160,0.3,1.0,,,0,0,,,,,10,,,,,,,,,0,,,7613
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Lilith,ilk_lilith,Frigate,highenergyfocus,6,1700,200,2600,1875,150,35,,140,80,60,45,100,150,OMNI,,100,0.4,0.7,,,10,30,60,50,1,50,10,10000,10,15,180,0.25,4,4,,0.5,2,2,7604
-Tiamat,ilk_tiamat,Destroyer Escort,ilk_bubble_shield,6,2500,300,2900,,250,40,,105,110,90,55,80,250,FRONT,,220,0.35,0.7,,,25,40,50,40,1,40,9,12000,8,20,240,0.25,5,5,,0.5,2,2,7605
+Lilith,ilk_lilith,Frigate,highenergyfocus,6,1700,200,2600,1875,150,40,,140,80,60,45,100,150,OMNI,,100,0.4,0.7,,,10,30,60,50,1,50,10,10000,10,15,180,0.25,4,4,,0.5,2,2,7604
+Tiamat,ilk_tiamat,Destroyer Escort,ilk_bubble_shield,6,2500,300,2900,,250,50,,105,110,90,55,80,250,FRONT,,220,0.35,0.7,,,25,40,50,40,1,40,9,12000,8,20,240,0.25,5,5,,0.5,2,2,7605
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Cimeterre,ilk_cimeterre,Destroyer,ilk_phase_leap,9,4500,550,6000,4167,280,60,,70,50,30,30,45,450,OMNI,,120,0.4,0.6,,,40,80,100,120,2.5,48,9,22000,5,12,330,0.25,11,11,,0.6,2,3,7606
-Foraker,ilk_foraker,Carrier,flarelauncher_active,10,4000,500,3500,3333,200,55,2,50,35,20,20,25,500,OMNI,,100,0.35,0.8,,,50,110,120,110,2,55,8,27000,4,10,300,0.25,9,9,CARRIER,0.5,2,3,7607
-Safir,ilk_safir,Freighter,flarelauncher,3,3500,150,1500,1167,70,30,,75,25,20,15,7,350,OMNI,,120,0.25,0.8,,,20,30,300,100,2,50,9,14000,5,10,240,0.25,3,3,CIVILIAN,0.6,2,3,7608
-Safir B,ilk_safir_converted,Destroyer Escort,ilk_minelayer_he,8,3500,175,3000,2500,150,60,,75,40,20,20,10,350,OMNI,,120,0.25,0.8,,,25,40,120,90,2,45,9,17000,5,15,240,0.25,6,6,,0.6,2,3,7609
+Cimeterre,ilk_cimeterre,Destroyer,ilk_phase_leap,9,5000,600,6000,4167,350,75,,70,50,30,30,45,450,OMNI,,120,0.5,0.8,,,40,80,100,120,2.5,48,9,22000,5,12,330,0.25,10,10,,0.6,2,3,7606
+Foraker,ilk_foraker,Light Carrier,flarelauncher_active,12,4000,500,4000,3333,250,80,2,50,35,20,20,25,500,OMNI,,100,0.4,0.8,,,50,110,120,110,2,55,9,27000,4,10,300,0.25,13,13,CARRIER,0.5,2,3,7607
+Safir,ilk_safir,Freighter,flarelauncher,3,3500,150,1500,1167,70,30,,75,25,20,15,7,350,OMNI,,120,0.5,1.0,,,20,30,300,100,2,50,9,14000,5,10,360,0.25,3,3,CIVILIAN,0.6,2,3,7608
+Safir B,ilk_safir_converted,Destroyer Escort,ilk_minelayer_he,8,3500,175,3000,2500,150,60,,75,40,20,20,10,350,OMNI,,120,0.4,0.8,,,25,40,120,90,2,45,9,17000,5,15,360,0.25,8,8,,0.6,2,3,7609
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Del Azarchel,ilk_del_azarchel,Cruiser,fastmissileracks,17,8500,800,8000,10000,500,140,,55,20,10,12,7,1800,FRONT,,220,0.5,0.7,,,120,190,160,220,6,37,8,50000,3,12,540,0.25,27,27,,0.5,2,3,7610
-Jamaran,ilk_jamaran,Cruiser,ilk_minelayer_he,14,9000,1050,10000,9000,450,140,2,40,20,10,10,6,1700,OMNI,,100,0.4,0.7,,,175,275,450,300,5,60,8,60000,3,10,480,0.25,25,25,"CARRIER, COMBAT",0.5,2,3,7611
+Del Azarchel,ilk_del_azarchel,Cruiser,fastmissileracks,17,8500,1000,9000,10000,400,150,,55,25,12,10,15,1800,FRONT,,220,0.4,0.9,,,120,190,160,220,6,37,8,50000,3,12,540,0.25,30,30,,0.5,2,3,7610
+Jamaran,ilk_jamaran,Cruiser,ilk_minelayer_he,14,9000,1050,10000,9000,450,145,2,40,20,10,10,6,1700,OMNI,,100,0.5,0.9,,,175,275,450,300,5,60,8,60000,3,10,480,0.25,25,25,"CARRIER, COMBAT",0.5,2,3,7611
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Ravana,ilk_ravana,Battlecruiser,maneuveringjets,25,11000,1200,17000,22500,900,215,,50,20,15,7,6,3000,OMNI,,120,0.45,0.6,,,300,400,350,600,20,30,7,180000,2,15,660,0.25,40,40,,0.5,2,4,7612
-Narayana,ilk_narayana,Superdreadnaught,ilk_minelayer_he,29,17000,1500,20000,25000,1000,300,3,30,15,10,7,5,4100,OMNI,,140,0.5,0.8,,,400,1000,400,825,15,55,7,260000,3,18,600,0.25,50,50,"CARRIER, COMBAT",0.6,2,5,7614
+Ravana,ilk_ravana,Battlecruiser,maneuveringjets,25,11000,1200,17000,22500,900,225,,50,20,15,7,6,3000,OMNI,,120,0.5,0.7,,,300,400,350,600,20,30,7,180000,2,15,660,0.25,40,40,,0.5,2,4,7612
+Narayana,ilk_narayana,Superdreadnaught,ilk_minelayer_he,29,17000,1500,20000,25000,1000,315,3,30,15,10,7,5,4100,OMNI,,140,0.5,0.8,,,400,1000,400,825,15,55,7,260000,3,18,600,0.25,50,50,"CARRIER, COMBAT",0.6,2,5,7614
