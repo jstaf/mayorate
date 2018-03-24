@@ -13,25 +13,11 @@ public class PlanetaryAICore extends BaseMarketConditionPlugin {
     
     @Override
     public void apply(String id) {
-        float population = getPopulation(market);
-        
-        market.getDemand(Commodities.FOOD).getDemand().modifyMult(id, FOOD_USAGE_MULT);
-        market.getCommodityData(Commodities.FOOD).getSupply().modifyMult(id, FOOD_PRODUCTION_MULT);
-        
-        market.getDemand(Commodities.FUEL).getDemand().modifyFlat(id, FUEL_USAGE_MULT * population);
-//        market.getDemand(Commodities.METALS).getDemand().modifyFlat(id, METALS_USAGE_MULT * population);
-//        market.getDemand(Commodities.RARE_METALS).getDemand().modifyFlat(id, RARE_METALS_USAGE * population);
-        
+        // TODO: Re-add supply changes without messing up prices.
     }
     
     @Override
     public void unapply(String id) {
-        market.getDemand(Commodities.FOOD).getDemand().unmodify(id);
-        market.getCommodityData(Commodities.FOOD).getSupply().unmodify(id);
-        
-        market.getDemand(Commodities.FUEL).getDemand().unmodify(id);
-//        market.getDemand(Commodities.METALS).getDemand().unmodify(id);
-//        market.getDemand(Commodities.RARE_METALS).getDemand().unmodify(id);
     }
     
 }

@@ -20,24 +20,13 @@ public class Indoctrination extends BaseMarketConditionPlugin {
             
     @Override
     public void apply(String id) {
-        
-        for (CommodityOnMarketAPI com : market.getCommoditiesWithTags(tags)) {
-            com.getSupply().modifyMult(id, INDOCTRINATION_PRODUCTION_MULT);
-        }
-        market.getCommodityData(Commodities.ORGANS).getSupply().modifyMult(id, INDOCTRINATION_ORGANS_MULT);
-
         market.getStability().modifyFlat(id, STABILITY_INDOCTRINATION, "Indoctrination");
+        // TODO: Re-add supply changes without messing up prices.
     }
 
     @Override
     public void unapply(String id) {
-
-        for (CommodityOnMarketAPI com : market.getCommoditiesWithTags(tags)) {
-            com.getSupply().unmodify(id);
-        }
-        market.getCommodityData(Commodities.ORGANS).getSupply().unmodify(id);
-
-        market.getStability().unmodify(id);
+       market.getStability().unmodify(id);
     }
 
 }
