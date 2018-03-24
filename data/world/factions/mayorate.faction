@@ -118,10 +118,7 @@
 			}
 		},
 		"combatFreighterSmall": {
-			"cerberus_d_pirates_Standard": 5,
-			"hound_d_pirates_Standard": 5,
-			"shepherd_Frontier": 10,
-			"cerberus_Standard": 10,
+			"cerberus_Standard": 5,
 			"fallback": {
 				"freighterSmall": 1
 			}
@@ -139,10 +136,8 @@
 			}
 		},
 		"civilianRandom": {
-			"mercury_d_Standard": 10,
-			"hermes_d_Standard": 10,
-			"mercury_Standard": 10,
-			"hermes_Standard": 10,
+			"mercury_Standard": 5,
+			"hermes_Standard": 5,
 			"fallback": {
 				"freighterSmall": 1
 			}
@@ -166,20 +161,19 @@
 			}
 		},
 		"freighterSmall": {
-			"hermes_d_Standard": 10,
-			"hermes_Standard": 10,
+			"hermes_Standard": 2,
 			"fallback": {
 				"freighterMedium": 1
 			}
 		},
 		"freighterMedium": {
-			"ilk_safir_standard": 10,
+			"ilk_safir_standard": 20,
 			"fallback": {
 				"freighterSmall": 2
 			}
 		},
 		"freighterLarge": {
-			"atlas_Standard": 10,
+			"atlas_Standard": 5,
 			"fallback": {
 				"freighterMedium": 2
 			}
