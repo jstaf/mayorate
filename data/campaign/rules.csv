@@ -132,9 +132,9 @@ giveDelAzarchel,GiveHeavy,,"AddShip ""ilk_del_azarchel_artillery""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
 giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_fs""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_pursuit""
+giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_assault""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_elite""
+giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_fs""
 BumpRep $faction.id -0.3",,1:eShips:”Thanks.”,
 giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.2
@@ -145,19 +145,15 @@ AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
 giveStrikeGroupSmallCarrier,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small carrier group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.2
 AddShip ""ilk_lilith_assault""
-AddShip ""ilk_foraker_escort""
-AddShip ""ilk_raad_wing""
-AddShip ""ilk_angha_wing""
-AddShip ""ilk_angha_wing""",,1:eShips:”Thanks.”,
+AddShip ""ilk_tiamat_assault""
+AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 giveStrikeGroupMedium,GiveStrikeGroup,RepIsAtWorst $faction.id COOPERATIVE,"AddText ""A heavy strike group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.3
 AddShip ""ilk_del_azarchel_artillery""
 AddShip ""ilk_safir_standard""
 AddShip ""ilk_tiamat_assault""
 AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_foraker_escort""
-AddShip ""ilk_angha_wing""
-AddShip ""ilk_hk_wing""",,1:eShips:”Thanks.”,
+AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 ,,,,,,
 ############ Improve relations,,,,,,
 whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which faction would you like us to talk to on your behalf?”,,
