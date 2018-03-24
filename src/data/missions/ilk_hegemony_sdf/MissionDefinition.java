@@ -1,4 +1,4 @@
-package data.missions.hegemony_sdf;
+package data.missions.ilk_hegemony_sdf;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;

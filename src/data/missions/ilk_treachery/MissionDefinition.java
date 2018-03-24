@@ -1,4 +1,4 @@
-package data.missions.treachery;
+package data.missions.ilk_treachery;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
