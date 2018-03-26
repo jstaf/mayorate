@@ -3,7 +3,7 @@
 # just so nothing weird happens
 set -eu
 
-MOD=$(basename $(pwd))
+MOD=$(basename "$(pwd)")
 VERSION=$(grep version mod_info.json | grep -oP '\d+(\.\d+)*')
 RELEASE=$MOD-$VERSION
 

@@ -1,19 +1,18 @@
 Mayorate mod changelog - kazi
 
-v1.0.0
+v0.10.0 (Kazi and Blothorn)
+- 0.8a compatibility
+- Added Narayana Battleship.
+- The consul has now been bundled into the standard Mayorate base commander personas.
+- Partial lore rewrite to fit in with 0.8 a bit more.
+- Removed the less pretty interaction images.
+- Extensive revalance, in particular:
+  - Removed most ballistic mounts to encourage using Mayorate weapons.
+  - Added OP to most ships.
+  - Carrier/wing rebalancing.
+- Removed commodity supply changes from custom market conditions to try to avoid
+  destabilizing the economy.
 
--0.8a compatibility
--Added Narayana Superdreadnaught.
--The consul has now been bundled into the standard Mayorate base commander personas.
--Partial lore rewrite to fit in with 0.8 a bit more.
--Removed the less pretty interaction images.
-
-TODO AICore produces AIs
-TODO AICrew allows AI crew
-TODO AI core collection event
-TODO 0.8 changes for carriers/fighters
-TODO finish narayana main gun
-TODO add ramscoop hullmod
 
 v0.9.2
 
