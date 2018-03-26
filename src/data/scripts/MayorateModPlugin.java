@@ -83,10 +83,6 @@ public class MayorateModPlugin extends BaseModPlugin {
     {
         switch (weapon.getId())
         {
-            case "ilk_disruptor":
-                return new PluginPick<AutofireAIPlugin>(new ilk_DisruptorAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
-            case "ilk_disruptor_heavy":
-                return new PluginPick<AutofireAIPlugin>(new ilk_DisruptorAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
             default:
                 return null;
         }
