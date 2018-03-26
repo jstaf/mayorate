@@ -1,5 +1,5 @@
 name,id,designation,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,hints,breakProb,,,number
-Raad,ilk_raad,,,,750,150,1500,,300,0,,200,250,200,90,170,40,NONE,,0,0,0,,,2,2,,,,,9,,,,,,,,,0,,,7602
+Raad,ilk_raad,,flarelauncher_single,,600,125,750,,150,0,,200,250,200,90,170,40,NONE,,0,0,0,,,2,2,,,,,9,,,,,,,,,0,,,7602
 Angha,ilk_angha,,,,600,100,250,,40,0,,180,300,250,100,200,30,NONE,,0,0,0,,,0,0,,,,,10,,,,,,,,,0,,,7603
 Shrike,ilk_hk_drone,,,,550,75,1000,,200,0,,275,350,300,160,180,20,FRONT,,160,0.3,1.0,,,0,0,,,,,10,,,,,,,,,0,,,7613
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
