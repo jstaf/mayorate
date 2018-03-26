@@ -12,41 +12,55 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_DisruptorOnHitEffect implements OnHitEffectPlugin {
 
-    private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
-    private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 200);
+  private static final Color EMP_CORE_COLOR = new Color(255, 255, 255, 255);
+  private static final Color EMP_FRINGE_COLOR = new Color(232, 14, 86, 200);
 
-    public static final float HEAVY_FLUX_DAMAGE = 1500f;
-    public static final float FLUX_DAMAGE = 600f;
+  public static final float HEAVY_FLUX_DAMAGE = 1500f;
+  public static final float FLUX_DAMAGE = 600f;
 
-    float fluxGenerated;
+  float fluxGenerated;
 
-    @Override
-    public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, CombatEngineAPI engine) {
+  @Override
+  public void onHit(
+      DamagingProjectileAPI projectile,
+      CombatEntityAPI target,
+      Vector2f point,
+      boolean shieldHit,
+      CombatEngineAPI engine) {
 
-        for (int i = 1; i < 5; i++) {
-            Global.getCombatEngine().spawnEmpArc(projectile.getSource(), point, target, target, DamageType.ENERGY,
-                    0f, 50f, 300f, null, 12,
-                    EMP_FRINGE_COLOR,
-                    EMP_CORE_COLOR);
-        }
-
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
-            String spec = projectile.getProjectileSpecId();
-            switch (spec) {
-                case "ilk_disruptor_shot":
-                    fluxGenerated = FLUX_DAMAGE;
-                    break;
-                case "ilk_heavy_disruptor_shot":
-                    fluxGenerated = HEAVY_FLUX_DAMAGE;
-                    break;
-            }
-            // be nicer to those unfortunate souls who take this shot on armor
-            if (!shieldHit) {
-                fluxGenerated *= 0.5;
-            }
-            ship.getFluxTracker().increaseFlux(fluxGenerated, true);
-        }
+    for (int i = 1; i < 5; i++) {
+      Global.getCombatEngine()
+          .spawnEmpArc(
+              projectile.getSource(),
+              point,
+              target,
+              target,
+              DamageType.ENERGY,
+              0f,
+              50f,
+              300f,
+              null,
+              12,
+              EMP_FRINGE_COLOR,
+              EMP_CORE_COLOR);
     }
 
+    if (target instanceof ShipAPI) {
+      ShipAPI ship = (ShipAPI) target;
+      String spec = projectile.getProjectileSpecId();
+      switch (spec) {
+        case "ilk_disruptor_shot":
+          fluxGenerated = FLUX_DAMAGE;
+          break;
+        case "ilk_heavy_disruptor_shot":
+          fluxGenerated = HEAVY_FLUX_DAMAGE;
+          break;
+      }
+      // be nicer to those unfortunate souls who take this shot on armor
+      if (!shieldHit) {
+        fluxGenerated *= 0.5;
+      }
+      ship.getFluxTracker().increaseFlux(fluxGenerated, true);
+    }
+  }
 }

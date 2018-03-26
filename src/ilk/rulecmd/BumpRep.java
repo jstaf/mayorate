@@ -11,37 +11,43 @@ import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author Jeff
- */
+/** @author Jeff */
 public class BumpRep extends BaseCommandPlugin {
 
-    @Override
-    public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
+  @Override
+  public boolean execute(
+      String ruleId,
+      InteractionDialogAPI dialog,
+      List<Misc.Token> params,
+      Map<String, MemoryAPI> memoryMap) {
 
-        String faction = params.get(0).getString(memoryMap);
-        float val = Float.parseFloat(params.get(1).getString(memoryMap));
+    String faction = params.get(0).getString(memoryMap);
+    float val = Float.parseFloat(params.get(1).getString(memoryMap));
 
-        FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
+    FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
 
-        player.adjustRelationship(faction, val);
+    player.adjustRelationship(faction, val);
 
-        String text;
-        Color color;
-        if (val > 0) {
-            text = "Relationship with " + Global.getSector().getFaction(faction).getDisplayNameLongWithArticle() +
-                    " increased by " + String.valueOf((int) (val * 100));
-            color = Global.getSettings().getColor("textFriendColor");
-        } else {
-            text = "Relationship with " + Global.getSector().getFaction(faction).getDisplayNameLongWithArticle() +
-                    " decreased by " + String.valueOf((int) (val * 100));
-            color = Global.getSettings().getColor("textEnemyColor");
-        }
-
-        dialog.getTextPanel().addParagraph(text, color);
-
-        return true;
+    String text;
+    Color color;
+    if (val > 0) {
+      text =
+          "Relationship with "
+              + Global.getSector().getFaction(faction).getDisplayNameLongWithArticle()
+              + " increased by "
+              + String.valueOf((int) (val * 100));
+      color = Global.getSettings().getColor("textFriendColor");
+    } else {
+      text =
+          "Relationship with "
+              + Global.getSector().getFaction(faction).getDisplayNameLongWithArticle()
+              + " decreased by "
+              + String.valueOf((int) (val * 100));
+      color = Global.getSettings().getColor("textEnemyColor");
     }
 
+    dialog.getTextPanel().addParagraph(text, color);
+
+    return true;
+  }
 }

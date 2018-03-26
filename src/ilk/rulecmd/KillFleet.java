@@ -12,25 +12,28 @@ import java.util.Map;
 
 public class KillFleet extends BaseCommandPlugin {
 
-    //param1 fleet mem key
-    @Override
-    public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
-        String fleetID = params.get(0).getString(memoryMap);
+  // param1 fleet mem key
+  @Override
+  public boolean execute(
+      String ruleId,
+      InteractionDialogAPI dialog,
+      List<Misc.Token> params,
+      Map<String, MemoryAPI> memoryMap) {
+    String fleetID = params.get(0).getString(memoryMap);
 
-        if (Global.getSector().getEntityById(fleetID) instanceof CampaignFleetAPI) {
-            CampaignFleetAPI fleet = (CampaignFleetAPI) Global.getSector().getEntityById(fleetID);
+    if (Global.getSector().getEntityById(fleetID) instanceof CampaignFleetAPI) {
+      CampaignFleetAPI fleet = (CampaignFleetAPI) Global.getSector().getEntityById(fleetID);
 
-            // nothing personal. 
-            List<FleetMemberAPI> toDestroy = fleet.getFleetData().getMembersListCopy();
-            for (FleetMemberAPI unwittingVictim : toDestroy) {
-                fleet.removeFleetMemberWithDestructionFlash(unwittingVictim);
-            }
-            fleet.despawn();
+      // nothing personal.
+      List<FleetMemberAPI> toDestroy = fleet.getFleetData().getMembersListCopy();
+      for (FleetMemberAPI unwittingVictim : toDestroy) {
+        fleet.removeFleetMemberWithDestructionFlash(unwittingVictim);
+      }
+      fleet.despawn();
 
-            return true;
-        } else {
-            return false;
-        }
+      return true;
+    } else {
+      return false;
     }
-    
+  }
 }

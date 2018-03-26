@@ -17,163 +17,196 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class ilk_PhaseLeap implements ShipSystemStatsScript {
 
-    //balance constants
-    // The base jump distance
-    private static final float LEAP_DISTANCE = 600f;
-    // The minimum distance from other entities at the end of the jump.
-    private static final float MINIMUM_DISTANCE = 50f;
-    // The increment of collision avoidance extensions.
-    private static final float FAIL_DISTANCE = 100f;
-    private static final float IMPACT_DAMAGE = 500f;
-    private static final DamageType IMPACT_DAMAGE_TYPE = DamageType.ENERGY;
+  // balance constants
+  // The base jump distance
+  private static final float LEAP_DISTANCE = 600f;
+  // The minimum distance from other entities at the end of the jump.
+  private static final float MINIMUM_DISTANCE = 50f;
+  // The increment of collision avoidance extensions.
+  private static final float FAIL_DISTANCE = 100f;
+  private static final float IMPACT_DAMAGE = 500f;
+  private static final DamageType IMPACT_DAMAGE_TYPE = DamageType.ENERGY;
 
-    //visual constants
-    private static final String IMPACT_SOUND = "hit_solid";
-    private static final Color EXPLOSION_COLOR = new Color(166, 50, 91);
-    private static final float EXPLOSION_VISUAL_RADIUS = 200f;
+  // visual constants
+  private static final String IMPACT_SOUND = "hit_solid";
+  private static final Color EXPLOSION_COLOR = new Color(166, 50, 91);
+  private static final float EXPLOSION_VISUAL_RADIUS = 200f;
 
-    //don't touch these
-    private boolean isActive = false;
-    private Vector2f startLoc;
-    private boolean within = false;
+  // don't touch these
+  private boolean isActive = false;
+  private Vector2f startLoc;
+  private boolean within = false;
 
-    @Override
-    public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
-        if (!(stats.getEntity() instanceof ShipAPI)) {
-            return;
+  @Override
+  public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
+    if (!(stats.getEntity() instanceof ShipAPI)) {
+      return;
+    }
+
+    ShipAPI ship = (ShipAPI) stats.getEntity();
+
+    if (state == State.IN) {
+      if (!isActive) {
+        isActive = true;
+        // find ship location before teleport
+        startLoc = new Vector2f(ship.getLocation());
+        if (ship.getVelocity().lengthSquared() > 0f) {
+          for (int i = 0; i < 75; i++) {
+            Global.getCombatEngine()
+                .addSmoothParticle(
+                    MathUtils.getRandomPointInCircle(startLoc, 1f * ship.getCollisionRadius()),
+                    (Vector2f)
+                        (new Vector2f(ship.getVelocity()))
+                            .normalise()
+                            .scale(LEAP_DISTANCE * 5f * (float) Math.random()),
+                    (float) Math.random() * 15f + 15f,
+                    (float) Math.random() * 0.2f + 0.8f,
+                    (float) Math.random() * 0.1f + 0.35f,
+                    EXPLOSION_COLOR);
+          }
+        }
+      }
+    }
+    if (state == State.OUT) {
+      if (isActive) {
+        // this ridiculous conversion is needed to make .getfacing() meaningful
+        double direction = Math.toRadians(450 - ship.getFacing());
+        if (direction > Math.PI * 2) {
+          direction -= Math.PI * 2;
         }
 
-        ShipAPI ship = (ShipAPI) stats.getEntity();
+        // calculate jump coordinates
+        final float startLocX = startLoc.getX();
+        final float startLocY = startLoc.getY();
+        float jumpDistance = LEAP_DISTANCE;
+        float endLocX;
+        float endLocY;
+        Vector2f endLoc;
+        // check to see if we end up inside anything...
+        while (true) {
+          endLocX = startLocX + (float) FastTrig.sin(direction) * jumpDistance;
+          endLocY = startLocY + (float) FastTrig.cos(direction) * jumpDistance;
+          endLoc = new Vector2f(endLocX, endLocY);
 
-        if (state == State.IN) {
-            if (!isActive) {
-                isActive = true;
-                //find ship location before teleport
-                startLoc = new Vector2f(ship.getLocation());
-                if (ship.getVelocity().lengthSquared() > 0f) {
-                    for (int i = 0; i < 75; i++) {
-                        Global.getCombatEngine().addSmoothParticle(
-                                MathUtils.getRandomPointInCircle(startLoc, 1f * ship.getCollisionRadius()),
-                                (Vector2f) (new Vector2f(ship.getVelocity())).normalise().scale(LEAP_DISTANCE * 5f * (float) Math.random()),
-                                (float) Math.random() * 15f + 15f,
-                                (float) Math.random() * 0.2f + 0.8f,
-                                (float) Math.random() * 0.1f + 0.35f,
-                                EXPLOSION_COLOR);
-                    }
-                }
+          boolean collides = false;
+          for (CombatEntityAPI inRangeObject :
+              CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
+            if (inRangeObject == ship) {
+              // don't do anything if its the ship activating the system
+              continue;
             }
-        }
-        if (state == State.OUT) {
-            if (isActive) {
-                //this ridiculous conversion is needed to make .getfacing() meaningful
-                double direction = Math.toRadians(450 - ship.getFacing());
-                if (direction > Math.PI * 2) {
-                    direction -= Math.PI * 2;
-                }
 
-                //calculate jump coordinates
-                final float startLocX = startLoc.getX();
-                final float startLocY = startLoc.getY();
-                float jumpDistance = LEAP_DISTANCE;
-                float endLocX;
-                float endLocY;
-                Vector2f endLoc;
-                //check to see if we end up inside anything...
-                while (true) {
-                    endLocX = startLocX + (float) FastTrig.sin(direction) * jumpDistance;
-                    endLocY = startLocY + (float) FastTrig.cos(direction) * jumpDistance;
-                    endLoc = new Vector2f(endLocX, endLocY);
-
-                    boolean collides = false;
-                    for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
-                        if (inRangeObject == ship) {
-                            //don't do anything if its the ship activating the system
-                            continue;
-                        }
-
-                        if (MathUtils.getDistance(inRangeObject, endLoc) <
-                            ship.getCollisionRadius() + MINIMUM_DISTANCE) {
-                            collides = true;
-                            break;
-                        }
-                    }
-                    if (collides) {
-                        jumpDistance += FAIL_DISTANCE;
-                    } else {
-                        break;
-                    }
-                }
-
-                ship.getLocation().set(endLoc);
-                                
-                //teleport and face to target
-                ShipAPI target = ship.getShipTarget();
-                if ((target != null) && (!target.isHulk())) {
-                    Vector2f difference = Vector2f.sub(target.getLocation(), endLoc, null);
-                    double newDirection = Math.atan2(difference.getY(), difference.getX());
-                    newDirection = Math.toDegrees(newDirection);
-                    if (newDirection < 0) {
-                        newDirection += 360;
-                    }
-                    ship.setFacing((float) newDirection);
-                }
-
-                try {
-                    StandardLight light = new StandardLight();
-                    light.setLocation(ship.getLocation());
-                    light.setColor(new Color(255, 121, 117, 255));
-                    light.setSize(500f);
-                    light.setIntensity(2f);
-                    light.fadeOut(0.5f);
-                    LightShader.addLight(light);
-                } catch (Exception e) {
-                    // shaderlib isn't installed
-                }
-
-                //find ship location after teleport
-                for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {
-                    if (inRangeObject == ship) {
-                        //don't do anything if its the ship activating the system
-                        continue;
-                    }
-                    if (inRangeObject.getOwner() == ship.getOwner()) {
-                        //don't do anything to friendlies
-                        continue;
-                    }
-
-                    //find point of impact between start and end location of jump
-                    Vector2f pointOfImpact = CollisionUtils.getCollisionPoint(startLoc, endLoc, inRangeObject);
-                    for (int i = 0; i < 5; i++) {
-                        if (pointOfImpact == null) {
-                            pointOfImpact = CollisionUtils.getCollisionPoint(MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()), MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()), inRangeObject);
-                        } else {
-                            break;
-                        }
-                    }
-
-                    if (pointOfImpact != null) {
-                        //only proceed if getCollisionPoint returned a point of impact
-                        Global.getCombatEngine().spawnExplosion(pointOfImpact, inRangeObject.getVelocity(), EXPLOSION_COLOR, EXPLOSION_VISUAL_RADIUS * 2f, 0.1f);
-                        Global.getCombatEngine().spawnExplosion(pointOfImpact, inRangeObject.getVelocity(), EXPLOSION_COLOR, EXPLOSION_VISUAL_RADIUS, 0.5f);
-                        Global.getSoundPlayer().playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
-                        Global.getCombatEngine().applyDamage(inRangeObject, pointOfImpact, IMPACT_DAMAGE, IMPACT_DAMAGE_TYPE, 0, false, true, ship);
-                    }
-                }
+            if (MathUtils.getDistance(inRangeObject, endLoc)
+                < ship.getCollisionRadius() + MINIMUM_DISTANCE) {
+              collides = true;
+              break;
             }
-            isActive = false;
+          }
+          if (collides) {
+            jumpDistance += FAIL_DISTANCE;
+          } else {
+            break;
+          }
         }
-    }
 
-    @Override
-    public void unapply(MutableShipStatsAPI stats, String id) {
-        //NOTHING. lalaala
-    }
+        ship.getLocation().set(endLoc);
 
-    @Override
-    public StatusData getStatusData(int index, State state, float effectLevel) {
-        if (index == 0) {
-            return new StatusData("ripping through space", false);
+        // teleport and face to target
+        ShipAPI target = ship.getShipTarget();
+        if ((target != null) && (!target.isHulk())) {
+          Vector2f difference = Vector2f.sub(target.getLocation(), endLoc, null);
+          double newDirection = Math.atan2(difference.getY(), difference.getX());
+          newDirection = Math.toDegrees(newDirection);
+          if (newDirection < 0) {
+            newDirection += 360;
+          }
+          ship.setFacing((float) newDirection);
         }
-        return null;
+
+        try {
+          StandardLight light = new StandardLight();
+          light.setLocation(ship.getLocation());
+          light.setColor(new Color(255, 121, 117, 255));
+          light.setSize(500f);
+          light.setIntensity(2f);
+          light.fadeOut(0.5f);
+          LightShader.addLight(light);
+        } catch (Exception e) {
+          // shaderlib isn't installed
+        }
+
+        // find ship location after teleport
+        for (CombatEntityAPI inRangeObject :
+            CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {
+          if (inRangeObject == ship) {
+            // don't do anything if its the ship activating the system
+            continue;
+          }
+          if (inRangeObject.getOwner() == ship.getOwner()) {
+            // don't do anything to friendlies
+            continue;
+          }
+
+          // find point of impact between start and end location of jump
+          Vector2f pointOfImpact =
+              CollisionUtils.getCollisionPoint(startLoc, endLoc, inRangeObject);
+          for (int i = 0; i < 5; i++) {
+            if (pointOfImpact == null) {
+              pointOfImpact =
+                  CollisionUtils.getCollisionPoint(
+                      MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()),
+                      MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()),
+                      inRangeObject);
+            } else {
+              break;
+            }
+          }
+
+          if (pointOfImpact != null) {
+            // only proceed if getCollisionPoint returned a point of impact
+            Global.getCombatEngine()
+                .spawnExplosion(
+                    pointOfImpact,
+                    inRangeObject.getVelocity(),
+                    EXPLOSION_COLOR,
+                    EXPLOSION_VISUAL_RADIUS * 2f,
+                    0.1f);
+            Global.getCombatEngine()
+                .spawnExplosion(
+                    pointOfImpact,
+                    inRangeObject.getVelocity(),
+                    EXPLOSION_COLOR,
+                    EXPLOSION_VISUAL_RADIUS,
+                    0.5f);
+            Global.getSoundPlayer()
+                .playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
+            Global.getCombatEngine()
+                .applyDamage(
+                    inRangeObject,
+                    pointOfImpact,
+                    IMPACT_DAMAGE,
+                    IMPACT_DAMAGE_TYPE,
+                    0,
+                    false,
+                    true,
+                    ship);
+          }
+        }
+      }
+      isActive = false;
     }
+  }
+
+  @Override
+  public void unapply(MutableShipStatsAPI stats, String id) {
+    // NOTHING. lalaala
+  }
+
+  @Override
+  public StatusData getStatusData(int index, State state, float effectLevel) {
+    if (index == 0) {
+      return new StatusData("ripping through space", false);
+    }
+    return null;
+  }
 }

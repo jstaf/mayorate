@@ -8,31 +8,39 @@ import org.apache.log4j.Level;
 
 public class ilk_PathSpawnPoint extends BaseSpawnPoint {
 
-    FactionAPI path;
-    private static final float PATH_SPAWN_CHANCE = 0.5f;
+  FactionAPI path;
+  private static final float PATH_SPAWN_CHANCE = 0.5f;
 
-    public ilk_PathSpawnPoint(SectorAPI sector, LocationAPI location,
-                              float daysInterval, int maxFleets, SectorEntityToken anchor) {
-        super(sector, location, daysInterval, maxFleets, anchor);
-        path = Global.getSector().getFaction(Factions.LUDDIC_PATH);
+  public ilk_PathSpawnPoint(
+      SectorAPI sector,
+      LocationAPI location,
+      float daysInterval,
+      int maxFleets,
+      SectorEntityToken anchor) {
+    super(sector, location, daysInterval, maxFleets, anchor);
+    path = Global.getSector().getFaction(Factions.LUDDIC_PATH);
 
-        Global.getLogger(ilk_PathSpawnPoint.class).setLevel(Level.ALL);
+    Global.getLogger(ilk_PathSpawnPoint.class).setLevel(Level.ALL);
+  }
+
+  @Override
+  protected CampaignFleetAPI spawnFleet() {
+    CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet("luddic_path", "pathFleet", true);
+
+    double rand = 0f;
+    while (rand < PATH_SPAWN_CHANCE) {
+      rand = Math.random();
+      path.pickShipAndAddToFleet("combatSmall", 1f, fleet);
     }
 
-    @Override
-    protected CampaignFleetAPI spawnFleet() {
-        CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet("luddic_path", "pathFleet", true);
+    Global.getLogger(ilk_PathSpawnPoint.class)
+        .log(
+            Level.DEBUG,
+            "Spawned path fleet w/ "
+                + fleet.getFleetData().getMembersListCopy().size()
+                + " members.");
+    getLocation().spawnFleet(getAnchor(), 0, 0, fleet);
 
-        double rand = 0f;
-        while (rand < PATH_SPAWN_CHANCE) {
-            rand = Math.random();
-            path.pickShipAndAddToFleet("combatSmall", 1f, fleet);
-        }
-
-        Global.getLogger(ilk_PathSpawnPoint.class).log(Level.DEBUG, "Spawned path fleet w/ " +
-                fleet.getFleetData().getMembersListCopy().size() + " members.");
-        getLocation().spawnFleet(getAnchor(), 0, 0, fleet);
-
-        return fleet;
-    }
+    return fleet;
+  }
 }

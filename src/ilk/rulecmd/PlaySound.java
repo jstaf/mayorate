@@ -11,12 +11,17 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class PlaySound extends BaseCommandPlugin {
 
-    @Override
-    public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
-        String soundKey = params.get(0).getString(memoryMap);
-        
-        Global.getSoundPlayer().playSound(soundKey, 1f, 1f, Global.getSector().getPlayerFleet().getLocation(), new Vector2f());
-        return true;
-    }
-    
+  @Override
+  public boolean execute(
+      String ruleId,
+      InteractionDialogAPI dialog,
+      List<Misc.Token> params,
+      Map<String, MemoryAPI> memoryMap) {
+    String soundKey = params.get(0).getString(memoryMap);
+
+    Global.getSoundPlayer()
+        .playSound(
+            soundKey, 1f, 1f, Global.getSector().getPlayerFleet().getLocation(), new Vector2f());
+    return true;
+  }
 }
