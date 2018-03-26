@@ -18,8 +18,12 @@ import org.lwjgl.util.vector.Vector2f;
 public class ilk_PhaseLeap implements ShipSystemStatsScript {
 
     //balance constants
+    // The base jump distance
     private static final float LEAP_DISTANCE = 600f;
-    private static final float FAIL_DISTANCE = 400f;
+    // The minimum distance from other entities at the end of the jump.
+    private static final float MINIMUM_DISTANCE = 50f;
+    // The increment of collision avoidance extensions.
+    private static final float FAIL_DISTANCE = 100f;
     private static final float IMPACT_DAMAGE = 500f;
     private static final DamageType IMPACT_DAMAGE_TYPE = DamageType.ENERGY;
 
@@ -68,31 +72,38 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                 }
 
                 //calculate jump coordinates
-                float startLocX = startLoc.getX();
-                float startLocY = startLoc.getY();
-                float endLocX = startLocX + (float) FastTrig.sin(direction) * LEAP_DISTANCE;
-                float endLocY = startLocY + (float) FastTrig.cos(direction) * LEAP_DISTANCE;
-                Vector2f endLoc = new Vector2f(endLocX, endLocY);
+                final float startLocX = startLoc.getX();
+                final float startLocY = startLoc.getY();
+                float jumpDistance = LEAP_DISTANCE;
+                float endLocX;
+                float endLocY;
+                Vector2f endLoc;
+                //check to see if we end up inside anything...
+                while (true) {
+                    endLocX = startLocX + (float) FastTrig.sin(direction) * jumpDistance;
+                    endLocY = startLocY + (float) FastTrig.cos(direction) * jumpDistance;
+                    endLoc = new Vector2f(endLocX, endLocY);
 
-                within = false;
-                //check to see if we end up inside anything... 
-                for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, LEAP_DISTANCE)) {
-                    if (inRangeObject == ship) {
-                        //don't do anything if its the ship activating the system
-                        continue;
+                    boolean collides = false;
+                    for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
+                        if (inRangeObject == ship) {
+                            //don't do anything if its the ship activating the system
+                            continue;
+                        }
+
+                        if (MathUtils.getDistance(inRangeObject, endLoc) <
+                            ship.getCollisionRadius() + MINIMUM_DISTANCE) {
+                            collides = true;
+                            break;
+                        }
                     }
-
-                    if (CollisionUtils.isPointWithinCollisionCircle(endLoc, inRangeObject)) {
-                        //We are about to be inside another object. Recalculate jump coordinates with some extra range.
-                        within = true;
+                    if (collides) {
+                        jumpDistance += FAIL_DISTANCE;
+                    } else {
+                        break;
                     }
                 }
-                if (within) {
-                    endLocX = startLocX + (float) FastTrig.sin(direction) * (LEAP_DISTANCE + FAIL_DISTANCE);
-                    endLocY = startLocY + (float) FastTrig.cos(direction) * (LEAP_DISTANCE + FAIL_DISTANCE);
-                    endLoc.set(endLocX, endLocY);
-                }
-                
+
                 ship.getLocation().set(endLoc);
                                 
                 //teleport and face to target
