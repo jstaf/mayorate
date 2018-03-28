@@ -8,11 +8,9 @@ import com.fs.starfarer.api.combat.*;
 import data.scripts.weapons.ai.ilk_NukeAI;
 import data.scripts.world.mayorateGen;
 import exerelin.campaign.SectorManager;
-import org.apache.log4j.Level;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
-import org.lazywizard.lazylib.LazyLib;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
@@ -32,26 +30,16 @@ public class MayorateModPlugin extends BaseModPlugin {
   /** Initialize ShaderLib, crash game if player is missing dependencies. */
   @Override
   public void onApplicationLoad() {
-    Global.getLogger(MayorateModPlugin.class).setLevel(Level.ERROR);
-
-    try {
-      LazyLib.getVersion();
-    } catch (NoClassDefFoundError e) {
-      e.printStackTrace();
-      Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "LazyLib not found.");
-      throw e;
+    if (!Global.getSettings().getModManager().isModEnabled("lw_lazylib")) {
+      throw new RuntimeException("The Mayorate requires LazyLib.");
+    }
+    if (!Global.getSettings().getModManager().isModEnabled("shaderLib")) {
+      throw new RuntimeException("The Mayorate requires GraphicsLib.");
     }
 
-    try {
-      ShaderLib.init();
-      LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
-      TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
-    } catch (NoClassDefFoundError e) {
-      // shaderlib not installed
-      e.printStackTrace();
-      Global.getLogger(MayorateModPlugin.class).log(Level.ERROR, "ShaderLib not found.");
-      throw e;
-    }
+    ShaderLib.init();
+    LightData.readLightDataCSV("data/lights/ilk_light_data.csv");
+    TextureData.readTextureDataCSVNoOverwrite("data/lights/ilk_texture_data.csv");
   }
 
   @Override
