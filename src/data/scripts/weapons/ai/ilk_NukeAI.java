@@ -106,27 +106,23 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
         .addHitParticle(
             missile.getLocation(), new Vector2f(), 1000f, 1f, 2f, new Color(255, 121, 117, 255));
 
-    try {
-      RippleDistortion shockwave = new RippleDistortion();
-      shockwave.setLocation(missile.getLocation());
-      shockwave.setIntensity(8f);
-      shockwave.setLifetime(1.5f);
-      shockwave.setSize(500f);
-      shockwave.setFrameRate(84f);
-      shockwave.setCurrentFrame(10);
-      shockwave.fadeOutIntensity(1f);
-      DistortionShader.addDistortion(shockwave);
+    RippleDistortion shockwave = new RippleDistortion();
+    shockwave.setLocation(missile.getLocation());
+    shockwave.setIntensity(8f);
+    shockwave.setLifetime(1.5f);
+    shockwave.setSize(500f);
+    shockwave.setFrameRate(84f);
+    shockwave.setCurrentFrame(10);
+    shockwave.fadeOutIntensity(1f);
+    DistortionShader.addDistortion(shockwave);
 
-      StandardLight light = new StandardLight();
-      light.setLocation(missile.getLocation());
-      light.setColor(new Color(255, 121, 117, 255));
-      light.setSize(1500f);
-      light.setIntensity(2f);
-      light.fadeOut(0.5f);
-      LightShader.addLight(light);
-    } catch (Exception e) {
-      // shaderlib not installed
-    }
+    StandardLight light = new StandardLight();
+    light.setLocation(missile.getLocation());
+    light.setColor(new Color(255, 121, 117, 255));
+    light.setSize(1500f);
+    light.setIntensity(2f);
+    light.fadeOut(0.5f);
+    LightShader.addLight(light);
 
     Global.getSoundPlayer()
         .playSound("ilk_nuke_detonate", 1f, 1f, missile.getLocation(), new Vector2f());

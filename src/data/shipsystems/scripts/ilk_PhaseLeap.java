@@ -123,17 +123,13 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
           ship.setFacing((float) newDirection);
         }
 
-        try {
-          StandardLight light = new StandardLight();
-          light.setLocation(ship.getLocation());
-          light.setColor(new Color(255, 121, 117, 255));
-          light.setSize(500f);
-          light.setIntensity(2f);
-          light.fadeOut(0.5f);
-          LightShader.addLight(light);
-        } catch (Exception e) {
-          // shaderlib isn't installed
-        }
+        StandardLight light = new StandardLight();
+        light.setLocation(ship.getLocation());
+        light.setColor(new Color(255, 121, 117, 255));
+        light.setSize(500f);
+        light.setIntensity(2f);
+        light.fadeOut(0.5f);
+        LightShader.addLight(light);
 
         // find ship location after teleport
         for (CombatEntityAPI inRangeObject :
