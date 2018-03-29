@@ -1,11 +1,12 @@
 language: java
-jdk: openjdk7
+# TODO: build on jdk7, check formatting on jdk8.
+jdk: openjdk8
 os: linux
-# The trusty/openjdk7 combination has broken SSL.
-dist: precise
 sudo: required
 
 before_install:
+  - wget https://github.com/google/google-java-format/releases/download/google-java-format-1.5/google-java-format-1.5-all-deps.jar
+  - java -jar google-java-format*.jar --dry-run --set-exit-if-changed $(find src -type f)
   - sudo apt-get install -y p7zip-full
   - cd ..
   - wget http://s3.amazonaws.com/fractalsoftworks/starsector/starsector_linux-0.8.1a-RC8.zip
