@@ -53,6 +53,7 @@ task wrapper(type: Wrapper) {
 dependencies {
     compile files('../GraphicsLib/jars/Graphics.jar')
     compile files('../LazyLib/jars/LazyLib.jar')
+    compile files('../Nexerelin/jars/ExerelinCore.jar')
     // everything in starsector main folder
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         compile fileTree(dir: '../../starsector-core/', include: '*.jar')
