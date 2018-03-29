@@ -1,7 +1,7 @@
 {
 	"specClass":"projectile",
 	"id":"ilk_ramdrive",
-	"type":"ENERGY",
+	"type":"BALLISTIC",
 	"size":"LARGE",
 	"turretSprite":"",
 	"turretGlowSprite":"",
