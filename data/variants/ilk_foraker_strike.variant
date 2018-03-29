@@ -1,7 +1,7 @@
 {
   "displayName": "Strike",
   "fluxCapacitors": 0,
-  "fluxVents": 3,
+  "fluxVents": 7,
   "goalVariant": true,
   "hullId": "ilk_foraker",
   "hullMods": ["expanded_deck_crew"],
@@ -13,9 +13,9 @@
       "weapons": {"WS0005": "ilk_laserhead"}
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0003": "ilk_shotgun"}
+      "weapons": {"WS0003": "ilk_ppc"}
     },
     {
       "autofire": true,
