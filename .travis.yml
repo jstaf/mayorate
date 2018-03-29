@@ -1,0 +1,18 @@
+language: java
+jdk: openjdk7
+os: linux
+# The trusty/openjdk7 combination has broken SSL.
+dist: precise
+sudo: required
+
+before_install:
+  - sudo apt-get install -y p7zip-full
+  - cd ..
+  - wget http://s3.amazonaws.com/fractalsoftworks/starsector/starsector_linux-0.8.1a-RC8.zip
+  - unzip starsector_linux*
+  - mv mayorate starsector/mods
+  - cd starsector/mods/mayorate
+  - util/fetch-deps.sh
+
+script:
+  - ./gradlew build
