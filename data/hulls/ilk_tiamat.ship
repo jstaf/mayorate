@@ -156,7 +156,7 @@
       ],
       "mount": "TURRET",
       "size": "SMALL",
-      "type": "UNIVERSAL"
+      "type": "ENERGY"
     },
     {
       "angle": -40.601295,
@@ -168,7 +168,7 @@
       ],
       "mount": "TURRET",
       "size": "SMALL",
-      "type": "UNIVERSAL"
+      "type": "ENERGY"
     },
     {
       "angle": 180,
