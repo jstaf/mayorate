@@ -13,14 +13,14 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "ilk_disruptor"
+        "WS0003": "ilk_disruptor"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-		"WS0003": "ilk_repeater"
+		"WS0004": "ilk_repeater"
 	  }
     },
     {

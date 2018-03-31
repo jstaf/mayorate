@@ -15,12 +15,12 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0003": "ilk_repeater"}
+      "weapons": {"WS0004": "ilk_repeater"}
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0004": "ilk_graser_light"}
+      "weapons": {"WS0003": "ilk_graser_light"}
     },
     {
       "autofire": true,
