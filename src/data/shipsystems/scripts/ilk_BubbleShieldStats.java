@@ -3,13 +3,13 @@ package data.shipsystems.scripts;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
+import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-public class ilk_BubbleShieldStats implements ShipSystemStatsScript {
+public class ilk_BubbleShieldStats extends BaseShipSystemScript {
 
+  // Instance data
   private boolean start = false;
   private float orig;
-  ShieldAPI shield;
 
   @Override
   public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -17,30 +17,32 @@ public class ilk_BubbleShieldStats implements ShipSystemStatsScript {
       return;
     }
     ShipAPI ship = (ShipAPI) stats.getEntity();
-
-    shield = ship.getShield();
+    ShieldAPI shield = ship.getShield();
 
     if (!start) {
       orig = shield.getArc();
       start = true;
     }
 
-    // Expand shield to 360, fade in shield
-    if (state == State.IN) {
-      shield.setArc(effectLevel * (360 - orig) + orig);
-      stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
-      stats.getShieldUnfoldRateMult().modifyMult(id, 3f);
-    }
-
-    if (state == State.ACTIVE) {
-      shield.setArc(360f);
-      stats.getShieldDamageTakenMult().modifyMult(id, 0f);
-    }
-
-    // Close shield
-    if (state == State.OUT) {
-      shield.setArc(effectLevel * (360 - orig) + orig);
-      stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
+    switch (state) {
+      case IN:
+        // Expand shield to 360, fade in shield
+        shield.setArc(effectLevel * (360 - orig) + orig);
+        stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
+        stats.getShieldUnfoldRateMult().modifyMult(id, 3f);
+        break;
+      case ACTIVE:
+        shield.setArc(360f);
+        stats.getShieldDamageTakenMult().modifyMult(id, 0f);
+        break;
+      case OUT:
+        // Close shield
+        shield.setArc(effectLevel * (360 - orig) + orig);
+        stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
+        break;
+      case COOLDOWN:
+      case IDLE:
+        // Nothing to do.
     }
 
     if ((effectLevel == 0) && (start)) {
@@ -52,6 +54,11 @@ public class ilk_BubbleShieldStats implements ShipSystemStatsScript {
   public void unapply(MutableShipStatsAPI stats, String id) {
     stats.getShieldDamageTakenMult().unmodify(id);
     stats.getShieldUnfoldRateMult().unmodify(id);
+    if (!(stats.getEntity() instanceof ShipAPI)) {
+      return;
+    }
+    ShipAPI ship = (ShipAPI) stats.getEntity();
+    ShieldAPI shield = ship.getShield();
     if (shield != null) {
       shield.setArc(orig);
     }

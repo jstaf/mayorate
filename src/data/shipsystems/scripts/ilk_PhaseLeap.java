@@ -5,7 +5,7 @@ import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
+import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import java.awt.Color;
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
@@ -15,7 +15,7 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-public class ilk_PhaseLeap implements ShipSystemStatsScript {
+public class ilk_PhaseLeap extends BaseShipSystemScript {
 
   // balance constants
   // The base jump distance
@@ -32,21 +32,22 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
   private static final Color EXPLOSION_COLOR = new Color(166, 50, 91);
   private static final float EXPLOSION_VISUAL_RADIUS = 200f;
 
-  // don't touch these
+  // Instance data
   private boolean isActive = false;
   private Vector2f startLoc;
-  private boolean within = false;
 
   @Override
   public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
     if (!(stats.getEntity() instanceof ShipAPI)) {
       return;
     }
-
     ShipAPI ship = (ShipAPI) stats.getEntity();
 
-    if (state == State.IN) {
-      if (!isActive) {
+    switch (state) {
+      case IN:
+        if (isActive) {
+          return;
+        }
         isActive = true;
         // find ship location before teleport
         startLoc = new Vector2f(ship.getLocation());
@@ -65,50 +66,12 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
                     EXPLOSION_COLOR);
           }
         }
-      }
-    }
-    if (state == State.OUT) {
-      if (isActive) {
-        // this ridiculous conversion is needed to make .getfacing() meaningful
-        double direction = Math.toRadians(450 - ship.getFacing());
-        if (direction > Math.PI * 2) {
-          direction -= Math.PI * 2;
+        break;
+      case OUT:
+        if (!isActive) {
+          return;
         }
-
-        // calculate jump coordinates
-        final float startLocX = startLoc.getX();
-        final float startLocY = startLoc.getY();
-        float jumpDistance = LEAP_DISTANCE;
-        float endLocX;
-        float endLocY;
-        Vector2f endLoc;
-        // check to see if we end up inside anything...
-        while (true) {
-          endLocX = startLocX + (float) FastTrig.sin(direction) * jumpDistance;
-          endLocY = startLocY + (float) FastTrig.cos(direction) * jumpDistance;
-          endLoc = new Vector2f(endLocX, endLocY);
-
-          boolean collides = false;
-          for (CombatEntityAPI inRangeObject :
-              CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
-            if (inRangeObject == ship) {
-              // don't do anything if its the ship activating the system
-              continue;
-            }
-
-            if (MathUtils.getDistance(inRangeObject, endLoc)
-                < ship.getCollisionRadius() + MINIMUM_DISTANCE) {
-              collides = true;
-              break;
-            }
-          }
-          if (collides) {
-            jumpDistance += FAIL_DISTANCE;
-          } else {
-            break;
-          }
-        }
-
+        Vector2f endLoc = CalculateEndLocation(ship);
         ship.getLocation().set(endLoc);
 
         // teleport and face to target
@@ -121,6 +84,7 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
             newDirection += 360;
           }
           ship.setFacing((float) newDirection);
+          ship.setAngularVelocity(0.0f);
         }
 
         StandardLight light = new StandardLight();
@@ -131,71 +95,15 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
         light.fadeOut(0.5f);
         LightShader.addLight(light);
 
-        // find ship location after teleport
-        for (CombatEntityAPI inRangeObject :
-            CombatUtils.getEntitiesWithinRange(ship.getLocation(), LEAP_DISTANCE)) {
-          if (inRangeObject == ship) {
-            // don't do anything if its the ship activating the system
-            continue;
-          }
-          if (inRangeObject.getOwner() == ship.getOwner()) {
-            // don't do anything to friendlies
-            continue;
-          }
+        ApplyJumpDamage(ship);
 
-          // find point of impact between start and end location of jump
-          Vector2f pointOfImpact =
-              CollisionUtils.getCollisionPoint(startLoc, endLoc, inRangeObject);
-          for (int i = 0; i < 5; i++) {
-            if (pointOfImpact == null) {
-              pointOfImpact =
-                  CollisionUtils.getCollisionPoint(
-                      MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()),
-                      MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()),
-                      inRangeObject);
-            } else {
-              break;
-            }
-          }
-
-          if (pointOfImpact != null) {
-            // only proceed if getCollisionPoint returned a point of impact
-            Global.getCombatEngine()
-                .spawnExplosion(
-                    pointOfImpact,
-                    inRangeObject.getVelocity(),
-                    EXPLOSION_COLOR,
-                    EXPLOSION_VISUAL_RADIUS * 2f,
-                    0.1f);
-            Global.getCombatEngine()
-                .spawnExplosion(
-                    pointOfImpact,
-                    inRangeObject.getVelocity(),
-                    EXPLOSION_COLOR,
-                    EXPLOSION_VISUAL_RADIUS,
-                    0.5f);
-            Global.getSoundPlayer()
-                .playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
-            Global.getCombatEngine()
-                .applyDamage(
-                    inRangeObject,
-                    pointOfImpact,
-                    IMPACT_DAMAGE,
-                    IMPACT_DAMAGE_TYPE,
-                    0,
-                    false,
-                    true,
-                    ship);
-          }
-        }
-      }
-      isActive = false;
+        isActive = false;
+        break;
+      case ACTIVE:
+      case COOLDOWN:
+      case IDLE:
+        // Nothing to do.
     }
-  }
-
-  @Override
-  public void unapply(MutableShipStatsAPI stats, String id) {
-    // NOTHING. lalaala
   }
 
   @Override
@@ -204,5 +112,105 @@ public class ilk_PhaseLeap implements ShipSystemStatsScript {
       return new StatusData("ripping through space", false);
     }
     return null;
+  }
+
+  private Vector2f CalculateEndLocation(ShipAPI ship) {
+    // this ridiculous conversion is needed to make .getfacing() meaningful
+    double direction = Math.toRadians(450 - ship.getFacing());
+    if (direction > Math.PI * 2) {
+      direction -= Math.PI * 2;
+    }
+
+    // calculate jump coordinates
+    final float startLocX = startLoc.getX();
+    final float startLocY = startLoc.getY();
+    float jumpDistance = LEAP_DISTANCE;
+    float endLocX;
+    float endLocY;
+    Vector2f endLoc;
+    // check to see if we end up inside anything...
+    while (true) {
+      endLocX = startLocX + (float) FastTrig.sin(direction) * jumpDistance;
+      endLocY = startLocY + (float) FastTrig.cos(direction) * jumpDistance;
+      endLoc = new Vector2f(endLocX, endLocY);
+
+      boolean collides = false;
+      for (CombatEntityAPI inRangeObject :
+          CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
+        if (inRangeObject == ship) {
+          // don't do anything if its the ship activating the system
+          continue;
+        }
+
+        if (MathUtils.isWithinRange(
+            inRangeObject, endLoc, ship.getCollisionRadius() + MINIMUM_DISTANCE)) {
+          collides = true;
+          break;
+        }
+      }
+      if (collides) {
+        jumpDistance += FAIL_DISTANCE;
+      } else {
+        break;
+      }
+    }
+
+    return endLoc;
+  }
+
+  // Applies damage to non-friendlies between startLoc and the ship's location.
+  private void ApplyJumpDamage(ShipAPI ship) {
+    final Vector2f endLoc = ship.getLocation();
+    final float distance = MathUtils.getDistance(startLoc, endLoc);
+    for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(startLoc, distance)) {
+      // Don't do anything to friendlies
+      if (inRangeObject.getOwner() == ship.getOwner()) {
+        continue;
+      }
+
+      // Find point of impact between start and end location of jump
+      Vector2f pointOfImpact = CollisionUtils.getCollisionPoint(startLoc, endLoc, inRangeObject);
+      for (int i = 0; i < 5; i++) {
+        if (pointOfImpact == null) {
+          pointOfImpact =
+              CollisionUtils.getCollisionPoint(
+                  MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()),
+                  MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()),
+                  inRangeObject);
+        } else {
+          break;
+        }
+      }
+
+      if (pointOfImpact != null) {
+        // Only proceed if getCollisionPoint returned a point of impact
+        Global.getCombatEngine()
+            .spawnExplosion(
+                pointOfImpact,
+                inRangeObject.getVelocity(),
+                EXPLOSION_COLOR,
+                EXPLOSION_VISUAL_RADIUS * 2f,
+                0.1f);
+        Global.getCombatEngine()
+            .spawnExplosion(
+                pointOfImpact,
+                inRangeObject.getVelocity(),
+                EXPLOSION_COLOR,
+                EXPLOSION_VISUAL_RADIUS,
+                0.5f);
+        Global.getSoundPlayer()
+            .playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
+        Global.getCombatEngine()
+            .applyDamage(
+                inRangeObject,
+                pointOfImpact,
+                IMPACT_DAMAGE,
+                IMPACT_DAMAGE_TYPE,
+                0,
+                false,
+                true,
+                ship);
+      }
+    }
   }
 }
