@@ -18,11 +18,6 @@ public class IsPlayerLevelAbove extends BaseCommandPlugin {
       Map<String, MemoryAPI> map) {
     int level = Integer.parseInt(list.get(0).getString(map));
     int playerLevel = Global.getSector().getPlayerFleet().getCommanderStats().getLevel();
-
-    if (playerLevel >= level) {
-      return true;
-    } else {
-      return false;
-    }
+    return playerLevel >= level;
   }
 }

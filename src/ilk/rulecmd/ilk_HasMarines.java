@@ -18,11 +18,6 @@ public class ilk_HasMarines extends BaseCommandPlugin {
       Map<String, MemoryAPI> map) {
     int numberNeeded = Integer.parseInt(list.get(0).getString(map));
     int marines = Global.getSector().getPlayerFleet().getCargo().getMarines();
-
-    if (marines >= numberNeeded) {
-      return true;
-    } else {
-      return false;
-    }
+    return marines >= numberNeeded;
   }
 }

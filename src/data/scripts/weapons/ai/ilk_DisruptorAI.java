@@ -208,11 +208,7 @@ public class ilk_DisruptorAI implements AutofireAIPlugin {
     float facing = shield.getFacing();
     float arc = shield.getActiveArc();
     float firingSolution = VectorUtils.getAngle(enemy.getLocation(), ship.getLocation());
-    if ((facing + arc > firingSolution) && (facing - arc < firingSolution)) {
-      return true;
-    } else {
-      return false;
-    }
+    return (facing + arc > firingSolution) && (facing - arc < firingSolution);
   }
 
   @Override
