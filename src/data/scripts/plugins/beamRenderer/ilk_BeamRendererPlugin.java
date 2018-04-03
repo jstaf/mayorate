@@ -16,7 +16,7 @@ import org.lwjgl.util.vector.Vector2f;
  * Draw arbitrary beam sprites wherever you need them and fade them out. Has none of the drawbacks
  * of the old code (static beams, one-time damage).
  *
- * @author Tartiflette and Deathfly (complete and TOTAL rewrite by kazi)
+ * @author Tartiflette and Deathfly (complete and TOTAL rewrite by kazi, updates by Blothorn)
  */
 public class ilk_BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
 

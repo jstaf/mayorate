@@ -6,7 +6,7 @@ Graser,ilk_graser,2,,7000,900,1200,,,,15,20,,,,ENERGY,,1750,0,0.4,0.6,4,0,0,0,0,
 Light Graser,ilk_graser_light,0,,600,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7705
 Graser PD,ilk_graser_pd,0,,600,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7706
 Grav Driver,ilk_hvy_driver,3,,12000,900,,250,,3000,10,20,16,0.75,4,KINETIC,250,,,0.6,2,0.15,0,10,2,20,,1500,,,100,,7707
-Laserhead LRM Launcher,ilk_laserhead,2,,2000,10000,,500,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
+Laserhead LRM Launcher,ilk_laserhead,2,,2000,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
 Tornado AM Battery,ilk_nuke_large,3,,10000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,7709
 Phoenix II Rocket Launcher,ilk_phoenix,1,,350,800,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,7710
 PPC,ilk_ppc,1,,800,500,,50,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,7711
@@ -20,7 +20,6 @@ Pulse Repeater,ilk_repeater,1,,0,600,,150,,0,0,0,10,1,,ENERGY,150,,,0.25,1,,0,10
 Thermal Lance,ilk_thermal_lance,3,,0,600,375,,,,0,0,,,,HIGH_EXPLOSIVE,,475,0.05,0.1,,,0,0,0,0,24000,,,,,"SYSTEM, SHOW_IN_CODEX",7734
 Tracer Rocket Launcher,ilk_tracer_angha,,1,0,1200,,300,,,0,0,8,,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,2.5,100,"SYSTEM, GUIDED_POOR, STRIKE, USE_VS_FRIGATES",7735
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-laserhead_helper,ilk_laserhead_shot_clone,2,,0,300,,150,,,15,0,,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,2200,,,,SYSTEM,7750
 nuke_damage,ilk_nuke_damage,1,,0,400,,200,200,,15,0,,,,HIGH_EXPLOSIVE,0,,,3,1,0.1,0,0,0,30,,700,,,,SYSTEM,7751
 nuke_primaryDetonationDamage,ilk_nuke_primaryDet,,1,0,400,,300,,,15,0,,,,FRAGMENTATION,0,,,3,1,0.1,0,0,0,30,,700,,,,SYSTEM,7752
 belial_helper,ilk_shotgun_shot_clone,2,,0,550,,65,,,15,0,,,,ENERGY,0,,,3,1,0.1,0,0,0,30,,800,,,,SYSTEM,7753

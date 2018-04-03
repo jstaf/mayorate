@@ -72,10 +72,10 @@ public class ilk_ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
                     fireLoc,
                     700f,
                     proj.getFacing(),
-                    1000f,
+                    proj.getDamageAmount(),
                     DamageType.ENERGY,
-                    0f,
-                    0.7f,
+                    proj.getEmpAmount(),
+                    0.5f,
                     0.1f,
                     0.2f, // duration, in, out
                     "beams",

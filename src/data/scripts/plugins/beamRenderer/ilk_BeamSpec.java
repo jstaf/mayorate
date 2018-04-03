@@ -1,25 +1,36 @@
 package data.scripts.plugins.beamRenderer;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.combat.CollisionClass;
+import com.fs.starfarer.api.combat.CombatAsteroidAPI;
+import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import data.scripts.util.ilk_CollisionUtilsEX;
-import java.awt.*;
+import data.scripts.util.ilk_DamageUtils;
+import java.awt.Color;
+import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
+import org.lazywizard.lazylib.combat.DefenseType;
+import org.lazywizard.lazylib.combat.DefenseUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 /** Created by Jeff on 2015-08-09. */
 public class ilk_BeamSpec {
 
+  private static final Logger logger = Global.getLogger(ilk_BeamSpec.class);
+
   // initialization variables
   CombatEngineAPI engine;
   ShipAPI source;
-  float damage;
+  float dps;
   DamageType type;
-  float empDamage;
+  float empDps;
   float duration;
   float fadeOut;
   float fadeIn;
@@ -33,7 +44,7 @@ public class ilk_BeamSpec {
   // dynamic variables calculated by update method
   private float interval;
   private float delta;
-  private static final float RECALC_INTERVAL = 0.125f;
+  private static final float RECALC_INTERVAL = 0.1f;
 
   // renderer variables
   Vector2f startLoc;
@@ -49,25 +60,26 @@ public class ilk_BeamSpec {
       Vector2f startLocSet,
       float rangeSet,
       float aimSet,
-      float damageAmt,
+      float damageTotal,
       DamageType damageType,
-      float empDamageAmt,
+      float empDamageTotal,
       float time,
-      float fadeInSet,
-      float fadeOutSet,
+      float fadeInTime,
+      float fadeOutTime,
       String spriteKey,
       String spriteName,
       float wide,
       Color colorSet) {
+    final float effectiveTime = time + 0.5f * (fadeInTime + fadeOutTime);
     engine = combatEngineAPI;
     source = setSource;
     startLoc = startLocSet;
-    damage = damageAmt;
+    dps = damageTotal / effectiveTime;
     type = damageType;
-    empDamage = empDamageAmt;
+    empDps = empDamageTotal / effectiveTime;
     duration = time;
-    fadeOut = fadeOutSet;
-    fadeIn = fadeInSet;
+    fadeOut = fadeOutTime;
+    fadeIn = fadeInTime;
     range = rangeSet;
     aim = aimSet;
     width = wide;
@@ -84,7 +96,7 @@ public class ilk_BeamSpec {
   }
 
   /**
-   * Recalculate damage and hit location based on updated time since last frame
+   * Recalculate dps and hit location based on updated time since last frame
    *
    * @param amount delta time
    */
@@ -117,21 +129,28 @@ public class ilk_BeamSpec {
       calcImpactPoint();
     }
 
-    // recalc damage if we've hit something
+    // recalc dps if we've hit something
     if (target != null) {
-      float currDamage = damage * amount * intensity;
-      float currEmp = empDamage * amount * intensity;
+      float currDamage = dps * amount * intensity;
+      float currEmp = empDps * amount * intensity;
 
       if (target instanceof ShipAPI) {
         ShipAPI ship = (ShipAPI) target;
-        // check for modded ships with damage reduction
-        // if (ship.getHullSpec().getBaseHullId().startsWith("exigency_") ) currDamage /= 2;
-
-        // check for beam damage reduction
+        // check for beam dps reduction
         currDamage *= ship.getMutableStats().getBeamDamageTakenMult().getModifiedValue();
+        // Adjust armor damage to compensate for the weaker hitstrength compared to vanilla beams.
+        if (DefenseUtils.getDefenseAtPoint(ship, hitLoc) == DefenseType.ARMOR) {
+          currDamage =
+              ilk_DamageUtils.getDamageAtHitStrength(
+                  currDamage,
+                  type,
+                  dps * intensity / 2.0f,
+                  DefenseUtils.getArmorValue(ship, hitLoc));
+        }
 
-        // check for emp damage reduction
+        // check for emp dps reduction
         currEmp *= ship.getMutableStats().getEmpDamageTakenMult().getModifiedValue();
+        // TODO: apply other damage modifiers.
       }
       // DEAL DE DAMAGE!
       engine.applyDamage(target, hitLoc, currDamage, type, currEmp, false, true, source);
