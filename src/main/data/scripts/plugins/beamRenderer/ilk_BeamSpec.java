@@ -16,8 +16,6 @@ import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
-import org.lazywizard.lazylib.combat.DefenseType;
-import org.lazywizard.lazylib.combat.DefenseUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 /** Created by Jeff on 2015-08-09. */
@@ -136,24 +134,21 @@ public class ilk_BeamSpec {
 
       if (target instanceof ShipAPI) {
         ShipAPI ship = (ShipAPI) target;
-        // check for beam dps reduction
+        // Check for beam dps reduction--this is not taken into account by applyDamage because it
+        // does not know this is a beam.
         currDamage *= ship.getMutableStats().getBeamDamageTakenMult().getModifiedValue();
-        // Adjust armor damage to compensate for the weaker hitstrength compared to vanilla beams.
-        if (DefenseUtils.getDefenseAtPoint(ship, hitLoc) == DefenseType.ARMOR) {
-          currDamage =
-              ilk_DamageUtils.getDamageAtHitStrength(
-                  currDamage,
-                  type,
-                  dps * intensity / 2.0f,
-                  DefenseUtils.getArmorValue(ship, hitLoc));
-        }
-
-        // check for emp dps reduction
-        currEmp *= ship.getMutableStats().getEmpDamageTakenMult().getModifiedValue();
-        // TODO: apply other damage modifiers.
       }
-      // DEAL DE DAMAGE!
-      engine.applyDamage(target, hitLoc, currDamage, type, currEmp, false, true, source);
+      ilk_DamageUtils.applyDamageAtHitStrength(
+          engine,
+          target,
+          hitLoc,
+          currDamage,
+          0.5f * dps * intensity,
+          type,
+          currEmp,
+          false,
+          true,
+          source);
     }
   }
 
