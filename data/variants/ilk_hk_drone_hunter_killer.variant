@@ -3,7 +3,7 @@
   "fluxCapacitors": 0,
   "fluxVents": 0,
   "hullId": "ilk_hk_drone",
-  "hullMods": [],
+  "hullMods": ["ilk_InterceptionOptimization"],
   "variantId": "ilk_hk_drone_hunter_killer",
   "weaponGroups": [
     {
