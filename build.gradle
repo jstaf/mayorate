@@ -1,9 +1,14 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
+repositories {
+    mavenCentral()
+}
+
 apply plugin: 'java'
 
 // project level config
-sourceSets.main.java.srcDir 'src'
+sourceSets.main.java.srcDir 'src/main'
+sourceSets.test.java.srcDir 'src/test'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
@@ -60,4 +65,8 @@ dependencies {
     } else {
         compile fileTree(dir: '../../', include: '*.jar')
     }
+
+    // Test only
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.google.truth:truth:0.30'
 }
