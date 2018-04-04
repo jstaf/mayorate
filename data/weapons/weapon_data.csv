@@ -8,10 +8,10 @@ Graser PD,ilk_graser_pd,0,,600,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2
 Grav Driver,ilk_hvy_driver,3,,12000,900,,250,,3000,10,20,16,0.75,4,KINETIC,250,,,0.6,2,0.15,0,10,2,20,,1500,,,100,,7707
 Laserhead LRM Launcher,ilk_laserhead,2,,2000,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
 Tornado AM Battery,ilk_nuke_large,3,,10000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,7709
-Phoenix II Rocket Launcher,ilk_phoenix,1,,350,800,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,7710
+Phoenix II Rocket Launcher,ilk_phoenix,1,,350,1400,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,7710
 PPC,ilk_ppc,1,,800,500,,50,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,7711
 Belial PPC,ilk_shotgun,2,,1500,600,,1080,,,15,13,50,,,ENERGY,800,,,3,1,,0,0,0,0,,800,,,,,7712
-Windstalker MRM,ilk_windstalker,1,,250,1250,,100,,50,10,5,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,7713
+Windstalker SRM,ilk_windstalker,1,,250,1250,,100,,50,10,5,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,7713
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Grav Cannon,ilk_driver,2,,0,1000,,500,,,0,0,,,,KINETIC,650,,,3,,,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",7730
 Pulse Gun,ilk_pulse_gun,3,,0,700,,175,,,0,0,4,1,,KINETIC,150,,0,0.2,,,5,15,3,10,,800,,,,"SYSTEM, SHOW_IN_CODEX",7731
