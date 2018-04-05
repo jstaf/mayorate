@@ -1,7 +1,7 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,hints,number
 Disruptor,ilk_disruptor,2,,2000,600,,600,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,"FIRE_WHEN_INEFFICIENT",7701
 Heavy Disruptor,ilk_disruptor_heavy,3,,6000,800,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,"FIRE_WHEN_INEFFICIENT",7702
-Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3250,,,8,,,5,15,10,30,,300,,,,,7703
+Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3750,,,8,,,5,15,10,30,,300,,,,,7703
 Graser,ilk_graser,2,,7000,900,1200,,,,15,20,,,,ENERGY,,1750,0,0.4,0.6,4,0,0,0,0,24000,,,,,,7704
 Light Graser,ilk_graser_light,0,,600,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7705
 Graser PD,ilk_graser_pd,0,,600,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7706

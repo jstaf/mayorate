@@ -111,6 +111,7 @@
 		},
 		"combatCapital": {
 			"ilk_ravana_assault": 10,
+			"ilk_ravana_strike": 10,
 			"ilk_ravana_cs": 5,
 			"ilk_narayana_fs": 5,
 			"fallback": {
