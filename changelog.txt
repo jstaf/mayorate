@@ -4,6 +4,8 @@ v0.10.1
 - Balance updates:
   - Shrike effective shield HP and dissipation from 1000/200 to 400/90; armor
     from 75 to 25.
+  - del Azarchel shipsystem changed to Missile Autoforge to reduce burst damage;
+    shield efficiency from 0.9 to 1.0.
 
 v0.10.0 (Kazi and Blothorn)
 - 0.8a compatibility
