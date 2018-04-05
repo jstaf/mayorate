@@ -171,7 +171,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "SYNERGY"
     },
     {
       "angle": -0,
@@ -183,7 +183,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "SYNERGY"
     }
   ],
   "width": 130

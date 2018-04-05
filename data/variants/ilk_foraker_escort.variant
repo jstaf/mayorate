@@ -1,45 +1,38 @@
 {
   "displayName": "Escort",
-  "fluxCapacitors": 7,
-  "fluxVents": 6,
-  "goalVariant": True,
+  "fluxCapacitors": 0,
+  "fluxVents": 2,
+  "goalVariant": true,
   "hullId": "ilk_foraker",
-  "hullMods": [
-  ],
+  "hullMods": ["expanded_deck_crew"],
   "variantId": "ilk_foraker_escort",
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS0003": "heavyac"
-      }
+      "mode": "LINKED",
+      "weapons": {"WS0005": "ilk_laserhead"}
     },
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {
-        "WS0005": "ilk_laserhead"
-      }
+      "weapons": {"WS0003": "ilk_shotgun"}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0001": "ilk_graser_light"}
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ilk_graser_light",
-        "WS0002": "ilk_graser_light"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
+        "WS0002": "ilk_graser_pd",
         "WS0004": "ilk_graser_pd"
       }
     }
   ],
   "wings": [
-      "ilk_hk_wing",
-      "ilk_hk_wing"
+    "ilk_hk_wing",
+    "ilk_hk_wing"
   ]
 }

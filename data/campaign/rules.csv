@@ -122,7 +122,7 @@ giveFrigateLilith,GiveFrigate,,"AddShip ""ilk_lilith_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
 giveFrigateTiamat,GiveFrigate,,"AddShip ""ilk_tiamat_assault""
 BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_strike""
+giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_cs""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
 giveDestroyerSafirB,GiveDestroyer,,"AddShip ""ilk_safir_converted_support""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
@@ -130,11 +130,11 @@ giveDestroyerForaker,GiveDestroyer,,"AddShip ""ilk_foraker_escort""
 BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
 giveDelAzarchel,GiveHeavy,,"AddShip ""ilk_del_azarchel_artillery""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_support""
+giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_fs""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_pursuit""
+giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_assault""
 BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_elite""
+giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_fs""
 BumpRep $faction.id -0.3",,1:eShips:”Thanks.”,
 giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.2
@@ -145,19 +145,15 @@ AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
 giveStrikeGroupSmallCarrier,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small carrier group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.2
 AddShip ""ilk_lilith_assault""
-AddShip ""ilk_foraker_escort""
-AddShip ""ilk_raad_wing""
-AddShip ""ilk_angha_wing""
-AddShip ""ilk_angha_wing""",,1:eShips:”Thanks.”,
+AddShip ""ilk_tiamat_assault""
+AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 giveStrikeGroupMedium,GiveStrikeGroup,RepIsAtWorst $faction.id COOPERATIVE,"AddText ""A heavy strike group has been placed under your command"" textFriendColor
 BumpRep $faction.id -0.3
 AddShip ""ilk_del_azarchel_artillery""
 AddShip ""ilk_safir_standard""
 AddShip ""ilk_tiamat_assault""
 AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_foraker_escort""
-AddShip ""ilk_angha_wing""
-AddShip ""ilk_hk_wing""",,1:eShips:”Thanks.”,
+AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 ,,,,,,
 ############ Improve relations,,,,,,
 whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which faction would you like us to talk to on your behalf?”,,
@@ -187,16 +183,18 @@ discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was th
 3:name:”What's up with the name 'Mayorate'?”
 3:aiOops:”So I, uh, might have killed a few AIs earlier...”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,“Ilkhanna was actually a rather unremarkable colony back during the Domain. A terraforming station. A small shipyard and autofactory. Insignificant mineral resources. Nothing of note.,"1:domCollapse:”What happened?”
-2:domCollapse:”Then the Domain collapsed.”",
-discussCollapse,DialogOptionSelected,$option == domCollapse,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,,
+discussOrigins,DialogOptionSelected,$option == origins,,“Ilkhanna was actually a rather unremarkable colony back during the Domain. A terraforming station. A small shipyard and autofactory. Insignificant mineral resources. Nothing of note.,"1:domCollapse1:”What happened?”
+2:domCollapse2:”Then the Domain collapsed.”",
+discussCollapse1,DialogOptionSelected,$option == domCollapse1,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,"1:embMayorateQuiet:“I see.”",
+discussCollapse2,DialogOptionSelected,$option == domCollapse2,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,"1:embMayorateQuiet:“I see.”",
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
+discussGoals,DialogOptionSelected,$option == goals,,“The Mayor keeps her own council on that.”,"1:embMayorateQuiet:“I see.”",
 ,,,,,,
-discussName,DialogOptionSelected,$option == name,,“The colonial mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
+discussName,DialogOptionSelected,$option == name,,“The Colonial Mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
 2:loveYouLongTime:”That’s a long time.”",
 discussElections,DialogOptionSelected,$option == elections,,“Don’t be silly. The Mayorate survives because of good decisions – not popular ones.”,1:mayorDies:”But what happens if the Mayor dies?”,
 discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She won’t.”,1:embMayorateQuiet:”Let’s talk about something else.”,

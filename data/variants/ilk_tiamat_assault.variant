@@ -1,18 +1,12 @@
 {
   "displayName": "Assault",
   "fluxCapacitors": 8,
-  "fluxVents": 0,
+  "fluxVents": 8,
+  "goalVariant": true,
   "hullId": "ilk_tiamat",
-  "hullMods": [],
+  "hullMods": ["targetingunit"],
   "variantId": "ilk_tiamat_assault",
   "weaponGroups": [
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0007": "ilk_pulse_gun"
-      }
-    },
     {
       "autofire": false,
       "mode": "ALTERNATING",
@@ -23,10 +17,17 @@
     },
     {
       "autofire": true,
-      "mode": "ALTERNATING",
+      "mode": "LINKED",
       "weapons": {
-        "WS0003": "ilk_ppc",
-        "WS0004": "ilk_ppc"
+        "WS0007": "ilk_pulse_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ilk_graser_light",
+        "WS0004": "ilk_graser_light"
       }
     },
     {

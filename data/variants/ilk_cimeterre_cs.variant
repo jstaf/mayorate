@@ -1,0 +1,34 @@
+{
+  "displayName": "Close Support",
+  "fluxCapacitors": 12,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "ilk_cimeterre",
+  "hullMods": ["targetingunit"],
+  "variantId": "ilk_cimeterre_cs",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {"WS0001": "ilk_thermal_lance"}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0006": "ilk_windstalker"}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+          "WS0002": "ilk_disruptor",
+          "WS0003": "ilk_disruptor"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0004": "ilk_graser_pd"}
+    }
+  ]
+}

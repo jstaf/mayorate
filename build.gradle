@@ -1,15 +1,20 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
+repositories {
+    mavenCentral()
+}
+
 apply plugin: 'java'
 
 // project level config
-sourceSets.main.java.srcDir 'src'
+sourceSets.main.java.srcDir 'src/main'
+sourceSets.test.java.srcDir 'src/test'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 task fetchDeps(type: Exec) {
-	description 'Fetch and install LazyLib and GraphicsLib before compilation.'
-	commandLine 'sh', 'util/fetch-deps.sh'
+    description 'Fetch and install LazyLib and GraphicsLib before compilation.'
+    commandLine 'sh', 'util/fetch-deps.sh'
 }
 compileJava.dependsOn fetchDeps
 
@@ -23,8 +28,8 @@ build {
 }
 
 task run(type: Exec) {
-	description 'Run Starsector'
-	dependsOn build
+    description 'Run Starsector'
+    dependsOn build
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         workingDir '../../starsector-core'
         commandLine 'cmd', '/c', 'start', 'starsector.bat'
@@ -35,28 +40,33 @@ task run(type: Exec) {
 }
 
 task release(type: Exec) {
-	description 'Create releaseable zip file.'
-	commandLine 'sh', 'util/create-release.sh'
+    description 'Create releaseable zip file.'
+    commandLine 'sh', 'util/create-release.sh'
 }
 
 // nuke everything and start over
 clean {
-	delete fileTree('.') { include '*.jar' }
+    delete fileTree('.') { include '*.jar' }
 }
 
 task wrapper(type: Wrapper) {
-	description 'Create a new Gradle wrapper.'
-    gradleVersion = '3.2.1' 
+    description 'Create a new Gradle wrapper.'
+    gradleVersion = '3.2.1'
 }
 
-// compile time dependencies for most mods 
+// compile time dependencies for most mods
 dependencies {
     compile files('../GraphicsLib/jars/Graphics.jar')
     compile files('../LazyLib/jars/LazyLib.jar')
+    compile files('../Nexerelin/jars/ExerelinCore.jar')
     // everything in starsector main folder
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         compile fileTree(dir: '../../starsector-core/', include: '*.jar')
     } else {
         compile fileTree(dir: '../../', include: '*.jar')
     }
+
+    // Test only
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.google.truth:truth:0.30'
 }

@@ -433,7 +433,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "ENERGY"
     },
     {
       "angle": -30.963757,
@@ -445,7 +445,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "ENERGY"
     },
     {
       "angle": 30.963757,
@@ -457,7 +457,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "SYNERGY"
     },
     {
       "angle": -30.963757,
@@ -469,7 +469,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "UNIVERSAL"
+      "type": "SYNERGY"
     },
     {
       "angle": 180,
@@ -481,7 +481,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "BALLISTIC"
+      "type": "ENERGY"
     },
     {
       "angle": 131.633545,
@@ -517,7 +517,7 @@
       ],
       "mount": "TURRET",
       "size": "MEDIUM",
-      "type": "HYBRID"
+      "type": "ENERGY"
     },
     {
       "angle": 65.224861,

@@ -35,7 +35,7 @@
 					"splitRange":250,
 					"minTimeToSplit":1,
 					"numShots":1,
-					"damage":100,
+					"damage":850,
 					"damageType":ENERGY,
 					"hitpoints":200,
 					"arc":0,
