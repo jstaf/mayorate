@@ -3,8 +3,8 @@
 	"name":"The Mayorate",
 	"author":"kazi",
 	"version":"0.10.0",
-	"description":"<< Requires LazyLib >> The Mayorate adds... the Mayorate (and all of their associated stuff).",
-    "gameVersion":"0.8a",
+	"description":"<< Requires LazyLib and GraphicsLib >> The Mayorate adds... the Mayorate (and all of their associated stuff).",
+    "gameVersion":"0.8.1a",
 	"modPlugin":"data.scripts.MayorateModPlugin",
 	"jars": ["mayorate.jar"]
 }
