@@ -1,5 +1,10 @@
 Mayorate mod changelog - kazi
 
+v0.10.1
+- Balance updates:
+  - Shrike effective shield HP and dissipation from 1000/200 to 400/90; armor
+    from 75 to 25.
+
 v0.10.0 (Kazi and Blothorn)
 - 0.8a compatibility
 - Added Narayana Battleship. It will likely get a better builtin weapon later.
@@ -7,7 +12,7 @@ v0.10.0 (Kazi and Blothorn)
   personas.
 - Partial lore rewrite to fit in with 0.8 a bit more.
 - Removed the less pretty interaction images.
-- Extensive revalance, in particular:
+- Extensive rebalance, in particular:
   - Removed most ballistic mounts to encourage using Mayorate weapons.
   - Added OP to most ships.
   - Carrier/wing rebalancing.
