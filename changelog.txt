@@ -2,8 +2,9 @@ Mayorate mod changelog - kazi
 
 v0.10.0 (Kazi and Blothorn)
 - 0.8a compatibility
-- Added Narayana Battleship.
-- The consul has now been bundled into the standard Mayorate base commander personas.
+- Added Narayana Battleship. It will likely get a better builtin weapon later.
+- The consul has now been bundled into the standard Mayorate base commander
+  personas.
 - Partial lore rewrite to fit in with 0.8 a bit more.
 - Removed the less pretty interaction images.
 - Extensive revalance, in particular:
@@ -12,6 +13,9 @@ v0.10.0 (Kazi and Blothorn)
   - Carrier/wing rebalancing.
 - Removed commodity supply changes from custom market conditions to try to avoid
   destabilizing the economy.
+- Fixed the Laserhead LRM's and (mostly) the grasers' damage against armor.
+- Fixed a bug allowing the Cimiterre's phase leap to jump on top of other ships,
+  generally leaving the ship in a bad situation.
 
 
 v0.9.2
