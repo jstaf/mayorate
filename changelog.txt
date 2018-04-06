@@ -7,6 +7,10 @@ v0.10.2
 - Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
   conservative about firing at shields, mitigating the Cimeterre's perennial
   flux problems.
+- Added the Fighter Coprocessing system for the Foraker. This buffs a number of
+  fighter stats (mainly weapon handling and agility, with only a slight raw
+  damage buff) but has a significant continuous flux cost and debuffs the
+  corresponding stats on the carrier--be careful using it when engaged!
 
 v0.10.1
 Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and
