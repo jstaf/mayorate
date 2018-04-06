@@ -1,15 +1,19 @@
 package data.shipsystems.scripts;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+import org.apache.log4j.Logger;
 
 public class ilk_BubbleShieldStats extends BaseShipSystemScript {
 
+  private static Logger logger = Global.getLogger(ilk_BubbleShieldStats.class);
+
   // Instance data
   private boolean start = false;
-  private float orig;
+  private float orig = -1.0f; // Initialize to an impossible number so we can detect initialization.
 
   @Override
   public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -54,7 +58,7 @@ public class ilk_BubbleShieldStats extends BaseShipSystemScript {
   public void unapply(MutableShipStatsAPI stats, String id) {
     stats.getShieldDamageTakenMult().unmodify(id);
     stats.getShieldUnfoldRateMult().unmodify(id);
-    if (!(stats.getEntity() instanceof ShipAPI)) {
+    if (orig < 0 || !(stats.getEntity() instanceof ShipAPI)) {
       return;
     }
     ShipAPI ship = (ShipAPI) stats.getEntity();

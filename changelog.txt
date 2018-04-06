@@ -10,6 +10,7 @@ and advice.
     shield efficiency from 0.9 to 1.0.
   - Reduced/reoriented several geometrically-implausible turret arcs.
 - The Mayorate now buys AI cores (placeholder for a better interaction).
+- Fixed a bug preventing the Tiamat from using shields.
 
 v0.10.0 (Kazi and Blothorn)
 - 0.8a compatibility
