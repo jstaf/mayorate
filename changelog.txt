@@ -1,6 +1,8 @@
 Mayorate mod changelog - kazi
 
 v0.10.2
+- Balance updates:
+  - Changed most costs to be closer in line with vanilla.
 - Added tags to weapon_data.
 
 v0.10.1
