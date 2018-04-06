@@ -9,6 +9,8 @@ and advice.
   - del Azarchel shipsystem changed to Missile Autoforge to reduce burst damage;
     shield efficiency from 0.9 to 1.0.
   - Reduced/reoriented several geometrically-implausible turret arcs.
+  - Buffed the Graser--range from 900 to 1000, burst damage from 880 to 1920,
+    dps from ~200 to 320, efficiency reduced a hair.
 - The Mayorate now buys AI cores (placeholder for a better interaction).
 - Fixed a bug preventing the Tiamat from using shields.
 
