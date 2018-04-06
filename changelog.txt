@@ -8,6 +8,7 @@ and advice.
     from 75 to 25.
   - del Azarchel shipsystem changed to Missile Autoforge to reduce burst damage;
     shield efficiency from 0.9 to 1.0.
+  - Reduced/reoriented several geometrically-implausible turret arcs.
 - The Mayorate now buys AI cores (placeholder for a better interaction).
 
 v0.10.0 (Kazi and Blothorn)

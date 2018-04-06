@@ -152,6 +152,7 @@
   "builtInWeapons": {
     "WS0021": "ilk_ramdrive"
   },
+  "builtInWings": [],
   "center": [
     150,
     190
@@ -376,7 +377,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": 80.134193,
+      "angle": 94,
       "arc": 232.014511,
       "id": "WS0003",
       "locations": [
@@ -388,7 +389,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": -80.134193,
+      "angle": -94,
       "arc": 232.014511,
       "id": "WS0004",
       "locations": [
@@ -424,8 +425,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 30.963757,
-      "arc": 258.967743,
+      "angle": 69.5,
+      "arc": 228,
       "id": "WS0009",
       "locations": [
         -11.5,
@@ -436,8 +437,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -30.963757,
-      "arc": 258.967743,
+      "angle": -69.5,
+      "arc": 228,
       "id": "WS0010",
       "locations": [
         -11.5,
@@ -448,8 +449,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 30.963757,
-      "arc": 258.967743,
+      "angle": 86,
+      "arc": 224,
       "id": "WS0011",
       "locations": [
         -35.5,
@@ -460,8 +461,8 @@
       "type": "SYNERGY"
     },
     {
-      "angle": -30.963757,
-      "arc": 258.967743,
+      "angle": -86,
+      "arc": 224,
       "id": "WS0012",
       "locations": [
         -35.5,
@@ -520,8 +521,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 65.224861,
-      "arc": 360,
+      "angle": 12,
+      "arc": 240,
       "id": "WS0015",
       "locations": [
         108,

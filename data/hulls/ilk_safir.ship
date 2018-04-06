@@ -69,6 +69,7 @@
     -79.5,
     5.5
   ],
+  "builtInWings": [],
   "center": [
     65,
     95.5
@@ -139,7 +140,7 @@
   "weaponSlots": [
     {
       "angle": 0,
-      "arc": 360,
+      "arc": 270,
       "id": "WS0003",
       "locations": [
         25,
