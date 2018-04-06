@@ -4,6 +4,9 @@ v0.10.2
 - Balance updates:
   - Changed most costs to be closer in line with vanilla.
 - Added tags to weapon_data.
+- Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
+  conservative about firing at shields, mitigating the Cimeterre's perennial
+  flux problems.
 
 v0.10.1
 Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and

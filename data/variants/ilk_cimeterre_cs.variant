@@ -10,12 +10,12 @@
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {"WS0001": "ilk_thermal_lance"}
+      "weapons": {"WS0006": "ilk_windstalker"}
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0006": "ilk_windstalker"}
+      "weapons": {"WS0001": "ilk_thermal_lance"}
     },
     {
       "autofire": true,

@@ -3,9 +3,11 @@ package data.scripts;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
-import com.fs.starfarer.api.campaign.CampaignPlugin;
+import com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority;
 import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.combat.AutofireAIPlugin;
 import data.scripts.weapons.ai.ilk_NukeAI;
+import data.scripts.weapons.ai.ilk_ThermalLanceAutofirePlugin;
 import data.scripts.world.mayorateGen;
 import exerelin.campaign.SectorManager;
 import org.dark.shaders.light.LightData;
@@ -13,6 +15,9 @@ import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
 
 public class MayorateModPlugin extends BaseModPlugin {
+
+  private static final String NUKE_ID = "ilk_aoe_mirv";
+  private static final String THERMAL_LANCE_ID = "ilk_thermal_lance";
 
   private static boolean isExerelin;
 
@@ -47,14 +52,12 @@ public class MayorateModPlugin extends BaseModPlugin {
     initMayorate();
   }
 
-  public static final String NUKE_ID = "ilk_aoe_mirv";
-
   @Override
   public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
     switch (missile.getProjectileSpecId()) {
       case NUKE_ID:
         return new PluginPick<MissileAIPlugin>(
-            new ilk_NukeAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
+            new ilk_NukeAI(missile, launchingShip), PickPriority.HIGHEST);
       default:
         return null;
     }
@@ -63,6 +66,9 @@ public class MayorateModPlugin extends BaseModPlugin {
   @Override
   public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
     switch (weapon.getId()) {
+      case THERMAL_LANCE_ID:
+        return new PluginPick<AutofireAIPlugin>(
+            new ilk_ThermalLanceAutofirePlugin(weapon), PickPriority.MOD_SET);
       default:
         return null;
     }
