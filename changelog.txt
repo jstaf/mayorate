@@ -1,5 +1,8 @@
 Mayorate mod changelog - kazi
 
+v0.10.2
+- Added tags to weapon_data.
+
 v0.10.1
 Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and
 advice.
