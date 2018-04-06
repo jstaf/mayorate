@@ -1,8 +1,8 @@
 Mayorate mod changelog - kazi
 
 v0.10.1
-Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for valuable feedback
-and advice.
+Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and
+advice.
 - Balance updates:
   - Shrike effective shield HP and dissipation from 1000/200 to 400/90; armor
     from 75 to 25.
