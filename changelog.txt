@@ -3,6 +3,7 @@ Mayorate mod changelog - kazi
 v0.10.2
 - Balance updates:
   - Changed most costs to be closer in line with vanilla.
+  - Changed a few weapon/wing tiers.
 - Added tags to weapon_data.
 - Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
   conservative about firing at shields, mitigating the Cimeterre's perennial
