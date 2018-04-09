@@ -1,0 +1,5 @@
+{
+  # Controls the log level of Mayorate scripts. Unless you are trying to debug
+  # Mayorate code, you should not need to change this.
+  "logLevel": "WARN",
+}
