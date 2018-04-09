@@ -3,6 +3,6 @@
   "type": "STAT_MOD",
   "aiType": "CUSTOM",
   "aiScript": "data.shipsystems.scripts.ai.ilk_FighterCoprocessingAi",
-  "statsScript": "data.shipsystems.scripts.ilk_FighterCoprocessing",
+  "statsScript": "data.shipsystems.scripts.ilk_FighterCoprocessingStats",
   "useSound": "system_targeting_feed"
 }

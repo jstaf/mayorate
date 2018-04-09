@@ -11,9 +11,9 @@ import java.util.EnumSet;
 import java.util.List;
 import org.apache.log4j.Logger;
 
-public class ilk_FighterCoprocessing extends BaseShipSystemScript {
+public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
 
-  private static Logger logger = Global.getLogger(ilk_FighterCoprocessing.class);
+  private static Logger logger = Global.getLogger(ilk_FighterCoprocessingStats.class);
 
   // Balance constants
   private static final float DAMAGE_MULT = 1.1f;

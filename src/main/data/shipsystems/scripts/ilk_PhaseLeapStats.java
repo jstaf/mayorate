@@ -15,7 +15,7 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-public class ilk_PhaseLeap extends BaseShipSystemScript {
+public class ilk_PhaseLeapStats extends BaseShipSystemScript {
 
   // balance constants
   // The base jump distance
@@ -71,7 +71,7 @@ public class ilk_PhaseLeap extends BaseShipSystemScript {
         if (!isActive) {
           return;
         }
-        Vector2f endLoc = CalculateEndLocation(ship);
+        Vector2f endLoc = calculateEndLocation(ship);
         ship.getLocation().set(endLoc);
 
         // teleport and face to target
@@ -95,7 +95,7 @@ public class ilk_PhaseLeap extends BaseShipSystemScript {
         light.fadeOut(0.5f);
         LightShader.addLight(light);
 
-        ApplyJumpDamage(ship);
+        applyJumpDamage(ship);
 
         isActive = false;
         break;
@@ -114,7 +114,7 @@ public class ilk_PhaseLeap extends BaseShipSystemScript {
     return null;
   }
 
-  private Vector2f CalculateEndLocation(ShipAPI ship) {
+  private Vector2f calculateEndLocation(ShipAPI ship) {
     // this ridiculous conversion is needed to make .getfacing() meaningful
     double direction = Math.toRadians(450 - ship.getFacing());
     if (direction > Math.PI * 2) {
@@ -159,7 +159,7 @@ public class ilk_PhaseLeap extends BaseShipSystemScript {
   }
 
   // Applies damage to non-friendlies between startLoc and the ship's location.
-  private void ApplyJumpDamage(ShipAPI ship) {
+  private void applyJumpDamage(ShipAPI ship) {
     final Vector2f endLoc = ship.getLocation();
     final float distance = MathUtils.getDistance(startLoc, endLoc);
     for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(startLoc, distance)) {
