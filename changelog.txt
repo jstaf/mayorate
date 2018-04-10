@@ -11,6 +11,7 @@ v0.10.2
       repairs as well as CR recovery.
     - Increased AI efficiency to 25%.
     - Reduced cost to 4/8/12/20.
+  - Increased Ravana OP from 225 to 245.
 - Added tags to weapon_data.
 - Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
   conservative about firing at shields, mitigating the Cimeterre's perennial
