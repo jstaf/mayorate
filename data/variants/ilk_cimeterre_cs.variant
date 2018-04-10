@@ -1,10 +1,13 @@
 {
   "displayName": "Close Support",
-  "fluxCapacitors": 12,
+  "fluxCapacitors": 4,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "ilk_cimeterre",
-  "hullMods": ["targetingunit"],
+  "hullMods": [
+    "targetingunit",
+    "ilk_AICrew",
+  ],
   "variantId": "ilk_cimeterre_cs",
   "weaponGroups": [
     {

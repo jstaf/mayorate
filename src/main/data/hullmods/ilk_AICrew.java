@@ -7,7 +7,8 @@ import com.fs.starfarer.api.combat.ShipAPI;
 public class ilk_AICrew extends BaseHullMod {
 
   public static final float PERCENT_AI_CREW = 0.5f;
-  public static final float AI_EFFICIENCY = 0.05f;
+  public static final float AI_EFFICIENCY = 0.25f;
+  public static final float AI_REPAIR_EFFICIENCY = 0.5f;
 
   @Override
   public void applyEffectsBeforeShipCreation(
@@ -26,7 +27,15 @@ public class ilk_AICrew extends BaseHullMod {
     stats.getTurnAcceleration().modifyMult(id, 1f + AI_EFFICIENCY);
 
     // logistical penalties
-    stats.getRepairRatePercentPerDay().modifyMult(id, PERCENT_AI_CREW);
+    stats
+        .getCombatEngineRepairTimeMult()
+        .modifyMult(id, 1.0f - AI_REPAIR_EFFICIENCY * PERCENT_AI_CREW);
+    stats
+        .getCombatWeaponRepairTimeMult()
+        .modifyMult(id, 1.0f - AI_REPAIR_EFFICIENCY * PERCENT_AI_CREW);
+    stats
+        .getRepairRatePercentPerDay()
+        .modifyMult(id, 1.0f - AI_REPAIR_EFFICIENCY * PERCENT_AI_CREW);
   }
 
   @Override
@@ -37,7 +46,7 @@ public class ilk_AICrew extends BaseHullMod {
       case 1:
         return "" + (int) (AI_EFFICIENCY * 100f);
       case 2:
-        return "" + (int) (PERCENT_AI_CREW * 100f);
+        return "" + (int) (AI_REPAIR_EFFICIENCY * PERCENT_AI_CREW * 100f);
       default:
         return null;
     }
