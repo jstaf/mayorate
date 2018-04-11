@@ -1,11 +1,5 @@
 {
 	"music":{
-		"music_campaign":[
-			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
-			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5},
-			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6},
-			{"file":"campaign_music_part_2_v28.ogg","source":"sounds/music/music.bin","volume":0.6}
-		],
 		"mayorate_neutral":[
 			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.30}
 		],
@@ -31,7 +25,7 @@
 	"bubble_shield_loop":[
 		{"file":"sounds/ilk/fx/bubble_shield_loop.ogg","pitch":1,"volume":0.65}
 	],
-	
+
 	"ilk_uhvy_driver_scream":[
 			{"file":"sounds/ilk/fx/uhvy_driver_fire.ogg","pitch":1,"volume":0.4}
 	],
