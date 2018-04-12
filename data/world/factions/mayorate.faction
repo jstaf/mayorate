@@ -54,8 +54,7 @@
 	"custom": {
 		"offersCommissions": true,
 		"engagesInHostilities": true,
-		"buysAICores": true,
-		"AICoreValueMult": 1.25,
+		"AICoreValueMult": 1,
 		"AICoreRepMult": 2.5,
 		"buysSurveyData": true
 	},

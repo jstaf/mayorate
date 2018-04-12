@@ -25,6 +25,8 @@ import org.json.JSONObject;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
+  public static final String ID = "mayorate";
+
   private static final String SETTINGS_FILE = "mayorate_settings.json";
 
   private static final String NUKE_ID = "ilk_aoe_mirv";

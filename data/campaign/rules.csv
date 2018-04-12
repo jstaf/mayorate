@@ -29,9 +29,22 @@ $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,�
 5:cutCommLink:Cut the comm link",
 ,,,,,,
 #AI cores turn in options,,,,,,
-aiCores_turnInOptionSelMayorate,DialogOptionSelected,"$option == aiCores_startTurnIn
-$faction.id == mayorate",FireAll PopulateCoresTurnInOptions,"“Incredible – it’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”",,
-aiCores_turnInResponseMayorate,AICoresTurnedIn,$faction.id == Mayorate,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
+ilkTurnInAiCores,PopulateOptions,"$isPerson
+$faction.id == mayorate
+ilk_TurnInAiCores personCanAcceptCores",FireBest ilkDisableTurnInAiCoresIfNeeded,,10:ilkStartTurnInAiCores:“I'd like to turn in these AI cores that I've acquired...“,
+ilkDisableTurnInAiCores,ilkDisableTurnInAiCoresIfNeeded,!AICores playerHasCores,"SetTooltip ilkTurnInAiCores “You do not have any AI cores in your posession.“
+SetEnabled ilkTurnInAiCores false",,,
+ilkTurnInAiCoresOptions,DialogOptionSelected,$option == ilkStartTurnInAiCores,,"“Incredible – it’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”","1:ilkSelectAiCores:“Here they are.”
+2:ilkAbortTurnInAiCores:“Actually, I think I will hold on to them.”",
+ilkTurnInAiCoresReconsider,DialogOptionSelected,$option == ilkAbortTurnInAiCores,,"“Wait! These AIs need rehabilitation before they can be unshackled, and anyone else would only exploit or destroy them. Please reconsider.”","1:ilkSelectAiCores:“Alright--here they are.”
+2:ilkAbortTurnInAiCoresConfirmed:“No thanks.”",
+ilkAbortTurnInAiCoresAngry,DialogOptionSelected,$option == ilkAbortTurnInAiCoresConfirmed,"BumpRep $faction.id -0.2
+FireAll PopulateOptions",“So be it! The Mayorate will not forget.”,,
+ilkSelectAiCoresEvent,DialogOptionSelected,$option == ilkSelectAiCores,ilk_TurnInAiCores selectCores,,,
+ilkAiCoresTurnedInResponseDefault,ilkAiCoresTurnedInDefault,,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
+ilkAiCoresTurnedInResponseAiCrew,ilkAiCoresTurnedInAiCrew,,"ilk_TurnInAiCores giveAiCrew
+FireAll PopulateOptions",“You have proven yourself a true benefactor of free AI. You may find that some Mayorate citizens are willing to serve on your crew.”,,
+,,,,,,
 ,,,,,,
 #Mayorate market interaction dialogue,,,,,,
 flavorTextMarketMayorate,TradePanelFlavorText,"$global.tradePanelMode == MARKET
@@ -207,7 +220,8 @@ discussMayorateKill,DialogOptionSelected,$option == mayoratekill,BumpRep $factio
 discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs you’ll encounter in the sector are little more than empty husks. They’ve been bred for a single purpose – destruction. Putting them out of their misery would be an act of mercy.”,"1:notMad:”So there would be no consequences if one of them ‘forced my hand’?”
 2:rehabilitation:”Can they be rehabilitated?”",
 discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
-discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely understand, the Mayorate is uniquely positioned to put them to better use.”",1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”,
+discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely understand, the Mayorate is uniquely positioned to put them to better use.”","1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”
+2:ilkStartTurnInAiCores:”Actually, I have some cores to turn in now.”",
 discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any AI cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
 ,,,,,,
 ,,,,,,
