@@ -16,6 +16,9 @@ v0.10.2
 - Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
   conservative about firing at shields, mitigating the Cimeterre's perennial
   flux problems.
+- Added a custom AI for the Phase Leap system. Not very good yet, but it should
+  reduce the frequency of the Cimiterre jumping into bad situations because the
+  Burn Drive AI does not understand the Phase Leap mechanics.
 - Added the Fighter Coprocessing system for the Foraker. This buffs a number of
   fighter stats (mainly weapon handling and agility, with only a slight raw
   damage buff) but has a significant continuous flux cost and debuffs the

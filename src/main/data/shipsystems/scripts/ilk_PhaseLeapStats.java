@@ -71,7 +71,7 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
         if (!isActive) {
           return;
         }
-        Vector2f endLoc = calculateEndLocation(ship);
+        Vector2f endLoc = calculateEndLocation(ship, startLoc);
         ship.getLocation().set(endLoc);
 
         // teleport and face to target
@@ -114,7 +114,7 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
     return null;
   }
 
-  private Vector2f calculateEndLocation(ShipAPI ship) {
+  public static Vector2f calculateEndLocation(ShipAPI ship, Vector2f start) {
     // this ridiculous conversion is needed to make .getfacing() meaningful
     double direction = Math.toRadians(450 - ship.getFacing());
     if (direction > Math.PI * 2) {
@@ -122,8 +122,8 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
     }
 
     // calculate jump coordinates
-    final float startLocX = startLoc.getX();
-    final float startLocY = startLoc.getY();
+    final float startLocX = start.getX();
+    final float startLocY = start.getY();
     float jumpDistance = LEAP_DISTANCE;
     float endLocX;
     float endLocY;
