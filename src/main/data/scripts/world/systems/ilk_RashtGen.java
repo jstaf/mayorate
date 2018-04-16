@@ -15,7 +15,6 @@ import data.scripts.world.utils.ilk_BountySpawner;
 import data.scripts.world.utils.ilk_CommissionEffects;
 import data.scripts.world.utils.ilk_PathSpawnPoint;
 import java.awt.Color;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ilk_RashtGen implements SectorGeneratorPlugin {
@@ -124,26 +123,24 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     SystemUtils.addMarketplace(
         MAYORATE_FACTION,
         ilk1,
-        new ArrayList<>(Arrays.asList(ilk_station)),
+        Arrays.asList(ilk_station),
         "Ilkhanna",
         6,
-        new ArrayList<>(
-            Arrays.asList(
-                "ai_core",
-                Conditions.HEADQUARTERS,
-                Conditions.MILITARY_BASE,
-                Conditions.ORBITAL_STATION,
-                Conditions.AUTOFAC_HEAVY_INDUSTRY,
-                Conditions.ORE_REFINING_COMPLEX,
-                Conditions.ORE_REFINING_COMPLEX,
-                Conditions.ARID,
-                Conditions.POPULATION_6)),
-        new ArrayList<>(
-            Arrays.asList(
-                Submarkets.GENERIC_MILITARY,
-                Submarkets.SUBMARKET_BLACK,
-                Submarkets.SUBMARKET_OPEN,
-                Submarkets.SUBMARKET_STORAGE)),
+        Arrays.asList(
+            "ai_core",
+            Conditions.HEADQUARTERS,
+            Conditions.MILITARY_BASE,
+            Conditions.ORBITAL_STATION,
+            Conditions.AUTOFAC_HEAVY_INDUSTRY,
+            Conditions.ORE_REFINING_COMPLEX,
+            Conditions.ORE_REFINING_COMPLEX,
+            Conditions.ARID,
+            Conditions.POPULATION_6),
+        Arrays.asList(
+            Submarkets.GENERIC_MILITARY,
+            Submarkets.SUBMARKET_BLACK,
+            Submarkets.SUBMARKET_OPEN,
+            Submarkets.SUBMARKET_STORAGE),
         0.3f);
 
     SystemUtils.addMarketplace(
@@ -152,18 +149,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         null,
         "Inir",
         3,
-        new ArrayList<>(
-            Arrays.asList(
-                "ai_core",
-                "indoctrination",
-                Conditions.ANTIMATTER_FUEL_PRODUCTION,
-                Conditions.ORE_COMPLEX,
-                Conditions.POPULATION_4)),
-        new ArrayList<>(
-            Arrays.asList(
-                Submarkets.SUBMARKET_BLACK,
-                Submarkets.SUBMARKET_OPEN,
-                Submarkets.SUBMARKET_STORAGE)),
+        Arrays.asList(
+            "ai_core",
+            "indoctrination",
+            Conditions.ANTIMATTER_FUEL_PRODUCTION,
+            Conditions.ORE_COMPLEX,
+            Conditions.POPULATION_4),
+        Arrays.asList(
+            Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE),
         0.3f);
 
     SystemUtils.addMarketplace(
@@ -172,19 +165,17 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         null,
         "Sindral",
         4,
-        new ArrayList<>(
-            Arrays.asList(
-                Conditions.MILITARY_BASE,
-                Conditions.SHIPBREAKING_CENTER,
-                Conditions.ORGANIZED_CRIME,
-                Conditions.ICE,
-                Conditions.POPULATION_4)),
-        new ArrayList<>(
-            Arrays.asList(
-                Submarkets.SUBMARKET_BLACK,
-                Submarkets.SUBMARKET_OPEN,
-                Submarkets.SUBMARKET_STORAGE,
-                Submarkets.GENERIC_MILITARY)),
+        Arrays.asList(
+            Conditions.MILITARY_BASE,
+            Conditions.SHIPBREAKING_CENTER,
+            Conditions.ORGANIZED_CRIME,
+            Conditions.ICE,
+            Conditions.POPULATION_4),
+        Arrays.asList(
+            Submarkets.SUBMARKET_BLACK,
+            Submarkets.SUBMARKET_OPEN,
+            Submarkets.SUBMARKET_STORAGE,
+            Submarkets.GENERIC_MILITARY),
         0.3f);
 
     SystemUtils.addMarketplace(
@@ -193,18 +184,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         null,
         "Iolanthe",
         3,
-        new ArrayList<>(
-            Arrays.asList(
-                Conditions.FRONTIER,
-                Conditions.FREE_PORT,
-                Conditions.VOLATILES_COMPLEX,
-                Conditions.LUDDIC_MAJORITY,
-                Conditions.POPULATION_3)),
-        new ArrayList<>(
-            Arrays.asList(
-                Submarkets.SUBMARKET_BLACK,
-                Submarkets.SUBMARKET_OPEN,
-                Submarkets.SUBMARKET_STORAGE)),
+        Arrays.asList(
+            Conditions.FRONTIER,
+            Conditions.FREE_PORT,
+            Conditions.VOLATILES_COMPLEX,
+            Conditions.LUDDIC_MAJORITY,
+            Conditions.POPULATION_3),
+        Arrays.asList(
+            Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE),
         0.3f);
 
     // only do the following if not in exerelin corvus mode
