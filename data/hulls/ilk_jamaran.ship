@@ -34,8 +34,6 @@
     -26,
     121,
     -24,
-    123.5,
-    -15.5,
     117,
     -10,
     83.5,
@@ -44,8 +42,6 @@
     9.5,
     117,
     10,
-    123.5,
-    15.5,
     121,
     24,
     99.5,
@@ -81,6 +77,7 @@
     -120,
     2.5
   ],
+  "builtInWings": [],
   "center": [
     87,
     168
@@ -113,7 +110,7 @@
     },
     {
       "angle": 172.793945,
-      "contrailSize": 21.497931,
+      "contrailSize": 21.49793,
       "length": 62.200962,
       "location": [
         -109.5,
@@ -121,11 +118,11 @@
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 21.497931
+      "width": 21.49793
     },
     {
       "angle": -172.793945,
-      "contrailSize": 21.497931,
+      "contrailSize": 21.49793,
       "length": 62.200962,
       "location": [
         -109.5,
@@ -133,7 +130,7 @@
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 21.497931
+      "width": 21.49793
     }
   ],
   "height": 348,
@@ -162,8 +159,8 @@
       "type": "LAUNCH_BAY"
     },
     {
-      "angle": 85,
-      "arc": 235,
+      "angle": 100,
+      "arc": 230,
       "id": "WS0003",
       "locations": [
         -55,
@@ -174,8 +171,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -85,
-      "arc": 235,
+      "angle": -100,
+      "arc": 230,
       "id": "WS0004",
       "locations": [
         -55,
@@ -186,7 +183,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": 75,
+      "angle": 80.5,
       "arc": 215,
       "id": "WS0005",
       "locations": [
@@ -198,7 +195,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": -75,
+      "angle": -80.5,
       "arc": 215,
       "id": "WS0006",
       "locations": [
@@ -247,7 +244,7 @@
     },
     {
       "angle": 40,
-      "arc": 360,
+      "arc": 240,
       "id": "WS0001",
       "locations": [
         59,
@@ -259,7 +256,7 @@
     },
     {
       "angle": -40,
-      "arc": 360,
+      "arc": 240,
       "id": "WS0002",
       "locations": [
         59,

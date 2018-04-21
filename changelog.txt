@@ -1,5 +1,48 @@
 Mayorate mod changelog - kazi
 
+v0.10.2
+- Balance updates:
+  - Changed most costs to be closer in line with vanilla.
+  - Changed a few weapon/wing tiers.
+  - Substantially changed the AI Crew hullmod, because I think that at present
+    it is hard to justify--reducing crew is rarely a high priority, and it is
+    very expensive for its combat benefits.
+    - Halved the repair rate penalty (to 25%), but it now applies to in-combat
+      repairs as well as CR recovery.
+    - Increased AI efficiency to 25%.
+    - Reduced cost to 4/8/12/20.
+  - Increased Ravana OP from 225 to 245.
+- Added tags to weapon_data.
+- Added a custom autofire plugin for the Cimeterre's Thermal Lance that is
+  conservative about firing at shields, mitigating the Cimeterre's perennial
+  flux problems.
+- Added a custom AI for the Phase Leap system. Not very good yet, but it should
+  reduce the frequency of the Cimiterre jumping into bad situations because the
+  Burn Drive AI does not understand the Phase Leap mechanics.
+- Added the Fighter Coprocessing system for the Foraker. This buffs a number of
+  fighter stats (mainly weapon handling and agility, with only a slight raw
+  damage buff) but has a significant continuous flux cost and debuffs the
+  corresponding stats on the carrier--be careful using it when engaged!
+- Added a custom interaction to turn in AI cores, providing more reputation but
+  fewer credits than most factions. Given sufficient cores and Mayorate rep,
+  this may also provide special rewards.
+- Removed campaign music to avoid an incompatibility with Audio Plus (which
+  already has the Mayorate tracks).
+
+v0.10.1
+Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and
+advice.
+- Balance updates:
+  - Shrike effective shield HP and dissipation from 1000/200 to 400/90; armor
+    from 75 to 25.
+  - del Azarchel shipsystem changed to Missile Autoforge to reduce burst damage;
+    shield efficiency from 0.9 to 1.0.
+  - Reduced/reoriented several geometrically-implausible turret arcs.
+  - Buffed the Graser--range from 900 to 1000, burst damage from 880 to 1920,
+    dps from ~200 to 320, efficiency reduced a hair.
+- The Mayorate now buys AI cores (placeholder for a better interaction).
+- Fixed a bug preventing the Tiamat from using shields.
+
 v0.10.0 (Kazi and Blothorn)
 - 0.8a compatibility
 - Added Narayana Battleship. It will likely get a better builtin weapon later.
@@ -7,7 +50,7 @@ v0.10.0 (Kazi and Blothorn)
   personas.
 - Partial lore rewrite to fit in with 0.8 a bit more.
 - Removed the less pretty interaction images.
-- Extensive revalance, in particular:
+- Extensive rebalance, in particular:
   - Removed most ballistic mounts to encourage using Mayorate weapons.
   - Added OP to most ships.
   - Carrier/wing rebalancing.

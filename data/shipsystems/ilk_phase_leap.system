@@ -1,8 +1,9 @@
 {
 	"id":"ilk_phase_leap",
 	"type":"ENGINE_MOD",
-	"aiType":"BURN_DRIVE",
-	"statsScript":"data.shipsystems.scripts.ilk_PhaseLeap",
+	"aiType":"CUSTOM",
+	"aiScript": "data.shipsystems.scripts.ai.ilk_PhaseLeapAi",
+	"statsScript":"data.shipsystems.scripts.ilk_PhaseLeapStats",
 
 	"jitterColor":[166,50,91,155],
 	"jitterCopies":10,

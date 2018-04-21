@@ -5,7 +5,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import java.util.ArrayList;
+import java.util.List;
 
 /** Created by Jeff on 2015-11-29. */
 public class SystemUtils {
@@ -22,11 +22,11 @@ public class SystemUtils {
   public static void addMarketplace(
       String factionID,
       SectorEntityToken primaryEntity,
-      ArrayList<SectorEntityToken> connectedEntities,
+      List<SectorEntityToken> connectedEntities,
       String name,
       int size,
-      ArrayList<String> marketConditions,
-      ArrayList<String> submarkets,
+      List<String> marketConditions,
+      List<String> submarkets,
       float tarrif) {
     EconomyAPI globalEconomy = Global.getSector().getEconomy();
 

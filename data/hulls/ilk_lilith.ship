@@ -52,6 +52,7 @@
   "builtInWeapons": {
     "WS0004": "ilk_repeater"
   },
+  "builtInWings": [],
   "center": [
     42,
     75
@@ -133,8 +134,8 @@
   "viewOffset": 0,
   "weaponSlots": [
     {
-      "angle": 90,
-      "arc": 360,
+      "angle": 54.5,
+      "arc": 283,
       "id": "WS0001",
       "locations": [
         -9,
@@ -145,8 +146,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -90,
-      "arc": 360,
+      "angle": -54.5,
+      "arc": 283,
       "id": "WS0002",
       "locations": [
         -9,

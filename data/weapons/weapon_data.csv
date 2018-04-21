@@ -1,17 +1,17 @@
-name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,hints,number
-Disruptor,ilk_disruptor,2,,2000,600,,600,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,"FIRE_WHEN_INEFFICIENT",7701
-Heavy Disruptor,ilk_disruptor_heavy,3,,6000,800,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,"FIRE_WHEN_INEFFICIENT",7702
-Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3750,,,8,,,5,15,10,30,,300,,,,,7703
-Graser,ilk_graser,2,,7000,900,1200,,,,15,20,,,,ENERGY,,1750,0,0.4,0.6,4,0,0,0,0,24000,,,,,,7704
-Light Graser,ilk_graser_light,0,,600,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,7705
-Graser PD,ilk_graser_pd,0,,600,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR",7706
-Grav Driver,ilk_hvy_driver,3,,12000,900,,250,,3000,10,20,16,0.75,4,KINETIC,250,,,0.6,2,0.15,0,10,2,20,,1500,,,100,,7707
-Laserhead LRM Launcher,ilk_laserhead,2,,2000,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,7708
-Tornado AM Battery,ilk_nuke_large,3,,10000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,7709
-Phoenix II Rocket Launcher,ilk_phoenix,1,,350,1400,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,7710
-PPC,ilk_ppc,1,,800,500,,50,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,7711
-Belial PPC,ilk_shotgun,2,,1500,600,,1080,,,15,13,50,,,ENERGY,800,,,3,1,,0,0,0,0,,800,,,,,7712
-Windstalker SRM,ilk_windstalker,1,,250,1250,,100,,50,10,5,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,7713
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,hints,tags,number
+Disruptor,ilk_disruptor,2,,2000,600,,600,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,"FIRE_WHEN_INEFFICIENT",kinetic12,7701
+Heavy Disruptor,ilk_disruptor_heavy,3,,6000,800,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,"FIRE_WHEN_INEFFICIENT",kinetic15,7702
+Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3750,,,8,,,5,15,10,30,,300,,,,,"energy20, LR",7703
+Graser,ilk_graser,2,,6000,1000,1200,,,,15,20,,,,ENERGY,,1800,0.2,0.4,1.4,4,0,0,0,0,24000,,,,,,"beam20, LR",7704
+Light Graser,ilk_graser_light,1,,300,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,beam10,7705
+Graser PD,ilk_graser_pd,0,,650,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR","pd9, beam6",7706
+Grav Driver,ilk_hvy_driver,3,,6000,900,,250,,3000,10,20,16,0.75,4,KINETIC,250,,,0.6,2,0.15,0,10,2,20,,1500,,,100,,,"kinetic18",7707
+Laserhead LRM Launcher,ilk_laserhead,2,,1500,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,missile14,7708
+Tornado AM Battery,ilk_nuke_large,3,,8000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,missile18,7709
+Phoenix II Rocket Launcher,ilk_phoenix,1,,300,1400,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,"rocket8, strike1"7710
+PPC,ilk_ppc,0,,300,500,,50,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,energy8,7711
+Belial PPC,ilk_shotgun,2,,1500,600,,1080,,,15,13,50,,,ENERGY,800,,,3,1,,0,0,0,0,,800,,,,,energy13,7712
+Windstalker SRM,ilk_windstalker,1,,200,1250,,100,,50,10,5,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,missile7,7713
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Grav Cannon,ilk_driver,2,,0,1000,,500,,,0,0,,,,KINETIC,650,,,3,,,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",7730
 Pulse Gun,ilk_pulse_gun,3,,0,700,,175,,,0,0,4,1,,KINETIC,150,,0,0.2,,,5,15,3,10,,800,,,,"SYSTEM, SHOW_IN_CODEX",7731

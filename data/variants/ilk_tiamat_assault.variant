@@ -1,6 +1,6 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 6,
   "fluxVents": 8,
   "goalVariant": true,
   "hullId": "ilk_tiamat",

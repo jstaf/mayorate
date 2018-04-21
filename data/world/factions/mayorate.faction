@@ -53,7 +53,10 @@
 	},
 	"custom": {
 		"offersCommissions": true,
-		"engagesInHostilities": true
+		"engagesInHostilities": true,
+		"AICoreValueMult": 1,
+		"AICoreRepMult": 2.5,
+		"buysSurveyData": true
 	},
 	"music": {
 		"theme": "mayorate_friendly",
