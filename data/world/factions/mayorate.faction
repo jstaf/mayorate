@@ -100,6 +100,8 @@
 		"combatMedium": {
 			"ilk_cimeterre_strike": 10,
 			"ilk_cimeterre_cs": 7,
+			"ilk_cimeterre_fa": 8,
+			"ilk_cimeterre_berserker": 5,
 			"ilk_safir_converted_support": 5,
 			"fallback": {
 				"combatSmall": 2
@@ -147,7 +149,9 @@
 			}
 		},
 		"carrierSmall": {
-			"ilk_foraker_escort": 10,
+			"ilk_foraker_escort": 15,
+			"ilk_foraker_attack": 5,
+			"ilk_foraker_strike": 10,
 			"fallback": {
 				"carrierMedium": 1
 			}
