@@ -1,7 +1,7 @@
 {
   "displayName": "Fire Support",
   "fluxCapacitors": 0,
-  "fluxVents": 25,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "ilk_jamaran",
   "hullMods": [
@@ -21,7 +21,7 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0009": "ilk_hvy_driver"}
+      "weapons": {"WS0009": "ilk_fluxtorp"}
     },
     {
       "autofire": true,

@@ -5,7 +5,6 @@ Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3750,,,8,
 Graser,ilk_graser,2,,6000,1000,1200,,,,15,20,,,,ENERGY,,1800,0.2,0.4,1.4,4,0,0,0,0,24000,,,,,,"beam20, LR",7704
 Light Graser,ilk_graser_light,1,,300,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,beam10,7705
 Graser PD,ilk_graser_pd,0,,650,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR","pd9, beam6",7706
-Grav Driver,ilk_hvy_driver,3,,6000,900,,250,,3000,10,20,16,0.75,4,KINETIC,250,,,0.6,2,0.15,0,10,2,20,,1500,,,100,,,"kinetic18",7707
 Laserhead LRM Launcher,ilk_laserhead,2,,1500,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,missile14,7708
 Tornado AM Battery,ilk_nuke_large,3,,8000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,missile18,7709
 Phoenix II Rocket Launcher,ilk_phoenix,1,,300,1400,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,"rocket8, strike1"7710
