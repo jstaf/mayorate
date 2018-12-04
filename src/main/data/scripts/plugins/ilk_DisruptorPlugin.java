@@ -60,8 +60,6 @@ public class ilk_DisruptorPlugin extends BaseEveryFrameCombatPlugin {
   }
 
   private void createFX(DamagingProjectileAPI projectile, String id) {
-    // Vector2f randomPoint = MathUtils.getRandomPointOnCircumference(projectile.getLocation(),
-    // 50f);
     Vector2f loc = projectile.getLocation();
     switch (id) {
       case "ilk_disruptor_shot":

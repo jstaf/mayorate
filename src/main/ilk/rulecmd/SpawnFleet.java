@@ -10,7 +10,6 @@ import com.fs.starfarer.api.util.Misc;
 import java.util.List;
 import java.util.Map;
 
-/** Created by jeff on 25/06/15. */
 public class SpawnFleet extends BaseCommandPlugin {
 
   @Override
@@ -19,6 +18,7 @@ public class SpawnFleet extends BaseCommandPlugin {
       InteractionDialogAPI interactionDialogAPI,
       List<Misc.Token> params,
       Map<String, MemoryAPI> memoryMap) {
+    /*TODO 0.9 readd later
     // parse input
     String faction = params.get(0).getString(memoryMap);
     String fleetCompType = params.get(1).getString(memoryMap);
@@ -33,6 +33,7 @@ public class SpawnFleet extends BaseCommandPlugin {
     // add new fleet's id to memory, so we can check to see if it's still alive later and do stuff
     String fleetID = fleet.getId();
     Global.getSector().getMemory().set(memKey, fleetID);
+    */
     return true;
   }
 }

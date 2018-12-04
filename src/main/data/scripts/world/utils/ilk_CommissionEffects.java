@@ -31,14 +31,6 @@ public class ilk_CommissionEffects implements EveryFrameScript {
 
   @Override
   public void advance(float amount) {
-    // fuck me... took absolutely forever to find the right memory keys
-    /*Global.getLogger(ilk_CommissionEffects.class).log(Level.DEBUG, "====================================================");
-    logKeys(Global.getSector().getPlayerFaction().getMemory().getKeys(), "playerFaction");
-    logKeys(Global.getSector().getPlayerFleet().getMemory().getKeys(), "playerFleet");
-    logKeys(Global.getSector().getPlayerPerson().getMemory().getKeys(), "playerPerson");
-    logKeys(Global.getSector().getMemory().getKeys(), "Global");
-    logKeys(Global.getSector().getCharacterData().getMemory().getKeys(), "CharData");*/
-
     if ((Global.getSector().getCharacterData().getMemory().get("$fcm_faction") != null)
         && (Global.getSector()
             .getCharacterData()
@@ -50,9 +42,7 @@ public class ilk_CommissionEffects implements EveryFrameScript {
 
       if (player.getRelationshipLevel(pirates).isAtBest(RepLevel.HOSTILE)) {
         // player is hostile to pirates, reset rep to inhospitable
-        float before = player.getRelationship(pirates.getId());
         player.setRelationship(pirates.getId(), RepLevel.INHOSPITABLE);
-        float after = player.getRelationship(pirates.getId());
 
         Global.getSector()
             .getCampaignUI()

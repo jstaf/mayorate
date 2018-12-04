@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.List;
 import org.lazywizard.lazylib.combat.AIUtils;
 
-/** This class manages deployed mines Created by jeff on 07/08/15. */
+/** This class manages deployed mines */
 public class ilk_MineManager extends BaseEveryFrameCombatPlugin {
 
   CombatEngineAPI engine;
@@ -54,8 +54,6 @@ public class ilk_MineManager extends BaseEveryFrameCombatPlugin {
           if (tickInterval > LARGE_THRESH) {
 
             // add a flash of light
-            // Vector2f loc, Vector2f vel, float size, float brightness, float duration,
-            // java.awt.Color color
             engine.addSmoothParticle(
                 proj.getLocation(), proj.getVelocity(), 7f, 1f, 0.15f, PING_COLOR);
 

@@ -10,6 +10,7 @@ public class Indoctrination extends BaseMarketConditionPlugin {
   public static final float INDOCTRINATION_ORGANS_MULT = 5f;
 
   private static final String[] tags =
+      /*TODO 0.9 update
       new String[] {
         Commodities.TAG_HEAVY_INDUSTRY_IN,
         Commodities.TAG_HEAVY_INDUSTRY_OUT,
@@ -17,6 +18,8 @@ public class Indoctrination extends BaseMarketConditionPlugin {
         Commodities.TAG_REFINING_IN,
         Commodities.TAG_REFINING_OUT,
       };
+      */
+      new String[] {};
 
   @Override
   public void apply(String id) {

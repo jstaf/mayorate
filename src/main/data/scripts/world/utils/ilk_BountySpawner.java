@@ -53,6 +53,7 @@ public class ilk_BountySpawner implements EveryFrameScript {
    */
   @Override
   public void advance(float amount) {
+    /*TODO 0.9
     if (!init && (sector.getClock().getElapsedDaysSince(lastSpawn) >= 95)) {
       // spawn an initial event
       sector
@@ -66,5 +67,6 @@ public class ilk_BountySpawner implements EveryFrameScript {
           .startEvent(new CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null);
       lastSpawn = sector.getClock().getTimestamp();
     }
+    */
   }
 }

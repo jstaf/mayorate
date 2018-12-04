@@ -30,7 +30,8 @@ public class ilk_PathSpawnPoint extends BaseSpawnPoint {
     double rand = 0f;
     while (rand < PATH_SPAWN_CHANCE) {
       rand = Math.random();
-      path.pickShipAndAddToFleet("combatSmall", 1f, fleet);
+      //TODO is FactionAPI.ShipPickParams() the right choice here?
+      path.pickShipAndAddToFleet("combatSmall", new FactionAPI.ShipPickParams(), fleet);
     }
 
     Global.getLogger(ilk_PathSpawnPoint.class)

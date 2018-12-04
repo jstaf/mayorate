@@ -17,6 +17,7 @@ import data.scripts.world.utils.ilk_PathSpawnPoint;
 import java.awt.Color;
 import java.util.Arrays;
 
+//TODO 0.9 - readd market structures
 public class ilk_RashtGen implements SectorGeneratorPlugin {
 
   @Override
@@ -128,12 +129,12 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         6,
         Arrays.asList(
             "ai_core",
-            Conditions.HEADQUARTERS,
-            Conditions.MILITARY_BASE,
-            Conditions.ORBITAL_STATION,
-            Conditions.AUTOFAC_HEAVY_INDUSTRY,
-            Conditions.ORE_REFINING_COMPLEX,
-            Conditions.ORE_REFINING_COMPLEX,
+            //Conditions.HEADQUARTERS,
+            //Conditions.MILITARY_BASE,
+            //Conditions.ORBITAL_STATION,
+            //Conditions.AUTOFAC_HEAVY_INDUSTRY,
+            //Conditions.ORE_REFINING_COMPLEX,
+            //Conditions.ORE_REFINING_COMPLEX,
             Conditions.ARID,
             Conditions.POPULATION_6),
         Arrays.asList(
@@ -152,8 +153,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         Arrays.asList(
             "ai_core",
             "indoctrination",
-            Conditions.ANTIMATTER_FUEL_PRODUCTION,
-            Conditions.ORE_COMPLEX,
+            //Conditions.ANTIMATTER_FUEL_PRODUCTION,
+            //Conditions.ORE_COMPLEX,
             Conditions.POPULATION_4),
         Arrays.asList(
             Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE),
@@ -166,8 +167,8 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         "Sindral",
         4,
         Arrays.asList(
-            Conditions.MILITARY_BASE,
-            Conditions.SHIPBREAKING_CENTER,
+            //Conditions.MILITARY_BASE,
+            //Conditions.SHIPBREAKING_CENTER,
             Conditions.ORGANIZED_CRIME,
             Conditions.ICE,
             Conditions.POPULATION_4),
@@ -187,7 +188,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         Arrays.asList(
             Conditions.FRONTIER,
             Conditions.FREE_PORT,
-            Conditions.VOLATILES_COMPLEX,
+            //Conditions.VOLATILES_COMPLEX,
             Conditions.LUDDIC_MAJORITY,
             Conditions.POPULATION_3),
         Arrays.asList(

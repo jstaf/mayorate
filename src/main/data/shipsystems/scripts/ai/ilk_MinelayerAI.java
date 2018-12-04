@@ -7,12 +7,10 @@ import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-/** Created by Jeff on 2015-08-08. */
 public class ilk_MinelayerAI implements ShipSystemAIScript {
 
   private List<ShipAPI> enemies;
   private float enemyCount = 0;
-  private boolean hasOrders = false;
   private CombatTaskManagerAPI manager;
   CombatFleetManagerAPI.AssignmentInfo orders;
 

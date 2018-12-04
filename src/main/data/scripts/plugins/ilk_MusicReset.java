@@ -47,4 +47,7 @@ public class ilk_MusicReset implements EveryFrameCombatPlugin {
 
   @Override
   public void init(CombatEngineAPI engine) {}
+
+  @Override
+  public void processInputPreCoreControls(float f, List<InputEventAPI> events) {}
 }

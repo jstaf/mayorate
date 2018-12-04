@@ -7,7 +7,6 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import java.util.List;
 
-/** Created by Jeff on 2015-11-29. */
 public class SystemUtils {
 
   public static void addConsul(MarketAPI market) {
@@ -46,7 +45,9 @@ public class SystemUtils {
     newMarket.setPrimaryEntity(primaryEntity);
 
     // set the base smuggling value (starting value)
-    newMarket.setBaseSmugglingStabilityValue(0);
+    //TODO 0.9
+    //newMarket.setBaseSmugglingStabilityValue(0);
+
 
     // set the starting tarrif, could also make this value an input
     newMarket.getTariff().modifyFlat("generator", tarrif);
@@ -71,7 +72,7 @@ public class SystemUtils {
     }
 
     // add the market to the global market place
-    globalEconomy.addMarket(newMarket);
+    globalEconomy.addMarket(newMarket, true);
 
     // get the primary entity and associate it back to the market that we've created
     primaryEntity.setMarket(newMarket);

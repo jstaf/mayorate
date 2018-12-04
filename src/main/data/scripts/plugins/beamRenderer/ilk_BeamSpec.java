@@ -18,7 +18,6 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-/** Created by Jeff on 2015-08-09. */
 public class ilk_BeamSpec {
 
   private static final Logger logger = Global.getLogger(ilk_BeamSpec.class);

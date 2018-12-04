@@ -148,13 +148,19 @@ public class ilk_FighterCoprocessingAi implements ShipSystemAIScript {
           break;
         case DESTROYER:
           threat += 2.0f;
+          break;
         case FRIGATE:
           threat += 2.0f;
+          break;
         case FIGHTER:
           threat +=
               (enemyShip.getWing() == null
                   ? 0.5f
                   : 1 / enemyShip.getWing().getSpec().getNumFighters());
+          break;
+        default:
+          // nada
+          break;
       }
     }
 

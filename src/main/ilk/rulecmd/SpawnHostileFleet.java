@@ -27,6 +27,8 @@ public class SpawnHostileFleet extends BaseCommandPlugin {
       InteractionDialogAPI dialog,
       List<Misc.Token> params,
       Map<String, MemoryAPI> memoryMap) {
+    /*TODO 0.9 readd later
+
     // parse input
     String faction = params.get(0).getString(memoryMap);
     String fleetCompType = params.get(1).getString(memoryMap);
@@ -55,7 +57,7 @@ public class SpawnHostileFleet extends BaseCommandPlugin {
     player.setNoEngaging(0f);
     fleet.setNoEngaging(0f);
     fleet.setInteractionTarget(player);
-
+    */
     return true;
   }
 }
