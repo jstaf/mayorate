@@ -1,4 +1,13 @@
-Mayorate mod changelog - kazi
+Mayorate mod changelog
+
+Major contributors:
+- kazi
+- Blothorn (0.10.x releases)
+- Dark.Revenant (0.7.1 release)
+
+
+v0.11.0
+- Raw 0.9 compatibility.
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).
