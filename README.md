@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/isturdy/mayorate.svg?branch=master)](https://travis-ci.org/isturdy/mayorate)
+[![Build Status](https://travis-ci.org/jstaf/mayorate.svg?branch=master)](https://travis-ci.org/jstaf/mayorate)
 
 mayorate
 ===============================
