@@ -9,7 +9,7 @@ before_install:
   #- java -jar google-java-format*.jar --dry-run --set-exit-if-changed $(find src -type f)
   - sudo apt-get install -y p7zip-full
   - cd ..
-  - wget http://s3.amazonaws.com/fractalsoftworks/starsector/starsector_linux-0.8.1a-RC8.zip
+  - wget http://s3.amazonaws.com/fractalsoftworks/starsector/starsector_linux-0.9a-RC10.zip
   - unzip starsector_linux*
   - mv mayorate starsector/mods
   - cd starsector/mods/mayorate
