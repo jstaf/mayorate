@@ -1,5 +1,11 @@
 Mayorate mod changelog - kazi
 
+v0.10.3
+- Touch-ups to the Narayana sprite (thanks to King Alfonzo).
+- Fixed a typo in the Tiamat's cost (1200->12000).
+- Removed the Grav Driver (the modular weapon, not the Del Azarchel builtin).
+- Added some variants.
+
 v0.10.2
 - Balance updates:
   - Changed most costs to be closer in line with vanilla.

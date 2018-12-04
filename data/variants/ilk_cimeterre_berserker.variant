@@ -1,0 +1,35 @@
+{
+  "displayName": "Berserker",
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "hullId": "ilk_cimeterre",
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "variantId": "ilk_cimeterre_berserker",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {"WS0006": "ilk_windstalker"}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0001": "ilk_thermal_lance"}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+          "WS0002": "ilk_shotgun",
+          "WS0003": "ilk_shotgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0004": "ilk_graser_pd"}
+    }
+  ]
+}

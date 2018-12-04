@@ -4,7 +4,9 @@
   "fluxVents": 8,
   "goalVariant": true,
   "hullId": "ilk_tiamat",
-  "hullMods": ["targetingunit"],
+  "hullMods": [
+    "targetingunit"
+  ],
   "variantId": "ilk_tiamat_assault",
   "weaponGroups": [
     {
