@@ -6,7 +6,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
-import data.scripts.world.utils.SystemUtils;
+import data.scripts.world.utils.ilk_SystemUtils;
 import java.util.List;
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class ManageConsul extends BaseCommandPlugin {
     }
 
     if (consul == null) {
-      SystemUtils.addConsul(market);
+      ilk_SystemUtils.addConsul(market);
       return true;
     } else {
       market.removePerson(consul);

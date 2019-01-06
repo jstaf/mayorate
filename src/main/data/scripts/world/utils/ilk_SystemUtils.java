@@ -7,7 +7,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import java.util.List;
 
-public class SystemUtils {
+public class ilk_SystemUtils {
 
   public static void addConsul(MarketAPI market) {
     PersonAPI consul = market.getFaction().createRandomPerson();
@@ -25,6 +25,7 @@ public class SystemUtils {
       String name,
       int size,
       List<String> marketConditions,
+      List<String> industries,
       List<String> submarkets,
       float tarrif) {
     EconomyAPI globalEconomy = Global.getSector().getEconomy();
@@ -57,6 +58,11 @@ public class SystemUtils {
       for (String market : submarkets) {
         newMarket.addSubmarket(market);
       }
+    }
+
+    // add industries to market
+    for (String industry : industries) {
+      newMarket.addIndustry(industry);
     }
 
     // add each market conditions
