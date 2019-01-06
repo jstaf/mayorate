@@ -1,0 +1,50 @@
+{
+    "combatSmallForSmallFleet": {
+        "ilk_lilith_assault": 7,
+        "ilk_lilith_cs": 6,
+        "ilk_tiamat_assault": 10
+    },
+    "combatSmall": {
+        "ilk_lilith_assault": 7,
+        "ilk_lilith_cs": 6,
+        "ilk_tiamat_assault": 10
+    },
+    "combatMedium": {
+        "ilk_cimeterre_berserker": 5,
+        "ilk_cimeterre_cs": 7,
+        "ilk_cimeterre_fa": 8,
+        "ilk_cimeterre_strike": 10
+    },
+    "combatLarge": {
+        "ilk_del_azarchel_artillery": 10,
+        "ilk_jamaran_fs": 3
+    },
+    "combatCapital": {
+        "ilk_ravana_cs": 5,
+        "ilk_ravana_strike": 10,
+        "ilk_ravana_assault": 10,
+        "ilk_narayana_fs": 5
+    },
+    "combatFreighterMedium": {
+        "ilk_safir_converted_support": 10
+    }, 
+    "civilianRandom": {
+        "ilk_safir_standard": 5
+    },
+    "carrierSmall": {
+        "ilk_foraker_attack": 3,
+        "ilk_foraker_escort": 10,
+        "ilk_foraker_strike": 7
+    },
+    "carrierMedium": {
+        "ilk_jamaran_fs": 5,
+        "ilk_jamaran_support": 3,
+        "ilk_jamaran_strike": 10
+    },
+    "carrierLarge": {
+        "ilk_narayana_fs": 10
+    },
+    "freighterSmall": {
+        "ilk_safir_standard": 10
+    }
+}
