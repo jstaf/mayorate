@@ -1,4 +1,4 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,num,role,role desc,refit,base value
-ilk_raad_wing,ilk_raad_fighter,"fighter3, fighter, mid",1,,7,10,V,4000,500,3,ASSAULT,Heavy Fighter,15,6000
-ilk_angha_wing,ilk_angha_bomber,"bomber4, bomber, high",2,,5,18,V,4000,2000,2,BOMBER,Light Bomber,10,9000
-ilk_hk_wing,ilk_hk_drone_hunter_killer,"interceptor4, interceptor, high",2,,9,13,CLAW,5000,500,3,INTERCEPTOR,Interceptor Drone,15,10000
+ilk_raad_wing,ilk_raad_fighter,"fighter3, fighter, mid, mayorate_bp",1,,7,10,V,4000,500,3,ASSAULT,Heavy Fighter,15,6000
+ilk_angha_wing,ilk_angha_bomber,"bomber4, bomber, high, mayorate_bp",2,,5,18,V,4000,2000,2,BOMBER,Light Bomber,10,9000
+ilk_hk_wing,ilk_hk_drone_hunter_killer,"interceptor4, interceptor, high, mayorate_bp",2,,9,13,CLAW,5000,300,3,INTERCEPTOR,Interceptor Drone,15,10000
