@@ -12,7 +12,12 @@
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
+      "weapons": {"WS0012": "ilk_driver"}
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "ilk_nuke_large",
         "WS0002": "ilk_nuke_large"
@@ -20,15 +25,10 @@
     },
     {
       "autofire": true,
-      "mode": "ALTERNATING",
-      "weapons": {"WS0012": "ilk_driver"}
-    },
-    {
-      "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "ilk_windstalker",
-        "WS0006": "ilk_windstalker",
+        "WS0005": "annihilator",
+        "WS0006": "annihilator",
         "WS0011": "annihilatorpod"
       }
     },
@@ -46,7 +46,7 @@
       "weapons": {
         "WS0007": "ilk_graser_pd",
         "WS0008": "ilk_graser_pd",
-        "WS0009": "ilk_graser_pd",
+        "WS0009": "ilk_graser_pd"
       }
     }
   ]
