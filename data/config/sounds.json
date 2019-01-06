@@ -1,5 +1,11 @@
 {
 	"music":{
+		"music_campaign": [
+			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6}, 
+			{"file":"campaign_music_part_2_v28.ogg","source":"sounds/music/music.bin","volume":0.6},
+			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
+			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
+		],
 		"mayorate_neutral":[
 			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.30}
 		],
