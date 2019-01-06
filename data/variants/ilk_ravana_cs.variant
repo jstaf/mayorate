@@ -11,18 +11,18 @@
   "variantId": "ilk_ravana_cs",
   "weaponGroups": [
     {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0015": "ilk_laserhead"
-      }
-    },
-    {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0003": "ilk_disruptor_heavy",
         "WS0004": "ilk_disruptor_heavy"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "ilk_laserhead"
       }
     },
     {

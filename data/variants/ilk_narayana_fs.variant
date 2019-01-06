@@ -12,6 +12,11 @@
   "variantId": "ilk_narayana_fs",
   "weaponGroups": [
     {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {"WS0021": "ilk_ramdrive"}
+    },
+    {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
@@ -20,11 +25,6 @@
         "WS0019": "ilk_nuke_large",
         "WS0020": "ilk_nuke_large"
       }
-    },
-    {
-      "autofire": true,
-      "mode": "ALTERNATING",
-      "weapons": {"WS0021": "ilk_ramdrive"}
     },
     {
       "autofire": true,

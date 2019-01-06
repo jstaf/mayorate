@@ -10,18 +10,18 @@
   "variantId": "ilk_tiamat_assault",
   "weaponGroups": [
     {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ilk_pulse_gun"
+      }
+    },
+    {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "ilk_phoenix",
         "WS0002": "ilk_phoenix"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0007": "ilk_pulse_gun"
       }
     },
     {

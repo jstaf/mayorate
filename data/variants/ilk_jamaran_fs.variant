@@ -11,17 +11,17 @@
   "variantId": "ilk_jamaran_fs",
   "weaponGroups": [
     {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {"WS0009": "ilk_fluxtorp"}
+    },
+    {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
         "WS0007": "ilk_laserhead",
         "WS0008": "ilk_laserhead"
       }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {"WS0009": "ilk_fluxtorp"}
     },
     {
       "autofire": true,

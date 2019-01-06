@@ -2,9 +2,9 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 Disruptor,ilk_disruptor,2,,2000,600,,600,600,,20,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,FIRE_WHEN_INEFFICIENT,"kinetic12, mayorate_bp",,,,Suppression,,,,,,,,,,7701
 Heavy Disruptor,ilk_disruptor_heavy,3,,6000,800,,1000,1000,,15,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,FIRE_WHEN_INEFFICIENT,"kinetic15, mayorate_bp",,,,Suppression,,,,,,,,,,7702
 Flux Torpedo,ilk_fluxtorp,3,,15000,1000,,2250,2000,2000,5,25,,,,ENERGY,3750,,,8,,,5,15,10,30,,300,,,,,"energy20, LR, mayorate_bp",,,,General,,,,,,,,,,7703
-Graser,ilk_graser,2,,6000,1000,1200,,,,15,20,,,,ENERGY,,1800,0.2,0.4,1.4,4,0,0,0,0,24000,,,,,,"beam20, LR, mayorate_bp",,,,General,,,,,,,,,,7704
+Graser,ilk_graser,2,,6000,1000,1200,,,,15,20,,,,ENERGY,,1800,0.05,0.6,0.6,4,0,0,0,0,24000,,,,,,"beam20, LR, mayorate_bp",,,,General,,,,,,,,,,7704
 Light Graser,ilk_graser_light,1,,300,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,"beam10, mayorate_bp",,,,General,,,,,,,,,,7705
-Graser PD,ilk_graser_pd,0,,650,450,250,,,,100,6,6,1,,ENERGY,,250,0.05,0.0.05,0.2,0.05,0,0,0,0,24000,,,,,"PD,ANTI_FTR","pd9, beam6, mayorate_bp",,,,Point Defense,,,,,,,,,,7706
+Graser PD,ilk_graser_pd,0,,650,450,150,,,,100,6,,,,ENERGY,,250,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR","pd9, beam6, mayorate_bp",,,,Point Defense,,,,,,,,,,7706
 Laserhead LRM Launcher,ilk_laserhead,2,,1500,10000,,850,,75,10,12,20,,,ENERGY,0,,0,12,1,0.6,0,0,0,0,,500,75,15,300,DO_NOT_AIM,"missile14, mayorate_bp",,,,Long Range Support,,,,,,,,,,7708
 Tornado AM Battery,ilk_nuke_large,3,,8000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,"missile18, mayorate_bp",,,,Long Range Support,,,,,Deals massive AOE and EMP damage to all targets in blast radius.,,,,,7709
 Phoenix II Rocket Launcher,ilk_phoenix,1,,300,1400,,400,,,,4,12,,,HIGH_EXPLOSIVE,0,,,3,2,0.5,3,10,5,1,,700,400,3.5,100,GUIDED_POOR,"rocket8, strike1, mayorate_bp",,,,Strike,,,,,,,,,,7710

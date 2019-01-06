@@ -6,19 +6,19 @@
   "hullId": "ilk_cimeterre",
   "hullMods": [
     "targetingunit",
-    "ilk_AICrew",
+    "ilk_AICrew"
   ],
   "variantId": "ilk_cimeterre_cs",
   "weaponGroups": [
     {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {"WS0006": "ilk_windstalker"}
-    },
-    {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {"WS0001": "ilk_thermal_lance"}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {"WS0006": "ilk_windstalker"}
     },
     {
       "autofire": true,

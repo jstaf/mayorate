@@ -9,14 +9,14 @@
   "variantId": "ilk_cimeterre_berserker",
   "weaponGroups": [
     {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {"WS0006": "ilk_windstalker"}
-    },
-    {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {"WS0001": "ilk_thermal_lance"}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {"WS0006": "ilk_windstalker"}
     },
     {
       "autofire": true,
