@@ -8,6 +8,15 @@ Major contributors:
 
 v0.11.0
 - Raw 0.9 compatibility.
+- Campaign music is part of the base mod again. Not sure why it was removed in 
+  the first place.
+- Mayorate faction color changed so as to not conflict with the Persean League 
+  as much.
+- All variants now have the ship's primary weapon as weapon group one.
+- Reverted changes to Graser and Grav Cannon that caused the weapon to fire out 
+  of sync with the actual weapons.
+- Reverted changes to Graser PD that made it super OP.
+- Mayorate now uses a mix of AI and human portraits (like you'd expect).
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).
