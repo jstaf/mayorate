@@ -1,0 +1,85 @@
+{
+    "starSystem": "rasht",
+    "markets": [
+        {
+            "entities": ["inir"],
+            "faction": "mayorate",
+            "size": 3,
+            "startingConditions": [
+                "indoctrination",
+                "very_hot",
+                "no_atmosphere",
+                "ore_ultrarich",
+                "rare_ore_rich",
+                "population_4"
+            ],
+            "industries": [
+                "population",
+                "spaceport",
+                "fuelprod",
+                "mining"
+            ]
+        },
+        {
+            "entities": ["ilkhanna", "ilk_port"],
+            "faction": "mayorate",
+            "size": 6,
+            "startingConditions": [
+                "indoctrination",
+                "habitable",
+                "toxic_atmosphere",
+                "farmland_adequate",
+                "arid",
+                "rogue_ai_core",
+                "population_6"
+            ],
+            "industries": [
+                "population",
+                "high_command",
+                "spaceport",
+                "farming",
+                "orbitalworks",
+                "refining",
+                "heavybatteries",
+                "starfortress"
+            ]
+        },
+        {
+            "entities": ["sindral"],
+            "faction": "luddic_path", 
+            "size": 4,
+            "startingConditions": [
+                "no_atmosphere",
+                "organized_crime",
+                "ice",
+                "luddic_majority",
+                "population_4"
+            ],
+            "industries": [
+                "population",
+                "militarybase",
+                "spaceport",
+                "lightindustry"
+            ]
+        },
+        {
+            "entities": ["iolanthe"],
+            "faction": "independent",
+            "size": 3,
+            "startingConditions": [
+                "dense_atmosphere",
+                "high_gravity",
+                "volatiles_abundant",
+                "organics_trace",
+                "free_port",
+                "population_3"
+            ],
+            "industries": [
+                "population",
+                "battlestation_mid",
+                "mining",
+                "spaceport"
+            ]
+        }
+    ]
+}

@@ -90,11 +90,6 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
   }
 
   public static void detonate(MissileAPI missile) {
-    if (missile.getSource() != null) {
-      // ilk_AnamorphicFlare.createFlare(missile.getSource(), new Vector2f(missile.getLocation()),
-      // Global.getCombatEngine(), 1f, 0.01f, (float) Math.random() * 5f - 2.5f, 4f, 2f, new
-      // Color(255, 165, 0, 255), new Color(255, 225, 150, 255));
-    }
 
     Global.getCombatEngine()
         .spawnExplosion(
@@ -108,7 +103,7 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
 
     RippleDistortion shockwave = new RippleDistortion();
     shockwave.setLocation(missile.getLocation());
-    shockwave.setIntensity(8f);
+    shockwave.setIntensity(1f);
     shockwave.setLifetime(1.5f);
     shockwave.setSize(500f);
     shockwave.setFrameRate(84f);

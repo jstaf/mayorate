@@ -10,12 +10,9 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
 import data.scripts.MayorateModPlugin;
-import data.scripts.world.utils.ilk_SystemUtils;
 import data.scripts.world.utils.ilk_BountySpawner;
 import data.scripts.world.utils.ilk_CommissionEffects;
-import data.scripts.world.utils.ilk_PathSpawnPoint;
 import java.awt.Color;
-import java.util.Arrays;
 
 
 public class ilk_RashtGen implements SectorGeneratorPlugin {
@@ -94,126 +91,20 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
         Terrain.RING, new BaseRingTerrain.RingParams(600f, 6900, null, "Lanula's Arch"));
     ringInner.setCircularOrbit(star, 0, 0, 165f);
 
-    PlanetAPI ilk4 = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 9650f, 350f);
-    ilk4.setCustomDescriptionId("planet_Iolanthe");
-    ilk4.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "asharu"));
-    ilk4.getSpec().setGlowColor(new Color(118, 248, 255, 255));
-    ilk4.getSpec().setUseReverseLightForGlow(true);
-    ilk4.applySpecChanges();
+    PlanetAPI iolanthe = system.addPlanet(
+        "iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 9650f, 350f);
+    iolanthe.setCustomDescriptionId("planet_Iolanthe");
+    iolanthe.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "asharu"));
+    iolanthe.getSpec().setGlowColor(new Color(118, 248, 255, 255));
+    iolanthe.getSpec().setUseReverseLightForGlow(true);
+    iolanthe.applySpecChanges();
     system.addRingBand(
-        ilk4, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
+        iolanthe, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
 
-    PlanetAPI ilk4_4 = system.addPlanet("amaru", ilk4, "Amaru", "cryovolcanic", 330f, 50f, 800f, 50f);
+    system.addPlanet("amaru", iolanthe, "Amaru", "cryovolcanic", 330f, 50f, 800f, 50f);
 
     // only make jump points once everythings been added
     system.autogenerateHyperspaceJumpPoints(true, true);
-
-    // adding markets
-    String MAYORATE_FACTION = "mayorate";
-    ilk_SystemUtils.addMarketplace(
-        MAYORATE_FACTION,
-        ilkhanna,
-        Arrays.asList(ilk_station),
-        "Ilkhanna",
-        6,
-        Arrays.asList(
-            "indoctrination",
-            Conditions.HABITABLE,
-            Conditions.TOXIC_ATMOSPHERE,
-            Conditions.FARMLAND_ADEQUATE,
-            Conditions.ARID,
-            Conditions.ROGUE_AI_CORE,
-            Conditions.POPULATION_6),
-        Arrays.asList(
-            Industries.POPULATION,
-            Industries.HIGHCOMMAND,
-            Industries.SPACEPORT,
-            Industries.FARMING,
-            Industries.ORBITALWORKS,
-            Industries.REFINING,
-            Industries.HEAVYBATTERIES,
-            Industries.STARFORTRESS
-        ),
-        Arrays.asList(
-            Submarkets.GENERIC_MILITARY,
-            Submarkets.SUBMARKET_BLACK,
-            Submarkets.SUBMARKET_OPEN,
-            Submarkets.SUBMARKET_STORAGE),
-        0.3f);
-
-    ilk_SystemUtils.addMarketplace(
-        MAYORATE_FACTION,
-        inir,
-        null,
-        "Inir",
-        3,
-        Arrays.asList(
-            "indoctrination",
-            Conditions.VERY_HOT,
-            Conditions.NO_ATMOSPHERE,
-            Conditions.ORE_ULTRARICH,
-            Conditions.RARE_ORE_RICH,
-            Conditions.POPULATION_4),
-        Arrays.asList(
-            Industries.POPULATION,
-            Industries.SPACEPORT,
-            Industries.FUELPROD,
-            Industries.MINING,
-            Industries.GROUNDDEFENSES
-        ),
-        Arrays.asList(
-            Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE),
-        0.3f);
-
-    ilk_SystemUtils.addMarketplace(
-        Factions.LUDDIC_PATH,
-        sindral,
-        null,
-        "Sindral",
-        4,
-        Arrays.asList(
-            Conditions.NO_ATMOSPHERE,
-            Conditions.ORGANIZED_CRIME,
-            Conditions.ICE,
-            Conditions.ORGANICS_COMMON,
-            Conditions.LUDDIC_MAJORITY,
-            Conditions.POPULATION_4),
-        Arrays.asList(
-            Industries.POPULATION,
-            Industries.MILITARYBASE,
-            Industries.SPACEPORT,
-            Industries.LIGHTINDUSTRY,
-            Industries.MINING
-        ),
-        Arrays.asList(
-            Submarkets.SUBMARKET_BLACK,
-            Submarkets.SUBMARKET_OPEN,
-            Submarkets.SUBMARKET_STORAGE,
-            Submarkets.GENERIC_MILITARY),
-        0.3f);
-
-    ilk_SystemUtils.addMarketplace(
-        Factions.INDEPENDENT,
-        ilk4,
-        null,
-        "Iolanthe",
-        3,
-        Arrays.asList(
-            Conditions.DENSE_ATMOSPHERE,
-            Conditions.HIGH_GRAVITY,
-            Conditions.FRONTIER,
-            Conditions.VOLATILES_ABUNDANT,
-            Conditions.FREE_PORT,
-            Conditions.POPULATION_3),
-        Arrays.asList(
-            Industries.BATTLESTATION_MID,
-            Industries.POPULATION,
-            Industries.MINING,
-            Industries.SPACEPORT
-        ),
-        Arrays.asList(
-            Submarkets.SUBMARKET_BLACK, Submarkets.SUBMARKET_OPEN, Submarkets.SUBMARKET_STORAGE),
-        0.3f);
 
     // only do the following if not in exerelin corvus mode
     if (!MayorateModPlugin.getIsExerelin()) {
