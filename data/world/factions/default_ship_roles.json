@@ -16,14 +16,13 @@
         "ilk_cimeterre_strike": 10
     },
     "combatLarge": {
-        "ilk_del_azarchel_artillery": 10,
-        "ilk_jamaran_fs": 3
+        "ilk_del_azarchel_artillery": 10
     },
     "combatCapital": {
         "ilk_ravana_cs": 5,
         "ilk_ravana_strike": 10,
         "ilk_ravana_assault": 10,
-        "ilk_narayana_fs": 5
+        "ilk_narayana_fs": 10
     },
     "combatFreighterMedium": {
         "ilk_safir_converted_support": 10

@@ -20,8 +20,6 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
   @Override
   public void generate(SectorAPI sector) {
     StarSystemAPI system = sector.createStarSystem("Rasht");
-    system.getLocation().set(13000, -4500);
-
     system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
     // create the star and generate the hyperspace anchor for this system
@@ -84,7 +82,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     // outer system band
     system.addRingBand(star, "terrain", "rings1", 256f, 1, Color.white, 256f, 7000, 300f);
     system.addRingBand(star, "terrain", "rings1", 256f, 0, Color.white, 280f, 7200, 260f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 7350, 210f);
+    system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 7250, 210f);
     system.addAsteroidBelt(star, 400, 7100, 300, 100, 280);
     system.addAsteroidBelt(star, 100, 7600, 100, 60, 150);
     SectorEntityToken ringInner = system.addTerrain(

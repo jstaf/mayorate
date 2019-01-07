@@ -4,7 +4,7 @@
         {
             "entities": ["inir"],
             "faction": "mayorate",
-            "size": 3,
+            "size": 4,
             "startingConditions": [
                 "indoctrination",
                 "very_hot",
@@ -35,10 +35,10 @@
             ],
             "industries": [
                 "population",
-                "high_command",
+                "highcommand",
                 "spaceport",
                 "farming",
-                "orbitalworks",
+                ["orbitalworks", "corrupted_nanoforge"],
                 "refining",
                 "heavybatteries",
                 "starfortress"
@@ -50,15 +50,15 @@
             "size": 4,
             "startingConditions": [
                 "no_atmosphere",
-                "organized_crime",
                 "ice",
                 "luddic_majority",
                 "population_4"
             ],
             "industries": [
                 "population",
-                "militarybase",
+                "patrolhq",
                 "spaceport",
+                "mining",
                 "lightindustry"
             ]
         },
@@ -66,12 +66,12 @@
             "entities": ["iolanthe"],
             "faction": "independent",
             "size": 3,
+            "freePort": true,
             "startingConditions": [
                 "dense_atmosphere",
                 "high_gravity",
                 "volatiles_abundant",
                 "organics_trace",
-                "free_port",
                 "population_3"
             ],
             "industries": [

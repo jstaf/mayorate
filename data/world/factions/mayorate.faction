@@ -1,6 +1,6 @@
 {
 	"id": "mayorate",
-	"color": [224, 200, 35, 255],
+	"color": [244, 218, 132, 255],
 	"displayName": "Mayorate",
 	"displayNameWithArticle": "the Mayorate",
 	"logo": "graphics/ilk/factions/mayorate_flag.png",
@@ -146,8 +146,8 @@
 		]
 	},
 	"factionDoctrine": {
-		"warships": 3,
-		"carriers": 3,
+		"warships": 4,
+		"carriers": 2,
 		"phaseShips": 1,
 
 		"officerQuality": 2,
@@ -176,9 +176,9 @@
 		"tradeLiner": "Resettlement Detachment",
 		"smallTrader": "Emissary",
 
-		"patrolSmall": "Deep-system Picket",
-		"patrolMedium": "Deep-system Squadron",
-		"patrolLarge": "Deep-system Battlegroup",
+		"patrolSmall": "Deep System Picket",
+		"patrolMedium": "Deep System Squadron",
+		"patrolLarge": "Deep System Battlegroup",
 		
 		"inspectionFleet": "Inquisitors",
 		"taskForce": "Expeditionary Fleet",
