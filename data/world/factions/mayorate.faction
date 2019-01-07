@@ -158,9 +158,9 @@
 
 		"aggression": 3,
 
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"combatFreighterProbability":0.2,
+		"combatFreighterCombatUseFraction":0.5,
+		"combatFreighterCombatUseFractionWhenPriority":0.7,
 		"autofitRandomizeProbability":0.1,
 		
 		"commanderSkillsShuffleProbability":0,
@@ -176,12 +176,12 @@
 		"tradeLiner": "Resettlement Detachment",
 		"smallTrader": "Emissary",
 
-		"patrolSmall": "Deep System Picket",
-		"patrolMedium": "Deep System Squadron",
-		"patrolLarge": "Deep System Battlegroup",
+		"patrolSmall": "Picket",
+		"patrolMedium": "Squadron",
+		"patrolLarge": "Battlegroup",
 		
 		"inspectionFleet": "Inquisitors",
-		"taskForce": "Expeditionary Fleet",
+		"taskForce": "Task Force",
 		
 		"foodReliefFleet": "Relief Detachment"
 	}

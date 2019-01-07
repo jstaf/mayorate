@@ -22,7 +22,7 @@
 					   "particleColor":[255,100,100,255]},
 	"autocharge":true,
 	"projectileSpecId":"miningblaster_shot",
-	#"fireSoundOne":"ilk_ramdrive_charge",
+	"fireSoundOne":"ilk_ramdrive_charge",
 	"fireSoundTwo":"ilk_ramdrive_fire",
 	"everyFrameEffect":"data.scripts.weapons.ilk_RamdriveEveryFrameEffect"
 }
