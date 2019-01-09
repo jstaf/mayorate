@@ -17,7 +17,7 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
 
   //static Logger logger = Global.getLogger(ilk_RamdriveEveryFrameEffect.class);
 
-  private static final Color RAMDRIVE_COLOR = new Color(244, 41, 109, 0.5f);
+  private final Color RAMDRIVE_COLOR = new Color(244, 41, 109);
   private static final float PARTICLE_SPAWN_DELAY = 0.05f;
   private float particleDelta = 0;
 
@@ -28,6 +28,10 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
 
   @Override
   public void advance(float delta, CombatEngineAPI engine, WeaponAPI weapon) {
+    if (engine == null || engine.isPaused()) {
+      return;
+    }
+
     if (!initialized) {
       init(weapon);
     }
@@ -40,11 +44,11 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
         if (particleDelta >= PARTICLE_SPAWN_DELAY) {
           particleDelta = 0f;
           engine.addSmoothParticle(
-            weapon.getLocation(), 
-            weapon.getShip().getVelocity(), 
-            15f, 
-            0.6f, 
-            1.0f, 
+            weapon.getLocation(),
+            weapon.getShip().getVelocity(),
+            15f,
+            0.6f,
+            1.0f,
             RAMDRIVE_COLOR);
         }
         break;
@@ -78,17 +82,17 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
     hasfired = true;
     ilk_BeamRendererPlugin.addBeam(
       new ilk_BeamSpec(
-        engine, 
-        weapon.getShip(), 
-        weapon.getLocation(), 
+        engine,
+        weapon.getShip(),
+        weapon.getLocation(),
         weapon.getRange(),
-        weapon.getArcFacing(), 
-        1000f, 
-        DamageType.HIGH_EXPLOSIVE, 
-        500f, 
-        1f, 0.05f, 0.2f, 
-        "beams", "ilk_fakeBeamFX", 
-        40, 
+        weapon.getArcFacing(),
+        1000f,
+        DamageType.HIGH_EXPLOSIVE,
+        500f,
+        1f, 0.05f, 0.2f,
+        "beams", "ilk_fakeBeamFX",
+        40,
         RAMDRIVE_COLOR)
     );
   }

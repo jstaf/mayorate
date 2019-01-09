@@ -23,12 +23,6 @@ public class ilk_NukeOnHitEffect implements OnHitEffectPlugin {
       Vector2f point,
       boolean shieldHit,
       CombatEngineAPI engine) {
-    if (projectile.getSource() != null) {
-      // ilk_AnamorphicFlare.createFlare(projectile.getSource(), new
-      // Vector2f(projectile.getLocation()), Global.getCombatEngine(), 1f, 0.02f, (float)
-      // Math.random() * 5f - 2.5f, 4f, 2f, new Color(255, 165, 0, 255), new Color(255, 225, 150,
-      // 255));
-    }
 
     Global.getCombatEngine()
         .spawnExplosion(point, new Vector2f(), new Color(255, 121, 117, 255), 500f, 0.5f);
