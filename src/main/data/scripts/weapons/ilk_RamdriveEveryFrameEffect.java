@@ -1,5 +1,8 @@
 package data.scripts.weapons;
 
+import org.lazywizard.lazylib.FastTrig;
+import org.lazywizard.lazylib.MathUtils;
+import org.lwjgl.util.vector.Vector2f;
 import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
@@ -19,6 +22,7 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
 
   private final Color RAMDRIVE_COLOR = new Color(244, 41, 109);
   private static final float PARTICLE_SPAWN_DELAY = 0.05f;
+  private static final float PARTICLE_SPAWN_RADIUS = 40f;
   private float particleDelta = 0;
 
   private boolean initialized = false;
@@ -43,8 +47,17 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
         particleDelta += delta;
         if (particleDelta >= PARTICLE_SPAWN_DELAY) {
           particleDelta = 0f;
+
+          float angle = weapon.getCurrAngle();
+          Vector2f offset = weapon.getLocation().translate(
+            (float) FastTrig.cos(Math.toRadians(angle)) * PARTICLE_SPAWN_RADIUS,
+            (float) FastTrig.sin(Math.toRadians(angle)) * PARTICLE_SPAWN_RADIUS);
+          Vector2f location = MathUtils.getRandomPointInCircle(
+            offset,
+            PARTICLE_SPAWN_RADIUS);
+
           engine.addSmoothParticle(
-            weapon.getLocation(),
+            location,
             weapon.getShip().getVelocity(),
             15f,
             0.6f,
@@ -86,7 +99,7 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
         weapon.getShip(),
         weapon.getLocation(),
         weapon.getRange(),
-        weapon.getArcFacing(),
+        weapon.getCurrAngle(),
         1000f,
         DamageType.HIGH_EXPLOSIVE,
         500f,
