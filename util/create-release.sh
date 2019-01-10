@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # just so nothing weird happens
 set -eu
@@ -14,11 +14,10 @@ cp -R . ../$RELEASE
 # now delete everything we don't want
 cd ../$RELEASE
 rm -rf .git .idea out util build .gradle gradle
-rm -f .gitignore *.iml *gradle* 
+rm -f .gitignore *.iml *gradle*
 
 cd ..
 zip -r $RELEASE.zip $RELEASE
 if [ -d $RELEASE ]; then
-	rm -rf $RELEASE
+    rm -rf $RELEASE
 fi
-

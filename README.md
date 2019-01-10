@@ -31,7 +31,8 @@ follow the Linux instructions but note that I do not test on this platform.
 ```bash
 # cd to starsector's "mods/" subdirectory before you start
 git clone https://github.com/jstaf/mayorate.git
-./gradlew run
+./gradlew run      # build and run
+./gradlew release  # create releaseable .zip
 ```
 
 ### Windows
