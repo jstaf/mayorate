@@ -1,10 +1,11 @@
 {
 	"music":{
 		"music_campaign": [
-			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6}, 
+			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6},
 			{"file":"campaign_music_part_2_v28.ogg","source":"sounds/music/music.bin","volume":0.6},
 			{"file":"expanse.ogg","source":"sounds/ilk/music/","volume":0.52},
-			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5}
+			{"file":"nebula.ogg","source":"sounds/ilk/music/","volume":0.5},
+			{"file":"njol.ogg","source":"sounds/ilk/music/","volume":0.6},
 		],
 		"mayorate_neutral":[
 			{"file":"mayorate_neutral.ogg","source":"sounds/ilk/music/","volume":0.30}
@@ -16,7 +17,7 @@
 			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.45}
 		],
 		"ilk_mission2_music":[
-			{"file":"gravitation.ogg","source":"sounds/ilk/music/","volume":0.48}
+			{"file":"steel_rain.ogg","source":"sounds/ilk/music/","volume":0.45}
 		]
 	},
 

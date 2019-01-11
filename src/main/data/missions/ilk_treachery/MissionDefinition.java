@@ -4,7 +4,6 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -38,7 +37,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Set up the player's fleet.  Variant names come from the
     // files in data/variants and data/variants/fighters
     api.addToFleet(
-        FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MNS Nazarin", true);
+        FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MDSV Nazarin", true);
     api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);

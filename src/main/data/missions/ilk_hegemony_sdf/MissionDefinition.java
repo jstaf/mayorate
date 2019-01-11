@@ -19,7 +19,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Set up the fleets so we can add ships and fighter wings to them.
     // In this scenario, the fleets are attacking each other, but
     // in other scenarios, a fleet may be defending or trying to escape
-    api.initFleet(FleetSide.PLAYER, "MNS", FleetGoal.ATTACK, false, 7);
+    api.initFleet(FleetSide.PLAYER, "MDSV", FleetGoal.ATTACK, false, 7);
     api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true, 7);
 
     // Set a small blurb for each fleet that shows up on the mission detail and
@@ -35,13 +35,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
     // Set up the player's fleet.  Variant names come from the
     // files in data/variants and data/variants/fighters
-    api.addToFleet(FleetSide.PLAYER, "ilk_narayana_fs", FleetMemberType.SHIP, "MNS Moneta", true);
+    api.addToFleet(FleetSide.PLAYER, "ilk_narayana_fs", FleetMemberType.SHIP, "MDSV Moneta", true);
     api.addToFleet(FleetSide.PLAYER, "ilk_ravana_assault", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_fs", FleetMemberType.SHIP, false);
     api.addToFleet(
-        FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, "MNS Azure Dream", false);
+        FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, "MDSV Azure Dream", false);
     api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
@@ -78,7 +78,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
           @Override
           public void advance(float amount, List events) {
             interval += amount;
-            if (interval > (140)) {
+            if (interval > (162f)) {
               Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
               interval = 0f;
             }
