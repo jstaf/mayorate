@@ -1,12 +1,15 @@
 package data.scripts.weapons.ai;
 
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.AutofireAIPlugin;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.FluxTrackerAPI;
+import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
-import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
@@ -46,8 +49,7 @@ public class ilk_ThermalLanceAutofirePlugin implements AutofireAIPlugin {
 
     // Can we fire?
     final float fluxRequired = weapon.getFluxCostToFire() * SECONDS_OF_FLUX_NEEDED;
-    if (weapon.isDisabled()
-        || fluxTracker.getFluxLevel() + fluxRequired > fluxTracker.getMaxFlux()) {
+    if (weapon.isDisabled() || fluxTracker.getFluxLevel() + fluxRequired > fluxTracker.getMaxFlux()) {
       firing = false;
       return;
     }
@@ -58,16 +60,12 @@ public class ilk_ThermalLanceAutofirePlugin implements AutofireAIPlugin {
       direction -= Math.PI * 2;
     }
     final Vector2f start = weapon.getLocation();
-    final Vector2f end =
-        new Vector2f(
-            start.getX() + (float) FastTrig.sin(direction) * weapon.getRange(),
-            start.getY() + (float) FastTrig.cos(direction) * weapon.getRange());
-    List<CombatEntityAPI> entities =
-        CombatUtils.getAsteroidsWithinRange(weapon.getLocation(), weapon.getRange());
+    final Vector2f end = new Vector2f(start.getX() + (float) FastTrig.sin(direction) * weapon.getRange(),
+        start.getY() + (float) FastTrig.cos(direction) * weapon.getRange());
+    List<CombatEntityAPI> entities = CombatUtils.getAsteroidsWithinRange(weapon.getLocation(), weapon.getRange());
     for (ShipAPI targetShip : Global.getCombatEngine().getShips()) {
       // Disregard phased enemies.
-      if (targetShip != ship
-          && (targetShip.getPhaseCloak() == null || !targetShip.getPhaseCloak().isActive())
+      if (targetShip != ship && (targetShip.getPhaseCloak() == null || !targetShip.getPhaseCloak().isActive())
           && MathUtils.isWithinRange(targetShip, weapon.getLocation(), weapon.getRange())) {
         entities.add(targetShip);
       }
@@ -90,9 +88,7 @@ public class ilk_ThermalLanceAutofirePlugin implements AutofireAIPlugin {
     }
 
     // Avoid friendly fire, and wasting flux on nothing, asteroids, or hulks.
-    if (firstEntityHit == null
-        || !(firstEntityHit instanceof ShipAPI)
-        || ((ShipAPI) firstEntityHit).isHulk()
+    if (firstEntityHit == null || !(firstEntityHit instanceof ShipAPI) || ((ShipAPI) firstEntityHit).isHulk()
         || firstEntityHit.getOwner() == ship.getOwner()) {
       firing = false;
       return;
@@ -104,8 +100,7 @@ public class ilk_ThermalLanceAutofirePlugin implements AutofireAIPlugin {
     if (defense == DefenseType.SHIELD) {
       // If the shield is down we should dissipate hard flux rather than fire.
       final float fluxFloor = ship.getShield().isOff() ? 0.0f : fluxTracker.getHardFlux();
-      final float fluxLevelAboveFloor =
-          (fluxTracker.getCurrFlux() - fluxFloor) / fluxTracker.getMaxFlux();
+      final float fluxLevelAboveFloor = (fluxTracker.getCurrFlux() - fluxFloor) / fluxTracker.getMaxFlux();
       if ((firing && fluxLevelAboveFloor > SOFT_FLUX_TO_STOP_FIRING_AT_SHIELDS)
           || fluxLevelAboveFloor > SOFT_FLUX_TO_START_FIRING_AT_SHIELDS) {
         firing = false;
@@ -140,5 +135,10 @@ public class ilk_ThermalLanceAutofirePlugin implements AutofireAIPlugin {
   @Override
   public boolean shouldFire() {
     return firing;
+  }
+
+  @Override
+  public MissileAPI getTargetMissile() {
+    return null;
   }
 }
