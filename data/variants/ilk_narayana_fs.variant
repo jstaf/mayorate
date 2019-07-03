@@ -1,49 +1,47 @@
 {
   "displayName": "Fire Support",
-  "fluxCapacitors": 5,
-  "fluxVents": 50,
+  "fluxCapacitors": 7,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "ilk_narayana",
   "hullMods": [
     "targetingunit",
-    "expanded_deck_crew"
+    "missleracks"
   ],
+  "modules": [],
+  "permaMods": [],
   "quality": 0,
   "variantId": "ilk_narayana_fs",
   "weaponGroups": [
     {
-      "autofire": true,
+      "autofire": false,
       "mode": "ALTERNATING",
-      "weapons": {"WS0021": "ilk_ramdrive"}
+      "weapons": {
+        "WS0021": "ilk_ramdrive"
+      }
     },
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
-        "WS0011": "ilk_laserhead",
-        "WS0012": "ilk_laserhead",
-        "WS0019": "ilk_nuke_large",
-        "WS0020": "ilk_nuke_large"
+        "WS0009": "ilk_nuke_large",
+        "WS0010": "ilk_nuke_large",
+        "WS0011": "ilk_nuke_large",
+        "WS0012": "ilk_nuke_large"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "ilk_shotgun",
-        "WS0009": "ilk_shotgun",
-        "WS0010": "ilk_shotgun",
+        "WS0005": "ilk_disruptor",
+        "WS0006": "ilk_graser_light",
+        "WS0007": "ilk_graser_light",
+        "WS0008": "ilk_graser_light",
+        "WS0013": "ilk_graser_light",
         "WS0014": "ilk_disruptor",
         "WS0017": "ilk_ppc",
         "WS0018": "ilk_ppc"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0006": "ilk_graser_light",
-        "WS0013": "ilk_graser_light"
       }
     },
     {
@@ -57,11 +55,16 @@
         "WS0015": "ilk_graser_pd",
         "WS0016": "ilk_graser_pd"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
     }
   ],
   "wings": [
     "ilk_hk_wing",
-    "ilk_hk_wing",
-    "ilk_raad_wing"
+    "ilk_angha_wing",
+    "ilk_angha_wing"
   ]
 }
