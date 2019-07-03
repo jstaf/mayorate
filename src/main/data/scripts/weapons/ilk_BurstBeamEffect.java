@@ -3,6 +3,7 @@ package data.scripts.weapons;
 import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+
 import data.scripts.util.ilk_Interpolation;
 
 public class ilk_BurstBeamEffect implements BeamEffectPlugin {
@@ -40,10 +41,8 @@ public class ilk_BurstBeamEffect implements BeamEffectPlugin {
         // spike out
         amplitude = 1f - ((duration - SPIKE_MAX_DURATION) / SPIKE_MAX_DURATION);
       }
-      beamAPI.setWidth(
-          ilk_Interpolation.linear(ilk_Interpolation.clamp(amplitude))
-                  * (SPIKE_MULT_VAL - 1f)
-                  * startingWidth
+      beamAPI
+          .setWidth(ilk_Interpolation.linear(ilk_Interpolation.clamp(amplitude)) * (SPIKE_MULT_VAL - 1f) * startingWidth
               + startingWidth);
     } else {
       duration = 0f;

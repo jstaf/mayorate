@@ -1,5 +1,9 @@
 package data.shipsystems.scripts.ai;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatTaskManagerAPI;
@@ -13,15 +17,14 @@ import com.fs.starfarer.api.combat.ShipwideAIFlags;
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
-import data.shipsystems.scripts.ilk_PhaseLeapStats;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
+
+import data.shipsystems.scripts.ilk_PhaseLeapStats;
 
 // Note: this AI assumes the ship is somewhat similar to the Cimiterre's default variants--a
 // high-alpha ship deleter that does not want to hang around in combat for too long.
@@ -61,16 +64,14 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
   private List<ShipAPI> nearbyEnemies;
 
   @Override
-  public void init(
-      ShipAPI ship, ShipSystemAPI system, ShipwideAIFlags flags, CombatEngineAPI engine) {
+  public void init(ShipAPI ship, ShipSystemAPI system, ShipwideAIFlags flags, CombatEngineAPI engine) {
     this.ship = ship;
     this.system = system;
     this.flags = flags;
     this.engine = engine;
     taskManager = engine.getFleetManager(ship.getOwner()).getTaskManager(false);
 
-    if (ship.getShield() == null
-        || ship.getShield().getType() == ShieldType.NONE
+    if (ship.getShield() == null || ship.getShield().getType() == ShieldType.NONE
         || ship.getShield().getType() == ShieldType.PHASE) {
       flankAngle = 180.0f;
     } else if (ship.getShield().getType() == ShieldType.FRONT) {
@@ -81,12 +82,9 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
   }
 
   @Override
-  public void advance(
-      float amount, Vector2f missileDangerDir, Vector2f collisionDangerDir, ShipAPI target) {
+  public void advance(float amount, Vector2f missileDangerDir, Vector2f collisionDangerDir, ShipAPI target) {
     interval.advance(amount);
-    if (engine.isPaused()
-        || !interval.intervalElapsed()
-        || !AIUtils.canUseSystemThisFrame(ship)
+    if (engine.isPaused() || !interval.intervalElapsed() || !AIUtils.canUseSystemThisFrame(ship)
         || flags.hasFlag(AIFlags.DO_NOT_USE_FLUX)) {
       return;
     }
@@ -97,24 +95,17 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
       return;
     }
     nearbyEnemies = AIUtils.getNearbyEnemies(ship, CLOSE_ENEMY_RANGE);
-    final float headingAngleFromVelocity =
-        Math.abs(VectorUtils.getFacing(ship.getVelocity()) - ship.getFacing());
-    final float headingAngleFromTarget =
-        target == null
-            ? 0.0f
-            : Math.abs(
-                MathUtils.getShortestRotation(
-                    VectorUtils.getAngle(ship.getLocation(), target.getLocation()),
-                    ship.getFacing()));
+    final float headingAngleFromVelocity = Math.abs(VectorUtils.getFacing(ship.getVelocity()) - ship.getFacing());
+    final float headingAngleFromTarget = target == null ? 0.0f
+        : Math.abs(MathUtils.getShortestRotation(VectorUtils.getAngle(ship.getLocation(), target.getLocation()),
+            ship.getFacing()));
 
-    // Use up to one charge to boost speed when moving forward fast with no nearby enemies (so we
+    // Use up to one charge to boost speed when moving forward fast with no nearby
+    // enemies (so we
     // can regenerate charges before needing them in combat).
     if (system.getAmmo() == system.getMaxAmmo()
-        && ship.getVelocity().lengthSquared()
-            >= 0.9f * ship.getMaxSpeedWithoutBoost() * ship.getMaxSpeedWithoutBoost()
-        && headingAngleFromVelocity < 30.0f
-        && headingAngleFromTarget < 30.0f
-        && nearbyEnemies.isEmpty()) {
+        && ship.getVelocity().lengthSquared() >= 0.9f * ship.getMaxSpeedWithoutBoost() * ship.getMaxSpeedWithoutBoost()
+        && headingAngleFromVelocity < 30.0f && headingAngleFromTarget < 30.0f && nearbyEnemies.isEmpty()) {
       logger.debug("Jumping for out-of-combat mobility.");
       activate(target);
       return;
@@ -122,10 +113,8 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
 
     engagementRange = getEngagementRange();
 
-    final boolean backingOff =
-        flags.hasFlag(AIFlags.BACK_OFF)
-            || flags.hasFlag(AIFlags.BACKING_OFF)
-            || flags.hasFlag(AIFlags.DO_NOT_PURSUE);
+    final boolean backingOff = flags.hasFlag(AIFlags.BACK_OFF) || flags.hasFlag(AIFlags.BACKING_OFF)
+        || flags.hasFlag(AIFlags.DO_NOT_PURSUE);
     final float baseThreat = getThreat(ship.getLocation(), ship.getFacing());
     float bestThreat = baseThreat;
     float baseOpportunity;
@@ -146,39 +135,34 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
         // TODO: Determine why this happens.
         continue;
       }
-      // This is recomputed because different targets mean different facings and possibly
+      // This is recomputed because different targets mean different facings and
+      // possibly
       // differences in which enemies are flanking.
-      final float threat =
-          getThreat(
-              jumpDestination, VectorUtils.getAngle(candidate.getLocation(), jumpDestination));
+      final float threat = getThreat(jumpDestination, VectorUtils.getAngle(candidate.getLocation(), jumpDestination));
       // Rather be here than there.
       if (threat > Math.max(baseThreat, CRITICAL_THREAT_THRESHOLD)) {
-        logger.debug(
-            String.format(
-                "Disregarding a jump toward %s: critical exposure (%f vs %f).",
-                candidate.getName(), threat, Math.max(baseThreat, CRITICAL_THREAT_THRESHOLD)));
+        logger.debug(String.format("Disregarding a jump toward %s: critical exposure (%f vs %f).", candidate.getName(),
+            threat, Math.max(baseThreat, CRITICAL_THREAT_THRESHOLD)));
         continue;
       }
 
-      // We still consider use when the AI is backing off because sometimes jumping is a more
+      // We still consider use when the AI is backing off because sometimes jumping is
+      // a more
       // efficient way to get out of trouble.
       if (backingOff && threat > baseThreat + 1.0) {
-        logger.debug(
-            String.format(
-                "Disregarding a jump toward %s: AI is backing off and jumping would increase exposure (%f vs %f).",
-                candidate.getName(), threat, baseThreat));
+        logger.debug(String.format(
+            "Disregarding a jump toward %s: AI is backing off and jumping would increase exposure (%f vs %f).",
+            candidate.getName(), threat, baseThreat));
         continue;
       }
 
       final float opportunity = assessOpportunity(candidate, jumpDestination);
-      logger.debug(
-          String.format(
-              "Opportunity/threat for %s: %f/%f (best %f/%f)",
-              candidate.getName(), opportunity, threat, bestOpportunity, bestThreat));
-      // TODO: In low-opportunity situations, only use the system against smaller ships or when
+      logger.debug(String.format("Opportunity/threat for %s: %f/%f (best %f/%f)", candidate.getName(), opportunity,
+          threat, bestOpportunity, bestThreat));
+      // TODO: In low-opportunity situations, only use the system against smaller
+      // ships or when
       // outranged.
-      if (opportunity > bestOpportunity
-          || (opportunity == bestOpportunity && threat < bestThreat)) {
+      if (opportunity > bestOpportunity || (opportunity == bestOpportunity && threat < bestThreat)) {
         bestOpportunity = opportunity;
         bestThreat = threat;
         bestTarget = candidate;
@@ -212,8 +196,10 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
 
   // Returns all eligible targets--either the
   private List<ShipAPI> getTargetsForConsideration(ShipAPI target) {
-    // TODO: Investigate how sticky these targets are--e.g. if the ship already has a target  and we
-    // change it here, will it stick to the new target or just revert targets and turn away?
+    // TODO: Investigate how sticky these targets are--e.g. if the ship already has
+    // a target and we
+    // change it here, will it stick to the new target or just revert targets and
+    // turn away?
     if (target != null && !target.isHulk()) {
       return Collections.singletonList(ship.getShipTarget());
     }
@@ -239,17 +225,13 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
         continue;
       }
       // Increase threat if the enemy would be behind our shields.
-      if (Math.abs(
-              MathUtils.getShortestRotation(
-                  VectorUtils.getAngle(position, enemy.getLocation()), ship.getFacing()))
-          > flankAngle) {
+      if (Math.abs(MathUtils.getShortestRotation(VectorUtils.getAngle(position, enemy.getLocation()),
+          ship.getFacing())) > flankAngle) {
         shipThreat *= FLANKING_OPPORTUNITY_MULTIPLIER;
       }
       // Reduce threat if the enemy would not be pointed at us.
-      float angleOffEnemy =
-          Math.abs(
-              MathUtils.getShortestRotation(
-                  VectorUtils.getAngle(enemy.getLocation(), position), enemy.getFacing()));
+      float angleOffEnemy = Math
+          .abs(MathUtils.getShortestRotation(VectorUtils.getAngle(enemy.getLocation(), position), enemy.getFacing()));
       if (angleOffEnemy >= REAR_ANGLE) {
         shipThreat *= REAR_THREAT_MULTIPLIER;
       } else if (angleOffEnemy >= SIDE_ANGLE) {
@@ -260,25 +242,24 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
     return threat;
   }
 
-  // Returns a number representing roughly how much damage we can expect from the enemy at the given
+  // Returns a number representing roughly how much damage we can expect from the
+  // enemy at the given
   // range.
   private float getEnemyThreatAtRange(ShipAPI enemy, float range) {
     // TODO: Actually look at weapons/flux.
     switch (enemy.getHullSize()) {
-      case FIGHTER:
-        return range > 500.0f
-            ? 0.0f
-            : (enemy.getWing() == null ? 0.5f : 1 / enemy.getWing().getSpec().getNumFighters());
-      case FRIGATE:
-        return range > 1000.0f ? 0.0f : 1.0f;
-      case DESTROYER:
-        return range > 1200.0f ? 0.0f : 2.0f;
-      case CRUISER:
-        return range > 1400.0f ? 0.0f : 4.0f;
-      case CAPITAL_SHIP:
-        return range > 1600.0f ? 0.0f : 8.0f;
-      default:
-        return 0.0f;
+    case FIGHTER:
+      return range > 500.0f ? 0.0f : (enemy.getWing() == null ? 0.5f : 1 / enemy.getWing().getSpec().getNumFighters());
+    case FRIGATE:
+      return range > 1000.0f ? 0.0f : 1.0f;
+    case DESTROYER:
+      return range > 1200.0f ? 0.0f : 2.0f;
+    case CRUISER:
+      return range > 1400.0f ? 0.0f : 4.0f;
+    case CAPITAL_SHIP:
+      return range > 1600.0f ? 0.0f : 8.0f;
+    default:
+      return 0.0f;
     }
   }
 
@@ -304,10 +285,8 @@ public class ilk_PhaseLeapAi implements ShipSystemAIScript {
       return 2.0f;
     }
     if (target.getShield().getType() == ShieldType.FRONT
-        && Math.abs(
-                MathUtils.getShortestRotation(
-                    VectorUtils.getAngle(target.getLocation(), position), target.getFacing()))
-            < 0.5f * target.getShield().getArc()) {
+        && Math.abs(MathUtils.getShortestRotation(VectorUtils.getAngle(target.getLocation(), position),
+            target.getFacing())) < 0.5f * target.getShield().getArc()) {
       return 2.0f;
     }
     if (flux.getMaxFlux() - flux.getCurrFlux() < CRITICAL_TARGET_FLUX) {

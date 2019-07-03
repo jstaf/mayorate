@@ -1,18 +1,19 @@
 package data.scripts.plugins;
 
+import java.util.List;
+
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
-import java.util.List;
 
 public class ilk_MusicReset implements EveryFrameCombatPlugin {
 
   /**
-   * Unfortunately, this hack was necessary to prevent mission music from bleeding over into the
-   * title screen.
+   * Unfortunately, this hack was necessary to prevent mission music from bleeding
+   * over into the title screen.
    *
    * @param amount
    * @param events
@@ -26,9 +27,9 @@ public class ilk_MusicReset implements EveryFrameCombatPlugin {
         Global.getSoundPlayer().playMusic(0, 0, "music_title");
       } else if (Global.getCurrentState().equals(GameState.COMBAT)) {
         // we are in combat
-        if (Global.getCombatEngine().getMissionId() != null
-            || Global.getCombatEngine().isSimulation()) {
-          // we're in a mission or mission simulator, check for title music and get rid of it
+        if (Global.getCombatEngine().getMissionId() != null || Global.getCombatEngine().isSimulation()) {
+          // we're in a mission or mission simulator, check for title music and get rid of
+          // it
           if (Global.getSoundPlayer().getCurrentMusicId().equals("miscallenous_main_menu.ogg")) {
             Global.getSoundPlayer().playMusic(0, 0, "music_combat");
           }
@@ -40,14 +41,18 @@ public class ilk_MusicReset implements EveryFrameCombatPlugin {
   }
 
   @Override
-  public void renderInWorldCoords(ViewportAPI viewport) {}
+  public void renderInWorldCoords(ViewportAPI viewport) {
+  }
 
   @Override
-  public void renderInUICoords(ViewportAPI viewport) {}
+  public void renderInUICoords(ViewportAPI viewport) {
+  }
 
   @Override
-  public void init(CombatEngineAPI engine) {}
+  public void init(CombatEngineAPI engine) {
+  }
 
   @Override
-  public void processInputPreCoreControls(float f, List<InputEventAPI> events) {}
+  public void processInputPreCoreControls(float f, List<InputEventAPI> events) {
+  }
 }

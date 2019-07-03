@@ -1,11 +1,13 @@
 package data.scripts.world.utils;
 
+import java.util.Collection;
+
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import java.util.Collection;
+
 import org.apache.log4j.Level;
 
 /** Reset pirate rep as a one-time thing upon accepting mayorate commission */
@@ -32,11 +34,7 @@ public class ilk_CommissionEffects implements EveryFrameScript {
   @Override
   public void advance(float amount) {
     if ((Global.getSector().getCharacterData().getMemory().get("$fcm_faction") != null)
-        && (Global.getSector()
-            .getCharacterData()
-            .getMemory()
-            .get("$fcm_faction")
-            .equals("mayorate"))) {
+        && (Global.getSector().getCharacterData().getMemory().get("$fcm_faction").equals("mayorate"))) {
       // player has a mayorate commission
       FactionAPI pirates = Global.getSector().getFaction(Factions.PIRATES);
 
@@ -44,11 +42,9 @@ public class ilk_CommissionEffects implements EveryFrameScript {
         // player is hostile to pirates, reset rep to inhospitable
         player.setRelationship(pirates.getId(), RepLevel.INHOSPITABLE);
 
-        Global.getSector()
-            .getCampaignUI()
+        Global.getSector().getCampaignUI()
             .addMessage("The Mayorate has interceded with the Sector's pirates on your behalf.");
-        Global.getSector()
-            .getCampaignUI()
+        Global.getSector().getCampaignUI()
             .addMessage("Your relationship with the pirates has been set to inhospitable.");
       }
 
@@ -61,7 +57,8 @@ public class ilk_CommissionEffects implements EveryFrameScript {
    * Debugging method to find out where memory keys are located
    *
    * @param toDump Set of memory keys to dump
-   * @param label What prefix to add when dumping keys (so you can tell where the key came from)
+   * @param label  What prefix to add when dumping keys (so you can tell where the
+   *               key came from)
    */
   private void logKeys(Collection<String> toDump, String label) {
     for (String key : toDump) {

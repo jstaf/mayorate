@@ -9,8 +9,7 @@ public class ilk_InterceptionOptimization extends BaseHullMod {
   public static final float FIGHTER_DAMAGE_BONUS = 50.0f;
 
   @Override
-  public void applyEffectsBeforeShipCreation(
-      HullSize hullSize, MutableShipStatsAPI stats, String id) {
+  public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
     stats.getDamageToFighters().modifyPercent(id, FIGHTER_DAMAGE_BONUS);
   }
 }

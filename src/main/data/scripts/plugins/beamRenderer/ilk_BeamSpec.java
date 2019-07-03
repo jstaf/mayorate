@@ -1,5 +1,7 @@
 package data.scripts.plugins.beamRenderer;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatAsteroidAPI;
@@ -8,15 +10,16 @@ import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
-import data.scripts.util.ilk_CollisionUtilsEX;
-import data.scripts.util.ilk_DamageUtils;
-import java.awt.Color;
+
 import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
+
+import data.scripts.util.ilk_CollisionUtilsEX;
+import data.scripts.util.ilk_DamageUtils;
 
 public class ilk_BeamSpec {
 
@@ -51,22 +54,9 @@ public class ilk_BeamSpec {
   float opacity;
   CombatEntityAPI target;
 
-  public ilk_BeamSpec(
-      CombatEngineAPI combatEngineAPI,
-      ShipAPI setSource,
-      Vector2f startLocSet,
-      float rangeSet,
-      float aimSet,
-      float damageTotal,
-      DamageType damageType,
-      float empDamageTotal,
-      float time,
-      float fadeInTime,
-      float fadeOutTime,
-      String spriteKey,
-      String spriteName,
-      float wide,
-      Color colorSet) {
+  public ilk_BeamSpec(CombatEngineAPI combatEngineAPI, ShipAPI setSource, Vector2f startLocSet, float rangeSet,
+      float aimSet, float damageTotal, DamageType damageType, float empDamageTotal, float time, float fadeInTime,
+      float fadeOutTime, String spriteKey, String spriteName, float wide, Color colorSet) {
     final float effectiveTime = time + 0.5f * (fadeInTime + fadeOutTime);
     engine = combatEngineAPI;
     source = setSource;
@@ -105,7 +95,8 @@ public class ilk_BeamSpec {
     if (delta <= fadeIn) {
       intensity = delta / fadeIn;
       opacity = (float) (FastTrig.sin(intensity * Math.PI / 2));
-      // second condition for elseif not necessary for next as values lower than fadeIn have already
+      // second condition for elseif not necessary for next as values lower than
+      // fadeIn have already
       // been caught
     } else if (delta <= duration + fadeIn) {
       intensity = 1f;
@@ -119,7 +110,8 @@ public class ilk_BeamSpec {
       isDone = true;
     }
 
-    // only recalc hitpoint after a certain update interval to avoid wasting cpu for no reason
+    // only recalc hitpoint after a certain update interval to avoid wasting cpu for
+    // no reason
     interval += amount;
     if (interval > RECALC_INTERVAL) {
       interval = 0f;
@@ -133,21 +125,13 @@ public class ilk_BeamSpec {
 
       if (target instanceof ShipAPI) {
         ShipAPI ship = (ShipAPI) target;
-        // Check for beam dps reduction--this is not taken into account by applyDamage because it
+        // Check for beam dps reduction--this is not taken into account by applyDamage
+        // because it
         // does not know this is a beam.
         currDamage *= ship.getMutableStats().getBeamDamageTakenMult().getModifiedValue();
       }
-      ilk_DamageUtils.applyDamageAtHitStrength(
-          engine,
-          target,
-          hitLoc,
-          currDamage,
-          0.5f * dps * intensity,
-          type,
-          currEmp,
-          false,
-          true,
-          source);
+      ilk_DamageUtils.applyDamageAtHitStrength(engine, target, hitLoc, currDamage, 0.5f * dps * intensity, type,
+          currEmp, false, true, source);
     }
   }
 
@@ -166,32 +150,32 @@ public class ilk_BeamSpec {
       }
 
       // ignore friendlies
-      if (entity.getOwner() == source.getOwner()) continue;
+      if (entity.getOwner() == source.getOwner())
+        continue;
 
       // check for collision
-      if (CollisionUtils.getCollides(
-          startLoc, end, entity.getLocation(), entity.getCollisionRadius())) {
+      if (CollisionUtils.getCollides(startLoc, end, entity.getLocation(), entity.getCollisionRadius())) {
         Vector2f collide = null;
 
         // ship collision?
         if (entity instanceof ShipAPI) {
           // find the collision point with shields/hull
-          Vector2f hitPoint =
-              ilk_CollisionUtilsEX.getShipCollisionPoint(startLoc, end, (ShipAPI) entity);
-          if (hitPoint != null) collide = hitPoint;
+          Vector2f hitPoint = ilk_CollisionUtilsEX.getShipCollisionPoint(startLoc, end, (ShipAPI) entity);
+          if (hitPoint != null)
+            collide = hitPoint;
 
           // asteroid collision?
         } else if (entity instanceof CombatAsteroidAPI) {
-          Vector2f hitPoint =
-              ilk_CollisionUtilsEX.getCollisionPointOnCircumference(
-                  startLoc, end, entity.getLocation(), entity.getCollisionRadius());
-          if (hitPoint != null) collide = hitPoint;
+          Vector2f hitPoint = ilk_CollisionUtilsEX.getCollisionPointOnCircumference(startLoc, end, entity.getLocation(),
+              entity.getCollisionRadius());
+          if (hitPoint != null)
+            collide = hitPoint;
         }
 
-        // if impact is closer than the curent beam end point, set it as the new end point and save
+        // if impact is closer than the curent beam end point, set it as the new end
+        // point and save
         // target
-        if ((collide != null)
-            && (MathUtils.getDistance(startLoc, collide) < MathUtils.getDistance(startLoc, end))) {
+        if ((collide != null) && (MathUtils.getDistance(startLoc, collide) < MathUtils.getDistance(startLoc, end))) {
           end = collide;
           theTarget = entity;
         }

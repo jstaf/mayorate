@@ -4,24 +4,29 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority;
-import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.AutofireAIPlugin;
-import data.scripts.util.ilk_DamageUtils;
-import data.scripts.weapons.ai.ilk_NukeAI;
-import data.scripts.weapons.ai.ilk_ThermalLanceAutofirePlugin;
-import data.scripts.weapons.ilk_RamdriveEveryFrameEffect;
-import data.scripts.world.mayorateGen;
-import data.scripts.world.utils.ilk_CommissionEffects;
-import data.scripts.world.utils.ilk_PathSpawnPoint;
-import data.shipsystems.scripts.ai.ilk_PhaseLeapAi;
-import data.shipsystems.scripts.ilk_BubbleShieldStats;
-import data.shipsystems.scripts.ilk_FighterCoprocessingStats;
-import exerelin.campaign.SectorManager;
+import com.fs.starfarer.api.combat.MissileAIPlugin;
+import com.fs.starfarer.api.combat.MissileAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.WeaponAPI;
+
 import org.apache.log4j.Level;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
 import org.json.JSONObject;
+
+import data.scripts.util.ilk_DamageUtils;
+import data.scripts.weapons.ilk_RamdriveEveryFrameEffect;
+import data.scripts.weapons.ai.ilk_NukeAI;
+import data.scripts.weapons.ai.ilk_ThermalLanceAutofirePlugin;
+import data.scripts.world.mayorateGen;
+import data.scripts.world.utils.ilk_CommissionEffects;
+import data.scripts.world.utils.ilk_PathSpawnPoint;
+import data.shipsystems.scripts.ilk_BubbleShieldStats;
+import data.shipsystems.scripts.ilk_FighterCoprocessingStats;
+import data.shipsystems.scripts.ai.ilk_PhaseLeapAi;
+import exerelin.campaign.SectorManager;
 
 public class MayorateModPlugin extends BaseModPlugin {
 
@@ -71,22 +76,20 @@ public class MayorateModPlugin extends BaseModPlugin {
   @Override
   public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
     switch (missile.getProjectileSpecId()) {
-      case NUKE_ID:
-        return new PluginPick<MissileAIPlugin>(
-            new ilk_NukeAI(missile, launchingShip), PickPriority.HIGHEST);
-      default:
-        return null;
+    case NUKE_ID:
+      return new PluginPick<MissileAIPlugin>(new ilk_NukeAI(missile, launchingShip), PickPriority.HIGHEST);
+    default:
+      return null;
     }
   }
 
   @Override
   public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
     switch (weapon.getId()) {
-      case THERMAL_LANCE_ID:
-        return new PluginPick<AutofireAIPlugin>(
-            new ilk_ThermalLanceAutofirePlugin(weapon), PickPriority.MOD_SET);
-      default:
-        return null;
+    case THERMAL_LANCE_ID:
+      return new PluginPick<AutofireAIPlugin>(new ilk_ThermalLanceAutofirePlugin(weapon), PickPriority.MOD_SET);
+    default:
+      return null;
     }
   }
 

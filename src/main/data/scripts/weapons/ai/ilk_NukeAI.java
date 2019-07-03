@@ -1,5 +1,10 @@
 package data.scripts.weapons.ai;
 
+import java.awt.Color;
+import java.util.Collections;
+import java.util.List;
+import java.util.ListIterator;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -9,10 +14,7 @@ import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipCommand;
-import java.awt.Color;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
+
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.light.LightShader;
@@ -61,19 +63,13 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
   public ilk_NukeAI(MissileAPI missile, ShipAPI launchingShip) {
     this.missile = missile;
 
-    List<ShipAPI> directTargets =
-        CombatUtils.getShipsWithinRange(launchingShip.getMouseTarget(), 100f);
+    List<ShipAPI> directTargets = CombatUtils.getShipsWithinRange(launchingShip.getMouseTarget(), 100f);
     if (!directTargets.isEmpty()) {
-      Collections.sort(
-          directTargets,
-          new CollectionUtils.SortEntitiesByDistance(launchingShip.getMouseTarget()));
+      Collections.sort(directTargets, new CollectionUtils.SortEntitiesByDistance(launchingShip.getMouseTarget()));
       ListIterator<ShipAPI> iter = directTargets.listIterator();
       while (iter.hasNext()) {
         ShipAPI tmp = iter.next();
-        if (!tmp.isHulk()
-            && tmp.getOwner() != launchingShip.getOwner()
-            && !tmp.isDrone()
-            && !tmp.isFighter()) {
+        if (!tmp.isHulk() && tmp.getOwner() != launchingShip.getOwner() && !tmp.isDrone() && !tmp.isFighter()) {
           setTarget(tmp);
           break;
         }
@@ -91,15 +87,12 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
 
   public static void detonate(MissileAPI missile) {
 
-    Global.getCombatEngine()
-        .spawnExplosion(
-            missile.getLocation(), new Vector2f(), new Color(255, 121, 117, 255), 500f, 0.5f);
-    Global.getCombatEngine()
-        .addHitParticle(
-            missile.getLocation(), new Vector2f(), 400f, 1f, 2f, new Color(255, 255, 255, 200));
-    Global.getCombatEngine()
-        .addHitParticle(
-            missile.getLocation(), new Vector2f(), 1000f, 1f, 2f, new Color(255, 121, 117, 255));
+    Global.getCombatEngine().spawnExplosion(missile.getLocation(), new Vector2f(), new Color(255, 121, 117, 255), 500f,
+        0.5f);
+    Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 400f, 1f, 2f,
+        new Color(255, 255, 255, 200));
+    Global.getCombatEngine().addHitParticle(missile.getLocation(), new Vector2f(), 1000f, 1f, 2f,
+        new Color(255, 121, 117, 255));
 
     RippleDistortion shockwave = new RippleDistortion();
     shockwave.setLocation(missile.getLocation());
@@ -119,34 +112,18 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
     light.fadeOut(0.5f);
     LightShader.addLight(light);
 
-    Global.getSoundPlayer()
-        .playSound("ilk_nuke_detonate", 1f, 1f, missile.getLocation(), new Vector2f());
+    Global.getSoundPlayer().playSound("ilk_nuke_detonate", 1f, 1f, missile.getLocation(), new Vector2f());
 
     // spawn stuff to cause damage
-    Global.getCombatEngine()
-        .spawnProjectile(
-            missile.getSource(),
-            missile.getWeapon(),
-            "ilk_nuke_primaryDet",
-            missile.getLocation(),
-            0f,
-            null);
-    Global.getCombatEngine()
-        .applyDamage(
-            missile,
-            missile.getLocation(),
-            missile.getHitpoints() * 100f,
-            DamageType.FRAGMENTATION,
-            0f,
-            false,
-            false,
-            missile);
+    Global.getCombatEngine().spawnProjectile(missile.getSource(), missile.getWeapon(), "ilk_nuke_primaryDet",
+        missile.getLocation(), 0f, null);
+    Global.getCombatEngine().applyDamage(missile, missile.getLocation(), missile.getHitpoints() * 100f,
+        DamageType.FRAGMENTATION, 0f, false, false, missile);
     for (int i = 0; i < 60; i++) {
       float angle = (float) (i - 1) * 6f;
       Vector2f location = MathUtils.getPointOnCircumference(missile.getLocation(), 10f, angle);
-      Global.getCombatEngine()
-          .spawnProjectile(
-              missile.getSource(), missile.getWeapon(), "ilk_nuke_damage", location, angle, null);
+      Global.getCombatEngine().spawnProjectile(missile.getSource(), missile.getWeapon(), "ilk_nuke_damage", location,
+          angle, null);
     }
   }
 
@@ -155,8 +132,7 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
     if (missile.isFizzling() || missile.isFading()) {
       if (target != null) {
         float distance = MathUtils.getDistance(target.getLocation(), missile.getLocation());
-        if (distance
-            <= DETONATE_DISTANCE + target.getCollisionRadius() + missile.getCollisionRadius()) {
+        if (distance <= DETONATE_DISTANCE + target.getCollisionRadius() + missile.getCollisionRadius()) {
           detonate(missile);
         }
       }
@@ -165,10 +141,8 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
 
     timeLive += amount;
 
-    if (target == null
-        || (target instanceof ShipAPI && (((ShipAPI) target).isHulk()))
-        || target.getCollisionClass() == CollisionClass.NONE
-        || (missile.getOwner() == target.getOwner())
+    if (target == null || (target instanceof ShipAPI && (((ShipAPI) target).isHulk()))
+        || target.getCollisionClass() == CollisionClass.NONE || (missile.getOwner() == target.getOwner())
         || !Global.getCombatEngine().isEntityInPlay(target)) {
       setTarget(findBestTarget(missile));
       if (target == null) {
@@ -180,16 +154,14 @@ public class ilk_NukeAI implements MissileAIPlugin, GuidedMissileAI {
     float distance = MathUtils.getDistance(target.getLocation(), missile.getLocation());
     Vector2f guidedTarget = target.getLocation();
 
-    if (distance <= DETONATE_DISTANCE + target.getCollisionRadius() + missile.getCollisionRadius()
-        && timeLive >= 2f) {
+    if (distance <= DETONATE_DISTANCE + target.getCollisionRadius() + missile.getCollisionRadius() && timeLive >= 2f) {
       timeLive = -99999f;
       detonate(missile);
       return;
     }
 
-    float angularDistance =
-        MathUtils.getShortestRotation(
-            missile.getFacing(), VectorUtils.getAngle(missile.getLocation(), guidedTarget));
+    float angularDistance = MathUtils.getShortestRotation(missile.getFacing(),
+        VectorUtils.getAngle(missile.getLocation(), guidedTarget));
     float absDAng = Math.abs(angularDistance);
 
     missile.giveCommand(angularDistance < 0 ? ShipCommand.TURN_RIGHT : ShipCommand.TURN_LEFT);

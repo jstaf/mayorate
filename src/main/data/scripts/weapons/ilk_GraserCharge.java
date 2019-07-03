@@ -5,8 +5,10 @@ import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
-import data.scripts.util.ilk_DamageUtils;
+
 import org.lwjgl.util.vector.Vector2f;
+
+import data.scripts.util.ilk_DamageUtils;
 
 /** @author kazi */
 public class ilk_GraserCharge extends ilk_BurstBeamEffect implements BeamEffectPlugin {
@@ -17,26 +19,13 @@ public class ilk_GraserCharge extends ilk_BurstBeamEffect implements BeamEffectP
     if (beam.didDamageThisFrame()) {
       Vector2f point = beam.getTo();
       float damage = beam.getWeapon().getDamage().getDamage() * amount * 5f;
-      float multiplier =
-          beam.getWeapon()
-              .getShip()
-              .getMutableStats()
-              .getEnergyWeaponDamageMult()
-              .getModifiedValue();
+      float multiplier = beam.getWeapon().getShip().getMutableStats().getEnergyWeaponDamageMult().getModifiedValue();
       DamageType type = beam.getWeapon().getDamageType();
       float fluxMult = beam.getSource().getFluxTracker().getFluxLevel();
 
-      ilk_DamageUtils.applyDamageAtHitStrength(
-          Global.getCombatEngine(),
-          beam.getDamageTarget(),
-          point,
-          damage * fluxMult * multiplier,
-          0.5f * beam.getWeapon().getDamage().getDamage() * (1 + fluxMult) * multiplier,
-          type,
-          0,
-          false,
-          false,
-          beam.getSource());
+      ilk_DamageUtils.applyDamageAtHitStrength(Global.getCombatEngine(), beam.getDamageTarget(), point,
+          damage * fluxMult * multiplier, 0.5f * beam.getWeapon().getDamage().getDamage() * (1 + fluxMult) * multiplier,
+          type, 0, false, false, beam.getSource());
     }
   }
 }

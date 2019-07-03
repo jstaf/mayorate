@@ -1,7 +1,16 @@
 package data.shipsystems.scripts.ai;
 
-import com.fs.starfarer.api.combat.*;
 import java.util.List;
+
+import com.fs.starfarer.api.combat.CombatAssignmentType;
+import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.CombatFleetManagerAPI;
+import com.fs.starfarer.api.combat.CombatTaskManagerAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipSystemAIScript;
+import com.fs.starfarer.api.combat.ShipSystemAPI;
+import com.fs.starfarer.api.combat.ShipwideAIFlags;
+
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
@@ -25,49 +34,53 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
   private boolean objectivesExist;
 
   @Override
-  public void init(
-      ShipAPI shipAPI,
-      ShipSystemAPI shipSystemAPI,
-      ShipwideAIFlags shipwideAIFlags,
+  public void init(ShipAPI shipAPI, ShipSystemAPI shipSystemAPI, ShipwideAIFlags shipwideAIFlags,
       CombatEngineAPI combatEngineAPI) {
     engine = combatEngineAPI;
     ship = shipAPI;
     system = shipSystemAPI;
     aiFlags = shipwideAIFlags;
     objectivesExist = !engine.getObjectives().isEmpty();
-    manager =
-        engine.getFleetManager(ship.getOwner()).getTaskManager(false); // wtf is the ally argument?
+    manager = engine.getFleetManager(ship.getOwner()).getTaskManager(false); // wtf is the ally argument?
   }
 
   @Override
   public void advance(float v, Vector2f vector2f, Vector2f vector2f1, ShipAPI shipAPI) {
     // should we even be running this AI script?
-    if (engine == null) return;
+    if (engine == null)
+      return;
     interval += v;
-    if (interval < THRESHOLD) return;
-    if (!AIUtils.canUseSystemThisFrame(ship)) return;
-    if (ship.getSystem().getAmmo() == 0) return;
-    if (ship.isHoldFire()) return;
+    if (interval < THRESHOLD)
+      return;
+    if (!AIUtils.canUseSystemThisFrame(ship))
+      return;
+    if (ship.getSystem().getAmmo() == 0)
+      return;
+    if (ship.isHoldFire())
+      return;
 
     // if we've gotten here, we need to evaluate threats and our current situation
 
     // step 1: are we desperate?
     if (ship.isRetreating()) {
-      // deploy mines if there's an enemy anywhere within sight! (hopefully this will slow them the
+      // deploy mines if there's an enemy anywhere within sight! (hopefully this will
+      // slow them the
       // fuck down.)
       enemies = AIUtils.getNearbyEnemies(ship, 1200f);
-      if (!enemies.isEmpty()) ship.useSystem();
+      if (!enemies.isEmpty())
+        ship.useSystem();
     }
 
-    // if running away/backing off and enemies are nearby, deploy mines for breathing room
-    if (aiFlags.hasFlag(ShipwideAIFlags.AIFlags.BACK_OFF)
-        || aiFlags.hasFlag(ShipwideAIFlags.AIFlags.RUN_QUICKLY)) {
+    // if running away/backing off and enemies are nearby, deploy mines for
+    // breathing room
+    if (aiFlags.hasFlag(ShipwideAIFlags.AIFlags.BACK_OFF) || aiFlags.hasFlag(ShipwideAIFlags.AIFlags.RUN_QUICKLY)) {
       enemies = AIUtils.getNearbyEnemies(ship, 800f);
       if (!enemies.isEmpty()) {
         // evaluate nearby targets
         for (ShipAPI enemy : enemies) {
           // are they targeting us?
-          if (enemy.getShipTarget() == null) continue;
+          if (enemy.getShipTarget() == null)
+            continue;
           if (enemy.getShipTarget().equals(ship)) {
             ship.useSystem();
             break;
@@ -94,8 +107,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
     enemyCount = 0;
     for (ShipAPI enemy : enemies) {
       if (MathUtils.getDistance(ship, enemy) < 500) {
-        if (enemy.getFluxTracker().isOverloadedOrVenting()
-            || (enemy.getShield() == null)
+        if (enemy.getFluxTracker().isOverloadedOrVenting() || (enemy.getShield() == null)
             || (enemy.getShield().isOff())) {
           ship.useSystem();
           break;
@@ -117,8 +129,7 @@ public class ilk_MinelayerAI implements ShipSystemAIScript {
   private void staticObjectiveEval(Vector2f objectiveLoc) {
     if (MathUtils.getDistance(ship, objectiveLoc) < 500f) {
       // have we mined this objective obsessively yet?
-      if ((system.getAmmo() > 1)
-          && (CombatUtils.getMissilesWithinRange(objectiveLoc, 500f).size() < 50)) {
+      if ((system.getAmmo() > 1) && (CombatUtils.getMissilesWithinRange(objectiveLoc, 500f).size() < 50)) {
         // NEEDS MORE MINES
         ship.useSystem();
       }

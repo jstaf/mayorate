@@ -1,21 +1,23 @@
 package data.scripts.world.utils;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.*;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.SectorAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import data.scripts.world.BaseSpawnPoint;
+
 import org.apache.log4j.Level;
+
+import data.scripts.world.BaseSpawnPoint;
 
 public class ilk_PathSpawnPoint extends BaseSpawnPoint {
 
   FactionAPI path;
   private static final float PATH_SPAWN_CHANCE = 0.5f;
 
-  public ilk_PathSpawnPoint(
-      SectorAPI sector,
-      LocationAPI location,
-      float daysInterval,
-      int maxFleets,
+  public ilk_PathSpawnPoint(SectorAPI sector, LocationAPI location, float daysInterval, int maxFleets,
       SectorEntityToken anchor) {
     super(sector, location, daysInterval, maxFleets, anchor);
     path = Global.getSector().getFaction(Factions.LUDDIC_PATH);
@@ -30,16 +32,12 @@ public class ilk_PathSpawnPoint extends BaseSpawnPoint {
     double rand = 0f;
     while (rand < PATH_SPAWN_CHANCE) {
       rand = Math.random();
-      //TODO is FactionAPI.ShipPickParams() the right choice here?
+      // TODO is FactionAPI.ShipPickParams() the right choice here?
       path.pickShipAndAddToFleet("combatSmall", new FactionAPI.ShipPickParams(), fleet);
     }
 
-    Global.getLogger(ilk_PathSpawnPoint.class)
-        .log(
-            Level.DEBUG,
-            "Spawned path fleet w/ "
-                + fleet.getFleetData().getMembersListCopy().size()
-                + " members.");
+    Global.getLogger(ilk_PathSpawnPoint.class).log(Level.DEBUG,
+        "Spawned path fleet w/ " + fleet.getFleetData().getMembersListCopy().size() + " members.");
     getLocation().spawnFleet(getAnchor(), 0, 0, fleet);
 
     return fleet;

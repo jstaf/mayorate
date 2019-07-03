@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+
 import org.apache.log4j.Logger;
 
 public class ilk_BubbleShieldStats extends BaseShipSystemScript {
@@ -29,24 +30,24 @@ public class ilk_BubbleShieldStats extends BaseShipSystemScript {
     }
 
     switch (state) {
-      case IN:
-        // Expand shield to 360, fade in shield
-        shield.setArc(effectLevel * (360 - orig) + orig);
-        stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
-        stats.getShieldUnfoldRateMult().modifyMult(id, 3f);
-        break;
-      case ACTIVE:
-        shield.setArc(360f);
-        stats.getShieldDamageTakenMult().modifyMult(id, 0f);
-        break;
-      case OUT:
-        // Close shield
-        shield.setArc(effectLevel * (360 - orig) + orig);
-        stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
-        break;
-      case COOLDOWN:
-      case IDLE:
-        // Nothing to do.
+    case IN:
+      // Expand shield to 360, fade in shield
+      shield.setArc(effectLevel * (360 - orig) + orig);
+      stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
+      stats.getShieldUnfoldRateMult().modifyMult(id, 3f);
+      break;
+    case ACTIVE:
+      shield.setArc(360f);
+      stats.getShieldDamageTakenMult().modifyMult(id, 0f);
+      break;
+    case OUT:
+      // Close shield
+      shield.setArc(effectLevel * (360 - orig) + orig);
+      stats.getShieldDamageTakenMult().modifyMult(id, 1 - effectLevel);
+      break;
+    case COOLDOWN:
+    case IDLE:
+      // Nothing to do.
     }
 
     if ((effectLevel == 0) && (start)) {

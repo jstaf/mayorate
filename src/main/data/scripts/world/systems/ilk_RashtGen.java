@@ -1,5 +1,7 @@
 package data.scripts.world.systems;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
@@ -7,13 +9,12 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.impl.campaign.ids.*;
+import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
+
 import data.scripts.MayorateModPlugin;
 import data.scripts.world.utils.ilk_BountySpawner;
 import data.scripts.world.utils.ilk_CommissionEffects;
-import java.awt.Color;
-
 
 public class ilk_RashtGen implements SectorGeneratorPlugin {
 
@@ -24,8 +25,7 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
     // create the star and generate the hyperspace anchor for this system
     PlanetAPI star = system.initStar("rasht", "ilk_star_rasht", 400f, 300f);
-    system.setLightColor(
-        new Color(183, 98, 84)); // light color in entire system, affects all entities
+    system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
     // SectorEntityToken creation goes from star -> fringe
     PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1000f, 30f);
@@ -38,9 +38,10 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 2150, 170f);
     system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 1975, 220f);
     system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 2200, 140f);
-    // system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300, 110f);
-    SectorEntityToken ring = system.addTerrain(
-            Terrain.RING, new BaseRingTerrain.RingParams(680f, 1950f, null, "Cinder Field"));
+    // system.addRingBand(star, "misc", "rings1", 20f, 2, Color.white, 20f, 2300,
+    // 110f);
+    SectorEntityToken ring = system.addTerrain(Terrain.RING,
+        new BaseRingTerrain.RingParams(680f, 1950f, null, "Cinder Field"));
     ring.setCircularOrbit(star, 0, 0, 120f);
 
     PlanetAPI ilkhanna = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 185, 175, 4200, 200);
@@ -54,15 +55,14 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     mun.setCustomDescriptionId("planet_Mun");
 
     // add station
-    SectorEntityToken ilk_station = system.addCustomEntity(
-        "ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr", "mayorate");
+    SectorEntityToken ilk_station = system.addCustomEntity("ilk_port", "Kushehr Orbital Yards", "ilk_station_kushehr",
+        "mayorate");
     ilk_station.setCircularOrbitPointingDown(ilkhanna, 315f, 300f, 40f);
     ilk_station.setInteractionImage("illustrations", "interdiction");
     ilk_station.setCustomDescriptionId("ilk_station_kushehr");
 
     // create relay
-    SectorEntityToken relay = system.addCustomEntity(
-        "mayorate_relay", // unique id
+    SectorEntityToken relay = system.addCustomEntity("mayorate_relay", // unique id
         "Rasht Relay", // name - if null, defaultName from custom_entities.json will be used
         "comm_relay", // type of object, defined in custom_entities.json
         "mayorate"); // faction
@@ -85,19 +85,17 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
     system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 7250, 210f);
     system.addAsteroidBelt(star, 400, 7100, 300, 100, 280);
     system.addAsteroidBelt(star, 100, 7600, 100, 60, 150);
-    SectorEntityToken ringInner = system.addTerrain(
-        Terrain.RING, new BaseRingTerrain.RingParams(600f, 6900, null, "Lanula's Arch"));
+    SectorEntityToken ringInner = system.addTerrain(Terrain.RING,
+        new BaseRingTerrain.RingParams(600f, 6900, null, "Lanula's Arch"));
     ringInner.setCircularOrbit(star, 0, 0, 165f);
 
-    PlanetAPI iolanthe = system.addPlanet(
-        "iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 9650f, 350f);
+    PlanetAPI iolanthe = system.addPlanet("iolanthe", star, "Iolanthe", "gas_giant", 277f, 200f, 9650f, 350f);
     iolanthe.setCustomDescriptionId("planet_Iolanthe");
     iolanthe.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "asharu"));
     iolanthe.getSpec().setGlowColor(new Color(118, 248, 255, 255));
     iolanthe.getSpec().setUseReverseLightForGlow(true);
     iolanthe.applySpecChanges();
-    system.addRingBand(
-        iolanthe, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
+    system.addRingBand(iolanthe, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
 
     system.addPlanet("amaru", iolanthe, "Amaru", "cryovolcanic", 330f, 50f, 800f, 50f);
 
@@ -106,10 +104,12 @@ public class ilk_RashtGen implements SectorGeneratorPlugin {
 
     // only do the following if not in exerelin corvus mode
     if (!MayorateModPlugin.getIsExerelin()) {
-      // start occasional bounties against mayorate enemies so players can more easily level up their mayorate rep
+      // start occasional bounties against mayorate enemies so players can more easily
+      // level up their mayorate rep
       sector.addScript(new ilk_BountySpawner(sector, system, ilkhanna.getMarket(), 180f));
 
-      // add forgiveness script to avoid rep decay on mayorate commission from being hostile with pirates
+      // add forgiveness script to avoid rep decay on mayorate commission from being
+      // hostile with pirates
       sector.addScript(new ilk_CommissionEffects());
     }
   }

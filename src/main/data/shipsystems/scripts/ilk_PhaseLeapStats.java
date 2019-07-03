@@ -1,12 +1,14 @@
 package data.shipsystems.scripts;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
-import java.awt.Color;
+
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
 import org.lazywizard.lazylib.CollisionUtils;
@@ -44,65 +46,60 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
     ShipAPI ship = (ShipAPI) stats.getEntity();
 
     switch (state) {
-      case IN:
-        if (isActive) {
-          return;
+    case IN:
+      if (isActive) {
+        return;
+      }
+      isActive = true;
+      // find ship location before teleport
+      startLoc = new Vector2f(ship.getLocation());
+      if (ship.getVelocity().lengthSquared() > 0f) {
+        for (int i = 0; i < 75; i++) {
+          Global.getCombatEngine().addSmoothParticle(
+              MathUtils.getRandomPointInCircle(startLoc, 1f * ship.getCollisionRadius()),
+              (Vector2f) (new Vector2f(ship.getVelocity())).normalise()
+                  .scale(LEAP_DISTANCE * 5f * (float) Math.random()),
+              (float) Math.random() * 15f + 15f, (float) Math.random() * 0.2f + 0.8f,
+              (float) Math.random() * 0.1f + 0.35f, EXPLOSION_COLOR);
         }
-        isActive = true;
-        // find ship location before teleport
-        startLoc = new Vector2f(ship.getLocation());
-        if (ship.getVelocity().lengthSquared() > 0f) {
-          for (int i = 0; i < 75; i++) {
-            Global.getCombatEngine()
-                .addSmoothParticle(
-                    MathUtils.getRandomPointInCircle(startLoc, 1f * ship.getCollisionRadius()),
-                    (Vector2f)
-                        (new Vector2f(ship.getVelocity()))
-                            .normalise()
-                            .scale(LEAP_DISTANCE * 5f * (float) Math.random()),
-                    (float) Math.random() * 15f + 15f,
-                    (float) Math.random() * 0.2f + 0.8f,
-                    (float) Math.random() * 0.1f + 0.35f,
-                    EXPLOSION_COLOR);
-          }
+      }
+      break;
+    case OUT:
+      if (!isActive) {
+        return;
+      }
+      Vector2f endLoc = calculateEndLocation(ship, startLoc);
+      ship.getLocation().set(endLoc);
+
+      // teleport and face to target
+      ShipAPI target = ship.getShipTarget();
+      if ((target != null) && (!target.isHulk())) {
+        Vector2f difference = Vector2f.sub(target.getLocation(), endLoc, null);
+        double newDirection = Math.atan2(difference.getY(), difference.getX());
+        newDirection = Math.toDegrees(newDirection);
+        if (newDirection < 0) {
+          newDirection += 360;
         }
-        break;
-      case OUT:
-        if (!isActive) {
-          return;
-        }
-        Vector2f endLoc = calculateEndLocation(ship, startLoc);
-        ship.getLocation().set(endLoc);
+        ship.setFacing((float) newDirection);
+        ship.setAngularVelocity(0.0f);
+      }
 
-        // teleport and face to target
-        ShipAPI target = ship.getShipTarget();
-        if ((target != null) && (!target.isHulk())) {
-          Vector2f difference = Vector2f.sub(target.getLocation(), endLoc, null);
-          double newDirection = Math.atan2(difference.getY(), difference.getX());
-          newDirection = Math.toDegrees(newDirection);
-          if (newDirection < 0) {
-            newDirection += 360;
-          }
-          ship.setFacing((float) newDirection);
-          ship.setAngularVelocity(0.0f);
-        }
+      StandardLight light = new StandardLight();
+      light.setLocation(ship.getLocation());
+      light.setColor(new Color(255, 121, 117, 255));
+      light.setSize(500f);
+      light.setIntensity(2f);
+      light.fadeOut(0.5f);
+      LightShader.addLight(light);
 
-        StandardLight light = new StandardLight();
-        light.setLocation(ship.getLocation());
-        light.setColor(new Color(255, 121, 117, 255));
-        light.setSize(500f);
-        light.setIntensity(2f);
-        light.fadeOut(0.5f);
-        LightShader.addLight(light);
+      applyJumpDamage(ship);
 
-        applyJumpDamage(ship);
-
-        isActive = false;
-        break;
-      case ACTIVE:
-      case COOLDOWN:
-      case IDLE:
-        // Nothing to do.
+      isActive = false;
+      break;
+    case ACTIVE:
+    case COOLDOWN:
+    case IDLE:
+      // Nothing to do.
     }
   }
 
@@ -135,15 +132,13 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
       endLoc = new Vector2f(endLocX, endLocY);
 
       boolean collides = false;
-      for (CombatEntityAPI inRangeObject :
-          CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
+      for (CombatEntityAPI inRangeObject : CombatUtils.getEntitiesWithinRange(endLoc, jumpDistance)) {
         if (inRangeObject == ship) {
           // don't do anything if its the ship activating the system
           continue;
         }
 
-        if (MathUtils.isWithinRange(
-            inRangeObject, endLoc, ship.getCollisionRadius() + MINIMUM_DISTANCE)) {
+        if (MathUtils.isWithinRange(inRangeObject, endLoc, ship.getCollisionRadius() + MINIMUM_DISTANCE)) {
           collides = true;
           break;
         }
@@ -172,11 +167,9 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
       Vector2f pointOfImpact = CollisionUtils.getCollisionPoint(startLoc, endLoc, inRangeObject);
       for (int i = 0; i < 5; i++) {
         if (pointOfImpact == null) {
-          pointOfImpact =
-              CollisionUtils.getCollisionPoint(
-                  MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()),
-                  MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()),
-                  inRangeObject);
+          pointOfImpact = CollisionUtils.getCollisionPoint(
+              MathUtils.getRandomPointInCircle(startLoc, ship.getCollisionRadius()),
+              MathUtils.getRandomPointInCircle(endLoc, ship.getCollisionRadius()), inRangeObject);
         } else {
           break;
         }
@@ -184,32 +177,13 @@ public class ilk_PhaseLeapStats extends BaseShipSystemScript {
 
       if (pointOfImpact != null) {
         // Only proceed if getCollisionPoint returned a point of impact
-        Global.getCombatEngine()
-            .spawnExplosion(
-                pointOfImpact,
-                inRangeObject.getVelocity(),
-                EXPLOSION_COLOR,
-                EXPLOSION_VISUAL_RADIUS * 2f,
-                0.1f);
-        Global.getCombatEngine()
-            .spawnExplosion(
-                pointOfImpact,
-                inRangeObject.getVelocity(),
-                EXPLOSION_COLOR,
-                EXPLOSION_VISUAL_RADIUS,
-                0.5f);
-        Global.getSoundPlayer()
-            .playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
-        Global.getCombatEngine()
-            .applyDamage(
-                inRangeObject,
-                pointOfImpact,
-                IMPACT_DAMAGE,
-                IMPACT_DAMAGE_TYPE,
-                0,
-                false,
-                true,
-                ship);
+        Global.getCombatEngine().spawnExplosion(pointOfImpact, inRangeObject.getVelocity(), EXPLOSION_COLOR,
+            EXPLOSION_VISUAL_RADIUS * 2f, 0.1f);
+        Global.getCombatEngine().spawnExplosion(pointOfImpact, inRangeObject.getVelocity(), EXPLOSION_COLOR,
+            EXPLOSION_VISUAL_RADIUS, 0.5f);
+        Global.getSoundPlayer().playSound(IMPACT_SOUND, 1f, 1f, pointOfImpact, inRangeObject.getVelocity());
+        Global.getCombatEngine().applyDamage(inRangeObject, pointOfImpact, IMPACT_DAMAGE, IMPACT_DAMAGE_TYPE, 0, false,
+            true, ship);
       }
     }
   }

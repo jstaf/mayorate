@@ -1,5 +1,9 @@
 package data.scripts.world;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignClockAPI;
@@ -8,9 +12,6 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpawnPointPlugin;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 @SuppressWarnings("unchecked")
 public abstract class BaseSpawnPoint implements EveryFrameScript, SpawnPointPlugin {
@@ -25,11 +26,7 @@ public abstract class BaseSpawnPoint implements EveryFrameScript, SpawnPointPlug
   private SectorAPI sector;
   private LocationAPI location;
 
-  public BaseSpawnPoint(
-      SectorAPI sector,
-      LocationAPI location,
-      float daysInterval,
-      int maxFleets,
+  public BaseSpawnPoint(SectorAPI sector, LocationAPI location, float daysInterval, int maxFleets,
       SectorEntityToken anchor) {
     this.daysInterval = daysInterval;
     this.maxFleets = maxFleets;
@@ -56,12 +53,14 @@ public abstract class BaseSpawnPoint implements EveryFrameScript, SpawnPointPlug
       Iterator iter = fleets.iterator();
       while (iter.hasNext()) {
         CampaignFleetAPI fleet = (CampaignFleetAPI) iter.next();
-        if (!fleet.isAlive()) iter.remove();
+        if (!fleet.isAlive())
+          iter.remove();
       }
 
       if (fleets.size() < maxFleets) {
         CampaignFleetAPI fleet = spawnFleet();
-        if (fleet != null) fleets.add(fleet);
+        if (fleet != null)
+          fleets.add(fleet);
       }
     }
   }

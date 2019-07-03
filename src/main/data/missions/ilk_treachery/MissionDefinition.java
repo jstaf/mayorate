@@ -1,5 +1,8 @@
 package data.missions.ilk_treachery;
 
+import java.awt.Color;
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -8,8 +11,6 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
-import java.awt.*;
-import java.util.List;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
 
@@ -31,13 +32,11 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // These show up as items in the bulleted list under
     // "Tactical Objectives" on the mission detail screen
     api.addBriefingItem("Force a Hegemony retreat by whatever means necessary");
-    api.addBriefingItem(
-        "Deploy your cruiser wisely. It is the only ship you have with strong defensive abilities.");
+    api.addBriefingItem("Deploy your cruiser wisely. It is the only ship you have with strong defensive abilities.");
 
-    // Set up the player's fleet.  Variant names come from the
+    // Set up the player's fleet. Variant names come from the
     // files in data/variants and data/variants/fighters
-    api.addToFleet(
-        FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MDSV Nazarin", true);
+    api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MDSV Nazarin", true);
     api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);
@@ -47,7 +46,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Set up the enemy fleet.
     api.addToFleet(FleetSide.ENEMY, "onslaught_xiv_Elite_mission", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.ENEMY, "dominator_XIV_Elite", FleetMemberType.SHIP, false);
-    // api.addToFleet(FleetSide.ENEMY, "falcon_xiv_Escort", FleetMemberType.SHIP, false);
+    // api.addToFleet(FleetSide.ENEMY, "falcon_xiv_Escort", FleetMemberType.SHIP,
+    // false);
     api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.ENEMY, "hound_hegemony_Standard", FleetMemberType.SHIP, false);
@@ -83,23 +83,22 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     api.addAsteroidField(minX + width / 2f, minY + height / 2f, 0, 8000f, 20f, 70f, 100);
     api.setBackgroundGlowColor(new Color(183, 98, 84, 30));
 
-    api.addPlugin(
-        new BaseEveryFrameCombatPlugin() {
-          @Override
-          public void advance(float amount, List events) {
-            interval += amount;
-            if (interval > (162f)) {
-              Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
-              interval = 0f;
-            }
-          }
+    api.addPlugin(new BaseEveryFrameCombatPlugin() {
+      @Override
+      public void advance(float amount, List events) {
+        interval += amount;
+        if (interval > (162f)) {
+          Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+          interval = 0f;
+        }
+      }
 
-          @Override
-          public void init(CombatEngineAPI engine) {
-            Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
-            engine.getContext().setStandoffRange(10000f);
-            interval = 0f;
-          }
-        });
+      @Override
+      public void init(CombatEngineAPI engine) {
+        Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
+        engine.getContext().setStandoffRange(10000f);
+        interval = 0f;
+      }
+    });
   }
 }

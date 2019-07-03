@@ -1,14 +1,16 @@
 package data.shipsystems.scripts;
 
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.List;
+
 import org.apache.log4j.Logger;
 
 public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
@@ -45,15 +47,15 @@ public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
       // TODO: Add a visual indication of activation on the carrier.
 
       for (ShipAPI fighter : getFighters(ship)) {
-        if (fighter.isHulk()) continue;
+        if (fighter.isHulk())
+          continue;
         modifyStats(fighter.getMutableStats(), id, /* buff */ true);
 
         fighter.setWeaponGlow(effectLevel, BUFF_WEAPON_GLOW_COLOR, EnumSet.allOf(WeaponType.class));
         fighter.setJitterUnder(JITTER_KEY, BUFF_JITTER_COLOR, jitterLevel, 5, jitterRange);
         fighter.setJitter(JITTER_KEY, BUFF_JITTER_UNDER_COLOR, jitterLevel, 2, jitterRange);
 
-        Global.getSoundPlayer()
-            .playLoop(BUFF_AUDIO, ship, 1.0f, 1.0f, fighter.getLocation(), fighter.getVelocity());
+        Global.getSoundPlayer().playLoop(BUFF_AUDIO, ship, 1.0f, 1.0f, fighter.getLocation(), fighter.getVelocity());
       }
     }
   }
@@ -78,7 +80,8 @@ public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
     }
     ShipAPI ship = (ShipAPI) stats.getEntity();
     for (ShipAPI fighter : getFighters(ship)) {
-      if (fighter.isHulk()) continue;
+      if (fighter.isHulk())
+        continue;
       MutableShipStatsAPI fStats = fighter.getMutableStats();
       fStats.getBallisticWeaponDamageMult().unmodify(id);
       fStats.getEnergyWeaponDamageMult().unmodify(id);
@@ -104,11 +107,13 @@ public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
   }
 
   private static List<ShipAPI> getFighters(ShipAPI carrier) {
-    //  We need to do this the roundabout way to catch fighters returning for refit.
+    // We need to do this the roundabout way to catch fighters returning for refit.
     List<ShipAPI> fighters = new ArrayList<ShipAPI>();
     for (ShipAPI ship : Global.getCombatEngine().getShips()) {
-      if (!ship.isFighter()) continue;
-      if (ship.getWing() == null) continue;
+      if (!ship.isFighter())
+        continue;
+      if (ship.getWing() == null)
+        continue;
       if (ship.getWing().getSourceShip() == carrier) {
         fighters.add(ship);
       }
@@ -123,9 +128,7 @@ public class ilk_FighterCoprocessingStats extends BaseShipSystemScript {
     stats.getBallisticWeaponRangeBonus().modifyMult(id, buff ? RANGE_MULT : 1.0f / RANGE_MULT);
     stats.getEnergyWeaponRangeBonus().modifyMult(id, buff ? RANGE_MULT : 1.0f / RANGE_MULT);
     stats.getAutofireAimAccuracy().modifyFlat(id, buff ? AIM_ACCURACY : -AIM_ACCURACY);
-    stats
-        .getWeaponTurnRateBonus()
-        .modifyMult(id, buff ? WEAPON_TURN_RATE_MULT : 1 / WEAPON_TURN_RATE_MULT);
+    stats.getWeaponTurnRateBonus().modifyMult(id, buff ? WEAPON_TURN_RATE_MULT : 1 / WEAPON_TURN_RATE_MULT);
     stats.getMaxSpeed().modifyMult(id, buff ? SPEED_MULT : 1.0f / SPEED_MULT);
     stats.getMaxTurnRate().modifyMult(id, buff ? SPEED_MULT : 1.0f / SPEED_MULT);
     stats.getAcceleration().modifyMult(id, buff ? AGILITY_MULT : 1.0f / AGILITY_MULT);

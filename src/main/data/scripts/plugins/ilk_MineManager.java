@@ -1,9 +1,17 @@
 package data.scripts.plugins;
 
-import com.fs.starfarer.api.combat.*;
-import com.fs.starfarer.api.input.InputEventAPI;
-import java.awt.*;
+import java.awt.Color;
 import java.util.List;
+
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
+import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.DamagingProjectileAPI;
+import com.fs.starfarer.api.combat.GuidedMissileAI;
+import com.fs.starfarer.api.combat.MissileAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ViewportAPI;
+import com.fs.starfarer.api.input.InputEventAPI;
+
 import org.lazywizard.lazylib.combat.AIUtils;
 
 /** This class manages deployed mines */
@@ -54,18 +62,19 @@ public class ilk_MineManager extends BaseEveryFrameCombatPlugin {
           if (tickInterval > LARGE_THRESH) {
 
             // add a flash of light
-            engine.addSmoothParticle(
-                proj.getLocation(), proj.getVelocity(), 7f, 1f, 0.15f, PING_COLOR);
+            engine.addSmoothParticle(proj.getLocation(), proj.getVelocity(), 7f, 1f, 0.15f, PING_COLOR);
 
             // repick targets
             MissileAPI missile = (MissileAPI) proj;
             ShipAPI target = AIUtils.getNearestEnemy(missile);
-            if (target != null) ((GuidedMissileAI) missile.getMissileAI()).setTarget(target);
+            if (target != null)
+              ((GuidedMissileAI) missile.getMissileAI()).setTarget(target);
           }
         }
       }
       // reset the counter
-      if (tickInterval > LARGE_THRESH) tickInterval = 0f;
+      if (tickInterval > LARGE_THRESH)
+        tickInterval = 0f;
     }
   }
 

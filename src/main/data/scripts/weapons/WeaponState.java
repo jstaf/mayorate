@@ -4,10 +4,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 
 /** A helper to determine what a weapon is currently doing */
 public enum WeaponState {
-  Idle,
-  Charging,
-  Firing,
-  Cooldown;
+  Idle, Charging, Firing, Cooldown;
 
   /**
    * What is the weapon currently doing?

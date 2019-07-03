@@ -1,22 +1,25 @@
 package data.scripts.plugins.beamRenderer;
 
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 /**
- * Draw arbitrary beam sprites wherever you need them and fade them out. Has none of the drawbacks
- * of the old code (static beams, one-time damage).
+ * Draw arbitrary beam sprites wherever you need them and fade them out. Has
+ * none of the drawbacks of the old code (static beams, one-time damage).
  *
- * @author Tartiflette and Deathfly (complete and TOTAL rewrite by kazi, updates by Blothorn)
+ * @author Tartiflette and Deathfly (complete and TOTAL rewrite by kazi, updates
+ *         by Blothorn)
  */
 public class ilk_BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
 
@@ -25,35 +28,23 @@ public class ilk_BeamRendererPlugin extends BaseEveryFrameCombatPlugin {
   private static ArrayList<ilk_BeamSpec> beamsToRender = new ArrayList<>();
   private ArrayList<ilk_BeamSpec> toRemove = new ArrayList<>();
 
-  // add beams to the rendering/damage thread this way (by creating a NEW beamSpec object using the
+  // add beams to the rendering/damage thread this way (by creating a NEW beamSpec
+  // object using the
   // constructor)
   public static void addBeam(ilk_BeamSpec newBeam) {
     beamsToRender.add(newBeam);
     newBeam.calcImpactPoint();
 
     // only draw flashes once
-    newBeam.engine.addHitParticle(
-        newBeam.startLoc,
-        new Vector2f(),
-        (float) Math.random() * newBeam.size / 2 + newBeam.size,
-        1,
-        (float) Math.random() * newBeam.duration / 2 + newBeam.duration,
-        newBeam.beamColor);
+    newBeam.engine.addHitParticle(newBeam.startLoc, new Vector2f(),
+        (float) Math.random() * newBeam.size / 2 + newBeam.size, 1,
+        (float) Math.random() * newBeam.duration / 2 + newBeam.duration, newBeam.beamColor);
     if (newBeam.target != null) {
-      newBeam.engine.addHitParticle(
-          newBeam.hitLoc,
-          newBeam.target.getVelocity(),
-          (float) Math.random() * newBeam.size / 4 + newBeam.size / 2,
-          1,
-          0.1f,
-          Color.WHITE);
-      newBeam.engine.addHitParticle(
-          newBeam.hitLoc,
-          newBeam.target.getVelocity(),
-          (float) Math.random() * newBeam.size / 2 + newBeam.size,
-          1,
-          (float) Math.random() * newBeam.duration / 2 + newBeam.duration,
-          newBeam.beamColor);
+      newBeam.engine.addHitParticle(newBeam.hitLoc, newBeam.target.getVelocity(),
+          (float) Math.random() * newBeam.size / 4 + newBeam.size / 2, 1, 0.1f, Color.WHITE);
+      newBeam.engine.addHitParticle(newBeam.hitLoc, newBeam.target.getVelocity(),
+          (float) Math.random() * newBeam.size / 2 + newBeam.size, 1,
+          (float) Math.random() * newBeam.duration / 2 + newBeam.duration, newBeam.beamColor);
     }
   }
 

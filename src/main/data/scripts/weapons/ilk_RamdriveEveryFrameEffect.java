@@ -1,16 +1,15 @@
 package data.scripts.weapons;
 
-import org.lazywizard.lazylib.FastTrig;
-import org.lazywizard.lazylib.MathUtils;
-import org.lwjgl.util.vector.Vector2f;
 import java.awt.Color;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.WeaponAPI;
-import org.apache.log4j.Logger;
+
+import org.lazywizard.lazylib.FastTrig;
+import org.lazywizard.lazylib.MathUtils;
+import org.lwjgl.util.vector.Vector2f;
 
 import data.scripts.plugins.beamRenderer.ilk_BeamRendererPlugin;
 import data.scripts.plugins.beamRenderer.ilk_BeamSpec;
@@ -18,7 +17,7 @@ import data.scripts.plugins.beamRenderer.ilk_BeamSpec;
 /** Runs every frame to properly manage particle fx and such */
 public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugin {
 
-  //static Logger logger = Global.getLogger(ilk_RamdriveEveryFrameEffect.class);
+  // static Logger logger = Global.getLogger(ilk_RamdriveEveryFrameEffect.class);
 
   private final Color RAMDRIVE_COLOR = new Color(244, 41, 109);
   private static final float PARTICLE_SPAWN_DELAY = 0.05f;
@@ -41,41 +40,33 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
     }
 
     switch (WeaponState.getState(weapon)) {
-      case Charging:
-        maxCharge = weapon.getChargeLevel();
+    case Charging:
+      maxCharge = weapon.getChargeLevel();
 
-        particleDelta += delta;
-        if (particleDelta >= PARTICLE_SPAWN_DELAY) {
-          particleDelta = 0f;
+      particleDelta += delta;
+      if (particleDelta >= PARTICLE_SPAWN_DELAY) {
+        particleDelta = 0f;
 
-          float angle = weapon.getCurrAngle();
-          Vector2f offset = weapon.getLocation().translate(
+        float angle = weapon.getCurrAngle();
+        Vector2f offset = weapon.getLocation().translate(
             (float) FastTrig.cos(Math.toRadians(angle)) * PARTICLE_SPAWN_RADIUS,
             (float) FastTrig.sin(Math.toRadians(angle)) * PARTICLE_SPAWN_RADIUS);
-          Vector2f location = MathUtils.getRandomPointInCircle(
-            offset,
-            PARTICLE_SPAWN_RADIUS);
+        Vector2f location = MathUtils.getRandomPointInCircle(offset, PARTICLE_SPAWN_RADIUS);
 
-          engine.addSmoothParticle(
-            location,
-            weapon.getShip().getVelocity(),
-            15f,
-            0.6f,
-            1.0f,
-            RAMDRIVE_COLOR);
-        }
-        break;
-      case Cooldown:
-        if (!hasfired) {
-          fire(engine, weapon);
-        }
-        postFireDuration += delta;
-        break;
-      case Idle:
-        hasfired = false;
-        break;
-      default:
-        break;
+        engine.addSmoothParticle(location, weapon.getShip().getVelocity(), 15f, 0.6f, 1.0f, RAMDRIVE_COLOR);
+      }
+      break;
+    case Cooldown:
+      if (!hasfired) {
+        fire(engine, weapon);
+      }
+      postFireDuration += delta;
+      break;
+    case Idle:
+      hasfired = false;
+      break;
+    default:
+      break;
     }
   }
 
@@ -94,19 +85,7 @@ public class ilk_RamdriveEveryFrameEffect implements EveryFrameWeaponEffectPlugi
     postFireDuration = 0f;
     hasfired = true;
     ilk_BeamRendererPlugin.addBeam(
-      new ilk_BeamSpec(
-        engine,
-        weapon.getShip(),
-        weapon.getLocation(),
-        weapon.getRange(),
-        weapon.getCurrAngle(),
-        1000f,
-        DamageType.HIGH_EXPLOSIVE,
-        500f,
-        1f, 0.05f, 0.2f,
-        "beams", "ilk_fakeBeamFX",
-        40,
-        RAMDRIVE_COLOR)
-    );
+        new ilk_BeamSpec(engine, weapon.getShip(), weapon.getLocation(), weapon.getRange(), weapon.getCurrAngle(),
+            1000f, DamageType.HIGH_EXPLOSIVE, 500f, 1f, 0.05f, 0.2f, "beams", "ilk_fakeBeamFX", 40, RAMDRIVE_COLOR));
   }
 }

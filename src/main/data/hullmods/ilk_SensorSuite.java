@@ -11,8 +11,7 @@ public class ilk_SensorSuite extends BaseHullMod {
   public static final float CAMPAIGN_SENSOR_BOOST = 2f;
 
   @Override
-  public void applyEffectsBeforeShipCreation(
-      HullSize hullSize, MutableShipStatsAPI stats, String id) {
+  public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
     stats.getSightRadiusMod().modifyPercent(id, SENSOR_RANGE_PERCENT);
     stats.getBallisticWeaponRangeBonus().modifyPercent(id, WEAPON_RANGE_PERCENT);
     stats.getEnergyWeaponRangeBonus().modifyPercent(id, WEAPON_RANGE_PERCENT);

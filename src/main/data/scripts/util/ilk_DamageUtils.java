@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.ShipAPI;
+
 import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.combat.DefenseType;
 import org.lazywizard.lazylib.combat.DefenseUtils;
@@ -16,61 +17,54 @@ public class ilk_DamageUtils {
   private static final Logger logger = Global.getLogger(ilk_DamageUtils.class);
 
   /**
-   * Calculates the damage to apply against armor to approximate dealing baseDamage damage at
-   * hitStrength strength, e.g. when applying beam damage.
+   * Calculates the damage to apply against armor to approximate dealing
+   * baseDamage damage at hitStrength strength, e.g. when applying beam damage.
    *
    * @param baseDamage The nominal damage, before armor reduction.
-   * @param type The type of the damage.
-   * @param strength The hit strength at which to calculate damage.
-   * @param armor The armor at which to calculate damage.
+   * @param type       The type of the damage.
+   * @param strength   The hit strength at which to calculate damage.
+   * @param armor      The armor at which to calculate damage.
    * @return The damage to apply.
    */
-  public static float getDamageAtHitStrength(
-      float baseDamage, DamageType type, float strength, float armor) {
+  public static float getDamageAtHitStrength(float baseDamage, DamageType type, float strength, float armor) {
     // TODO: handle other modifiers.
     // TODO: handle hull damage correctly.
     float multiplier = 1.0f;
     switch (type) {
-      case FRAGMENTATION:
-        multiplier = 0.25f;
-        break;
-      case HIGH_EXPLOSIVE:
-        multiplier = 2.0f;
-        break;
-      case KINETIC:
-        multiplier = 0.5f;
-        break;
-      case ENERGY:
-      case OTHER:
-        multiplier = 1.0f;
-        break;
+    case FRAGMENTATION:
+      multiplier = 0.25f;
+      break;
+    case HIGH_EXPLOSIVE:
+      multiplier = 2.0f;
+      break;
+    case KINETIC:
+      multiplier = 0.5f;
+      break;
+    case ENERGY:
+    case OTHER:
+      multiplier = 1.0f;
+      break;
     }
 
-    float expectedDamage =
-        baseDamage
-            * multiplier
-            * Math.max(0.15f, strength * multiplier / (strength * multiplier + armor));
+    float expectedDamage = baseDamage * multiplier
+        * Math.max(0.15f, strength * multiplier / (strength * multiplier + armor));
 
     // Wolfram swears this is correct.
     if (armor >= 340.0f * expectedDamage / 9.0f) {
       return 20.0f * expectedDamage / (3.0f * multiplier);
     } else {
       return (multiplier
-                  * (float)
-                      Math.sqrt(
-                          expectedDamage
-                              * (4.0f * armor + expectedDamage)
-                              / (multiplier * multiplier))
-              + expectedDamage)
-          / (2.0f * multiplier);
+          * (float) Math.sqrt(expectedDamage * (4.0f * armor + expectedDamage) / (multiplier * multiplier))
+          + expectedDamage) / (2.0f * multiplier);
     }
   }
 
   /**
-   * Gets the effective armor value at a point, as used in armor-reduction calculations.
+   * Gets the effective armor value at a point, as used in armor-reduction
+   * calculations.
    *
    * @param ship The ship whose armor grid to use.
-   * @param loc The world location to check the armor value at.
+   * @param loc  The world location to check the armor value at.
    * @return The armor value at loc.
    */
   public static float getEffectiveArmor(ShipAPI ship, Vector2f loc) {
@@ -95,17 +89,9 @@ public class ilk_DamageUtils {
     return Math.max(total, 0.05f * ship.getArmorGrid().getArmorRating());
   }
 
-  public static void applyDamageAtHitStrength(
-      CombatEngineAPI engine,
-      CombatEntityAPI entity,
-      Vector2f point,
-      float damageAmount,
-      float damageStrength,
-      DamageType damageType,
-      float empAmount,
-      boolean bypassShields,
-      boolean dealsSoftFlux,
-      java.lang.Object source) {
+  public static void applyDamageAtHitStrength(CombatEngineAPI engine, CombatEntityAPI entity, Vector2f point,
+      float damageAmount, float damageStrength, DamageType damageType, float empAmount, boolean bypassShields,
+      boolean dealsSoftFlux, java.lang.Object source) {
     if (entity instanceof ShipAPI) {
       final ShipAPI ship = (ShipAPI) entity;
       final DefenseType defense = DefenseUtils.getDefenseAtPoint(ship, point);
@@ -114,7 +100,6 @@ public class ilk_DamageUtils {
         damageAmount = getDamageAtHitStrength(damageAmount, damageType, damageStrength, armor);
       }
     }
-    engine.applyDamage(
-        entity, point, damageAmount, damageType, empAmount, bypassShields, dealsSoftFlux, source);
+    engine.applyDamage(entity, point, damageAmount, damageType, empAmount, bypassShields, dealsSoftFlux, source);
   }
 }

@@ -1,5 +1,7 @@
 package data.missions.ilk_hegemony_sdf;
 
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -8,7 +10,6 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
-import java.util.List;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
 
@@ -30,18 +31,16 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // These show up as items in the bulleted list under
     // "Tactical Objectives" on the mission detail screen
     api.addBriefingItem("Rout the enemy fleet and force a Hegemony surrender.");
-    api.addBriefingItem(
-        "We recommend setting the max battle size to 500 (options menu) for maximum player death.");
+    api.addBriefingItem("We recommend setting the max battle size to 500 (options menu) for maximum player death.");
 
-    // Set up the player's fleet.  Variant names come from the
+    // Set up the player's fleet. Variant names come from the
     // files in data/variants and data/variants/fighters
     api.addToFleet(FleetSide.PLAYER, "ilk_narayana_fs", FleetMemberType.SHIP, "MDSV Moneta", true);
     api.addToFleet(FleetSide.PLAYER, "ilk_ravana_assault", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_jamaran_fs", FleetMemberType.SHIP, false);
-    api.addToFleet(
-        FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, "MDSV Azure Dream", false);
+    api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, "MDSV Azure Dream", false);
     api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_strike", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_tiamat_assault", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
@@ -73,23 +72,22 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Add an asteroid field
     api.addAsteroidField(minX + width / 2f, minY + height / 2f, 0, 8000f, 20f, 70f, 100);
 
-    api.addPlugin(
-        new BaseEveryFrameCombatPlugin() {
-          @Override
-          public void advance(float amount, List events) {
-            interval += amount;
-            if (interval > (162f)) {
-              Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
-              interval = 0f;
-            }
-          }
+    api.addPlugin(new BaseEveryFrameCombatPlugin() {
+      @Override
+      public void advance(float amount, List events) {
+        interval += amount;
+        if (interval > (162f)) {
+          Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
+          interval = 0f;
+        }
+      }
 
-          @Override
-          public void init(CombatEngineAPI engine) {
-            Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
-            engine.getContext().setStandoffRange(10000f);
-            interval = 0f;
-          }
-        });
+      @Override
+      public void init(CombatEngineAPI engine) {
+        Global.getSoundPlayer().playMusic(0, 0, "ilk_mission2_music");
+        engine.getContext().setStandoffRange(10000f);
+        interval = 0f;
+      }
+    });
   }
 }

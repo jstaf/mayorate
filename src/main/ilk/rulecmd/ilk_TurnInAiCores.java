@@ -1,5 +1,9 @@
 package ilk.rulecmd;
 
+import java.awt.Color;
+import java.util.List;
+import java.util.Map;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
@@ -21,9 +25,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AICores;
 import com.fs.starfarer.api.util.Misc.Token;
-import java.awt.Color;
-import java.util.List;
-import java.util.Map;
+
 import org.lazywizard.lazylib.MathUtils;
 
 public class ilk_TurnInAiCores extends BaseCommandPlugin {
@@ -42,13 +44,11 @@ public class ilk_TurnInAiCores extends BaseCommandPlugin {
   private CharacterDataAPI playerData;
 
   @Override
-  public boolean execute(
-      String ruleId,
-      InteractionDialogAPI dialog,
-      List<Token> params,
+  public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params,
       Map<String, MemoryAPI> memoryMap) {
     String command = params.get(0).getString(memoryMap);
-    if (command == null) return false;
+    if (command == null)
+      return false;
 
     this.dialog = dialog;
     text = dialog.getTextPanel();
@@ -59,16 +59,16 @@ public class ilk_TurnInAiCores extends BaseCommandPlugin {
     playerData = Global.getSector().getCharacterData();
 
     switch (command) {
-      case "personCanAcceptCores":
-        return personCanAcceptCores();
-      case "selectCores":
-        selectCores();
-        return true;
-      case "giveAiCrew":
-        giveAiCrew();
-        return true;
-      default:
-        return true;
+    case "personCanAcceptCores":
+      return personCanAcceptCores();
+    case "selectCores":
+      selectCores();
+      return true;
+    case "giveAiCrew":
+      giveAiCrew();
+      return true;
+    default:
+      return true;
     }
   }
 
@@ -83,11 +83,9 @@ public class ilk_TurnInAiCores extends BaseCommandPlugin {
         reputation += baseRepValue * stack.getSize();
         bounty += spec.getBasePrice() * stack.getSize();
 
-        aiCrewChanceNotGiven *=
-            Math.pow(1 - baseRepValue / BASE_REP_FOR_AI_CREW_CHANCE, stack.getSize());
+        aiCrewChanceNotGiven *= Math.pow(1 - baseRepValue / BASE_REP_FOR_AI_CREW_CHANCE, stack.getSize());
 
-        AddRemoveCommodity.addCommodityLossText(
-            stack.getCommodityId(), (int) stack.getSize(), text);
+        AddRemoveCommodity.addCommodityLossText(stack.getCommodityId(), (int) stack.getSize(), text);
         playerCargo.removeStack(stack);
       }
     }
@@ -100,17 +98,14 @@ public class ilk_TurnInAiCores extends BaseCommandPlugin {
 
     CustomRepImpact impact = new CustomRepImpact();
     impact.delta = reputation * 0.01f;
-    Global.getSector()
-        .adjustPlayerReputation(
-            new RepActionEnvelope(RepActions.CUSTOM, impact, null, text, true), faction.getId());
+    Global.getSector().adjustPlayerReputation(new RepActionEnvelope(RepActions.CUSTOM, impact, null, text, true),
+        faction.getId());
 
     impact.delta *= 0.25f;
-    Global.getSector()
-        .adjustPlayerReputation(
-            new RepActionEnvelope(RepActions.CUSTOM, impact, null, text, true), person);
+    Global.getSector().adjustPlayerReputation(new RepActionEnvelope(RepActions.CUSTOM, impact, null, text, true),
+        person);
 
-    if (!playerData.knowsHullMod(AI_CREW_ID)
-        && faction.getRelToPlayer().isAtWorst(MIN_AI_CREW_REP)
+    if (!playerData.knowsHullMod(AI_CREW_ID) && faction.getRelToPlayer().isAtWorst(MIN_AI_CREW_REP)
         && MathUtils.getRandomNumberInRange(0.0f, 1.0f) > aiCrewChanceNotGiven) {
       FireBest.fire(null, dialog, memoryMap, "ilkAiCoresTurnedInAiCrew");
     } else {

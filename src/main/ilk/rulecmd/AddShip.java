@@ -1,5 +1,9 @@
 package ilk.rulecmd;
 
+import java.awt.Color;
+import java.util.List;
+import java.util.Map;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
@@ -7,17 +11,11 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
-import java.awt.Color;
-import java.util.List;
-import java.util.Map;
 
 public class AddShip extends BaseCommandPlugin {
 
   @Override
-  public boolean execute(
-      String ruleId,
-      InteractionDialogAPI dialog,
-      List<Misc.Token> params,
+  public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params,
       Map<String, MemoryAPI> memoryMap) {
 
     String ship = params.get(0).getString(memoryMap);
