@@ -1,12 +1,13 @@
 {
   "displayName": "Close Support",
-  "fluxCapacitors": 4,
-  "fluxVents": 10,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
   "goalVariant": true,
   "hullId": "ilk_lilith",
-  "hullMods": [
-    "targetingunit"
-  ],
+  "hullMods": [],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_lilith_cs",
   "weaponGroups": [
     {
@@ -15,7 +16,7 @@
       "weapons": {
         "WS0004": "ilk_repeater"
       }
-	  },
+    },
     {
       "autofire": false,
       "mode": "LINKED",
@@ -30,6 +31,7 @@
         "WS0001": "ilk_graser_pd",
         "WS0002": "ilk_graser_pd"
       }
-    },
-  ]
+    }
+  ],
+  "wings": []
 }

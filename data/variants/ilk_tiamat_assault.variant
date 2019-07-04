@@ -1,12 +1,13 @@
 {
   "displayName": "Assault",
   "fluxCapacitors": 6,
-  "fluxVents": 8,
+  "fluxVents": 10,
   "goalVariant": true,
   "hullId": "ilk_tiamat",
-  "hullMods": [
-    "targetingunit"
-  ],
+  "hullMods": [],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_tiamat_assault",
   "weaponGroups": [
     {
@@ -40,5 +41,6 @@
         "WS0006": "ilk_graser_pd"
       }
     }
-  ]
+  ],
+  "wings": []
 }

@@ -12,7 +12,6 @@
     "combatMedium": {
         "ilk_cimeterre_berserker": 5,
         "ilk_cimeterre_cs": 7,
-        "ilk_cimeterre_fa": 8,
         "ilk_cimeterre_strike": 10
     },
     "combatLarge": {

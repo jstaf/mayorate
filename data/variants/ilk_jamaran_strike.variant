@@ -1,24 +1,32 @@
 {
   "displayName": "Strike",
   "fluxCapacitors": 2,
-  "fluxVents": 0,
+  "fluxVents": 5,
   "goalVariant": true,
   "hullId": "ilk_jamaran",
   "hullMods": [
-    "expanded_deck_crew",
-    "missleracks",
-    "eccm"
+    "expanded_deck_crew"
   ],
+  "modules": [],
+  "permaMods": [],
   "quality": 0.5,
   "variantId": "ilk_jamaran_strike",
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
-        "WS0007": "ilk_laserhead",
-        "WS0008": "ilk_laserhead",
-        "WS0009": "ilk_nuke_large"
+        "WS0005": "ilk_disruptor",
+        "WS0006": "ilk_disruptor",
+        "WS0009": "ilk_disruptor_heavy"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "harpoonpod",
+        "WS0008": "harpoonpod"
       }
     },
     {
@@ -26,7 +34,9 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "ilk_graser_pd",
-        "WS0002": "ilk_graser_pd"
+        "WS0002": "ilk_graser_pd",
+        "WS0003": "ilk_graser_pd",
+        "WS0004": "ilk_graser_pd"
       }
     }
   ],

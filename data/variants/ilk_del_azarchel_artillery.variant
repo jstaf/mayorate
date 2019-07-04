@@ -1,19 +1,24 @@
 {
   "displayName": "Artillery",
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 11,
   "fluxVents": 11,
   "goalVariant": true,
   "hullId": "ilk_del_azarchel",
   "hullMods": [
-    "missleracks",
-    "targetingunit"
+    "missleracks"
   ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_del_azarchel_artillery",
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
-      "weapons": {"WS0012": "ilk_driver"}
+      "weapons": {
+        "WS0010": "ilk_graser_pd",
+        "WS0012": "ilk_driver"
+      }
     },
     {
       "autofire": false,
@@ -49,5 +54,6 @@
         "WS0009": "ilk_graser_pd"
       }
     }
-  ]
+  ],
+  "wings": []
 }
