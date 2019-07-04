@@ -139,7 +139,7 @@
 	],
 
 	"ilk_ppc_fire":[
-			{"file":"sounds/ilk/fx/Turret_V1.wav","pitch":1,"volume":0.15}
+			{"file":"sounds/ilk/fx/Turret_V1.wav","pitch":1,"volume":0.08}
 	],
 
 	"ilk_graser_pd_fire":[

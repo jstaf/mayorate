@@ -3,6 +3,7 @@ package data.scripts;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.fs.starfarer.api.combat.DamageType;
+import data.scripts.util.ilk_DamageUtils;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
