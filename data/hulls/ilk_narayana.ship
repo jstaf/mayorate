@@ -125,9 +125,6 @@
     7.5,
     -87
   ],
-  "builtInWeapons": {
-    "WS0021": "ilk_ramdrive"
-  },
   "center": [
     150,
     190
@@ -501,15 +498,15 @@
     },
     {
       "angle": 0,
-      "arc": 5,
-      "id": "WS0021",
+      "arc": 360,
+      "id": "LB 4",
       "locations": [
-        136.5,
-        -0
+        19,
+        -56
       ],
-      "mount": "HARDPOINT",
+      "mount": "HIDDEN",
       "size": "LARGE",
-      "type": "BUILT_IN"
+      "type": "LAUNCH_BAY"
     }
   ],
   "width": 300
