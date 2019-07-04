@@ -1,6 +1,6 @@
 name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,hints,tags,rarity,breakProb,minPieces,maxPieces,number
 Raad,ilk_raad,,Mayorate,flarelauncher_single,,600,125,750,,150,0,,200,250,200,90,170,40,NONE,,0,0,0,,,2,2,,,,,9,,,,,,,,,mayorate_bp,,0,,,7602
-Angha,ilk_angha,,Mayorate,,,600,100,250,,40,0,,180,300,250,100,200,30,NONE,,0,0,0,,,0,0,,,,,10,,,,,,,,,mayorate_bp,,0,,,7603
+Angha,ilk_angha,,Mayorate,,,650,100,250,,40,0,,180,300,250,100,200,30,NONE,,0,0,0,,,0,0,,,,,10,,,,,,,,,mayorate_bp,,0,,,7603
 Shrike,ilk_hk_drone,,Mayorate,,,550,25,800,,180,0,,275,350,300,160,180,20,FRONT,,160,0,2,,,0,0,,,,,10,,,,,,,,,mayorate_bp,,0,,,7613
 Lilith,ilk_lilith,Frigate,Mayorate,highenergyfocus,6,1700,250,2600,,150,40,,140,80,60,45,100,150,OMNI,,100,0.5,0.8,,,10,30,60,50,1,50,10,10000,10,15,180,0.25,4,4,,mayorate_bp,,0.5,2,2,7604
 Tiamat,ilk_tiamat,Destroyer Escort,Mayorate,ilk_bubble_shield,6,2500,350,2900,,250,50,,105,110,90,55,80,250,FRONT,,220,0.4,0.8,,,25,40,50,40,1,40,9,12000,8,20,240,0.25,5,5,,mayorate_bp,,0.5,2,2,7605
