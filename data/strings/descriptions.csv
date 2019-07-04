@@ -44,7 +44,6 @@ ilk_sprint_drive,SHIP_SYSTEM,"Disables all engine safeguards and redlines the sh
 ilk_disruptor,WEAPON,"Dealing almost no damage to a ship's physical defenses, this unconventional weapon cripples an adversary's flux management systems.",Close Support,,
 ilk_disruptor_heavy,WEAPON,"This weapon can lock down even capital-grade flux capacitors, rendering opponents helpless.",Close Support,,
 ilk_driver,WEAPON,"A departure from traditional mass driver technology, creation of a localized gravitic field accelerates a trio of neodymium slugs to well over 0.1c.",Fire Support,,
-ilk_fluxtorp,WEAPON,"Based upon a poorly-understood branch of quantum physics, this weapon fires an unstable envelope of pure flux. Devastating if it hits.",Fire Support,,
 ilk_graser,WEAPON,The blueprints for this powerful gamma-ray laser are a closely guarded secret. Deals extra damage at high flux.,Assault,,
 ilk_graser_light,WEAPON,A miniaturization of the gamma-ray laser. Deals extra damage at high flux levels.,Close Support,,
 ilk_graser_pd,WEAPON,"Although rather powerful for a PD mount, its range leaves much to be desired. Deals extra damage at high flux.",Point Defense,,
