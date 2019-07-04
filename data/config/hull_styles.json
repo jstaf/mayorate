@@ -4,10 +4,22 @@
 		"baseCampaignExplosionColor":[255,145,75,255],
 		"baseCombatExplosionColor":[255,145,75,255],
 		"fighterRepairFlickerColor":[255,200,75,255],
+		"fighterChipIconColor":[255,200,150,255],
 		"weaponDisabledExplosionColor":[255,145,75,255],
 		"shieldRingColor":[255,210,156,255],
 		"shieldInnerColor":[182,149,111,45],
 		"fluxVentCoreColor":[166,50,91,75],
 		"fluxVentFringeColor":[138,25,25,50],
+		"engineLoopSet":"engine_loop", 					# id of entry in sounds.json
+		"engineAccelerateSet":"engine_accelerate",		# id of entry in sounds.json
+		"empLoopSet":"emp_loop",						# id of entry in sounds.json
+		"fluxLoopSet":"flux_loop",						# id of entry in sounds.json
+		"ventFluxSet":"vent_flux",						# id of entry in sounds.json
+		"shieldBurnoutSet":"shield_burnout",			# id of entry in sounds.json
+		"shieldLowerSet":"shield_lower",				# id of entry in sounds.json
+		"shieldRaiseSet":"shield_raise",				# id of entry in sounds.json
+		"explosionShipSet":"explosion_ship",			# id of entry in sounds.json
+		"damageDecalSheet":"graphics/damage/damage_decal_sheet_base.png",
+		"damageDecalGlowSheet":"graphics/damage/damage_decal_sheet_glow.png",
 	},
 }

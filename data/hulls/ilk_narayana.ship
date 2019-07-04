@@ -245,42 +245,6 @@
   "viewOffset": 0,
   "weaponSlots": [
     {
-      "angle": 0,
-      "arc": 360,
-      "id": "LB 1",
-      "locations": [
-        26,
-        -50
-      ],
-      "mount": "HIDDEN",
-      "size": "LARGE",
-      "type": "LAUNCH_BAY"
-    },
-    {
-      "angle": 0,
-      "arc": 360,
-      "id": "LB 2",
-      "locations": [
-        21,
-        -43
-      ],
-      "mount": "HIDDEN",
-      "size": "LARGE",
-      "type": "LAUNCH_BAY"
-    },
-    {
-      "angle": 0,
-      "arc": 360,
-      "id": "LB 3",
-      "locations": [
-        31.5,
-        -43.5
-      ],
-      "mount": "HIDDEN",
-      "size": "LARGE",
-      "type": "LAUNCH_BAY"
-    },
-    {
       "angle": 143.130096,
       "arc": 238.831207,
       "id": "WS0001",
@@ -499,10 +463,54 @@
     {
       "angle": 0,
       "arc": 360,
+      "id": "LB 1",
+      "locations": [
+        17.5,
+        -135,
+        15.5,
+        -91
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "LB 2",
+      "locations": [
+        108,
+        -79.5,
+        101.5,
+        -127.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "LB 3",
+      "locations": [
+        61.5,
+        -199,
+        101,
+        -211.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
       "id": "LB 4",
       "locations": [
-        19,
-        -56
+        -76,
+        -186,
+        -34.5,
+        -197.5
       ],
       "mount": "HIDDEN",
       "size": "LARGE",
