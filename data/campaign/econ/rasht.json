@@ -4,19 +4,21 @@
         {
             "entities": ["inir"],
             "faction": "mayorate",
-            "size": 4,
+            "size": 5,
             "startingConditions": [
                 "indoctrination",
                 "very_hot",
                 "no_atmosphere",
                 "ore_ultrarich",
                 "rare_ore_rich",
-                "population_4"
+                "population_5"
             ],
             "industries": [
                 "population",
                 "spaceport",
+                "ground_defenses",
                 "fuelprod",
+                "refining",
                 "mining"
             ]
         },
@@ -39,7 +41,6 @@
                 "spaceport",
                 "farming",
                 ["orbitalworks", "corrupted_nanoforge"],
-                "refining",
                 "heavybatteries",
                 "starfortress"
             ]

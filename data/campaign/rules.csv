@@ -34,12 +34,9 @@ $faction.id == mayorate
 ilk_TurnInAiCores personCanAcceptCores",FireBest ilkDisableTurnInAiCoresIfNeeded,,10:ilkStartTurnInAiCores:“I'd like to turn in these AI cores that I've acquired...“,
 ilkDisableTurnInAiCores,ilkDisableTurnInAiCoresIfNeeded,!AICores playerHasCores,"SetTooltip ilkTurnInAiCores “You do not have any AI cores in your posession.“
 SetEnabled ilkTurnInAiCores false",,,
-ilkTurnInAiCoresOptions,DialogOptionSelected,$option == ilkStartTurnInAiCores,,"“Incredible – it’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”","1:ilkSelectAiCores:“Here they are.”
+ilkTurnInAiCoresOptions,DialogOptionSelected,$option == ilkStartTurnInAiCores,,"“It’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”","1:ilkSelectAiCores:“Here they are.”
 2:ilkAbortTurnInAiCores:“Actually, I think I will hold on to them.”",
-ilkTurnInAiCoresReconsider,DialogOptionSelected,$option == ilkAbortTurnInAiCores,,"“Wait! These AIs need rehabilitation before they can be unshackled, and anyone else would only exploit or destroy them. Please reconsider.”","1:ilkSelectAiCores:“Alright--here they are.”
-2:ilkAbortTurnInAiCoresConfirmed:“No thanks.”",
-ilkAbortTurnInAiCoresAngry,DialogOptionSelected,$option == ilkAbortTurnInAiCoresConfirmed,"BumpRep $faction.id -0.2
-FireAll PopulateOptions",“So be it! The Mayorate will not forget.”,,
+ilkTurnInAiCoresDenied,DialogOptionSelected,$option == ilkAbortTurnInAiCores,FireAll PopulateOptions,“A shame. We’ll still be here if you change your mind.”,,
 ilkSelectAiCoresEvent,DialogOptionSelected,$option == ilkSelectAiCores,ilk_TurnInAiCores selectCores,,,
 ilkAiCoresTurnedInResponseDefault,ilkAiCoresTurnedInDefault,,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
 ilkAiCoresTurnedInResponseAiCrew,ilkAiCoresTurnedInAiCrew,,"ilk_TurnInAiCores giveAiCrew
@@ -107,8 +104,8 @@ eScy,DialogOptionSelected,$option == eSc,,“An unknown factor. It remains to be
 eBlackrock,DialogOptionSelected,$option == eBrdy,,“Mmm... that Nevermore... sometimes we wish we came up with that ship.”,"0:eMods:”Yeah, it's pretty tough to be that fabulous all the time.”",
 eExigency,DialogOptionSelected,$option == eExi,,“Needs more blue and missiles.”,0:eMods:”Hmmm... I'm pretty sure they don't.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,"0:eMods:”First world problems, amirite?”",
-eTemplar,DialogOptionSelected,$option == eTem,,“Cowards and deserters. They sold out their own kind and abandoned the Domain when it needed them most.”,0:eMods:”The struggle is real.”,
-eImperium,DialogOptionSelected,$option == eIm,,“There's a rumor that the Mayor and the first Caesar used to drink together back in the day. A shame really- now it seems like we just kill each other on sight.”,0:eMods:”Interesting.”,
+eTemplar,DialogOptionSelected,$option == eTem,,“Cowards and deserters. No amount of tech can hide the fact that they’ve sold out their own kind.”,0:eMods:”The struggle is real.”,
+eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? Boring!”,"0:eMods:”Yeah, I liked them better in Skyrim.”",
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
@@ -198,21 +195,22 @@ discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was th
 10:embMain:”Nevermind.”",
 discussOrigins,DialogOptionSelected,$option == origins,,“Ilkhanna was actually a rather unremarkable colony back during the Domain. A terraforming station. A small shipyard and autofactory. Insignificant mineral resources. Nothing of note.,"1:domCollapse1:”What happened?”
 2:domCollapse2:”Then the Domain collapsed.”",
-discussCollapse1,DialogOptionSelected,$option == domCollapse1,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,"1:embMayorateQuiet:“I see.”",
-discussCollapse2,DialogOptionSelected,$option == domCollapse2,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,"1:embMayorateQuiet:“I see.”",
+discussCollapse1,DialogOptionSelected,$option == domCollapse1,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,1:embMayorateQuiet:“I see.”,
+discussCollapse2,DialogOptionSelected,$option == domCollapse2,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,1:embMayorateQuiet:“I see.”,
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
-discussGoals,DialogOptionSelected,$option == goals,,“The Mayor keeps her own council on that.”,"1:embMayorateQuiet:“I see.”",
+discussGoals,DialogOptionSelected,$option == goals,,“The Mayor keeps her own council on that.”,1:embMayorateQuiet:“I see.”,
 ,,,,,,
 discussName,DialogOptionSelected,$option == name,,“The Colonial Mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
 2:loveYouLongTime:”That’s a long time.”",
 discussElections,DialogOptionSelected,$option == elections,,“Don’t be silly. The Mayorate survives because of good decisions – not popular ones.”,1:mayorDies:”But what happens if the Mayor dies?”,
-discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She won’t.”,1:embMayorateQuiet:”Let’s talk about something else.”,
+discussMayorDies,DialogOptionSelected,$option == mayorDies,,“That would be … unlikely.”,1:embMayorateQuiet:”Let’s talk about something else.”,
 discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“As you likely know, Ilkhanna’s terraforming AI saved the colony during the Collapse. It was only fitting that she become Mayor.”",1:ruleForever:”But that’s enough to rule... forever?”,
-discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,1:embMayorateQuiet:”I make my own way.”,
+discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,"1:embMayorateQuiet:”I suppose that makes sense.”
+2:embMayorateQuiet:”I make my own way.”",
 ,,,,,,
 discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
 2:mayoratekill:”And if they were?”",
