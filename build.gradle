@@ -49,11 +49,6 @@ clean {
     delete fileTree('.') { include '*.jar' }
 }
 
-task wrapper(type: Wrapper) {
-    description 'Create a new Gradle wrapper.'
-    gradleVersion = '3.2.1'
-}
-
 // compile time dependencies for most mods
 dependencies {
     compile files('../GraphicsLib/jars/Graphics.jar')
