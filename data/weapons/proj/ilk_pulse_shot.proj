@@ -1,11 +1,11 @@
 {
-	"id":"ilk_pulse_shot",
-	"specClass":"projectile",
-	"spawnType":"PLASMA",
-	"collisionClass":"PROJECTILE_FF",
-	"collisionClassByFighter":"PROJECTILE_FIGHTER",
-	"width":30.0,
-	"fadeTime":0.1,
-	"fringeColor":[217,21,3,200],
-	"coreColor":[245,27,84,255],
+	"id": "ilk_pulse_shot",
+	"specClass": "projectile",
+	"spawnType": "PLASMA",
+	"collisionClass": "PROJECTILE_FF",
+	"collisionClassByFighter": "PROJECTILE_FIGHTER",
+	"width": 30.0,
+	"fadeTime": 0.1,
+	"fringeColor": [217, 21, 3, 200],
+	"coreColor": [245, 27, 84, 255]
 }

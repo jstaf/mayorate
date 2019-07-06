@@ -4,7 +4,7 @@
 	"displayName": "Mayorate",
 	"displayNameWithArticle": "the Mayorate",
 	"logo": "graphics/ilk/factions/mayorate_flag.png",
-	"crest":"graphics/ilk/factions/mayorate_crest.png",
+	"crest": "graphics/ilk/factions/mayorate_crest.png",
 	"shipNamePrefix": "MDSV",
 	"shipNameSources": {
 		"FARSI": 1
@@ -101,7 +101,7 @@
 			"ilk_ravana",
 			"ilk_narayana"
 		]
-	}, 
+	},
 	"priorityShips": {
 		"tags": ["mayorate_bp"],
 		"hulls": []
@@ -115,7 +115,7 @@
 		"fighters": []
 	},
 	"knownWeapons": {
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "mayorate_bp"],
+		"tags": ["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "mayorate_bp"],
 		"weapons": []
 	},
 	"priorityWeapons": {
@@ -149,22 +149,17 @@
 		"warships": 4,
 		"carriers": 2,
 		"phaseShips": 1,
-
 		"officerQuality": 2,
 		"shipQuality": 3,
 		"numShips": 2,
-
 		"shipSize": 4,
-
 		"aggression": 3,
-
-		"combatFreighterProbability":0.2,
-		"combatFreighterCombatUseFraction":0.5,
-		"combatFreighterCombatUseFractionWhenPriority":0.7,
-		"autofitRandomizeProbability":0.1,
-		
-		"commanderSkillsShuffleProbability":0,
-		"commanderSkills":[
+		"combatFreighterProbability": 0.2,
+		"combatFreighterCombatUseFraction": 0.5,
+		"combatFreighterCombatUseFractionWhenPriority": 0.7,
+		"autofitRandomizeProbability": 0.1,
+		"commanderSkillsShuffleProbability": 0,
+		"commanderSkills": [
 			"officer_management",
 			"coordinated_maneuvers",
 			"fighter_doctrine",
@@ -175,14 +170,11 @@
 		"trade": "Trade Convoy",
 		"tradeLiner": "Resettlement Detachment",
 		"smallTrader": "Emissary",
-
 		"patrolSmall": "Picket",
 		"patrolMedium": "Squadron",
 		"patrolLarge": "Battlegroup",
-		
 		"inspectionFleet": "Inquisitors",
 		"taskForce": "Task Force",
-		
 		"foodReliefFleet": "Relief Detachment"
 	}
 }

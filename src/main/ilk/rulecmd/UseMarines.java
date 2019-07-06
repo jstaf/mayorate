@@ -10,8 +10,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
 /**
- * Use a random number of marines by removing them from player inventory Created
- * by jeff on 24/08/15.
+ * Use a random number of marines by removing them from player inventory
  */
 public class UseMarines extends BaseCommandPlugin {
   @Override

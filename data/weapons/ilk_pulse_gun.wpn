@@ -1,29 +1,30 @@
 {
-	"id":"ilk_pulse_gun",  # this id must match what's in the spreadsheet
-	"specClass":"projectile",
-	"type":"ENERGY",
-	"size":"MEDIUM",
-	"turretSprite":"",
-	"turretGlowSprite":"graphics/ilk/weapons/pulse_glow.png",
-	"hardpointSprite":"",
-	"hardpointGlowSprite":"graphics/ilk/weapons/pulse_glow.png",
-	"glowColor":[245,27,84,255],
-	"turretOffsets":[0, 0],
-	"turretAngleOffsets":[0],
-	"hardpointOffsets":[0, 0],
-	"hardpointAngleOffsets":[0],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
-	#"animationType":"GLOW",
-	"animationType":"GLOW_AND_FLASH",
-	"muzzleFlashSpec":{"length":35.0,   # only used if animationType = MUZZLE_FLASH
-					   "spread":10.0,
-					   "particleSizeMin":10.0,
-					   "particleSizeRange":12.0,
-					   "particleDuration":0.3,
-					   "particleCount":12,
-					   "particleColor":[245,27,84,150]},	
-	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
-	"requiresFullCharge":false,  # for pulse weapons - whether the weapon will fire at a lower strength partial charge
-	"projectileSpecId":"ilk_pulse_shot",  # projectile that will be fired
-	"fireSoundTwo":"ilk_pulse_gun",
+	"id": "ilk_pulse_gun",
+	"specClass": "projectile",
+	"type": "ENERGY",
+	"size": "MEDIUM",
+	"turretSprite": "",
+	"turretGlowSprite": "graphics/ilk/weapons/pulse_glow.png",
+	"hardpointSprite": "",
+	"hardpointGlowSprite": "graphics/ilk/weapons/pulse_glow.png",
+	"glowColor": [245, 27, 84, 255],
+	"turretOffsets": [0, 0],
+	"turretAngleOffsets": [0],
+	"hardpointOffsets": [0, 0],
+	"hardpointAngleOffsets": [0],
+	"barrelMode": "ALTERNATING",
+	"animationType": "GLOW_AND_FLASH",
+	"muzzleFlashSpec": {
+		"length": 35.0,
+		"spread": 10.0,
+		"particleSizeMin": 10.0,
+		"particleSizeRange": 12.0,
+		"particleDuration": 0.3,
+		"particleCount": 12,
+		"particleColor": [245, 27, 84, 150]
+	},
+	"autocharge": true,
+	"requiresFullCharge": false,
+	"projectileSpecId": "ilk_pulse_shot",
+	"fireSoundTwo": "ilk_pulse_gun"
 }

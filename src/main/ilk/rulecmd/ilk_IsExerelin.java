@@ -8,7 +8,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.MayorateModPlugin;
+import ilk.MayorateModPlugin;
 
 public class ilk_IsExerelin extends BaseCommandPlugin {
   @Override

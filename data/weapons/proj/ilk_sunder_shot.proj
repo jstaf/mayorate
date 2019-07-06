@@ -1,20 +1,16 @@
 {
-	"id":"ilk_sunder_shot",
-	"specClass":"projectile",
-	#"spawnType":"BEAM",
-	"spawnType":"BALLISTIC_AS_BEAM",
-	"collisionClass":"RAY",
-	"collisionClassByFighter":"RAY_FIGHTER",
-	"length":600.0,
-	"width":30.0,
-	"hitGlowRadius":20,
-	"fadeTime":0.015,
-	"fringeColor":[255,72,48,200],
-	"coreColor":[255,255,255,200],
-	"textureType":"SMOOTH",  # only needed for BEAM spawnType
-	#"textureScrollSpeed":64.0,
-	#"pixelsPerTexel":5.0
-	#"textureType":"ROUGH",  # only needed for BEAM spawnType
-	"textureScrollSpeed":-256.0,
-	"pixelsPerTexel":1.0
+	"id": "ilk_sunder_shot",
+	"specClass": "projectile",
+	"spawnType": "BALLISTIC_AS_BEAM",
+	"collisionClass": "RAY",
+	"collisionClassByFighter": "RAY_FIGHTER",
+	"length": 600.0,
+	"width": 30.0,
+	"hitGlowRadius": 20,
+	"fadeTime": 0.015,
+	"fringeColor": [255, 72, 48, 200],
+	"coreColor": [255, 255, 255, 200],
+	"textureType": "SMOOTH",
+	"textureScrollSpeed": -256.0,
+	"pixelsPerTexel": 1.0
 }

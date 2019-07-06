@@ -12,7 +12,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-/** @author Jeff */
 public class BumpRep extends BaseCommandPlugin {
 
   @Override

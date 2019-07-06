@@ -1,29 +1,31 @@
 {
-	"id":"ilk_driver",  # this id must match what's in the spreadsheet
-	"specClass":"projectile",
-	"type":"BALLISTIC",
-	"size":"LARGE",
-	"displayArcRadius":800,
-	"turretSprite":"",
-	"turretGlowSprite":"graphics/ilk/weapons/driver_glow.png",
-	"hardpointSprite":"",
-	"hardpointGlowSprite":"graphics/ilk/weapons/driver_glow.png",
-	"glowColor":[255,121,117,200],
-	"turretOffsets":[5, 0],
-	"turretAngleOffsets":[0],
-	"hardpointOffsets":[5, 0],
-	"hardpointAngleOffsets":[0],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
-	"animationType":"GLOW_AND_FLASH",
-	"muzzleFlashSpec":{"length":100.0,   # only used if animationType = MUZZLE_FLASH
-					   "spread":10.0,
-					   "particleSizeMin":20.0,
-					   "particleSizeRange":20.0,
-					   "particleDuration":0.25,
-					   "particleCount":25,
-					   "particleColor":[255,125,75,255]},	
-	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
-	"projectileSpecId":"ilk_driver_shot",  # projectile that will be fired
-	"fireSoundOne":"ilk_driver_scream",
-	"fireSoundTwo":"ilk_driver_fire",
+	"id": "ilk_driver",
+	"specClass": "projectile",
+	"type": "BALLISTIC",
+	"size": "LARGE",
+	"displayArcRadius": 800,
+	"turretSprite": "",
+	"turretGlowSprite": "graphics/ilk/weapons/driver_glow.png",
+	"hardpointSprite": "",
+	"hardpointGlowSprite": "graphics/ilk/weapons/driver_glow.png",
+	"glowColor": [255, 121, 117, 200],
+	"turretOffsets": [5, 0],
+	"turretAngleOffsets": [0],
+	"hardpointOffsets": [5, 0],
+	"hardpointAngleOffsets": [0],
+	"barrelMode": "ALTERNATING",
+	"animationType": "GLOW_AND_FLASH",
+	"muzzleFlashSpec": {
+		"length": 100.0,
+		"spread": 10.0,
+		"particleSizeMin": 20.0,
+		"particleSizeRange": 20.0,
+		"particleDuration": 0.25,
+		"particleCount": 25,
+		"particleColor": [255, 125, 75, 255]
+	},
+	"autocharge": true,
+	"projectileSpecId": "ilk_driver_shot",
+	"fireSoundOne": "ilk_driver_scream",
+	"fireSoundTwo": "ilk_driver_fire"
 }

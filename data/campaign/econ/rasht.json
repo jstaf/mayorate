@@ -1,7 +1,6 @@
 {
     "starSystem": "rasht",
-    "markets": [
-        {
+    "markets": [{
             "entities": ["inir"],
             "faction": "mayorate",
             "size": 5,
@@ -46,7 +45,7 @@
         },
         {
             "entities": ["sindral"],
-            "faction": "luddic_path", 
+            "faction": "luddic_path",
             "size": 4,
             "startingConditions": [
                 "no_atmosphere",

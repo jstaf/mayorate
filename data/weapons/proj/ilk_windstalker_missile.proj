@@ -1,34 +1,38 @@
 {
-	"id":"ilk_windstalker_missile",
-	"specClass":"missile",	
-	"missileType":"MISSILE",
-	"sprite":"graphics/missiles/missile_annihilator.png",
-	"size":[4,18],	
-	"center":[2,9],
-	"collisionRadius":15,
-	"collisionClass":"MISSILE_FF",
-	"explosionColor":[255,50,50,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":50, # purely visual	
-	"engineSpec":{"turnAcc":500,
-				  "turnRate":200,
-				  "acc":300,
-				  "dec":300},
-	"engineSlots":[{"id":"ES1",
-					"loc":[-8, 0],
-					"style":"CUSTOM",
-				    "styleSpec":{
-						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
-						"engineColor":[255,208,177,255],
-						"contrailDuration":1,
-						"contrailWidthMult":1,
-						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
-						"contrailMinSeg":5, # min segment length, in pixels
-						"contrailMaxSpeedMult":0.5f,
-						"contrailAngularVelocityMult":0.5f,
-						"contrailColor":[51,45,41,170],
-						"type":"SMOKE"
-					},
-				    "width":4.0,
-				    "length":10.0,
-				    "angle":180.0}],
+	"id": "ilk_windstalker_missile",
+	"specClass": "missile",
+	"missileType": "MISSILE",
+	"sprite": "graphics/missiles/missile_annihilator.png",
+	"size": [4, 18],
+	"center": [2, 9],
+	"collisionRadius": 15,
+	"collisionClass": "MISSILE_FF",
+	"explosionColor": [255, 50, 50, 255],
+	"explosionRadius": 50,
+	"engineSpec": {
+		"turnAcc": 500,
+		"turnRate": 200,
+		"acc": 300,
+		"dec": 300
+	},
+	"engineSlots": [{
+		"id": "ES1",
+		"loc": [-8, 0],
+		"style": "CUSTOM",
+		"styleSpec": {
+			"mode": "QUAD_STRIP",
+			"engineColor": [255, 208, 177, 255],
+			"contrailDuration": 1,
+			"contrailWidthMult": 1,
+			"contrailWidthAddedFractionAtEnd": 2.5,
+			"contrailMinSeg": 5,
+			"contrailMaxSpeedMult": "0.5f",
+			"contrailAngularVelocityMult": "0.5f",
+			"contrailColor": [51, 45, 41, 170],
+			"type": "SMOKE"
+		},
+		"width": 4.0,
+		"length": 10.0,
+		"angle": 180.0
+	}]
 }

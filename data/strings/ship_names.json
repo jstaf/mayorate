@@ -1,6 +1,5 @@
 {
-	"FARSI":
-	[
+	"FARSI": [
 		"Buyid",
 		"Nasir",
 		"Karim",
@@ -60,7 +59,6 @@
 		"Bayandor",
 		"Hamzeh",
 		"Kaman",
-		"Bahregan",
-		
-	],
+		"Bahregan"
+	]
 }

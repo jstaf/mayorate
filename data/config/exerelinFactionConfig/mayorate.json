@@ -1,9 +1,9 @@
 {
-  "uniqueModClassName":"data.scripts.MayorateModPlugin",
+  "uniqueModClassName":"ilk.MayorateModPlugin",
   "playableFaction":true,
   "isPirateNeutral":true,
 
-  "crewExpereinceLevelIncreaseChance":0.0, # Double, 0 - 1.0
+  "crewExpereinceLevelIncreaseChance":0.0,
   "baseFleetCostMultiplier":1.0,
 
   "customRebelFaction":"",
@@ -18,7 +18,7 @@
     "technocratic":1,
     "militarist":0.5,
     "diplomatic":-0.5,
-    "ideological":1,
+    "ideological":1
   },
 
   "vengeanceLevelNames":["Grudge", "Vendetta", "Revenge"],
@@ -32,5 +32,5 @@
   "startShipsCombatLarge":["ilk_del_azarchel_artillery", "ilk_cimeterre_strike", "ilk_tiamat_assault"],
   "startShipsCarrierLarge":["ilk_jamaran_fs", "ilk_cimeterre_strike", "ilk_tiamat_assault"],
 
-  "defenceStations":["nex_asgard_Advanced"],
+  "defenceStations":["nex_asgard_Advanced"]
 }

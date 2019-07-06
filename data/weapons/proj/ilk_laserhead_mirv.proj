@@ -1,56 +1,62 @@
 {
-	"id":"ilk_laserhead_mirv",
-	"specClass":"missile",	
-	"missileType":"MIRV",
-	"sprite":"graphics/ilk/weapons/laserhead_missile_v2.png",
-	"size":[15,36],	
-	"center":[7,17],
-	"collisionRadius":20,
-	"collisionClass":"MISSILE_NO_FF",
-	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":125, # purely visual
-	"engineSpec":{"turnAcc":600,
-				  "turnRate":80,
-				  "acc":70,
-				  "dec":50},
-	"engineSlots":[{"id":"ES1",
-					"loc":[-10, 0],
-					"style":"CUSTOM",
-				    "styleSpec":{
-						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
-						"engineColor":[255,208,177,255],
-						"contrailDuration":1,
-						"contrailWidthMult":1,
-						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
-						"contrailMinSeg":5, # min segment length, in pixels
-						"contrailMaxSpeedMult":0.5f,
-						"contrailAngularVelocityMult":0.5f,
-						"contrailColor":[51,45,41,170],
-						"type":"SMOKE"
-					},
-				    "width":10.0,
-				    "length":50.0,
-				    "angle":180.0}],
-	"behaviorSpec":{"behavior":"MIRV",
-					"splitRange":250,
-					"minTimeToSplit":1,
-					"numShots":1,
-					"damage":850,
-					"damageType":ENERGY,
-					"hitpoints":200,
-					"arc":0,
-					"spreadSpeed":0,
-					"projectileSpec":"ilk_laserhead_shot",
-					#"emptySpec":"type_1_mirv_empty",
-					"smokeSpec":{"particleSizeMin":20.0,
-								 "particleSizeRange":20.0,
-								 "cloudParticleCount":11,
-								 "cloudDuration":1.0,
-								 "cloudRadius":20.0,
-								 "blowbackParticleCount":0,
-								 "blowbackDuration":0,
-								 "blowbackLength":0,
-								 "blowbackSpread":0,
-								 "particleColor":[100,100,100,200]}
-					}				    
+	"id": "ilk_laserhead_mirv",
+	"specClass": "missile",
+	"missileType": "MIRV",
+	"sprite": "graphics/ilk/weapons/laserhead_missile_v2.png",
+	"size": [15, 36],
+	"center": [7, 17],
+	"collisionRadius": 20,
+	"collisionClass": "MISSILE_NO_FF",
+	"explosionColor": [255, 165, 0, 255],
+	"explosionRadius": 125,
+	"engineSpec": {
+		"turnAcc": 600,
+		"turnRate": 80,
+		"acc": 70,
+		"dec": 50
+	},
+	"engineSlots": [{
+		"id": "ES1",
+		"loc": [-10, 0],
+		"style": "CUSTOM",
+		"styleSpec": {
+			"mode": "QUAD_STRIP",
+			"engineColor": [255, 208, 177, 255],
+			"contrailDuration": 1,
+			"contrailWidthMult": 1,
+			"contrailWidthAddedFractionAtEnd": 2.5,
+			"contrailMinSeg": 5,
+			"contrailMaxSpeedMult": "0.5f",
+			"contrailAngularVelocityMult": "0.5f",
+			"contrailColor": [51, 45, 41, 170],
+			"type": "SMOKE"
+		},
+		"width": 10.0,
+		"length": 50.0,
+		"angle": 180.0
+	}],
+	"behaviorSpec": {
+		"behavior": "MIRV",
+		"splitRange": 250,
+		"minTimeToSplit": 1,
+		"numShots": 1,
+		"damage": 850,
+		"damageType": "ENERGY",
+		"hitpoints": 200,
+		"arc": 0,
+		"spreadSpeed": 0,
+		"projectileSpec": "ilk_laserhead_shot",
+		"smokeSpec": {
+			"particleSizeMin": 20.0,
+			"particleSizeRange": 20.0,
+			"cloudParticleCount": 11,
+			"cloudDuration": 1.0,
+			"cloudRadius": 20.0,
+			"blowbackParticleCount": 0,
+			"blowbackDuration": 0,
+			"blowbackLength": 0,
+			"blowbackSpread": 0,
+			"particleColor": [100, 100, 100, 200]
+		}
+	}
 }

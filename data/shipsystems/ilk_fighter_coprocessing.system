@@ -2,7 +2,7 @@
   "id": "ilk_fighter_coprocessing",
   "type": "STAT_MOD",
   "aiType": "CUSTOM",
-  "aiScript": "data.shipsystems.scripts.ai.ilk_FighterCoprocessingAi",
-  "statsScript": "data.shipsystems.scripts.ilk_FighterCoprocessingStats",
+  "aiScript": "ilk.shipsystems.ai.FighterCoprocessingAI",
+  "statsScript": "ilk.shipsystems.FighterCoprocessingStats",
   "useSound": "system_targeting_feed"
 }

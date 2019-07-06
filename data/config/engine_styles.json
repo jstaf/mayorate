@@ -1,8 +1,4 @@
 {
-	# Reserved engine style ids (can not be used):
-	# "CUSTOM"
-	
-
 	"ILK_ENGINE":{
 		"engineColor":[255,208,177,255],
 		"contrailParticleSizeMult":4,
@@ -11,9 +7,8 @@
 		"contrailMaxSpeedMult":0.2,
 		"contrailAngularVelocityMult":1.5,
 		"contrailColor":[51,45,41,18],
-		"type":"SMOKE" # GLOW or SMOKE
+		"type":"SMOKE"
 	},
-
 	"ILK_ENGINE_SMALL":{
 		"engineColor":[255,208,177,255],
 		"contrailParticleSizeMult":4,
@@ -22,7 +17,6 @@
 		"contrailMaxSpeedMult":0.2,
 		"contrailAngularVelocityMult":1.5,
 		"contrailColor":[51,45,41,70],
-		"type":"SMOKE" # GLOW or SMOKE
-	},
+		"type":"SMOKE"
+	}
 }
-

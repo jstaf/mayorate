@@ -1,24 +1,28 @@
 {
-	"id":"ilk_laserhead_shot",
-	"specClass":"missile",	
-	"missileType":"NO_AI",
-	"sprite":"graphics/missiles/missile_MIRV_warhead.png",
-	"size":[7,16],	
-	"center":[3.5,8],
-	"collisionRadius":12,
-	"collisionClass":"MISSILE_NO_FF",
-	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":75, # purely visual
-	"maxFlightTime":1.5,	
-	"engineSpec":{"turnAcc":0,
-				  "turnRate":0,
-				  "maxSpeed":300,
-				  "acc":0,
-				  "dec":0},
-	"engineSlots":[{"id":"ES1",
-					"loc":[-7, 0],
-				    "style":"MISSILE_MIDLINE",
-				    "width":4.0,
-				    "length":20.0,
-				    "angle":180.0}]
+	"id": "ilk_laserhead_shot",
+	"specClass": "missile",
+	"missileType": "NO_AI",
+	"sprite": "graphics/missiles/missile_MIRV_warhead.png",
+	"size": [7, 16],
+	"center": [3.5, 8],
+	"collisionRadius": 12,
+	"collisionClass": "MISSILE_NO_FF",
+	"explosionColor": [255, 165, 0, 255],
+	"explosionRadius": 75,
+	"maxFlightTime": 1.5,
+	"engineSpec": {
+		"turnAcc": 0,
+		"turnRate": 0,
+		"maxSpeed": 300,
+		"acc": 0,
+		"dec": 0
+	},
+	"engineSlots": [{
+		"id": "ES1",
+		"loc": [-7, 0],
+		"style": "MISSILE_MIDLINE",
+		"width": 4.0,
+		"length": 20.0,
+		"angle": 180.0
+	}]
 }
