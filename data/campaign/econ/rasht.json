@@ -16,7 +16,7 @@
             "industries": [
                 "population",
                 "spaceport",
-                "ground_defenses",
+                "grounddefenses",
                 "fuelprod",
                 "refining",
                 "mining"
