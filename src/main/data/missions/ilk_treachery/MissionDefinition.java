@@ -78,17 +78,5 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Add an asteroid field
     api.addAsteroidField(minX + width / 2f, minY + height / 2f, 0, 8000f, 20f, 70f, 100);
     api.setBackgroundGlowColor(new Color(183, 98, 84, 30));
-
-    /*
-     * api.addPlugin(new BaseEveryFrameCombatPlugin() {
-     * 
-     * @Override public void advance(float amount, List events) { interval +=
-     * amount; if (interval > (162f)) { Global.getSoundPlayer().playMusic(0, 0,
-     * "ilk_mission1_music"); interval = 0f; } }
-     * 
-     * @Override public void init(CombatEngineAPI engine) {
-     * Global.getSoundPlayer().playMusic(0, 0, "ilk_mission1_music");
-     * engine.getContext().setStandoffRange(10000f); interval = 0f; } });
-     */
   }
 }
