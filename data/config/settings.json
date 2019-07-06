@@ -1,37 +1,36 @@
 {
-  "graphics":{
-    "illustrations":{
-      "ilk_inir_surface":"graphics/ilk/illustrations/inir_surface.png",
-      "ilk_interdiction":"graphics/ilk/illustrations/interdiction.png"
+  "graphics": {
+    "illustrations": {
+      "ilk_inir_surface": "graphics/ilk/illustrations/inir_surface.png",
+      "ilk_interdiction": "graphics/ilk/illustrations/interdiction.png"
     },
-    "beams":{
-      "ilk_fakeBeamFX":"graphics/ilk/FAKEBEAM/fakeBeamFX.png"
+    "beams": {
+      "ilk_fakeBeamFX": "graphics/ilk/FAKEBEAM/fakeBeamFX.png"
     },
-    "stations":{
-      "ilk_kushehr":"graphics/ilk/stations/kushehr.png"
+    "stations": {
+      "ilk_kushehr": "graphics/ilk/stations/kushehr.png"
     },
-    "util":{
-      "indicator":"graphics/ilk/util/indicator.png"
+    "util": {
+      "indicator": "graphics/ilk/util/indicator.png"
     },
-    "terrain":{
-      "rings1":"graphics/ilk/planets/ring_textures1.png",
-      "rings2":"graphics/ilk/planets/ring_textures2.png",
-      "rings3":"graphics/ilk/planets/ring_textures3.png",
-      "rings4":"graphics/ilk/planets/ring_textures4.png",
-      "rings5":"graphics/ilk/planets/ring_textures5.png"
+    "terrain": {
+      "rings1": "graphics/ilk/planets/ring_textures1.png",
+      "rings2": "graphics/ilk/planets/ring_textures2.png",
+      "rings3": "graphics/ilk/planets/ring_textures3.png",
+      "rings4": "graphics/ilk/planets/ring_textures4.png",
+      "rings5": "graphics/ilk/planets/ring_textures5.png"
     }
   },
-  "ruleCommandPackages":[
+  "ruleCommandPackages": [
     "ilk.rulecmd"
   ],
-  "plugins":{
-    "ilk_MusicReset":"ilk.plugins.MusicReset",
-    "ilk_ShotgunSpecialBehavior":"ilk.plugins.ShotgunSpecialBehavior",
-    "ilk_DisruptorPlugin":"ilk.plugins.DisruptorPlugin",
-    "ilk_MineDecelerator":"ilk.plugins.MineManager",
-    "ilk_BeamRendererPlugin":"ilk.plugins.BeamRendererPlugin"
+  "plugins": {
+    "ilk_ShotgunSpecialBehavior": "ilk.plugins.ShotgunSpecialBehavior",
+    "ilk_DisruptorPlugin": "ilk.plugins.DisruptorPlugin",
+    "ilk_MineDecelerator": "ilk.plugins.MineManager",
+    "ilk_BeamRendererPlugin": "ilk.plugins.BeamRendererPlugin"
   },
-  "campaignMusicVolumeMult":0.7,
-  "campaignMusicFilterGain":1,
-  "campaignMusicFilterGainHF":1
+  "campaignMusicVolumeMult": 0.7,
+  "campaignMusicFilterGain": 1,
+  "campaignMusicFilterGainHF": 1
 }
