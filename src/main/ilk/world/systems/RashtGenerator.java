@@ -12,6 +12,8 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
 
+import org.apache.log4j.Logger;
+
 import ilk.MayorateModPlugin;
 import ilk.world.utils.BountySpawner;
 
@@ -19,6 +21,9 @@ public class RashtGenerator implements SectorGeneratorPlugin {
 
   @Override
   public void generate(SectorAPI sector) {
+
+    Logger logger = Global.getLogger(this.getClass());
+
     StarSystemAPI system = sector.createStarSystem("Rasht");
     system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");
 
@@ -27,16 +32,19 @@ public class RashtGenerator implements SectorGeneratorPlugin {
     system.setLightColor(new Color(183, 98, 84)); // light color in entire system, affects all entities
 
     // SectorEntityToken creation goes from star -> fringe
-    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1000f, 30f);
+
+    // closer than 1000f results in fleets rubberbanding away from the star corona
+    // and back to the planet. yikes.
+    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1200f, 30f);
     inir.setCustomDescriptionId("planet_Inir");
     inir.setInteractionImage("illustrations", "ilk_inir_surface");
 
     // inner system band
     system.addAsteroidBelt(star, 100, 2250, 300, 100, 180);
-    system.addRingBand(star, "terrain", "rings4", 512f, 2, new Color(65, 47, 42), 512f, 1850f, 280f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 2150, 170f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 1975, 220f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 3, Color.white, 256f, 2200, 140f);
+    system.addRingBand(star, "terrain", "ilk_rings4", 512f, 2, new Color(65, 47, 42), 512f, 1850f, 280f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 2, Color.white, 256f, 2150, 170f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 1975, 220f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 2200, 140f);
     SectorEntityToken ring = system.addTerrain(Terrain.RING,
         new BaseRingTerrain.RingParams(680f, 1950f, null, "Cinder Field"));
     ring.setCircularOrbit(star, 0, 0, 120f);
@@ -77,9 +85,9 @@ public class RashtGenerator implements SectorGeneratorPlugin {
     sindral.setCustomDescriptionId("planet_Sindral");
 
     // outer system band
-    system.addRingBand(star, "terrain", "rings1", 256f, 1, Color.white, 256f, 7000, 300f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 0, Color.white, 280f, 7200, 260f);
-    system.addRingBand(star, "terrain", "rings1", 256f, 2, Color.white, 256f, 7250, 210f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 1, Color.white, 256f, 7000, 300f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 0, Color.white, 280f, 7200, 260f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 2, Color.white, 256f, 7250, 210f);
     system.addAsteroidBelt(star, 400, 7100, 300, 100, 280);
     system.addAsteroidBelt(star, 100, 7600, 100, 60, 150);
     SectorEntityToken ringInner = system.addTerrain(Terrain.RING,
@@ -92,7 +100,8 @@ public class RashtGenerator implements SectorGeneratorPlugin {
     iolanthe.getSpec().setGlowColor(new Color(118, 248, 255, 255));
     iolanthe.getSpec().setUseReverseLightForGlow(true);
     iolanthe.applySpecChanges();
-    system.addRingBand(iolanthe, "terrain", "rings2", 256f, 1, new Color(255, 255, 255, 200), 256f, 450f, 40f);
+
+    system.addRingBand(iolanthe, "terrain", "ilk_rings3", 256f, 1, new Color(255, 255, 255, 200), 256f, 475f, 40f);
     system.addPlanet("amaru", iolanthe, "Amaru", "cryovolcanic", 330f, 50f, 800f, 50f);
 
     // only make jump points once everythings been added

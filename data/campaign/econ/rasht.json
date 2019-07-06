@@ -1,7 +1,10 @@
 {
     "starSystem": "rasht",
-    "markets": [{
-            "entities": ["inir"],
+    "markets": [
+        {
+            "entities": [
+                "inir"
+            ],
             "faction": "mayorate",
             "size": 5,
             "startingConditions": [
@@ -20,7 +23,10 @@
             ]
         },
         {
-            "entities": ["ilkhanna", "ilk_port"],
+            "entities": [
+                "ilkhanna",
+                "ilk_port"
+            ],
             "faction": "mayorate",
             "size": 6,
             "startingConditions": [
@@ -30,7 +36,6 @@
                 "farmland_adequate",
                 "arid",
                 "rogue_ai_core",
-                "closed_immigration",
                 "population_6"
             ],
             "industries": [
@@ -38,13 +43,18 @@
                 "highcommand",
                 "spaceport",
                 "farming",
-                ["orbitalworks", "corrupted_nanoforge"],
+                [
+                    "orbitalworks",
+                    "corrupted_nanoforge"
+                ],
                 "heavybatteries",
                 "starfortress"
             ]
         },
         {
-            "entities": ["sindral"],
+            "entities": [
+                "sindral"
+            ],
             "faction": "luddic_path",
             "size": 4,
             "startingConditions": [
@@ -52,7 +62,7 @@
                 "ice",
                 "low_gravity",
                 "organized_crime",
-                "volatiles_diffuse",
+                "volatiles_plentiful",
                 "luddic_majority",
                 "population_4"
             ],
@@ -65,7 +75,9 @@
             ]
         },
         {
-            "entities": ["iolanthe"],
+            "entities": [
+                "iolanthe"
+            ],
             "faction": "independent",
             "size": 3,
             "freePort": true,

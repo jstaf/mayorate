@@ -10,15 +10,12 @@
     "stations": {
       "ilk_kushehr": "graphics/ilk/stations/kushehr.png"
     },
-    "util": {
-      "indicator": "graphics/ilk/util/indicator.png"
-    },
     "terrain": {
-      "rings1": "graphics/ilk/planets/ring_textures1.png",
-      "rings2": "graphics/ilk/planets/ring_textures2.png",
-      "rings3": "graphics/ilk/planets/ring_textures3.png",
-      "rings4": "graphics/ilk/planets/ring_textures4.png",
-      "rings5": "graphics/ilk/planets/ring_textures5.png"
+      "ilk_rings1": "graphics/ilk/planets/ring_textures1.png",
+      "ilk_rings2": "graphics/ilk/planets/ring_textures2.png",
+      "ilk_rings3": "graphics/ilk/planets/ring_textures3.png",
+      "ilk_rings4": "graphics/ilk/planets/ring_textures4.png",
+      "ilk_rings5": "graphics/ilk/planets/ring_textures5.png"
     }
   },
   "ruleCommandPackages": [
@@ -29,8 +26,5 @@
     "ilk_DisruptorPlugin": "ilk.plugins.DisruptorPlugin",
     "ilk_MineDecelerator": "ilk.plugins.MineManager",
     "ilk_BeamRendererPlugin": "ilk.plugins.BeamRendererPlugin"
-  },
-  "campaignMusicVolumeMult": 0.7,
-  "campaignMusicFilterGain": 1,
-  "campaignMusicFilterGainHF": 1
+  }
 }
