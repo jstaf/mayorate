@@ -1,17 +1,18 @@
 package ilk.rulecmd;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-public class AddMarketCondition extends BaseCommandPlugin {
+public class ilk_RemoveMarketCondition extends BaseCommandPlugin {
 
-  // first param is just a string with the market condition you want
   @Override
   public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params,
       Map<String, MemoryAPI> memoryMap) {
@@ -21,8 +22,19 @@ public class AddMarketCondition extends BaseCommandPlugin {
       return false;
     }
 
+    List<String> toCheckFor = new ArrayList<String>();
     for (Misc.Token param : params) {
-      market.addCondition(param.getString(memoryMap));
+      toCheckFor.add(param.getString(memoryMap));
+    }
+    List<String> toRemove = new ArrayList<String>();
+    for (MarketConditionAPI condition : market.getConditions()) {
+      String id = condition.getId();
+      if (toCheckFor.contains(id)) {
+        toRemove.add(id);
+      }
+    }
+    for (String removeMe : toRemove) {
+      market.removeCondition(removeMe);
     }
 
     return true;

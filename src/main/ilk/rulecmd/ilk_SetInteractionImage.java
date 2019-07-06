@@ -9,7 +9,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-public class SetInteractionImage extends BaseCommandPlugin {
+public class ilk_SetInteractionImage extends BaseCommandPlugin {
 
   // param 1 = category
   // param 2 = key

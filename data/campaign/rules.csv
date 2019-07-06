@@ -91,12 +91,12 @@ eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at u
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
-Scy1,PopulateModFactions,IsFactionPresent scy,,,1:eSc:Scy,
-Blackrock1,PopulateModFactions,IsFactionPresent blackrock_driveyards,,,1:eBrdy:Blackrock Driveyards,
-Exigency1,PopulateModFactions,IsFactionPresent exigency,,,1:eExi:Exigency Corporation,
-Shadowyards1,PopulateModFactions,IsFactionPresent shadow_industry,,,1:eSHI:Shadowyards Reconstruction Authority,
-Templar1,PopulateModFactions,IsFactionPresent templars,,,1:eTem:The Knights Templar,
-Imperium1,PopulateModFactions,IsFactionPresent interstellarimperium,,,1:eIm:The Interstellar Imperium,
+Scy1,PopulateModFactions,ilk_IsFactionPresent scy,,,1:eSc:Scy,
+Blackrock1,PopulateModFactions,ilk_IsFactionPresent blackrock_driveyards,,,1:eBrdy:Blackrock Driveyards,
+Exigency1,PopulateModFactions,ilk_IsFactionPresent exigency,,,1:eExi:Exigency Corporation,
+Shadowyards1,PopulateModFactions,ilk_IsFactionPresent shadow_industry,,,1:eSHI:Shadowyards Reconstruction Authority,
+Templar1,PopulateModFactions,ilk_IsFactionPresent templars,,,1:eTem:The Knights Templar,
+Imperium1,PopulateModFactions,ilk_IsFactionPresent interstellarimperium,,,1:eIm:The Interstellar Imperium,
 embModFactionsLeave,PopulateModFactions,,,,10:embFactionsQuiet:”Let's talk about those other factions again.”,
 ,,,,,,
 #discuss mod factions,,,,,,
@@ -128,42 +128,42 @@ ughFrig,DialogOptionSelected,$option == frig,FireBest GiveFrigate,,,
 ughDestroyer,DialogOptionSelected,$option == dest,FireBest GiveDestroyer,,,
 ughBig,DialogOptionSelected,$option == big,FireBest GiveHeavy,,,
 ughStrike,DialogOptionSelected,$option == strike,FireBest GiveStrikeGroup,,,
-giveFrigateLilith,GiveFrigate,,"AddShip ""ilk_lilith_assault""
-BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveFrigateTiamat,GiveFrigate,,"AddShip ""ilk_tiamat_assault""
-BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
-giveDestroyerCimeterre,GiveDestroyer,,"AddShip ""ilk_cimeterre_cs""
-BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDestroyerSafirB,GiveDestroyer,,"AddShip ""ilk_safir_converted_support""
-BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDestroyerForaker,GiveDestroyer,,"AddShip ""ilk_foraker_escort""
-BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
-giveDelAzarchel,GiveHeavy,,"AddShip ""ilk_del_azarchel_artillery""
-BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveJamaran,GiveHeavy,,"AddShip ""ilk_jamaran_fs""
-BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveRavana,GiveHeavy,,"AddShip ""ilk_ravana_assault""
-BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
-giveNarayana,GiveHeavy,,"AddShip ""ilk_narayana_fs""
-BumpRep $faction.id -0.3",,1:eShips:”Thanks.”,
+giveFrigateLilith,GiveFrigate,,"ilk_AddShip ""ilk_lilith_assault""
+ilk_BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
+giveFrigateTiamat,GiveFrigate,,"ilk_AddShip ""ilk_tiamat_assault""
+ilk_BumpRep $faction.id -0.1",,1:eShips:”Thanks.”,
+giveDestroyerCimeterre,GiveDestroyer,,"ilk_AddShip ""ilk_cimeterre_cs""
+ilk_BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDestroyerSafirB,GiveDestroyer,,"ilk_AddShip ""ilk_safir_converted_support""
+ilk_BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDestroyerForaker,GiveDestroyer,,"ilk_AddShip ""ilk_foraker_escort""
+ilk_BumpRep $faction.id -0.15",,1:eShips:”Thanks.”,
+giveDelAzarchel,GiveHeavy,,"ilk_AddShip ""ilk_del_azarchel_artillery""
+ilk_BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveJamaran,GiveHeavy,,"ilk_AddShip ""ilk_jamaran_fs""
+ilk_BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveRavana,GiveHeavy,,"ilk_AddShip ""ilk_ravana_assault""
+ilk_BumpRep $faction.id -0.2",,1:eShips:”Thanks.”,
+giveNarayana,GiveHeavy,,"ilk_AddShip ""ilk_narayana_fs""
+ilk_BumpRep $faction.id -0.3",,1:eShips:”Thanks.”,
 giveStrikeGroupSmall,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small strike group has been placed under your command"" textFriendColor
-BumpRep $faction.id -0.2
-AddShip ""ilk_lilith_assault""
-AddShip ""ilk_lilith_assault""
-AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
+ilk_BumpRep $faction.id -0.2
+ilk_AddShip ""ilk_lilith_assault""
+ilk_AddShip ""ilk_lilith_assault""
+ilk_AddShip ""ilk_tiamat_assault""
+ilk_AddShip ""ilk_cimeterre_strike""",,1:eShips:”Thanks.”,
 giveStrikeGroupSmallCarrier,GiveStrikeGroup,RepIsAtBest $toImprove WELCOMING,"AddText ""A small carrier group has been placed under your command"" textFriendColor
-BumpRep $faction.id -0.2
-AddShip ""ilk_lilith_assault""
-AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
+ilk_BumpRep $faction.id -0.2
+ilk_AddShip ""ilk_lilith_assault""
+ilk_AddShip ""ilk_tiamat_assault""
+ilk_AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 giveStrikeGroupMedium,GiveStrikeGroup,RepIsAtWorst $faction.id COOPERATIVE,"AddText ""A heavy strike group has been placed under your command"" textFriendColor
-BumpRep $faction.id -0.3
-AddShip ""ilk_del_azarchel_artillery""
-AddShip ""ilk_safir_standard""
-AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_tiamat_assault""
-AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
+ilk_BumpRep $faction.id -0.3
+ilk_AddShip ""ilk_del_azarchel_artillery""
+ilk_AddShip ""ilk_safir_standard""
+ilk_AddShip ""ilk_tiamat_assault""
+ilk_AddShip ""ilk_tiamat_assault""
+ilk_AddShip ""ilk_foraker_escort""",,1:eShips:”Thanks.”,
 ,,,,,,
 ############ Improve relations,,,,,,
 whichToImprove,DialogOptionSelected,$option == eRep,FireAll Allies,“Which faction would you like us to talk to on your behalf?”,,
@@ -178,8 +178,8 @@ FireBest RepAdjuster",,,
 indbump,DialogOptionSelected,$option == dipPirates,"$toImprove = pirates
 FireBest RepAdjuster",,,
 ,,,,,,
-repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"BumpRep $toImprove 0.05
-BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
+repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"ilk_BumpRep $toImprove 0.05
+ilk_BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
 ,,,,,,
 ############ discuss faction backstory,,,,,,
@@ -214,7 +214,7 @@ discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never 
 ,,,,,,
 discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
 2:mayoratekill:”And if they were?”",
-discussMayorateKill,DialogOptionSelected,$option == mayoratekill,BumpRep $faction.id -0.05,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
+discussMayorateKill,DialogOptionSelected,$option == mayoratekill,ilk_BumpRep $faction.id -0.05,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
 discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs you’ll encounter in the sector are little more than empty husks. They’ve been bred for a single purpose – destruction. Putting them out of their misery would be an act of mercy.”,"1:notMad:”So there would be no consequences if one of them ‘forced my hand’?”
 2:rehabilitation:”Can they be rehabilitated?”",
 discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
@@ -226,57 +226,49 @@ discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many o
 #######################TEST COMMANDS MENU,,,,,,
 ilk_TestCheck,PopulateOptions,$global.isDevMode,,,10:ruleTest:>> (dev) test custom commands,
 # page 2,,,,,,
-ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:BumpRep
-1:addConditionTest:AddMarketCondition
-1:removeConditionTest:RemoveMarketCondition
-1:setOwnerTest:SetEntityOwner
-1:setImageTest:SetInteractionImage
+ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:ilk_BumpRep
+1:addConditionTest:ilk_AddMarketCondition
+1:removeConditionTest:ilk_RemoveMarketCondition
+1:setOwnerTest:ilk_SetEntityOwner
+1:setImageTest:ilk_SetInteractionImage
 10:ruleTest2:<<Next page>>
 10:mpoContinue:Leave",
-ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,BumpRep $faction.id 0.2,,0:ruleTest:Back,
-ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,AddMarketCondition ai_core,,0:ruleTest:Back,
-ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,RemoveMarketCondition ai_core,,0:ruleTest:Back,
-ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,SetEntityOwner mayorate,,0:ruleTest:Back,
-ilk_setImgTest,DialogOptionSelected,$option == setImageTest,SetInteractionImage illustrations inir_surface,,0:ruleTest:Back,
+ilk_bumpRepTest,DialogOptionSelected,$option == bumpRepTest,ilk_BumpRep $faction.id 0.2,,0:ruleTest:Back,
+ilk_addCondTest,DialogOptionSelected,$option == addConditionTest,ilk_AddMarketCondition ai_core,,0:ruleTest:Back,
+ilk_rmCondTest,DialogOptionSelected,$option == removeConditionTest,ilk_RemoveMarketCondition ai_core,,0:ruleTest:Back,
+ilk_setOwnTest,DialogOptionSelected,$option == setOwnerTest,ilk_SetEntityOwner mayorate,,0:ruleTest:Back,
+ilk_setImgTest,DialogOptionSelected,$option == setImageTest,ilk_SetInteractionImage illustrations inir_surface,,0:ruleTest:Back,
 ,,,,,,
 # page 2,,,,,,
-ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:spawnTest:SpawnHostileFleet
-1:killFleetTest:KillFleet
-1:isFleetAliveTest:IsFleetAlive
-1:addShipTest:AddShip
-1:addTrackedShipToFleetTest:AddTrackedShipToFleet
+ilk_testlist2,DialogOptionSelected,$option == ruleTest2,,,"1:killFleetTest:ilk_KillFleet
+1:isFleetAliveTest:ilk_IsFleetAlive
+1:addShipTest:ilk_AddShip
+1:addTrackedShipToFleetTest:ilk_AddTrackedShipToFleet
 9:ruleTest:<<Previous page>>
 9:ruleTest3:<<Next page>>
 10:mpoContinue:Leave",
-ilk_fleetSpawnTest,DialogOptionSelected,$option == spawnTest,SpawnHostileFleet mayorate death_fleet jangala TEST_FLEET_ID,,0:ruleTest2:Back,
-ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,KillFleet $global.TEST_FLEET_ID,,0:ruleTest2:Back,
+ilk_killFleetTest,DialogOptionSelected,$option == killFleetTest,ilk_KillFleet $global.TEST_FLEET_ID,,0:ruleTest2:Back,
 ilk_isFleetAliveTest,DialogOptionSelected,$option == isFleetAliveTest,FireBest FleetAliveTest,,,
-ilk_fleetAliveTRUE,FleetAliveTest,IsFleetAlive $global.TEST_FLEET_ID,AddText TRUE,,0:ruleTest2:Back,
-ilk_fleetAliveFALSE,FleetAliveTest,!IsFleetAlive $global.TEST_FLEET_ID,AddText FALSE,,0:ruleTest2:Back,
-ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,AddTrackedShipToFleet ilk_tiamat_assault $global.TEST_FLEET_ID TEST_SHIP_ID,,0:ruleTest2:Back,
-ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"AddShip ""ilk_lilith_assault""",,0:ruleTest2:Back,
+ilk_fleetAliveTRUE,FleetAliveTest,ilk_IsFleetAlive $global.TEST_FLEET_ID,AddText TRUE,,0:ruleTest2:Back,
+ilk_fleetAliveFALSE,FleetAliveTest,!ilk_IsFleetAlive $global.TEST_FLEET_ID,AddText FALSE,,0:ruleTest2:Back,
+ilk_addTrackedShipTest,DialogOptionSelected,$option == addTrackedShipToFleetTest,ilk_AddTrackedShipToFleet ilk_tiamat_assault $global.TEST_FLEET_ID TEST_SHIP_ID,,0:ruleTest2:Back,
+ilk_addShipTest,DialogOptionSelected,$option == addShipTest,"ilk_AddShip ""ilk_lilith_assault""",,0:ruleTest2:Back,
 ,,,,,,
 # page 3,,,,,,
-ilk_testlist3,DialogOptionSelected,$option == ruleTest3,,,"1:playSoundTest:PlaySound
-1:SpawnFleetTest2:SpawnFleet
-1:hasMarinesTest:HasMarines
-1:useMarinesTest:UseMarines
-1:getPlayerLevelTest1:IsPlayerLevelAbove 1
-1:getPlayerLevelTest2:IsPlayerLevelAbove 2
+ilk_testlist3,DialogOptionSelected,$option == ruleTest3,,,"1:playSoundTest:ilk_PlaySound
+1:hasMarinesTest:ilk_HasMarines
+1:useMarinesTest:ilk_UseMarines
+1:getPlayerLevelTest1:ilk_IsPlayerLevelAbove 1
+1:getPlayerLevelTest2:ilk_IsPlayerLevelAbove 2
 9:testList:<<Previous page>>
 10:mpoContinue:Leave",
-ilk_playSoundTest,DialogOptionSelected,$option == playSoundTest,PlaySound ilk_pulse_gun,,"1:playSoundTest:PlaySound
+ilk_playSoundTest,DialogOptionSelected,$option == playSoundTest,ilk_PlaySound ilk_pulse_gun,,"1:playSoundTest:ilk_PlaySound
 0:ruleTest3:Back",
-ilk_SpawnFleetTest2,DialogOptionSelected,$option == SpawnFleetTest2,SpawnFleet mayorate death_fleet jangala TEST_FLEET_ID2,,0:ruleTest3:Back,
 ilk_HasMarinesTest,DialogOptionSelected,$option == hasMarinesTest,FireBest HasMarinesTest,,,
-ilk_UseMarinesTest,DialogOptionSelected,$option == useMarinesTest,UseMarines 10,,0:ruleTest3:Back,
+ilk_UseMarinesTest,DialogOptionSelected,$option == useMarinesTest,ilk_UseMarines 10,,0:ruleTest3:Back,
 ilk_GetPlayerLevelTest1,DialogOptionSelected,$option == getPlayerLevelTest1,FireBest LevelTest,,0:ruleTest3:Back,
 ,,,,,,
 ilk_marTestT,HasMarinesTest,ilk_HasMarines 10,AddText TRUE,,0:ruleTest3:Back,
 ilk_marTestF,HasMarinesTest,!ilk_HasMarines 10,AddText FALSE,,0:ruleTest3:Back,
-ilk_lvlTestT,LevelTest,IsPlayerLevelAbove 1,AddText TRUE,,0:ruleTest3:Back,
-ilk_lvlTestF,LevelTest,!IsPlayerLevelAbove 1,AddText FALSE,,0:ruleTest3:Back,
-,,,,,,
-################ MISSIONS #######################,,,,,,
-mission_list,DialogOptionSelected,$option == ilkMissions,FireAll MissionListEntry,,,
-mission null,MissionListEntry,,,,10:embMain:”Nevermind.”,
+ilk_lvlTestT,LevelTest,ilk_IsPlayerLevelAbove 1,AddText TRUE,,0:ruleTest3:Back,
+ilk_lvlTestF,LevelTest,!ilk_IsPlayerLevelAbove 1,AddText FALSE,,0:ruleTest3:Back,

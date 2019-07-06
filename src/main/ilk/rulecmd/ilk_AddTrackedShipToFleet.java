@@ -12,7 +12,7 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-public class AddTrackedShipToFleet extends BaseCommandPlugin {
+public class ilk_AddTrackedShipToFleet extends BaseCommandPlugin {
 
   // param1 variant id
   // param2 fleet id memory key name to add ship to

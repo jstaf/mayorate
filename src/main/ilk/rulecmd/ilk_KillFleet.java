@@ -11,7 +11,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-public class KillFleet extends BaseCommandPlugin {
+public class ilk_KillFleet extends BaseCommandPlugin {
 
   // param1 fleet mem key
   @Override

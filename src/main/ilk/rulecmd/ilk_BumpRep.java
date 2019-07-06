@@ -12,7 +12,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-public class BumpRep extends BaseCommandPlugin {
+public class ilk_BumpRep extends BaseCommandPlugin {
 
   @Override
   public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params,

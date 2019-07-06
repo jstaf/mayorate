@@ -12,7 +12,7 @@ import com.fs.starfarer.api.util.Misc;
 /**
  * Use a random number of marines by removing them from player inventory
  */
-public class UseMarines extends BaseCommandPlugin {
+public class ilk_UseMarines extends BaseCommandPlugin {
   @Override
   public boolean execute(String s, InteractionDialogAPI interactionDialogAPI, List<Misc.Token> list,
       Map<String, MemoryAPI> map) {
