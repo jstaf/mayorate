@@ -32,6 +32,7 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
     FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
     FactionAPI pirates = sector.getFaction(Factions.PIRATES);
     FactionAPI independent = sector.getFaction(Factions.INDEPENDENT);
+    FactionAPI league = sector.getFaction(Factions.PERSEAN);
     FactionAPI kol = sector.getFaction(Factions.KOL);
     FactionAPI church = sector.getFaction(Factions.LUDDIC_CHURCH);
     FactionAPI path = sector.getFaction(Factions.LUDDIC_PATH);
@@ -40,7 +41,7 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
 
     player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
 
-    mayorate.setRelationship(path.getId(), RepLevel.HOSTILE);
+    mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
     mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
     mayorate.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
     mayorate.setRelationship(diktat.getId(), RepLevel.SUSPICIOUS);
@@ -48,6 +49,7 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
     mayorate.setRelationship(kol.getId(), RepLevel.SUSPICIOUS);
     mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
     mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
+    mayorate.setRelationship(league.getId(), RepLevel.SUSPICIOUS);
 
     // mod factions
     mayorate.setRelationship("scy", RepLevel.HOSTILE);

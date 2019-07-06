@@ -111,7 +111,8 @@ public class RashtGenerator implements SectorGeneratorPlugin {
     if (!MayorateModPlugin.getIsExerelin()) {
       // start occasional bounties against mayorate enemies so players can more easily
       // level up their mayorate rep
-      sector.addScript(new BountySpawner(sector, system, ilkhanna.getMarket(), 180f));
+      logger.info("Starting Rasht bounty generator");
+      sector.addScript(new BountySpawner(sector, ilkhanna.getMarket(), 90f));
     }
   }
 }

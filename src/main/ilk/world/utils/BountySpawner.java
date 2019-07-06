@@ -1,41 +1,42 @@
 package ilk.world.utils;
 
 import com.fs.starfarer.api.EveryFrameScript;
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.events.CampaignEventPlugin;
+import com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager;
+
+import org.apache.log4j.Logger;
 
 /**
  * Spawns a bounty every once and awhile so people have an opportunity to level
  * up with the Mayorate if they want to
  */
 public class BountySpawner implements EveryFrameScript {
+  Logger logger = Global.getLogger(BountySpawner.class);
 
   SectorAPI sector;
   LocationAPI system;
   MarketAPI market;
   float interval;
   private long lastSpawn;
-  private boolean isDone;
 
   boolean init = false;
   CampaignEventPlugin bounty;
 
-  public BountySpawner(SectorAPI sector, LocationAPI system, MarketAPI market, float dayInterval) {
+  public BountySpawner(SectorAPI sector, MarketAPI market, float dayInterval) {
     this.sector = sector;
-    this.system = system;
     this.market = market;
     this.interval = dayInterval;
-    isDone = false;
-
     lastSpawn = sector.getClock().getTimestamp();
   }
 
   // run indefinitely
   @Override
   public boolean isDone() {
-    return isDone;
+    return false;
   }
 
   @Override
@@ -50,14 +51,20 @@ public class BountySpawner implements EveryFrameScript {
    */
   @Override
   public void advance(float amount) {
-    /*
-     * TODO 0.9 if (!init && (sector.getClock().getElapsedDaysSince(lastSpawn) >=
-     * 95)) { // spawn an initial event sector .getEventManager() .startEvent(new
-     * CampaignEventTarget(market), Events.SYSTEM_BOUNTY, null); lastSpawn =
-     * sector.getClock().getTimestamp(); init = true; } else if
-     * (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) { sector
-     * .getEventManager() .startEvent(new CampaignEventTarget(market),
-     * Events.SYSTEM_BOUNTY, null); lastSpawn = sector.getClock().getTimestamp(); }
-     */
+    if (!init && (sector.getClock().getElapsedDaysSince(lastSpawn) >= 95)) {
+      // spawn an initial event
+      spawnBounty();
+      init = true;
+    } else if (sector.getClock().getElapsedDaysSince(lastSpawn) >= interval) {
+      spawnBounty();
+    }
+  }
+
+  private void spawnBounty() {
+    logger.info("Spawning rasht bounty");
+    if (market != null) {
+      SystemBountyManager.getInstance().addOrResetBounty(market);
+    }
+    lastSpawn = sector.getClock().getTimestamp();
   }
 }
