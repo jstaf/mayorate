@@ -30,12 +30,7 @@ import ilk.world.utils.PathSpawnPoint;
 public class MayorateModPlugin extends BaseModPlugin {
 
   public static final String ID = "mayorate";
-
   private static final String SETTINGS_FILE = "mayorate_settings.json";
-
-  private static final String NUKE_ID = "ilk_aoe_mirv";
-  private static final String THERMAL_LANCE_ID = "ilk_thermal_lance";
-
   private static boolean isExerelin;
 
   public static boolean getIsExerelin() {
@@ -75,7 +70,7 @@ public class MayorateModPlugin extends BaseModPlugin {
   @Override
   public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
     switch (missile.getProjectileSpecId()) {
-    case NUKE_ID:
+    case "ilk_aoe_mirv":
       return new PluginPick<MissileAIPlugin>(new NukeAI(missile, launchingShip), PickPriority.HIGHEST);
     default:
       return null;
@@ -85,7 +80,7 @@ public class MayorateModPlugin extends BaseModPlugin {
   @Override
   public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
     switch (weapon.getId()) {
-    case THERMAL_LANCE_ID:
+    case "ilk_thermal_lance":
       return new PluginPick<AutofireAIPlugin>(new ThermalLanceAI(weapon), PickPriority.MOD_SET);
     default:
       return null;

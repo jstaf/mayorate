@@ -11,7 +11,6 @@ import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 
-import org.apache.log4j.Logger;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
@@ -22,8 +21,6 @@ import ilk.util.CollisionUtilsEX;
 import ilk.util.DamageUtils;
 
 public class BeamSpec {
-
-  private static final Logger logger = Global.getLogger(BeamSpec.class);
 
   // initialization variables
   CombatEngineAPI engine;
