@@ -125,6 +125,9 @@
     7.5,
     -87
   ],
+  "builtInMods": [
+    "ilk_SensorSuite"
+  ],
   "center": [
     150,
     190
