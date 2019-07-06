@@ -6,7 +6,6 @@
             "faction": "mayorate",
             "size": 5,
             "startingConditions": [
-                "indoctrination",
                 "very_hot",
                 "no_atmosphere",
                 "ore_ultrarich",
@@ -16,7 +15,6 @@
             "industries": [
                 "population",
                 "spaceport",
-                "grounddefenses",
                 "fuelprod",
                 "refining",
                 "mining"
@@ -33,6 +31,7 @@
                 "farmland_adequate",
                 "arid",
                 "rogue_ai_core",
+                "closed_immigration",
                 "population_6"
             ],
             "industries": [
@@ -52,6 +51,9 @@
             "startingConditions": [
                 "no_atmosphere",
                 "ice",
+                "low_gravity",
+                "organized_crime",
+                "volatiles_diffuse",
                 "luddic_majority",
                 "population_4"
             ],
@@ -60,7 +62,7 @@
                 "patrolhq",
                 "spaceport",
                 "mining",
-                "lightindustry"
+                "fuelprod"
             ]
         },
         {
