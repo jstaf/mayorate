@@ -42,28 +42,28 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
     player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
 
     mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
+    mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
     mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
     mayorate.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(diktat.getId(), RepLevel.SUSPICIOUS);
-    mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
+    mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
     mayorate.setRelationship(kol.getId(), RepLevel.SUSPICIOUS);
     mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
     mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(league.getId(), RepLevel.SUSPICIOUS);
+    mayorate.setRelationship(league.getId(), RepLevel.HOSTILE);
 
     // mod factions
     mayorate.setRelationship("scy", RepLevel.HOSTILE);
     mayorate.setRelationship("sun_ice", RepLevel.HOSTILE);
     mayorate.setRelationship("sun_ici", RepLevel.HOSTILE);
-    mayorate.setRelationship("shadow_industry", RepLevel.SUSPICIOUS);
-    mayorate.setRelationship("pirate_anar", RepLevel.FAVORABLE);
+    mayorate.setRelationship("shadow_industry", RepLevel.HOSTILE);
+    mayorate.setRelationship("pirate_anar", RepLevel.NEUTRAL);
     mayorate.setRelationship("citadeldefenders", RepLevel.HOSTILE);
     mayorate.setRelationship("crystanite", RepLevel.HOSTILE);
     mayorate.setRelationship("interstellarimperium", RepLevel.HOSTILE);
-    mayorate.setRelationship("neutrinocorp", RepLevel.SUSPICIOUS);
-    mayorate.setRelationship("diableavionics", RepLevel.SUSPICIOUS);
+    mayorate.setRelationship("neutrinocorp", RepLevel.NEUTRAL);
+    mayorate.setRelationship("diableavionics", RepLevel.NEUTRAL);
     mayorate.setRelationship("blackrock_driveyards", RepLevel.HOSTILE);
-    mayorate.setRelationship("syndicate_asp", RepLevel.SUSPICIOUS);
+    mayorate.setRelationship("syndicate_asp", RepLevel.NEUTRAL);
     mayorate.setRelationship("junk_pirates", RepLevel.NEUTRAL);
     mayorate.setRelationship("pack", RepLevel.HOSTILE);
     mayorate.setRelationship("exigency", RepLevel.HOSTILE);

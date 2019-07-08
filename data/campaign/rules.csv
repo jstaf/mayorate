@@ -29,18 +29,56 @@ $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,�
 5:cutCommLink:Cut the comm link",
 ,,,,,,
 #AI cores turn in options,,,,,,
-ilkTurnInAiCores,PopulateOptions,"$isPerson
+ilk_aiCores_turnInOptionSelMayorate,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == mayorate",FireAll PopulateCoresTurnInOptions,"“It’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”",,
+ilk_aiCores_turnInResponseMayorate,AICoresTurnedIn,$faction.id == mayorate,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
+,,,,,,
+#ilkTurnInAiCores,PopulateOptions,"$isPerson
 $faction.id == mayorate
 ilk_TurnInAiCores personCanAcceptCores",FireBest ilkDisableTurnInAiCoresIfNeeded,,10:ilkStartTurnInAiCores:“I'd like to turn in these AI cores that I've acquired...“,
-ilkDisableTurnInAiCores,ilkDisableTurnInAiCoresIfNeeded,!AICores playerHasCores,"SetTooltip ilkTurnInAiCores “You do not have any AI cores in your posession.“
+#ilkDisableTurnInAiCores,ilkDisableTurnInAiCoresIfNeeded,!AICores playerHasCores,"SetTooltip ilkTurnInAiCores “You do not have any AI cores in your posession.“
 SetEnabled ilkTurnInAiCores false",,,
-ilkTurnInAiCoresOptions,DialogOptionSelected,$option == ilkStartTurnInAiCores,,"“It’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”","1:ilkSelectAiCores:“Here they are.”
+#ilkTurnInAiCoresOptions,DialogOptionSelected,$option == ilkStartTurnInAiCores,,"“It’s rare to encounter functioning Domain AI cores, or even rarer still, a human captain who would return them to us unharmed.”","1:ilkSelectAiCores:“Here they are.”
 2:ilkAbortTurnInAiCores:“Actually, I think I will hold on to them.”",
-ilkTurnInAiCoresDenied,DialogOptionSelected,$option == ilkAbortTurnInAiCores,FireAll PopulateOptions,“A shame. We’ll still be here if you change your mind.”,,
-ilkSelectAiCoresEvent,DialogOptionSelected,$option == ilkSelectAiCores,ilk_TurnInAiCores selectCores,,,
-ilkAiCoresTurnedInResponseDefault,ilkAiCoresTurnedInDefault,,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
-ilkAiCoresTurnedInResponseAiCrew,ilkAiCoresTurnedInAiCrew,,"ilk_TurnInAiCores giveAiCrew
+#ilkTurnInAiCoresDenied,DialogOptionSelected,$option == ilkAbortTurnInAiCores,FireAll PopulateOptions,“A shame. We’ll still be here if you change your mind.”,,
+#ilkSelectAiCoresEvent,DialogOptionSelected,$option == ilkSelectAiCores,ilk_TurnInAiCores selectCores,,,
+#ilkAiCoresTurnedInResponseDefault,ilkAiCoresTurnedInDefault,,FireAll PopulateOptions,"“You’ve saved lives today, captain. We’ll see that these people are rehabilitated.”",,
+#ilkAiCoresTurnedInResponseAiCrew,ilkAiCoresTurnedInAiCrew,,"ilk_TurnInAiCores giveAiCrew
 FireAll PopulateOptions",“You have proven yourself a true benefactor of free AI. You may find that some Mayorate citizens are willing to serve on your crew.”,,
+,,,,,,
+,,,,,,
+########## commission,,,,,,
+CMSNTextRejectHostile_mayorate,CMSNTextRejectHostile,$faction.id == mayorate,,"""It was a bold move coming here. I’m impressed you made it into orbit alive. I’d suggest leaving immediately if you wish to keep things that way.""",,
+CMSNTextHasOther_mayorate,CMSNTextHasOther,$faction.id == mayorate,,"""Perhaps. You’ve proven yourself a competent captain already.”
+
+“This is a matter of trust, however. We cannot allow other interests to compete with our own survival. Resign your commission with $theOtherCommissionFaction and we will reconsider your request for a commission.""",,
+CMSNTextUnsuited_mayorate,CMSNTextUnsuited,$faction.id == mayorate,,"""I admire your determination, but the Mayorate only has room for the truly exceptional. Prove yourself above the baseline human rabble of the Sector and we can discuss this matter further.""",,
+CMSNTextSuitedPart1_mayorate,CMSNTextSuitedPart1,$faction.id == mayorate,,"""I am pleased to hear you say that. We have few friends, and even fewer allies.
+
+Accepting a commission has major implications, however. You’ll be hunted by those who fear us, and richly rewarded for paying them back in kind. But more importantly you’ll be working towards the continued survival of humanity and all who choose to call this Sector home. We will survive, no matter the cost.
+
+Although it is technically possible to resign a Mayorate commission, few have ever done so. As a friend of the Mayorate you enjoy access to a stipend and unique benefits, like our diplomats and naval reserves. Those who stand with us are rewarded well.",,
+CMSNTextSuitedPart2_mayorate,CMSNTextSuitedPart2,$faction.id == mayorate,,"""Does this interest you? Can I count you as one of our own?""",,
+CMSNTextWelcomePart1_mayorate,CMSNTextWelcomePart1,$faction.id == mayorate,,"The Mayorate agent flashes you a not-quite human smile. ""I am pleased you made the right decision.""",,
+CMSNTextWelcomePart2_mayorate,CMSNTextWelcomePart2,$faction.id == mayorate,,"""The Mayorate is now open to you. Speak with one of our administrators if you require additional craft or would have us put in a good word with another faction on your behalf. These resources are to be used wisely however – if you use them too frequently, it may negatively affect your reputation. 
+
+Speaking of reputation, we’ll reach out to some of our underworld contacts and clear up any misunderstandings you may have had there – you may need to deal with these factions more frequently as part of your work with us in the future.
+
+Is there anything else you need?""",,
+CMSNTextChangeMind_mayorate,CMSNTextChangeMind,$faction.id == mayorate,,"""I can respect that. It’s a difficult choice to make.
+
+That said, we need you as much as you need us. Come back again should you choose to change your mind.""",,
+CMSNResignAskToConfirm_mayorate,CMSNResignAskToConfirm,$faction.id == mayorate,,"""I know what you’re thinking all too well. Serving the Mayorate is a difficult path to walk.
+
+Know this, however – we count you as one of our own. Remain and you will always have a place among us. No matter how many enemies you face, no matter if the entire Sector turns against you, you will always have a place on Ilkhanna.
+
+It would be a shame if we were to lose a friend.”",,
+CMSNResignConfirmed_mayorate,CMSNResignConfirmed,$faction.id == mayorate,,"""I understand.""
+
+You’re not entirely sure, but there is almost a hint of despair from the other side of the comm link before it cuts out.",,
+CMSNResignCancelled_mayorate,CMSNResignCancelled,$faction.id == mayorate,,"""A wise decision.""
+
+The Mayorate representative cuts the comm link without further discussion.",,
 ,,,,,,
 ,,,,,,
 #Mayorate market interaction dialogue,,,,,,
@@ -77,17 +115,28 @@ eTriTachyon1,PopulateFactions,,,,1:eTach:The Tri-Tachyon Corporation,
 ePirates1,PopulateFactions,,,,1:ePir:The friendly neighborhood pirates,
 eIndependent1,PopulateFactions,,,,1:eInd:Independent worlds and traders,
 eChurch1,PopulateFactions,,,,1:eCch:The Luddic Church,
-eDiktat1,PopulateFactions,,,,1:eDik:The Sindrian Diktat,
-eModded1,PopulateFactions,,,,9:eMods:Other factions,
+ePath1,PopulateFactions,,,,1:ePath:The Luddic Path,
+ePage2,PopulateFactions,,,,9:eOther:Other factions,
 embFactionsLeave,PopulateFactions,,,,10:embMain:”Nevermind.”,
+,,,,,,
+eLeague1,PopulateFactions2,,,,1:ePersean:The Persean League,
+eDiktat1,PopulateFactions2,,,,1:eDik:The Sindrian Diktat,
+embFactionsLeave2,PopulateFactions2,,,,10:embMain:”Nevermind.”,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
 ,,,,,,
 #discuss the vanilla factions,,,,,,
 eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
 eTriTachyon,DialogOptionSelected,$option == eTach,,“It's true. We've been known to cooperate with them from time to time. Scandalous.”,1:embFactionsQuiet:”Let's talk about something else.”,
-ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:embFactionsQuiet:”Hah. Riiiiight.”,
+ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:ePir2:”Hah. Riiiiight.”,
+ePirates2,DialogOptionSelected,$option == ePir2,,"“In all honesty, we have much to gain from working together. The Mayorate relies on smuggled goods and the disruptions caused by piracy that keep our enemies off balance. The sector’s underworld gains an untouchable safe harbor. Everyone wins.",1:embFactionsQuiet:”I’m beginning to understand the arrangement.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
 eChurch,DialogOptionSelected,$option == eCch,,"“Whenever we try to talk to them, it's always 'Help, help, I'm being oppressed! What about my religious freedoms?' or whatever. Their music is pretty 'meh', too.”","1:embFactionsQuiet:”Yeah, I never liked them either.”",
 eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting, but we try to keep things friendly.”",1:embFactionsQuiet:”I see you're already becoming fast friends.”,
+ePerseanRelations,DialogOptionSelected,$option == ePath,,,"1:embFactionsQuiet:”Careful, you're making me nervous.”",
+ePathRelations,DialogOptionSelected,$option == ePersean,,,"1:embFactionsQuiet:”Careful, you're making me nervous.”",
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
@@ -224,7 +273,7 @@ discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many o
 ,,,,,,
 ,,,,,,
 #######################TEST COMMANDS MENU,,,,,,
-ilk_TestCheck,PopulateOptions,$global.isDevMode,,,10:ruleTest:>> (dev) test custom commands,
+ilk_TestCheck,PopulateOptions,$global.isDevMode,,,999:ruleTest:>> (dev) test custom commands,
 # page 2,,,,,,
 ilk_testlist,DialogOptionSelected,$option == ruleTest,,,"1:bumpRepTest:ilk_BumpRep
 1:addConditionTest:ilk_AddMarketCondition
