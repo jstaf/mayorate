@@ -17,7 +17,7 @@ Submit bug reports either here in Github issues or to the forum thread (or PM
 me) and I'll do my best to iron them out. Feel free to submit a pull request if
 you have something clever to add.
 
-(And yes, I did all of the art/coding/music.)
+![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_narayana.png)
 
 ## Compiling the mod yourself
 
@@ -31,6 +31,7 @@ follow the Linux instructions but note that I do not test on this platform.
 ```bash
 # cd to starsector's "mods/" subdirectory before you start
 git clone https://github.com/jstaf/mayorate.git
+cd mayorate
 ./gradlew run      # build and run
 ./gradlew release  # create releaseable .zip
 ```
