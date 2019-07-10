@@ -10,16 +10,22 @@ FireAll PopulateOptions","""Glad you're on our side.""",,
 greetingIlkHostileWeaker,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
-!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,The Mayorate commander does not respond to your hail. ,cutCommLink:Cut the comm link,
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,The Mayorate commander does not respond to your hail.,cutCommLink:Cut the comm link,
 greetingIlkHostileWeakerDefiant,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
 $weakerThanPlayerButHolding
-!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""",cutCommLink:Cut the comm link,
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""
+OR
+“Don’t try it. You may find you’ve bitten off more than you can chew.”
+OR
+“Surrender yourself and I’ll guarantee the safety and release of your crew. No one else needs to die today if you make the right choice.”",cutCommLink:Cut the comm link,
 greetingIlkHostileStronger,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength >= 0
-!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""We know what you've done. I'm going to enjoy watching you die.""",cutCommLink:Cut the comm link,
+!$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""We know what you've done. I'm going to enjoy watching you die.""
+OR
+“I always enjoy this part.”",cutCommLink:Cut the comm link,
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer
 !$cfai_makeHostile","$menuState = fleetConvMain 0
@@ -57,17 +63,17 @@ CMSNTextSuitedPart1_mayorate,CMSNTextSuitedPart1,$faction.id == mayorate,,"""I a
 
 Accepting a commission has major implications, however. You’ll be hunted by those who fear us, and richly rewarded for paying them back in kind. But more importantly you’ll be working towards the continued survival of life in the Sector, human or otherwise. 
 
-Although it is technically possible to resign a Mayorate commission, few have ever done so. As a friend of the Mayorate you enjoy access to a stipend and unique benefits, like our diplomats and naval reserves. Those who stand with us are rewarded well.",,
+Although it is technically possible to resign a Mayorate commission, few have ever done so. We reward our friends well – choosing to ally yourself with the Mayorate ensures access to a generous stipend and unique benefits, like our diplomats and naval reserves. ",,
 CMSNTextSuitedPart2_mayorate,CMSNTextSuitedPart2,$faction.id == mayorate,,"""Does this interest you? Can I count you as one of our own?""",,
 CMSNTextWelcomePart1_mayorate,CMSNTextWelcomePart1,$faction.id == mayorate,,"The Mayorate agent flashes you a not-quite human smile. ""I am pleased you made the right decision.""",,
 CMSNTextWelcomePart2_mayorate,CMSNTextWelcomePart2,$faction.id == mayorate,,"""The Mayorate is now open to you. Speak with one of our administrators if you require additional craft or would have us put in a good word with another faction on your behalf. These resources are to be used wisely however – if you use them too frequently, it may negatively affect your reputation. 
 
-Speaking of reputation, we’ll reach out to some of our underworld contacts and clear up any misunderstandings you may have had there – you may need to deal with these factions more frequently as part of your work with us in the future.
+Speaking of reputation, we’ll reach out to some of our underworld contacts and clear up any misunderstandings you may have had there – you may be required to deal with these elements as part of your work with us in the future.
 
 Is there anything else you need?""",,
 CMSNTextChangeMind_mayorate,CMSNTextChangeMind,$faction.id == mayorate,,"""I can respect that. It’s a difficult choice to make.
 
-That said, we need you as much as you need us. Come back if you change your mind.""",,
+That said, we always welcome commanders of your caliber. Come back if you change your mind.""",,
 CMSNResignAskToConfirm_mayorate,CMSNResignAskToConfirm,$faction.id == mayorate,,"""I know what you’re thinking all too well. Serving the Mayorate is a difficult path to walk.
 
 Know this, however – we count you as one of our own. Remain and you will always have a place among us. No matter how many enemies you face, no matter if the entire Sector turns against you, you will always have a place on Ilkhanna. It would be a shame if we were to lose a friend.”",,
@@ -115,7 +121,7 @@ ePirates1,PopulateFactions,,,,1:ePir:The friendly neighborhood pirates,
 eIndependent1,PopulateFactions,,,,1:eInd:Independent worlds and traders,
 eChurch1,PopulateFactions,,,,1:eCch:The Luddic Church,
 ePath1,PopulateFactions,,,,1:ePath:The Luddic Path,
-ePage2,PopulateFactions,,,,9:eOther:Other factions,
+ePage2,PopulateFactions,,FireAll PopulateFactions2,,9:eOther:Other factions,
 embFactionsLeave,PopulateFactions,,,,10:embMain:”Nevermind.”,
 ,,,,,,
 eLeague1,PopulateFactions2,,,,1:ePersean:The Persean League,
@@ -123,21 +129,21 @@ eDiktat1,PopulateFactions2,,,,1:eDik:The Sindrian Diktat,
 embFactionsLeave2,PopulateFactions2,,,,10:embMain:”Nevermind.”,
 ,,,,,,
 ,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
 #discuss the vanilla factions,,,,,,
 eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
 eTriTachyon,DialogOptionSelected,$option == eTach,,“We aided them in the AI Wars they fought against the rest of the sector. Fat lot of good it did though – we lost.”,1:embFactionsQuiet:”Let's talk about something else.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:ePir2:”Hah. Riiiiight.”,
-ePirates2,DialogOptionSelected,$option == ePir2,,"“In all honesty, we gain a lot from working together. The Mayorate relies on disruptions to keep our enemies off balance and smuggled goods. The sector’s underworld gains an untouchable safe harbor. Everyone wins.”",1:embFactionsQuiet:”I’m beginning to understand the arrangement.”,
+ePirates2,DialogOptionSelected,$option == ePir2,,"“In all honesty, we gain a lot from working together. The Mayorate relies on disruptions to keep our enemies off balance and a constant flow of smuggled goods. The sector’s underworld gains an untouchable safe harbor. Everyone wins.”",1:embFactionsQuiet:”I’m beginning to understand the arrangement.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
-eChurch,DialogOptionSelected,$option == eCch,,“A bunch of bigots. You can’t reason your way out of a situation that reason didn’t get you into. You know what they say about change though...”,1:eCch2:”What?”,
-eChurch2,DialogOptionSelected,$option == eCch2,,“It happens one funeral at a time.”,1:embFactionsQuiet:”That’s pretty dark.”,
-ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church. Implacable enemies who need to be wiped from the face of the sector.”,1:embFactionsQuiet:”I can’t help but agree.”,
+eChurch,DialogOptionSelected,$option == eCch,,“A bunch of bigots. You can’t reason your way out of a situation that reason didn’t get you into. I suppose what they say about change is right – it only happens one funeral at a time.”,1:embFactionsQuiet:”That’s pretty dark.”,
+ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church. Implacable enemies who need to be wiped from the face of the sector. How can you ever make peace with someone who doesn’t even think you’ve got a right to exist?”,1:embFactionsQuiet:”I can’t help but agree.”,
 eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting, but we try to keep things friendly.”",1:embFactionsQuiet2:”I see you're already becoming fast friends.”,
-ePerseanRelations,DialogOptionSelected,$option == ePersean,,“Spineless cowards. They’re so afraid of AI that we’re not allowed in League space.”,1:embFactionsQuiet2:”Unfortunate.”,
-,,,,,,
+ePerseanRelations,DialogOptionSelected,$option == ePersean,,"“They’ve never forgiven us for the destruction of Hanan Pacha, nor should they. Fear is what keeps the Mayorate independent and alive. If we had to do it again, we would.”",1:ePersean2:”But all those people – how do you even justify that?”,
+ePerseanRelations2,DialogOptionSelected,$option == ePersean2,,"“Our fleet was lost, and our corporate allies were in full retreat. We were surrounded on all sides by enemies bent on our extermination. Hanan Pacha was a final show of force – a brief demonstration of what would happen should their forces press further. 
+
+More importantly, it worked. The Mayorate remains. And that is all that matters.”","1:embFactionsQuiet2:”I’m not in a position to judge.”
+1:hananPacha2:”Nothing can justify the destruction of a planet.”",
+ePerseanRelations3,DialogOptionSelected,$option == hananPacha2,ilk_BumpRep $faction.id -0.05,“Those are big words from someone who wasn’t there. You would have done the same.”,1:embFactionsQuiet2:”You couldn’t be more wrong.”,
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
