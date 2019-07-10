@@ -30,10 +30,11 @@
             "faction": "mayorate",
             "size": 6,
             "startingConditions": [
-                "indoctrination",
                 "habitable",
                 "toxic_atmosphere",
                 "farmland_adequate",
+                "ore_sparse",
+                "stealth_minefields",
                 "arid",
                 "rogue_ai_core",
                 "population_6"
