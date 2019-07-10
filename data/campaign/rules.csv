@@ -17,7 +17,7 @@ $relativeStrength < 0
 $weakerThanPlayerButHolding
 !$cfai_makeHostile",$ignorePlayerCommRequests = true 1,"""It would seem we've reached an impasse. If you leave now, we might even let you live.""
 OR
-“Don’t try it. You may find you’ve bitten off more than you can chew.”
+“Don’t try it – you may find you’ve bitten off more than you can chew.”
 OR
 “Surrender yourself and I’ll guarantee the safety and release of your crew. No one else needs to die today if you make the right choice.”",cutCommLink:Cut the comm link,
 greetingIlkHostileStronger,OpenCommLink,"$faction.id == mayorate
@@ -29,7 +29,9 @@ OR
 greetingIlkNeutral,OpenCommLink,"$faction.id == mayorate
 $faction.neutralToPlayer
 !$cfai_makeHostile","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""",cutCommLink:Cut the comm link,
+FireAll PopulateOptions","""Although it's good to see someone else out here, something gives me the feeling that you didn't just stop by to chat.""
+OR
+“This vessel is on a classified Mayorate operation. Maintain a separation of 100km or you will be fired upon.”",cutCommLink:Cut the comm link,
 greetingIlkTargetedHostile,OpenCommLink,"$faction.id == mayorate
 $cfai_makeHostile && $cfai_makeAggressive",$ignorePlayerCommRequests = true 1,“Done running? It doesn't matter. I think it's safe to say you won't be getting out of this one.”,"1:cutCommLink:”We'll see about that.”
 5:cutCommLink:Cut the comm link",
@@ -65,7 +67,7 @@ Accepting a commission has major implications, however. You’ll be hunted by th
 
 Although it is technically possible to resign a Mayorate commission, few have ever done so. We reward our friends well – choosing to ally yourself with the Mayorate ensures access to a generous stipend and unique benefits, like our diplomats and naval reserves. ",,
 CMSNTextSuitedPart2_mayorate,CMSNTextSuitedPart2,$faction.id == mayorate,,"""Does this interest you? Can I count you as one of our own?""",,
-CMSNTextWelcomePart1_mayorate,CMSNTextWelcomePart1,$faction.id == mayorate,,"The Mayorate agent flashes you a not-quite human smile. ""I am pleased you made the right decision.""",,
+CMSNTextWelcomePart1_mayorate,CMSNTextWelcomePart1,$faction.id == mayorate,,"The Mayorate agent flashes you a not-quite human smile. ""I am pleased to hear that.""",,
 CMSNTextWelcomePart2_mayorate,CMSNTextWelcomePart2,$faction.id == mayorate,,"""The Mayorate is now open to you. Speak with one of our administrators if you require additional craft or would have us put in a good word with another faction on your behalf. These resources are to be used wisely however – if you use them too frequently, it may negatively affect your reputation. 
 
 Speaking of reputation, we’ll reach out to some of our underworld contacts and clear up any misunderstandings you may have had there – you may be required to deal with these elements as part of your work with us in the future.
@@ -76,7 +78,7 @@ CMSNTextChangeMind_mayorate,CMSNTextChangeMind,$faction.id == mayorate,,"""I can
 That said, we always welcome commanders of your caliber. Come back if you change your mind.""",,
 CMSNResignAskToConfirm_mayorate,CMSNResignAskToConfirm,$faction.id == mayorate,,"""I know what you’re thinking all too well. Serving the Mayorate is a difficult path to walk.
 
-Know this, however – we count you as one of our own. Remain and you will always have a place among us. No matter how many enemies you face, no matter if the entire Sector turns against you, you will always have a place on Ilkhanna. It would be a shame if we were to lose a friend.”",,
+Know this, however – we count you as one of our own. Remain and you will always have a place among us. No matter how many enemies you face, no matter if the entire Sector turns against you, you will always have a place on Ilkhanna. It would be regrettable if you were to betray this trust.”",,
 CMSNResignConfirmed_mayorate,CMSNResignConfirmed,$faction.id == mayorate,,"""I understand.""
 
 You’re not entirely sure, but there is almost a hint of despair from the other side of the comm link before it cuts out.",,
@@ -130,14 +132,14 @@ embFactionsLeave2,PopulateFactions2,,,,10:embMain:”Nevermind.”,
 ,,,,,,
 ,,,,,,
 #discuss the vanilla factions,,,,,,
-eHegemony,DialogOptionSelected,$option == eHeg,,"“A bunch of wannabes. We were trying to restore the Domain before it was cool. After they started copying us, the only logical choice was to wipe them out.”","1:embFactionsQuiet:”Yeah, they are super un-original. Bleh.”",
-eTriTachyon,DialogOptionSelected,$option == eTach,,“We aided them in the AI Wars they fought against the rest of the sector. Fat lot of good it did though – we lost.”,1:embFactionsQuiet:”Let's talk about something else.”,
+eHegemony,DialogOptionSelected,$option == eHeg,,"“The Hegemony and Mayorate have been in a state of cold war since their failure to annex the Rasht star system following the Collapse. Though we like to think we share similar goals and ideals, there can never be peace until they acknowlege our right to exist.”",1:embFactionsQuiet:”I hear they even copied your lore at one point and you had to rewrite everything. War seems justified.”,
+eTriTachyon,DialogOptionSelected,$option == eTach,,“We aided them in the AI Wars they fought against the rest of the sector. Fat lot of good it did though – we lost.”,1:embFactionsQuiet:”It’s not your fault – the Tri-Tachyons are total pushovers.”,
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:ePir2:”Hah. Riiiiight.”,
 ePirates2,DialogOptionSelected,$option == ePir2,,"“In all honesty, we gain a lot from working together. The Mayorate relies on disruptions to keep our enemies off balance and a constant flow of smuggled goods. The sector’s underworld gains an untouchable safe harbor. Everyone wins.”",1:embFactionsQuiet:”I’m beginning to understand the arrangement.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
-eChurch,DialogOptionSelected,$option == eCch,,“A bunch of bigots. You can’t reason your way out of a situation that reason didn’t get you into. I suppose what they say about change is right – it only happens one funeral at a time.”,1:embFactionsQuiet:”That’s pretty dark.”,
-ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church. Implacable enemies who need to be wiped from the face of the sector. How can you ever make peace with someone who doesn’t even think you’ve got a right to exist?”,1:embFactionsQuiet:”I can’t help but agree.”,
-eDiktat,DialogOptionSelected,$option == eDik,,"“They're still a bit irked at us for that revolutionary movement we've been supporting, but we try to keep things friendly.”",1:embFactionsQuiet2:”I see you're already becoming fast friends.”,
+eChurch,DialogOptionSelected,$option == eCch,,"“A bunch of bigots. Until the Church changes its stance on higher life, it’s unlikely we’ll ever see peace. You can’t reason your way out of a situation that reason didn’t get you into.”",1:embFactionsQuiet:”Their music kinda sucks too.”,
+ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church: implacable zealots who need to be wiped from the face of the Sector. How can you ever make peace with someone who doesn’t even think you’ve got a right to exist?”,1:embFactionsQuiet:”I can’t help but agree.”,
+eDiktat,DialogOptionSelected,$option == eDik,,"“If nothing else, the Diktat respects power, authority, and the rule of law. Though the Lion’s plans for the Sector might differ from our own, we share much common ground. And lobster.”",1:embFactionsQuiet2:”I’m allergic to shellfish.”,
 ePerseanRelations,DialogOptionSelected,$option == ePersean,,"“They’ve never forgiven us for the destruction of Hanan Pacha, nor should they. Fear is what keeps the Mayorate independent and alive. If we had to do it again, we would.”",1:ePersean2:”But all those people – how do you even justify that?”,
 ePerseanRelations2,DialogOptionSelected,$option == ePersean2,,"“Our fleet was lost, and our corporate allies were in full retreat. We were surrounded on all sides by enemies bent on our extermination. Hanan Pacha was a final show of force – a brief demonstration of what would happen should their forces press further. 
 
