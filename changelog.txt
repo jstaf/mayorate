@@ -1,18 +1,54 @@
 Mayorate mod changelog
 
-v0.11.0
-- Starsector 0.9 compatibility.
+v1.0.0
+
+General changes: 
+- Starsector 0.9.1a compatibility.
+- Massive code cleanup/reformat. Project builds now use Gradle instead of 
+  IDE-specific toolchains.
+- Bumped version to 1.0.0. This doesn't mean that work has stopped, merely that 
+  this mod has reached what I wanted it to be all those years ago when I started
+  this project. It's all grown-up now... *sniff*
+
+Sound and music: 
 - Campaign music is part of the base mod again. Not sure why it was removed in
   the first place.
-- Mayorate faction color changed so as to not conflict with the Persean League
-  as much.
-- All variants now have the ship's primary weapon as weapon group one.
+- Removed unlicensed music + added Njol (Jeremy Soule) to the campaign music.
+- Temporarily disabled battle music for missions. It didn't always fire 
+  correctly, and I haven't had time to work on redoing the music plugin.
 - Reverted changes to Graser and Grav Cannon that caused the weapon to fire out
-  of sync with the actual weapons.
+  of sync with the actual weapon sound fx.
+- Went through sound fx and decreased volumes of those that were out of line 
+  with mount size.
+
+Gameplay:
+- Mayorate faction color changed to light-yellow so as to not conflict with the 
+  Persean League as much.
+- Variant polish: all variants now have the ship's primary weapon as weapon 
+  group one. Variants now match ship OPs.
 - Reverted changes to Graser PD that made it super OP.
 - Mayorate now uses a mix of AI and human portraits (like you'd expect).
-- Removed unlicensed music.
-- Added Njol (Jeremy Soule) to the campaign music.
+- Redid Narayana weapon mount setup, removed built-in gun (the old gun was 
+  used for prototyping and I never actually finished things before the 0.10.x
+  releases). It's now a heavy carrier with 4 large missile racks and improved 
+  sensors, which gives it a unique niche (heavy fire support). Very weak if 
+  surrounded or enemy ships make it to melee range.
+- Add normal mapping for Narayana hull (results in more accurate/improved 
+  lighting fx with GraphicsLib).
+- Removed fluxtorp. It just wasn't a good weapon art-wise.
+- General writing polish pass. Slight lore rewrites in places to make things 
+  even more vanilla-friendly than they were before.
+- Mayorate relationships revamped - the Mayorate is now hostile with most 
+  organized governments and religious factions. They generally are neutral/
+  suspicious with pirates, independent factions, and corporations.
+- Rasht now has 3 Mayorate markets and 1 Luddic Path market, with significant 
+  time spent balancing the economy so that the Mayorate/Path markets can stand 
+  on their own and be stable/self-sufficient/non-disruptive.
+- Removed all custom market conditions - they didn't really add much to
+  gameplay.
+- Angha bombers now launch missiles much closer to the target (600 range). This 
+  both makes Angha wings easier to intercept and defend against, as well as 
+  substantially increases the chance that their attacks connect with the target.
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).
