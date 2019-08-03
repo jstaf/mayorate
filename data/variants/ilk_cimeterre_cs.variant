@@ -13,25 +13,31 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0001": "ilk_thermal_lance"}
-    },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {"WS0006": "ilk_windstalker"}
+      "weapons": {
+        "WS0001": "ilk_thermal_lance"
+      }
     },
     {
       "autofire": true,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
-          "WS0002": "ilk_disruptor",
-          "WS0003": "ilk_disruptor"
+        "WS0002": "ilk_disruptor",
+        "WS0003": "ilk_disruptor"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0004": "ilk_graser_pd"}
+      "weapons": {
+        "WS0006": "ilk_windstalker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "ilk_graser_pd"
+      }
     }
   ]
 }

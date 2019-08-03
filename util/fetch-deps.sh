@@ -16,6 +16,6 @@ if [ ! -d LazyLib ]; then
 fi
 
 if [ ! -d Nexerelin ]; then
-    wget https://bitbucket.org/Histidine/exerelin/downloads/Nexerelin_0.8.3e.zip
+    wget https://bitbucket.org/Histidine/exerelin/downloads/Nexerelin_0.9.3.zip
     unzip Nexerelin*.zip
 fi

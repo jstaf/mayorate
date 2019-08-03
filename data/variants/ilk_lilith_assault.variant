@@ -14,14 +14,15 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "ilk_shotgun",
         "WS0004": "ilk_repeater"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {}
+      "weapons": {
+        "WS0003": "ilk_shotgun"
+      }
     },
     {
       "autofire": true,
