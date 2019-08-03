@@ -1,36 +1,71 @@
 {
-  "uniqueModClassName":"ilk.MayorateModPlugin",
-  "playableFaction":true,
-  "isPirateNeutral":true,
-
-  "crewExpereinceLevelIncreaseChance":0.0,
-  "baseFleetCostMultiplier":1.0,
-
-  "customRebelFaction":"",
-  "customRebelFleetId":"",
-  "rebelFleetSuffix":"Splinter Group",
-
-  "factionsLiked":["tritachyon"],
-  "factionsDisliked":["luddic_church","blackrock_driveyards"],
-  "morality":"amoral",
-
-  "alignments":{
-    "technocratic":1,
-    "militarist":0.5,
-    "diplomatic":-0.5,
-    "ideological":1
+  "uniqueModClassName": "ilk.MayorateModPlugin",
+  "playableFaction": true,
+  "isPirateNeutral": true,
+  "crewExpereinceLevelIncreaseChance": 0.0,
+  "baseFleetCostMultiplier": 1.0,
+  "customRebelFaction": "",
+  "customRebelFleetId": "",
+  "rebelFleetSuffix": "Splinter Group",
+  "factionsLiked": [
+    "tritachyon, pirates"
+  ],
+  "factionsDisliked": [
+    "luddic_church",
+    "hegemony",
+    "blackrock_driveyards"
+  ],
+  "morality": "amoral",
+  "alignments": {
+    "technocratic": 1,
+    "militarist": 0.75,
+    "diplomatic": -0.75,
+    "ideological": 0.5
   },
-
-  "vengeanceLevelNames":["Grudge", "Vendetta", "Revenge"],
-  "vengeanceFleetNames":["Enforcers", "Hit-Fleet", "Kill-Fleet"],
-  "vengeanceFleetNamesSingle":["Enforcers", "a Hit-Fleet", "a Kill-Fleet"],
-
-  "startShipsSolo":["ilk_lilith_assault"],
-  "startShipsCombatSmall":["ilk_cimeterre_cs", "ilk_tiamat_assault", "ilk_lilith_assault"],
-  "startShipsCarrierSmall":["ilk_foraker_strike", "ilk_tiamat_assault", "ilk_lilith_cs"],
-  "startShipsTradeSmall":["ilk_safir_standard", "ilk_safir_converted_support", "ilk_lilith_cs"],
-  "startShipsCombatLarge":["ilk_del_azarchel_artillery", "ilk_cimeterre_strike", "ilk_tiamat_assault"],
-  "startShipsCarrierLarge":["ilk_jamaran_fs", "ilk_cimeterre_strike", "ilk_tiamat_assault"],
-
-  "defenceStations":["nex_asgard_Advanced"]
+  "vengeanceLevelNames": [
+    "Grudge",
+    "Vendetta",
+    "Retribution"
+  ],
+  "vengeanceFleetNames": [
+    "Hunters",
+    "Hunter-Killers",
+    "Janissaries"
+  ],
+  "vengeanceFleetNamesSingle": [
+    "Hunters",
+    "Hunter-Killers",
+    "Janissary"
+  ],
+  "startShipsSolo": [
+    "ilk_lilith_assault"
+  ],
+  "startShipsCombatSmall": [
+    "ilk_cimeterre_cs",
+    "ilk_tiamat_assault",
+    "ilk_lilith_assault"
+  ],
+  "startShipsCarrierSmall": [
+    "ilk_foraker_strike",
+    "ilk_tiamat_assault",
+    "ilk_lilith_cs"
+  ],
+  "startShipsTradeSmall": [
+    "ilk_safir_standard",
+    "ilk_safir_converted_support",
+    "ilk_lilith_cs"
+  ],
+  "startShipsCombatLarge": [
+    "ilk_del_azarchel_artillery",
+    "ilk_cimeterre_strike",
+    "ilk_tiamat_assault"
+  ],
+  "startShipsCarrierLarge": [
+    "ilk_jamaran_fs",
+    "ilk_cimeterre_strike",
+    "ilk_tiamat_assault"
+  ],
+  "defenceStations": [
+    "nex_asgard_Advanced"
+  ]
 }

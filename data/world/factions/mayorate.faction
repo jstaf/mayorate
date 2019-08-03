@@ -1,6 +1,11 @@
 {
 	"id": "mayorate",
-	"color": [244, 218, 132, 255],
+	"color": [
+		244,
+		218,
+		132,
+		255
+	],
 	"displayName": "Mayorate",
 	"displayNameWithArticle": "the Mayorate",
 	"logo": "graphics/ilk/factions/mayorate_flag.png",
@@ -20,6 +25,8 @@
 	"portraits": {
 		"standard_male": [
 			"graphics/ilk/portraits/ilk_portrait_2.png",
+			"graphics/ilk/portraits/ilk_portrait_2.png",
+			"graphics/ilk/portraits/ilk_portrait_4.png",
 			"graphics/ilk/portraits/ilk_portrait_4.png",
 			"graphics/portraits/portrait_ai1.png",
 			"graphics/portraits/portrait_ai1b.png",
@@ -28,6 +35,8 @@
 		],
 		"standard_female": [
 			"graphics/ilk/portraits/ilk_portrait_3.png",
+			"graphics/ilk/portraits/ilk_portrait_3.png",
+			"graphics/ilk/portraits/ilk_portrait_5.png",
 			"graphics/ilk/portraits/ilk_portrait_5.png",
 			"graphics/portraits/portrait_ai1.png",
 			"graphics/portraits/portrait_ai1b.png",
@@ -92,38 +101,61 @@
 		"hulls": {}
 	},
 	"shipsWhenImporting": {
-		"tags": ["base_bp", "mayorate_bp"],
+		"tags": [
+			"base_bp",
+			"mayorate_bp"
+		],
 		"hulls": []
 	},
 	"knownShips": {
-		"tags": ["base_bp", "mayorate_bp"],
+		"tags": [
+			"base_bp",
+			"mayorate_bp"
+		],
 		"hulls": [
 			"ilk_ravana",
 			"ilk_narayana"
 		]
 	},
 	"priorityShips": {
-		"tags": ["mayorate_bp"],
+		"tags": [
+			"mayorate_bp"
+		],
 		"hulls": []
 	},
 	"knownFighters": {
-		"tags": ["mayorate_bp"],
+		"tags": [
+			"mayorate_bp"
+		],
 		"fighters": []
 	},
 	"priorityFighters": {
-		"tags": ["mayorate_bp"],
+		"tags": [
+			"mayorate_bp"
+		],
 		"fighters": []
 	},
 	"knownWeapons": {
-		"tags": ["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "mayorate_bp"],
+		"tags": [
+			"base_bp",
+			"lowtech_bp",
+			"midline_bp",
+			"missile_bp",
+			"mayorate_bp"
+		],
 		"weapons": []
 	},
 	"priorityWeapons": {
-		"tags": ["mayorate_bp"],
+		"tags": [
+			"mayorate_bp"
+		],
 		"weapons": []
 	},
 	"knownHullMods": {
-		"tags": ["base_bp", "mayorate_bp"],
+		"tags": [
+			"base_bp",
+			"mayorate_bp"
+		],
 		"hullMods": [
 			"missleracks",
 			"heavyarmor",
@@ -142,7 +174,9 @@
 			"eccm",
 			"converted_hangar",
 			"solar_shielding",
-			"hiressensors"
+			"hiressensors",
+			"ilk_SensorSuite",
+			"ilk_AICrew"
 		]
 	},
 	"factionDoctrine": {

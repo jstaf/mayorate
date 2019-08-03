@@ -1,43 +1,46 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 24,
-  "fluxVents": 50,
+  "fluxCapacitors": 20,
+  "fluxVents": 40,
   "goalVariant": true,
   "hullId": "ilk_ravana",
-  "hullMods": ["targetingunit"],
+  "hullMods": [
+    "auxiliarythrusters"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_ravana_assault",
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "ilk_graser",
-        "WS0004": "ilk_graser"
+        "WS0005": "ilk_graser",
+        "WS0006": "ilk_graser",
+        "WS0014": "ilk_disruptor"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0016": "sabotpod",
+        "WS0017": "sabotpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "hammerrack"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0015": "sabotpod",
-        "WS0016": "ilk_windstalker",
-        "WS0017": "ilk_windstalker"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0013": "ilk_shotgun",
-        "WS0014": "ilk_shotgun"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0005": "ilk_disruptor",
-        "WS0006": "ilk_disruptor"
+        "WS0013": "ilk_disruptor"
       }
     },
     {
@@ -52,5 +55,6 @@
         "WS0012": "ilk_graser_pd"
       }
     }
-  ]
+  ],
+  "wings": []
 }

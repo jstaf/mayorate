@@ -18,13 +18,12 @@
         "ilk_del_azarchel_artillery": 10
     },
     "combatCapital": {
-        "ilk_ravana_cs": 5,
         "ilk_ravana_assault": 10,
-        "ilk_narayana_fs": 10
+        "ilk_narayana_fs": 8
     },
     "combatFreighterMedium": {
         "ilk_safir_converted_support": 10
-    }, 
+    },
     "civilianRandom": {
         "ilk_safir_standard": 5
     },

@@ -104,81 +104,33 @@
   "collisionRadius": 249.01857,
   "engineSlots": [
     {
-      "angle": -175.971741,
-      "contrailSize": 17,
-      "length": 43,
+      "angle": 172,
+      "contrailSize": 10.701978,
+      "length": 41.371693,
       "location": [
-        -168,
-        25.5
+        -181.5,
+        44
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 17
+      "width": 10.701978
     },
     {
-      "angle": 175.45195,
-      "contrailSize": 17.184343,
-      "length": 43.317719,
+      "angle": -172,
+      "contrailSize": 10.701978,
+      "length": 41.371693,
       "location": [
-        -168,
-        -25.5
+        -181.5,
+        -44
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 17.184343
-    },
-    {
-      "angle": 179.068451,
-      "contrailSize": 21,
-      "length": 67.5,
-      "location": [
-        -184.5,
-        29.5
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 21
-    },
-    {
-      "angle": -179.068451,
-      "contrailSize": 21,
-      "length": 67.5,
-      "location": [
-        -184.5,
-        -29.5
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 21
-    },
-    {
-      "angle": 174.160507,
-      "contrailSize": 10,
-      "length": 44,
-      "location": [
-        -182.5,
-        43.5
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10
-    },
-    {
-      "angle": -174.160507,
-      "contrailSize": 10,
-      "length": 44,
-      "location": [
-        -182.5,
-        -43.5
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10
+      "width": 10.701978
     },
     {
       "angle": 180,
       "contrailSize": 30,
-      "length": 69,
+      "length": 108.5,
       "location": [
         -175.5,
         -0
@@ -188,16 +140,52 @@
       "width": 30
     },
     {
-      "angle": 180,
-      "contrailSize": 15,
-      "length": 35.5,
+      "angle": -180,
+      "contrailSize": 9,
+      "length": 21,
       "location": [
-        -148,
-        -0
+        -167,
+        25
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 15
+      "width": 9
+    },
+    {
+      "angle": 180,
+      "contrailSize": 9,
+      "length": 21,
+      "location": [
+        -167,
+        -25
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 9
+    },
+    {
+      "angle": 174,
+      "contrailSize": 10.518487,
+      "length": 22.81097,
+      "location": [
+        -183,
+        34.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 10.518487
+    },
+    {
+      "angle": -174,
+      "contrailSize": 10.518487,
+      "length": 22.81097,
+      "location": [
+        -183,
+        -34.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 10.518487
     }
   ],
   "height": 526,
@@ -238,51 +226,27 @@
       "type": "ENERGY"
     },
     {
-      "angle": 0,
-      "arc": 59.489761,
-      "id": "WS0003",
-      "locations": [
-        27.5,
-        44
-      ],
-      "mount": "HARDPOINT",
-      "size": "LARGE",
-      "type": "ENERGY"
-    },
-    {
-      "angle": -0,
-      "arc": 59.489761,
-      "id": "WS0004",
-      "locations": [
-        27.5,
-        -44
-      ],
-      "mount": "HARDPOINT",
-      "size": "LARGE",
-      "type": "ENERGY"
-    },
-    {
-      "angle": 70,
-      "arc": 235,
+      "angle": -0.5,
+      "arc": 43,
       "id": "WS0005",
       "locations": [
         2,
         42
       ],
-      "mount": "TURRET",
-      "size": "MEDIUM",
+      "mount": "HARDPOINT",
+      "size": "LARGE",
       "type": "ENERGY"
     },
     {
-      "angle": -70,
-      "arc": 235,
+      "angle": 0.5,
+      "arc": 43,
       "id": "WS0006",
       "locations": [
         2,
         -42
       ],
-      "mount": "TURRET",
-      "size": "MEDIUM",
+      "mount": "HARDPOINT",
+      "size": "LARGE",
       "type": "ENERGY"
     },
     {
@@ -362,11 +326,11 @@
       "arc": 5.01,
       "id": "WS0015",
       "locations": [
-        17.5,
+        21,
         -0
       ],
       "mount": "HARDPOINT",
-      "size": "MEDIUM",
+      "size": "LARGE",
       "type": "MISSILE"
     },
     {
@@ -378,7 +342,7 @@
         31
       ],
       "mount": "HARDPOINT",
-      "size": "SMALL",
+      "size": "MEDIUM",
       "type": "MISSILE"
     },
     {
@@ -390,7 +354,7 @@
         -31
       ],
       "mount": "HARDPOINT",
-      "size": "SMALL",
+      "size": "MEDIUM",
       "type": "MISSILE"
     }
   ],

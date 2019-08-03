@@ -10,7 +10,7 @@ Safir,ilk_safir,Freighter,Mayorate,flarelauncher,3,3500,150,1500,1167,70,30,,75,
 Safir B,ilk_safir_converted,Combat Freighter,Mayorate,ilk_minelayer_he,8,3500,175,3000,2500,150,60,,75,40,20,20,10,350,OMNI,,120,0.4,0.8,,,25,40,120,90,2,45,9,18000,5,15,360,0.25,6,6,,mayorate_bp,,0.6,2,3,7609
 Del Azarchel,ilk_del_azarchel,Cruiser,Mayorate,forgevats,17,8500,1000,8000,10000,350,150,,50,20,10,8,12,1800,FRONT,,220,0.4,1,,,120,190,160,220,6,37,8,70000,3,12,540,0.25,30,30,,mayorate_bp,,0.5,2,3,7610
 Jamaran,ilk_jamaran,Cruiser,Mayorate,ilk_minelayer_he,14,9000,1050,10000,9000,450,145,2,40,20,10,10,6,1700,OMNI,,100,0.5,0.9,,,175,275,450,300,5,60,8,55000,3,10,480,0.25,25,25,"CARRIER, COMBAT",mayorate_bp,,0.5,2,3,7611
-Ravana,ilk_ravana,Battlecruiser,Mayorate,maneuveringjets,25,11000,1200,17000,22500,900,245,,50,20,15,7,6,3000,OMNI,,120,0.5,0.7,,,300,400,350,600,20,30,7,175000,2,15,660,0.25,40,40,,rare_bp,,0.5,2,4,7612
+Ravana,ilk_ravana,Battlecruiser,Mayorate,interdictor,25,11000,1200,17000,22500,900,225,,55,22,15,7,6,3000,OMNI,,120,0.5,0.7,,,300,400,350,600,20,30,7,175000,2,15,660,0.25,40,40,,rare_bp,,0.5,2,4,7612
 Narayana,ilk_narayana,Carrier,Mayorate,ilk_minelayer_he,29,17000,1500,20000,25000,1000,330,"4
 ","30
 ",15,10,7,5,4100,OMNI,,140,0.5,0.8,,,400,1000,400,825,15,55,7,275000,3,18,600,0.25,50,50,"CARRIER, COMBAT",rare_bp,,0.6,2,5,7614
