@@ -1,12 +1,10 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 20,
-  "fluxVents": 40,
+  "fluxCapacitors": 35,
+  "fluxVents": 50,
   "goalVariant": true,
   "hullId": "ilk_ravana",
-  "hullMods": [
-    "auxiliarythrusters"
-  ],
+  "hullMods": [],
   "modules": [],
   "permaMods": [],
   "quality": 0,

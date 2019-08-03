@@ -104,88 +104,88 @@
   "collisionRadius": 249.01857,
   "engineSlots": [
     {
-      "angle": 172,
-      "contrailSize": 10.701978,
-      "length": 41.371693,
-      "location": [
-        -181.5,
-        44
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10.701978
-    },
-    {
-      "angle": -172,
-      "contrailSize": 10.701978,
-      "length": 41.371693,
-      "location": [
-        -181.5,
-        -44
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10.701978
-    },
-    {
       "angle": 180,
-      "contrailSize": 30,
-      "length": 108.5,
+      "contrailSize": 14,
+      "length": 46,
       "location": [
         -175.5,
         -0
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 30
+      "width": 14
     },
     {
-      "angle": -180,
-      "contrailSize": 9,
-      "length": 21,
+      "angle": 179,
+      "contrailSize": 28.940956,
+      "length": 87.765915,
       "location": [
-        -167,
-        25
+        -184,
+        30.5
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 9
+      "width": 28.940956
     },
     {
-      "angle": 180,
-      "contrailSize": 9,
-      "length": 21,
+      "angle": -179,
+      "contrailSize": 28.940956,
+      "length": 87.765915,
       "location": [
-        -167,
-        -25
+        -184,
+        -30.5
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 9
+      "width": 28.940956
     },
     {
-      "angle": 174,
-      "contrailSize": 10.518487,
-      "length": 22.81097,
+      "angle": 175,
+      "contrailSize": 8.04272,
+      "length": 24.368601,
       "location": [
-        -183,
-        34.5
+        -181,
+        43
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 10.518487
+      "width": 8.04272
     },
     {
-      "angle": -174,
-      "contrailSize": 10.518487,
-      "length": 22.81097,
+      "angle": -175,
+      "contrailSize": 8.04272,
+      "length": 24.368601,
       "location": [
-        -183,
-        -34.5
+        -181,
+        -43
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 10.518487
+      "width": 8.04272
+    },
+    {
+      "angle": 179,
+      "contrailSize": 6.527719,
+      "length": 13.559028,
+      "location": [
+        -166.5,
+        26
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 6.527719
+    },
+    {
+      "angle": -179,
+      "contrailSize": 6.527719,
+      "length": 13.559028,
+      "location": [
+        -166.5,
+        -26
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 6.527719
     }
   ],
   "height": 526,
@@ -226,8 +226,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": -0.5,
-      "arc": 43,
+      "angle": 0,
+      "arc": 10,
       "id": "WS0005",
       "locations": [
         2,
@@ -238,8 +238,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 0.5,
-      "arc": 43,
+      "angle": -0,
+      "arc": 10,
       "id": "WS0006",
       "locations": [
         2,
