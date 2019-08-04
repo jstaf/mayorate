@@ -103,28 +103,52 @@
       "width": 16
     },
     {
-      "angle": 169,
-      "contrailSize": 13.236965,
-      "length": 30.613651,
+      "angle": 170.5,
+      "contrailSize": 9.005618,
+      "length": 27.621998,
       "location": [
         -80.5,
         9
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 13.236965
+      "width": 9.005618
     },
     {
-      "angle": -169,
-      "contrailSize": 13.236965,
-      "length": 30.613651,
+      "angle": -170.5,
+      "contrailSize": 9.005618,
+      "length": 27.621998,
       "location": [
         -80.5,
         -9
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 13.236965
+      "width": 9.005618
+    },
+    {
+      "angle": 148.5,
+      "contrailSize": 5.833405,
+      "length": 18.206945,
+      "location": [
+        -68.5,
+        24.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 5.833405
+    },
+    {
+      "angle": -148.5,
+      "contrailSize": 5.833405,
+      "length": 18.206945,
+      "location": [
+        -68.5,
+        -24.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "ILK_ENGINE",
+      "width": 5.833405
     }
   ],
   "height": 256,

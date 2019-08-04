@@ -21,21 +21,10 @@ Sound and music:
 - Went through sound fx and decreased volumes of those that were out of line 
   with mount size.
 
-Gameplay:
+Campaign:
 - Mayorate faction color changed to light-yellow so as to not conflict with the 
   Persean League as much.
-- Variant polish: all variants now have the ship's primary weapon as weapon 
-  group one. Variants now match ship OPs.
-- Reverted changes to Graser PD that made it super OP.
 - Mayorate now uses a mix of AI and human portraits (like you'd expect).
-- Redid Narayana weapon mount setup, removed built-in gun (the old gun was 
-  used for prototyping and I never actually finished things before the 0.10.x
-  releases). It's now a heavy carrier with 4 large missile racks and improved 
-  sensors, which gives it a unique niche (heavy fire support). Very weak if 
-  surrounded or enemy ships make it to melee range.
-- Add normal mapping for Narayana hull (results in more accurate/improved 
-  lighting fx with GraphicsLib).
-- Removed fluxtorp. It just wasn't a good weapon art-wise.
 - General writing polish pass. Slight lore rewrites in places to make things 
   even more vanilla-friendly than they were before.
 - Mayorate relationships revamped - the Mayorate is now hostile with most 
@@ -46,16 +35,31 @@ Gameplay:
   on their own and be stable/self-sufficient/non-disruptive.
 - Removed all custom market conditions - they didn't really add much to
   gameplay.
+
+Gameplay:
+- Variant polish: all variants now have the ship's primary weapon as weapon 
+  group one. Variants now match ship OPs.
+- Reverted changes to Graser PD that made it super OP.
+- Redid Narayana weapon mount setup, removed built-in gun (the old gun was 
+  used for prototyping and I never actually finished things before the 0.10.x
+  releases). It's now a heavy carrier with 4 large missile racks and improved 
+  sensors, which gives it a unique niche (heavy fire support). Very weak if 
+  surrounded or enemy ships make it to melee range.
+- Add normal mapping for Narayana hull (results in more accurate/improved 
+  lighting fx with GraphicsLib).
+- Removed fluxtorp. It just wasn't a good weapon art-wise.
 - AI Crew hullmod is now AI Command Shunts and no longer impacts crew usage. 
   (This was more of a disadvantage than an advantage given crew reqs for 
   exploration.) The description is a lot better too, so you can actually tell 
   what it does now.
+- Ravana now uses the interdictor ship system and loses maneuvering jets. Speed 
+  slightly buffed to compensate for loss of 
 - Angha bombers now launch missiles much closer to the target (600 range). This 
   both makes Angha wings easier to intercept and defend against, as well as 
   substantially increases the chance that their attacks connect with the target.
 - Many Mayorate hulls now have blinkers.
 - Significant rejig of engine mounts for Narayana, Ravana, and Cimeterre (this
-  is an aethetic tweak only, but makes these ships look a lot nicer.)
+  is an aethetic tweak only, but makes these ships engines look a lot nicer).
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).

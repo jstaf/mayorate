@@ -33,8 +33,11 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     // Set up the player's fleet. Variant names come from the
     // files in data/variants and data/variants/fighters
     api.addToFleet(FleetSide.PLAYER, "ilk_del_azarchel_artillery", FleetMemberType.SHIP, "MDSV Nazarin", true);
-    api.addToFleet(FleetSide.PLAYER, "ilk_foraker_escort", FleetMemberType.SHIP, false);
+    api.addToFleet(FleetSide.PLAYER, "ilk_foraker_strike", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, false);
+    api.addToFleet(FleetSide.PLAYER, "ilk_cimeterre_cs", FleetMemberType.SHIP, false);
+    api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);
+    api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_safir_converted_support", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
     api.addToFleet(FleetSide.PLAYER, "ilk_lilith_assault", FleetMemberType.SHIP, false);
