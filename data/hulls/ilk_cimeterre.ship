@@ -80,37 +80,12 @@
   "builtInWeapons": {
     "WS0001": "ilk_thermal_lance"
   },
-  "builtInWings": [],
   "center": [
     96,
     121.5
   ],
   "collisionRadius": 136,
   "engineSlots": [
-    {
-      "angle": 173.558395,
-      "contrailSize": 10.93055,
-      "length": 31.814003,
-      "location": [
-        -80,
-        12
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10.93055
-    },
-    {
-      "angle": -173.558395,
-      "contrailSize": 10.93055,
-      "length": 31.814003,
-      "location": [
-        -80,
-        -12
-      ],
-      "style": "CUSTOM",
-      "styleId": "ILK_ENGINE",
-      "width": 10.93055
-    },
     {
       "angle": 180,
       "contrailSize": 16,
@@ -124,28 +99,28 @@
       "width": 16
     },
     {
-      "angle": 177.825256,
-      "contrailSize": 12.143147,
-      "length": 37.757595,
+      "angle": 169,
+      "contrailSize": 13.236965,
+      "length": 30.613651,
       "location": [
-        -81.5,
-        7.5
+        -80.5,
+        9
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 12.143147
+      "width": 13.236965
     },
     {
-      "angle": -177.825256,
-      "contrailSize": 12.143147,
-      "length": 37.757595,
+      "angle": -169,
+      "contrailSize": 13.236965,
+      "length": 30.613651,
       "location": [
-        -81.5,
-        -7.5
+        -80.5,
+        -9
       ],
       "style": "CUSTOM",
       "styleId": "ILK_ENGINE",
-      "width": 12.143147
+      "width": 13.236965
     }
   ],
   "height": 256,

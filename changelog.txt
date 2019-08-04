@@ -46,9 +46,15 @@ Gameplay:
   on their own and be stable/self-sufficient/non-disruptive.
 - Removed all custom market conditions - they didn't really add much to
   gameplay.
+- AI Crew hullmod is now AI Command Shunts and no longer impacts crew usage. 
+  (This was more of a disadvantage than an advantage given crew reqs for 
+  exploration.) The description is a lot better too, so you can actually tell 
+  what it does now.
 - Angha bombers now launch missiles much closer to the target (600 range). This 
   both makes Angha wings easier to intercept and defend against, as well as 
   substantially increases the chance that their attacks connect with the target.
+- Significant rejig of engine mounts for Narayana, Ravana, and Cimeterre (this
+  is an aethetic tweak only, but makes these ships look a lot nicer.)
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).

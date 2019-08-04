@@ -84,7 +84,7 @@
             "startingConditions": [
                 "dense_atmosphere",
                 "high_gravity",
-                "volatiles_abundant",
+                "volatiles_plentiful",
                 "organics_trace",
                 "population_4"
             ],
