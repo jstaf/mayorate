@@ -86,7 +86,9 @@
     11
   ],
   "builtInWeapons": {
-    "WS0012": "ilk_driver"
+    "WS0012": "ilk_driver",
+    "WS0013": "blinker_red",
+    "WS0014": "blinker_red"
   },
   "center": [
     100,
@@ -287,6 +289,30 @@
       "mount": "HARDPOINT",
       "size": "LARGE",
       "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0013",
+      "locations": [
+        -83,
+        35.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0014",
+      "locations": [
+        -83,
+        -35.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
     }
   ],
   "width": 200

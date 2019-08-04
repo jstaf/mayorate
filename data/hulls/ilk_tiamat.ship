@@ -38,9 +38,10 @@
     11
   ],
   "builtInWeapons": {
-    "WS0007": "ilk_pulse_gun"
+    "WS0007": "ilk_pulse_gun",
+    "WS0008": "blinker_red",
+    "WS0009": "blinker_red"
   },
-  "builtInWings": [],
   "center": [
     56.5,
     72
@@ -202,6 +203,30 @@
       "mount": "HARDPOINT",
       "size": "MEDIUM",
       "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0008",
+      "locations": [
+        -14.5,
+        12
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0009",
+      "locations": [
+        -14.5,
+        -12
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
     }
   ],
   "width": 113

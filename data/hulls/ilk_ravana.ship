@@ -97,6 +97,12 @@
     -174,
     11.5
   ],
+  "builtInWeapons": {
+    "WS0003": "blinker_red",
+    "WS0004": "blinker_red",
+    "WS0009": "blinker_red",
+    "WS0010": "blinker_red"
+  },
   "center": [
     146,
     253.5
@@ -356,6 +362,54 @@
       "mount": "HARDPOINT",
       "size": "MEDIUM",
       "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0003",
+      "locations": [
+        173,
+        8.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0004",
+      "locations": [
+        173,
+        -8.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0009",
+      "locations": [
+        -126,
+        27.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0010",
+      "locations": [
+        -126,
+        -27.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
     }
   ],
   "width": 292

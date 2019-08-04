@@ -128,6 +128,14 @@
   "builtInMods": [
     "ilk_SensorSuite"
   ],
+  "builtInWeapons": {
+    "WS0022": "blinker_red",
+    "WS0023": "blinker_red",
+    "WS0024": "blinker_red",
+    "WS0025": "blinker_red",
+    "WS0026": "blinker_red",
+    "WS0027": "blinker_red"
+  },
   "center": [
     150,
     190
@@ -369,7 +377,7 @@
     },
     {
       "angle": 180,
-      "arc": 193,
+      "arc": 245,
       "id": "WS0005",
       "locations": [
         -103,
@@ -478,6 +486,90 @@
       "mount": "HIDDEN",
       "size": "LARGE",
       "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 73.85566,
+      "arc": 150.494461,
+      "id": "WS0020",
+      "locations": [
+        14.5,
+        58.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0022",
+      "locations": [
+        64,
+        -7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0023",
+      "locations": [
+        64,
+        7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0024",
+      "locations": [
+        67.5,
+        7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0025",
+      "locations": [
+        67.5,
+        -7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS0026",
+      "locations": [
+        70.5,
+        7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0027",
+      "locations": [
+        70.5,
+        -7.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
     }
   ],
   "width": 300

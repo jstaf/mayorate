@@ -53,6 +53,7 @@ Gameplay:
 - Angha bombers now launch missiles much closer to the target (600 range). This 
   both makes Angha wings easier to intercept and defend against, as well as 
   substantially increases the chance that their attacks connect with the target.
+- Many Mayorate hulls now have blinkers.
 - Significant rejig of engine mounts for Narayana, Ravana, and Cimeterre (this
   is an aethetic tweak only, but makes these ships look a lot nicer.)
 
