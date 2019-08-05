@@ -7,11 +7,26 @@
 	"turretGlowSprite": "graphics/ilk/weapons/pulse_glow.png",
 	"hardpointSprite": "",
 	"hardpointGlowSprite": "graphics/ilk/weapons/pulse_glow.png",
-	"glowColor": [245, 27, 84, 255],
-	"turretOffsets": [0, 0],
-	"turretAngleOffsets": [0],
-	"hardpointOffsets": [0, 0],
-	"hardpointAngleOffsets": [0],
+	"glowColor": [
+		239,
+		72,
+		36,
+		255
+	],
+	"turretOffsets": [
+		0,
+		0
+	],
+	"turretAngleOffsets": [
+		0
+	],
+	"hardpointOffsets": [
+		0,
+		0
+	],
+	"hardpointAngleOffsets": [
+		0
+	],
 	"barrelMode": "ALTERNATING",
 	"animationType": "GLOW_AND_FLASH",
 	"muzzleFlashSpec": {
@@ -21,10 +36,15 @@
 		"particleSizeRange": 12.0,
 		"particleDuration": 0.3,
 		"particleCount": 12,
-		"particleColor": [245, 27, 84, 150]
+		"particleColor": [
+			239,
+			72,
+			36,
+			150
+		]
 	},
 	"autocharge": true,
 	"requiresFullCharge": false,
-	"projectileSpecId": "ilk_pulse_shot",
-	"fireSoundTwo": "ilk_pulse_gun"
+	"projectileSpecId": "ilk_ppc_shot_lrg",
+	"fireSoundTwo": "ilk_ppc_fire"
 }

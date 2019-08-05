@@ -53,7 +53,7 @@ Gameplay:
   exploration.) The description is a lot better too, so you can actually tell 
   what it does now.
 - Ravana now uses the interdictor ship system and loses maneuvering jets. Speed 
-  slightly buffed to compensate for loss of 
+  slightly buffed to compensate for loss of the jets. 
 - Angha bombers now launch missiles much closer to the target (600 range). This 
   both makes Angha wings easier to intercept and defend against, as well as 
   substantially increases the chance that their attacks connect with the target.
