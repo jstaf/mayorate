@@ -48,10 +48,10 @@ Gameplay:
 - Add normal mapping for Narayana hull (results in more accurate/improved 
   lighting fx with GraphicsLib).
 - Removed fluxtorp. It just wasn't a good weapon art-wise.
-- AI Crew hullmod is now AI Command Shunts and no longer impacts crew usage. 
-  (This was more of a disadvantage than an advantage given crew reqs for 
-  exploration.) The description is a lot better too, so you can actually tell 
-  what it does now.
+- AI Crew hullmod has been renamed to AI Command Shunts and no longer impacts 
+  crew usage. (This was more of a disadvantage than an advantage given crew reqs
+  for exploration.) The description is a lot better too, so you can actually 
+  tell what it does now.
 - Ravana now uses the interdictor ship system and loses maneuvering jets. Speed 
   slightly buffed to compensate for loss of the jets. 
 - Angha bombers now launch missiles much closer to the target (600 range). This 
@@ -60,6 +60,11 @@ Gameplay:
 - Many Mayorate hulls now have blinkers.
 - Significant rejig of engine mounts for Narayana, Ravana, and Cimeterre (this
   is an aethetic tweak only, but makes these ships engines look a lot nicer).
+- Removed Phoenix II rocket launcher. Nothing uses it and it was pretty meh.
+- Removed built-in "pulse gun" on the Tiamat and replaced it with a medium 
+  hybrid mount. This makes it a bit more distinct from the Lilith.
+- Belial PPC spread tightened, projectile speed increased, number of projectiles
+  decreased. Belial sfx changed to old pulse gun sfx.
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).

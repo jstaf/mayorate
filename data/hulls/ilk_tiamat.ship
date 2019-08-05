@@ -115,7 +115,7 @@
     -0
   ],
   "shieldRadius": 84.118965,
-  "spriteName": "graphics/ilk/ships/tiamat_sprite10.png",
+  "spriteName": "graphics/ilk/ships/ilk_tiamat.png",
   "style": "ilk_hull",
   "viewOffset": 0,
   "weaponSlots": [
