@@ -1,7 +1,7 @@
 {
   "displayName": "Assault",
   "fluxCapacitors": 6,
-  "fluxVents": 10,
+  "fluxVents": 5,
   "goalVariant": true,
   "hullId": "ilk_tiamat",
   "hullMods": [],
@@ -14,16 +14,15 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0007": "ilk_pulse_gun"
+        "WS0001": "ilk_windstalker",
+        "WS0002": "ilk_windstalker",
+        "WS0007": "ilk_shotgun"
       }
     },
     {
       "autofire": false,
       "mode": "ALTERNATING",
-      "weapons": {
-        "WS0001": "ilk_phoenix",
-        "WS0002": "ilk_phoenix"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,

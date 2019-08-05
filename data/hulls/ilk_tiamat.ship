@@ -38,7 +38,6 @@
     11
   ],
   "builtInWeapons": {
-    "WS0007": "ilk_pulse_gun",
     "WS0008": "blinker_red",
     "WS0009": "blinker_red"
   },
@@ -202,7 +201,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "BUILT_IN"
+      "type": "HYBRID"
     },
     {
       "angle": 0,

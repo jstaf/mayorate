@@ -48,16 +48,16 @@ public class ShotgunSpecialBehavior extends BaseEveryFrameCombatPlugin {
 
         switch (spec) {
         case "ilk_shotgun_shot":
-          for (int i = 0; i < 18; i++) {
+          for (int i = 0; i < 12; i++) {
             Vector2f randomVel = MathUtils.getRandomPointOnCircumference(null,
-                MathUtils.getRandomNumberInRange(0f, 120f));
-            randomVel.x += vel.x;
-            randomVel.y += vel.y;
+                MathUtils.getRandomNumberInRange(0f, 70f));
+            Vector2f projVel = new Vector2f();
+            Vector2f.add(randomVel, vel, projVel);
+
             // spec + "_clone" means is, if its got the same name in its name (except the
             // "_clone"
             // part) then it must be that weapon.
-            engine.spawnProjectile(proj.getSource(), proj.getWeapon(), spec + "_clone", loc, proj.getFacing(),
-                randomVel);
+            engine.spawnProjectile(proj.getSource(), proj.getWeapon(), spec + "_clone", loc, proj.getFacing(), projVel);
           }
           engine.removeEntity(proj);
           break;
