@@ -16,7 +16,6 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0010": "ilk_graser_pd",
         "WS0012": "ilk_driver"
       }
     },
@@ -51,7 +50,8 @@
       "weapons": {
         "WS0007": "ilk_graser_pd",
         "WS0008": "ilk_graser_pd",
-        "WS0009": "ilk_graser_pd"
+        "WS0009": "ilk_graser_pd",
+        "WS0010": "ilk_graser_pd"
       }
     }
   ],
