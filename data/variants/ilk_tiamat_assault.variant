@@ -14,9 +14,15 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ilk_windstalker",
-        "WS0002": "ilk_windstalker",
         "WS0007": "ilk_shotgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_windstalker",
+        "WS0002": "ilk_windstalker"
       }
     },
     {
