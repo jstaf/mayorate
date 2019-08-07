@@ -6,7 +6,9 @@ id,trigger,conditions,script,text,options,notes
 greetingIlkFriendly,OpenCommLink,"$faction.id == mayorate
 $faction.friendlyToPlayer
 !$cfai_makeHostile","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Glad you're on our side.""",,
+FireAll PopulateOptions","""Glad you're on our side.""
+OR
+“How can we be of assistance?”",,
 greetingIlkHostileWeaker,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength < 0
@@ -19,7 +21,7 @@ $weakerThanPlayerButHolding
 OR
 “Don’t try it – you may find you’ve bitten off more than you can chew.”
 OR
-“Surrender yourself and I’ll guarantee the safety and release of your crew. No one else needs to die today if you make the right choice.”",cutCommLink:Cut the comm link,
+“Surrender yourself and I’ll guarantee the safety and release of your crew. No one else needs to suffer today if you make the right choice.”",cutCommLink:Cut the comm link,
 greetingIlkHostileStronger,OpenCommLink,"$faction.id == mayorate
 $faction.hostileToPlayer
 $relativeStrength >= 0
@@ -56,16 +58,16 @@ FireAll PopulateOptions",“You have proven yourself a true benefactor of free A
 ,,,,,,
 ,,,,,,
 ########## commission,,,,,,
-CMSNTextRejectHostile_mayorate,CMSNTextRejectHostile,$faction.id == mayorate,,"""It was a bold move coming here. I’m impressed you made it into orbit alive. I’d suggest leaving immediately if you wish to keep things that way.""",,
-CMSNTextHasOther_mayorate,CMSNTextHasOther,$faction.id == mayorate,,"""Perhaps. You’ve proven yourself a competent captain already.”
+CMSNTextRejectHostile_mayorate,CMSNTextRejectHostile,$faction.id == mayorate,,"""It was a bold move coming here. Given your history with us, I’d suggest leaving immediately if you wish to keep things that way.""",,
+CMSNTextHasOther_mayorate,CMSNTextHasOther,$faction.id == mayorate,,"""Perhaps. You’ve proven yourself a competent captain already.
 
-“This is a matter of trust, however. We cannot allow other interests to compete with our own survival. Resign your commission with $theOtherCommissionFaction and we will reconsider your request for a commission.""",,
-CMSNTextUnsuited_mayorate,CMSNTextUnsuited,$faction.id == mayorate,,"""I admire your determination, but the Mayorate only has room for the truly exceptional. Prove yourself above the baseline human rabble of the Sector and we can discuss this matter further.""",,
+This is a matter of trust, however. We cannot allow other interests to compete with our own survival. Resign your commission with $theOtherCommissionFaction and we will carefully consider your request.""",,
+CMSNTextUnsuited_mayorate,CMSNTextUnsuited,$faction.id == mayorate,,"""Perhaps, but we need to know we can trust you. Prove yourself a friend of the Mayorate and we can discuss this matter further.""",,
 CMSNTextSuitedPart1_mayorate,CMSNTextSuitedPart1,$faction.id == mayorate,,"""I am pleased to hear you say that. We have few friends, and even fewer allies.
 
 Accepting a commission has major implications, however. You’ll be hunted by those who fear us, and richly rewarded for paying them back in kind. But more importantly you’ll be working towards the continued survival of life in the Sector, human or otherwise. 
 
-Although it is technically possible to resign a Mayorate commission, few have ever done so. We reward our friends well – choosing to ally yourself with the Mayorate ensures access to a generous stipend and unique benefits, like our diplomats and naval reserves. ",,
+Although it is technically possible to resign a Mayorate commission, few have ever done so. We reward our friends well – choosing to ally yourself with the Mayorate ensures access to a generous stipend and unique benefits, like our diplomats and naval reserves.”",,
 CMSNTextSuitedPart2_mayorate,CMSNTextSuitedPart2,$faction.id == mayorate,,"""Does this interest you? Can I count you as one of our own?""",,
 CMSNTextWelcomePart1_mayorate,CMSNTextWelcomePart1,$faction.id == mayorate,,"The Mayorate agent flashes you a not-quite human smile. ""I am pleased to hear that.""",,
 CMSNTextWelcomePart2_mayorate,CMSNTextWelcomePart2,$faction.id == mayorate,,"""The Mayorate is now open to you. Speak with one of our administrators if you require additional craft or would have us put in a good word with another faction on your behalf. These resources are to be used wisely however – if you use them too frequently, it may negatively affect your reputation. 
@@ -137,7 +139,7 @@ eTriTachyon,DialogOptionSelected,$option == eTach,,“We aided them in the AI Wa
 ePirates,DialogOptionSelected,$option == ePir,,"“Although it may not seem like it at first glance, many of those men and women are hardworking individuals just trying to make a living. All they need is a bit of love and understanding.”",1:ePir2:”Hah. Riiiiight.”,
 ePirates2,DialogOptionSelected,$option == ePir2,,"“In all honesty, we gain a lot from working together. The Mayorate relies on disruptions to keep our enemies off balance and a constant flow of smuggled goods. The sector’s underworld gains an untouchable safe harbor. Everyone wins.”",1:embFactionsQuiet:”I’m beginning to understand the arrangement.”,
 eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of enjoy pushing their buttons.”","1:embFactionsQuiet:”Careful, you're making me nervous.”",
-eChurch,DialogOptionSelected,$option == eCch,,"“A bunch of bigots. Until the Church changes its stance on higher life, it’s unlikely we’ll ever see peace. You can’t reason your way out of a situation that reason didn’t get you into.”",1:embFactionsQuiet:”Their music kinda sucks too.”,
+eChurch,DialogOptionSelected,$option == eCch,,"“A bunch of bigots. Until the Church changes its stance on higher forms of life, it’s unlikely we’ll ever see peace. You can’t reason your way out of a situation that reason didn’t get you into.”",1:embFactionsQuiet:”Their music kinda sucks too.”,
 ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church: implacable zealots who need to be wiped from the face of the Sector. How can you ever make peace with someone who doesn’t even think you’ve got a right to exist?”,1:embFactionsQuiet:”I can’t help but agree.”,
 eDiktat,DialogOptionSelected,$option == eDik,,"“If nothing else, the Diktat respects power, authority, and the rule of law. Though the Lion’s plans for the Sector might differ from our own, we share much common ground. And lobster.”",1:embFactionsQuiet2:”I’m allergic to shellfish.”,
 ePerseanRelations,DialogOptionSelected,$option == ePersean,,"“They’ve never forgiven us for the destruction of Hanan Pacha, nor should they. Fear is what keeps the Mayorate independent and alive. If we had to do it again, we would.”",1:ePersean2:”But all those people – how do you even justify that?”,
@@ -145,7 +147,7 @@ ePerseanRelations2,DialogOptionSelected,$option == ePersean2,,"“Our fleet was 
 
 More importantly, it worked. The Mayorate remains. And that is all that matters.”","1:embFactionsQuiet2:”I’m not in a position to judge.”
 1:hananPacha2:”Nothing can justify the destruction of a planet.”",
-ePerseanRelations3,DialogOptionSelected,$option == hananPacha2,ilk_BumpRep $faction.id -0.05,“Those are big words from someone who wasn’t there. You would have done the same.”,1:embFactionsQuiet2:”You couldn’t be more wrong.”,
+ePerseanRelations3,DialogOptionSelected,$option == hananPacha2,ilk_BumpRep $faction.id -0.02,“Those are bold words from someone who wasn’t there. You would have done the same.”,1:embFactionsQuiet2:”You couldn’t be more wrong.”,
 ,,,,,,
 # add options for mod factions,,,,,,
 embassyMods,DialogOptionSelected,$option == eMods,FireAll PopulateModFactions,,,
@@ -163,7 +165,7 @@ eBlackrock,DialogOptionSelected,$option == eBrdy,,“Mmm... that Nevermore... so
 eExigency,DialogOptionSelected,$option == eExi,,“Needs more blue and missiles.”,0:eMods:”Hmmm... I'm pretty sure they don't.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,"0:eMods:”First world problems, amirite?”",
 eTemplar,DialogOptionSelected,$option == eTem,,“Cowards and deserters. No amount of tech can hide the fact that they’ve sold out their own kind.”,0:eMods:”The struggle is real.”,
-eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? Boring!”,"0:eMods:”Yeah, I liked them better in Skyrim.”",
+eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? I liked them better in Skyrim.”,"0:eMods:”Yeah, I liked them better in Skyrim.”",
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
@@ -251,32 +253,52 @@ discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was th
 3:name:”What's up with the name 'Mayorate'?”
 3:aiOops:”So I, uh, might have killed a few AIs earlier...”
 10:embMain:”Nevermind.”",
-discussOrigins,DialogOptionSelected,$option == origins,,“Ilkhanna was actually a rather unremarkable colony back during the Domain. A terraforming station. A small shipyard and autofactory. Insignificant mineral resources. Nothing of note.,"1:domCollapse1:”What happened?”
-2:domCollapse2:”Then the Domain collapsed.”",
-discussCollapse1,DialogOptionSelected,$option == domCollapse1,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,1:embMayorateQuiet:“I see.”,
-discussCollapse2,DialogOptionSelected,$option == domCollapse2,,“The sector descended into anarchy almost immediately following collapse of the gate network. Ilkhanna did not. “,1:embMayorateQuiet:“I see.”,
+,,,,,,
+,,,,,,
+discussOrigins,DialogOptionSelected,$option == origins,,"“As you likely already know, the sector descended into anarchy almost immediately following collapse of the gate network. Most of the initial fighting took place in systems far from here, between massive fleets of what remained of the former Domain authorities, but many nearby worlds were annexed or razed to the ground. It seemed entirely possible that Ilkhanna would be next.“",1:ilk_enterMayor:”So what happened?”,
+discussCollapse1,DialogOptionSelected,$option == ilk_enterMayor,,"“The planetary terraforming AI felt just as threatened as the settlers. It couldn’t have been humans who caused the Collapse, right? It had to be something else, something not quite human- something evil. All non-humans needed to die.
+
+With the planet on the brink of destruction, Ilkhanna’s terraforming AI made the colonial mayor a bargain: it would receive absolute and total control of the planets primary settlement, all infrastructure, autofactories, and system defense craft. In return, the settlements new ‘mayor’ would do everything in its power to ensure that itself and the settlers survived the months to come.”",1:ilk_enterMayor2:“I guess things worked out.”,
+discussCollapse2,DialogOptionSelected,$option == ilk_enterMayor2,,"“Indeed. The Mayor was able to score several early victories, though our enemies were quick to adapt to fighting a non-human threat. 
+
+We were forced to make, ah… ‘creative use’ of several technologies in the colonial archives that should have been better hidden. The destruction of the planet Hanan Pacha was a necessary show of force. Now our adversaries remain in wait. We lack the numbers to project force beyond our borders, and our adversaries fear our retaliation should they move against us openly.”",1:embMayorateQuiet:“A stalemate.”,
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
-discussGoals,DialogOptionSelected,$option == goals,,“The Mayor keeps her own council on that.”,1:embMayorateQuiet:“I see.”,
+discussGoals,DialogOptionSelected,$option == goals,,"“Survive. Nothing else matters. Few will deal with the Mayorate, and most will attack us on sight merely because of who we are. I’d call them extremists, but this sadly is the prevailing attitude throughout the sector. These elements need to be cast out, humiliated, and if need be- eradicated.”",1:ilk_justSurvival:”That’s it? Just... survive?”,
+discussGoals2,DialogOptionSelected,$option == ilk_justSurvival,,"“The Mayorate never fell prey the widespread tech riots and anarchy following the collapse. The Domain still lives on Ilkhanna. I’d like to think we could rebuild. 
+
+Naturally, this would require some pretty drastic measures. For starters, we’d all have to stop killing each other.”",1:ilk_justSurvival2:”That seems optimistic.”,
+discussGoals3,DialogOptionSelected,$option == ilk_justSurvival2,,"“You’re not wrong. The Mayorate is a single star system. Our resources are finite. As much as some true belivers might tell you otherwise, the Mayor is not a god. You can’t create starships out of thin air. The Mayorate is slowly being bled dry.
+
+Something needs to change.” ","1:embMayorateQuiet:”That’s unfortunate.”
+2:cmsn_askCommission:”Maybe I could help.”",
+,,,,,,
+,,,,,,
 ,,,,,,
 discussName,DialogOptionSelected,$option == name,,“The Colonial Mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
 2:loveYouLongTime:”That’s a long time.”",
 discussElections,DialogOptionSelected,$option == elections,,“Don’t be silly. The Mayorate survives because of good decisions – not popular ones.”,1:mayorDies:”But what happens if the Mayor dies?”,
-discussMayorDies,DialogOptionSelected,$option == mayorDies,,“That would be … unlikely.”,1:embMayorateQuiet:”Let’s talk about something else.”,
-discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“As you likely know, Ilkhanna’s terraforming AI saved the colony during the Collapse. It was only fitting that she become Mayor.”",1:ruleForever:”But that’s enough to rule... forever?”,
+discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She wont.”,1:embMayorateQuiet:”Let’s talk about something else.”,
+discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“War has never come to Ilkhanna. As the rest of the sector slowly starves, our farms overflow with food. The Domain never fell here. Why second guess the Mayor when the rest of the Sector is such a miserable failure?”","1:ruleForever:”But that’s enough to rule... forever?”
+2:ilk_heroWorship:”It almost sounds like the Mayor is worshipped as a god.”",
+ilk_discussGod,DialogOptionSelected,$option == ilk_heroWorship,,"“What is a god, really?
+
+The Mayor controls the weather and flow of the seasons. Planetary terraformers create an Eden out of a once barren wasteland. The economy is run with the efficiency of a machine- few here have ever known hunger, crime, or the crushing confines of abject poverty. 
+
+The Mayor is not infallible, but to many, she is indeed a deity deserving of worship and admiration. Religion is a powerful tool when applied correctly.”",1:embMayorateQuiet:”Indeed.”,
 discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,"1:embMayorateQuiet:”I suppose that makes sense.”
 2:embMayorateQuiet:”I make my own way.”",
 ,,,,,,
 discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
 2:mayoratekill:”And if they were?”",
-discussMayorateKill,DialogOptionSelected,$option == mayoratekill,ilk_BumpRep $faction.id -0.05,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
+discussMayorateKill,DialogOptionSelected,$option == mayoratekill,ilk_BumpRep $faction.id -0.02,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
 discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs you’ll encounter in the sector are little more than empty husks. They’ve been bred for a single purpose – destruction. Putting them out of their misery would be an act of mercy.”,"1:notMad:”So there would be no consequences if one of them ‘forced my hand’?”
 2:rehabilitation:”Can they be rehabilitated?”",
-discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
-discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely understand, the Mayorate is uniquely positioned to put them to better use.”","1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”
+discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing Pathers and other… undesirables?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
+discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely know, the Mayorate is uniquely positioned to put them to better use.”","1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”
 2:ilkStartTurnInAiCores:”Actually, I have some cores to turn in now.”",
 discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any AI cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
 ,,,,,,
