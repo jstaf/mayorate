@@ -1,59 +1,94 @@
 {
-	"id":"ilk_mine_mirv",
-	"specClass":"missile",	
-	"missileType":"MIRV",
-	"sprite":"graphics/ilk/weapons/proj/he_mine.png",
-	"size":[14,14],	
-	"center":[7,7],
-	"collisionRadius":11,
-	"collisionClass":"MISSILE_NO_FF",
-	"explosionColor":[250,91,49,150],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":50, # purely visual
-	"flameoutTime":1, # total time from flameout to full fadeout
-	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
-	"fadeTime":0.5, # fadeout duration
-	#"collisionClassAfterFlameout":"MISSILE_NO_FF",
-	"behaviorSpec":{"behavior":"MIRV",
-				"splitRange":500,
-				"minTimeToSplit":1,
-				"numShots":1,
-				"damage":300,
-				"emp":0,
-				"damageType":HIGH_EXPLOSIVE,
-				"hitpoints":50,
-				"arc":0,
-				"spreadSpeed":400,
-				"projectileSpec":"ilk_mine_warhead",
-				"smokeSpec":{"particleSizeMin":20.0,
-					 "particleSizeRange":20.0,
-					 "cloudParticleCount":11,
-					 "cloudDuration":1.0,
-					 "cloudRadius":20.0,
-					 "blowbackParticleCount":0,
-					 "blowbackDuration":0,
-					 "blowbackLength":0,
-					 "blowbackSpread":0,
-					 "particleColor":[175,100,50,200]}
+	"id": "ilk_mine_mirv",
+	"specClass": "missile",
+	"missileType": "MIRV",
+	"sprite": "graphics/ilk/weapons/proj/he_mine.png",
+	"size": [
+		14,
+		14
+	],
+	"center": [
+		7,
+		7
+	],
+	"collisionRadius": 11,
+	"collisionClass": "MISSILE_NO_FF",
+	"explosionColor": [
+		250,
+		91,
+		49,
+		150
+	],
+	"explosionRadius": 50,
+	"flameoutTime": 1,
+	"noEngineGlowTime": 0.5,
+	"fadeTime": 0.5,
+	"behaviorSpec": {
+		"behavior": "MIRV",
+		"splitRange": 500,
+		"minTimeToSplit": 1,
+		"numShots": 1,
+		"damage": 300,
+		"emp": 0,
+		"damageType": "HIGH_EXPLOSIVE",
+		"hitpoints": 75,
+		"arc": 0,
+		"spreadSpeed": 400,
+		"projectileSpec": "ilk_mine_warhead",
+		"smokeSpec": {
+			"particleSizeMin": 20.0,
+			"particleSizeRange": 20.0,
+			"cloudParticleCount": 11,
+			"cloudDuration": 1.0,
+			"cloudRadius": 20.0,
+			"blowbackParticleCount": 0,
+			"blowbackDuration": 0,
+			"blowbackLength": 0,
+			"blowbackSpread": 0,
+			"particleColor": [
+				175,
+				100,
+				50,
+				200
+			]
+		}
+	},
+	"engineSpec": {
+		"turnAcc": 600,
+		"turnRate": 400,
+		"acc": 100,
+		"dec": 100
+	},
+	"engineSlots": [
+		{
+			"id": "ES1",
+			"loc": [
+				0,
+				0
+			],
+			"style": "CUSTOM",
+			"styleSpec": {
+				"engineColor": [
+					0,
+					0,
+					0,
+					0
+				],
+				"contrailParticleSizeMult": 0,
+				"contrailParticleDuration": 0,
+				"contrailMaxSpeedMult": 0,
+				"contrailAngularVelocityMult": "0f",
+				"contrailColor": [
+					0,
+					0,
+					0,
+					0
+				],
+				"type": "GLOW"
 			},
-	"engineSpec":{"turnAcc":600,
-				  "turnRate":400,
-				  "acc":100,
-				  "dec":100},
-	"engineSlots":[
-					{"id":"ES1",
-					"loc":[0, 0],
-				    "style":"CUSTOM",
-					"styleSpec":{
-						"engineColor":[0,0,0,0],
-						"contrailParticleSizeMult":0,
-						"contrailParticleDuration":0,
-						"contrailMaxSpeedMult":0,
-						"contrailAngularVelocityMult":0f,
-						"contrailColor":[0,0,0,0],
-						"type":"GLOW" # GLOW or SMOKE
-					},
-				    "width":0,
-				    "length":0,
-				    "angle":180.0},
-				   ]
+			"width": 0,
+			"length": 0,
+			"angle": 180.0
+		}
+	]
 }

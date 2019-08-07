@@ -255,13 +255,11 @@ discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was th
 10:embMain:”Nevermind.”",
 ,,,,,,
 ,,,,,,
-discussOrigins,DialogOptionSelected,$option == origins,,"“As you likely already know, the sector descended into anarchy almost immediately following collapse of the gate network. Most of the initial fighting took place in systems far from here, between massive fleets of what remained of the former Domain authorities, but many nearby worlds were annexed or razed to the ground. It seemed entirely possible that Ilkhanna would be next.“",1:ilk_enterMayor:”So what happened?”,
-discussCollapse1,DialogOptionSelected,$option == ilk_enterMayor,,"“The planetary terraforming AI felt just as threatened as the settlers. It couldn’t have been humans who caused the Collapse, right? It had to be something else, something not quite human- something evil. All non-humans needed to die.
+discussOrigins,DialogOptionSelected,$option == origins,,"“As you likely already know, the sector descended into anarchy almost immediately following collapse of the gate network. Most of the initial fighting took place in systems far from here, between massive fleets of what remained of the former Domain authorities, but many nearby worlds were annexed or razed from existence.“",1:ilk_enterMayor:”So what happened?”,
+discussCollapse1,DialogOptionSelected,$option == ilk_enterMayor,,"“The planetary terraforming AI felt just as threatened as the settlers. With the planet on the brink of destruction, Ilkhanna’s terraforming AI made the colonial mayor a bargain: it would receive absolute and total control of the planets primary settlement, all infrastructure, autofactories, and system defense craft. In return, the settlement’s new ‘mayor’ would do everything in its power to ensure that itself and the settlers survived the months to come.”",1:ilk_enterMayor2:“I guess things worked out.”,
+discussCollapse2,DialogOptionSelected,$option == ilk_enterMayor2,,"“Indeed. The Mayor was able to score several early victories, though our enemies were quick to adapt. 
 
-With the planet on the brink of destruction, Ilkhanna’s terraforming AI made the colonial mayor a bargain: it would receive absolute and total control of the planets primary settlement, all infrastructure, autofactories, and system defense craft. In return, the settlements new ‘mayor’ would do everything in its power to ensure that itself and the settlers survived the months to come.”",1:ilk_enterMayor2:“I guess things worked out.”,
-discussCollapse2,DialogOptionSelected,$option == ilk_enterMayor2,,"“Indeed. The Mayor was able to score several early victories, though our enemies were quick to adapt to fighting a non-human threat. 
-
-We were forced to make, ah… ‘creative use’ of several technologies in the colonial archives that should have been better hidden. The destruction of the planet Hanan Pacha was a necessary show of force. Now our adversaries remain in wait. We lack the numbers to project force beyond our borders, and our adversaries fear our retaliation should they move against us openly.”",1:embMayorateQuiet:“A stalemate.”,
+We were forced to make, ah… ‘creative use’ of several technologies in the colonial archives that should have been better hidden. The destruction of the planet Hanan Pacha was a necessary show of force. Now our adversaries remain in wait. We lack the numbers to project force beyond our borders, and our adversaries fear retaliation should they move against us openly.”",1:embMayorateQuiet:“A stalemate.”,
 ,,,,,,
 ,,,,,,
 ,,,,,,
@@ -289,7 +287,7 @@ ilk_discussGod,DialogOptionSelected,$option == ilk_heroWorship,,"“What is a go
 The Mayor controls the weather and flow of the seasons. Planetary terraformers create an Eden out of a once barren wasteland. The economy is run with the efficiency of a machine- few here have ever known hunger, crime, or the crushing confines of abject poverty. 
 
 The Mayor is not infallible, but to many, she is indeed a deity deserving of worship and admiration. Religion is a powerful tool when applied correctly.”",1:embMayorateQuiet:”Indeed.”,
-discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,"1:embMayorateQuiet:”I suppose that makes sense.”
+discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,"1:embMayorateQuiet:”I suppose that makes a certain kind of sense.”
 2:embMayorateQuiet:”I make my own way.”",
 ,,,,,,
 discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
@@ -297,9 +295,9 @@ discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’
 discussMayorateKill,DialogOptionSelected,$option == mayoratekill,ilk_BumpRep $faction.id -0.02,“Then I would carefully avoid confessing to murder when speaking with Mayorate officials.”,1:embMayorateQuiet:”Of course. I was merely discussing possibilities.”,
 discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs you’ll encounter in the sector are little more than empty husks. They’ve been bred for a single purpose – destruction. Putting them out of their misery would be an act of mercy.”,"1:notMad:”So there would be no consequences if one of them ‘forced my hand’?”
 2:rehabilitation:”Can they be rehabilitated?”",
-discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing Pathers and other… undesirables?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
+discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
 discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely know, the Mayorate is uniquely positioned to put them to better use.”","1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”
-2:ilkStartTurnInAiCores:”Actually, I have some cores to turn in now.”",
+",
 discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any AI cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
 ,,,,,,
 ,,,,,,

@@ -7,6 +7,7 @@
             ],
             "faction": "mayorate",
             "size": 5,
+            "freePort": true,
             "startingConditions": [
                 "very_hot",
                 "no_atmosphere",
@@ -62,8 +63,7 @@
                 "no_atmosphere",
                 "ice",
                 "low_gravity",
-                "organized_crime",
-                "volatiles_plentiful",
+                "volatiles_diffuse",
                 "population_3"
             ],
             "industries": [
@@ -79,8 +79,7 @@
                 "iolanthe"
             ],
             "faction": "mayorate",
-            "size": 4,
-            "freePort": true,
+            "size": 5,
             "startingConditions": [
                 "dense_atmosphere",
                 "high_gravity",
