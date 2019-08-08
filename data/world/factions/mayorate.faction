@@ -137,13 +137,28 @@
 	},
 	"knownWeapons": {
 		"tags": [
-			"base_bp",
-			"lowtech_bp",
-			"midline_bp",
-			"missile_bp",
 			"mayorate_bp"
 		],
-		"weapons": []
+		"weapons": [
+			"lightmg",
+			"vulcan",
+			"lightac",
+			"pdlaser",
+			"mininglaser",
+			"miningblaster",
+			"amblaster",
+			"annihilator",
+			"annihilatorpod",
+			"sabot",
+			"sabotpod",
+			"heatseeker",
+			"hammer",
+			"hammer_single",
+			"hammerrack",
+			"atropos_single",
+			"atropos",
+			"squall"
+		]
 	},
 	"priorityWeapons": {
 		"tags": [
@@ -162,7 +177,6 @@
 			"insulatedengine",
 			"targetingunit",
 			"nav_relay",
-			"operations_center",
 			"frontshield",
 			"stabilizedshieldemitter",
 			"hardenedshieldemitter",
@@ -197,6 +211,7 @@
 			"officer_management",
 			"coordinated_maneuvers",
 			"fighter_doctrine",
+			"impact_mitigation",
 			"electronic_warfare"
 		]
 	},
