@@ -54,17 +54,14 @@
 			}
 		},
 		"posts": {
-			"consul": {
-				"name": "Consul"
+			"administrator": {
+				"name": "Undermayor"
 			},
 			"patrolCommander": {
 				"name": "Archon"
 			},
 			"fleetCommander": {
 				"name": "Imperator"
-			},
-			"baseCommander": {
-				"name": "Undermayor"
 			}
 		}
 	},

@@ -95,17 +95,14 @@ $faction.id == mayorate","AddText ""The concourse seems oddly subdued for a port
 AddText ""Detecting your presence, a nearby terminal fires up its display. Wearing a generic face from its databanks, a gamma-level AI explains that it has been assigned to assist with your access to local goods and services while you remain in port."" textGrayColor",,,
 ,,,,,,
 ##########start of custom market dialogs,,,,,,
-embassy,PickGreeting,"$isPerson
+embassy,PopulateOptions,"$isPerson
 $faction.id == mayorate
-$postId == baseCommander",ShowPersonVisual,"“Good to see you, commander. How can I be of assistance?”","2:embFactions:”Tell me about the other factions in the sector.”
-1:embMayorate:”I'd like to know a little bit more about your faction.”
-3:embAssistance:”I wanted to call in a favor.”
-4:embHuman:”I almost expected you to be another AI.”
-10:embLeave:Cut the comm link.",
+Commission personCanGiveCommission",,,"12:embFactions:”Tell me about the other factions in the sector.”
+11:embMayorate:”I'd like to know a little bit more about your faction.”
+13:embAssistance:”I wanted to call in a favor.”",
 embassyQuiet,DialogOptionSelected,$option == embMain,,“Did you need anything else?”,"2:embFactions:”Tell me about the other factions in the sector.”
 1:embMayorate:”I'd like to know a little bit more about your faction.”
 3:embAssistance:”I wanted to call in a favor.”
-4:embHuman:”I almost expected you to be another AI.”
 10:embLeave:Cut the comm link.",
 ,,,,,,
 ##### misc,,,,,,
