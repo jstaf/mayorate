@@ -138,12 +138,9 @@
 		],
 		"weapons": [
 			"lightmg",
-			"vulcan",
 			"lightac",
 			"pdlaser",
 			"mininglaser",
-			"miningblaster",
-			"amblaster",
 			"annihilator",
 			"annihilatorpod",
 			"sabot",
@@ -153,8 +150,7 @@
 			"hammer_single",
 			"hammerrack",
 			"atropos_single",
-			"atropos",
-			"squall"
+			"atropos"
 		]
 	},
 	"priorityWeapons": {

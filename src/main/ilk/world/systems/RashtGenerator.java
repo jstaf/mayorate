@@ -35,18 +35,18 @@ public class RashtGenerator implements SectorGeneratorPlugin {
 
     // closer than 1000f results in fleets rubberbanding away from the star corona
     // and back to the planet. yikes.
-    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1200f, 30f);
+    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1300f, 30f);
     inir.setCustomDescriptionId("planet_Inir");
     inir.setInteractionImage("illustrations", "ilk_inir_surface");
 
     // inner system band
     system.addAsteroidBelt(star, 100, 2250, 300, 100, 180);
-    system.addRingBand(star, "terrain", "ilk_rings4", 512f, 2, new Color(65, 47, 42), 512f, 1850f, 280f);
-    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 2, Color.white, 256f, 2150, 170f);
-    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 1975, 220f);
-    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 2200, 140f);
+    system.addRingBand(star, "terrain", "ilk_rings4", 512f, 2, new Color(65, 47, 42), 512f, 1950f, 280f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 2, Color.white, 256f, 2250, 170f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 2075, 220f);
+    system.addRingBand(star, "terrain", "ilk_rings1", 256f, 3, Color.white, 256f, 2300, 140f);
     SectorEntityToken ring = system.addTerrain(Terrain.RING,
-        new BaseRingTerrain.RingParams(680f, 1950f, null, "Cinder Field"));
+        new BaseRingTerrain.RingParams(680f, 2050f, null, "Cinder Field"));
     ring.setCircularOrbit(star, 0, 0, 120f);
 
     PlanetAPI ilkhanna = system.addPlanet("ilkhanna", star, "Ilkhanna", "ilk_ilkhanna", 185, 175, 4200, 200);
