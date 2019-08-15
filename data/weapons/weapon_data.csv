@@ -1,6 +1,6 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
 Disruptor,ilk_disruptor,1,,2000,700,,600,600,,22,12,,,,FRAGMENTATION,900,,,5,,,5,10,5,20,,1200,,,500,FIRE_WHEN_INEFFICIENT,"kinetic12, mayorate_bp",,,,Suppression,,,,,,,,,,7701
-Heavy Disruptor,ilk_disruptor_heavy,2,,6000,800,,1000,1000,,20,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,FIRE_WHEN_INEFFICIENT,"kinetic15, mayorate_bp",,,,Suppression,,,,,,,,,,7702
+Heavy Disruptor,ilk_disruptor_heavy,2,,6000,800,,1000,1000,,17,19,,,,FRAGMENTATION,1500,,,7,,,5,5,0,0,,1200,,,500,FIRE_WHEN_INEFFICIENT,"kinetic15, mayorate_bp",,,,Suppression,,,,,,,,,,7702
 Graser,ilk_graser,2,,6000,1000,1200,,,,15,20,,,,ENERGY,,1800,0.05,0.6,0.6,4,0,0,0,0,24000,,,,,,"beam20, LR, mayorate_bp",,,,General,,,,,,,,,,7704
 Light Graser,ilk_graser_light,0,,300,800,250,,,,15,7,,,,ENERGY,,400,0,0.25,0.3,0.4,0,0,0,0,24000,,,,,ANTI_FTR,"beam10, mayorate_bp",,,,General,,,,,,,,,,7705
 Graser PD,ilk_graser_pd,0,,650,450,150,,,,100,6,,,,ENERGY,,250,0,0.3,0.2,0.1,0,0,0,0,24000,,,,,"PD,ANTI_FTR","pd9, beam6, mayorate_bp",,,,Point Defense,,,,,,,,,,7706
