@@ -21,7 +21,7 @@
     },
     {
       "autofire": false,
-      "mode": "ALTERNATING",
+      "mode": "LINKED",
       "weapons": {
         "WS0001": "ilk_nuke_large",
         "WS0002": "ilk_nuke_large"

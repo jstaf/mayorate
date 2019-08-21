@@ -16,8 +16,7 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ilk_thermal_lance",
-        "WS0006": "ilk_tracer"
+        "WS0001": "ilk_thermal_lance"
       }
     },
     {
@@ -29,9 +28,11 @@
       }
     },
     {
-      "autofire": true,
+      "autofire": false,
       "mode": "LINKED",
-      "weapons": {}
+      "weapons": {
+        "WS0006": "ilk_tracer"
+      }
     },
     {
       "autofire": true,

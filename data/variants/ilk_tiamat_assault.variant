@@ -14,24 +14,20 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ilk_tracer",
-        "WS0002": "ilk_tracer",
         "WS0007": "ilk_shotgun"
       }
     },
     {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {}
-    },
-    {
       "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {}
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ilk_tracer",
+        "WS0002": "ilk_tracer"
+      }
     },
     {
       "autofire": true,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0003": "ilk_graser_light",
         "WS0004": "ilk_graser_light"
@@ -44,6 +40,11 @@
         "WS0005": "ilk_graser_pd",
         "WS0006": "ilk_graser_pd"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
     }
   ],
   "wings": []

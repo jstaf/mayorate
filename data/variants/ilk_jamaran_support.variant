@@ -16,16 +16,20 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "ilk_graser_pd",
-        "WS0004": "ilk_graser_pd",
         "WS0005": "ilk_disruptor",
-        "WS0006": "ilk_disruptor",
-        "WS0009": "ilk_nuke_large"
+        "WS0006": "ilk_disruptor"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
+      "weapons": {
+        "WS0009": "ilk_nuke_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0007": "ilk_laserhead",
         "WS0008": "ilk_laserhead"
@@ -34,14 +38,11 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {}
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
       "weapons": {
         "WS0001": "ilk_graser_pd",
-        "WS0002": "ilk_graser_pd"
+        "WS0002": "ilk_graser_pd",
+        "WS0003": "ilk_graser_pd",
+        "WS0004": "ilk_graser_pd"
       }
     }
   ],
