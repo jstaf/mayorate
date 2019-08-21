@@ -8,7 +8,7 @@ Laserhead LRM Launcher,ilk_laserhead,2,,1500,10000,,850,,75,10,12,20,,,ENERGY,0,
 Tornado AM Battery,ilk_nuke_large,1,,8000,2000,,1500,1000,1000,10,21,10,,,HIGH_EXPLOSIVE,,,0.5,10,1,,0,0,0,0,,500,75,10,500,DO_NOT_AIM,"missile18, mayorate_bp",,,,Long Range Support,,,,,Deals massive AOE and EMP damage to all targets in blast radius.,,,,,7707
 PPC,ilk_ppc,0,,300,500,,50,,0,50,6,,,,ENERGY,40,,,0.28,1,,0,10,1,10,,800,,,,,"energy8, mayorate_bp",,,,Pressure,,,,,,,,,,7708
 Belial PPC,ilk_shotgun,1,,1500,600,,1080,,,15,13,50,,,ENERGY,800,,,3,1,,0,0,0,0,,1000,,,,,"energy13, mayorate_bp",,,,Pressure,,,,,,,,,,7709
-Windstalker MRM,ilk_windstalker,0,,200,1250,,100,,50,10,4,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,"missile7, mayorate_bp",,,,Pressure,,,,,,,,,,7710
+Windstalker MRM4,ilk_windstalker,0,,200,1250,,100,,50,10,4,40,,,KINETIC,0,,0,5,4,0.05,0,10,1,5,,500,200,5,75,DO_NOT_AIM,"missile7, mayorate_bp",,,,Pressure,,,,,,,,,,7710
 Tracer SRM8,ilk_tracer,0,,400,800,,300,,,12,5,8,,,HIGH_EXPLOSIVE,0,,,0.2,1,,0,10,1.5,5,,600,300,2.5,100,"GUIDED_POOR, STRIKE, USE_VS_FRIGATES","missile8, mayorate_bp",,,,Torpedo,,,,,,,,,,7711
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Grav Cannon,ilk_driver,2,,0,1000,,500,,,0,0,,,,KINETIC,650,,1,8,3,0.6,2,10,2,5,,3000,,,,"SYSTEM, SHOW_IN_CODEX",,,,,Anti Shield,,,,,,,,,,7730

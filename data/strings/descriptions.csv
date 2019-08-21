@@ -60,3 +60,4 @@ ilk_shotgun,WEAPON,The Belial PPC launches a formidable spread of superheated pl
 ilk_thermal_lance,WEAPON,A terrifying beam weapon that deals increasingly high damage at high flux.,Assault,,
 ilk_windstalker,WEAPON,"Although relatively easy to shoot down, the Windstalker's magazine size is a major advantage in longer engagements.",Close Support,,
 ilk_ramdrive,WEAPON,"A powerful cannon built into the hull of the Narayana class battleships. Although unweildy, it is effective against the heaviest of armor.",Fire Support,,
+ilk_tracer,WEAPON,"A semi-guided rocket designed to be used as an anti-frigate torpedo. Although ineffective against heavy armor, it will cut through lighter craft with ease.",Finisher,,

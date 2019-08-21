@@ -5,13 +5,67 @@
 	"size": "SMALL",
 	"turretSprite": "",
 	"hardpointSprite": "",
-	"hardpointOffsets": [-2, 7, -2, -7, 0, 9, 0, -9, 2, 11, 2, -11, 4, 13, 4, -13],
-	"turretOffsets": [-2, 7, -2, -7, 0, 9, 0, -9, 2, 11, 2, -11, 4, 13, 4, -13],
-	"hardpointAngleOffsets": [0, 0, 0, 0, 0, 0, 0, 0],
-	"turretAngleOffsets": [0, 0, 0, 0, 0, 0, 0, 0],
+	"hardpointOffsets": [
+		-4,
+		6,
+		-4,
+		-6,
+		-1,
+		9,
+		-1,
+		-9,
+		2,
+		12,
+		2,
+		-12,
+		5,
+		15,
+		5,
+		-15
+	],
+	"turretOffsets": [
+		-2,
+		7,
+		-2,
+		-7,
+		0,
+		9,
+		0,
+		-9,
+		2,
+		11,
+		2,
+		-11,
+		4,
+		13,
+		4,
+		-13
+	],
+	"hardpointAngleOffsets": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"turretAngleOffsets": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
 	"barrelMode": "ALTERNATING",
 	"animationType": "SMOKE",
-	"renderHints": ["RENDER_LOADED_MISSILES"],
+	"renderHints": [
+		"RENDER_LOADED_MISSILES"
+	],
 	"interruptibleBurst": false,
 	"smokeSpec": {
 		"particleSizeMin": 16.0,
@@ -23,7 +77,12 @@
 		"blowbackDuration": 1.0,
 		"blowbackLength": 20.0,
 		"blowbackSpread": 8.0,
-		"particleColor": [51, 45, 41, 75]
+		"particleColor": [
+			51,
+			45,
+			41,
+			75
+		]
 	},
 	"projectileSpecId": "ilk_tracer_rocket",
 	"fireSoundTwo": "ilk_tracer_fire"
