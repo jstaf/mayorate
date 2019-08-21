@@ -1,0 +1,89 @@
+{
+	"id": "ilk_tracer",
+	"specClass": "projectile",
+	"type": "MISSILE",
+	"size": "SMALL",
+	"turretSprite": "graphics/ilk/weapons/tracer_ii_sm_mount.png",
+	"hardpointSprite": "graphics/ilk/weapons/tracer_ii_sm_mount.png",
+	"hardpointOffsets": [
+		14,
+		6,
+		14,
+		2,
+		14,
+		-2,
+		14,
+		-6,
+		8,
+		6,
+		8,
+		2,
+		8,
+		-2,
+		8,
+		-6
+	],
+	"turretOffsets": [
+		14,
+		6,
+		14,
+		2,
+		14,
+		-2,
+		14,
+		-6,
+		8,
+		6,
+		8,
+		2,
+		8,
+		-2,
+		8,
+		-6
+	],
+	"hardpointAngleOffsets": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"turretAngleOffsets": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"barrelMode": "ALTERNATING",
+	"animationType": "SMOKE",
+	"renderHints": [
+		"RENDER_LOADED_MISSILES"
+	],
+	"interruptibleBurst": false,
+	"smokeSpec": {
+		"particleSizeMin": 16.0,
+		"particleSizeRange": 20.0,
+		"cloudParticleCount": 5,
+		"cloudDuration": 1.5,
+		"cloudRadius": 10.0,
+		"blowbackParticleCount": 3,
+		"blowbackDuration": 1.0,
+		"blowbackLength": 20.0,
+		"blowbackSpread": 8.0,
+		"particleColor": [
+			51,
+			45,
+			41,
+			75
+		]
+	},
+	"projectileSpecId": "ilk_tracer_rocket",
+	"fireSoundTwo": "ilk_tracer_fire"
+}

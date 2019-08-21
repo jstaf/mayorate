@@ -2,12 +2,23 @@
 	"id": "ilk_tracer_rocket",
 	"specClass": "missile",
 	"missileType": "MISSILE",
-	"sprite": "graphics/ilk/weapons/tracer_rocket.png",
-	"size": [5, 11],
-	"center": [2.5, 6],
+	"sprite": "graphics/ilk/weapons/tracer_ii.png",
+	"size": [
+		5,
+		11
+	],
+	"center": [
+		2.5,
+		6
+	],
 	"collisionRadius": 10,
 	"collisionClass": "MISSILE_NO_FF",
-	"explosionColor": [255, 107, 62, 255],
+	"explosionColor": [
+		255,
+		107,
+		62,
+		255
+	],
 	"explosionRadius": 50,
 	"engineSpec": {
 		"turnAcc": 150,
@@ -15,24 +26,39 @@
 		"acc": 1000,
 		"dec": 500
 	},
-	"engineSlots": [{
-		"id": "ES1",
-		"loc": [-3, 0],
-		"style": "CUSTOM",
-		"styleSpec": {
-			"mode": "QUAD_STRIP",
-			"engineColor": [255, 208, 177, 255],
-			"contrailDuration": 1,
-			"contrailWidthMult": 1,
-			"contrailWidthAddedFractionAtEnd": 2.5,
-			"contrailMinSeg": 5,
-			"contrailMaxSpeedMult": "0.5f",
-			"contrailAngularVelocityMult": "0.5f",
-			"contrailColor": [51, 45, 41, 170],
-			"type": "SMOKE"
-		},
-		"width": 6.0,
-		"length": 30.0,
-		"angle": 180.0
-	}]
+	"engineSlots": [
+		{
+			"id": "ES1",
+			"loc": [
+				-3,
+				0
+			],
+			"style": "CUSTOM",
+			"styleSpec": {
+				"mode": "QUAD_STRIP",
+				"engineColor": [
+					255,
+					208,
+					177,
+					255
+				],
+				"contrailDuration": 1,
+				"contrailWidthMult": 1,
+				"contrailWidthAddedFractionAtEnd": 2.5,
+				"contrailMinSeg": 5,
+				"contrailMaxSpeedMult": "0.5f",
+				"contrailAngularVelocityMult": "0.5f",
+				"contrailColor": [
+					51,
+					45,
+					41,
+					170
+				],
+				"type": "SMOKE"
+			},
+			"width": 6.0,
+			"length": 30.0,
+			"angle": 180.0
+		}
+	]
 }
