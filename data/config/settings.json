@@ -5,7 +5,7 @@
       "ilk_interdiction": "graphics/ilk/illustrations/interdiction.png"
     },
     "beams": {
-      "ilk_fakeBeamFX": "graphics/ilk/FAKEBEAM/fakeBeamFX.png"
+      "ilk_fakeBeamFX": "graphics/ilk/plugins/fakeBeamFX.png"
     },
     "stations": {
       "ilk_kushehr": "graphics/ilk/stations/kushehr.png"
