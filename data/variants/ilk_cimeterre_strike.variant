@@ -1,10 +1,13 @@
 {
   "displayName": "Strike",
   "fluxCapacitors": 20,
-  "fluxVents": 18,
+  "fluxVents": 19,
   "goalVariant": true,
   "hullId": "ilk_cimeterre",
   "hullMods": [],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_cimeterre_strike",
   "weaponGroups": [
     {
@@ -36,5 +39,6 @@
         "WS0004": "ilk_graser_pd"
       }
     }
-  ]
+  ],
+  "wings": []
 }

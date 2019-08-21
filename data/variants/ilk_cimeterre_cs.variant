@@ -8,13 +8,17 @@
     "targetingunit",
     "ilk_AICrew"
   ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
   "variantId": "ilk_cimeterre_cs",
   "weaponGroups": [
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ilk_thermal_lance"
+        "WS0001": "ilk_thermal_lance",
+        "WS0006": "ilk_tracer"
       }
     },
     {
@@ -28,9 +32,7 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {
-        "WS0006": "ilk_windstalker"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,
@@ -39,5 +41,6 @@
         "WS0004": "ilk_graser_pd"
       }
     }
-  ]
+  ],
+  "wings": []
 }
