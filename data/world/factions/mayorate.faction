@@ -143,14 +143,10 @@
 			"mininglaser",
 			"annihilator",
 			"annihilatorpod",
-			"sabot",
 			"sabotpod",
 			"heatseeker",
-			"hammer",
 			"hammer_single",
-			"hammerrack",
-			"atropos_single",
-			"atropos"
+			"hammerrack"
 		]
 	},
 	"priorityWeapons": {
