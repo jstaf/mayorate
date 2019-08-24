@@ -195,7 +195,7 @@
 	],
 	"ilk_light_graser_fire": [
 		{
-			"file": "sounds/ilk/fx/l_military_02.wav",
+			"file": "sounds/ilk/fx/light_graser.ogg",
 			"pitch": 1,
 			"volume": 0.25
 		}
