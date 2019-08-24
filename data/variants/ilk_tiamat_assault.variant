@@ -19,7 +19,7 @@
     },
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "ilk_tracer",
         "WS0002": "ilk_tracer"
@@ -27,7 +27,7 @@
     },
     {
       "autofire": true,
-      "mode": "ALTERNATING",
+      "mode": "LINKED",
       "weapons": {
         "WS0003": "ilk_graser_light",
         "WS0004": "ilk_graser_light"
