@@ -13,7 +13,7 @@ cp -R . ../$RELEASE
 
 # now delete everything we don't want
 cd ../$RELEASE
-rm -rf .git .idea out util build .gradle gradle
+rm -rf .git .vscode .idea out util build .gradle gradle
 rm -f .gitignore *.iml *gradle*
 
 cd ..
