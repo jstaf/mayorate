@@ -488,18 +488,6 @@
       "type": "LAUNCH_BAY"
     },
     {
-      "angle": 73.85566,
-      "arc": 150.494461,
-      "id": "WS0020",
-      "locations": [
-        14.5,
-        58.5
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "ENERGY"
-    },
-    {
       "angle": 0,
       "arc": 0,
       "id": "WS0022",
