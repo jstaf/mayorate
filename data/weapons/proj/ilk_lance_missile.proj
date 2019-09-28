@@ -1,0 +1,65 @@
+{
+	"id": "ilk_lance_missile",
+	"specClass": "missile",
+	"missileType": "MISSILE",
+	"sprite": "graphics/missiles/missile_LRM.png",
+	"size": [
+		6,
+		24
+	],
+	"center": [
+		3,
+		12
+	],
+	"collisionRadius": 14,
+	"collisionClass": "MISSILE_NO_FF",
+	"explosionColor": [
+		255,
+		165,
+		50,
+		255
+	],
+	"explosionRadius": 125,
+	"engineSpec": {
+		"turnAcc": 150,
+		"turnRate": 45,
+		"acc": 1000,
+		"dec": 250
+	},
+	"engineSlots": [
+		{
+			"id": "ES1",
+			"loc": [
+				-12,
+				0
+			],
+			"style": "CUSTOM",
+			"styleSpec": {
+				"mode": "QUAD_STRIP",
+				"engineColor": [
+					255,
+					208,
+					177,
+					255
+				],
+				"contrailDuration": 2,
+				"contrailWidthMult": 2,
+				"contrailWidthAddedFractionAtEnd": 2,
+				"contrailMinSeg": 15,
+				"contrailMaxSpeedMult": "0.0f",
+				"contrailAngularVelocityMult": "0.5f",
+				"contrailSpawnDistMult": "0.75f",
+				"contrailColor": [
+					51,
+					45,
+					41,
+					170
+				],
+				"type": "SMOKE"
+			},
+			"width": 6.0,
+			"length": 30.0,
+			"angle": 180.0
+		}
+	]
+}
