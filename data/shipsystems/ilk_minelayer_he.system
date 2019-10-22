@@ -1,8 +1,8 @@
 {
-	"id":"ilk_minelayer_he",
-	"type":"WEAPON",
-	"aiType":"CUSTOM",
-	"aiScript":"ilk.shipsystems.ai.MinelayerAI",
-	"weaponDataId":"ilk_minelayer",
-	"outOfUsesSound":"gun_out_of_ammo",
+	"id": "ilk_minelayer_he",
+	"type": "WEAPON",
+	"aiType": "CUSTOM",
+	"aiScript": "ilk.shipsystems.ai.MinelayerAI",
+	"weaponDataId": "ilk_minelayer",
+	"outOfUsesSound": "gun_out_of_ammo"
 }

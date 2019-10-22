@@ -1,15 +1,25 @@
 {
-	"id":"ilk_bubble_shield",
-	"type":"SHIELD_MOD",
-	"aiType":"FORTRESS_SHIELD",
-	"statsScript":"ilk.shipsystems.BubbleShieldStats",
-	"shieldRingColor":[255,255,255,200],
-	"shieldInnerColor":[255,29,89,100],
-	"shieldThicknessMult":2,
-	"shieldFluctuationMult":0,
-	"soundFilterType":"LOWPASS",
-	"soundFilterGain":0.75,
-	"soundFilterGainHF":0.0,
-	"loopSound":"bubble_shield_loop",
-	"outOfUsesSound":"gun_out_of_ammo",	
+	"id": "ilk_bubble_shield",
+	"type": "SHIELD_MOD",
+	"aiType": "FORTRESS_SHIELD",
+	"statsScript": "ilk.shipsystems.BubbleShieldStats",
+	"shieldRingColor": [
+		255,
+		255,
+		255,
+		200
+	],
+	"shieldInnerColor": [
+		255,
+		29,
+		89,
+		100
+	],
+	"shieldThicknessMult": 2,
+	"shieldFluctuationMult": 0,
+	"soundFilterType": "LOWPASS",
+	"soundFilterGain": 0.75,
+	"soundFilterGainHF": 0.0,
+	"loopSound": "bubble_shield_loop",
+	"outOfUsesSound": "gun_out_of_ammo"
 }
