@@ -65,6 +65,11 @@ Gameplay:
   hybrid mount. This makes it a bit more distinct from the Lilith.
 - Belial PPC spread tightened, projectile speed increased, number of projectiles
   decreased. Belial sfx changed to old pulse gun sfx.
+- Added Tracer SRM8 and Tracer MRM8, which are small and medium mount versions 
+  of the Angha's rocket launcher. The SRM8 is a carbon copy of the Angha
+  rocket launcher with 8 shots (very deadly, low ammo capacity). The MRM8 has 
+  increased flight time and tracking ability to enable launching from side 
+  missile mounts, and can fire multiple 8-shot salvos on a long cooldown.
 
 v0.10.3
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).
