@@ -20,7 +20,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class FighterCoprocessingAI implements ShipSystemAIScript {
 
-  private Logger logger = Global.getLogger(FighterCoprocessingAI.class);
+  private static final Logger logger = Global.getLogger(FighterCoprocessingAI.class);
 
   // The range at which a fighter under regroup orders will be considered
   // regrouping.

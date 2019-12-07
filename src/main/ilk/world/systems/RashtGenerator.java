@@ -19,10 +19,12 @@ import ilk.world.utils.BountySpawner;
 
 public class RashtGenerator implements SectorGeneratorPlugin {
 
+  private static Logger logger;
+
   @Override
   public void generate(SectorAPI sector) {
 
-    Logger logger = Global.getLogger(this.getClass());
+    logger = Global.getLogger(this.getClass());
 
     StarSystemAPI system = sector.createStarSystem("Rasht");
     system.setBackgroundTextureFilename("graphics/ilk/backgrounds/ilk_background2.jpg");

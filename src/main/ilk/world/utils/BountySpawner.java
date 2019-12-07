@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
  * up with the Mayorate if they want to
  */
 public class BountySpawner implements EveryFrameScript {
-  Logger logger = Global.getLogger(BountySpawner.class);
+  private static final Logger logger = Global.getLogger(BountySpawner.class);
 
   SectorAPI sector;
   LocationAPI system;
