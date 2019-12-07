@@ -37,7 +37,7 @@ public class RashtGenerator implements SectorGeneratorPlugin {
 
     // closer than 1000f results in fleets rubberbanding away from the star corona
     // and back to the planet. yikes.
-    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "rocky_metallic", 330f, 120f, 1300f, 30f);
+    PlanetAPI inir = system.addPlanet("inir", star, "Inir", "lava_minor", 330f, 120f, 1300f, 30f);
     inir.setCustomDescriptionId("planet_Inir");
     inir.setInteractionImage("illustrations", "ilk_inir_surface");
 
