@@ -24,7 +24,6 @@ Sound and music:
 Campaign:
 - Mayorate faction color changed to light-yellow so as to not conflict with the 
   Persean League as much.
-- Mayorate now uses a mix of AI and human portraits (like you'd expect).
 - General writing polish pass. Slight lore rewrites in places to make things 
   even more vanilla-friendly than they were before.
 - Mayorate relationships revamped - the Mayorate is now hostile with most 
