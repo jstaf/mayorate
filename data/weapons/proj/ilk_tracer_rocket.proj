@@ -21,11 +21,14 @@
 	],
 	"explosionRadius": 50,
 	"engineSpec": {
-		"turnAcc": 150,
+		"turnAcc": 170,
 		"turnRate": 100,
 		"acc": 1000,
-		"dec": 500
+		"dec": 600
 	},
+	"flameoutTime": 0.5,
+	"noEngineGlowTime": 0,
+	"fadeTime": 0.025,
 	"engineSlots": [
 		{
 			"id": "ES1",
