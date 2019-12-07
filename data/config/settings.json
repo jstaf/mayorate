@@ -4,6 +4,9 @@
       "ilk_inir_surface": "graphics/ilk/illustrations/inir_surface.png",
       "ilk_interdiction": "graphics/ilk/illustrations/interdiction.png"
     },
+    "blueprint_packages": {
+      "mayorate_package": "graphics/ilk/factions/mayorate_flag.png"
+    },
     "beams": {
       "ilk_fakeBeamFX": "graphics/ilk/plugins/fakeBeamFX.png"
     },
