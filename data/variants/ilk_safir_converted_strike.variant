@@ -1,20 +1,20 @@
 {
-  "displayName": "Support",
-  "fluxCapacitors": 6,
+  "displayName": "Strike",
+  "fluxCapacitors": 10,
   "fluxVents": 4,
   "goalVariant": true,
   "hullId": "ilk_safir_converted",
   "hullMods": [
     "missleracks"
   ],
-  "variantId": "ilk_safir_converted_support",
+  "variantId": "ilk_safir_converted_strike",
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "ilk_laserhead",
-        "WS0002": "ilk_laserhead"
+        "WS0001": "ilk_tracer_m",
+        "WS0002": "ilk_tracer_m"
       }
     },
     {

@@ -15,16 +15,15 @@
       "mode": "LINKED",
       "weapons": {
         "WS0005": "ilk_graser",
-        "WS0006": "ilk_graser",
-        "WS0014": "ilk_disruptor"
+        "WS0006": "ilk_graser"
       }
     },
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0016": "sabotpod",
-        "WS0017": "sabotpod"
+        "WS0016": "ilk_tracer_m",
+        "WS0017": "ilk_tracer_m"
       }
     },
     {
@@ -38,7 +37,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0013": "ilk_disruptor"
+        "WS0013": "ilk_disruptor",
+        "WS0014": "ilk_disruptor"
       }
     },
     {

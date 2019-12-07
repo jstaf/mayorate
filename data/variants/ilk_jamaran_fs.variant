@@ -29,8 +29,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0007": "salamanderpod",
-        "WS0008": "salamanderpod"
+        "WS0007": "ilk_tracer_m",
+        "WS0008": "ilk_tracer_m"
       }
     },
     {

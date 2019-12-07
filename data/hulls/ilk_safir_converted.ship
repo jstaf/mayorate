@@ -50,6 +50,9 @@
     14.5
   ],
   "builtInWings": [],
+  "builtInMods": [
+    "pointdefenseai"
+  ],
   "center": [
     65,
     95.5

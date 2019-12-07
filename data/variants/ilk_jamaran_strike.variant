@@ -25,8 +25,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0007": "harpoonpod",
-        "WS0008": "harpoonpod"
+        "WS0007": "ilk_tracer_m",
+        "WS0008": "ilk_tracer_m"
       }
     },
     {

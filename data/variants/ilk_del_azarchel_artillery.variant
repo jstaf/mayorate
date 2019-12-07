@@ -1,7 +1,7 @@
 {
-  "displayName": "Artillery",
-  "fluxCapacitors": 11,
-  "fluxVents": 11,
+  "displayName": "Strike",
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
   "goalVariant": true,
   "hullId": "ilk_del_azarchel",
   "hullMods": [
@@ -21,24 +21,24 @@
     },
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "ilk_nuke_large",
         "WS0002": "ilk_nuke_large"
       }
     },
     {
-      "autofire": true,
+      "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "annihilator",
-        "WS0006": "annihilator",
-        "WS0011": "annihilatorpod"
+        "WS0005": "ilk_tracer",
+        "WS0006": "ilk_tracer",
+        "WS0011": "ilk_tracer_m"
       }
     },
     {
       "autofire": true,
-      "mode": "ALTERNATING",
+      "mode": "LINKED",
       "weapons": {
         "WS0003": "ilk_disruptor",
         "WS0004": "ilk_disruptor"

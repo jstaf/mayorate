@@ -1,26 +1,34 @@
 {
   "displayName": "Strike",
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 2,
   "fluxVents": 7,
   "goalVariant": true,
   "hullId": "ilk_foraker",
-  "hullMods": ["expanded_deck_crew"],
+  "hullMods": [
+    "expanded_deck_crew"
+  ],
   "variantId": "ilk_foraker_strike",
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {"WS0005": "ilk_laserhead"}
+      "weapons": {
+        "WS0005": "ilk_tracer_m"
+      }
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0003": "ilk_ppc"}
+      "weapons": {
+        "WS0003": "ilk_ppc"
+      }
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {"WS0001": "ilk_graser_light"}
+      "weapons": {
+        "WS0001": "ilk_graser_light"
+      }
     },
     {
       "autofire": true,
