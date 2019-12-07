@@ -1,13 +1,14 @@
 {
-	"id":"player",
-	"portraits":{
-		"standard_male":[
+	"id": "player",
+	"portraits": {
+		"standard_male": [
 			"graphics/ilk/portraits/ilk_portrait_2.png",
 			"graphics/ilk/portraits/ilk_portrait_4.png"
 		],
-		"standard_female":[
-			"graphics/ilk/portraits/ilk_portrait_3.png",
-			"graphics/ilk/portraits/ilk_portrait_5.png"
+		"standard_female": [
+			"graphics/ilk/portraits/ilk_portrait_1.png",
+			"graphics/ilk/portraits/ilk_portrait_5.png",
+			"graphics/ilk/portraits/ilk_portrait_3.png"
 		]
 	}
 }
