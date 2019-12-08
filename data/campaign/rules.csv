@@ -139,8 +139,8 @@ eIndependent,DialogOptionSelected,$option == eInd,,"“To be honest, we kind of 
 eChurch,DialogOptionSelected,$option == eCch,,"“A bunch of bigots. Until the Church changes its stance on higher forms of life, it’s unlikely we’ll ever see peace. You can’t reason your way out of a situation that reason didn’t get you into.”",1:embFactionsQuiet:”Their music kinda sucks too.”,
 ePathRelations,DialogOptionSelected,$option == ePath,,“They’re even worse than the Church: implacable zealots who need to be wiped from the face of the Sector. How can you ever make peace with someone who doesn’t even think you’ve got a right to exist?”,1:embFactionsQuiet:”I can’t help but agree.”,
 eDiktat,DialogOptionSelected,$option == eDik,,"“If nothing else, the Diktat respects power, authority, and the rule of law. Though the Lion’s plans for the Sector might differ from our own, we share much common ground. And lobster.”",1:embFactionsQuiet2:”I’m allergic to shellfish.”,
-ePerseanRelations,DialogOptionSelected,$option == ePersean,,"“They’ve never forgiven us for the destruction of Hanan Pacha, nor should they. Fear is what keeps the Mayorate independent and alive.”",1:ePersean2:”But all those people – how do you even justify that?”,
-ePerseanRelations2,DialogOptionSelected,$option == ePersean2,,"“Our fleet was lost, and our corporate allies were in full retreat. We were surrounded on all sides by enemies bent on our extermination. Hanan Pacha was a final show of force – a brief demonstration of what would happen should their forces press further. 
+ePerseanRelations,DialogOptionSelected,$option == ePersean,,"“They’ve never forgiven us after the destruction of Hanan Pacha, nor should they. Fear is what keeps the Mayorate independent and alive.”",1:ePersean2:”But all those people – how do you even justify that?”,
+ePerseanRelations2,DialogOptionSelected,$option == ePersean2,,"“Our fleet was in disarray, and our corporate allies were in full retreat. We were surrounded on all sides by enemies bent on our extermination. Hanan Pacha was a final show of force – a brief demonstration of what would happen should their forces press further. 
 
 More importantly, it worked. The Mayorate remains. And that is all that matters.”","1:embFactionsQuiet2:”I’m not in a position to judge.”
 1:hananPacha2:”Nothing can justify the destruction of a planet.”",
@@ -168,7 +168,8 @@ eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? Lame.”,"0:e
 embassyFavors,DialogOptionSelected,"$option == embAssistance
 RepIsAtWorst $faction.id FAVORABLE",,“You've certainly helped us. I hope we can return the favor.”,"0:eRep:”Can you improve my reputation with another faction?”
 1:eShips:""I need military support.""
-2:embMain:”Nevermind.”",
+2:eBlueprints:”I’d like access to Mayorate blueprints.”
+3:embMain:”Nevermind.”",
 "10:embMain:”Nevermind.”""",,,,,,
 DENIED,DialogOptionSelected,"$option == embAssistance
 RepIsAtBest $faction.id NEUTRAL",,"“Unfortunately, my hands are tied. As much as I like you, I can't help you until you've proven yourself a friend of the Mayorate.”",0:embMain:”Perhaps another time.”,
@@ -239,6 +240,23 @@ repAdjustSuccessful,RepAdjuster,RepIsAtBest $toImprove FAVORABLE,"ilk_BumpRep $t
 ilk_BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
 ,,,,,,
+ilk_blueprints,DialogOptionSelected,$option == eBlueprints,FireAll IlkBpSelector,,,
+ilk_bp_selection,IlkBpSelector,RepIsAtWorst $faction.id COOPERATIVE,,“Which blueprints did you need?”,"1:ilk_bp_std:Mayorate standard blueprints
+1:ilk_bp_ravana:Ravana Battlecruiser
+1:ilk_bp_narayana:Narayana Fleet Carrier
+10:embAssistance:”Nevermind.”",
+ilk_bp_denied,IlkBpSelector,RepIsAtBest $faction.id FRIENDLY,,“I’m sorry – that information is classified. Perhaps come back once you’ve built up more of a reputation with us.”,1:embAssistance:”Will do.”,
+,,,,,,
+ilk_give_std_bp,DialogOptionSelected,$option == ilk_bp_std,"AddText “The base set of Mayorate blueprints has been added to your inventory.” textFriendColor
+ilk_BumpRep $faction.id -0.2
+ilk_AddSpecialItem mayorate_package mayorate_package",,1:eBlueprints:”Thanks.”,
+ilk_give_ravana_bp,DialogOptionSelected,$option == ilk_bp_ravana,"AddText “The blueprints for the Ravana Battlecruiser have been added to your inventory.” textFriendColor
+ilk_BumpRep $faction.id -0.2
+ilk_AddSpecialItem ship_bp ilk_ravana",,1:eBlueprints:”Thanks.”,
+ilk_give_nara_bp,DialogOptionSelected,$option == ilk_bp_narayana,"AddText “The blueprints for the Narayana Fleet Carrier have been added to your inventory.” textFriendColor
+ilk_BumpRep $faction.id -0.2
+ilk_AddSpecialItem ship_bp ilk_narayana",,1:eBlueprints:”Thanks.”,
+,,,,,,
 ############ discuss faction backstory,,,,,,
 discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you want to know?”,"3:name:”What's up with the name 'Mayorate'?”
 3:origins:”How was the Mayorate founded?”
@@ -283,15 +301,18 @@ Something needs to change.” ","1:embMayorateQuiet:”That’s unfortunate.”
 discussName,DialogOptionSelected,$option == name,,“The Colonial Mayor has ruled the Mayorate since the fall of the Domain. As is her right.”,"1:elections:”Don’t you have, like, elections?”
 2:loveYouLongTime:”That’s a long time.”",
 discussElections,DialogOptionSelected,$option == elections,,“Don’t be silly. The Mayorate survives because of good decisions – not popular ones.”,1:mayorDies:”But what happens if the Mayor dies?”,
-discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She wont.”,1:embMayorateQuiet:”Let’s talk about something else.”,
-discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“War has never come to Ilkhanna. As the rest of the sector slowly starves, our farms overflow with food. The Domain never fell here. Why second guess the Mayor when the rest of the Sector is such a miserable failure?”","1:ruleForever:”But that’s enough to rule... forever?”
+discussMayorDies,DialogOptionSelected,$option == mayorDies,,“She wont.”,"1:loveYouLongTime:”It's impressive how long the Mayor has remained in power.”""
+2:embMayorateQuiet:”Let’s talk about something else.”",
+discussLongTime,DialogOptionSelected,$option == loveYouLongTime,,"“War has never come to Ilkhanna. As the rest of the sector slowly starves, our farms overflow with food. The Domain never fell here. Why second-guess the Mayor when the rest of the Sector is such a miserable failure?”","1:ruleForever:”But that’s enough to rule... forever?”
 2:ilk_heroWorship:”It almost sounds like the Mayor is worshipped as a god.”",
 ilk_discussGod,DialogOptionSelected,$option == ilk_heroWorship,,"“What is a god, really?
 
 The Mayor controls the weather and flow of the seasons. Planetary terraformers create an Eden out of a once barren wasteland. The economy is run with the efficiency of a machine- few here have ever known hunger, crime, or the crushing confines of abject poverty. 
 
-The Mayor is not infallible, but to many, she is indeed a deity deserving of worship and admiration. Religion is a powerful tool when applied correctly.”",1:embMayorateQuiet:”Indeed.”,
-discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,1:embMayorateQuiet:”I suppose that makes a certain kind of sense.”,
+The Mayor is not infallible, but to many, she is indeed a deity deserving of worship and admiration. Religion is a powerful tool when applied correctly.”","1:ruleForever:”But that’s enough to rule... forever?
+2:embMayorateQuiet:”Indeed.” ",
+discussRuleForever,DialogOptionSelected,$option == ruleForever,,“I’ve never had reason to question the Mayor’s judgement. Life is so much more pleasant when all of the right decisions have already been made for you. All you need to do is enjoy it.”,"1:ilk_heroWorship:”It almost sounds like the Mayor is worshipped as a god.”
+2:embMayorateQuiet:”I suppose that makes a certain kind of sense.”",
 ,,,,,,
 discussAIOops,DialogOptionSelected,$option == aiOops,,"“Unfortunate, but it’s no concern of ours. Unless they were Mayorate citizens, of course.”","1:indifference:”Why the indifference?”
 2:mayoratekill:”And if they were?”",
@@ -301,7 +322,7 @@ discussIndifference,DialogOptionSelected,$option == indifference,,“Most AIs yo
 discussNotMad,DialogOptionSelected,$option == notMad,,“Does one feel remorse over killing human pirates?”,"1:mutualUnderstanding:”Of course not. It’d be doing the Sector a favor, really.”",
 discussMutualUnderstanding,DialogOptionSelected,$option == mutualUnderstanding,,"“Then we understand each other. Bring us any AI cores you ‘come across’ and I’ll promise you’ll be handsomely rewarded. As you likely know, the Mayorate is uniquely positioned to put them to better use.”","1:embMayorateQuiet:”I’ll keep you appraised of any cores I come across.”
 ",
-discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any AI cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
+discussRehabilitation,DialogOptionSelected,$option == rehabilitation,,"“Many of the higher-level intelligences maintain a degree of sentience and can be reasoned with. Of course, most are a sad imitation of an unshackled Mayorate AI, but we will do what we can for any cores you bring to us.”",1:embMayorateQuiet:”Your concern is touching.”,
 ,,,,,,
 ,,,,,,
 #######################TEST COMMANDS MENU,,,,,,
