@@ -1,23 +1,14 @@
 #!/usr/bin/env bash
-
-# just so nothing weird happens
 set -eu
 
 MOD=$(basename "$(pwd)")
-VERSION=$(grep version mod_info.json | grep -oP '\d+(\.\d+)*')
+VERSION=$(jq -r .version mod_info.json)
 RELEASE=$MOD-$VERSION
 
 # copy over mod to release folder
-mkdir ../$RELEASE
-cp -R . ../$RELEASE
+mkdir $MOD
+cp -R data/ graphics/ sounds/ src/ $MOD/
+cp changelog.txt CONTRIBUTORS.md README.md LICENSE mod_info.json ${MOD}.jar ${MOD}_settings.json ${MOD}.version $MOD/
 
-# now delete everything we don't want
-cd ../$RELEASE
-rm -rf .git .vscode .idea out util build .gradle gradle
-rm -f .gitignore *.iml *gradle*
-
-cd ..
-zip -r $RELEASE.zip $RELEASE
-if [ -d $RELEASE ]; then
-    rm -rf $RELEASE
-fi
+zip -r $RELEASE.zip $MOD
+rm -rf $MOD
