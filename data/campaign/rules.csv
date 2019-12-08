@@ -245,15 +245,15 @@ ilk_bp_selection,IlkBpSelector,RepIsAtWorst $faction.id COOPERATIVE,,“Which bl
 1:ilk_bp_ravana:Ravana Battlecruiser
 1:ilk_bp_narayana:Narayana Fleet Carrier
 10:embAssistance:”Nevermind.”",
-ilk_bp_denied,IlkBpSelector,RepIsAtBest $faction.id FRIENDLY,,“I’m sorry – that information is classified. Perhaps come back once you’ve built up more of a reputation with us.”,1:embAssistance:”Will do.”,
+ilk_bp_denied,IlkBpSelector,RepIsAtBest $faction.id FRIENDLY,,“I can't help you any more than I have already. Perhaps come back once you’ve built up more of a reputation with us.”,1:embAssistance:”Will do.”,
 ,,,,,,
-ilk_give_std_bp,DialogOptionSelected,$option == ilk_bp_std,"AddText “The base set of Mayorate blueprints has been added to your inventory.” textFriendColor
+ilk_give_std_bp,DialogOptionSelected,$option == ilk_bp_std,"AddText ""The base set of Mayorate blueprints has been added to your inventory."" textFriendColor
 ilk_BumpRep $faction.id -0.2
 ilk_AddSpecialItem mayorate_package mayorate_package",,1:eBlueprints:”Thanks.”,
-ilk_give_ravana_bp,DialogOptionSelected,$option == ilk_bp_ravana,"AddText “The blueprints for the Ravana Battlecruiser have been added to your inventory.” textFriendColor
+ilk_give_ravana_bp,DialogOptionSelected,$option == ilk_bp_ravana,"AddText ""The blueprints for the Ravana Battlecruiser have been added to your inventory."" textFriendColor
 ilk_BumpRep $faction.id -0.2
 ilk_AddSpecialItem ship_bp ilk_ravana",,1:eBlueprints:”Thanks.”,
-ilk_give_nara_bp,DialogOptionSelected,$option == ilk_bp_narayana,"AddText “The blueprints for the Narayana Fleet Carrier have been added to your inventory.” textFriendColor
+ilk_give_nara_bp,DialogOptionSelected,$option == ilk_bp_narayana,"AddText ""The blueprints for the Narayana Fleet Carrier have been added to your inventory."" textFriendColor
 ilk_BumpRep $faction.id -0.2
 ilk_AddSpecialItem ship_bp ilk_narayana",,1:eBlueprints:”Thanks.”,
 ,,,,,,
