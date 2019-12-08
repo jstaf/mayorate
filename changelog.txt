@@ -34,6 +34,9 @@ Campaign:
   on their own and be stable/self-sufficient/non-disruptive.
 - Removed all custom market conditions - they didn't really add much to
   gameplay.
+- In addition to the reinforcements and diplomacy options, Mayorate officials
+  will provide the option to acquire Mayorate blueprints if your reputation with
+  the faction is cooperative or higher.
 
 Gameplay:
 - Variant polish: all variants now have the ship's primary weapon as weapon 
@@ -70,13 +73,13 @@ Gameplay:
   increased flight time and tracking ability to enable launching from side 
   missile mounts, and can fire multiple 8-shot salvos on a long cooldown.
 
-v0.10.3
+v0.10.3 (Blothorn)
 - Touch-ups to the Narayana sprite (thanks to King Alfonzo).
 - Fixed a typo in the Tiamat's cost (1200->12000).
 - Removed the Grav Driver (the modular weapon, not the Del Azarchel builtin).
 - Added some variants.
 
-v0.10.2
+v0.10.2 (Blothorn)
 - Balance updates:
   - Changed most costs to be closer in line with vanilla.
   - Changed a few weapon/wing tiers.
@@ -105,7 +108,7 @@ v0.10.2
 - Removed campaign music to avoid an incompatibility with Audio Plus (which
   already has the Mayorate tracks).
 
-v0.10.1
+v0.10.1 (Blothorn)
 Thanks to MesoTroniK, Phearlock, Avanatia, and TheWikiFish for feedback and
 advice.
 - Balance updates:
