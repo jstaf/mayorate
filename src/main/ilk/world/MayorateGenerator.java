@@ -17,7 +17,7 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
     initFactionRelationships(sector);
     new RashtGenerator().generate(sector);
 
-    // only do the following if not in exerelin corvus mode
+    // only do the following if not in nexerelin
     if (!MayorateModPlugin.getIsExerelin()) {
       // add forgiveness script to avoid rep decay on mayorate commission from being
       // hostile with pirates
@@ -28,28 +28,17 @@ public class MayorateGenerator implements SectorGeneratorPlugin {
   public static void initFactionRelationships(SectorAPI sector) {
     FactionAPI mayorate = sector.getFaction("mayorate");
 
-    FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
-    FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
-    FactionAPI pirates = sector.getFaction(Factions.PIRATES);
-    FactionAPI independent = sector.getFaction(Factions.INDEPENDENT);
-    FactionAPI league = sector.getFaction(Factions.PERSEAN);
-    FactionAPI kol = sector.getFaction(Factions.KOL);
-    FactionAPI church = sector.getFaction(Factions.LUDDIC_CHURCH);
-    FactionAPI path = sector.getFaction(Factions.LUDDIC_PATH);
-    FactionAPI player = sector.getFaction(Factions.PLAYER);
-    FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
+    sector.getFaction(Factions.PLAYER).setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
 
-    player.setRelationship(mayorate.getId(), RepLevel.NEUTRAL);
-
-    mayorate.setRelationship(path.getId(), RepLevel.VENGEFUL);
-    mayorate.setRelationship(church.getId(), RepLevel.HOSTILE);
-    mayorate.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
-    mayorate.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(diktat.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(kol.getId(), RepLevel.SUSPICIOUS);
-    mayorate.setRelationship(tritachyon.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(independent.getId(), RepLevel.NEUTRAL);
-    mayorate.setRelationship(league.getId(), RepLevel.HOSTILE);
+    mayorate.setRelationship(sector.getFaction(Factions.LUDDIC_PATH).getId(), RepLevel.VENGEFUL);
+    mayorate.setRelationship(sector.getFaction(Factions.LUDDIC_CHURCH).getId(), RepLevel.HOSTILE);
+    mayorate.setRelationship(sector.getFaction(Factions.HEGEMONY).getId(), RepLevel.HOSTILE);
+    mayorate.setRelationship(sector.getFaction(Factions.PIRATES).getId(), RepLevel.FAVORABLE);
+    mayorate.setRelationship(sector.getFaction(Factions.DIKTAT).getId(), RepLevel.NEUTRAL);
+    mayorate.setRelationship(sector.getFaction(Factions.KOL).getId(), RepLevel.SUSPICIOUS);
+    mayorate.setRelationship(sector.getFaction(Factions.TRITACHYON).getId(), RepLevel.NEUTRAL);
+    mayorate.setRelationship(sector.getFaction(Factions.INDEPENDENT).getId(), RepLevel.SUSPICIOUS);
+    mayorate.setRelationship(sector.getFaction(Factions.PERSEAN).getId(), RepLevel.HOSTILE);
 
     // mod factions
     mayorate.setRelationship("scy", RepLevel.HOSTILE);

@@ -65,7 +65,7 @@ This is a matter of trust, however. We cannot allow other interests to compete w
 CMSNTextUnsuited_mayorate,CMSNTextUnsuited,$faction.id == mayorate,,"""Perhaps, but we need to know we can trust you. Prove yourself a friend of the Mayorate and we can discuss this matter further.""",,
 CMSNTextSuitedPart1_mayorate,CMSNTextSuitedPart1,$faction.id == mayorate,,"""I am pleased to hear you say that. We have few friends, and even fewer allies.
 
-Accepting a commission has major implications, however. You’ll be hunted by those who fear us, and richly rewarded for paying them back in kind. But more importantly you’ll be working towards the continued survival of life in the Sector, human or otherwise. 
+Accepting a commission has major implications, however. You’ll be hunted by our enemies, and richly rewarded for paying them back in kind. But more importantly you’ll be working towards the continued survival of life in the Sector, human or otherwise. 
 
 Although it is technically possible to resign a Mayorate commission, few have ever done so. We reward our friends well – choosing to ally yourself with the Mayorate ensures access to a generous stipend and unique benefits, like our diplomats and naval reserves.”",,
 CMSNTextSuitedPart2_mayorate,CMSNTextSuitedPart2,$faction.id == mayorate,,"""Does this interest you? Can I count you as one of our own?""",,
@@ -162,7 +162,7 @@ eBlackrock,DialogOptionSelected,$option == eBrdy,,“Mmm... that Nevermore... so
 eExigency,DialogOptionSelected,$option == eExi,,“Needs more blue and missiles.”,0:eMods:”Hmmm... I'm pretty sure they don't.”,
 eShadow,DialogOptionSelected,$option == eSHI ,,“They took our intended spot on the sector map. We still haven't entirely forgiven them for that.”,"0:eMods:”First world problems, amirite?”",
 eTemplar,DialogOptionSelected,$option == eTem,,“Cowards and deserters. No amount of tech can hide the fact that they’ve sold out their own kind.”,0:eMods:”The struggle is real.”,
-eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? I liked them better in Skyrim.”,"0:eMods:”Yeah, I liked them better in Skyrim.”",
+eImperium,DialogOptionSelected,$option == eIm,,“Romans in space? Lame.”,"0:eMods:”Yeah, I liked them better in Skyrim.”",
 ,,,,,,
 #################### Ask for help,,,,,,
 embassyFavors,DialogOptionSelected,"$option == embAssistance
@@ -240,27 +240,25 @@ ilk_BumpRep $faction.id -0.1",,1:eRep:”Thanks.”,
 repTooHigh,RepAdjuster,RepIsAtWorst $toImprove WELCOMING,AddText “Rep with $toImprove is too high for diplomacy.” textEnemyColor,,"1:eRep:”Well, it was worth a try...”",
 ,,,,,,
 ############ discuss faction backstory,,,,,,
-discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you want to know?”,"3:origins:”How was the Mayorate founded?”
+discussMayorate,DialogOptionSelected,$option == embMayorate,,“What did you want to know?”,"3:name:”What's up with the name 'Mayorate'?”
+3:origins:”How was the Mayorate founded?”
 3:goals:”What are your long term goals in the sector?”
-3:name:”What's up with the name 'Mayorate'?”
 3:aiOops:”So I, uh, might have killed a few AIs earlier...”
 10:embMain:”Nevermind.”",
-discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was there anything else?”,"3:origins:”How was the Mayorate founded?”
+discussMayorateQuiet,DialogOptionSelected,$option == embMayorateQuiet,,“Was there anything else?”,"3:name:”What's up with the name 'Mayorate'?”
+3:origins:”How was the Mayorate founded?”
 3:goals:”What are your long term goals in the sector?”
-3:name:”What's up with the name 'Mayorate'?”
 3:aiOops:”So I, uh, might have killed a few AIs earlier...”
 10:embMain:”Nevermind.”",
 ,,,,,,
 ,,,,,,
-discussOrigins,DialogOptionSelected,$option == origins,,"“As you likely already know, the sector descended into anarchy almost immediately following collapse of the gate network. Although most of the initial fighting took place in systems far from Ilkhanna, the Domain authorities in-system repulsed an invasion by several rogue elements which would later become the Hegemony. 
-
-This victory came at great cost, however. Along with near-total decimation of the defending fleet, many key colonial leaders had been lost in the assault. The colony began to spiral into disarray.“",1:ilk_enterMayor:”So what happened?”,
+discussOrigins,DialogOptionSelected,$option == origins,,"“As you likely already know, the sector descended into anarchy almost immediately following collapse of the gate network. Although most of the initial fighting took place in systems far from Ilkhanna, many key colonial leaders were lost following a suprise raid on the planet. The colony began to spiral into disarray.“",1:ilk_enterMayor:”So what happened?”,
 discussCollapse1,DialogOptionSelected,$option == ilk_enterMayor,,"“No one could quite explain it, but weeks after the assault, the colonial mayor emerged from a coma that should have been fatal. It was a miraculous recovery. 
 
 In a televised address, the mayor announced that she would be assuming control of the colony, as the highest-ranking Domain official still present in-system. No one questioned it – order had been restored, and the colony’s descent into chaos was on hold, at least for the moment.”",1:ilk_enterMayor2:“That sounds a little too good to be true.”,
-discussCollapse2,DialogOptionSelected,$option == ilk_enterMayor2,,"“You would be correct. The real mayor never survived her injuries. The new ‘Mayor’ never appeared publicly, and always spoke through intermediaries. Though anyone could speak with her, no one had actually seen her in the flesh since the attack.
+discussCollapse2,DialogOptionSelected,$option == ilk_enterMayor2,,"“You would be correct. The real mayor never survived her injuries. The new ‘Mayor’ never appeared publicly, and outside of a few trusted intermediaries, no one had actually seen her in the flesh since the attack.
 
-It had all been an elaborate fabrication – a near-perfect imitation of the real thing. Ilkhanna was now under the rule of an alpha-level artificial intelligence, the very same entity assigned to manage the planetary terraforming array.”","1:ilk_youCantHandleTheTruth:”What happened when the truth got out?”
+It had all been an elaborate fabrication. Ilkhanna was now under the rule of an alpha-level artificial intelligence, the very same entity assigned to manage the planetary terraforming array.”","1:ilk_youCantHandleTheTruth:”What happened when the truth got out?”
 2:ilk_stalemate:”How did the Mayorate remain independent?”",
 discussCollapse3,DialogOptionSelected,$option == ilk_youCantHandleTheTruth,,"“The reaction was surprisingly muted. The Mayor had saved the colony from the brink of destruction. Did it matter if the ruler wasn’t human if she had saved the planet? If she was going to turn on the people, wouldn’t she have done that already? Few questioned it after years of the status quo. Any dissidents were quietly suppressed.”","1:ilk_stalemate:”How did the Mayorate remain independent?”
 2:embMain:”Interesting.”",
