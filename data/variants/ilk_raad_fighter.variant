@@ -10,7 +10,7 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "ilk_ppc",
+        "WS0001": "ilk_ppc"
       }
     }
   ]
