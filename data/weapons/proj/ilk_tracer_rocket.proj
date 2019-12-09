@@ -21,10 +21,10 @@
 	],
 	"explosionRadius": 50,
 	"engineSpec": {
-		"turnAcc": 170,
-		"turnRate": 100,
+		"turnAcc": 160,
+		"turnRate": 90,
 		"acc": 1000,
-		"dec": 600
+		"dec": 700
 	},
 	"flameoutTime": 0.5,
 	"noEngineGlowTime": 0,
