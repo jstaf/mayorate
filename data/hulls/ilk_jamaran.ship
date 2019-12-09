@@ -150,8 +150,10 @@
       "arc": 360,
       "id": "LB 1",
       "locations": [
-        46,
-        -0
+        48,
+        4,
+        42,
+        -4
       ],
       "mount": "HIDDEN",
       "size": "LARGE",
