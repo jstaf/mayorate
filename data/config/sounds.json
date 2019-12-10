@@ -27,6 +27,18 @@
 				"volume": 1.0
 			}
 		],
+		"music_campaign_hyperspace": [
+			{
+				"file": "campaign_music_part_2_v28.ogg",
+				"source": "sounds/music/music.bin",
+				"volume": 0.6
+			},
+			{
+				"file": "expanse.ogg",
+				"source": "sounds/ilk/music/",
+				"volume": 0.52
+			}
+		],
 		"mayorate_neutral": [
 			{
 				"file": "mayorate_neutral.ogg",
