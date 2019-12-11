@@ -37,6 +37,9 @@ Campaign:
 - In addition to the reinforcements and diplomacy options, Mayorate officials
   will provide the option to acquire Mayorate blueprints if your reputation with
   the faction is cooperative or higher.
+- Added a portrait to the player selection screen and Mayorate inventory. 
+  Mayorate commanders and base personnel may also occasssionally use AI 
+  portraits.
 
 Gameplay:
 - Variant polish: all variants now have the ship's primary weapon as weapon 
@@ -64,12 +67,14 @@ Gameplay:
   is an aethetic tweak only, but makes these ships engines look a lot nicer).
 - Removed Phoenix II rocket launcher. Nothing uses it and it was pretty meh.
 - Removed built-in "pulse gun" on the Tiamat and replaced it with a medium 
-  hybrid mount. This makes it a bit more distinct from the Lilith.
+  hybrid mount. This makes it a bit more distinct from the Lilith (only one 
+  Mayorate frigate now has a built-in spinal mount gun).
 - Belial PPC spread tightened, projectile speed increased, number of projectiles
-  decreased. Belial sfx changed to old pulse gun sfx.
-- Added Tracer SRM8 and Tracer MRM8, which are small and medium mount versions 
+  decreased. Belial sfx changed to old pulse gun sfx. Increasingly lethal over 
+  the old version.
+- Added Tracer SRM8 and Tracer SRM40, which are small and medium mount versions 
   of the Angha's rocket launcher. The SRM8 is a carbon copy of the Angha
-  rocket launcher with 8 shots (very deadly, low ammo capacity). The MRM8 has 
+  rocket launcher with 8 shots (very deadly, low ammo capacity). The SRM40 has 
   increased flight time and tracking ability to enable launching from side 
   missile mounts, and can fire multiple 8-shot salvos on a long cooldown.
 

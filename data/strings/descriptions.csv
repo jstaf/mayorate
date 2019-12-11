@@ -58,4 +58,4 @@ ilk_shotgun,WEAPON,The Belial PPC launches a formidable spread of superheated pl
 ilk_thermal_lance,WEAPON,A terrifying beam weapon that deals increasingly high damage at high flux.,Assault,,
 ilk_windstalker,WEAPON,"Although relatively easy to shoot down, the Windstalker's magazine size is a major advantage in longer engagements.",Close Support,,
 ilk_tracer,WEAPON,"A semi-guided rocket designed to be used as an anti-frigate torpedo. Although ineffective against heavy armor, it will cut through lighter craft with ease.",Finisher,,
-ilk_tracer_m,WEAPON,"Fires a salvo of anti-frigate rockets, with improved range relative to the SRM8 variant. Although ineffective against heavy armor, it will cut through lighter craft with ease.",Finisher,,
+ilk_tracer_m,WEAPON,"Fires a salvo of anti-frigate rockets, with improved range and ammo capacity relative to the SRM8 variant. Although ineffective against heavy armor, it will cut through lighter craft with ease.",Finisher,,
