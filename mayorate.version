@@ -1,10 +1,11 @@
 {
-    "masterVersionFile":"https://raw.githubusercontent.com/jstaf/mayorate/master/mayorate.version",
-    "modName":"The Mayorate",
-    "modVersion":{
+    "masterVersionFile": "https://raw.githubusercontent.com/jstaf/mayorate/master/mayorate.version",
+    "modName": "The Mayorate",
+    "modThreadId": 7372,
+    "modVersion": {
         "major":1,
         "minor":0,
         "patch":0
     },
-    "starsectorVersion":"0.9.1a"
+    "starsectorVersion": "0.9.1a"
 }
