@@ -12,11 +12,6 @@
 				"volume": 0.6
 			},
 			{
-				"file": "expanse.ogg",
-				"source": "sounds/ilk/music/",
-				"volume": 0.52
-			},
-			{
 				"file": "nebula.ogg",
 				"source": "sounds/ilk/music/",
 				"volume": 0.5
