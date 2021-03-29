@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
@@ -19,8 +20,8 @@ import org.lwjgl.util.vector.Vector2f;
 public class NukeOnHitEffect implements OnHitEffectPlugin {
 
   @Override
-  public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit,
-      CombatEngineAPI engine) {
+  public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, 
+      ApplyDamageResultAPI result, CombatEngineAPI engine) {
 
     Global.getCombatEngine().spawnExplosion(point, new Vector2f(), new Color(255, 121, 117, 255), 500f, 0.5f);
     Global.getCombatEngine().addHitParticle(point, new Vector2f(), 400f, 1f, 2f, new Color(255, 255, 255, 200));
