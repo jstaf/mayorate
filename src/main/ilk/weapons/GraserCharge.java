@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 
 import org.lwjgl.util.vector.Vector2f;
 

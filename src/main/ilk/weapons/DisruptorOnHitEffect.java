@@ -9,6 +9,7 @@ import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -24,7 +25,7 @@ public class DisruptorOnHitEffect implements OnHitEffectPlugin {
 
   @Override
   public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit,
-      CombatEngineAPI engine) {
+      ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 
     for (int i = 1; i < 5; i++) {
       Global.getCombatEngine().spawnEmpArc(projectile.getSource(), point, target, target, DamageType.ENERGY, 0f, 50f,

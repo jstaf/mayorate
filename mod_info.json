@@ -1,10 +1,12 @@
 {
-  "id":"mayorate",
-	"name":"The Mayorate",
-	"author":"kazi",
-	"version":"1.0.0",
-	"description":"<< Requires LazyLib and GraphicsLib >> The Mayorate adds... the Mayorate (and all of their associated stuff).",
-    "gameVersion":"0.9.1a",
-	"modPlugin":"ilk.MayorateModPlugin",
-	"jars": ["mayorate.jar"]
+	"id": "mayorate",
+	"name": "The Mayorate",
+	"author": "kazi",
+	"version": "1.0.0",
+	"description": "<< Requires LazyLib and GraphicsLib >> The Mayorate adds... the Mayorate (and all of their associated stuff).",
+	"gameVersion": "0.95a-RC10",
+	"modPlugin": "ilk.MayorateModPlugin",
+	"jars": [
+		"mayorate.jar"
+	]
 }

@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 
 import org.lazywizard.lazylib.FastTrig;
 import org.lwjgl.util.vector.Vector2f;
@@ -18,7 +19,7 @@ public class IonBombEffect implements OnHitEffectPlugin {
 
   @Override
   public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit,
-      CombatEngineAPI engine) {
+      ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
     int numberOfExplosions = 40; // More for smoother ring, fewer for better performance
     float radiusExpansionRate = 500f; // In pixels per second (I think)
     float explosionRadius = 40f; // In pixels
