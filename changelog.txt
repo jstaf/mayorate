@@ -1,5 +1,14 @@
 Mayorate mod changelog
 
+v1.1.0
+
+General changes:
+- Starsector 0.95a compatibility.
+
+Gameplay:
+- Disruptors use a custom autofire AI again. (Prevents AI from wasting these on 
+  fighters.)
+
 v1.0.0
 
 General changes: 
