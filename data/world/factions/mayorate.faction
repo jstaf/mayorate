@@ -190,9 +190,9 @@
 		"autofitRandomizeProbability": 0.1,
 		"commanderSkillsShuffleProbability": 0,
 		"commanderSkills": [
-			"officer_management",
-			"coordinated_maneuvers",
+			"crew_training",
 			"fighter_doctrine",
+			"carrier_group",
 			"impact_mitigation",
 			"electronic_warfare"
 		]
