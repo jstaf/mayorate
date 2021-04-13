@@ -34,6 +34,13 @@
 				"volume": 0.52
 			}
 		],
+		"mayorate_hostile": [
+			{
+				"file": "mayorate_hostile.ogg",
+				"source": "sounds/ilk/music/",
+				"volume": 1.15
+			}
+		],
 		"mayorate_neutral": [
 			{
 				"file": "mayorate_neutral.ogg",

@@ -4,6 +4,8 @@ v1.1.0
 
 General changes:
 - Starsector 0.95a compatibility.
+- Economy rebalance for 0.95.
+- Added a new hostile market/encounter music track for the Mayorate.
 
 Gameplay:
 - Disruptors use a custom autofire AI again. (Prevents AI from wasting these on 
