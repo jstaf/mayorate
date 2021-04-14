@@ -47,9 +47,10 @@
                 "farming",
                 [
                     "orbitalworks",
-                    "corrupted_nanoforge"
+                    "corrupted_nanoforge",
+                    "beta_core"
                 ],
-                "commerce",
+                "lightindustry",
                 "heavybatteries",
                 "starfortress"
             ]
@@ -72,7 +73,8 @@
                 "patrolhq",
                 "spaceport",
                 "mining",
-                "fuelprod"
+                "fuelprod",
+                "waystation"
             ]
         },
         {
