@@ -202,7 +202,7 @@
 	],
 	"ilk_graser_fire": [
 		{
-			"file": "sounds/ilk/fx/graser2.ogg",
+			"file": "sounds/ilk/fx/graser.ogg",
 			"pitch": 1.0,
 			"volume": 1.0
 		}
