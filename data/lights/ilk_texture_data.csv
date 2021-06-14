@@ -1,5 +1,4 @@
 id,type,frame,magnitude,map,category,path
-ilk_cimeterre,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_cimeterre_NRM.png
 ilk_lilith,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_lilith_NRM.png
 ilk_ravana,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_ravana_NRM.png
 ilk_del_azarchel,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_del_azarchel_NRM.png
@@ -13,7 +12,6 @@ ilk_safir_converted,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_safir_con
 ilk_tiamat,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_tiamat_NRM.png
 ilk_narayana,ship,,1,normal,shipNormal,graphics/ilk/normals/ilk_narayana_NRM.png
 ,,,,,,
-ilk_cimeterre,ship,,,material,shipMaterial,graphics/ilk/materials/ilk_cimeterre_MAT.png
 ilk_lilith,ship,,,material,shipMaterial,graphics/ilk/materials/ilk_lilith_MAT.png
 ilk_ravana,ship,,,material,shipMaterial,graphics/ilk/materials/ilk_ravana_MAT_alt.png
 ilk_del_azarchel,ship,,,material,shipMaterial,graphics/ilk/materials/ilk_del_azarchel_MAT.png
