@@ -12,7 +12,7 @@ fi
 if [ ! -d LazyLib ]; then
 	# lazylib
     wget https://github.com/LazyWizard/lazylib/releases/download/2.7/LazyLib.2.7.zip
-	unzip LazyLib*.zip
+  	unzip LazyLib*.zip
 fi
 
 if [ ! -d Nexerelin ]; then
