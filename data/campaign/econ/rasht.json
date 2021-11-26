@@ -43,12 +43,14 @@
             "industries": [
                 "population",
                 "highcommand",
-                "spaceport",
+                "megaport",
                 "farming",
                 [
                     "orbitalworks",
-                    "corrupted_nanoforge"
+                    "corrupted_nanoforge",
+                    "beta_core"
                 ],
+                "lightindustry",
                 "heavybatteries",
                 "starfortress"
             ]
@@ -58,7 +60,7 @@
                 "sindral"
             ],
             "faction": "luddic_path",
-            "size": 3,
+            "size": 4,
             "startingConditions": [
                 "no_atmosphere",
                 "ice",
@@ -71,7 +73,8 @@
                 "patrolhq",
                 "spaceport",
                 "mining",
-                "fuelprod"
+                "fuelprod",
+                "waystation"
             ]
         },
         {
@@ -83,7 +86,7 @@
             "startingConditions": [
                 "dense_atmosphere",
                 "high_gravity",
-                "volatiles_plentiful",
+                "volatiles_diffuse",
                 "organics_trace",
                 "population_4"
             ],
@@ -91,7 +94,8 @@
                 "population",
                 "battlestation_mid",
                 "mining",
-                "spaceport"
+                "spaceport",
+                "waystation"
             ]
         }
     ]

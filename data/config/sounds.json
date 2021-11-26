@@ -34,6 +34,13 @@
 				"volume": 0.52
 			}
 		],
+		"mayorate_hostile": [
+			{
+				"file": "mayorate_hostile.ogg",
+				"source": "sounds/ilk/music/",
+				"volume": 0.5
+			}
+		],
 		"mayorate_neutral": [
 			{
 				"file": "mayorate_neutral.ogg",
@@ -196,8 +203,8 @@
 	"ilk_graser_fire": [
 		{
 			"file": "sounds/ilk/fx/graser.ogg",
-			"pitch": 1,
-			"volume": 1
+			"pitch": 1.0,
+			"volume": 1.0
 		}
 	],
 	"ilk_light_graser_fire": [

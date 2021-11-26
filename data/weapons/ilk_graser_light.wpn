@@ -59,6 +59,6 @@
 	],
 	"textureScrollSpeed": 292,
 	"width": 10,
-	"fireSoundTwo": "ilk_light_graser_fire",
+	"fireSoundOne": "ilk_light_graser_fire",
 	"beamEffect": "ilk.weapons.GraserCharge"
 }

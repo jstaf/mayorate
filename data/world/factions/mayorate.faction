@@ -80,10 +80,10 @@
 	"music": {
 		"theme": "mayorate_friendly",
 		"market_neutral": "mayorate_neutral",
-		"market_hostile": "mayorate_neutral",
+		"market_hostile": "mayorate_hostile",
 		"market_friendly": "mayorate_friendly",
 		"encounter_neutral": "mayorate_neutral",
-		"encounter_hostile": "mayorate_neutral",
+		"encounter_hostile": "mayorate_hostile",
 		"encounter_friendly": "mayorate_friendly"
 	},
 	"variantOverrides": {},
@@ -190,9 +190,9 @@
 		"autofitRandomizeProbability": 0.1,
 		"commanderSkillsShuffleProbability": 0,
 		"commanderSkills": [
-			"officer_management",
-			"coordinated_maneuvers",
+			"crew_training",
 			"fighter_doctrine",
+			"carrier_group",
 			"impact_mitigation",
 			"electronic_warfare"
 		]

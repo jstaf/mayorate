@@ -8,13 +8,33 @@
 	"turretGlowSprite": "graphics/ilk/weapons/thermal_lance_glow.png",
 	"hardpointSprite": "",
 	"hardpointGlowSprite": "graphics/ilk/weapons/thermal_lance_glow.png",
-	"turretOffsets": [4, 0],
-	"turretAngleOffsets": [0],
-	"hardpointOffsets": [4, 0],
-	"hardpointAngleOffsets": [0],
+	"turretOffsets": [
+		4,
+		0
+	],
+	"turretAngleOffsets": [
+		0
+	],
+	"hardpointOffsets": [
+		4,
+		0
+	],
+	"hardpointAngleOffsets": [
+		0
+	],
 	"textureType": "SMOOTH",
-	"fringeColor": [235, 55, 0, 200],
-	"coreColor": [255, 255, 255, 255],
+	"fringeColor": [
+		227,
+		26,
+		3,
+		200
+	],
+	"coreColor": [
+		255,
+		255,
+		255,
+		255
+	],
 	"textureScrollSpeed": 128,
 	"width": 30,
 	"animationType": "GLOW_AND_FLASH",
@@ -25,9 +45,19 @@
 		"particleSizeRange": 20.0,
 		"particleDuration": 0.05,
 		"particleCount": 16,
-		"particleColor": [235, 55, 0, 200]
+		"particleColor": [
+			227,
+			26,
+			3,
+			200
+		]
 	},
-	"glowColor": [235, 55, 0, 205],
+	"glowColor": [
+		227,
+		26,
+		3,
+		100
+	],
 	"interruptibleBurst": true,
 	"fireSoundOne": "ilk_thermal_lance_short",
 	"fireSoundTwo": "ilk_thermal_lance_loop",

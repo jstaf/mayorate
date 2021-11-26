@@ -8,10 +8,20 @@
 	"turretGlowSprite": "graphics/ilk/weapons/graser_pd_glow.png",
 	"hardpointSprite": "graphics/ilk/weapons/graser_pd_glow.png",
 	"hardpointGlowSprite": "",
-	"turretOffsets": [2, 0],
-	"turretAngleOffsets": [0],
-	"hardpointOffsets": [2, 0],
-	"hardpointAngleOffsets": [0],
+	"turretOffsets": [
+		2,
+		0
+	],
+	"turretAngleOffsets": [
+		0
+	],
+	"hardpointOffsets": [
+		2,
+		0
+	],
+	"hardpointAngleOffsets": [
+		0
+	],
 	"barrelMode": "ALTERNATING",
 	"animationType": "GLOW_AND_FLASH",
 	"muzzleFlashSpec": {
@@ -21,14 +31,34 @@
 		"particleSizeRange": 20.0,
 		"particleDuration": 0.05,
 		"particleCount": 16,
-		"particleColor": [255, 125, 75, 255]
+		"particleColor": [
+			255,
+			125,
+			75,
+			255
+		]
 	},
-	"glowColor": [193, 42, 237, 200],
+	"glowColor": [
+		193,
+		42,
+		237,
+		200
+	],
 	"textureType": "SMOOTH",
-	"fringeColor": [224, 184, 225, 175],
-	"coreColor": [237, 196, 249, 255],
+	"fringeColor": [
+		224,
+		184,
+		225,
+		175
+	],
+	"coreColor": [
+		237,
+		196,
+		249,
+		255
+	],
 	"textureScrollSpeed": 292,
 	"width": 9,
-	"fireSoundTwo": "ilk_graser_pd_fire",
+	"fireSoundOne": "ilk_graser_pd_fire",
 	"beamEffect": "ilk.weapons.GraserCharge"
 }

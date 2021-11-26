@@ -23,6 +23,7 @@ import ilk.shipsystems.ai.PhaseLeapAI;
 import ilk.util.DamageUtils;
 import ilk.weapons.ai.NukeAI;
 import ilk.weapons.ai.ThermalLanceAI;
+import ilk.weapons.ai.DisruptorAI;
 import ilk.world.MayorateGenerator;
 import ilk.world.utils.CommissionEffects;
 import ilk.world.utils.PathSpawnPoint;
@@ -82,6 +83,10 @@ public class MayorateModPlugin extends BaseModPlugin {
     switch (weapon.getId()) {
     case "ilk_thermal_lance":
       return new PluginPick<AutofireAIPlugin>(new ThermalLanceAI(weapon), PickPriority.MOD_SET);
+    case "ilk_disruptor":
+      return new PluginPick<AutofireAIPlugin>(new DisruptorAI(weapon), PickPriority.MOD_SET);
+    case "ilk_disruptor_heavy":
+      return new PluginPick<AutofireAIPlugin>(new DisruptorAI(weapon), PickPriority.MOD_SET);
     default:
       return null;
     }

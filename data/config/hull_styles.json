@@ -1,25 +1,75 @@
 {
-	"ilk_hull":{
-		"hyperspaceJitterColor":[255,81,75,170],
-		"baseCampaignExplosionColor":[255,145,75,255],
-		"baseCombatExplosionColor":[255,145,75,255],
-		"fighterRepairFlickerColor":[255,200,75,255],
-		"fighterChipIconColor":[255,200,150,255],
-		"weaponDisabledExplosionColor":[255,145,75,255],
-		"shieldRingColor":[255,210,156,255],
-		"shieldInnerColor":[182,149,111,45],
-		"fluxVentCoreColor":[166,50,91,75],
-		"fluxVentFringeColor":[138,25,25,50],
-		"engineLoopSet":"engine_loop",
-		"engineAccelerateSet":"engine_accelerate",
-		"empLoopSet":"emp_loop",
-		"fluxLoopSet":"flux_loop",
-		"ventFluxSet":"vent_flux",
-		"shieldBurnoutSet":"shield_burnout",
-		"shieldLowerSet":"shield_lower",
-		"shieldRaiseSet":"shield_raise",
-		"explosionShipSet":"explosion_ship",
-		"damageDecalSheet":"graphics/damage/damage_decal_sheet_base.png",
-		"damageDecalGlowSheet":"graphics/damage/damage_decal_sheet_glow.png"
+	"ilk_hull": {
+		"hyperspaceJitterColor": [
+			255,
+			81,
+			75,
+			170
+		],
+		"baseCampaignExplosionColor": [
+			255,
+			145,
+			75,
+			255
+		],
+		"baseCombatExplosionColor": [
+			255,
+			145,
+			75,
+			255
+		],
+		"fighterRepairFlickerColor": [
+			255,
+			200,
+			75,
+			255
+		],
+		"fighterChipIconColor": [
+			255,
+			200,
+			150,
+			255
+		],
+		"weaponDisabledExplosionColor": [
+			255,
+			145,
+			75,
+			255
+		],
+		"shieldRingColor": [
+			255,
+			210,
+			156,
+			255
+		],
+		"shieldInnerColor": [
+			182,
+			149,
+			111,
+			45
+		],
+		"fluxVentCoreColor": [
+			166,
+			50,
+			91,
+			150
+		],
+		"fluxVentFringeColor": [
+			138,
+			25,
+			25,
+			100
+		],
+		"engineLoopSet": "engine_loop",
+		"engineAccelerateSet": "engine_accelerate",
+		"empLoopSet": "emp_loop",
+		"fluxLoopSet": "flux_loop",
+		"ventFluxSet": "vent_flux",
+		"shieldBurnoutSet": "shield_burnout",
+		"shieldLowerSet": "shield_lower",
+		"shieldRaiseSet": "shield_raise",
+		"explosionShipSet": "explosion_ship",
+		"damageDecalSheet": "graphics/damage/damage_decal_sheet_base.png",
+		"damageDecalGlowSheet": "graphics/damage/damage_decal_sheet_glow.png"
 	}
 }

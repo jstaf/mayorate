@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/jstaf/mayorate.svg?branch=master)](https://travis-ci.org/jstaf/mayorate)
-
 mayorate
 ===============================
 
@@ -9,15 +7,11 @@ sfx, and shaders. To install, simply extract and copy to your /mods subdirectory
 yourself). Requires ShaderLib and LazyLib also to be present. It's generally
 safest to use the most up-to-date versions of those libraries if possible.
 
-This mod adds a lot of cutting-edge technical features not present in the base
-game. This includes, but is not limited to fancy stuff like dynamic lighting,
-normal/materials mapping, music, true campaign-level scripting, and AOE weapons.
-
 Submit bug reports either here in Github issues or to the forum thread (or PM
 me) and I'll do my best to iron them out. Feel free to submit a pull request if
 you have something clever to add.
 
-![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_narayana.png)
+ ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_cimeterre.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_narayana.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_lilith.png)
 
 ## Compiling the mod yourself
 
