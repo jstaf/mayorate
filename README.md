@@ -17,7 +17,7 @@ Submit bug reports either here in Github issues or to the forum thread (or PM
 me) and I'll do my best to iron them out. Feel free to submit a pull request if
 you have something clever to add.
 
-![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_narayana.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_cimeterre.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_lilith.png)
+ ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_cimeterre.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_narayana.png) ![](https://raw.githubusercontent.com/jstaf/mayorate/master/graphics/ilk/ships/ilk_lilith.png)
 
 ## Compiling the mod yourself
 
