@@ -8,6 +8,11 @@ v1.1.0
 - Fixed a bug with Graser sound effects. They should sound substantially more beefy now.
 - Redid the Lilith sprite. The old one was 7 (!!!) years old. I didn't know what I was
   doing then. It's debatable if I know what I'm doing now. Either way it's an improvement.
+- Added a new Cimeterre sprite in the same style as the new Lilith sprite. Looks waaaay 
+  better.
+- Tornado AM projectiles have been substantially buffed - they are much more likely to 
+  reach their targets now (but can still be shot down by good PD).
+- Grav Driver deals EMP damage again. It no longer hits like a wet rag as a result.
 - Disruptors use a custom autofire AI again. (Prevents AI from wasting these on 
   fighters.)
 
