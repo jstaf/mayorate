@@ -4,8 +4,8 @@
     "modThreadId": 7372,
     "modVersion": {
         "major":1,
-        "minor":0,
+        "minor":1,
         "patch":0
     },
-    "starsectorVersion": "0.9.1a"
+    "starsectorVersion": "0.95a-RC15"
 }
