@@ -4,7 +4,7 @@
 	"author": "kazi",
 	"version": "1.1.0",
 	"description": "The Mayorate adds... the Mayorate (and all of their associated stuff).",
-	"gameVersion": "0.95a-RC15",
+	"gameVersion": "0.95.1a-RC6",
 	"modPlugin": "ilk.MayorateModPlugin",
 	"jars": [
 		"mayorate.jar"
