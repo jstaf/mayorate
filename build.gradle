@@ -51,17 +51,17 @@ clean {
 
 // compile time dependencies for most mods
 dependencies {
-    compile files('../GraphicsLib/jars/Graphics.jar')
-    compile files('../LazyLib/jars/LazyLib.jar')
-    compile files('../Nexerelin/jars/ExerelinCore.jar')
+    implementation files('../GraphicsLib/jars/Graphics.jar')
+    implementation files('../LazyLib/jars/LazyLib.jar')
+    implementation files('../Nexerelin/jars/ExerelinCore.jar')
     // everything in starsector main folder
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        compile fileTree(dir: '../../starsector-core/', include: '*.jar')
+        implementation fileTree(dir: '../../starsector-core/', include: ['*.jar'])
     } else {
-        compile fileTree(dir: '../../', include: '*.jar')
+        implementation fileTree(dir: '../../', include: ['*.jar'])
     }
 
     // Test only
-    testCompile 'junit:junit:4.12'
-    testCompile 'com.google.truth:truth:0.30'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'com.google.truth:truth:0.30'
 }
