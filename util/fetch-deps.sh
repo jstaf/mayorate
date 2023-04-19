@@ -19,3 +19,8 @@ if [ ! -d Nexerelin ]; then
     wget https://github.com/Histidine91/Nexerelin/releases/download/v0.10.6d/Nexerelin_0.10.6d.zip
     unzip Nexerelin*.zip
 fi
+
+if [ ! -d MagicLib ]; then
+    wget https://github.com/MagicLibStarsector/MagicLib/releases/download/0.46.1-rc03/MagicLib-0.46.1-rc03.zip
+    unzip MagicLib*.zip
+fi
