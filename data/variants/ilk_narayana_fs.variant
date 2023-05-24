@@ -1,22 +1,23 @@
 {
+  "variantId": "ilk_narayana_fs",
+  "hullId": "ilk_narayana",
   "displayName": "Fire Support",
+  "goalVariant": true,
   "fluxCapacitors": 4,
   "fluxVents": 20,
-  "goalVariant": true,
-  "hullId": "ilk_narayana",
+  "quality": 0,
+  "permaMods": [],
   "hullMods": [
     "targetingunit",
     "missleracks"
   ],
-  "modules": [],
-  "permaMods": [],
-  "quality": 0,
-  "variantId": "ilk_narayana_fs",
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
-      "weapons": {}
+      "weapons": {
+        "WS0019": "ilk_heavy_lance"
+      }
     },
     {
       "autofire": false,
@@ -60,6 +61,7 @@
       "weapons": {}
     }
   ],
+  "modules": [],
   "wings": [
     "ilk_hk_wing",
     "ilk_angha_wing",
