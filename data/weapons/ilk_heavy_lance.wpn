@@ -1,0 +1,66 @@
+{
+	"id": "ilk_heavy_lance",
+	"specClass": "beam",
+	"type": "ENERGY",
+	"size": "LARGE",
+	"displayArcRadius": 800,
+	"turretSprite": "",
+	"turretGlowSprite": "",
+	"hardpointSprite": "",
+	"hardpointGlowSprite": "",
+	"turretOffsets": [
+		4,
+		0
+	],
+	"turretAngleOffsets": [
+		0
+	],
+	"hardpointOffsets": [
+		4,
+		0
+	],
+	"hardpointAngleOffsets": [
+		0
+	],
+	"textureType": "SMOOTH",
+	"fringeColor": [
+		235,
+		55,
+		0,
+		200
+	],
+	"coreColor": [
+		255,
+		255,
+		255,
+		255
+	],
+	"textureScrollSpeed": 128,
+	"width": 40,
+	"animationType": "GLOW_AND_FLASH",
+	"muzzleFlashSpec": {
+		"length": 55.0,
+		"spread": 10.0,
+		"particleSizeMin": 4.0,
+		"particleSizeRange": 20.0,
+		"particleDuration": 0.05,
+		"particleCount": 16,
+		"particleColor": [
+			235,
+			55,
+			0,
+			200
+		]
+	},
+	"glowColor": [
+		235,
+		55,
+		0,
+		205
+	],
+	"interruptibleBurst": false,
+	"autocharge": true,
+	"beamFireOnlyOnFullCharge": true,
+	"fireSoundOne": "ilk_lanceH_start",
+	"fireSoundTwo": "ilk_lanceH_fire"
+}
