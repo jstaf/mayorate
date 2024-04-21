@@ -319,6 +319,13 @@
 			"volume": 0.85
 		}
 	],
+	"ilk_lanceL_full": [
+		{
+			"file": "sounds/ilk/fx/lance_light_full.ogg",
+			"pitch": 1,
+			"volume": 0.85
+		}
+	],
 	"ilk_lanceH_start": [
 		{
 			"file": "sounds/ilk/fx/lance_heavy_start.ogg",
@@ -329,6 +336,13 @@
 	"ilk_lanceH_fire": [
 		{
 			"file": "sounds/ilk/fx/lance_heavy_fire.ogg",
+			"pitch": 1,
+			"volume": 0.8
+		}
+	],
+	"ilk_lanceH_full": [
+		{
+			"file": "sounds/ilk/fx/lance_heavy_full.ogg",
 			"pitch": 1,
 			"volume": 0.8
 		}
